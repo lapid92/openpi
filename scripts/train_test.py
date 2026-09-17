@@ -16,7 +16,7 @@ from . import train
 def test_stack_microbatches():
     microbatches = [({"observation": np.full((2, 3), index)}, np.full((2, 4), index)) for index in range(3)]
 
-    observations, actions = train._stack_microbatches(microbatches)
+    observations, actions = train._stack_microbatches(microbatches)  # noqa: SLF001
 
     np.testing.assert_array_equal(observations["observation"][:, 0, 0], np.arange(3))
     assert observations["observation"].shape == (3, 2, 3)
