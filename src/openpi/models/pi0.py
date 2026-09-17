@@ -287,7 +287,7 @@ class Pi0(_model.BaseModel):
             transport_derivative = velocity + time_delta * velocity_time_derivative
 
             teacher_prefix = teacher.embed_prefix(observation)
-            teacher_velocity = teacher._predict_velocity_from_prefix(
+            teacher_velocity = teacher._predict_velocity_from_prefix(  # noqa: SLF001
                 observation,
                 jax.lax.stop_gradient(transported_actions),
                 target_time,
@@ -333,7 +333,7 @@ class Pi0(_model.BaseModel):
         _, kv_cache = self.PaliGemma.llm([prefix_tokens, None], mask=prefix_attn_mask, positions=positions)
 
         def step(carry):
-            x_t, time = carry
+            _x_t, time = carry
             suffix_tokens, suffix_mask, suffix_ar_mask, adarms_cond = self.embed_suffix(
                 observation, x_t, jnp.broadcast_to(time, batch_size)
             )

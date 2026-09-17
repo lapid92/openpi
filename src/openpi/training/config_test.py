@@ -28,7 +28,7 @@ def test_pi05_libero_tvm_config_defaults():
 def test_tvm_requires_pi05_model():
     config = train_config.get_config("debug")
 
-    with pytest.raises(ValueError, match="requires a pi0.5 model"):
+    with pytest.raises(ValueError, match=r"requires a pi0\.5 model"):
         dataclasses.replace(config, tvm=tvm.TVMTrainingConfig(enabled=True, alpha_final=0.25))
 
 
