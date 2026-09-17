@@ -82,6 +82,10 @@ def _load_weights_and_validate(loader: _weight_loaders.WeightLoader, params_shap
     )
 
 
+def _stack_microbatches(microbatches):
+    return jax.tree.map(lambda *values: jnp.stack(values), *microbatches)
+
+
 @at.typecheck
 def init_train_state(
     config: _config.TrainConfig, init_rng: at.KeyArrayLike, mesh: jax.sharding.Mesh, *, resume: bool
@@ -177,12 +181,56 @@ def train_step(
         return loss, {"loss": loss}
 
     train_rng = jax.random.fold_in(rng, state.step)
-    observation, actions = batch
+    observations, actions = batch
+    accumulation_steps = config.gradient_accumulation_steps
 
-    # Filter out frozen params.
+    def accumulated_loss(
+        model: _model.BaseModel,
+        teacher: _model.BaseModel | None,
+        rng: at.KeyArrayLike,
+        stacked_observations: _model.Observation,
+        stacked_actions: _model.Actions,
+    ):
+        zero = jnp.zeros((), dtype=jnp.float32)
+        initial_components = {
+            "loss": zero,
+            "fm_loss": zero,
+            "tvm_loss": zero,
+        }
+
+        def accumulate_components(component_sum, xs):
+            microbatch_index, observation, microbatch_actions = xs
+            # Preserve the legacy random stream when accumulation is disabled.
+            microbatch_rng = rng if accumulation_steps == 1 else jax.random.fold_in(rng, microbatch_index)
+            microbatch_loss, microbatch_components = loss_fn(
+                model, teacher, microbatch_rng, observation, microbatch_actions
+            )
+            components = {
+                "loss": microbatch_loss,
+                "fm_loss": microbatch_components.get("fm_loss", microbatch_loss),
+                "tvm_loss": microbatch_components.get("tvm_loss", jnp.zeros_like(microbatch_loss)),
+            }
+            component_sum = jax.tree.map(
+                lambda total, value: total + value / accumulation_steps,
+                component_sum,
+                components,
+            )
+            return component_sum, None
+
+        # Rematerializing the scan body keeps peak memory close to a single microbatch while reverse-mode
+        # accumulates one parameter cotangent across all microbatches.
+        accumulate_components = jax.checkpoint(accumulate_components, prevent_cse=False)
+        mean_components, _ = jax.lax.scan(
+            accumulate_components,
+            initial_components,
+            (jnp.arange(accumulation_steps), stacked_observations, stacked_actions),
+        )
+        return mean_components["loss"], mean_components
+
+    # Differentiate once through the rematerialized scan so clipping and the optimizer see the effective-batch mean.
     diff_state = nnx.DiffState(0, config.trainable_filter)
-    (loss, loss_components), grads = nnx.value_and_grad(loss_fn, argnums=diff_state, has_aux=True)(
-        model, teacher_model, train_rng, observation, actions
+    (loss, loss_components), grads = nnx.value_and_grad(accumulated_loss, argnums=diff_state, has_aux=True)(
+        model, teacher_model, train_rng, observations, actions
     )
 
     params = state.params.filter(config.trainable_filter)
@@ -227,9 +275,10 @@ def main(config: _config.TrainConfig):
     init_logging()
     logging.info(f"Running on: {platform.node()}")
 
-    if config.batch_size % jax.device_count() != 0:
+    if config.microbatch_size % jax.device_count() != 0:
         raise ValueError(
-            f"Batch size {config.batch_size} must be divisible by the number of devices {jax.device_count()}."
+            f"Microbatch size {config.microbatch_size} must be divisible by the number of devices "
+            f"{jax.device_count()}."
         )
 
     jax.config.update("jax_compilation_cache_dir", str(epath.Path("~/.cache/jax").expanduser()))
@@ -239,6 +288,9 @@ def main(config: _config.TrainConfig):
 
     mesh = sharding.make_mesh(config.fsdp_devices)
     data_sharding = jax.sharding.NamedSharding(mesh, jax.sharding.PartitionSpec(sharding.DATA_AXIS))
+    stacked_data_sharding = jax.sharding.NamedSharding(
+        mesh, jax.sharding.PartitionSpec(None, sharding.DATA_AXIS)
+    )
     replicated_sharding = jax.sharding.NamedSharding(mesh, jax.sharding.PartitionSpec())
 
     checkpoint_manager, resuming = _checkpoints.initialize_checkpoint_dir(
@@ -255,13 +307,13 @@ def main(config: _config.TrainConfig):
         shuffle=True,
     )
     data_iter = iter(data_loader)
-    batch = next(data_iter)
-    logging.info(f"Initialized data loader:\n{training_utils.array_tree_to_info(batch)}")
+    first_batch = next(data_iter)
+    logging.info(f"Initialized data loader:\n{training_utils.array_tree_to_info(first_batch)}")
 
     # Log images from first batch to sanity check.
     images_to_log = [
-        wandb.Image(np.concatenate([np.array(img[i]) for img in batch[0].images.values()], axis=1))
-        for i in range(min(5, len(next(iter(batch[0].images.values())))))
+        wandb.Image(np.concatenate([np.array(img[i]) for img in first_batch[0].images.values()], axis=1))
+        for i in range(min(5, len(next(iter(first_batch[0].images.values())))))
     ]
     wandb.log({"camera_views": images_to_log}, step=0)
 
@@ -274,9 +326,9 @@ def main(config: _config.TrainConfig):
 
     ptrain_step = jax.jit(
         functools.partial(train_step, config),
-        in_shardings=(replicated_sharding, train_state_sharding, data_sharding),
+        in_shardings=(replicated_sharding, train_state_sharding, stacked_data_sharding),
         out_shardings=(train_state_sharding, replicated_sharding),
-        donate_argnums=(1,),
+        donate_argnums=(1, 2),
     )
 
     start_step = int(train_state.step)
@@ -288,7 +340,19 @@ def main(config: _config.TrainConfig):
     )
 
     infos = []
+    pending_batch = first_batch
     for step in pbar:
+        microbatches = [pending_batch]
+        pending_batch = None
+        microbatches.extend(next(data_iter) for _ in range(config.gradient_accumulation_steps - 1))
+        batch = _stack_microbatches(microbatches)
+        jax.block_until_ready(batch)
+        del microbatches
+        for leaf in jax.tree.leaves(batch):
+            if not leaf.sharding.is_equivalent_to(stacked_data_sharding, leaf.ndim):
+                raise ValueError(
+                    f"Stacked microbatch has unexpected sharding {leaf.sharding}; expected {stacked_data_sharding}"
+                )
         with sharding.set_mesh(mesh):
             train_state, info = ptrain_step(train_rng, train_state, batch)
         infos.append(info)
@@ -299,7 +363,8 @@ def main(config: _config.TrainConfig):
             pbar.write(f"Step {step}: {info_str}")
             wandb.log(reduced_info, step=step)
             infos = []
-        batch = next(data_iter)
+        if step + 1 < config.num_train_steps:
+            pending_batch = next(data_iter)
 
         if (step % config.save_interval == 0 and step > start_step) or step == config.num_train_steps - 1:
             _checkpoints.save_state(checkpoint_manager, train_state, data_loader, step)

@@ -13,7 +13,9 @@ def test_pi05_libero_tvm_config_defaults():
     assert isinstance(config.model, pi0_config.Pi0Config)
     assert config.model.pi05
     assert config.model.action_horizon == 10
-    assert config.batch_size == 8
+    assert config.batch_size == 256
+    assert config.gradient_accumulation_steps == 32
+    assert config.microbatch_size == 8
     assert config.fsdp_devices == 8
     assert config.ema_decay == 0.999
     assert config.num_train_steps == 30_000
@@ -44,3 +46,18 @@ def test_tvm_requires_ema_teacher():
             tvm=tvm.TVMTrainingConfig(enabled=True, alpha_final=0.25),
             ema_decay=None,
         )
+
+
+def test_gradient_accumulation_config_validation():
+    config = train_config.get_config("debug")
+
+    assert config.gradient_accumulation_steps == 1
+    assert config.microbatch_size == config.batch_size
+    with pytest.raises(ValueError, match="positive integer"):
+        dataclasses.replace(config, gradient_accumulation_steps=0)
+    with pytest.raises(ValueError, match="positive integer"):
+        dataclasses.replace(config, gradient_accumulation_steps=1.5)
+    with pytest.raises(ValueError, match="positive integer"):
+        dataclasses.replace(config, gradient_accumulation_steps=True)
+    with pytest.raises(ValueError, match="must be divisible"):
+        dataclasses.replace(config, batch_size=10, gradient_accumulation_steps=3)

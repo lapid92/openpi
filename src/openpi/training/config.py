@@ -506,8 +506,10 @@ class TrainConfig:
 
     # Random seed that will be used by random generators during training.
     seed: int = 42
-    # Global batch size.
+    # Effective global batch size per optimizer update.
     batch_size: int = 32
+    # Number of equal-sized microbatches to process before each optimizer update.
+    gradient_accumulation_steps: int = 1
     # Number of workers to use for the data loader. Increasing this number will speed up data loading but
     # will increase memory and CPU usage.
     num_workers: int = 2
@@ -551,6 +553,11 @@ class TrainConfig:
         return (pathlib.Path(self.checkpoint_base_dir) / self.name / self.exp_name).resolve()
 
     @property
+    def microbatch_size(self) -> int:
+        """Global batch size processed by each accumulated forward/backward pass."""
+        return self.batch_size // self.gradient_accumulation_steps
+
+    @property
     def trainable_filter(self) -> nnx.filterlib.Filter:
         """Get the filter for the trainable parameters."""
         return nnx.All(nnx.Param, nnx.Not(self.freeze_filter))
@@ -558,6 +565,10 @@ class TrainConfig:
     def __post_init__(self) -> None:
         if self.resume and self.overwrite:
             raise ValueError("Cannot resume and overwrite at the same time.")
+        if type(self.gradient_accumulation_steps) is not int or self.gradient_accumulation_steps < 1:
+            raise ValueError("gradient_accumulation_steps must be a positive integer")
+        if self.batch_size % self.gradient_accumulation_steps != 0:
+            raise ValueError("batch_size must be divisible by gradient_accumulation_steps")
         if self.tvm.enabled:
             if not isinstance(self.model, pi0_config.Pi0Config) or not self.model.pi05:
                 raise ValueError("TVM training currently requires a pi0.5 model")
@@ -782,8 +793,10 @@ _CONFIGS = [
             base_config=DataConfig(prompt_from_task=True),
             extra_delta_transform=False,
         ),
-        # Full-model TVM reverse-over-forward autodiff nearly fills an 80 GB H100 even at one sample per device.
-        batch_size=8,
+        # Full-model TVM reverse-over-forward autodiff nearly fills an 80 GB accelerator at one sample per device.
+        # Accumulate 32 global-batch-8 microbatches to match the standard LIBERO effective batch of 256.
+        batch_size=256,
+        gradient_accumulation_steps=32,
         fsdp_devices=8,
         lr_schedule=_optimizer.CosineDecaySchedule(
             warmup_steps=10_000,

@@ -241,12 +241,13 @@ def create_data_loader(
     """
     data_config = config.data.create(config.assets_dirs, config.model)
     logging.info(f"data_config: {data_config}")
+    loader_batch_size = config.microbatch_size if framework == "jax" else config.batch_size
 
     if data_config.rlds_data_dir is not None:
         return create_rlds_data_loader(
             data_config,
             action_horizon=config.model.action_horizon,
-            batch_size=config.batch_size,
+            batch_size=loader_batch_size,
             sharding=sharding,
             shuffle=shuffle,
             num_batches=num_batches,
@@ -257,7 +258,7 @@ def create_data_loader(
         data_config,
         model_config=config.model,
         action_horizon=config.model.action_horizon,
-        batch_size=config.batch_size,
+        batch_size=loader_batch_size,
         sharding=sharding,
         shuffle=shuffle,
         num_batches=num_batches,
