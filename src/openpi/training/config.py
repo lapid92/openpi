@@ -782,7 +782,9 @@ _CONFIGS = [
             base_config=DataConfig(prompt_from_task=True),
             extra_delta_transform=False,
         ),
-        batch_size=256,
+        # Full-model TVM reverse-over-forward autodiff nearly fills an 80 GB H100 even at one sample per device.
+        batch_size=8,
+        fsdp_devices=8,
         lr_schedule=_optimizer.CosineDecaySchedule(
             warmup_steps=10_000,
             peak_lr=5e-5,

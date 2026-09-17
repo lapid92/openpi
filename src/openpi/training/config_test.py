@@ -13,7 +13,8 @@ def test_pi05_libero_tvm_config_defaults():
     assert isinstance(config.model, pi0_config.Pi0Config)
     assert config.model.pi05
     assert config.model.action_horizon == 10
-    assert config.batch_size == 256
+    assert config.batch_size == 8
+    assert config.fsdp_devices == 8
     assert config.ema_decay == 0.999
     assert config.num_train_steps == 30_000
     assert config.data.assets.assets_dir == "gs://openpi-assets/checkpoints/pi05_libero/assets"
