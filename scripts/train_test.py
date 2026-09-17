@@ -7,6 +7,7 @@ import pytest
 os.environ["JAX_PLATFORMS"] = "cpu"
 
 from openpi.training import config as _config
+from openpi.training import tvm as _tvm
 
 from . import train
 
@@ -28,3 +29,28 @@ def test_train(tmp_path: pathlib.Path, config_name: str):
     # test resuming
     config = dataclasses.replace(config, resume=True, num_train_steps=4)
     train.main(config)
+
+
+def test_train_pi05_tvm_and_resume(tmp_path: pathlib.Path):
+    config = dataclasses.replace(
+        _config.get_config("debug_pi05"),
+        tvm=_tvm.TVMTrainingConfig(
+            enabled=True,
+            warmup_steps=0,
+            ramp_steps=1,
+            alpha_final=0.25,
+            fm_loss_weight=1.0,
+        ),
+        batch_size=2,
+        checkpoint_base_dir=str(tmp_path / "checkpoint"),
+        exp_name="test_tvm",
+        overwrite=False,
+        resume=False,
+        num_train_steps=2,
+        log_interval=1,
+        save_interval=1,
+    )
+    train.main(config)
+
+    # Resuming must continue from the restored optimizer step, which also drives the TVM ramp.
+    train.main(dataclasses.replace(config, resume=True, num_train_steps=4))

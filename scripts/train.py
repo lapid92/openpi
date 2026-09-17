@@ -24,6 +24,7 @@ import openpi.training.config as _config
 import openpi.training.data_loader as _data_loader
 import openpi.training.optimizer as _optimizer
 import openpi.training.sharding as sharding
+import openpi.training.tvm as _tvm
 import openpi.training.utils as training_utils
 import openpi.training.weight_loaders as _weight_loaders
 
@@ -143,19 +144,46 @@ def train_step(
     model = nnx.merge(state.model_def, state.params)
     model.train()
 
+    teacher_model = None
+    alpha, fm_loss_weight = _tvm.loss_weights(config.tvm, state.step)
+    if config.tvm.enabled:
+        assert state.ema_params is not None
+        teacher_model = nnx.merge(state.model_def, state.ema_params)
+        teacher_model.eval()
+
     @at.typecheck
     def loss_fn(
-        model: _model.BaseModel, rng: at.KeyArrayLike, observation: _model.Observation, actions: _model.Actions
+        model: _model.BaseModel,
+        teacher: _model.BaseModel | None,
+        rng: at.KeyArrayLike,
+        observation: _model.Observation,
+        actions: _model.Actions,
     ):
+        if config.tvm.enabled:
+            assert teacher is not None
+            loss_components = model.compute_tvm_loss(
+                rng,
+                observation,
+                actions,
+                teacher=teacher,
+                alpha=alpha,
+                fm_loss_weight=fm_loss_weight,
+                train=True,
+            )
+            mean_components = jax.tree.map(jnp.mean, loss_components)
+            return mean_components["loss"], mean_components
         chunked_loss = model.compute_loss(rng, observation, actions, train=True)
-        return jnp.mean(chunked_loss)
+        loss = jnp.mean(chunked_loss)
+        return loss, {"loss": loss}
 
     train_rng = jax.random.fold_in(rng, state.step)
     observation, actions = batch
 
     # Filter out frozen params.
     diff_state = nnx.DiffState(0, config.trainable_filter)
-    loss, grads = nnx.value_and_grad(loss_fn, argnums=diff_state)(model, train_rng, observation, actions)
+    (loss, loss_components), grads = nnx.value_and_grad(loss_fn, argnums=diff_state, has_aux=True)(
+        model, teacher_model, train_rng, observation, actions
+    )
 
     params = state.params.filter(config.trainable_filter)
     updates, new_opt_state = state.tx.update(grads, state.opt_state, params)
@@ -185,6 +213,10 @@ def train_step(
     )
     info = {
         "loss": loss,
+        "fm_loss": loss_components.get("fm_loss", loss_components["loss"]),
+        "tvm_loss": loss_components.get("tvm_loss", jnp.zeros_like(loss_components["loss"])),
+        "tvm_alpha": alpha,
+        "fm_loss_factor": fm_loss_weight,
         "grad_norm": optax.global_norm(grads),
         "param_norm": optax.global_norm(kernel_params),
     }

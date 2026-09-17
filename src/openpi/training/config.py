@@ -26,6 +26,7 @@ import openpi.training.droid_rlds_dataset as droid_rlds_dataset
 import openpi.training.misc.polaris_config as polaris_config
 import openpi.training.misc.roboarena_config as roboarena_config
 import openpi.training.optimizer as _optimizer
+import openpi.training.tvm as _tvm
 import openpi.training.weight_loaders as weight_loaders
 import openpi.transforms as _transforms
 
@@ -489,6 +490,9 @@ class TrainConfig:
     optimizer: _optimizer.OptimizerConfig = dataclasses.field(default_factory=_optimizer.AdamW)
     ema_decay: float | None = 0.99
 
+    # Optional Time-Conditioned Velocity Matching objective used during fine-tuning.
+    tvm: _tvm.TVMTrainingConfig = dataclasses.field(default_factory=_tvm.TVMTrainingConfig)
+
     # Specifies which weights should be frozen.
     freeze_filter: tyro.conf.Suppress[Filter] = dataclasses.field(default_factory=nnx.Nothing)
 
@@ -554,6 +558,11 @@ class TrainConfig:
     def __post_init__(self) -> None:
         if self.resume and self.overwrite:
             raise ValueError("Cannot resume and overwrite at the same time.")
+        if self.tvm.enabled:
+            if not isinstance(self.model, pi0_config.Pi0Config) or not self.model.pi05:
+                raise ValueError("TVM training currently requires a pi0.5 model")
+            if self.ema_decay is None:
+                raise ValueError("TVM training requires EMA parameters for the teacher model")
 
 
 # Use `get_config` if you need to get a config by name in your code.
@@ -757,6 +766,34 @@ _CONFIGS = [
         ),
         optimizer=_optimizer.AdamW(clip_gradient_norm=1.0),
         ema_decay=0.999,
+        weight_loader=weight_loaders.CheckpointWeightLoader("gs://openpi-assets/checkpoints/pi05_base/params"),
+        pytorch_weight_path="/path/to/your/pytorch_weight_path",
+        num_train_steps=30_000,
+    ),
+    TrainConfig(
+        name="pi05_libero_tvm",
+        model=pi0_config.Pi0Config(pi05=True, action_horizon=10, discrete_state_input=False),
+        data=LeRobotLiberoDataConfig(
+            repo_id="physical-intelligence/libero",
+            base_config=DataConfig(prompt_from_task=True),
+            extra_delta_transform=False,
+        ),
+        batch_size=256,
+        lr_schedule=_optimizer.CosineDecaySchedule(
+            warmup_steps=10_000,
+            peak_lr=5e-5,
+            decay_steps=1_000_000,
+            decay_lr=5e-5,
+        ),
+        optimizer=_optimizer.AdamW(clip_gradient_norm=1.0),
+        ema_decay=0.999,
+        tvm=_tvm.TVMTrainingConfig(
+            enabled=True,
+            warmup_steps=10_000,
+            ramp_steps=10_000,
+            alpha_final=0.25,
+            fm_loss_weight=1.0,
+        ),
         weight_loader=weight_loaders.CheckpointWeightLoader("gs://openpi-assets/checkpoints/pi05_base/params"),
         pytorch_weight_path="/path/to/your/pytorch_weight_path",
         num_train_steps=30_000,

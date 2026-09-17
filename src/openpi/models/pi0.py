@@ -199,19 +199,115 @@ class Pi0(_model.BaseModel):
         x_t = time_expanded * noise + (1 - time_expanded) * actions
         u_t = noise - actions
 
-        # one big forward pass of prefix + suffix at once
         prefix_tokens, prefix_mask, prefix_ar_mask = self.embed_prefix(observation)
-        suffix_tokens, suffix_mask, suffix_ar_mask, adarms_cond = self.embed_suffix(observation, x_t, time)
+        v_t = self._predict_velocity_from_prefix(
+            observation, x_t, time, prefix_tokens, prefix_mask, prefix_ar_mask
+        )
+
+        return jnp.mean(jnp.square(v_t - u_t), axis=-1)
+
+    def _predict_velocity_from_prefix(
+        self,
+        observation: _model.Observation,
+        noisy_actions: _model.Actions,
+        target_time: at.Float[at.Array, " b"],
+        prefix_tokens: at.Float[at.Array, "b p emb"],
+        prefix_mask: at.Bool[at.Array, "b p"],
+        prefix_ar_mask: at.Bool[at.Array, " p"],
+    ) -> _model.Actions:
+        """Predicts velocity, specializing F(x; t, s) as the checkpoint-compatible F(x; s)."""
+        suffix_tokens, suffix_mask, suffix_ar_mask, adarms_cond = self.embed_suffix(
+            observation, noisy_actions, target_time
+        )
         input_mask = jnp.concatenate([prefix_mask, suffix_mask], axis=1)
         ar_mask = jnp.concatenate([prefix_ar_mask, suffix_ar_mask], axis=0)
         attn_mask = make_attn_mask(input_mask, ar_mask)
         positions = jnp.cumsum(input_mask, axis=1) - 1
-        (prefix_out, suffix_out), _ = self.PaliGemma.llm(
+        (_, suffix_out), _ = self.PaliGemma.llm(
             [prefix_tokens, suffix_tokens], mask=attn_mask, positions=positions, adarms_cond=[None, adarms_cond]
         )
-        v_t = self.action_out_proj(suffix_out[:, -self.action_horizon :])
+        return self.action_out_proj(suffix_out[:, -self.action_horizon :])
 
-        return jnp.mean(jnp.square(v_t - u_t), axis=-1)
+    def compute_tvm_loss(
+        self,
+        rng: at.KeyArrayLike,
+        observation: _model.Observation,
+        actions: _model.Actions,
+        *,
+        teacher: "Pi0",
+        alpha,
+        fm_loss_weight,
+        train: bool = False,
+    ) -> dict[str, at.Array]:
+        """Computes flow matching plus the optional TVM-style terminal objective.
+
+        This follows the loss construction in Arm-Debug/tvm's ``wacv27`` branch at
+        commit 101bdbf10d5765928fd140187913a437663adbf8, specialized to the
+        existing one-time pi0.5 checkpoint parameterization F(x; t, s) = F(x; s).
+        """
+        preprocess_rng, noise_rng, times_rng, diagonal_time_rng = jax.random.split(rng, 4)
+        observation = _model.preprocess_observation(preprocess_rng, observation, train=train)
+
+        batch_shape = actions.shape[:-2]
+        noise = jax.random.normal(noise_rng, actions.shape)
+        unordered_times = jax.random.uniform(times_rng, (*batch_shape, 2))
+        source_time = jnp.maximum(unordered_times[..., 0], unordered_times[..., 1])
+        target_time = jnp.minimum(unordered_times[..., 0], unordered_times[..., 1])
+        source_time = jnp.where(
+            source_time > target_time,
+            source_time,
+            jnp.minimum(target_time + jnp.finfo(source_time.dtype).eps, 1.0),
+        )
+        # Keep the diagonal FM sample independent and uniform, matching the TVM reference objective. Thus the
+        # warmup optimizes TVM-style FM rather than the Beta(1.5, 1) sampling used by the baseline compute_loss.
+        diagonal_time = jax.random.uniform(diagonal_time_rng, batch_shape)
+        velocity_target = noise - actions
+
+        diagonal_time_expanded = diagonal_time[..., None, None]
+        x_diagonal = diagonal_time_expanded * noise + (1 - diagonal_time_expanded) * actions
+
+        prefix = self.embed_prefix(observation)
+        diagonal_velocity = self._predict_velocity_from_prefix(observation, x_diagonal, diagonal_time, *prefix)
+        fm_loss = jnp.mean(jnp.square(diagonal_velocity - velocity_target), axis=-1)
+
+        def compute_terminal_loss(_):
+            source_time_expanded = source_time[..., None, None]
+            x_source = source_time_expanded * noise + (1 - source_time_expanded) * actions
+
+            def velocity_at_target_time(time):
+                return self._predict_velocity_from_prefix(observation, x_source, time, *prefix)
+
+            velocity, velocity_time_derivative = jax.jvp(
+                velocity_at_target_time,
+                (target_time,),
+                (jnp.ones_like(target_time),),
+            )
+            time_delta = (target_time - source_time)[..., None, None]
+            transported_actions = x_source + time_delta * velocity
+            transport_derivative = velocity + time_delta * velocity_time_derivative
+
+            teacher_prefix = teacher.embed_prefix(observation)
+            teacher_velocity = teacher._predict_velocity_from_prefix(
+                observation,
+                jax.lax.stop_gradient(transported_actions),
+                target_time,
+                *teacher_prefix,
+            )
+            teacher_velocity = jax.lax.stop_gradient(teacher_velocity)
+            return jnp.mean(jnp.square(transport_derivative - teacher_velocity), axis=-1)
+
+        tvm_loss = jax.lax.cond(
+            alpha > 0,
+            compute_terminal_loss,
+            lambda _: jnp.zeros_like(fm_loss),
+            operand=None,
+        )
+        total_loss = fm_loss_weight * fm_loss + alpha * tvm_loss
+        return {
+            "loss": total_loss,
+            "fm_loss": fm_loss,
+            "tvm_loss": tvm_loss,
+        }
 
     @override
     def sample_actions(
