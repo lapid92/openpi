@@ -277,8 +277,7 @@ def main(config: _config.TrainConfig):
 
     if config.microbatch_size % jax.device_count() != 0:
         raise ValueError(
-            f"Microbatch size {config.microbatch_size} must be divisible by the number of devices "
-            f"{jax.device_count()}."
+            f"Microbatch size {config.microbatch_size} must be divisible by the number of devices {jax.device_count()}."
         )
 
     jax.config.update("jax_compilation_cache_dir", str(epath.Path("~/.cache/jax").expanduser()))
@@ -288,9 +287,7 @@ def main(config: _config.TrainConfig):
 
     mesh = sharding.make_mesh(config.fsdp_devices)
     data_sharding = jax.sharding.NamedSharding(mesh, jax.sharding.PartitionSpec(sharding.DATA_AXIS))
-    stacked_data_sharding = jax.sharding.NamedSharding(
-        mesh, jax.sharding.PartitionSpec(None, sharding.DATA_AXIS)
-    )
+    stacked_data_sharding = jax.sharding.NamedSharding(mesh, jax.sharding.PartitionSpec(None, sharding.DATA_AXIS))
     replicated_sharding = jax.sharding.NamedSharding(mesh, jax.sharding.PartitionSpec())
 
     checkpoint_manager, resuming = _checkpoints.initialize_checkpoint_dir(
