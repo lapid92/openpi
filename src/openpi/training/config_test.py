@@ -16,6 +16,8 @@ def test_pi05_libero_tvm_config_defaults():
     assert config.batch_size == 256
     assert config.ema_decay == 0.999
     assert config.num_train_steps == 30_000
+    assert config.data.assets.assets_dir == "gs://openpi-assets/checkpoints/pi05_libero/assets"
+    assert config.data.assets.asset_id == "physical-intelligence/libero"
     assert config.tvm == tvm.TVMTrainingConfig(
         enabled=True,
         warmup_steps=10_000,
