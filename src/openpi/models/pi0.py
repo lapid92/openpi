@@ -200,9 +200,7 @@ class Pi0(_model.BaseModel):
         u_t = noise - actions
 
         prefix_tokens, prefix_mask, prefix_ar_mask = self.embed_prefix(observation)
-        v_t = self._predict_velocity_from_prefix(
-            observation, x_t, time, prefix_tokens, prefix_mask, prefix_ar_mask
-        )
+        v_t = self._predict_velocity_from_prefix(observation, x_t, time, prefix_tokens, prefix_mask, prefix_ar_mask)
 
         return jnp.mean(jnp.square(v_t - u_t), axis=-1)
 
