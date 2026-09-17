@@ -14,8 +14,8 @@ def test_pi05_libero_tvm_config_defaults():
     assert config.model.pi05
     assert config.model.action_horizon == 10
     assert config.batch_size == 256
-    assert config.gradient_accumulation_steps == 32
-    assert config.microbatch_size == 8
+    assert config.gradient_accumulation_steps == 8
+    assert config.microbatch_size == 32
     assert config.fsdp_devices == 8
     assert config.ema_decay == 0.999
     assert config.num_train_steps == 30_000

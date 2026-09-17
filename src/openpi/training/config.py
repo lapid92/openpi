@@ -793,10 +793,10 @@ _CONFIGS = [
             base_config=DataConfig(prompt_from_task=True),
             extra_delta_transform=False,
         ),
-        # Full-model TVM reverse-over-forward autodiff nearly fills an 80 GB accelerator at one sample per device.
-        # Accumulate 32 global-batch-8 microbatches to match the standard LIBERO effective batch of 256.
+        # Batch 32 is the validated active-TVM ceiling on 8x A100-80GB. Accumulate eight such
+        # microbatches to match the standard LIBERO effective batch of 256.
         batch_size=256,
-        gradient_accumulation_steps=32,
+        gradient_accumulation_steps=8,
         fsdp_devices=8,
         lr_schedule=_optimizer.CosineDecaySchedule(
             warmup_steps=10_000,
