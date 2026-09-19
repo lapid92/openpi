@@ -147,6 +147,11 @@ class Runtime:
     attempt_id: str
 
 
+def absolute_preserving_symlink(path: pathlib.Path) -> pathlib.Path:
+    """Make a CLI path absolute without resolving a virtualenv symlink."""
+    return pathlib.Path(os.path.abspath(path))
+
+
 def make_eval_id(protocol: Protocol, artifact_id: str, flow_steps: int) -> str:
     identity = f"{protocol.protocol_id}|{artifact_id}|flow={flow_steps}"
     return hashlib.sha256(identity.encode()).hexdigest()[:20]
@@ -470,8 +475,10 @@ def main() -> None:
     runtime = Runtime(
         repo_root=args.repo_root.resolve(),
         output_root=args.output_root.resolve(),
-        server_python=args.server_python.resolve(),
-        client_python=args.client_python.resolve(),
+        # Preserve virtual-environment entry points. Path.resolve() follows the
+        # interpreter symlink to the system Python and silently drops the venv.
+        server_python=absolute_preserving_symlink(args.server_python),
+        client_python=absolute_preserving_symlink(args.client_python),
         openpi_data_home=args.openpi_data_home.resolve(),
         server_ready_timeout_sec=args.server_ready_timeout_sec,
         client_timeout_sec=args.client_timeout_sec,

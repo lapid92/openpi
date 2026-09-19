@@ -206,6 +206,18 @@ def test_run_client_sets_standalone_libero_pythonpath_when_not_inherited(tmp_pat
     assert captured["env"]["PYTHONPATH"] == str(tmp_path / "third_party" / "libero")
 
 
+def test_absolute_preserving_symlink_keeps_virtualenv_entry_point(tmp_path) -> None:
+    system_python = tmp_path / "system-python"
+    system_python.touch()
+    venv_python = tmp_path / "venv-python"
+    venv_python.symlink_to(system_python)
+
+    result = libero_eval_runner.absolute_preserving_symlink(venv_python)
+
+    assert result == venv_python.absolute()
+    assert result != venv_python.resolve()
+
+
 def test_run_flow_publishes_complete_metadata_then_success_marker(tmp_path, monkeypatch) -> None:
     runtime = dataclasses.replace(_runtime(), repo_root=tmp_path, output_root=tmp_path / "output")
     protocol = libero_eval_runner.Protocol()
