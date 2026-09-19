@@ -287,7 +287,9 @@ def run_client(
         {
             "CUDA_VISIBLE_DEVICES": str(gpu_id),
             "MUJOCO_GL": "egl",
-            "MUJOCO_EGL_DEVICE_ID": "0",
+            # Pinned robosuite validates this against the physical IDs listed
+            # in CUDA_VISIBLE_DEVICES before EGL performs device selection.
+            "MUJOCO_EGL_DEVICE_ID": str(gpu_id),
             "PYOPENGL_PLATFORM": "egl",
             "PYTHONPATH": libero_pythonpath,
         }

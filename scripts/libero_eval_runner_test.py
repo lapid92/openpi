@@ -176,7 +176,7 @@ def test_run_client_binds_gpu_and_cleans_up_on_timeout(tmp_path, monkeypatch) ->
 
     assert created[0][1]["env"]["CUDA_VISIBLE_DEVICES"] == "3"
     assert created[0][1]["env"]["MUJOCO_GL"] == "egl"
-    assert created[0][1]["env"]["MUJOCO_EGL_DEVICE_ID"] == "0"
+    assert created[0][1]["env"]["MUJOCO_EGL_DEVICE_ID"] == "3"
     assert created[0][1]["env"]["PYOPENGL_PLATFORM"] == "egl"
     assert created[0][1]["env"]["PYTHONPATH"] == os.pathsep.join(
         (str(tmp_path / "third_party" / "libero"), "/existing/pythonpath")
