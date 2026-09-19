@@ -69,3 +69,47 @@ checkpoint was trained in openpi with the `pi05_libero` config.
 | Model | Libero Spatial | Libero Object | Libero Goal | Libero 10 | Average |
 |-------|---------------|---------------|-------------|-----------|---------|
 | π0.5 @ 30k (finetuned) | 98.8 | 98.2 | 98.0 | 92.4 | 96.85
+
+## Audited checkpoint sweeps
+
+The evaluation runner can sweep flow-integration settings while keeping the rollout protocol fixed. It starts one
+policy server per GPU, writes one durable JSONL record per episode, and only creates `_SUCCESS` after validating all
+2,000 episodes (four suites, ten tasks per suite, and 50 trials per task).
+
+```bash
+python scripts/libero_eval_runner.py \
+  --artifact-manifest /volt/data/checkpoints/my-checkpoint/artifact_manifest.json \
+  --repo-root /volt/code/openpi \
+  --output-root /volt/data/openpi_evals \
+  --server-python /volt/envs/openpi/bin/python \
+  --client-python /volt/envs/libero/bin/python \
+  --openpi-data-home /volt/data/openpi \
+  --gpu-ids 0 1 \
+  --flow-steps 1 2 3 4 5 10
+```
+
+Evaluation-only checkpoint bundles must be transferred directly between Volt and the approved S3 namespace. The sync
+tool hard-codes `us-east-2`, refuses paths outside `s3://aair-users-east-2/arilap01/libero/openpi/checkpoints/`, excludes
+`train_state`, verifies SHA-256 after download, and never overwrites an existing artifact or local destination.
+
+```bash
+python scripts/sync_libero_checkpoint_s3.py upload \
+  --checkpoint-dir /volt/data/checkpoints/pi05_libero_tvm/run/15000 \
+  --artifact-key tvm/run/step_15000-checkpoint_15000 \
+  --artifact-name pi05-libero-tvm-15k \
+  --model-class tvm \
+  --training-run-id run \
+  --checkpoint-label 15000 \
+  --train-steps-completed 15000 \
+  --config pi05_libero_tvm \
+  --git-sha FULL_40_CHARACTER_GIT_SHA
+
+python scripts/sync_libero_checkpoint_s3.py download \
+  --artifact-key tvm/run/step_15000-checkpoint_15000/sha256_SHA_FROM_UPLOAD_OUTPUT \
+  --destination /volt/data/checkpoints/pi05-libero-tvm-15k
+```
+
+The upload command prints the immutable, content-addressed artifact key required by the download command.
+
+The official released checkpoint is read directly from `gs://openpi-assets/checkpoints/pi05_libero`; it does not need
+to be copied into S3.
