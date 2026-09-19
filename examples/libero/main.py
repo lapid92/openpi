@@ -7,6 +7,7 @@ import math
 import os
 import pathlib
 import time
+from typing import Optional
 
 import imageio
 from libero.libero import benchmark
@@ -46,7 +47,7 @@ class Args:
     #################################################################################################################
     video_out_path: str = "data/libero/videos"  # Path to save videos
     save_video: bool = True
-    results_jsonl: str | None = None
+    results_jsonl: Optional[str] = None  # noqa: UP045 -- LIBERO client runs Python 3.8.
 
     # Evaluation provenance. These values are copied into every episode record.
     eval_id: str = ""
@@ -58,9 +59,9 @@ class Args:
     checkpoint_label: str = ""
     checkpoint_path: str = ""
     checkpoint_s3_uri: str = ""
-    train_steps_completed: int | None = None
+    train_steps_completed: Optional[int] = None  # noqa: UP045 -- LIBERO client runs Python 3.8.
     config: str = ""
-    flow_steps: int | None = None
+    flow_steps: Optional[int] = None  # noqa: UP045 -- LIBERO client runs Python 3.8.
     git_sha: str = ""
     client_log_path: str = ""
 
@@ -109,7 +110,7 @@ def eval_libero(args: Args) -> None:
         # Start episodes
         task_episodes, task_successes = 0, 0
         for episode_idx in tqdm.tqdm(range(args.num_trials_per_task)):
-            episode_started_at = datetime.datetime.now(datetime.UTC)
+            episode_started_at = datetime.datetime.now(datetime.timezone.utc)  # noqa: UP017 -- Python 3.8.
             episode_start_time = time.monotonic()
             logging.info(f"\nTask: {task_description}")
 
@@ -231,7 +232,8 @@ def eval_libero(args: Args) -> None:
                         "status": "complete" if not exception_text else "error",
                         "env_steps": t,
                         "started_at_utc": episode_started_at.isoformat(),
-                        "finished_at_utc": datetime.datetime.now(datetime.UTC).isoformat(),
+                        # datetime.UTC is unavailable in the Python 3.8 LIBERO environment.
+                        "finished_at_utc": datetime.datetime.now(datetime.timezone.utc).isoformat(),  # noqa: UP017
                         "duration_sec": time.monotonic() - episode_start_time,
                         "video_path": str(video_path) if args.save_video and replay_images else "",
                         "client_log_path": args.client_log_path,
