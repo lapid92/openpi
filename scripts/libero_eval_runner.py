@@ -9,6 +9,7 @@ from __future__ import annotations
 
 import argparse
 import concurrent.futures
+import contextlib
 import dataclasses
 import datetime
 import fcntl
@@ -151,9 +152,7 @@ def make_eval_id(protocol: Protocol, artifact_id: str, flow_steps: int) -> str:
     return hashlib.sha256(identity.encode()).hexdigest()[:20]
 
 
-def build_server_command(
-    runtime: Runtime, artifact: Artifact, flow_steps: int, port: int
-) -> list[str]:
+def build_server_command(runtime: Runtime, artifact: Artifact, flow_steps: int, port: int) -> list[str]:
     return [
         str(runtime.server_python),
         "scripts/serve_policy.py",
@@ -245,7 +244,7 @@ def wait_for_server(port: int, process: subprocess.Popen, timeout_sec: int) -> N
         if return_code is not None:
             raise RuntimeError(f"Policy server exited before becoming ready (exit code {return_code})")
         try:
-            with urllib.request.urlopen(health_url, timeout=2) as response:  # noqa: S310
+            with urllib.request.urlopen(health_url, timeout=2) as response:
                 if response.status == 200:
                     return
         except (urllib.error.URLError, TimeoutError):
@@ -263,10 +262,8 @@ def stop_process(process: subprocess.Popen) -> None:
     try:
         process.wait(timeout=30)
     except subprocess.TimeoutExpired:
-        try:
+        with contextlib.suppress(ProcessLookupError):
             os.killpg(process.pid, signal.SIGKILL)
-        except ProcessLookupError:
-            pass
         process.wait(timeout=10)
 
 
@@ -420,10 +417,7 @@ def run_flow_group(
     port: int,
 ) -> list[tuple[int, pathlib.Path]]:
     """Run one worker's flow settings sequentially on its exclusive GPU and port."""
-    return [
-        (flow, run_flow(runtime, artifact, protocol, flow, gpu_id, port))
-        for flow in flow_steps
-    ]
+    return [(flow, run_flow(runtime, artifact, protocol, flow, gpu_id, port)) for flow in flow_steps]
 
 
 def parse_args() -> argparse.Namespace:

@@ -216,9 +216,11 @@ def test_archive_validation_rejects_traversal():
         info.size = 1
         archive.addfile(info, io.BytesIO(b"x"))
     stream.seek(0)
-    with tarfile.open(fileobj=stream, mode="r") as archive:
-        with pytest.raises(ValueError, match="Unsafe archive member"):
-            checkpoint_sync._validate_archive_members(archive)  # noqa: SLF001
+    with (
+        tarfile.open(fileobj=stream, mode="r") as archive,
+        pytest.raises(ValueError, match="Unsafe archive member"),
+    ):
+        checkpoint_sync._validate_archive_members(archive)  # noqa: SLF001
 
 
 @pytest.mark.parametrize("artifact_key", ["../escape", "nested/path", "", ".hidden", "space id"])

@@ -126,13 +126,13 @@ def eval_libero(args: Args) -> None:
             success = False
             exception_text = ""
 
-            logging.info(f"Starting episode {task_episodes+1}...")
+            logging.info(f"Starting episode {task_episodes + 1}...")
             while t < max_steps + args.num_steps_wait:
                 try:
                     # IMPORTANT: Do nothing for the first few timesteps because the simulator drops objects
                     # and we need to wait for them to fall
                     if t < args.num_steps_wait:
-                        obs, reward, done, info = env.step(LIBERO_DUMMY_ACTION)
+                        obs, _reward, done, _info = env.step(LIBERO_DUMMY_ACTION)
                         t += 1
                         continue
 
@@ -168,15 +168,15 @@ def eval_libero(args: Args) -> None:
 
                         # Query model to get action
                         action_chunk = client.infer(element)["actions"]
-                        assert (
-                            len(action_chunk) >= args.replan_steps
-                        ), f"We want to replan every {args.replan_steps} steps, but policy only predicts {len(action_chunk)} steps."
+                        assert len(action_chunk) >= args.replan_steps, (
+                            f"We want to replan every {args.replan_steps} steps, but policy only predicts {len(action_chunk)} steps."
+                        )
                         action_plan.extend(action_chunk[: args.replan_steps])
 
                     action = action_plan.popleft()
 
                     # Execute action in environment
-                    obs, reward, done, info = env.step(action.tolist())
+                    obs, _reward, done, _info = env.step(action.tolist())
                     if done:
                         success = True
                         task_successes += 1

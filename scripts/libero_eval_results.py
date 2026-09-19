@@ -9,6 +9,7 @@ reject accidental mixtures before publishing a summary.
 from __future__ import annotations
 
 import argparse
+from collections.abc import Iterable, Sequence
 import csv
 import datetime as dt
 import json
@@ -16,9 +17,7 @@ import os
 import pathlib
 import re
 import tempfile
-from collections.abc import Iterable, Sequence
 from typing import Any
-
 
 SCHEMA_VERSION = 1
 SUITES = ("libero_spatial", "libero_object", "libero_goal", "libero_10")
@@ -116,11 +115,11 @@ def _parse_timestamp(value: Any, field: str, source: str) -> dt.datetime:
         raise ValidationError(f"{source}: invalid {field} RFC3339 timestamp {value!r}") from error
     if parsed.tzinfo is None or parsed.utcoffset() is None:
         raise ValidationError(f"{source}: {field} must include a UTC offset")
-    return parsed.astimezone(dt.timezone.utc)
+    return parsed.astimezone(dt.UTC)
 
 
 def _format_timestamp(value: dt.datetime) -> str:
-    value = value.astimezone(dt.timezone.utc)
+    value = value.astimezone(dt.UTC)
     timespec = "microseconds" if value.microsecond else "seconds"
     return value.isoformat(timespec=timespec).replace("+00:00", "Z")
 
@@ -217,9 +216,7 @@ def aggregate_records(records: Iterable[dict[str, Any]]) -> dict[str, str | int]
         _validate_episode(record, f"record {index}")
         inconsistent = [field for field in IDENTITY_FIELDS if record[field] != reference[field]]
         if inconsistent:
-            raise ValidationError(
-                f"record {index}: inconsistent evaluation metadata: {', '.join(inconsistent)}"
-            )
+            raise ValidationError(f"record {index}: inconsistent evaluation metadata: {', '.join(inconsistent)}")
 
     seen: set[tuple[str, int, int]] = set()
     suite_successes = dict.fromkeys(SUITES, 0)

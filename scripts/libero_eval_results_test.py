@@ -7,6 +7,8 @@ import pathlib
 import tempfile
 import unittest
 
+import pytest
+
 from scripts import libero_eval_results as results
 
 
@@ -75,61 +77,61 @@ class LiberoEvalResultsTest(unittest.TestCase):
         results.aggregate_jsonl_to_csv([input_path], output_path)
 
         raw = output_path.read_bytes()
-        self.assertIn(b"\r\n", raw)
+        assert b"\r\n" in raw
         with output_path.open(newline="", encoding="utf-8") as stream:
             rows = list(csv.DictReader(stream))
-        self.assertEqual(len(rows), 1)
+        assert len(rows) == 1
         row = rows[0]
-        self.assertEqual(row["schema_version"], "1")
-        self.assertEqual(row["episodes_total"], "2000")
-        self.assertEqual(row["successes_spatial"], "100")
-        self.assertEqual(row["successes_object"], "110")
-        self.assertEqual(row["successes_goal"], "120")
-        self.assertEqual(row["successes_libero10"], "130")
-        self.assertEqual(row["successes_total"], "460")
-        self.assertEqual(row["failures_total"], "1540")
-        self.assertEqual(row["success_rate"], "0.230000")
-        self.assertEqual(row["eval_started_at_utc"], "2026-09-20T00:00:00Z")
-        self.assertEqual(row["status"], "complete")
-        self.assertEqual(tuple(row), results.SUMMARY_FIELDS)
+        assert row["schema_version"] == "1"
+        assert row["episodes_total"] == "2000"
+        assert row["successes_spatial"] == "100"
+        assert row["successes_object"] == "110"
+        assert row["successes_goal"] == "120"
+        assert row["successes_libero10"] == "130"
+        assert row["successes_total"] == "460"
+        assert row["failures_total"] == "1540"
+        assert row["success_rate"] == "0.230000"
+        assert row["eval_started_at_utc"] == "2026-09-20T00:00:00Z"
+        assert row["status"] == "complete"
+        assert tuple(row) == results.SUMMARY_FIELDS
 
     def test_duplicate_episode_is_rejected(self) -> None:
         records = self.make_records()
         records[-1] = copy.deepcopy(records[0])
 
-        with self.assertRaisesRegex(results.ValidationError, "duplicate episode key"):
+        with pytest.raises(results.ValidationError, match="duplicate episode key"):
             results.aggregate_records(records)
 
     def test_incomplete_evaluation_is_rejected(self) -> None:
-        with self.assertRaisesRegex(results.ValidationError, "expected 2000 episodes, got 1999"):
+        with pytest.raises(results.ValidationError, match="expected 2000 episodes, got 1999"):
             results.aggregate_records(self.make_records()[:-1])
 
     def test_inconsistent_protocol_metadata_is_rejected(self) -> None:
         records = self.make_records()
         records[-1]["flow_steps"] = 3
 
-        with self.assertRaisesRegex(results.ValidationError, "inconsistent evaluation metadata: flow_steps"):
+        with pytest.raises(results.ValidationError, match="inconsistent evaluation metadata: flow_steps"):
             results.aggregate_records(records)
 
     def test_non_boolean_success_is_rejected(self) -> None:
         records = self.make_records()
         records[0]["success"] = 1
 
-        with self.assertRaisesRegex(results.ValidationError, "success must be a JSON boolean"):
+        with pytest.raises(results.ValidationError, match="success must be a JSON boolean"):
             results.aggregate_records(records)
 
     def test_complete_episode_with_exception_is_rejected(self) -> None:
         records = self.make_records()
         records[0]["exception"] = "environment crashed"
 
-        with self.assertRaisesRegex(results.ValidationError, "complete episode contains exception"):
+        with pytest.raises(results.ValidationError, match="complete episode contains exception"):
             results.aggregate_records(records)
 
     def test_inconsistent_suite_log_path_is_rejected(self) -> None:
         records = self.make_records()
         records[0]["client_log_path"] = "/volt/logs/other.log"
 
-        with self.assertRaisesRegex(results.ValidationError, "inconsistent client_log_path"):
+        with pytest.raises(results.ValidationError, match="inconsistent client_log_path"):
             results.aggregate_records(records)
 
     def test_existing_output_is_not_replaced_by_default(self) -> None:
@@ -137,30 +139,30 @@ class LiberoEvalResultsTest(unittest.TestCase):
         output_path.write_text("sentinel\n", encoding="utf-8")
         summary = results.aggregate_records(self.make_records())
 
-        with self.assertRaises(FileExistsError):
+        with pytest.raises(FileExistsError):
             results.write_summary_csv(summary, output_path)
-        self.assertEqual(output_path.read_text(encoding="utf-8"), "sentinel\n")
+        assert output_path.read_text(encoding="utf-8") == "sentinel\n"
 
     def test_invalid_git_sha_and_naive_timestamp_are_rejected(self) -> None:
         records = self.make_records()
         records[0]["git_sha"] = "short"
-        with self.assertRaisesRegex(results.ValidationError, "full 40-character"):
+        with pytest.raises(results.ValidationError, match="full 40-character"):
             results.aggregate_records(records)
 
         records = self.make_records()
         records[0]["started_at_utc"] = "2026-09-20T00:00:00"
-        with self.assertRaisesRegex(results.ValidationError, "must include a UTC offset"):
+        with pytest.raises(results.ValidationError, match="must include a UTC offset"):
             results.aggregate_records(records)
 
     def test_schema_version_and_exception_field_are_required(self) -> None:
         records = self.make_records()
         records[0]["schema_version"] = 2
-        with self.assertRaisesRegex(results.ValidationError, "unsupported schema_version"):
+        with pytest.raises(results.ValidationError, match="unsupported schema_version"):
             results.aggregate_records(records)
 
         records = self.make_records()
         del records[0]["exception"]
-        with self.assertRaisesRegex(results.ValidationError, "missing required fields: exception"):
+        with pytest.raises(results.ValidationError, match="missing required fields: exception"):
             results.aggregate_records(records)
 
 

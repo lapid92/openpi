@@ -15,7 +15,7 @@ from scripts import libero_eval_runner
 def _datetime_utc_compat(monkeypatch):
     """The project targets 3.11; keep these tests runnable under the host's older Python."""
     if not hasattr(libero_eval_runner.datetime, "UTC"):
-        monkeypatch.setattr(libero_eval_runner.datetime, "UTC", datetime.timezone.utc, raising=False)
+        monkeypatch.setattr(libero_eval_runner.datetime, "UTC", datetime.UTC, raising=False)
 
 
 def _artifact() -> libero_eval_runner.Artifact:
@@ -137,9 +137,7 @@ def test_official_artifact_requires_canonical_gcs_and_no_s3() -> None:
 
 
 def test_run_client_binds_gpu_and_cleans_up_on_timeout(tmp_path, monkeypatch) -> None:
-    runtime = dataclasses.replace(
-        _runtime(), repo_root=tmp_path, client_timeout_sec=17
-    )
+    runtime = dataclasses.replace(_runtime(), repo_root=tmp_path, client_timeout_sec=17)
     created = []
     stopped = []
 
@@ -210,7 +208,7 @@ def test_run_flow_records_failure_and_releases_lock(tmp_path, monkeypatch) -> No
     monkeypatch.setattr(libero_eval_runner, "stop_process", lambda process: None)
     monkeypatch.setattr(libero_eval_runner, "run_client", lambda *args: 9)
 
-    with pytest.raises(RuntimeError, match="client failed.*exit code 9"):
+    with pytest.raises(RuntimeError, match=r"client failed.*exit code 9"):
         libero_eval_runner.run_flow(runtime, _artifact(), protocol, 3, gpu_id=0, port=8000)
 
     flow_root = runtime.output_root / protocol.protocol_id / _artifact().artifact_id / "flow_3"

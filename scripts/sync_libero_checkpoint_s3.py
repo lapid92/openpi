@@ -15,7 +15,6 @@ import tarfile
 import tempfile
 from typing import Any
 
-
 S3_BUCKET = "aair-users-east-2"
 S3_PREFIX = "arilap01/libero/openpi/checkpoints/"
 AWS_REGION = "us-east-2"
@@ -172,9 +171,7 @@ def _object_exists(s3: Any, key: str) -> bool:
 
 def _assert_remote_absent(s3: Any, artifact_key: str) -> None:
     existing = [
-        name
-        for name in (ARCHIVE_NAME, MANIFEST_NAME, SUCCESS_NAME)
-        if _object_exists(s3, _key(artifact_key, name))
+        name for name in (ARCHIVE_NAME, MANIFEST_NAME, SUCCESS_NAME) if _object_exists(s3, _key(artifact_key, name))
     ]
     if existing:
         raise FileExistsError(
@@ -343,7 +340,7 @@ def download(destination: pathlib.Path, artifact_key: str, *, s3: Any | None = N
             raise ValueError("Downloaded archive SHA256 does not match manifest")
         with tarfile.open(archive_path, "r") as archive:
             _validate_archive_members(archive)
-            archive.extractall(extracted)  # noqa: S202 -- every member was validated above.
+            archive.extractall(extracted)
         _validate_checkpoint_source(extracted)
         local_manifest = {**manifest, "checkpoint_path": str(destination)}
         (extracted / "artifact_manifest.json").write_text(
