@@ -15,7 +15,22 @@ from scripts import libero_eval_runner
 def _datetime_utc_compat(monkeypatch):
     """The project targets 3.11; keep these tests runnable under the host's older Python."""
     if not hasattr(libero_eval_runner.datetime, "UTC"):
-        monkeypatch.setattr(libero_eval_runner.datetime, "UTC", datetime.UTC, raising=False)
+        monkeypatch.setattr(
+            libero_eval_runner.datetime,
+            "UTC",
+            datetime.timezone.utc,  # noqa: UP017
+            raising=False,
+        )
+    if not hasattr(pathlib.Path, "is_relative_to"):
+
+        def is_relative_to(path, other):
+            try:
+                path.relative_to(other)
+            except ValueError:
+                return False
+            return True
+
+        monkeypatch.setattr(pathlib.Path, "is_relative_to", is_relative_to, raising=False)
 
 
 def _artifact() -> libero_eval_runner.Artifact:
@@ -140,6 +155,7 @@ def test_run_client_binds_gpu_and_cleans_up_on_timeout(tmp_path, monkeypatch) ->
     runtime = dataclasses.replace(_runtime(), repo_root=tmp_path, client_timeout_sec=17)
     created = []
     stopped = []
+    monkeypatch.setenv("PYTHONPATH", "/existing/pythonpath")
 
     class FakeProcess:
         def wait(self, timeout):
@@ -159,9 +175,35 @@ def test_run_client_binds_gpu_and_cleans_up_on_timeout(tmp_path, monkeypatch) ->
         libero_eval_runner.run_client(["client", "--flag"], tmp_path / "client.log", runtime, gpu_id=3)
 
     assert created[0][1]["env"]["CUDA_VISIBLE_DEVICES"] == "3"
+    assert created[0][1]["env"]["MUJOCO_GL"] == "egl"
     assert created[0][1]["env"]["MUJOCO_EGL_DEVICE_ID"] == "0"
+    assert created[0][1]["env"]["PYOPENGL_PLATFORM"] == "egl"
+    assert created[0][1]["env"]["PYTHONPATH"] == os.pathsep.join(
+        (str(tmp_path / "third_party" / "libero"), "/existing/pythonpath")
+    )
     assert created[0][1]["start_new_session"] is True
     assert stopped == [fake_process]
+
+
+def test_run_client_sets_standalone_libero_pythonpath_when_not_inherited(tmp_path, monkeypatch) -> None:
+    runtime = dataclasses.replace(_runtime(), repo_root=tmp_path)
+    captured = {}
+    monkeypatch.delenv("PYTHONPATH", raising=False)
+
+    class FakeProcess:
+        def wait(self, timeout):
+            assert timeout == runtime.client_timeout_sec
+            return 0
+
+    def fake_popen(command, **kwargs):
+        del command
+        captured.update(kwargs)
+        return FakeProcess()
+
+    monkeypatch.setattr(libero_eval_runner.subprocess, "Popen", fake_popen)
+
+    assert libero_eval_runner.run_client(["client"], tmp_path / "client.log", runtime, gpu_id=0) == 0
+    assert captured["env"]["PYTHONPATH"] == str(tmp_path / "third_party" / "libero")
 
 
 def test_run_flow_publishes_complete_metadata_then_success_marker(tmp_path, monkeypatch) -> None:

@@ -2,6 +2,7 @@ from __future__ import annotations
 
 import copy
 import csv
+import datetime
 import json
 import pathlib
 import tempfile
@@ -10,6 +11,13 @@ import unittest
 import pytest
 
 from scripts import libero_eval_results as results
+
+
+@pytest.fixture(autouse=True)
+def _datetime_utc_compat(monkeypatch):
+    """The project targets 3.11; keep tests runnable under the host's older Python."""
+    if not hasattr(results.dt, "UTC"):
+        monkeypatch.setattr(results.dt, "UTC", datetime.timezone.utc, raising=False)  # noqa: UP017
 
 
 class LiberoEvalResultsTest(unittest.TestCase):

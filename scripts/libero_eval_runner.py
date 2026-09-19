@@ -274,10 +274,17 @@ def run_client(
     gpu_id: int,
 ) -> int:
     client_environment = os.environ.copy()
+    libero_pythonpath = str(runtime.repo_root / "third_party" / "libero")
+    inherited_pythonpath = client_environment.get("PYTHONPATH")
+    if inherited_pythonpath:
+        libero_pythonpath = os.pathsep.join((libero_pythonpath, inherited_pythonpath))
     client_environment.update(
         {
             "CUDA_VISIBLE_DEVICES": str(gpu_id),
+            "MUJOCO_GL": "egl",
             "MUJOCO_EGL_DEVICE_ID": "0",
+            "PYOPENGL_PLATFORM": "egl",
+            "PYTHONPATH": libero_pythonpath,
         }
     )
     with log_path.open("w", encoding="utf-8") as client_log:
