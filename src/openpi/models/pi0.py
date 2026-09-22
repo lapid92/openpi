@@ -242,13 +242,17 @@ class Pi0(_model.BaseModel):
         This follows the loss construction in Arm-Debug/tvm's ``wacv27`` branch at
         commit 101bdbf10d5765928fd140187913a437663adbf8, specialized to the
         existing one-time pi0.5 checkpoint parameterization F(x; t, s) = F(x; s).
+        TVM source/target times remain uniform, while diagonal FM preserves pi0.5's baseline Beta sampling and RNG.
         """
-        preprocess_rng, noise_rng, times_rng, diagonal_time_rng = jax.random.split(rng, 4)
+        # Preserve compute_loss's exact RNG path so enabling TVM does not perturb the baseline FM objective.
+        preprocess_rng, noise_rng, time_rng = jax.random.split(rng, 3)
+        tvm_times_rng = jax.random.fold_in(rng, 0x54564D)  # Domain-separate the TVM time pair ("TVM").
         observation = _model.preprocess_observation(preprocess_rng, observation, train=train)
 
         batch_shape = actions.shape[:-2]
         noise = jax.random.normal(noise_rng, actions.shape)
-        unordered_times = jax.random.uniform(times_rng, (*batch_shape, 2))
+        time = jax.random.beta(time_rng, 1.5, 1, batch_shape) * 0.999 + 0.001
+        unordered_times = jax.random.uniform(tvm_times_rng, (*batch_shape, 2))
         source_time = jnp.maximum(unordered_times[..., 0], unordered_times[..., 1])
         target_time = jnp.minimum(unordered_times[..., 0], unordered_times[..., 1])
         source_time = jnp.where(
@@ -256,16 +260,13 @@ class Pi0(_model.BaseModel):
             source_time,
             jnp.minimum(target_time + jnp.finfo(source_time.dtype).eps, 1.0),
         )
-        # Keep the diagonal FM sample independent and uniform, matching the TVM reference objective. Thus the
-        # warmup optimizes TVM-style FM rather than the Beta(1.5, 1) sampling used by the baseline compute_loss.
-        diagonal_time = jax.random.uniform(diagonal_time_rng, batch_shape)
         velocity_target = noise - actions
 
-        diagonal_time_expanded = diagonal_time[..., None, None]
-        x_diagonal = diagonal_time_expanded * noise + (1 - diagonal_time_expanded) * actions
+        time_expanded = time[..., None, None]
+        x_diagonal = time_expanded * noise + (1 - time_expanded) * actions
 
         prefix = self.embed_prefix(observation)
-        diagonal_velocity = self._predict_velocity_from_prefix(observation, x_diagonal, diagonal_time, *prefix)
+        diagonal_velocity = self._predict_velocity_from_prefix(observation, x_diagonal, time, *prefix)
         fm_loss = jnp.mean(jnp.square(diagonal_velocity - velocity_target), axis=-1)
 
         def compute_terminal_loss(_):

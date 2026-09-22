@@ -24,8 +24,37 @@ def test_pi0_model():
     assert actions.shape == (batch_size, model.action_horizon, model.action_dim)
 
 
-@pytest.mark.parametrize("alpha", [0.0, 0.125, 0.25])
-def test_pi05_tvm_loss_is_finite_and_shape_consistent(alpha: float):
+@pytest.mark.parametrize("train", [False, True])
+def test_pi05_zero_tvm_alpha_matches_baseline_loss_exactly(train: bool):
+    key = jax.random.key(0)
+    config = pi0_config.Pi0Config(pi05=True, paligemma_variant="dummy", action_expert_variant="dummy")
+    model = config.create(key)
+    teacher = config.create(jax.random.key(1))
+    batch_size = 2
+    obs, act = config.fake_obs(batch_size), config.fake_act(batch_size)
+
+    losses = model.compute_tvm_loss(
+        key,
+        obs,
+        act,
+        teacher=teacher,
+        alpha=0.0,
+        fm_loss_weight=1.0,
+        train=train,
+    )
+    baseline_loss = model.compute_loss(key, obs, act, train=train)
+
+    assert set(losses) == {"loss", "fm_loss", "tvm_loss"}
+    for value in losses.values():
+        assert value.shape == (batch_size, config.action_horizon)
+        assert jax.numpy.all(jax.numpy.isfinite(value))
+    assert jax.numpy.array_equal(losses["loss"], baseline_loss)
+    assert jax.numpy.array_equal(losses["fm_loss"], baseline_loss)
+    assert jax.numpy.count_nonzero(losses["tvm_loss"]) == 0
+
+
+@pytest.mark.parametrize("alpha", [0.125, 0.25])
+def test_pi05_positive_tvm_loss_is_finite_and_shape_consistent(alpha: float):
     key = jax.random.key(0)
     config = pi0_config.Pi0Config(pi05=True, paligemma_variant="dummy", action_expert_variant="dummy")
     model = config.create(key)
@@ -46,13 +75,6 @@ def test_pi05_tvm_loss_is_finite_and_shape_consistent(alpha: float):
     for value in losses.values():
         assert value.shape == (batch_size, config.action_horizon)
         assert jax.numpy.all(jax.numpy.isfinite(value))
-    if alpha == 0.0:
-        assert jax.numpy.array_equal(losses["loss"], losses["fm_loss"])
-        assert jax.numpy.count_nonzero(losses["tvm_loss"]) == 0
-        # TVM deliberately retains its uniform diagonal-time FM sampler at alpha=0;
-        # it is not expected to reproduce compute_loss's beta-distributed sample.
-        baseline_loss = model.compute_loss(key, obs, act)
-        assert not jax.numpy.allclose(losses["fm_loss"], baseline_loss)
 
 
 def test_pi05_tvm_loss_has_finite_student_gradients_and_does_not_mutate_teacher():
