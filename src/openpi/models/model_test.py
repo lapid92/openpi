@@ -24,14 +24,15 @@ def test_pi0_model():
     assert actions.shape == (batch_size, model.action_horizon, model.action_dim)
 
 
-@pytest.mark.parametrize("train", [False, True])
-def test_pi05_zero_tvm_alpha_matches_baseline_loss_exactly(train: bool):
+@pytest.mark.parametrize("mode", ["eval", "train"])
+def test_pi05_zero_tvm_alpha_matches_baseline_loss_exactly(mode: str):
     key = jax.random.key(0)
     config = pi0_config.Pi0Config(pi05=True, paligemma_variant="dummy", action_expert_variant="dummy")
     model = config.create(key)
     teacher = config.create(jax.random.key(1))
     batch_size = 2
     obs, act = config.fake_obs(batch_size), config.fake_act(batch_size)
+    train = mode == "train"
 
     losses = model.compute_tvm_loss(
         key,
