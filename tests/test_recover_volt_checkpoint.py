@@ -43,3 +43,9 @@ def test_evaluation_file_filter(path: str, expected: bool) -> None:
 def test_list_artifacts_validates_job_id_before_network() -> None:
     with pytest.raises(ValueError, match="job ID"):
         recovery.list_artifacts("not-valid", PREFIX, "token")
+
+
+def test_cli_requires_exactly_one_token_source(monkeypatch: pytest.MonkeyPatch) -> None:
+    monkeypatch.setattr("sys.argv", ["recover_volt_checkpoint.py", "--job-id", "abc123def456"])
+    with pytest.raises(SystemExit):
+        recovery._parse_args()

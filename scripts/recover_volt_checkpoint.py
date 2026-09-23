@@ -151,7 +151,9 @@ def _parse_args() -> argparse.Namespace:
     parser.add_argument("--source-prefix", required=True)
     parser.add_argument("--destination", type=pathlib.Path, required=True)
     parser.add_argument("--workers", type=int, default=8)
-    parser.add_argument("--token-stdin", action="store_true", required=True)
+    token_source = parser.add_mutually_exclusive_group(required=True)
+    token_source.add_argument("--token-stdin", action="store_true")
+    token_source.add_argument("--token-env", metavar="NAME")
     return parser.parse_args()
 
 
@@ -159,7 +161,7 @@ def main() -> None:
     args = _parse_args()
     if not 1 <= args.workers <= 32:
         raise ValueError("workers must be between 1 and 32")
-    token = sys.stdin.readline().strip()
+    token = os.environ.pop(args.token_env, "").strip() if args.token_env else sys.stdin.readline().strip()
     if not token:
         raise ValueError("A Volt API token is required on stdin")
     result = recover(args.job_id, args.source_prefix, args.destination, token, workers=args.workers)
