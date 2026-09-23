@@ -44,6 +44,8 @@ class Artifact:
     checkpoint_name: str
     checkpoint_path: str
     checkpoint_s3_uri: str
+    checkpoint_volt_job_id: str
+    checkpoint_volt_artifact_prefix: str
     train_steps_completed: int
     config: str
     git_sha: str
@@ -75,6 +77,8 @@ class Artifact:
             checkpoint_name=str(payload["checkpoint_name"]),
             checkpoint_path=str(payload["checkpoint_path"]),
             checkpoint_s3_uri=str(payload.get("checkpoint_s3_uri", "")),
+            checkpoint_volt_job_id=str(payload.get("checkpoint_volt_job_id", "")),
+            checkpoint_volt_artifact_prefix=str(payload.get("checkpoint_volt_artifact_prefix", "")),
             train_steps_completed=payload["train_steps_completed"],
             config=str(payload["config"]),
             git_sha=str(payload["git_sha"]),
@@ -98,27 +102,51 @@ class Artifact:
         if self.config != expected_config:
             raise ValueError(f"Expected config {expected_config} for model_class={self.model_class}")
         if self.model_class == "official":
-            if self.checkpoint_s3_uri:
-                raise ValueError("Official checkpoint must not be copied to S3")
+            if self.checkpoint_s3_uri or self.checkpoint_volt_job_id or self.checkpoint_volt_artifact_prefix:
+                raise ValueError("Official checkpoint must use its public source directly")
             if self.checkpoint_path != "gs://openpi-assets/checkpoints/pi05_libero":
                 raise ValueError("Official checkpoint must use gs://openpi-assets/checkpoints/pi05_libero")
             if not re.fullmatch(r"[A-Za-z0-9._-]{1,160}", self.artifact_id):
                 raise ValueError("Official artifact_id is not a safe path component")
         else:
-            digest_match = re.fullmatch(r"sha256:([0-9a-f]{64})", self.artifact_id)
-            if digest_match is None:
-                raise ValueError("S3 checkpoint artifact_id must be sha256:<64 lowercase hex characters>")
-            expected_uri = (
-                "s3://aair-users-east-2/arilap01/libero/openpi/checkpoints/"
-                f"{self.model_class}/{self.training_run_id}/"
-                f"step_{self.train_steps_completed}-checkpoint_{self.checkpoint_label}/"
-                f"sha256_{digest_match.group(1)}/"
-            )
-            if self.checkpoint_s3_uri != expected_uri:
-                raise ValueError("checkpoint_s3_uri does not match the immutable artifact provenance")
             checkpoint_path = pathlib.Path(self.checkpoint_path).resolve()
-            if not checkpoint_path.is_relative_to("/volt"):
-                raise ValueError("Downloaded S3 checkpoint_path must be under /volt")
+            try:
+                checkpoint_path.relative_to("/volt")
+            except ValueError:
+                raise ValueError("Recovered checkpoint_path must be under /volt")
+            uses_s3 = bool(self.checkpoint_s3_uri)
+            uses_volt = bool(self.checkpoint_volt_job_id or self.checkpoint_volt_artifact_prefix)
+            if uses_s3 == uses_volt:
+                raise ValueError("Checkpoint must declare exactly one of S3 or Volt artifact provenance")
+            if uses_s3:
+                digest_match = re.fullmatch(r"sha256:([0-9a-f]{64})", self.artifact_id)
+                if digest_match is None:
+                    raise ValueError("S3 checkpoint artifact_id must be sha256:<64 lowercase hex characters>")
+                expected_uri = (
+                    "s3://aair-users-east-2/arilap01/libero/openpi/checkpoints/"
+                    f"{self.model_class}/{self.training_run_id}/"
+                    f"step_{self.train_steps_completed}-checkpoint_{self.checkpoint_label}/"
+                    f"sha256_{digest_match.group(1)}/"
+                )
+                if self.checkpoint_s3_uri != expected_uri:
+                    raise ValueError("checkpoint_s3_uri does not match the immutable artifact provenance")
+                if self.checkpoint_volt_job_id or self.checkpoint_volt_artifact_prefix:
+                    raise ValueError("S3 checkpoint must not declare Volt artifact provenance")
+            else:
+                if not re.fullmatch(r"[a-z0-9]{12}", self.checkpoint_volt_job_id):
+                    raise ValueError("checkpoint_volt_job_id must be a 12-character Volt job ID")
+                prefix = self.checkpoint_volt_artifact_prefix.strip("/")
+                if (
+                    prefix != self.checkpoint_volt_artifact_prefix
+                    or not re.fullmatch(r"[A-Za-z0-9][A-Za-z0-9._/-]{0,511}", prefix)
+                    or ".." in pathlib.PurePosixPath(prefix).parts
+                ):
+                    raise ValueError("checkpoint_volt_artifact_prefix is unsafe")
+                expected_artifact_prefix = f"volt-{self.checkpoint_volt_job_id}-"
+                if not self.artifact_id.startswith(expected_artifact_prefix) or not re.fullmatch(
+                    r"[A-Za-z0-9._-]{1,200}", self.artifact_id
+                ):
+                    raise ValueError(f"Volt artifact_id must start with {expected_artifact_prefix!r}")
 
 
 @dataclasses.dataclass(frozen=True)
