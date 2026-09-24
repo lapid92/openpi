@@ -421,7 +421,8 @@ def main(config: _config.TrainConfig):
             or (step + 1 in config.checkpoint_completed_steps)
             or step == config.num_train_steps - 1
         ):
-            _checkpoints.save_state(checkpoint_manager, train_state, data_loader, step)
+            checkpoint_step = step + 1 if config.checkpoint_completed_steps else step
+            _checkpoints.save_state(checkpoint_manager, train_state, data_loader, checkpoint_step)
 
     logging.info("Waiting for checkpoint manager to finish")
     checkpoint_manager.wait_until_finished()
