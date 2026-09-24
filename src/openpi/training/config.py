@@ -527,6 +527,10 @@ class TrainConfig:
     overwrite: bool = False
     # If true, will resume training from the last checkpoint.
     resume: bool = False
+    # Restore a full training state from another experiment while writing new checkpoints here.
+    resume_checkpoint_dir: str | None = None
+    # Completed optimizer update counts at which to retain evaluation checkpoints.
+    checkpoint_completed_steps: tuple[int, ...] = ()
 
     # If true, will enable wandb logging.
     wandb_enabled: bool = True
@@ -565,6 +569,8 @@ class TrainConfig:
     def __post_init__(self) -> None:
         if self.resume and self.overwrite:
             raise ValueError("Cannot resume and overwrite at the same time.")
+        if self.resume and self.resume_checkpoint_dir:
+            raise ValueError("Cannot combine resume and resume_checkpoint_dir")
         if type(self.gradient_accumulation_steps) is not int or self.gradient_accumulation_steps < 1:
             raise ValueError("gradient_accumulation_steps must be a positive integer")
         if self.batch_size % self.gradient_accumulation_steps != 0:

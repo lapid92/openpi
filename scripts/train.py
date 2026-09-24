@@ -1,7 +1,10 @@
 import dataclasses
 import functools
 import logging
+import os
 import platform
+import subprocess
+import time
 from typing import Any
 
 import etils.epath as epath
@@ -69,6 +72,26 @@ def init_wandb(config: _config.TrainConfig, *, resuming: bool, log_code: bool = 
 
     if log_code:
         wandb.run.log_code(epath.Path(__file__).parent.parent)
+    if wandb.run is not None:
+        wandb.config.update(
+            {"git_sha": os.environ.get("OPENPI_GIT_SHA", ""), "source_checkpoint": config.resume_checkpoint_dir or ""},
+            allow_val_change=True,
+        )
+        logging.info("W&B run: %s", wandb.run.url)
+
+
+def _gpu_memory_mib() -> int | None:
+    try:
+        result = subprocess.run(
+            ["nvidia-smi", "--query-gpu=memory.used", "--format=csv,noheader,nounits"],
+            check=True,
+            capture_output=True,
+            text=True,
+            timeout=10,
+        )
+        return max(int(value.strip()) for value in result.stdout.splitlines())
+    except (FileNotFoundError, subprocess.SubprocessError, ValueError):
+        return None
 
 
 def _load_weights_and_validate(loader: _weight_loaders.WeightLoader, params_shape: at.Params) -> at.Params:
@@ -263,6 +286,7 @@ def train_step(
         "loss": loss,
         "fm_loss": loss_components.get("fm_loss", loss_components["loss"]),
         "tvm_loss": loss_components.get("tvm_loss", jnp.zeros_like(loss_components["loss"])),
+        "weighted_tvm_loss": alpha * loss_components.get("tvm_loss", jnp.zeros_like(loss_components["loss"])),
         "tvm_alpha": alpha,
         "fm_loss_factor": fm_loss_weight,
         "grad_norm": optax.global_norm(grads),
@@ -314,11 +338,24 @@ def main(config: _config.TrainConfig):
     ]
     wandb.log({"camera_views": images_to_log}, step=0)
 
-    train_state, train_state_sharding = init_train_state(config, init_rng, mesh, resume=resuming)
+    train_state, train_state_sharding = init_train_state(
+        config, init_rng, mesh, resume=resuming or bool(config.resume_checkpoint_dir)
+    )
     jax.block_until_ready(train_state)
     logging.info(f"Initialized train state:\n{training_utils.array_tree_to_info(train_state.params)}")
 
-    if resuming:
+    if config.resume_checkpoint_dir:
+        source_manager, source_resuming = _checkpoints.initialize_checkpoint_dir(
+            config.resume_checkpoint_dir, keep_period=None, overwrite=False, resume=True
+        )
+        if not source_resuming:
+            raise ValueError(f"No completed source checkpoint at {config.resume_checkpoint_dir}")
+        train_state = _checkpoints.restore_state(source_manager, train_state, data_loader)
+        source_manager.close()
+        logging.info(
+            "Restored full training state from %s at completed step %s", config.resume_checkpoint_dir, train_state.step
+        )
+    elif resuming:
         train_state = _checkpoints.restore_state(checkpoint_manager, train_state, data_loader)
 
     ptrain_step = jax.jit(
@@ -337,6 +374,8 @@ def main(config: _config.TrainConfig):
     )
 
     infos = []
+    lr_fn = config.lr_schedule.create()
+    log_start = time.monotonic()
     pending_batch = first_batch
     for step in pbar:
         microbatches = [pending_batch]
@@ -356,14 +395,28 @@ def main(config: _config.TrainConfig):
         if step % config.log_interval == 0:
             stacked_infos = common_utils.stack_forest(infos)
             reduced_info = jax.device_get(jax.tree.map(jnp.mean, stacked_infos))
+            if not all(np.isfinite(value).all() for value in reduced_info.values()):
+                raise FloatingPointError(f"Nonfinite training metric at completed step {step + 1}: {reduced_info}")
+            elapsed = max(time.monotonic() - log_start, 1e-6)
+            reduced_info["global_step"] = step + 1
+            reduced_info["learning_rate"] = float(lr_fn(step))
+            reduced_info["samples_per_second"] = len(infos) * config.batch_size / elapsed
+            gpu_memory = _gpu_memory_mib()
+            if gpu_memory is not None:
+                reduced_info["gpu_memory_used_max_mib"] = gpu_memory
             info_str = ", ".join(f"{k}={v:.4f}" for k, v in reduced_info.items())
             pbar.write(f"Step {step}: {info_str}")
-            wandb.log(reduced_info, step=step)
+            wandb.log(reduced_info, step=step + 1)
             infos = []
+            log_start = time.monotonic()
         if step + 1 < config.num_train_steps:
             pending_batch = next(data_iter)
 
-        if (step % config.save_interval == 0 and step > start_step) or step == config.num_train_steps - 1:
+        if (
+            (step % config.save_interval == 0 and step > start_step)
+            or (step + 1 in config.checkpoint_completed_steps)
+            or step == config.num_train_steps - 1
+        ):
             _checkpoints.save_state(checkpoint_manager, train_state, data_loader, step)
 
     logging.info("Waiting for checkpoint manager to finish")
