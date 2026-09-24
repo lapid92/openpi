@@ -6,6 +6,7 @@ import hashlib
 import pathlib
 import urllib.parse
 
+import google_crc32c
 import requests
 
 BUCKET = "openpi-assets"
@@ -32,7 +33,8 @@ def list_objects(prefix: str) -> list[dict]:
 def stage_one(obj: dict) -> tuple[str, int]:
     name = obj["name"]
     expected_size = int(obj["size"])
-    expected_md5 = base64.b64decode(obj["md5Hash"])
+    expected_md5 = base64.b64decode(obj["md5Hash"]) if "md5Hash" in obj else None
+    expected_crc32c = base64.b64decode(obj["crc32c"])
     destination = DEST / name
     destination.parent.mkdir(parents=True, exist_ok=True)
 
@@ -40,10 +42,12 @@ def stage_one(obj: dict) -> tuple[str, int]:
         if not path.is_file() or path.stat().st_size != expected_size:
             return False
         digest = hashlib.md5()  # noqa: S324 - GCS provides MD5 for transfer integrity.
+        crc = google_crc32c.Checksum()
         with path.open("rb") as stream:
             for block in iter(lambda: stream.read(8 * 1024 * 1024), b""):
                 digest.update(block)
-        return digest.digest() == expected_md5
+                crc.update(block)
+        return (expected_md5 is None or digest.digest() == expected_md5) and crc.digest() == expected_crc32c
 
     if not valid(destination):
         temporary = destination.with_name(destination.name + ".partial")
@@ -55,7 +59,7 @@ def stage_one(obj: dict) -> tuple[str, int]:
                     if block:
                         output.write(block)
         if not valid(temporary):
-            raise ValueError(f"GCS size/MD5 mismatch: {name}")
+            raise ValueError(f"GCS size/checksum mismatch: {name}")
         temporary.replace(destination)
     return name, expected_size
 
