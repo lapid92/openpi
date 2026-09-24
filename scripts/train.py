@@ -73,8 +73,9 @@ def init_wandb(config: _config.TrainConfig, *, resuming: bool, log_code: bool = 
     if log_code:
         wandb.run.log_code(epath.Path(__file__).parent.parent)
     if wandb.run is not None:
+        source_checkpoint = config.resume_checkpoint_dir or getattr(config.weight_loader, "params_path", "")
         wandb.config.update(
-            {"git_sha": os.environ.get("OPENPI_GIT_SHA", ""), "source_checkpoint": config.resume_checkpoint_dir or ""},
+            {"git_sha": os.environ.get("OPENPI_GIT_SHA", ""), "source_checkpoint": source_checkpoint},
             allow_val_change=True,
         )
         logging.info("W&B run: %s", wandb.run.url)
