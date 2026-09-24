@@ -20,6 +20,13 @@ def make_config(*, smoke: bool = False) -> training_config.TrainConfig:
     config = training_config.get_config("pi05_libero_tvm")
     return dataclasses.replace(
         config,
+        data=dataclasses.replace(
+            config.data,
+            assets=training_config.AssetsConfig(
+                assets_dir=f"{ASSETS_ROOT}/checkpoints/pi05_libero/assets",
+                asset_id="physical-intelligence/libero",
+            ),
+        ),
         exp_name=f"{RUN_NAME}_smoke" if smoke else RUN_NAME,
         checkpoint_base_dir=OUTPUT_ROOT,
         assets_base_dir=ASSETS_ROOT,
@@ -31,7 +38,7 @@ def make_config(*, smoke: bool = False) -> training_config.TrainConfig:
             enabled=True, warmup_steps=0, ramp_steps=5_000, alpha_final=0.1, fm_loss_weight=1.0
         ),
         checkpoint_completed_steps=() if smoke else (5_000, 10_000, 20_000, 30_000),
-        keep_period=None,
+        keep_period=5_000,
         save_interval=30_000,
         log_interval=1 if smoke else 10,
         wandb_enabled=True,
