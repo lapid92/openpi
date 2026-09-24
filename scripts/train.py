@@ -284,10 +284,13 @@ def train_step(
     )
     info = {
         "loss": loss,
+        "total_loss": loss,
         "fm_loss": loss_components.get("fm_loss", loss_components["loss"]),
         "tvm_loss": loss_components.get("tvm_loss", jnp.zeros_like(loss_components["loss"])),
+        "raw_tvm_loss": loss_components.get("tvm_loss", jnp.zeros_like(loss_components["loss"])),
         "weighted_tvm_loss": alpha * loss_components.get("tvm_loss", jnp.zeros_like(loss_components["loss"])),
         "tvm_alpha": alpha,
+        "alpha": alpha,
         "fm_loss_factor": fm_loss_weight,
         "grad_norm": optax.global_norm(grads),
         "param_norm": optax.global_norm(kernel_params),
@@ -401,6 +404,7 @@ def main(config: _config.TrainConfig):
             reduced_info["global_step"] = step + 1
             reduced_info["learning_rate"] = float(lr_fn(step))
             reduced_info["samples_per_second"] = len(infos) * config.batch_size / elapsed
+            reduced_info["throughput_samples_per_second"] = reduced_info["samples_per_second"]
             gpu_memory = _gpu_memory_mib()
             if gpu_memory is not None:
                 reduced_info["gpu_memory_used_max_mib"] = gpu_memory
