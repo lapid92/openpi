@@ -1,4 +1,5 @@
 from collections.abc import Sequence
+import inspect
 import logging
 import pathlib
 import time
@@ -50,18 +51,25 @@ class Policy(BasePolicy):
         self._model = model
         self._input_transform = _transforms.compose(transforms)
         self._output_transform = _transforms.compose(output_transforms)
-        self._sample_kwargs = sample_kwargs or {}
+        self._sample_kwargs = dict(sample_kwargs or {})
+        sampler = self._sample_kwargs.pop("sampler", None)
+        supports_sampler = "sampler" in inspect.signature(model.sample_actions).parameters
+        if sampler not in (None, "current_time") and not supports_sampler:
+            raise ValueError(f"Sampler {sampler!r} is unsupported by {type(model).__name__}")
         self._metadata = metadata or {}
         self._is_pytorch_model = is_pytorch
         self._pytorch_device = pytorch_device
 
         if self._is_pytorch_model:
+            if supports_sampler and sampler is not None:
+                self._sample_kwargs["sampler"] = sampler
             self._model = self._model.to(pytorch_device)
             self._model.eval()
             self._sample_actions = model.sample_actions
         else:
             # JAX model setup
-            self._sample_actions = nnx_utils.module_jit(model.sample_actions)
+            static_kwargs = {"sampler": sampler} if supports_sampler and sampler is not None else None
+            self._sample_actions = nnx_utils.module_jit(model.sample_actions, static_kwargs=static_kwargs)
             self._rng = rng or jax.random.key(0)
 
     @override

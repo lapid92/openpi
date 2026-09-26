@@ -12,7 +12,9 @@ P = ParamSpec("P")
 R = TypeVar("R")
 
 
-def module_jit(meth: Callable[P, R], *jit_args, **jit_kwargs) -> Callable[P, R]:
+def module_jit(
+    meth: Callable[P, R], *jit_args, static_kwargs: dict[str, Any] | None = None, **jit_kwargs
+) -> Callable[P, R]:
     """A higher-order function to JIT-compile `nnx.Module` methods, freezing the module's state in the process.
 
     Why not `nnx.jit`? For some reason, naively applying `nnx.jit` to `nnx.Module` methods, bound or unbound, uses much
@@ -29,10 +31,11 @@ def module_jit(meth: Callable[P, R], *jit_args, **jit_kwargs) -> Callable[P, R]:
         raise ValueError("module_jit must only be used on bound methods of nnx.Modules.")
 
     graphdef, state = nnx.split(meth.__self__)
+    static_kwargs = static_kwargs or {}
 
     def fun(state: nnx.State, *args: P.args, **kwargs: P.kwargs) -> R:
         module = nnx.merge(graphdef, state)
-        return meth.__func__(module, *args, **kwargs)
+        return meth.__func__(module, *args, **{**kwargs, **static_kwargs})
 
     jitted_fn = jax.jit(fun, *jit_args, **jit_kwargs)
 

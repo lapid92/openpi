@@ -16,6 +16,16 @@ from openpi.shared import array_typing as at
 logger = logging.getLogger("openpi")
 
 
+class SourceTimeProjection(nnx.Module):
+    """Bias-free projection whose parameter tree contains only a kernel."""
+
+    def __init__(self, width: int):
+        self.kernel = nnx.Param(jnp.zeros((width, width), dtype=jnp.float32))
+
+    def __call__(self, embedding: at.Float[at.Array, "b emb"]) -> at.Float[at.Array, "b emb"]:
+        return jnp.dot(embedding, self.kernel.value)
+
+
 def make_attn_mask(input_mask, mask_ar):
     """Adapted from big_vision.
 
@@ -93,6 +103,8 @@ class Pi0(_model.BaseModel):
         if config.pi05:
             self.time_mlp_in = nnx.Linear(action_expert_config.width, action_expert_config.width, rngs=rngs)
             self.time_mlp_out = nnx.Linear(action_expert_config.width, action_expert_config.width, rngs=rngs)
+            # A zero-initialized source-time residual keeps released one-time weights exact at initialization.
+            self.source_time_proj = SourceTimeProjection(action_expert_config.width)
         else:
             self.state_proj = nnx.Linear(config.action_dim, action_expert_config.width, rngs=rngs)
             self.action_time_mlp_in = nnx.Linear(2 * action_expert_config.width, action_expert_config.width, rngs=rngs)
@@ -138,7 +150,11 @@ class Pi0(_model.BaseModel):
 
     @at.typecheck
     def embed_suffix(
-        self, obs: _model.Observation, noisy_actions: _model.Actions, timestep: at.Float[at.Array, " b"]
+        self,
+        obs: _model.Observation,
+        noisy_actions: _model.Actions,
+        timestep: at.Float[at.Array, " b"],
+        source_time: at.Float[at.Array, " b"] | None = None,
     ) -> tuple[
         at.Float[at.Array, "b s emb"],
         at.Bool[at.Array, "b s"],
@@ -163,6 +179,12 @@ class Pi0(_model.BaseModel):
             # time MLP (for adaRMS)
             time_emb = self.time_mlp_in(time_emb)
             time_emb = nnx.swish(time_emb)
+            if source_time is not None:
+                source_emb = posemb_sincos(
+                    source_time, self.action_in_proj.out_features, min_period=4e-3, max_period=4.0
+                )
+                target_emb = posemb_sincos(timestep, self.action_in_proj.out_features, min_period=4e-3, max_period=4.0)
+                time_emb = time_emb + self.source_time_proj(source_emb - target_emb)
             time_emb = self.time_mlp_out(time_emb)
             time_emb = nnx.swish(time_emb)
             action_expert_tokens = action_tokens
@@ -200,7 +222,9 @@ class Pi0(_model.BaseModel):
         u_t = noise - actions
 
         prefix_tokens, prefix_mask, prefix_ar_mask = self.embed_prefix(observation)
-        v_t = self._predict_velocity_from_prefix(observation, x_t, time, prefix_tokens, prefix_mask, prefix_ar_mask)
+        v_t = self._predict_velocity_from_prefix(
+            observation, x_t, time, time, prefix_tokens, prefix_mask, prefix_ar_mask
+        )
 
         return jnp.mean(jnp.square(v_t - u_t), axis=-1)
 
@@ -208,14 +232,15 @@ class Pi0(_model.BaseModel):
         self,
         observation: _model.Observation,
         noisy_actions: _model.Actions,
+        source_time: at.Float[at.Array, " b"] | None,
         target_time: at.Float[at.Array, " b"],
         prefix_tokens: at.Float[at.Array, "b p emb"],
         prefix_mask: at.Bool[at.Array, "b p"],
         prefix_ar_mask: at.Bool[at.Array, " p"],
     ) -> _model.Actions:
-        """Predicts velocity, specializing F(x; t, s) as the checkpoint-compatible F(x; s)."""
+        """Predicts F(x; t, s), with a zero-initialized source-time residual."""
         suffix_tokens, suffix_mask, suffix_ar_mask, adarms_cond = self.embed_suffix(
-            observation, noisy_actions, target_time
+            observation, noisy_actions, target_time, source_time
         )
         input_mask = jnp.concatenate([prefix_mask, suffix_mask], axis=1)
         ar_mask = jnp.concatenate([prefix_ar_mask, suffix_ar_mask], axis=0)
@@ -239,9 +264,7 @@ class Pi0(_model.BaseModel):
     ) -> dict[str, at.Array]:
         """Computes flow matching plus the optional TVM-style terminal objective.
 
-        This follows the loss construction in Arm-Debug/tvm's ``wacv27`` branch at
-        commit 101bdbf10d5765928fd140187913a437663adbf8, specialized to the
-        existing one-time pi0.5 checkpoint parameterization F(x; t, s) = F(x; s).
+        This follows the two-time loss construction in Arm-Debug/tvm.
         TVM source/target times remain uniform, while diagonal FM preserves pi0.5's baseline Beta sampling and RNG.
         """
         # Preserve compute_loss's exact RNG path so enabling TVM does not perturb the baseline FM objective.
@@ -266,7 +289,7 @@ class Pi0(_model.BaseModel):
         x_diagonal = time_expanded * noise + (1 - time_expanded) * actions
 
         prefix = self.embed_prefix(observation)
-        diagonal_velocity = self._predict_velocity_from_prefix(observation, x_diagonal, time, *prefix)
+        diagonal_velocity = self._predict_velocity_from_prefix(observation, x_diagonal, time, time, *prefix)
         fm_loss = jnp.mean(jnp.square(diagonal_velocity - velocity_target), axis=-1)
 
         def compute_terminal_loss(_):
@@ -274,7 +297,7 @@ class Pi0(_model.BaseModel):
             x_source = source_time_expanded * noise + (1 - source_time_expanded) * actions
 
             def velocity_at_target_time(time):
-                return self._predict_velocity_from_prefix(observation, x_source, time, *prefix)
+                return self._predict_velocity_from_prefix(observation, x_source, source_time, time, *prefix)
 
             velocity, velocity_time_derivative = jax.jvp(
                 velocity_at_target_time,
@@ -289,6 +312,7 @@ class Pi0(_model.BaseModel):
             teacher_velocity = teacher._predict_velocity_from_prefix(  # noqa: SLF001
                 observation,
                 jax.lax.stop_gradient(transported_actions),
+                target_time,
                 target_time,
                 *teacher_prefix,
             )
@@ -316,7 +340,10 @@ class Pi0(_model.BaseModel):
         *,
         num_steps: int | at.Int[at.Array, ""] = 10,
         noise: at.Float[at.Array, "b ah ad"] | None = None,
+        sampler: str = "current_time",
     ) -> _model.Actions:
+        if sampler not in ("current_time", "target_time"):
+            raise ValueError(f"Unknown sampler: {sampler}")
         observation = _model.preprocess_observation(None, observation, train=False)
         # note that we use the convention more common in diffusion literature, where t=1 is noise and t=0 is the target
         # distribution. yes, this is the opposite of the pi0 paper, and I'm sorry.
@@ -333,8 +360,12 @@ class Pi0(_model.BaseModel):
 
         def step(carry):
             x_t, time = carry
+            target_time = time if sampler == "current_time" else jnp.maximum(time + dt, 0.0)
             suffix_tokens, suffix_mask, suffix_ar_mask, adarms_cond = self.embed_suffix(
-                observation, x_t, jnp.broadcast_to(time, batch_size)
+                observation,
+                x_t,
+                jnp.broadcast_to(target_time, batch_size),
+                jnp.broadcast_to(time, batch_size),
             )
             # `suffix_attn_mask` is shape (b, suffix_len, suffix_len) indicating how the suffix tokens can attend to each
             # other

@@ -50,8 +50,8 @@ class CheckpointWeightLoader(WeightLoader):
     def load(self, params: at.Params) -> at.Params:
         # We are loading np.ndarray and relying on the training code to properly convert and shard the params.
         loaded_params = _model.restore_params(download.maybe_download(self.params_path), restore_type=np.ndarray)
-        # Add all missing LoRA weights.
-        return _merge_params(loaded_params, params, missing_regex=".*lora.*")
+        # Preserve newly initialized adapter weights when loading a released one-time Pi0.5 checkpoint.
+        return _merge_params(loaded_params, params, missing_regex="(.*lora.*|source_time_proj/.*)")
 
 
 @dataclasses.dataclass(frozen=True)

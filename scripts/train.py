@@ -95,6 +95,18 @@ def _gpu_memory_mib() -> int | None:
         return None
 
 
+def _gpu_peak_memory_mib() -> dict[str, float]:
+    """Return JAX allocator peak bytes for each local GPU, when supported."""
+    peaks = {}
+    for index, device in enumerate(jax.local_devices()):
+        if device.platform != "gpu":
+            continue
+        stats = device.memory_stats()
+        if stats is not None and (peak := stats.get("peak_bytes_in_use")) is not None:
+            peaks[f"gpu_{index}_peak_memory_mib"] = peak / (1024 * 1024)
+    return peaks
+
+
 def _load_weights_and_validate(loader: _weight_loaders.WeightLoader, params_shape: at.Params) -> at.Params:
     """Loads and validates the weights. Returns a loaded subset of the weights."""
     loaded_params = loader.load(params_shape)
@@ -296,6 +308,8 @@ def train_step(
         "grad_norm": optax.global_norm(grads),
         "param_norm": optax.global_norm(kernel_params),
     }
+    if config.tvm.enabled and config.model.pi05:
+        info["source_time_grad_norm"] = optax.global_norm(grads["source_time_proj"])
     return new_state, info
 
 
@@ -406,6 +420,8 @@ def main(config: _config.TrainConfig):
             reduced_info["learning_rate"] = float(lr_fn(step))
             reduced_info["samples_per_second"] = len(infos) * config.batch_size / elapsed
             reduced_info["throughput_samples_per_second"] = reduced_info["samples_per_second"]
+            reduced_info["update_seconds"] = elapsed / len(infos)
+            reduced_info.update(_gpu_peak_memory_mib())
             gpu_memory = _gpu_memory_mib()
             if gpu_memory is not None:
                 reduced_info["gpu_memory_used_max_mib"] = gpu_memory

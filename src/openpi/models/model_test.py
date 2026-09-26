@@ -1,5 +1,7 @@
 from flax import nnx
 import jax
+import jax.numpy as jnp
+import numpy as np
 import pytest
 
 from openpi.models import model as _model
@@ -54,6 +56,66 @@ def test_pi05_zero_tvm_alpha_matches_baseline_loss_exactly(mode: str):
     assert jax.numpy.count_nonzero(losses["tvm_loss"]) == 0
 
 
+def test_pi05_two_time_zero_initialized_path_preserves_one_time_output():
+    key = jax.random.key(7)
+    config = pi0_config.Pi0Config(pi05=True, paligemma_variant="dummy", action_expert_variant="dummy")
+    model = config.create(key)
+    observation = _model.preprocess_observation(key, config.fake_obs(2), train=False)
+    actions = config.fake_act(2)
+    prefix = model.embed_prefix(observation)
+
+    for target in (0.05, 0.4, 0.9):
+        target_time = jnp.full((2,), target)
+        baseline = model._predict_velocity_from_prefix(  # noqa: SLF001
+            observation, actions, None, target_time, *prefix
+        )
+        for source in (0.1, 0.6, 1.0):
+            source_time = jnp.full((2,), source)
+            actual = model._predict_velocity_from_prefix(  # noqa: SLF001
+                observation, actions, source_time, target_time, *prefix
+            )
+            np.testing.assert_allclose(actual, baseline, rtol=1e-5, atol=1e-5)
+
+
+def test_pi05_target_time_jvp_holds_actions_and_source_time_fixed():
+    key = jax.random.key(8)
+    config = pi0_config.Pi0Config(pi05=True, paligemma_variant="dummy", action_expert_variant="dummy")
+    model = config.create(key)
+    observation = _model.preprocess_observation(key, config.fake_obs(2), train=False)
+    actions = config.fake_act(2)
+    prefix = model.embed_prefix(observation)
+    source_time = jnp.array([0.8, 0.9])
+    target_time = jnp.array([0.2, 0.4])
+
+    def at_target(s):
+        return model._predict_velocity_from_prefix(  # noqa: SLF001
+            observation, actions, source_time, s, *prefix
+        )
+
+    _, derivative = jax.jvp(at_target, (target_time,), (jnp.ones_like(target_time),))
+    epsilon = 1e-3
+    finite_difference = (at_target(target_time + epsilon) - at_target(target_time - epsilon)) / (2 * epsilon)
+    assert jnp.all(jnp.isfinite(derivative))
+    np.testing.assert_allclose(derivative, finite_difference, rtol=3e-2, atol=3e-2)
+
+
+def test_pi05_diagonal_conditioning_stays_exact_after_source_path_update():
+    config = pi0_config.Pi0Config(pi05=True, paligemma_variant="dummy", action_expert_variant="dummy")
+    model = config.create(jax.random.key(9))
+    assert set(nnx.state(model).to_pure_dict()["source_time_proj"]) == {"kernel"}
+    width = model.action_in_proj.out_features
+    model.source_time_proj.kernel.value = jnp.eye(width, dtype=model.source_time_proj.kernel.value.dtype) * 0.1
+    obs, actions = config.fake_obs(2), config.fake_act(2)
+    target_time = jnp.array([0.2, 0.4])
+    source_time = jnp.array([0.8, 0.9])
+
+    baseline = model.embed_suffix(obs, actions, target_time)[-1]
+    diagonal = model.embed_suffix(obs, actions, target_time, target_time)[-1]
+    off_diagonal = model.embed_suffix(obs, actions, target_time, source_time)[-1]
+    np.testing.assert_array_equal(diagonal, baseline)
+    assert jnp.any(off_diagonal != baseline)
+
+
 @pytest.mark.parametrize("alpha", [0.125, 0.25])
 def test_pi05_positive_tvm_loss_is_finite_and_shape_consistent(alpha: float):
     key = jax.random.key(0)
@@ -104,6 +166,11 @@ def test_pi05_tvm_loss_has_finite_student_gradients_and_does_not_mutate_teacher(
     assert grad_leaves
     assert all(jax.numpy.all(jax.numpy.isfinite(grad)) for grad in grad_leaves)
     assert any(jax.numpy.any(grad != 0) for grad in grad_leaves)
+    source_grad_leaves = jax.tree.leaves(grads["source_time_proj"])
+    assert source_grad_leaves
+    assert all(jnp.all(jnp.isfinite(grad)) for grad in source_grad_leaves)
+    # The dummy Gemma's adaRMS modulation starts at zero, so this path receives no gradient
+    # until a released checkpoint supplies trained modulation weights.
 
     teacher_after = nnx.state(teacher).to_pure_dict()
     teacher_equal = jax.tree.map(jax.numpy.array_equal, teacher_before, teacher_after)
