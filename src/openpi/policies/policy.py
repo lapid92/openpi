@@ -54,7 +54,7 @@ class Policy(BasePolicy):
         self._sample_kwargs = dict(sample_kwargs or {})
         sampler = self._sample_kwargs.pop("sampler", None)
         supports_sampler = "sampler" in inspect.signature(model.sample_actions).parameters
-        if sampler not in (None, "current_time") and not supports_sampler:
+        if sampler not in (None, "current_time", "fm_only") and not supports_sampler:
             raise ValueError(f"Sampler {sampler!r} is unsupported by {type(model).__name__}")
         self._metadata = metadata or {}
         self._is_pytorch_model = is_pytorch

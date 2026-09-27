@@ -52,7 +52,7 @@ class Args:
     record: bool = False
     # Number of flow-integration steps per policy inference. Uses the model default when unset.
     num_steps: int | None = None
-    # Whether each Euler interval queries its current or target time.
+    # fm_only/current_time query the current time; jump/target_time query the next time.
     sampler: str = "current_time"
 
     # Specifies how to load the policy. If not provided, the default policy for the environment will be used.
@@ -98,8 +98,8 @@ def create_policy(args: Args) -> _policy.Policy:
     """Create a policy from the given arguments."""
     if args.num_steps is not None and args.num_steps < 1:
         raise ValueError("num_steps must be positive")
-    if args.sampler not in ("current_time", "target_time"):
-        raise ValueError("sampler must be current_time or target_time")
+    if args.sampler not in ("current_time", "target_time", "fm_only", "jump"):
+        raise ValueError("sampler must be current_time, target_time, fm_only, or jump")
     sample_kwargs = {"sampler": args.sampler}
     if args.num_steps is not None:
         sample_kwargs["num_steps"] = args.num_steps

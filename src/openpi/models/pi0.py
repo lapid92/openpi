@@ -342,7 +342,7 @@ class Pi0(_model.BaseModel):
         noise: at.Float[at.Array, "b ah ad"] | None = None,
         sampler: str = "current_time",
     ) -> _model.Actions:
-        if sampler not in ("current_time", "target_time"):
+        if sampler not in ("current_time", "target_time", "fm_only", "jump"):
             raise ValueError(f"Unknown sampler: {sampler}")
         observation = _model.preprocess_observation(None, observation, train=False)
         # note that we use the convention more common in diffusion literature, where t=1 is noise and t=0 is the target
@@ -360,7 +360,9 @@ class Pi0(_model.BaseModel):
 
         def step(carry):
             x_t, time = carry
-            target_time = time if sampler == "current_time" else jnp.maximum(time + dt, 0.0)
+            # fm_only evaluates on the diagonal F(x; t, t); jump evaluates F(x; t, t + dt).
+            # Keep the original names as aliases for previously recorded evaluations.
+            target_time = time if sampler in ("current_time", "fm_only") else jnp.maximum(time + dt, 0.0)
             suffix_tokens, suffix_mask, suffix_ar_mask, adarms_cond = self.embed_suffix(
                 observation,
                 x_t,

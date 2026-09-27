@@ -112,8 +112,8 @@ class Artifact:
             checkpoint_path = pathlib.Path(self.checkpoint_path).resolve()
             try:
                 checkpoint_path.relative_to("/volt")
-            except ValueError:
-                raise ValueError("Recovered checkpoint_path must be under /volt")
+            except ValueError as exc:
+                raise ValueError("Recovered checkpoint_path must be under /volt") from exc
             uses_s3 = bool(self.checkpoint_s3_uri)
             uses_volt = bool(self.checkpoint_volt_job_id or self.checkpoint_volt_artifact_prefix)
             if uses_s3 == uses_volt:
@@ -173,6 +173,7 @@ class Runtime:
     xla_mem_fraction: float
     save_video: bool
     attempt_id: str
+    sampler: str = "current_time"
 
 
 def absolute_preserving_symlink(path: pathlib.Path) -> pathlib.Path:
@@ -180,8 +181,8 @@ def absolute_preserving_symlink(path: pathlib.Path) -> pathlib.Path:
     return pathlib.Path(os.path.abspath(path))
 
 
-def make_eval_id(protocol: Protocol, artifact_id: str, flow_steps: int) -> str:
-    identity = f"{protocol.protocol_id}|{artifact_id}|flow={flow_steps}"
+def make_eval_id(protocol: Protocol, artifact_id: str, flow_steps: int, sampler: str = "current_time") -> str:
+    identity = f"{protocol.protocol_id}|{artifact_id}|flow={flow_steps}|sampler={sampler}"
     return hashlib.sha256(identity.encode()).hexdigest()[:20]
 
 
@@ -195,6 +196,8 @@ def build_server_command(runtime: Runtime, artifact: Artifact, flow_steps: int, 
         str(port),
         "--num-steps",
         str(flow_steps),
+        "--sampler",
+        runtime.sampler,
         "policy:checkpoint",
         "--policy.config",
         artifact.config,
@@ -346,8 +349,8 @@ def run_flow(
     gpu_id: int,
     port: int,
 ) -> pathlib.Path:
-    eval_id = make_eval_id(protocol, artifact.artifact_id, flow_steps)
-    flow_root = runtime.output_root / protocol.protocol_id / artifact.artifact_id / f"flow_{flow_steps}"
+    eval_id = make_eval_id(protocol, artifact.artifact_id, flow_steps, runtime.sampler)
+    flow_root = runtime.output_root / protocol.protocol_id / artifact.artifact_id / runtime.sampler / f"flow_{flow_steps}"
     flow_root.mkdir(parents=True, exist_ok=True)
     for marker in sorted(flow_root.glob("*/_SUCCESS"), reverse=True):
         candidate = marker.parent
@@ -378,6 +381,7 @@ def run_flow(
             "protocol_id": protocol.protocol_id,
             "artifact": dataclasses.asdict(artifact),
             "flow_steps": flow_steps,
+            "sampler": runtime.sampler,
             "gpu_id": gpu_id,
             "port": port,
             "started_at_utc": datetime.datetime.now(datetime.UTC).isoformat(),
@@ -471,6 +475,7 @@ def parse_args() -> argparse.Namespace:
     parser.add_argument("--client-python", type=pathlib.Path, required=True)
     parser.add_argument("--openpi-data-home", type=pathlib.Path, required=True)
     parser.add_argument("--flow-steps", type=int, nargs="+", default=DEFAULT_FLOWS)
+    parser.add_argument("--sampler", choices=("current_time", "target_time", "fm_only", "jump"), default="current_time")
     parser.add_argument("--gpu-ids", type=int, nargs="+", default=[0])
     parser.add_argument("--base-port", type=int, default=8000)
     parser.add_argument("--seed", type=int, default=7)
@@ -515,6 +520,7 @@ def main() -> None:
         xla_mem_fraction=args.xla_mem_fraction,
         save_video=args.save_video,
         attempt_id=attempt_id,
+        sampler=args.sampler,
     )
 
     assignments = [[] for _ in args.gpu_ids]
