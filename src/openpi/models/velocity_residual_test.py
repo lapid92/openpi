@@ -6,6 +6,7 @@ import numpy as np
 import optax
 import pytest
 
+from openpi.models.pi0_config import Pi0Config
 from openpi.models.velocity_residual import FEATURE_WIDTH
 from openpi.models.velocity_residual import gaussian_nll
 from openpi.models.velocity_residual import init_head
@@ -16,6 +17,7 @@ from openpi.models.velocity_residual import sample_flow
 from openpi.models.velocity_residual import save_head
 from openpi.models.velocity_residual import split_episodes
 from openpi.models.velocity_residual import split_identity
+from openpi.shared import nnx_utils
 
 
 def test_feature_shape_and_head_dimensions():
@@ -94,3 +96,32 @@ def test_checkpoint_reload_and_base_freeze(tmp_path):
         np.testing.assert_array_equal(np.asarray(a), np.asarray(b))
     with pytest.raises(ValueError, match="Wrong frozen checkpoint"):
         load_head(path, "wrong-base")
+
+
+def test_disabled_head_preserves_pi05_inference():
+    """A separate head update cannot mutate the base model or its action sampler."""
+    config = Pi0Config(
+        pi05=True,
+        paligemma_variant="dummy",
+        action_expert_variant="dummy",
+        action_horizon=2,
+        action_dim=4,
+        max_token_len=8,
+        dtype="float32",
+    )
+    base = config.create(jax.random.key(0))
+    sample = nnx_utils.module_jit(base.sample_actions, static_argnames=("num_steps",))
+    observation = config.fake_obs()
+    noise = jnp.ones((1, 2, 4))
+    before = sample(jax.random.key(1), observation, num_steps=1, noise=noise)
+    head = init_head(jax.random.key(2))
+    features = jnp.ones((1, 2, FEATURE_WIDTH))
+
+    def loss_fn(p):
+        return gaussian_nll(predict_log_sigma(p, features, jnp.array([0.5])), jnp.array([2.0]))
+
+    gradients = jax.grad(loss_fn)(head)
+    head = jax.tree.map(lambda p, g: p - 1e-3 * g, head, gradients)
+    assert head["layer_2"]["kernel"].shape == (64, 1)
+    after = sample(jax.random.key(1), observation, num_steps=1, noise=noise)
+    np.testing.assert_array_equal(np.asarray(before), np.asarray(after))
