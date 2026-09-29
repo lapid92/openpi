@@ -258,6 +258,26 @@ def run(args):
                     gaussian_nll(predict_log_sigma(head, val_features, val_time, jnp.asarray(val_mask)), val_energy)
                 )
             wandb.log(logs, step=step + 1)
+            if (step + 1) % args.save_every == 0:
+                save_head(
+                    args.output,
+                    head,
+                    {
+                        "base_checkpoint": str(checkpoint),
+                        "base_checkpoint_identity": identity,
+                        "model_config": "pi05_libero",
+                        "dataset": DATASET,
+                        "dataset_revision": revision,
+                        "split_identity": split_hash,
+                        "train_episodes": train_ids.tolist(),
+                        "validation_episodes": val_ids.tolist(),
+                        "gpu_uuid": uuid,
+                        "steps": step + 1,
+                        "requested_steps": args.steps,
+                        "wandb_run_url": run.url,
+                        "feature_width": expert_width,
+                    },
+                )
         if not any(
             not np.array_equal(np.asarray(a), np.asarray(b))
             for a, b in zip(jax.tree.leaves(initial_head), jax.tree.leaves(head), strict=True)
@@ -306,13 +326,14 @@ def main():
     parser.add_argument("--seed", type=int, default=42)
     parser.add_argument("--learning-rate", type=float, default=1e-4)
     parser.add_argument("--validation-every", type=int, default=50)
+    parser.add_argument("--save-every", type=int, default=100)
     parser.add_argument("--max-train-episodes", type=int, default=0)
     parser.add_argument("--max-val-episodes", type=int, default=0)
     parser.add_argument("--wandb-project", default="pi05-libero-velocity-residual")
     parser.add_argument("--run-name", default="velocity-residual")
     args = parser.parse_args()
-    if args.steps < 1 or args.batch_size < 1 or args.validation_every < 1:
-        parser.error("steps, batch-size, and validation-every must be positive")
+    if args.steps < 1 or args.batch_size < 1 or args.validation_every < 1 or args.save_every < 1:
+        parser.error("steps, batch-size, validation-every, and save-every must be positive")
     run(args)
 
 

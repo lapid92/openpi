@@ -4,6 +4,7 @@ from __future__ import annotations
 
 import hashlib
 import json
+import os
 from pathlib import Path
 
 import jax
@@ -115,7 +116,12 @@ def save_head(path, params, metadata):
     path = Path(path)
     path.parent.mkdir(parents=True, exist_ok=True)
     arrays = {f"{name}/{field}": np.asarray(value) for name, layer in params.items() for field, value in layer.items()}
-    np.savez(path, **arrays, metadata=np.array(json.dumps(metadata, sort_keys=True)))
+    temporary = path.with_name(path.name + ".tmp")
+    with temporary.open("wb") as output:
+        np.savez(output, **arrays, metadata=np.array(json.dumps(metadata, sort_keys=True)))
+        output.flush()
+        os.fsync(output.fileno())
+    os.replace(temporary, path)
 
 
 def load_head(path, checkpoint_identity):

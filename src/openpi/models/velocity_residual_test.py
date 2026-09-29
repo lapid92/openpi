@@ -90,6 +90,7 @@ def test_checkpoint_reload_and_base_freeze(tmp_path):
     )
     path = tmp_path / "head.npz"
     save_head(path, changed, {"base_checkpoint_identity": "base-id", "dataset_revision": "training"})
+    assert not path.with_name(path.name + ".tmp").exists()
     reloaded, metadata = load_head(path, "base-id")
     assert metadata["dataset_revision"] == "training"
     for a, b in zip(jax.tree.leaves(changed), jax.tree.leaves(reloaded), strict=True):

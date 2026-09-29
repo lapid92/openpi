@@ -19,9 +19,11 @@ cd /volt/data/openpi_velocity
 nvidia-smi -i 3 --query-gpu=uuid --format=csv,noheader
 CUDA_VISIBLE_DEVICES=3 WANDB_MODE=online .venv/bin/python scripts/train_velocity_residual.py \
   --checkpoint official --output /volt/data/pi05_residual/head.npz \
-  --steps 1000 --batch-size 8 --validation-every 50 \
+  --steps 1000 --batch-size 8 --validation-every 50 --save-every 100 \
   --wandb-project pi05-libero-velocity-residual
 ```
+
+The head checkpoint is written atomically every 100 optimizer steps by default and again after training completes. An interrupted run leaves the most recent completed head checkpoint at the requested output path.
 
 A one-step real-data smoke run can use `--steps 1 --batch-size 1 --validation-every 1 --max-train-episodes 2 --max-val-episodes 1`. It still downloads LIBERO training episode files. Synthetic data are not used. W&B must be configured in the pod environment; no credentials are stored in the repository.
 
