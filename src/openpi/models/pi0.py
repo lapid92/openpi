@@ -199,6 +199,17 @@ class Pi0(_model.BaseModel):
         x_t = time_expanded * noise + (1 - time_expanded) * actions
         u_t = noise - actions
 
+        v_t, _ = self.velocity_and_action_features(observation, x_t, time)
+        return jnp.mean(jnp.square(v_t - u_t), axis=-1)
+
+    def velocity_and_action_features(
+        self, observation: _model.Observation, x_t: at.Float[at.Array, "b ah ad"], time: at.Float[at.Array, " b"]
+    ) -> tuple[at.Float[at.Array, "b ah ad"], at.Float[at.Array, "b ah emb"]]:
+        """Return velocity and the final action-expert tokens from the same forward pass.
+
+        The caller supplies a preprocessed observation. This method does not alter
+        inference or append parameters to the frozen base model.
+        """
         # one big forward pass of prefix + suffix at once
         prefix_tokens, prefix_mask, prefix_ar_mask = self.embed_prefix(observation)
         suffix_tokens, suffix_mask, suffix_ar_mask, adarms_cond = self.embed_suffix(observation, x_t, time)
@@ -206,12 +217,12 @@ class Pi0(_model.BaseModel):
         ar_mask = jnp.concatenate([prefix_ar_mask, suffix_ar_mask], axis=0)
         attn_mask = make_attn_mask(input_mask, ar_mask)
         positions = jnp.cumsum(input_mask, axis=1) - 1
-        (prefix_out, suffix_out), _ = self.PaliGemma.llm(
+        (_, suffix_out), _ = self.PaliGemma.llm(
             [prefix_tokens, suffix_tokens], mask=attn_mask, positions=positions, adarms_cond=[None, adarms_cond]
         )
-        v_t = self.action_out_proj(suffix_out[:, -self.action_horizon :])
-
-        return jnp.mean(jnp.square(v_t - u_t), axis=-1)
+        action_features = suffix_out[:, -self.action_horizon :]
+        v_t = self.action_out_proj(action_features)
+        return v_t, action_features
 
     @override
     def sample_actions(
