@@ -298,6 +298,40 @@ def run(args):
             for a, b in zip(jax.tree.leaves(initial_head), jax.tree.leaves(head), strict=True)
         ):
             raise RuntimeError("No head weights changed")
+
+        # Report held-out calibration with enough examples for every suite and time bin.
+        calibration_records = []
+        for _ in range(args.calibration_batches):
+            val_batch, val_mask, val_suites = next(val_batches)
+            val_obs = model_lib.preprocess_observation(None, model_lib.Observation.from_dict(val_batch), train=False)
+            val_actions = jnp.asarray(val_batch["actions"], dtype=jnp.float32)
+            key, val_key = jax.random.split(key)
+            val_x, val_time, val_target = sample_flow(val_key, val_actions)
+            val_velocity, val_features = frozen_forward(val_obs, val_x, val_time)
+            val_energy = residual_energy(val_target - val_velocity, jnp.asarray(val_mask))
+            val_sigma = jnp.exp(predict_log_sigma(head, val_features, val_time, jnp.asarray(val_mask)))
+            calibration_records.append(
+                (np.asarray(val_energy), np.asarray(val_sigma), np.asarray(val_time), np.asarray(val_suites))
+            )
+        energy_values, sigma_values, time_values, suite_values = (
+            np.concatenate(values) for values in zip(*calibration_records, strict=True)
+        )
+        calibration = {}
+        record_calibration(calibration, "heldout_calibration", energy_values, sigma_values, time_values, suite_values)
+        calibration["heldout_calibration/overall/count"] = len(energy_values)
+        calibration["heldout_calibration/overall/residual_rms"] = float(np.sqrt(np.mean(energy_values)))
+        calibration["heldout_calibration/overall/predicted_sigma"] = float(np.mean(sigma_values))
+        calibration["heldout_calibration/overall/nll"] = float(
+            np.mean(0.5 * energy_values / np.square(sigma_values) + np.log(sigma_values))
+        )
+        for name, value in calibration.items():
+            run.summary[name] = value
+        calibration_path = Path(args.output).with_suffix(".calibration.json")
+        calibration_path.parent.mkdir(parents=True, exist_ok=True)
+        calibration_path.write_text(
+            json.dumps({"dataset_revision": revision, "split_identity": split_hash, "metrics": calibration}, indent=2)
+            + "\n"
+        )
         metadata = {
             "base_checkpoint": str(checkpoint),
             "base_checkpoint_identity": identity,
@@ -311,6 +345,7 @@ def run(args):
             "steps": args.steps,
             "wandb_run_url": run.url,
             "feature_width": expert_width,
+            "heldout_calibration_report": str(calibration_path),
         }
         if not np.array_equal(np.asarray(base.action_out_proj.kernel.value), base_projection_before):
             raise RuntimeError("Frozen π₀.₅ projection weights changed")
@@ -342,13 +377,20 @@ def main():
     parser.add_argument("--learning-rate", type=float, default=1e-4)
     parser.add_argument("--validation-every", type=int, default=50)
     parser.add_argument("--save-every", type=int, default=100)
+    parser.add_argument("--calibration-batches", type=int, default=32)
     parser.add_argument("--max-train-episodes", type=int, default=0)
     parser.add_argument("--max-val-episodes", type=int, default=0)
     parser.add_argument("--wandb-project", default="pi05-libero-velocity-residual")
     parser.add_argument("--run-name", default="velocity-residual")
     args = parser.parse_args()
-    if args.steps < 1 or args.batch_size < 1 or args.validation_every < 1 or args.save_every < 1:
-        parser.error("steps, batch-size, validation-every, and save-every must be positive")
+    if (
+        args.steps < 1
+        or args.batch_size < 1
+        or args.validation_every < 1
+        or args.save_every < 1
+        or args.calibration_batches < 1
+    ):
+        parser.error("steps, batch-size, validation-every, save-every, and calibration-batches must be positive")
     run(args)
 
 

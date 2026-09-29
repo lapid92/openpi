@@ -19,11 +19,11 @@ cd /volt/data/openpi_velocity
 nvidia-smi -i 3 --query-gpu=uuid --format=csv,noheader
 CUDA_VISIBLE_DEVICES=3 WANDB_MODE=online .venv/bin/python scripts/train_velocity_residual.py \
   --checkpoint official --output /volt/data/pi05_residual/head.npz \
-  --steps 1000 --batch-size 8 --validation-every 50 --save-every 100 \
+  --steps 1000 --batch-size 8 --validation-every 50 --save-every 100 --calibration-batches 32 \
   --wandb-project pi05-libero-velocity-residual
 ```
 
-The head checkpoint is written atomically every 100 optimizer steps by default and again after training completes. An interrupted run leaves the most recent completed head checkpoint at the requested output path.
+The head checkpoint is written atomically every 100 optimizer steps by default and again after training completes. A final held-out calibration sweep records overall and per-suite/time residual scale and predicted σ in W&B and a sibling `.calibration.json` report. An interrupted run leaves the most recent completed head checkpoint at the requested output path.
 
 A one-step real-data smoke run can use `--steps 1 --batch-size 1 --validation-every 1 --max-train-episodes 2 --max-val-episodes 1`. It still downloads LIBERO training episode files. Synthetic data are not used. W&B must be configured in the pod environment; no credentials are stored in the repository. The full training split contains 1,524 episodes (about 32.5 GiB of parquet files). On shared pod IPs, set a Hugging Face token through pod secrets before downloading to avoid anonymous HTTP 429 rate limits; never put it in a command line or repository file.
 
