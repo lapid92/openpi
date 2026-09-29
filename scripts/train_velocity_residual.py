@@ -130,6 +130,27 @@ def make_dataset(episodes, data_config, horizon, revision):
     return EpisodeDataset(raw, data_config)
 
 
+def record_calibration(logs, prefix, energy, sigma, time_values, suites):
+    # Transfer these small per-example diagnostics once, outside the model/optimizer JIT.
+    energy = np.asarray(energy)
+    sigma = np.asarray(sigma)
+    time_values = np.asarray(time_values)
+    suites = np.asarray(suites)
+    for bin_index in range(5):
+        upper = time_values <= 1.0 if bin_index == 4 else time_values < (bin_index + 1) / 5
+        selected = (time_values >= bin_index / 5) & upper
+        if selected.any():
+            logs[f"{prefix}/time_{bin_index}/residual_rms"] = float(np.sqrt(np.mean(energy[selected])))
+            logs[f"{prefix}/time_{bin_index}/predicted_sigma"] = float(np.mean(sigma[selected]))
+            logs[f"{prefix}/time_{bin_index}/count"] = int(selected.sum())
+    for suite_index, suite in enumerate(SUITES):
+        selected = suites == suite_index
+        if selected.any():
+            logs[f"{prefix}/{suite}/residual_rms"] = float(np.sqrt(np.mean(energy[selected])))
+            logs[f"{prefix}/{suite}/predicted_sigma"] = float(np.mean(sigma[selected]))
+            logs[f"{prefix}/{suite}/count"] = int(selected.sum())
+
+
 def run(args):
     uuid = gpu_identity()
     if args.checkpoint == "official":
@@ -164,7 +185,7 @@ def run(args):
     train_data = make_dataset(train_ids.tolist(), data_config, train_config.model.action_horizon, revision)
     val_data = make_dataset(val_ids.tolist(), data_config, train_config.model.action_horizon, revision)
     train_batches = batch_iterator(train_data, args.batch_size, args.seed, shuffle=True)
-    val_batches = batch_iterator(val_data, args.batch_size, args.seed, shuffle=False)
+    val_batches = batch_iterator(val_data, args.batch_size, args.seed, shuffle=True)
 
     base = train_config.model.load(model_lib.restore_params(checkpoint / "params", dtype=jnp.bfloat16))
     expert_width = int(base.action_out_proj.kernel.value.shape[0])
@@ -234,18 +255,9 @@ def run(args):
                 "train/predicted_sigma": float(jnp.mean(sigma)),
                 "train/examples_per_second": (step + 1) * len(actions) / elapsed,
             }
-            for bin_index in range(5):
-                selected = np.asarray((flow_time >= bin_index / 5) & (flow_time < (bin_index + 1) / 5))
-                if selected.any():
-                    logs[f"calibration/time_{bin_index}/residual_rms"] = float(jnp.sqrt(jnp.mean(energy[selected])))
-                    logs[f"calibration/time_{bin_index}/predicted_sigma"] = float(jnp.mean(sigma[selected]))
-            for suite_index, suite in enumerate(SUITES):
-                selected = np.asarray(suites == suite_index)
-                if selected.any():
-                    logs[f"calibration/{suite}/residual_rms"] = float(jnp.sqrt(jnp.mean(energy[selected])))
-                    logs[f"calibration/{suite}/predicted_sigma"] = float(jnp.mean(sigma[selected]))
+            record_calibration(logs, "calibration", energy, sigma, flow_time, suites)
             if (step + 1) % args.validation_every == 0 or step + 1 == args.steps:
-                val_batch, val_mask, _ = next(val_batches)
+                val_batch, val_mask, val_suites = next(val_batches)
                 val_obs = model_lib.preprocess_observation(
                     None, model_lib.Observation.from_dict(val_batch), train=False
                 )
@@ -254,9 +266,12 @@ def run(args):
                 val_x, val_time, val_target = sample_flow(val_key, val_actions)
                 val_velocity, val_features = frozen_forward(val_obs, val_x, val_time)
                 val_energy = residual_energy(val_target - val_velocity, jnp.asarray(val_mask))
-                logs["validation/loss"] = float(
-                    gaussian_nll(predict_log_sigma(head, val_features, val_time, jnp.asarray(val_mask)), val_energy)
-                )
+                val_log_sigma = predict_log_sigma(head, val_features, val_time, jnp.asarray(val_mask))
+                val_sigma = jnp.exp(val_log_sigma)
+                logs["validation/loss"] = float(gaussian_nll(val_log_sigma, val_energy))
+                logs["validation/residual_rms"] = float(jnp.sqrt(jnp.mean(val_energy)))
+                logs["validation/predicted_sigma"] = float(jnp.mean(val_sigma))
+                record_calibration(logs, "validation_calibration", val_energy, val_sigma, val_time, val_suites)
             wandb.log(logs, step=step + 1)
             if (step + 1) % args.save_every == 0:
                 save_head(

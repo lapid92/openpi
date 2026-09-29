@@ -8,7 +8,7 @@ For each real training sample, draw Gaussian noise and `t ~ 0.999 Beta(1.5, 1) +
 
 The target is `r = u-vθ`. Per example, squared residual is averaged over the valid action-horizon steps and all 32 action dimensions. LeRobot's `actions_is_pad` excludes steps beyond the demonstration end. Fully padded examples are rejected. The float32 objective is `0.5 mean(r²) exp(-2 log σ) + log σ`. The base model never enters the optimizer. No evaluation episodes are loaded or used for selection.
 
-A seeded 90/10 split is made by demonstration ID before loading examples. The checkpoint records the complete split hash and the selected episode IDs. The `--max-*-episodes` flags restrict each side for a quick smoke run while preserving the split boundary. Calibration logs compare predicted σ with residual RMS by flow-time bin and by the four LIBERO suites. They are diagnostics, not task-success claims.
+A seeded 90/10 split is made by demonstration ID before loading examples. The checkpoint records the complete split hash and the selected episode IDs. The `--max-*-episodes` flags restrict each side for a quick smoke run while preserving the split boundary. Training and held-out validation calibration logs compare predicted σ with residual RMS by flow-time bin and by the four LIBERO suites. Each logged subgroup also records its sample count. They are diagnostics, not task-success claims.
 
 ## Train
 
@@ -25,7 +25,7 @@ CUDA_VISIBLE_DEVICES=3 WANDB_MODE=online .venv/bin/python scripts/train_velocity
 
 The head checkpoint is written atomically every 100 optimizer steps by default and again after training completes. An interrupted run leaves the most recent completed head checkpoint at the requested output path.
 
-A one-step real-data smoke run can use `--steps 1 --batch-size 1 --validation-every 1 --max-train-episodes 2 --max-val-episodes 1`. It still downloads LIBERO training episode files. Synthetic data are not used. W&B must be configured in the pod environment; no credentials are stored in the repository.
+A one-step real-data smoke run can use `--steps 1 --batch-size 1 --validation-every 1 --max-train-episodes 2 --max-val-episodes 1`. It still downloads LIBERO training episode files. Synthetic data are not used. W&B must be configured in the pod environment; no credentials are stored in the repository. The full training split contains 1,524 episodes (about 32.5 GiB of parquet files). On shared pod IPs, set a Hugging Face token through pod secrets before downloading to avoid anonymous HTTP 429 rate limits; never put it in a command line or repository file.
 
 `load_head(path, checkpoint_identity)` refuses a mismatched base checkpoint identity. The `.npz` contains only the predictor weights and JSON metadata: base path and identity, dataset revision, train/validation episode IDs and split identity, feature width, steps, GPU UUID, and W&B URL. The base checkpoint remains separate. The identity hashes Orbax metadata and manifest files; preserve the exact base checkpoint directory for reload.
 
