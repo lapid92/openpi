@@ -1,0 +1,21 @@
+# Frozen pi0.5 two-stage LIBERO-Plus protocol
+
+This protocol and `two_stage_manifest.json` are fixed before any smoke, screening, or held-out outcome is viewed. It is an exploratory subset of the pinned LIBERO-Plus checkout at commit `4976dc30028e805ff8094b55501d532c48fec182`, with the benchmark assets and classification hashes in the manifest. It is not the official full-benchmark score. The base checkpoint identity is `dad4e2fbe79cceca79b83f3e53bb59c180e55ebb6815c67bfcdcf81768d7cee8`; the 3,000-step residual head SHA256 is `e41eb678b938d239fdadb8bc1c77f9466007e460ea0dd53326262b7960f27d10`. Both remain frozen.
+
+## Cases and stopping
+
+The 12 declared conditions cross three task families with Robot Initial States and Camera Viewpoints at benchmark severities 1 and 3. The families are: `libero_goal` opening the middle cabinet drawer; `libero_object` putting BBQ sauce in the basket; and `libero_10` turning on the stove and placing the moka pot. Exact task IDs, names, initial-state indices, severity, and per-family horizons are in the manifest. The smoke is one step on the declared `libero_goal` camera severity-1 condition with seed 3; it does not enter screening or comparison.
+
+Stage 1 runs exactly 36 one-step episodes: all 12 conditions at seeds 17, 29, and 43. Every outcome, including conditions that are too easy or too hard, is retained. A condition qualifies only if exactly one or two of its three screening episodes succeed. At most four conditions are selected. If more than four qualify, take them round-robin over suites `libero_goal`, `libero_object`, `libero_10`; within each suite rank severity 3 before 1, Robot Initial States before Camera Viewpoints, then task ID ascending. Selection uses no step-count comparison or held-out outcome. The complete screen file SHA256 and selected IDs are frozen in a selection JSON before Stage 2. If none qualify, stop.
+
+Stage 2 runs four new seeds, 101, 131, 167, and 197, for each selected condition at fixed 1, 2, 4, and 10 steps. This yields 16 paired episodes per selected condition, up to 64 episodes. Every selected condition and seed gets all four arms; an error halts the run for inspection. There is no early outcome-based stopping within the paired set.
+
+All arms share the same benchmark task instance, simulator seed, initial state, image rotation and resize, 10 stabilization actions, first-five-actions execution and replan, frozen checkpoints, GPU, and SHA256-keyed per-chunk Gaussian noise. Each arm may reach different later observations. Success is simulator `done` within the condition's policy-step horizon. The model runs with `CUDA_VISIBLE_DEVICES=3`, checked against UUID `GPU-4779cdde-a260-f8ec-da6a-6fa390bc7fd7`; the simulator has no visible GPU.
+
+## Measures and decision
+
+Record success per condition and task family, paired wins and losses versus one step, mean and p95 velocity evaluations per chunk, synchronized scored-policy chunk latency, HTTP request latency, and full simulator episode wall time. Policy-call time and episode time are separate. The residual head's first-chunk t=1 sigma from the one-step arm is the canonical paired-case score; every arm logs same-pass sigma without controlling steps or adding a base-model pass. Verify first initial-state, observation, and noise hashes exactly and first log-sigma agreement within 0.01, as declared. A separate smoke parity check against the public fixed sampler may perform extra evaluations; Stage 1 and Stage 2 call only the scored fixed path.
+
+The extra-step benefit gate requires an arm with at least three paired wins, at most one paired loss, and wins across at least two selected conditions. Otherwise stop without threshold tuning or training. For sigma ranking, inspect one-step failures only. Interpret AUROC only if an arm rescues at least four failures while at least four remain unrescued, across at least two conditions. Use condition-cluster bootstrap uncertainty. The declared ranking gate is AUROC above 0.65 with its 95% cluster-bootstrap lower bound above 0.5. If rescue cases are too few, report ranking as unmeasured. Do not infer an adaptive speedup from fixed-step latency.
+
+No demonstration-action error or fine-step numerical reference is measured in this closed-loop evaluation; action-output differences are separate from success.
