@@ -1,0 +1,206 @@
+{
+  "base_checkpoint_identity": "dad4e2fbe79cceca79b83f3e53bb59c180e55ebb6815c67bfcdcf81768d7cee8",
+  "benchmark_assets_sha256": "96764a4bfbdaea98d4411598caeab235458318fe0f549611b93d1a323027b3cf",
+  "benchmark_commit": "4976dc30028e805ff8094b55501d532c48fec182",
+  "benchmark_repo": "https://github.com/sylvestf/LIBERO-plus",
+  "classification_sha256": "faa87cce3e3ba434da01df7c77523a391b5f2912e4774330b0aa1be5f6a999e6",
+  "conditions": [
+    {
+      "condition_id": "libero_goal-robot_initial_states-s1",
+      "init_state_index": 0,
+      "max_policy_steps": 300,
+      "perturbation_type": "Robot Initial States",
+      "severity": 1,
+      "suite": "libero_goal",
+      "task_family": "open_the_middle_drawer_of_the_cabinet",
+      "task_id": 283,
+      "task_index": 282,
+      "task_name": "open_the_middle_drawer_of_the_cabinet_view_0_0_100_0_0_initstate_11"
+    },
+    {
+      "condition_id": "libero_goal-robot_initial_states-s3",
+      "init_state_index": 0,
+      "max_policy_steps": 300,
+      "perturbation_type": "Robot Initial States",
+      "severity": 3,
+      "suite": "libero_goal",
+      "task_family": "open_the_middle_drawer_of_the_cabinet",
+      "task_id": 282,
+      "task_index": 281,
+      "task_name": "open_the_middle_drawer_of_the_cabinet_view_0_0_100_0_0_initstate_1"
+    },
+    {
+      "condition_id": "libero_goal-camera_viewpoints-s1",
+      "init_state_index": 0,
+      "max_policy_steps": 300,
+      "perturbation_type": "Camera Viewpoints",
+      "severity": 1,
+      "suite": "libero_goal",
+      "task_family": "open_the_middle_drawer_of_the_cabinet",
+      "task_id": 697,
+      "task_index": 696,
+      "task_name": "open_the_middle_drawer_of_the_cabinet_view_0_0_100_2_354_initstate_0"
+    },
+    {
+      "condition_id": "libero_goal-camera_viewpoints-s3",
+      "init_state_index": 0,
+      "max_policy_steps": 300,
+      "perturbation_type": "Camera Viewpoints",
+      "severity": 3,
+      "suite": "libero_goal",
+      "task_family": "open_the_middle_drawer_of_the_cabinet",
+      "task_id": 692,
+      "task_index": 691,
+      "task_name": "open_the_middle_drawer_of_the_cabinet_view_0_0_100_2_6_initstate_0"
+    },
+    {
+      "condition_id": "libero_object-robot_initial_states-s1",
+      "init_state_index": 0,
+      "max_policy_steps": 280,
+      "perturbation_type": "Robot Initial States",
+      "severity": 1,
+      "suite": "libero_object",
+      "task_family": "pick_up_the_bbq_sauce_and_place_it_in_the_basket",
+      "task_id": 371,
+      "task_index": 370,
+      "task_name": "pick_up_the_bbq_sauce_and_place_it_in_the_basket_view_0_0_100_0_0_initstate_74"
+    },
+    {
+      "condition_id": "libero_object-robot_initial_states-s3",
+      "init_state_index": 0,
+      "max_policy_steps": 280,
+      "perturbation_type": "Robot Initial States",
+      "severity": 3,
+      "suite": "libero_object",
+      "task_family": "pick_up_the_bbq_sauce_and_place_it_in_the_basket",
+      "task_id": 370,
+      "task_index": 369,
+      "task_name": "pick_up_the_bbq_sauce_and_place_it_in_the_basket_view_0_0_100_0_0_initstate_4"
+    },
+    {
+      "condition_id": "libero_object-camera_viewpoints-s1",
+      "init_state_index": 0,
+      "max_policy_steps": 280,
+      "perturbation_type": "Camera Viewpoints",
+      "severity": 1,
+      "suite": "libero_object",
+      "task_family": "pick_up_the_bbq_sauce_and_place_it_in_the_basket",
+      "task_id": 740,
+      "task_index": 739,
+      "task_name": "pick_up_the_bbq_sauce_and_place_it_in_the_basket_view_0_0_137_0_0_initstate_0"
+    },
+    {
+      "condition_id": "libero_object-camera_viewpoints-s3",
+      "init_state_index": 0,
+      "max_policy_steps": 280,
+      "perturbation_type": "Camera Viewpoints",
+      "severity": 3,
+      "suite": "libero_object",
+      "task_family": "pick_up_the_bbq_sauce_and_place_it_in_the_basket",
+      "task_id": 735,
+      "task_index": 734,
+      "task_name": "pick_up_the_bbq_sauce_and_place_it_in_the_basket_view_0_0_132_0_0_initstate_0"
+    },
+    {
+      "condition_id": "libero_10-robot_initial_states-s1",
+      "init_state_index": 0,
+      "max_policy_steps": 520,
+      "perturbation_type": "Robot Initial States",
+      "severity": 1,
+      "suite": "libero_10",
+      "task_family": "KITCHEN_SCENE3_turn_on_the_stove_and_put_the_moka_pot_on_it",
+      "task_id": 367,
+      "task_index": 366,
+      "task_name": "KITCHEN_SCENE3_turn_on_the_stove_and_put_the_moka_pot_on_it_view_0_0_100_0_0_initstate_13"
+    },
+    {
+      "condition_id": "libero_10-robot_initial_states-s3",
+      "init_state_index": 0,
+      "max_policy_steps": 520,
+      "perturbation_type": "Robot Initial States",
+      "severity": 3,
+      "suite": "libero_10",
+      "task_family": "KITCHEN_SCENE3_turn_on_the_stove_and_put_the_moka_pot_on_it",
+      "task_id": 375,
+      "task_index": 374,
+      "task_name": "KITCHEN_SCENE3_turn_on_the_stove_and_put_the_moka_pot_on_it_view_0_0_100_0_0_initstate_123"
+    },
+    {
+      "condition_id": "libero_10-camera_viewpoints-s1",
+      "init_state_index": 0,
+      "max_policy_steps": 520,
+      "perturbation_type": "Camera Viewpoints",
+      "severity": 1,
+      "suite": "libero_10",
+      "task_family": "KITCHEN_SCENE3_turn_on_the_stove_and_put_the_moka_pot_on_it",
+      "task_id": 746,
+      "task_index": 745,
+      "task_name": "KITCHEN_SCENE3_turn_on_the_stove_and_put_the_moka_pot_on_it_view_0_0_100_6_4_initstate_0"
+    },
+    {
+      "condition_id": "libero_10-camera_viewpoints-s3",
+      "init_state_index": 0,
+      "max_policy_steps": 520,
+      "perturbation_type": "Camera Viewpoints",
+      "severity": 3,
+      "suite": "libero_10",
+      "task_family": "KITCHEN_SCENE3_turn_on_the_stove_and_put_the_moka_pot_on_it",
+      "task_id": 736,
+      "task_index": 735,
+      "task_name": "KITCHEN_SCENE3_turn_on_the_stove_and_put_the_moka_pot_on_it_view_0_0_122_0_0_initstate_0"
+    }
+  ],
+  "execution": {
+    "first_score_log_sigma_tolerance": 0.01,
+    "image_size": 224,
+    "latency": "Scored-policy time synchronized on model GPU; HTTP request time and full simulator episode wall time reported separately.",
+    "noise": "SHA256(suite, task name, episode seed, chunk index) seeds NumPy PCG64 standard-normal float32 [50,32], identical across step arms.",
+    "pairing": "Exact suite, task ID/name, init-state index, seed, first initial-state/observation/noise hashes; later closed-loop states may diverge.",
+    "render_size": 256,
+    "replan_steps": 5,
+    "score": "First-chunk t=1 sigma from one-step arm is canonical case score; same-pass scores logged in all arms and never choose steps.",
+    "success": "Environment done within max_policy_steps after dummy stabilization; errors recorded separately and halt run.",
+    "wait_steps": 10
+  },
+  "gpu_uuid": "GPU-4779cdde-a260-f8ec-da6a-6fa390bc7fd7",
+  "head_sha256": "e41eb678b938d239fdadb8bc1c77f9466007e460ea0dd53326262b7960f27d10",
+  "heldout_seeds": [
+    101,
+    131,
+    167,
+    197
+  ],
+  "name": "libero_plus_pi05_two_stage_no_training_v1",
+  "screening_seeds": [
+    17,
+    29,
+    43
+  ],
+  "smoke": {
+    "condition_id": "libero_goal-camera_viewpoints-s1",
+    "flow_steps": 1,
+    "seed": 3
+  },
+  "stage_1": {
+    "expected_episodes": 36,
+    "flow_steps": [
+      1
+    ],
+    "max_selected_conditions": 4,
+    "selection_rule": "A condition qualifies if exactly 1 or 2 of its 3 one-step screening seeds succeed. Keep every screen result. If no condition qualifies, stop before paired comparison. If more than 4 qualify, take up to 4 by round-robin over suites in order libero_goal, libero_object, libero_10, with each suite ranked severity 3 before 1, Robot Initial States before Camera Viewpoints, then task ID ascending. No step>1 outcome is observed for selection."
+  },
+  "stage_2": {
+    "expected_episodes_per_selected_condition": 16,
+    "flow_steps": [
+      1,
+      2,
+      4,
+      10
+    ],
+    "score_ranking_gate": "If estimable, a higher initial one-step sigma predicts rescue only if AUROC > 0.65 and the condition-cluster bootstrap 95% lower bound exceeds 0.5.",
+    "score_ranking_minimum": "Among held-out one-step failures, require at least 4 cases rescued by a given extra-step arm and at least 4 cases not rescued, spanning at least 2 conditions, before interpreting sigma AUROC. Use task-condition cluster bootstrap. Otherwise ranking remains unmeasured.",
+    "selection_identity": "Selected condition IDs plus complete screen-record SHA256; immutable before held-out evaluation.",
+    "success_benefit_gate": "Any extra-step arm must have at least 3 paired wins over one step, at most 1 paired loss, and wins in at least 2 selected conditions; otherwise stop without threshold tuning or training."
+  },
+  "stopping": "Run one smoke before screen. Complete and publish all 36 screen episodes even if all conditions appear easy/hard. Freeze selection file and W&B screen run before any held-out episode. If zero conditions qualify, skip stage 2 and report. Otherwise complete all selected condition\u00d74 held-out seeds\u00d74 fixed-step arms. No adaptive threshold or new training in this branch."
+}
