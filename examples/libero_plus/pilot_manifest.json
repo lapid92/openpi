@@ -21,10 +21,12 @@
   "name": "libero_plus_pi05_no_training_pilot_v1",
   "primary_outcome": "closed-loop success from env done within 220 policy steps after 10 dummy steps",
   "primary_pairing": "exact task instance and episode seed; compare each n=2,4,10 to n=1, and all arms descriptively",
+  "protocol_amendment": "After the separate smoke and first six pilot episodes, identical-input probing found a first-pass log-sigma difference of about 0.0039 between 1-step and multi-step compiled traces despite exact observation and noise digests. Task IDs, seeds, step arms, and outcomes were unchanged. This amendment adds exact observation hashing and a conservative 0.01 log-sigma numerical tolerance; the full paired pilot is restarted in a new result file.",
   "render_size": 256,
   "replan_steps": 5,
   "score_analysis": "First-chunk sigma ranking of paired success gain; report AUROC only if both gain and nongain cases exist, with task-cluster bootstrap interval.",
-  "score_summary": "Predicted sigma from the first Euler velocity evaluation (t=1) of the first generated action chunk; later chunks retained as arm-specific diagnostics.",
+  "score_pairing_log_sigma_tolerance": 0.01,
+  "score_summary": "Canonical score: first Euler velocity evaluation at t=1 of the first action chunk in the 1-step arm. Other arms log same-pass sigma; their first observations, noise and init state must match exactly and first log sigma must be within 0.01 of the canonical score to allow bfloat16 schedule-specific arithmetic.",
   "smoke": {
     "seed": 3,
     "steps": [

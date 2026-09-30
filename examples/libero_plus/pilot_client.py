@@ -1,4 +1,5 @@
 """Closed-loop, paired LIBERO-Plus pilot client for the isolated Python 3.8 simulator."""
+
 import argparse
 import collections
 import hashlib
@@ -10,10 +11,11 @@ import subprocess
 import time
 import urllib.request
 
+from libero.libero import benchmark
+from libero.libero import get_libero_path
+from libero.libero.envs import OffScreenRenderEnv
 import numpy as np
 from openpi_client import image_tools
-from libero.libero import benchmark, get_libero_path
-from libero.libero.envs import OffScreenRenderEnv
 
 DUMMY_ACTION = [0.0] * 6 + [-1.0]
 
@@ -53,7 +55,9 @@ def validate_manifest(manifest, classification):
     assert manifest["flow_steps"] == [1, 2, 4, 10]
     assert len(manifest["tasks"]) == 6
     assert {task["category"] for task in manifest["tasks"]} == {
-        "Robot Initial States", "Camera Viewpoints", "Light Conditions"
+        "Robot Initial States",
+        "Camera Viewpoints",
+        "Light Conditions",
     }
     for task in manifest["tasks"]:
         assert entries[task["task_index"]]["id"] == task["id"]
@@ -67,11 +71,13 @@ def episode_key(task, seed, flow_steps):
     return (task["name"], int(seed), int(flow_steps))
 
 
-def planned_episodes(manifest, smoke=False):
+def planned_episodes(manifest, *, smoke=False):
     if smoke:
         smoke_case = manifest["smoke"]
         return [(smoke_case["task_id"], smoke_case["seed"], n) for n in smoke_case["steps"]]
-    return [(task["id"], seed, n) for task in manifest["tasks"] for seed in task["seeds"] for n in manifest["flow_steps"]]
+    return [
+        (task["id"], seed, n) for task in manifest["tasks"] for seed in task["seeds"] for n in manifest["flow_steps"]
+    ]
 
 
 def run_episode(suite, task, seed, flow_steps, manifest, server):
@@ -105,13 +111,17 @@ def run_episode(suite, task, seed, flow_steps, manifest, server):
                     raise RuntimeError("Environment finished during dummy stabilization")
                 continue
             if not queue:
+                observation = observation_payload(obs, task["language"], manifest["image_size"])
+                observation_digest = hashlib.sha256(
+                    json.dumps(observation, sort_keys=True, separators=(",", ":")).encode()
+                ).hexdigest()
                 payload = {
                     "flow_steps": flow_steps,
                     "suite": manifest["suite"],
                     "task_name": task["name"],
                     "episode_seed": seed,
                     "chunk_index": chunk_index,
-                    "observation": observation_payload(obs, task["language"], manifest["image_size"]),
+                    "observation": observation,
                 }
                 called = time.perf_counter()
                 response = post_json(server + "/infer", payload)
@@ -122,17 +132,21 @@ def run_episode(suite, task, seed, flow_steps, manifest, server):
                     raise RuntimeError("Too few actions returned")
                 if len(response["sigma"]) != flow_steps:
                     raise RuntimeError("Missing per-step sigma")
-                queue.extend(response["actions"][:manifest["replan_steps"]])
-                chunks.append({
-                    "chunk_index": chunk_index,
-                    "sigmas": response["sigma"],
-                    "times": response["flow_times"],
-                    "velocity_evaluations": response["velocity_evaluations"],
-                    "request_ms": request_ms,
-                    "policy_ms": response["policy_ms"],
-                    "noise_digest": response["noise_sha256"],
-                    "action_digest": response["action_sha256"],
-                })
+                queue.extend(response["actions"][: manifest["replan_steps"]])
+                chunks.append(
+                    {
+                        "chunk_index": chunk_index,
+                        "sigmas": response["sigma"],
+                        "times": response["flow_times"],
+                        "velocity_evaluations": response["velocity_evaluations"],
+                        "request_ms": request_ms,
+                        "policy_ms": response["policy_ms"],
+                        "noise_digest": response["noise_sha256"],
+                        "action_digest": response["action_sha256"],
+                        "observation_digest": observation_digest,
+                        "log_sigma": response["log_sigma"],
+                    }
+                )
                 chunk_index += 1
             action = queue.popleft()
             obs, _, done, _ = env.step(action)
@@ -174,7 +188,9 @@ def main():
     imported = pathlib.Path(benchmark.__file__).resolve()
     if benchmark_root not in imported.parents:
         raise RuntimeError("Imported LIBERO package is not the declared benchmark checkout")
-    benchmark_commit = subprocess.check_output(["git", "-C", str(benchmark_root), "rev-parse", "HEAD"], text=True).strip()
+    benchmark_commit = subprocess.check_output(
+        ["git", "-C", str(benchmark_root), "rev-parse", "HEAD"], text=True
+    ).strip()
     if benchmark_commit != manifest["benchmark_commit"]:
         raise RuntimeError("Benchmark Git commit changed")
     asset_root = benchmark_root.parent
@@ -187,7 +203,10 @@ def main():
         health = json.load(response)
     if health["gpu_uuid"] != "GPU-4779cdde-a260-f8ec-da6a-6fa390bc7fd7":
         raise RuntimeError("Wrong GPU in policy server")
-    if health["base_checkpoint_identity"] != manifest["base_checkpoint_identity"] or health["head_sha256"] != manifest["head_sha256"]:
+    if (
+        health["base_checkpoint_identity"] != manifest["base_checkpoint_identity"]
+        or health["head_sha256"] != manifest["head_sha256"]
+    ):
         raise RuntimeError("Frozen model checkpoint identity changed")
     suite = benchmark.get_benchmark_dict()[manifest["suite"]](task_order_index=0)
     tasks = {}
@@ -226,8 +245,15 @@ def main():
         try:
             record = run_episode(suite, task, seed, flow_steps, manifest, args.server)
         except Exception as error:
-            record = {"task_id": task_id, "task_name": task["name"], "category": task["category"], "seed": seed,
-                      "flow_steps": flow_steps, "status": "error", "error": repr(error)}
+            record = {
+                "task_id": task_id,
+                "task_name": task["name"],
+                "category": task["category"],
+                "seed": seed,
+                "flow_steps": flow_steps,
+                "status": "error",
+                "error": repr(error),
+            }
         record["manifest_sha256"] = manifest_hash
         record["benchmark_commit"] = manifest["benchmark_commit"]
         record["checkpoint_identity"] = health["base_checkpoint_identity"]
@@ -236,7 +262,24 @@ def main():
         with output.open("a") as handle:
             handle.write(json.dumps(record, separators=(",", ":")) + "\n")
             handle.flush()
-        print(json.dumps({key: record.get(key) for key in ("task_id", "seed", "flow_steps", "status", "success", "policy_steps", "episode_ms", "error")}), flush=True)
+        print(
+            json.dumps(
+                {
+                    key: record.get(key)
+                    for key in (
+                        "task_id",
+                        "seed",
+                        "flow_steps",
+                        "status",
+                        "success",
+                        "policy_steps",
+                        "episode_ms",
+                        "error",
+                    )
+                }
+            ),
+            flush=True,
+        )
         if record["status"] != "ok":
             raise RuntimeError("Episode failed; stop for inspection")
 

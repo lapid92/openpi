@@ -1,4 +1,5 @@
 """Launch the LIBERO-Plus client in its isolated CPU simulator runtime."""
+
 import argparse
 import json
 import os
@@ -19,8 +20,10 @@ def main():
     command = [
         "/volt/envs/libero-h100/bin/python",
         str(Path(__file__).with_name("pilot_client.py")),
-        "--classification", str(ROOT / "repo/libero/libero/benchmark/task_classification.json"),
-        "--output", args.output,
+        "--classification",
+        str(ROOT / "repo/libero/libero/benchmark/task_classification.json"),
+        "--output",
+        args.output,
     ]
     if args.smoke:
         command.append("--smoke")

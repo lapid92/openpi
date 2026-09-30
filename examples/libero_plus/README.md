@@ -11,7 +11,11 @@ are paired across environment seeds 7 and 11, initial-state index 0, and
 fixed flow step counts 1, 2, 4, and 10. The six instances use the black-bowl
 to plate task family, so category effects cannot be generalized broadly.
 
-The manifest was written before any outcome was inspected. A separate light
+The original task and seed manifest was written before any outcome was inspected.
+An amendment after smoke and six early pilot episodes records exact observation
+hashes and allows a 0.01 log-sigma tolerance for schedule-specific bfloat16
+arithmetic at the same first pass. The task set and outcomes were not changed.
+The complete pilot is restarted in a fresh result file after this amendment. A separate light
 condition/seed 3 case is reserved for smoke testing. Each arm uses the same
 task BDDL, starting state, environment seed, preprocessing, frozen checkpoint,
 action execution (first five actions per chunk), and chunk-indexed Gaussian
@@ -22,7 +26,7 @@ and at most 220 policy actions. Success means the simulator returns `done`.
 The predictor score is computed from the action-expert features returned by
 the **same** cached fixed-step velocity pass. It cannot select a step count.
 The primary episode score is sigma at t=1 in the first generated action
-chunk. Later scores belong to different closed-loop states in different arms.
+chunk of the 1-step arm, shared as a case-level covariate for paired comparisons. Later scores belong to different closed-loop states in different arms.
 The pilot records success, chunk-wise scores and flow times, action and noise
 digests, velocity calls, synchronized policy latency, HTTP round-trip
 latency, and complete episode wall time. An evaluation or simulation error
