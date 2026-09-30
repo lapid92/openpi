@@ -238,7 +238,7 @@ def main():
                 raise RuntimeError("Cannot resume under a different protocol")
             if record["status"] == "ok":
                 completed.add((record["task_id"], record["seed"], record["flow_steps"]))
-    for task_id, seed, flow_steps in planned_episodes(manifest, args.smoke):
+    for task_id, seed, flow_steps in planned_episodes(manifest, smoke=args.smoke):
         if (task_id, seed, flow_steps) in completed:
             continue
         task = tasks[task_id]
