@@ -224,6 +224,47 @@ class Pi0(_model.BaseModel):
         v_t = self.action_out_proj(action_features)
         return v_t, action_features
 
+    def prepare_action_prefix(self, observation: _model.Observation):
+        """Cache a preprocessed observation prefix for repeated velocity evaluations.
+
+        The returned context is valid only for this model and observation. It is
+        a tuple so JAX can carry it through a compiled sampling loop.
+        """
+        prefix_tokens, prefix_mask, prefix_ar_mask = self.embed_prefix(observation)
+        prefix_attn_mask = make_attn_mask(prefix_mask, prefix_ar_mask)
+        positions = jnp.cumsum(prefix_mask, axis=1) - 1
+        _, kv_cache = self.PaliGemma.llm([prefix_tokens, None], mask=prefix_attn_mask, positions=positions)
+        return prefix_mask, kv_cache
+
+    def cached_velocity_and_action_features(
+        self,
+        observation: _model.Observation,
+        x_t: at.Float[at.Array, "b ah ad"],
+        time: at.Float[at.Array, " b"],
+        prefix_context,
+    ) -> tuple[at.Float[at.Array, "b ah ad"], at.Float[at.Array, "b ah emb"]]:
+        """Evaluate velocity and final action tokens with one cached suffix pass.
+
+        Observation must be preprocessed and match the prefix context. No model
+        parameters or cache entries are updated by this call.
+        """
+        prefix_mask, kv_cache = prefix_context
+        suffix_tokens, suffix_mask, suffix_ar_mask, adarms_cond = self.embed_suffix(observation, x_t, time)
+        suffix_attn_mask = make_attn_mask(suffix_mask, suffix_ar_mask)
+        prefix_attn_mask = einops.repeat(prefix_mask, "b p -> b s p", s=suffix_tokens.shape[1])
+        full_attn_mask = jnp.concatenate([prefix_attn_mask, suffix_attn_mask], axis=-1)
+        positions = jnp.sum(prefix_mask, axis=-1)[:, None] + jnp.cumsum(suffix_mask, axis=-1) - 1
+        (prefix_out, suffix_out), _ = self.PaliGemma.llm(
+            [None, suffix_tokens],
+            mask=full_attn_mask,
+            positions=positions,
+            kv_cache=kv_cache,
+            adarms_cond=[None, adarms_cond],
+        )
+        assert prefix_out is None
+        action_features = suffix_out[:, -self.action_horizon :]
+        return self.action_out_proj(action_features), action_features
+
     @override
     def sample_actions(
         self,
@@ -282,7 +323,7 @@ class Pi0(_model.BaseModel):
             return x_t + dt * v_t, time + dt
 
         def cond(carry):
-            x_t, time = carry
+            _, time = carry
             # robust to floating-point error
             return time >= -dt / 2
 

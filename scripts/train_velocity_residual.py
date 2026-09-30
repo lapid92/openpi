@@ -4,7 +4,6 @@ from __future__ import annotations
 
 import argparse
 import dataclasses
-import hashlib
 import json
 import os
 from pathlib import Path
@@ -28,6 +27,7 @@ import wandb
 
 from openpi.models import model as model_lib
 from openpi.models.velocity_residual import FEATURE_WIDTH
+from openpi.models.velocity_residual import checkpoint_identity
 from openpi.models.velocity_residual import gaussian_nll
 from openpi.models.velocity_residual import init_head
 from openpi.models.velocity_residual import load_head
@@ -96,17 +96,6 @@ def batch_iterator(dataset, batch_size, seed, *, shuffle):
     )
     while True:
         yield from loader
-
-
-def checkpoint_identity(path):
-    metadata = Path(path) / "params" / "_METADATA"
-    manifest = Path(path) / "params" / "manifest.ocdbt"
-    if not metadata.is_file() or not manifest.is_file():
-        raise FileNotFoundError("Expected official Orbax params metadata and manifest")
-    digest = hashlib.sha256()
-    for file in (metadata, manifest):
-        digest.update(file.read_bytes())
-    return digest.hexdigest()
 
 
 def make_dataset(episodes, data_config, horizon, revision):

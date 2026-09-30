@@ -112,6 +112,19 @@ def split_identity(train_ids, val_ids, dataset_revision):
     return hashlib.sha256(payload.encode()).hexdigest()
 
 
+def checkpoint_identity(path):
+    """Identify an official frozen Orbax checkpoint by its metadata and manifest."""
+    path = Path(path)
+    metadata = path / "params" / "_METADATA"
+    manifest = path / "params" / "manifest.ocdbt"
+    if not metadata.is_file() or not manifest.is_file():
+        raise FileNotFoundError("Expected official Orbax params metadata and manifest")
+    digest = hashlib.sha256()
+    for file in (metadata, manifest):
+        digest.update(file.read_bytes())
+    return digest.hexdigest()
+
+
 def save_head(path, params, metadata):
     path = Path(path)
     path.parent.mkdir(parents=True, exist_ok=True)
