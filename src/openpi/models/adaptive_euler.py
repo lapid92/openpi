@@ -11,6 +11,7 @@ import math
 import numbers
 from pathlib import Path
 
+import flax.nnx as nnx
 import jax
 import jax.numpy as jnp
 import numpy as np
@@ -19,7 +20,6 @@ from openpi.models import model as model_lib
 from openpi.models.velocity_residual import checkpoint_identity
 from openpi.models.velocity_residual import load_head
 from openpi.models.velocity_residual import predict_log_sigma
-from openpi.shared import nnx_utils
 from openpi.training import config as config_lib
 
 
@@ -76,6 +76,85 @@ class AdaptiveSample:
     trace: tuple[dict[str, float], ...]
 
 
+def _compile_adaptive_sample(base, config: AdaptiveStepConfig, *, record_states: bool = False):
+    """Freeze the base and compile one cached integration loop.
+
+    Full action and velocity arrays are kept only for explicit diagnostics.
+    """
+    graphdef, state = nnx.split(base)
+    max_evals = config.max_velocity_evaluations
+    log_min = math.log(config.min_step)
+    log_max = math.log(config.max_step)
+    log_reference = math.log(config.reference_step)
+    log_reference_sigma = math.log(config.reference_sigma)
+
+    def run(frozen_state, head, raw_observation, noise):
+        model = nnx.merge(graphdef, frozen_state)
+        observation = model_lib.preprocess_observation(None, raw_observation, train=False)
+        context = model.prepare_action_prefix(observation)
+        times = jnp.zeros((max_evals,), dtype=jnp.float32)
+        sigmas = jnp.zeros((max_evals,), dtype=jnp.float32)
+        steps = jnp.zeros((max_evals,), dtype=jnp.float32)
+        next_times = jnp.zeros((max_evals,), dtype=jnp.float32)
+
+        def evaluate(actions, time, index):
+            time_batch = jnp.broadcast_to(time, (1,))
+            velocity, features = model.cached_velocity_and_action_features(observation, actions, time_batch, context)
+            log_sigma = predict_log_sigma(head, features, time_batch)[0]
+            sigma = jnp.exp(log_sigma)
+            log_step = log_reference + config.score_power * (log_reference_sigma - log_sigma)
+            proposed = jnp.minimum(config.max_step, jnp.exp(jnp.clip(log_step, log_min, log_max)))
+            needed = time / (max_evals - index)
+            step = jnp.minimum(time, jnp.maximum(proposed, needed))
+            following = jnp.maximum(0.0, time - step)
+            # Production uses a weak scalar dt, so its product with bfloat16
+            # velocity has bfloat16 dtype. Preserve that update precision.
+            update_step = (-step).astype(velocity.dtype)
+            next_action = actions + update_step * velocity
+            return next_action, following, sigma, step, velocity
+
+        def cond(carry):
+            return (carry[1] > 0) & (carry[2] < max_evals)
+
+        if record_states:
+            states = jnp.zeros((max_evals + 1, *noise.shape), dtype=noise.dtype).at[0].set(noise)
+            velocities = jnp.zeros((max_evals, *noise.shape), dtype=noise.dtype)
+
+            def body(carry):
+                actions, time, index, times, sigmas, steps, next_times, states, velocities = carry
+                next_action, following, sigma, step, velocity = evaluate(actions, time, index)
+                return (
+                    next_action,
+                    following,
+                    index + 1,
+                    times.at[index].set(time),
+                    sigmas.at[index].set(sigma),
+                    steps.at[index].set(step),
+                    next_times.at[index].set(following),
+                    states.at[index + 1].set(next_action),
+                    velocities.at[index].set(velocity),
+                )
+
+            return jax.lax.while_loop(cond, body, (noise, 1.0, 0, times, sigmas, steps, next_times, states, velocities))
+
+        def body(carry):
+            actions, time, index, times, sigmas, steps, next_times = carry
+            next_action, following, sigma, step, _ = evaluate(actions, time, index)
+            return (
+                next_action,
+                following,
+                index + 1,
+                times.at[index].set(time),
+                sigmas.at[index].set(sigma),
+                steps.at[index].set(step),
+                next_times.at[index].set(following),
+            )
+
+        return jax.lax.while_loop(cond, body, (noise, 1.0, 0, times, sigmas, steps, next_times))
+
+    return state, jax.jit(run)
+
+
 class AdaptiveEulerSampler:
     def __init__(
         self, frozen_base, head, config: AdaptiveStepConfig, *, head_metadata: dict, base_checkpoint_identity: str
@@ -95,8 +174,7 @@ class AdaptiveEulerSampler:
         self._base = frozen_base
         self._head = head
         self._config = config
-        self._prepare = nnx_utils.module_jit(frozen_base.prepare_action_prefix)
-        self._velocity_and_features = nnx_utils.module_jit(frozen_base.cached_velocity_and_action_features)
+        self._base_state, self._sample_compiled = _compile_adaptive_sample(frozen_base, config)
 
     @classmethod
     def from_paths(cls, frozen_checkpoint: str | Path, head_checkpoint: str | Path, config: AdaptiveStepConfig):
@@ -109,7 +187,6 @@ class AdaptiveEulerSampler:
         return cls(base, head, config, head_metadata=metadata, base_checkpoint_identity=identity)
 
     def sample_actions(self, rng, observation: model_lib.Observation, *, noise=None) -> AdaptiveSample:
-        observation = model_lib.preprocess_observation(None, observation, train=False)
         if observation.state.shape[0] != 1:
             raise ValueError("Adaptive sampler currently supports batch size one")
         shape = (1, self._base.action_horizon, self._base.action_dim)
@@ -119,24 +196,19 @@ class AdaptiveEulerSampler:
             noise = jnp.asarray(noise, dtype=jnp.float32)
             if noise.shape != shape:
                 raise ValueError(f"Expected noise shape {shape}, got {noise.shape}")
-        context = self._prepare(observation)
-        actions = noise
-        time = 1.0
-        trace = []
-        for evaluation in range(self._config.max_velocity_evaluations):
-            velocity, features = self._velocity_and_features(
-                observation, actions, jnp.array([time], dtype=jnp.float32), context
-            )
-            sigma = float(
-                np.asarray(jnp.exp(predict_log_sigma(self._head, features, jnp.array([time], dtype=jnp.float32)))[0])
-            )
-            step = self._config.bounded_step(time, sigma, evaluation)
-            actions = actions - step * velocity
-            next_time = max(0.0, time - step)
-            trace.append({"time": time, "sigma": sigma, "step": step, "next_time": next_time})
-            time = next_time
-            if time == 0.0:
-                break
-        if time != 0.0:
+        actions, time, count, times, sigmas, steps, next_times = self._sample_compiled(
+            self._base_state, self._head, observation, noise
+        )
+        count = int(np.asarray(count))
+        if float(np.asarray(time)) != 0.0:
             raise RuntimeError("Adaptive Euler did not terminate at t=0 within its evaluation budget")
-        return AdaptiveSample(actions, len(trace), tuple(trace))
+        trace = tuple(
+            {
+                "time": float(times[i]),
+                "sigma": float(sigmas[i]),
+                "step": float(steps[i]),
+                "next_time": float(next_times[i]),
+            }
+            for i in range(count)
+        )
+        return AdaptiveSample(actions, count, trace)

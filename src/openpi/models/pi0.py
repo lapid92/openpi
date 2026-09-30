@@ -265,6 +265,60 @@ class Pi0(_model.BaseModel):
         action_features = suffix_out[:, -self.action_horizon :]
         return self.action_out_proj(action_features), action_features
 
+    def cached_fixed_step_trace(
+        self,
+        rng: at.KeyArrayLike,
+        observation: _model.Observation,
+        *,
+        num_steps: int,
+        noise: at.Float[at.Array, "b ah ad"] | None = None,
+    ):
+        """Trace the production fixed Euler schedule with cached action features.
+
+        Compile this whole loop with ``module_jit``. Separate compiled suffix
+        calls were observed to diverge on bfloat16 inference over multiple
+        integration steps. The returned arrays are
+        (final_action, states, velocities, action_features, flow_times).
+        """
+        observation = _model.preprocess_observation(None, observation, train=False)
+        dt = -1.0 / num_steps
+        batch_size = observation.state.shape[0]
+        if noise is None:
+            noise = jax.random.normal(rng, (batch_size, self.action_horizon, self.action_dim))
+        context = self.prepare_action_prefix(observation)
+        states = jnp.zeros((num_steps + 1, *noise.shape), dtype=noise.dtype).at[0].set(noise)
+        velocities = jnp.zeros((num_steps, *noise.shape), dtype=noise.dtype)
+        features = jnp.zeros(
+            (num_steps, batch_size, self.action_horizon, self.action_in_proj.out_features),
+            dtype=self.action_in_proj.kernel.value.dtype,
+        )
+        times = jnp.zeros((num_steps,), dtype=jnp.float32)
+
+        def step(carry):
+            x_t, time, index, states, velocities, features, times = carry
+            velocity, action_features = self.cached_velocity_and_action_features(
+                observation, x_t, jnp.broadcast_to(time, batch_size), context
+            )
+            next_action = x_t + dt * velocity
+            return (
+                next_action,
+                time + dt,
+                index + 1,
+                states.at[index + 1].set(next_action),
+                velocities.at[index].set(velocity),
+                features.at[index].set(action_features),
+                times.at[index].set(time),
+            )
+
+        def cond(carry):
+            _, time, *_ = carry
+            return time >= -dt / 2
+
+        final_action, _, _, states, velocities, features, times = jax.lax.while_loop(
+            cond, step, (noise, 1.0, 0, states, velocities, features, times)
+        )
+        return final_action, states, velocities, features, times
+
     @override
     def sample_actions(
         self,

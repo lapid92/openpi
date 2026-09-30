@@ -211,6 +211,7 @@ def run(args):
     prepare = nnx_utils.module_jit(base.prepare_action_prefix)
     velocity_and_features = nnx_utils.module_jit(base.cached_velocity_and_action_features)
     fixed_sampler = nnx_utils.module_jit(base.sample_actions, static_argnames=("num_steps",))
+    fixed_trace = nnx_utils.module_jit(base.cached_fixed_step_trace, static_argnames=("num_steps",))
     key = jax.random.key(args.seed)
     records = []
     start = time.monotonic()
@@ -231,19 +232,25 @@ def run(args):
         log_sigma = np.asarray(predict_log_sigma(head, interpolated_features, flow_time, valid_jax))
         outputs, trace, trace_output_disagreement, trace_output_max_abs = {}, {}, {}, {}
         for n in STEPS:
-            x = noise
+            traced_output, states, velocities, features, times = fixed_trace(
+                jax.random.key(0), raw_observation, num_steps=n, noise=noise
+            )
+            # One compiled loop preserves the production carried time and
+            # x_t + dt * velocity update. Separate bfloat16 suffix calls can
+            # diverge materially over multiple integration steps.
+            del states, velocities
             trace[n] = []
             for i in range(n):
-                time_value = 1 - i / n
+                time_value = float(times[i])
                 t = jnp.full((batch_size,), time_value, dtype=jnp.float32)
-                velocity, features = velocity_and_features(observation, x, t, context)
-                sigma = np.asarray(jnp.exp(predict_log_sigma(head, features, t)))
+                sigma = np.asarray(jnp.exp(predict_log_sigma(head, features[i], t)))
                 trace[n].append((time_value, sigma))
-                x = x - velocity / n
             fixed_output = fixed_sampler(jax.random.key(0), raw_observation, num_steps=n, noise=noise)
             outputs[n] = np.asarray(fixed_output)
-            trace_output_disagreement[n] = masked_mse(x, fixed_output, valid)
-            trace_output_max_abs[n] = np.max(np.abs(np.asarray(x) - outputs[n]), axis=(1, 2))
+            trace_output_disagreement[n] = masked_mse(traced_output, fixed_output, valid)
+            trace_output_max_abs[n] = np.max(np.abs(np.asarray(traced_output) - outputs[n]), axis=(1, 2))
+            if np.any(trace_output_max_abs[n] > 1e-5):
+                raise RuntimeError(f"Cached fixed trace diverged from production sampler at {n} steps")
         half_time = jnp.full((batch_size,), 0.5, dtype=jnp.float32)
         half_interpolation = 0.5 * noise + 0.5 * actions
         _, half_features = velocity_and_features(observation, half_interpolation, half_time, context)
