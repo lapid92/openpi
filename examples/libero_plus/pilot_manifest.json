@@ -1,4 +1,5 @@
 {
+  "base_checkpoint_identity": "dad4e2fbe79cceca79b83f3e53bb59c180e55ebb6815c67bfcdcf81768d7cee8",
   "benchmark_assets_sha256": "96764a4bfbdaea98d4411598caeab235458318fe0f549611b93d1a323027b3cf",
   "benchmark_commit": "4976dc30028e805ff8094b55501d532c48fec182",
   "benchmark_repo": "https://github.com/sylvestf/LIBERO-plus",
@@ -12,8 +13,9 @@
     10
   ],
   "hardware": "Run model with CUDA_VISIBLE_DEVICES=3, physical UUID GPU-4779cdde-a260-f8ec-da6a-6fa390bc7fd7; simulator uses CPU osmesa.",
+  "head_sha256": "e41eb678b938d239fdadb8bc1c77f9466007e460ea0dd53326262b7960f27d10",
   "image_size": 224,
-  "initial_noise": "Per instance and action-chunk JAX PRNG key derived from SHA256 of suite, task name, episode seed, chunk index; standard normal shape [50,32]. Shared across flow arms.",
+  "initial_noise": "Per instance and action-chunk NumPy PCG64 key derived from SHA256 of suite, task name, episode seed, chunk index; standard normal float32 shape [50,32]. Shared across flow arms.",
   "latency": "Wall-clock synchronized model request time per action chunk, and end-to-end episode wall time including simulator; p50/p95 chunk latency.",
   "max_policy_steps": 220,
   "name": "libero_plus_pi05_no_training_pilot_v1",

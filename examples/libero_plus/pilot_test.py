@@ -1,9 +1,12 @@
 # ruff: noqa: SLF001
 """Contract tests for the predeclared LIBERO-Plus pilot protocol."""
 
+import importlib.util
 import json
 import os
 from pathlib import Path
+import sys
+import types
 
 import jax.numpy as jnp
 import numpy as np
@@ -150,3 +153,88 @@ def test_sigma_logging_reuses_fixed_trace_and_does_not_change_actions(monkeypatc
     assert len(result["sigma"]) == len(result["flow_times"]) == steps
     np.testing.assert_allclose(result["sigma"], np.exp(-1), atol=1e-7)
     assert calls == {"trace": 1, "score": 1}
+
+
+def test_client_episode_counts_only_generated_chunks_and_pairs_seed(protocol, monkeypatch):
+    fake_libero = types.ModuleType("libero")
+    fake_libero.__path__ = []
+    fake_api = types.ModuleType("libero.libero")
+    fake_api.__path__ = []
+    fake_api.benchmark = object()
+    fake_api.get_libero_path = lambda _name: "/tmp/benchmark"
+    fake_env_module = types.ModuleType("libero.libero.envs")
+    created = []
+
+    class FakeEnv:
+        def __init__(self, **_kwargs):
+            self.steps = 0
+            self.closed = False
+            created.append(self)
+
+        def seed(self, value):
+            self.episode_seed = value
+
+        def reset(self):
+            return None
+
+        def set_init_state(self, _state):
+            return {}
+
+        def step(self, _action):
+            self.steps += 1
+            return {}, 0.0, self.steps == protocol["wait_steps"] + 1, {}
+
+        def close(self):
+            self.closed = True
+
+    fake_env_module.OffScreenRenderEnv = FakeEnv
+    monkeypatch.setitem(sys.modules, "libero", fake_libero)
+    monkeypatch.setitem(sys.modules, "libero.libero", fake_api)
+    monkeypatch.setitem(sys.modules, "libero.libero.envs", fake_env_module)
+    spec = importlib.util.spec_from_file_location("isolated_pilot_client", Path(__file__).with_name("pilot_client.py"))
+    client = importlib.util.module_from_spec(spec)
+    spec.loader.exec_module(client)
+    monkeypatch.setattr(client, "observation_payload", lambda *_args: {"prompt": "task"})
+    monkeypatch.setattr(client, "get_libero_path", lambda _name: "/tmp/benchmark")
+    seen = []
+
+    def fake_post(_url, payload):
+        seen.append(payload)
+        _, digest = policy_server.deterministic_noise(
+            payload["suite"], payload["task_name"], payload["episode_seed"], payload["chunk_index"]
+        )
+        return {
+            "actions": [[0.0] * 7] * 50,
+            "sigma": [0.1] * payload["flow_steps"],
+            "flow_times": [1.0] * payload["flow_steps"],
+            "velocity_evaluations": payload["flow_steps"],
+            "policy_ms": 1.0,
+            "noise_sha256": digest,
+            "action_sha256": "a" * 64,
+        }
+
+    monkeypatch.setattr(client, "post_json", fake_post)
+    suite = types.SimpleNamespace(get_task_init_states=lambda _index: np.zeros((1, 8), dtype=np.float32))
+    task = {
+        "id": 259,
+        "name": "task_a",
+        "category": "Robot Initial States",
+        "index": 258,
+        "init_state_index": 0,
+        "problem_folder": "folder",
+        "bddl_file": "task.bddl",
+        "language": "pick object",
+    }
+    one = client.run_episode(suite, task, 7, 1, protocol, "http://localhost")
+    ten = client.run_episode(suite, task, 7, 10, protocol, "http://localhost")
+    assert [(item["flow_steps"], item["episode_seed"], item["chunk_index"]) for item in seen] == [
+        (1, 7, 0),
+        (10, 7, 0),
+    ]
+    assert all(item["success"] and item["policy_steps"] == 1 for item in (one, ten))
+    assert all(item["status"] == "ok" and len(item["chunks"]) == 1 for item in (one, ten))
+    assert one["initial_state_digest"] == ten["initial_state_digest"]
+    assert one["chunks"][0]["noise_digest"] == ten["chunks"][0]["noise_digest"]
+    assert one["total_velocity_evaluations"] == 1
+    assert ten["total_velocity_evaluations"] == 10
+    assert all(env.closed and env.episode_seed == 7 for env in created)

@@ -187,6 +187,8 @@ def main():
         health = json.load(response)
     if health["gpu_uuid"] != "GPU-4779cdde-a260-f8ec-da6a-6fa390bc7fd7":
         raise RuntimeError("Wrong GPU in policy server")
+    if health["base_checkpoint_identity"] != manifest["base_checkpoint_identity"] or health["head_sha256"] != manifest["head_sha256"]:
+        raise RuntimeError("Frozen model checkpoint identity changed")
     suite = benchmark.get_benchmark_dict()[manifest["suite"]](task_order_index=0)
     tasks = {}
     for item in manifest["tasks"]:
