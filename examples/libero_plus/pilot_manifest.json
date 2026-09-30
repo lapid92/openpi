@@ -1,0 +1,111 @@
+{
+  "benchmark_assets_sha256": "96764a4bfbdaea98d4411598caeab235458318fe0f549611b93d1a323027b3cf",
+  "benchmark_commit": "4976dc30028e805ff8094b55501d532c48fec182",
+  "benchmark_repo": "https://github.com/sylvestf/LIBERO-plus",
+  "classification_sha256": "faa87cce3e3ba434da01df7c77523a391b5f2912e4774330b0aa1be5f6a999e6",
+  "decision_gate": "Treat extra-step benefit as meaningful for a next-stage target only if pooled paired success has at least 4 wins and at most 1 loss against 1 step, with wins across at least 2 perturbation categories. Otherwise stop.",
+  "fixed_model": "Frozen official pi05_libero checkpoint plus frozen long_3000_20260930 residual head; no head influence on steps.",
+  "flow_steps": [
+    1,
+    2,
+    4,
+    10
+  ],
+  "hardware": "Run model with CUDA_VISIBLE_DEVICES=3, physical UUID GPU-4779cdde-a260-f8ec-da6a-6fa390bc7fd7; simulator uses CPU osmesa.",
+  "image_size": 224,
+  "initial_noise": "Per instance and action-chunk JAX PRNG key derived from SHA256 of suite, task name, episode seed, chunk index; standard normal shape [50,32]. Shared across flow arms.",
+  "latency": "Wall-clock synchronized model request time per action chunk, and end-to-end episode wall time including simulator; p50/p95 chunk latency.",
+  "max_policy_steps": 220,
+  "name": "libero_plus_pi05_no_training_pilot_v1",
+  "primary_outcome": "closed-loop success from env done within 220 policy steps after 10 dummy steps",
+  "primary_pairing": "exact task instance and episode seed; compare each n=2,4,10 to n=1, and all arms descriptively",
+  "render_size": 256,
+  "replan_steps": 5,
+  "score_analysis": "First-chunk sigma ranking of paired success gain; report AUROC only if both gain and nongain cases exist, with task-cluster bootstrap interval.",
+  "score_summary": "Predicted sigma from the first Euler velocity evaluation (t=1) of the first generated action chunk; later chunks retained as arm-specific diagnostics.",
+  "smoke": {
+    "seed": 3,
+    "steps": [
+      1
+    ],
+    "task_id": 2111
+  },
+  "suite": "libero_spatial",
+  "task_order_index": 0,
+  "tasks": [
+    {
+      "category": "Robot Initial States",
+      "difficulty_level": 1,
+      "id": 259,
+      "init_state_index": 0,
+      "name": "pick_up_the_black_bowl_between_the_plate_and_the_ramekin_and_place_it_on_the_plate_view_0_0_100_0_0_initstate_1",
+      "seeds": [
+        7,
+        11
+      ],
+      "task_index": 258
+    },
+    {
+      "category": "Robot Initial States",
+      "difficulty_level": 1,
+      "id": 291,
+      "init_state_index": 0,
+      "name": "pick_up_the_black_bowl_next_to_the_ramekin_and_place_it_on_the_plate_view_0_0_100_0_0_initstate_42",
+      "seeds": [
+        7,
+        11
+      ],
+      "task_index": 290
+    },
+    {
+      "category": "Camera Viewpoints",
+      "difficulty_level": 1,
+      "id": 609,
+      "init_state_index": 0,
+      "name": "pick_up_the_black_bowl_between_the_plate_and_the_ramekin_and_place_it_on_the_plate_view_0_0_100_2_352_initstate_0",
+      "seeds": [
+        7,
+        11
+      ],
+      "task_index": 608
+    },
+    {
+      "category": "Camera Viewpoints",
+      "difficulty_level": 1,
+      "id": 618,
+      "init_state_index": 0,
+      "name": "pick_up_the_black_bowl_next_to_the_ramekin_and_place_it_on_the_plate_view_0_0_100_4_6_initstate_0",
+      "seeds": [
+        7,
+        11
+      ],
+      "task_index": 617
+    },
+    {
+      "category": "Light Conditions",
+      "difficulty_level": 1,
+      "id": 2124,
+      "init_state_index": 0,
+      "name": "pick_up_the_black_bowl_between_the_plate_and_the_ramekin_and_place_it_on_the_plate_light_21",
+      "seeds": [
+        7,
+        11
+      ],
+      "task_index": 2123
+    },
+    {
+      "category": "Light Conditions",
+      "difficulty_level": 1,
+      "id": 2284,
+      "init_state_index": 0,
+      "name": "pick_up_the_black_bowl_next_to_the_ramekin_and_place_it_on_the_plate_light_21",
+      "seeds": [
+        7,
+        11
+      ],
+      "task_index": 2283
+    }
+  ],
+  "uncertainty": "Paired discordant counts and exact Clopper-Pearson interval for win fraction; category results descriptive because each has four instances.",
+  "wait_steps": 10
+}
