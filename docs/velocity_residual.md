@@ -37,3 +37,36 @@ CUDA_VISIBLE_DEVICES=3 .venv/bin/python -m pytest -q src/openpi/models/velocity_
 ```
 
 The next stage can calibrate an adaptive step rule and compare against existing fixed-step π₀.₅ LIBERO results. No task-success improvement is inferred from residual calibration alone.
+
+## Longer training check (2026-09-30)
+
+A 3,000-step run used the same frozen checkpoint, 1,524/169 trajectory split, seed 42, batch size 8, and GPU 3 UUID above. It started from a fresh head initialization rather than resuming the 1,000-step head; validation cadence also changed from 50 to 100 steps. This compares training budgets, not checkpoints from one uninterrupted optimizer trajectory. Its [W&B history](https://wandb.ai/arm-aair-idit/pi05-libero-velocity-residual/runs/1jpfyc6x) records all training batches and validation every 100 steps. The command was:
+
+```bash
+cd /volt/data/openpi_velocity
+CUDA_VISIBLE_DEVICES=3 WANDB_MODE=online XLA_PYTHON_CLIENT_PREALLOCATE=false \
+  .venv/bin/python scripts/train_velocity_residual.py \
+  --checkpoint official \
+  --output /volt/data/openpi_velocity_runs/long_3000_20260930/head.npz \
+  --steps 3000 --batch-size 8 --validation-every 100 --save-every 250 \
+  --calibration-batches 128 \
+  --wandb-project pi05-libero-velocity-residual \
+  --run-name pi05-residual-3000-2vzhlaphss5c
+```
+
+Gaussian NLL is lower when better. Across the first five and last five logged 3,000-step checkpoints, mean training NLL went from -2.192 to -2.547 and mean validation NLL from -2.343 to -2.756. Individual batches vary substantially; the final step alone had training NLL -2.073 and validation NLL -2.324. The trainer saved and reloaded the 3,000-step head successfully. Its final 1,024-example calibration sweep reported residual RMS 0.0611, mean predicted σ 0.0525, and NLL -2.774. The earlier 1,000-step sweep used different random draws, so those two sweep NLLs are not a controlled comparison.
+
+For a controlled comparison, run both heads on the same held-out frames, Gaussian noise, and flow times:
+
+```bash
+cd /volt/data/openpi_velocity
+CUDA_VISIBLE_DEVICES=3 WANDB_MODE=online XLA_PYTHON_CLIENT_PREALLOCATE=false \
+  .venv/bin/python scripts/compare_velocity_residual_heads.py \
+  --head-a /volt/data/openpi_velocity_runs/full_20260929_retry/head.npz \
+  --head-b /volt/data/openpi_velocity_runs/long_3000_20260930/head.npz \
+  --output /volt/data/openpi_velocity_runs/paired_repo_20260930.json \
+  --batches 128 --batch-size 8 --seed 20260930 \
+  --run-name paired-heldout-1000-vs-3000-repro
+```
+
+On 1,024 paired validation examples, the 1,000-step head had NLL -2.746 and the 3,000-step head -2.824 (difference -0.0786). The reproducible comparison is logged in [W&B](https://wandb.ai/arm-aair-idit/pi05-libero-velocity-residual/runs/3p2r4gvf). The latter had lower NLL in all five flow-time bins and all four suites. The common residual RMS was 0.0590; mean predicted σ was 0.0569 for the 1,000-step head and 0.0507 for the 3,000-step head. Thus longer training improved this paired NLL while its average σ fell further below residual RMS. These are offline residual diagnostics on training demonstrations held out by trajectory, not evidence of task-success improvement or an adaptive step policy.
