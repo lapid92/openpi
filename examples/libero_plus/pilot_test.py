@@ -1,6 +1,7 @@
 # ruff: noqa: SLF001
 """Contract tests for the predeclared LIBERO-Plus pilot protocol."""
 
+import ast
 import importlib.util
 import json
 import os
@@ -206,6 +207,7 @@ def test_client_episode_counts_only_generated_chunks_and_pairs_seed(protocol, mo
         return {
             "actions": [[0.0] * 7] * 50,
             "sigma": [0.1] * payload["flow_steps"],
+            "log_sigma": [-2.302585093] * payload["flow_steps"],
             "flow_times": [1.0] * payload["flow_steps"],
             "velocity_evaluations": payload["flow_steps"],
             "policy_ms": 1.0,
@@ -238,3 +240,45 @@ def test_client_episode_counts_only_generated_chunks_and_pairs_seed(protocol, mo
     assert one["total_velocity_evaluations"] == 1
     assert ten["total_velocity_evaluations"] == 10
     assert all(env.closed and env.episode_seed == 7 for env in created)
+
+    def uncounted_post(url, payload):
+        response = fake_post(url, payload)
+        response["velocity_evaluations"] = payload["flow_steps"] + 1
+        return response
+
+    monkeypatch.setattr(client, "post_json", uncounted_post)
+    with pytest.raises(RuntimeError, match="Unaccounted velocity evaluations"):
+        client.run_episode(suite, task, 7, 4, protocol, "http://localhost")
+    assert created[-1].closed
+
+    def missing_score_post(url, payload):
+        response = fake_post(url, payload)
+        response["sigma"] = []
+        return response
+
+    monkeypatch.setattr(client, "post_json", missing_score_post)
+    with pytest.raises(RuntimeError, match="Missing per-step sigma"):
+        client.run_episode(suite, task, 7, 4, protocol, "http://localhost")
+    assert created[-1].closed
+
+
+def test_client_main_passes_keyword_only_smoke_to_episode_plan(protocol):
+    """Guard the real entry point after smoke became keyword-only."""
+    client_source = Path(__file__).with_name("pilot_client.py").read_text()
+    tree = ast.parse(client_source)
+    main = next(node for node in tree.body if isinstance(node, ast.FunctionDef) and node.name == "main")
+    calls = [
+        node
+        for node in ast.walk(main)
+        if isinstance(node, ast.Call) and isinstance(node.func, ast.Name) and node.func.id == "planned_episodes"
+    ]
+    assert len(calls) == 1
+    assert len(calls[0].args) == 1
+    assert {keyword.arg for keyword in calls[0].keywords} == {"smoke"}
+
+    planner = next(node for node in tree.body if isinstance(node, ast.FunctionDef) and node.name == "planned_episodes")
+    module = ast.Module(body=[planner], type_ignores=[])
+    namespace = {}
+    exec(compile(module, "pilot_client.py", "exec"), namespace)
+    assert len(namespace["planned_episodes"](protocol, smoke=False)) == 48
+    assert namespace["planned_episodes"](protocol, smoke=True) == [(2111, 3, 1)]

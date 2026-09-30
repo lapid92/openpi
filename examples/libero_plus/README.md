@@ -57,9 +57,16 @@ CUDA_VISIBLE_DEVICES=3 .venv/bin/python examples/libero_plus/policy_server.py \
   --head /volt/data/openpi_velocity_runs/long_3000_20260930/head.npz
 # In another pod terminal:
 .venv/bin/python examples/libero_plus/launch_simulator.py \
-  --smoke --output /volt/data/openpi_evals/libero_plus_pilot/smoke.jsonl
+  --smoke --output /volt/data/openpi_evals/libero_plus_pilot/smoke_v2.jsonl
 .venv/bin/python examples/libero_plus/launch_simulator.py \
-  --output /volt/data/openpi_evals/libero_plus_pilot/pilot.jsonl
+  --output /volt/data/openpi_evals/libero_plus_pilot/pilot_v2.jsonl
+.venv/bin/python examples/libero_plus/analyze.py \
+  --smoke --records /volt/data/openpi_evals/libero_plus_pilot/smoke_v2.jsonl \
+  --output /volt/data/openpi_evals/libero_plus_pilot/smoke_summary.json \
+  --wandb-name libero-plus-no-training-smoke
+.venv/bin/python examples/libero_plus/analyze.py \
+  --records /volt/data/openpi_evals/libero_plus_pilot/pilot_v2.jsonl \
+  --output /volt/data/openpi_evals/libero_plus_pilot/pilot_summary.json
 ```
 
 The server's `/verify` endpoint is only for a separate smoke parity check
