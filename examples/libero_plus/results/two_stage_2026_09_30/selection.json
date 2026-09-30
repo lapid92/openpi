@@ -1,0 +1,8 @@
+{
+  "manifest_sha256": "ca005b65c447321cefb6fc68cb75984a0e67064bedf066a10e9bb49952fbd8c7",
+  "screen_sha256": "dc30e849ce260819a14b5dcda6930ddf5b11b3871c5809d6deba96605d295c7a",
+  "selected_condition_ids": [
+    "libero_goal-robot_initial_states-s1",
+    "libero_object-robot_initial_states-s3"
+  ]
+}

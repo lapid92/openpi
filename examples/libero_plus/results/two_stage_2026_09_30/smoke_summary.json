@@ -1,0 +1,22 @@
+{
+  "base_checkpoint_identity": "dad4e2fbe79cceca79b83f3e53bb59c180e55ebb6815c67bfcdcf81768d7cee8",
+  "benchmark_commit": "4976dc30028e805ff8094b55501d532c48fec182",
+  "episodes": 1,
+  "gpu_uuid": "GPU-4779cdde-a260-f8ec-da6a-6fa390bc7fd7",
+  "head_sha256": "e41eb678b938d239fdadb8bc1c77f9466007e460ea0dd53326262b7960f27d10",
+  "manifest_sha256": "ca005b65c447321cefb6fc68cb75984a0e67064bedf066a10e9bb49952fbd8c7",
+  "records_sha256": "a0120b2d5ce545fc9314d12f9aca15bbf7e9b2eb1f9fa39677e44d53135cc3dd",
+  "scored_policy_chunk_ms": {
+    "mean": 33.30889480331769,
+    "p50": 33.20687892846763,
+    "p95": 34.265315160155296
+  },
+  "stage": "smoke",
+  "success": true,
+  "velocity_evaluations_per_chunk": {
+    "mean": 1.0,
+    "p50": 1.0,
+    "p95": 1.0
+  },
+  "wandb_url": "https://wandb.ai/arm-aair-idit/pi05-libero-velocity-residual/runs/f7v4t4a0"
+}

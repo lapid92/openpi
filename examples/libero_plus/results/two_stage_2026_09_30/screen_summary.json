@@ -1,0 +1,186 @@
+{
+  "base_checkpoint_identity": "dad4e2fbe79cceca79b83f3e53bb59c180e55ebb6815c67bfcdcf81768d7cee8",
+  "benchmark_commit": "4976dc30028e805ff8094b55501d532c48fec182",
+  "conditions": {
+    "libero_10-camera_viewpoints-s1": {
+      "episodes": 3,
+      "exact_ci95_exploratory": [
+        0.2924017738212866,
+        1.0
+      ],
+      "qualifies": false,
+      "severity": 1,
+      "success_rate": 1.0,
+      "successes": 3,
+      "suite": "libero_10",
+      "task_family": "KITCHEN_SCENE3_turn_on_the_stove_and_put_the_moka_pot_on_it",
+      "type": "Camera Viewpoints"
+    },
+    "libero_10-camera_viewpoints-s3": {
+      "episodes": 3,
+      "exact_ci95_exploratory": [
+        0.2924017738212866,
+        1.0
+      ],
+      "qualifies": false,
+      "severity": 3,
+      "success_rate": 1.0,
+      "successes": 3,
+      "suite": "libero_10",
+      "task_family": "KITCHEN_SCENE3_turn_on_the_stove_and_put_the_moka_pot_on_it",
+      "type": "Camera Viewpoints"
+    },
+    "libero_10-robot_initial_states-s1": {
+      "episodes": 3,
+      "exact_ci95_exploratory": [
+        0.2924017738212866,
+        1.0
+      ],
+      "qualifies": false,
+      "severity": 1,
+      "success_rate": 1.0,
+      "successes": 3,
+      "suite": "libero_10",
+      "task_family": "KITCHEN_SCENE3_turn_on_the_stove_and_put_the_moka_pot_on_it",
+      "type": "Robot Initial States"
+    },
+    "libero_10-robot_initial_states-s3": {
+      "episodes": 3,
+      "exact_ci95_exploratory": [
+        0.2924017738212866,
+        1.0
+      ],
+      "qualifies": false,
+      "severity": 3,
+      "success_rate": 1.0,
+      "successes": 3,
+      "suite": "libero_10",
+      "task_family": "KITCHEN_SCENE3_turn_on_the_stove_and_put_the_moka_pot_on_it",
+      "type": "Robot Initial States"
+    },
+    "libero_goal-camera_viewpoints-s1": {
+      "episodes": 3,
+      "exact_ci95_exploratory": [
+        0.2924017738212866,
+        1.0
+      ],
+      "qualifies": false,
+      "severity": 1,
+      "success_rate": 1.0,
+      "successes": 3,
+      "suite": "libero_goal",
+      "task_family": "open_the_middle_drawer_of_the_cabinet",
+      "type": "Camera Viewpoints"
+    },
+    "libero_goal-camera_viewpoints-s3": {
+      "episodes": 3,
+      "exact_ci95_exploratory": [
+        0.2924017738212866,
+        1.0
+      ],
+      "qualifies": false,
+      "severity": 3,
+      "success_rate": 1.0,
+      "successes": 3,
+      "suite": "libero_goal",
+      "task_family": "open_the_middle_drawer_of_the_cabinet",
+      "type": "Camera Viewpoints"
+    },
+    "libero_goal-robot_initial_states-s1": {
+      "episodes": 3,
+      "exact_ci95_exploratory": [
+        0.09429932405024609,
+        0.9915962413403874
+      ],
+      "qualifies": true,
+      "severity": 1,
+      "success_rate": 0.6666666666666666,
+      "successes": 2,
+      "suite": "libero_goal",
+      "task_family": "open_the_middle_drawer_of_the_cabinet",
+      "type": "Robot Initial States"
+    },
+    "libero_goal-robot_initial_states-s3": {
+      "episodes": 3,
+      "exact_ci95_exploratory": [
+        0.0,
+        0.7075982261787133
+      ],
+      "qualifies": false,
+      "severity": 3,
+      "success_rate": 0.0,
+      "successes": 0,
+      "suite": "libero_goal",
+      "task_family": "open_the_middle_drawer_of_the_cabinet",
+      "type": "Robot Initial States"
+    },
+    "libero_object-camera_viewpoints-s1": {
+      "episodes": 3,
+      "exact_ci95_exploratory": [
+        0.2924017738212866,
+        1.0
+      ],
+      "qualifies": false,
+      "severity": 1,
+      "success_rate": 1.0,
+      "successes": 3,
+      "suite": "libero_object",
+      "task_family": "pick_up_the_bbq_sauce_and_place_it_in_the_basket",
+      "type": "Camera Viewpoints"
+    },
+    "libero_object-camera_viewpoints-s3": {
+      "episodes": 3,
+      "exact_ci95_exploratory": [
+        0.2924017738212866,
+        1.0
+      ],
+      "qualifies": false,
+      "severity": 3,
+      "success_rate": 1.0,
+      "successes": 3,
+      "suite": "libero_object",
+      "task_family": "pick_up_the_bbq_sauce_and_place_it_in_the_basket",
+      "type": "Camera Viewpoints"
+    },
+    "libero_object-robot_initial_states-s1": {
+      "episodes": 3,
+      "exact_ci95_exploratory": [
+        0.2924017738212866,
+        1.0
+      ],
+      "qualifies": false,
+      "severity": 1,
+      "success_rate": 1.0,
+      "successes": 3,
+      "suite": "libero_object",
+      "task_family": "pick_up_the_bbq_sauce_and_place_it_in_the_basket",
+      "type": "Robot Initial States"
+    },
+    "libero_object-robot_initial_states-s3": {
+      "episodes": 3,
+      "exact_ci95_exploratory": [
+        0.09429932405024609,
+        0.9915962413403874
+      ],
+      "qualifies": true,
+      "severity": 3,
+      "success_rate": 0.6666666666666666,
+      "successes": 2,
+      "suite": "libero_object",
+      "task_family": "pick_up_the_bbq_sauce_and_place_it_in_the_basket",
+      "type": "Robot Initial States"
+    }
+  },
+  "episodes": 36,
+  "gpu_uuid": "GPU-4779cdde-a260-f8ec-da6a-6fa390bc7fd7",
+  "head_sha256": "e41eb678b938d239fdadb8bc1c77f9466007e460ea0dd53326262b7960f27d10",
+  "manifest_sha256": "ca005b65c447321cefb6fc68cb75984a0e67064bedf066a10e9bb49952fbd8c7",
+  "qualifying_conditions": [
+    "libero_goal-robot_initial_states-s1",
+    "libero_object-robot_initial_states-s3"
+  ],
+  "records_sha256": "dc30e849ce260819a14b5dcda6930ddf5b11b3871c5809d6deba96605d295c7a",
+  "selection_sha256": "c8ef329acd890b96d2076843a2b1c0a0c49cf32371da602b9612a32793c35fa7",
+  "stage": "screen",
+  "wandb_url": "https://wandb.ai/arm-aair-idit/pi05-libero-velocity-residual/runs/b6xyzprv"
+}

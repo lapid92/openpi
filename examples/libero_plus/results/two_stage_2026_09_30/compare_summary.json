@@ -1,0 +1,626 @@
+{
+  "base_checkpoint_identity": "dad4e2fbe79cceca79b83f3e53bb59c180e55ebb6815c67bfcdcf81768d7cee8",
+  "benchmark_commit": "4976dc30028e805ff8094b55501d532c48fec182",
+  "by_arm": {
+    "1": {
+      "chunks": 232,
+      "episode_ms": {
+        "mean": 34547.78788733529,
+        "p50": 34127.16519320384,
+        "p95": 43622.08928538021
+      },
+      "episodes": 8,
+      "exact_ci95_exploratory": [
+        0.6305833524471807,
+        1.0
+      ],
+      "http_request_chunk_ms": {
+        "mean": 310.8466485744053,
+        "p50": 126.07442424632609,
+        "p95": 549.8242734698579
+      },
+      "rate": 1.0,
+      "scored_policy_chunk_ms": {
+        "mean": 32.449794973343096,
+        "p50": 32.4272564612329,
+        "p95": 33.01505530253053
+      },
+      "successes": 8,
+      "velocity_evaluations_per_chunk": {
+        "mean": 1.0,
+        "p50": 1.0,
+        "p95": 1.0
+      },
+      "velocity_evaluations_per_episode": {
+        "mean": 29.0,
+        "p50": 25.0,
+        "p95": 41.25
+      }
+    },
+    "10": {
+      "chunks": 263,
+      "episode_ms": {
+        "mean": 39448.06015084032,
+        "p50": 34950.957514112815,
+        "p95": 57469.204628351144
+      },
+      "episodes": 8,
+      "exact_ci95_exploratory": [
+        0.47349032912479344,
+        0.9968402764687481
+      ],
+      "http_request_chunk_ms": {
+        "mean": 331.96150008482795,
+        "p50": 458.6964608170092,
+        "p95": 566.810755431652
+      },
+      "paired_vs_1": {
+        "discordant_win_fraction_exact_ci95": [
+          0.0,
+          0.975
+        ],
+        "losses": 1,
+        "net_difference_condition_cluster_ci95": [
+          -0.25,
+          0.0
+        ],
+        "net_success_rate_difference": -0.125,
+        "ties": 7,
+        "win_conditions": [],
+        "wins": 0
+      },
+      "rate": 0.875,
+      "scored_policy_chunk_ms": {
+        "mean": 50.66574603928246,
+        "p50": 50.67778192460537,
+        "p95": 51.28938062116504
+      },
+      "successes": 7,
+      "velocity_evaluations_per_chunk": {
+        "mean": 10.0,
+        "p50": 10.0,
+        "p95": 10.0
+      },
+      "velocity_evaluations_per_episode": {
+        "mean": 328.75,
+        "p50": 290.0,
+        "p95": 514.4999999999999
+      }
+    },
+    "2": {
+      "chunks": 276,
+      "episode_ms": {
+        "mean": 39898.63652724307,
+        "p50": 38309.92530565709,
+        "p95": 52933.33253616001
+      },
+      "episodes": 8,
+      "exact_ci95_exploratory": [
+        0.47349032912479344,
+        0.9968402764687481
+      ],
+      "http_request_chunk_ms": {
+        "mean": 313.5021029688094,
+        "p50": 446.989199379459,
+        "p95": 544.1769276512787
+      },
+      "paired_vs_1": {
+        "discordant_win_fraction_exact_ci95": [
+          0.0,
+          0.975
+        ],
+        "losses": 1,
+        "net_difference_condition_cluster_ci95": [
+          -0.25,
+          0.0
+        ],
+        "net_success_rate_difference": -0.125,
+        "ties": 7,
+        "win_conditions": [],
+        "wins": 0
+      },
+      "rate": 0.875,
+      "scored_policy_chunk_ms": {
+        "mean": 34.44297930927596,
+        "p50": 34.4334130641073,
+        "p95": 35.04594345577061
+      },
+      "successes": 7,
+      "velocity_evaluations_per_chunk": {
+        "mean": 2.0,
+        "p50": 2.0,
+        "p95": 2.0
+      },
+      "velocity_evaluations_per_episode": {
+        "mean": 69.0,
+        "p50": 65.0,
+        "p95": 102.19999999999999
+      }
+    },
+    "4": {
+      "chunks": 307,
+      "episode_ms": {
+        "mean": 43893.63012305694,
+        "p50": 43944.07995254733,
+        "p95": 56567.15378400404
+      },
+      "episodes": 8,
+      "exact_ci95_exploratory": [
+        0.47349032912479344,
+        0.9968402764687481
+      ],
+      "http_request_chunk_ms": {
+        "mean": 314.0355881867803,
+        "p50": 445.4530216753483,
+        "p95": 545.0401345267892
+      },
+      "paired_vs_1": {
+        "discordant_win_fraction_exact_ci95": [
+          0.0,
+          0.975
+        ],
+        "losses": 1,
+        "net_difference_condition_cluster_ci95": [
+          -0.25,
+          0.0
+        ],
+        "net_success_rate_difference": -0.125,
+        "ties": 7,
+        "win_conditions": [],
+        "wins": 0
+      },
+      "rate": 0.875,
+      "scored_policy_chunk_ms": {
+        "mean": 38.38593956744389,
+        "p50": 38.41225104406476,
+        "p95": 39.07932676374912
+      },
+      "successes": 7,
+      "velocity_evaluations_per_chunk": {
+        "mean": 4.0,
+        "p50": 4.0,
+        "p95": 4.0
+      },
+      "velocity_evaluations_per_episode": {
+        "mean": 153.5,
+        "p50": 166.0,
+        "p95": 214.2
+      }
+    }
+  },
+  "by_condition": {
+    "libero_goal-robot_initial_states-s1": {
+      "1": {
+        "episodes": 4,
+        "exact_ci95_exploratory": [
+          0.3976353643835253,
+          1.0
+        ],
+        "rate": 1.0,
+        "successes": 4
+      },
+      "10": {
+        "episodes": 4,
+        "exact_ci95_exploratory": [
+          0.3976353643835253,
+          1.0
+        ],
+        "paired_vs_1": {
+          "losses": 0,
+          "ties": 4,
+          "wins": 0
+        },
+        "rate": 1.0,
+        "successes": 4
+      },
+      "2": {
+        "episodes": 4,
+        "exact_ci95_exploratory": [
+          0.3976353643835253,
+          1.0
+        ],
+        "paired_vs_1": {
+          "losses": 0,
+          "ties": 4,
+          "wins": 0
+        },
+        "rate": 1.0,
+        "successes": 4
+      },
+      "4": {
+        "episodes": 4,
+        "exact_ci95_exploratory": [
+          0.3976353643835253,
+          1.0
+        ],
+        "paired_vs_1": {
+          "losses": 0,
+          "ties": 4,
+          "wins": 0
+        },
+        "rate": 1.0,
+        "successes": 4
+      }
+    },
+    "libero_object-robot_initial_states-s3": {
+      "1": {
+        "episodes": 4,
+        "exact_ci95_exploratory": [
+          0.3976353643835253,
+          1.0
+        ],
+        "rate": 1.0,
+        "successes": 4
+      },
+      "10": {
+        "episodes": 4,
+        "exact_ci95_exploratory": [
+          0.19412044968324338,
+          0.9936905367902902
+        ],
+        "paired_vs_1": {
+          "losses": 1,
+          "ties": 3,
+          "wins": 0
+        },
+        "rate": 0.75,
+        "successes": 3
+      },
+      "2": {
+        "episodes": 4,
+        "exact_ci95_exploratory": [
+          0.19412044968324338,
+          0.9936905367902902
+        ],
+        "paired_vs_1": {
+          "losses": 1,
+          "ties": 3,
+          "wins": 0
+        },
+        "rate": 0.75,
+        "successes": 3
+      },
+      "4": {
+        "episodes": 4,
+        "exact_ci95_exploratory": [
+          0.19412044968324338,
+          0.9936905367902902
+        ],
+        "paired_vs_1": {
+          "losses": 1,
+          "ties": 3,
+          "wins": 0
+        },
+        "rate": 0.75,
+        "successes": 3
+      }
+    }
+  },
+  "by_perturbation_type": {
+    "Robot Initial States": {
+      "1": {
+        "episodes": 8,
+        "exact_ci95_exploratory": [
+          0.6305833524471807,
+          1.0
+        ],
+        "rate": 1.0,
+        "successes": 8
+      },
+      "10": {
+        "episodes": 8,
+        "exact_ci95_exploratory": [
+          0.47349032912479344,
+          0.9968402764687481
+        ],
+        "paired_vs_1": {
+          "losses": 1,
+          "ties": 7,
+          "wins": 0
+        },
+        "rate": 0.875,
+        "successes": 7
+      },
+      "2": {
+        "episodes": 8,
+        "exact_ci95_exploratory": [
+          0.47349032912479344,
+          0.9968402764687481
+        ],
+        "paired_vs_1": {
+          "losses": 1,
+          "ties": 7,
+          "wins": 0
+        },
+        "rate": 0.875,
+        "successes": 7
+      },
+      "4": {
+        "episodes": 8,
+        "exact_ci95_exploratory": [
+          0.47349032912479344,
+          0.9968402764687481
+        ],
+        "paired_vs_1": {
+          "losses": 1,
+          "ties": 7,
+          "wins": 0
+        },
+        "rate": 0.875,
+        "successes": 7
+      }
+    }
+  },
+  "by_task_family": {
+    "open_the_middle_drawer_of_the_cabinet": {
+      "1": {
+        "episodes": 4,
+        "exact_ci95_exploratory": [
+          0.3976353643835253,
+          1.0
+        ],
+        "rate": 1.0,
+        "successes": 4
+      },
+      "10": {
+        "episodes": 4,
+        "exact_ci95_exploratory": [
+          0.3976353643835253,
+          1.0
+        ],
+        "paired_vs_1": {
+          "losses": 0,
+          "ties": 4,
+          "wins": 0
+        },
+        "rate": 1.0,
+        "successes": 4
+      },
+      "2": {
+        "episodes": 4,
+        "exact_ci95_exploratory": [
+          0.3976353643835253,
+          1.0
+        ],
+        "paired_vs_1": {
+          "losses": 0,
+          "ties": 4,
+          "wins": 0
+        },
+        "rate": 1.0,
+        "successes": 4
+      },
+      "4": {
+        "episodes": 4,
+        "exact_ci95_exploratory": [
+          0.3976353643835253,
+          1.0
+        ],
+        "paired_vs_1": {
+          "losses": 0,
+          "ties": 4,
+          "wins": 0
+        },
+        "rate": 1.0,
+        "successes": 4
+      }
+    },
+    "pick_up_the_bbq_sauce_and_place_it_in_the_basket": {
+      "1": {
+        "episodes": 4,
+        "exact_ci95_exploratory": [
+          0.3976353643835253,
+          1.0
+        ],
+        "rate": 1.0,
+        "successes": 4
+      },
+      "10": {
+        "episodes": 4,
+        "exact_ci95_exploratory": [
+          0.19412044968324338,
+          0.9936905367902902
+        ],
+        "paired_vs_1": {
+          "losses": 1,
+          "ties": 3,
+          "wins": 0
+        },
+        "rate": 0.75,
+        "successes": 3
+      },
+      "2": {
+        "episodes": 4,
+        "exact_ci95_exploratory": [
+          0.19412044968324338,
+          0.9936905367902902
+        ],
+        "paired_vs_1": {
+          "losses": 1,
+          "ties": 3,
+          "wins": 0
+        },
+        "rate": 0.75,
+        "successes": 3
+      },
+      "4": {
+        "episodes": 4,
+        "exact_ci95_exploratory": [
+          0.19412044968324338,
+          0.9936905367902902
+        ],
+        "paired_vs_1": {
+          "losses": 1,
+          "ties": 3,
+          "wins": 0
+        },
+        "rate": 0.75,
+        "successes": 3
+      }
+    }
+  },
+  "decision": "stop; no meaningful selective extra-step benefit under declared gate",
+  "episodes": 32,
+  "first_chunk_cases": [
+    {
+      "condition_id": "libero_goal-robot_initial_states-s1",
+      "initial_sigma": 0.0343353485510052,
+      "seed": 101,
+      "severity": 1,
+      "success": {
+        "1": true,
+        "10": true,
+        "2": true,
+        "4": true
+      },
+      "suite": "libero_goal",
+      "task_family": "open_the_middle_drawer_of_the_cabinet",
+      "type": "Robot Initial States"
+    },
+    {
+      "condition_id": "libero_goal-robot_initial_states-s1",
+      "initial_sigma": 0.035506054974673996,
+      "seed": 131,
+      "severity": 1,
+      "success": {
+        "1": true,
+        "10": true,
+        "2": true,
+        "4": true
+      },
+      "suite": "libero_goal",
+      "task_family": "open_the_middle_drawer_of_the_cabinet",
+      "type": "Robot Initial States"
+    },
+    {
+      "condition_id": "libero_goal-robot_initial_states-s1",
+      "initial_sigma": 0.03568023965076676,
+      "seed": 167,
+      "severity": 1,
+      "success": {
+        "1": true,
+        "10": true,
+        "2": true,
+        "4": true
+      },
+      "suite": "libero_goal",
+      "task_family": "open_the_middle_drawer_of_the_cabinet",
+      "type": "Robot Initial States"
+    },
+    {
+      "condition_id": "libero_goal-robot_initial_states-s1",
+      "initial_sigma": 0.03628529949808528,
+      "seed": 197,
+      "severity": 1,
+      "success": {
+        "1": true,
+        "10": true,
+        "2": true,
+        "4": true
+      },
+      "suite": "libero_goal",
+      "task_family": "open_the_middle_drawer_of_the_cabinet",
+      "type": "Robot Initial States"
+    },
+    {
+      "condition_id": "libero_object-robot_initial_states-s3",
+      "initial_sigma": 0.03266739160413576,
+      "seed": 101,
+      "severity": 3,
+      "success": {
+        "1": true,
+        "10": true,
+        "2": false,
+        "4": true
+      },
+      "suite": "libero_object",
+      "task_family": "pick_up_the_bbq_sauce_and_place_it_in_the_basket",
+      "type": "Robot Initial States"
+    },
+    {
+      "condition_id": "libero_object-robot_initial_states-s3",
+      "initial_sigma": 0.03249609777390932,
+      "seed": 131,
+      "severity": 3,
+      "success": {
+        "1": true,
+        "10": false,
+        "2": true,
+        "4": true
+      },
+      "suite": "libero_object",
+      "task_family": "pick_up_the_bbq_sauce_and_place_it_in_the_basket",
+      "type": "Robot Initial States"
+    },
+    {
+      "condition_id": "libero_object-robot_initial_states-s3",
+      "initial_sigma": 0.036139872752450904,
+      "seed": 167,
+      "severity": 3,
+      "success": {
+        "1": true,
+        "10": true,
+        "2": true,
+        "4": true
+      },
+      "suite": "libero_object",
+      "task_family": "pick_up_the_bbq_sauce_and_place_it_in_the_basket",
+      "type": "Robot Initial States"
+    },
+    {
+      "condition_id": "libero_object-robot_initial_states-s3",
+      "initial_sigma": 0.03505597056771018,
+      "seed": 197,
+      "severity": 3,
+      "success": {
+        "1": true,
+        "10": true,
+        "2": true,
+        "4": false
+      },
+      "suite": "libero_object",
+      "task_family": "pick_up_the_bbq_sauce_and_place_it_in_the_basket",
+      "type": "Robot Initial States"
+    }
+  ],
+  "gpu_uuid": "GPU-4779cdde-a260-f8ec-da6a-6fa390bc7fd7",
+  "head_sha256": "e41eb678b938d239fdadb8bc1c77f9466007e460ea0dd53326262b7960f27d10",
+  "manifest_sha256": "ca005b65c447321cefb6fc68cb75984a0e67064bedf066a10e9bb49952fbd8c7",
+  "paired_cases": 8,
+  "records_sha256": "1b382c871d8efe44d03c4ba552254a811f75bc72c4b021e641b83ef48e1cd333",
+  "selection_sha256": "c8ef329acd890b96d2076843a2b1c0a0c49cf32371da602b9612a32793c35fa7",
+  "separate_measures": "No demonstration-action error or fine-step numerical reference was measured.",
+  "sigma_ranking_on_one_step_failures": {
+    "10": {
+      "auroc_condition_cluster_ci95": null,
+      "auroc_initial_sigma": null,
+      "estimable": false,
+      "one_step_failures": 0,
+      "ranking_gate_pass": false,
+      "rescued": 0,
+      "unrescued": 0
+    },
+    "2": {
+      "auroc_condition_cluster_ci95": null,
+      "auroc_initial_sigma": null,
+      "estimable": false,
+      "one_step_failures": 0,
+      "ranking_gate_pass": false,
+      "rescued": 0,
+      "unrescued": 0
+    },
+    "4": {
+      "auroc_condition_cluster_ci95": null,
+      "auroc_initial_sigma": null,
+      "estimable": false,
+      "one_step_failures": 0,
+      "ranking_gate_pass": false,
+      "rescued": 0,
+      "unrescued": 0
+    }
+  },
+  "stage": "compare",
+  "success_benefit_gate_pass": false,
+  "uncertainty_note": "Exact episode intervals are exploratory; paired differences and score AUROC use condition-cluster bootstrap. Few selected conditions yield coarse intervals.",
+  "wandb_url": "https://wandb.ai/arm-aair-idit/pi05-libero-velocity-residual/runs/b0gcl3wr"
+}
