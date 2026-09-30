@@ -111,7 +111,7 @@ def validate(manifest, manifest_path, rows, stage, selection=None, selection_pat
         ):
             if row.get(field) != value:
                 raise ValueError("Record identity mismatch: " + field)
-        if selection_path and row.get("selection_sha256") != sha256_file(selection_path):
+        if stage == "compare" and selection_path and row.get("selection_sha256") != sha256_file(selection_path):
             raise ValueError("Record selection SHA mismatch")
         if type(row.get("success")) is not bool or not 1 <= row.get("policy_steps", 0) <= c["max_policy_steps"]:
             raise ValueError("Invalid outcome/horizon")

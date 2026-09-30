@@ -278,3 +278,48 @@ def test_analyzer_rejects_tampered_selection_even_with_valid_screen_hash(protoco
     }
     with pytest.raises(ValueError, match="Selection cannot be verified"):
         two_stage_analyze.validate(protocol, manifest_path, [], "compare", forged, screen_found=found)
+
+
+def test_selection_hash_applies_to_comparison_rows_only(protocol, screen_records, tmp_path):
+    manifest_path = tmp_path / "manifest.json"
+    manifest_path.write_text(json.dumps(protocol))
+    manifest_hash = two_stage_analyze.sha256_file(manifest_path)
+    selected = "libero_goal-robot_initial_states-s3"
+    for row in screen_records:
+        row["manifest_sha256"] = manifest_hash
+        row["success"] = row["condition_id"] == selected and row["seed"] == protocol["screening_seeds"][0]
+    selection = {"manifest_sha256": manifest_hash, "selected_condition_ids": [selected]}
+    selection_path = tmp_path / "selection.json"
+    selection_path.write_text(json.dumps(selection))
+    selection_hash = two_stage_analyze.sha256_file(selection_path)
+
+    # Screening predates selection and has no selection SHA, even during comparison analysis.
+    screen_found = two_stage_analyze.validate(
+        protocol, manifest_path, screen_records, "screen", selection, selection_path
+    )
+    condition = next(item for item in protocol["conditions"] if item["condition_id"] == selected)
+    compare_rows = [
+        _episode(protocol, condition, seed, arm) for seed in protocol["heldout_seeds"] for arm in (1, 2, 4, 10)
+    ]
+    for row in compare_rows:
+        row["manifest_sha256"] = manifest_hash
+        row["selection_sha256"] = selection_hash
+    assert (
+        len(
+            two_stage_analyze.validate(
+                protocol, manifest_path, compare_rows, "compare", selection, selection_path, screen_found
+            )
+        )
+        == 16
+    )
+
+    for invalid in (None, "b" * 64):
+        changed = copy.deepcopy(compare_rows)
+        if invalid is None:
+            changed[0].pop("selection_sha256")
+        else:
+            changed[0]["selection_sha256"] = invalid
+        with pytest.raises(ValueError, match="Record selection SHA mismatch"):
+            two_stage_analyze.validate(
+                protocol, manifest_path, changed, "compare", selection, selection_path, screen_found
+            )
