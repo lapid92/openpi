@@ -1,0 +1,13 @@
+# Targeted LeRobot RoboCasa checkpoint audit
+
+Accessed 2026-10-01. No model weights downloaded and no inference performed.
+
+Candidate: https://huggingface.co/ruiname/pi05-robocasa-10tasks-200k/tree/aff4675f9486ad943db5bc6d5875626a2a4ee93c
+
+Positive evidence: repository contains model.safetensors, config.json (type pi05, gemma_2b/gemma_300m, bfloat16), train_config.json, preprocessor/postprocessor pipelines and separate normalization safetensors. Commit history records policy and processor uploads. Its expected inputs are observation.image.agentview and observation.image.wrist at 3x224x224 plus 7-dimensional observation.state. Outputs are 12-dimensional actions; chunk_size/n_action_steps are 50, default inference steps10. State/action normalization is QUANTILES. Training config names ten RoboCasa task datasets.
+
+Compatibility blockers: train_config env is null, rename_map empty, dataset revision null, and steps is 1 despite repository name 200k; neither an actual completed 200k optimization run nor its exact code/simulator revision is established by these artifacts. The referenced dataset metadata URL https://huggingface.co/datasets/robocasa_atomic_lerobot/CloseDrawer/raw/main/meta/info.json returns Invalid username or password, so state7 component names and action12 semantics cannot be verified from that source. No public repositories were listed for GitHub username ruiname; username correspondence itself is unverified.
+
+Official LeRobot adapter DOES exist: https://github.com/huggingface/lerobot/blob/e0d50211ef236143ae867228662b7dfaba554f02/src/lerobot/envs/robocasa.py and https://github.com/huggingface/lerobot/blob/e0d50211ef236143ae867228662b7dfaba554f02/docs/source/robocasa.mdx . It targets RoboCasa365 PandaOmron, exposes state16 (base position/quaternion, relative end-effector position/quaternion, gripper qpos), and native robot0_agentview_left/robot0_eye_in_hand/robot0_agentview_right camera keys. Its action12 layout is base_motion4, control_mode1, EE_position3, EE_rotation3, gripper1. This is not a validated mapping to the candidate state7/two-camera input. The docs use the released SmolVLA checkpoint, not this pi05 candidate, and installation clones RoboCasa and robosuite without tying a simulator revision to this candidate.
+
+Decision: defer RoboCasa evaluation until a verified state7/action12/camera adapter and compatible simulator revision plus checkpoint training provenance are supplied or located. This blocker is independent of OpenPI vs LeRobot: switching implementation alone does not establish compatibility. A new separately predeclared RoboCasa protocol would be required if those dependencies become verifiable. Do not substitute SmolVLA or the LIBERO adapter.

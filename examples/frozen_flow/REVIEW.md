@@ -56,3 +56,36 @@ The new Markdown reporter is called only after full audits and before publicatio
 The supervisor now finishes its W&B run successfully only after the result push succeeds. A publication failure therefore fails the supervisor run and remains recorded on the pod.
 
 Final pre-run software review: approved. Real-checkpoint parity, simulator smoke and final-record validation remain required; no new evaluation outcomes were inspected for this approval.
+
+## Independent runtime gate review after protocol freeze
+
+Frozen manifest SHA256: `d16dba54a8157af011e872299883e071e681c0b4c6ad6bce1e5e62415f7910e6`.
+Frozen checkpoint full content SHA256: `9cd1b00d402cc0447454dad6054dcc6f019b53e498469f209d2b749d4487e1d5`.
+
+The Reviewer independently ran the strict analyzer against both completed smoke files, without starting duplicate W&B runs:
+
+```bash
+.venv/bin/python examples/frozen_flow/analyze.py --manifest examples/frozen_flow/protocol.json --benchmark libero --records /volt/artifacts/frozen-flow-study/runs/libero-smoke.jsonl --output /volt/artifacts/frozen-flow-study/runs/libero-review-smoke-summary.json --smoke
+.venv/bin/python examples/frozen_flow/analyze.py --manifest examples/frozen_flow/protocol.json --benchmark libero_plus --records /volt/artifacts/frozen-flow-study/runs/libero_plus-smoke.jsonl --output /volt/artifacts/frozen-flow-study/runs/libero_plus-review-smoke-summary.json --smoke
+```
+
+Both audits passed: four declared arms per benchmark, zero error attempts, complete declared identity/provenance, matched supplied and stabilized simulator states, matched first observations, every chunk noise digest recomputed, and valid action/chunk/velocity/latency accounting.
+
+All 32 real-checkpoint parity records were independently inspected: two benchmarks × four declared GPU UUIDs × four arms. Each expected benchmark/GPU/arm appeared exactly once; every record matched the frozen manifest and checkpoint, passed the 1e-5 tolerance with **maximum absolute action difference 0.0**, and recorded exactly twice the arm's velocity evaluations for verification. Each benchmark used 136 verification velocity evaluations, separate from scored smoke costs.
+
+Smoke results, excluded from main study inference:
+
+| Benchmark | Arm | Success | Chunks | Velocity evaluations | Mean policy call ms | Episode seconds |
+|---|---:|---:|---:|---:|---:|---:|
+| LIBERO | 1 | 1/1 | 15 | 15 | 33.534 | 31.158 |
+| LIBERO | 2 | 1/1 | 16 | 32 | 35.621 | 32.399 |
+| LIBERO | 4 | 1/1 | 15 | 60 | 38.956 | 31.422 |
+| LIBERO | 10 | 1/1 | 15 | 150 | 51.010 | 31.389 |
+| LIBERO-Plus | 1 | 1/1 | 16 | 16 | 33.723 | 34.034 |
+| LIBERO-Plus | 2 | 1/1 | 16 | 32 | 35.786 | 31.629 |
+| LIBERO-Plus | 4 | 1/1 | 16 | 64 | 39.587 | 32.647 |
+| LIBERO-Plus | 10 | 1/1 | 16 | 160 | 51.768 | 33.329 |
+
+The LIBERO case is `libero:libero_spatial:0`; the Plus case is `libero_plus:libero_spatial:265`. Both use the declared smoke seed 900001 and initial-state index zero. All arms of both smoke cases ran on `GPU-56335fdf-6dc8-1d64-ce39-364d4a532435`. Parity additionally verified UUIDs `GPU-b786fcd4-f878-69e6-3017-a2ae408151fd`, `GPU-967ff6df-a7e2-b65a-d051-87819b7725fc`, and `GPU-0cb759da-a716-038e-f0a9-208ec138ccc7`.
+
+Runtime gate decision: **approve the unchanged predeclared full LIBERO and LIBERO-Plus evaluations** after smoke publication. These smoke cases provide no evidence of rescue benefit and do not change task selection, seeds, arms, budgets or stopping rules. Full paired-record validation and analysis remain pending.
