@@ -1,0 +1,24 @@
+{
+  "inference_python": "/volt/code/frozen-flow-study/.venv/bin/python",
+  "simulator_python": "/volt/envs/libero/bin/python",
+  "checkpoint": "/volt/checkpoints/openpi-assets/checkpoints/pi05_libero",
+  "simulator_common_env": {
+    "CUDA_VISIBLE_DEVICES": "",
+    "MUJOCO_GL": "osmesa",
+    "PYOPENGL_PLATFORM": "osmesa"
+  },
+  "libero": {
+    "PYTHONPATH": "/volt/code/frozen-flow-study/third_party/libero:/volt/code/frozen-flow-study/packages/openpi-client/src",
+    "LIBERO_CONFIG_PATH": "/volt/benchmarks/config-libero"
+  },
+  "libero_plus": {
+    "PYTHONPATH": "/volt/benchmarks/libero-plus:/volt/code/frozen-flow-study/packages/openpi-client/src",
+    "LIBERO_CONFIG_PATH": "/volt/benchmarks/config-libero-plus"
+  },
+  "inference_common_env": {
+    "OPENPI_DATA_HOME": "/volt/checkpoints",
+    "UV_CACHE_DIR": "/volt/cache/uv",
+    "XDG_CACHE_HOME": "/volt/cache",
+    "HF_HOME": "/volt/cache/huggingface"
+  }
+}

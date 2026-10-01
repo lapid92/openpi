@@ -1,0 +1,13 @@
+Thu Oct  1 09:50:28 UTC 2026
+Linux uz2ptakxucbe-0 6.12.77-99.140.amzn2023.x86_64 #1 SMP PREEMPT_DYNAMIC Mon Mar 23 10:24:54 UTC 2026 x86_64 x86_64 x86_64 GNU/Linux
+Python 3.11.14
+Python 3.8.20
+2e2c93df5c75918b59cffc30f550e2ff717a2cb0
+f78abd68ee283de9f9be3c8f7e2a9ad60246e95c
+4976dc30028e805ff8094b55501d532c48fec182
+
+Checkpoint official source: gs://openpi-assets/checkpoints/pi05_libero
+Checkpoint archive source README: https://github.com/Physical-Intelligence/openpi/blob/main/examples/libero/README.md
+Checkpoint meta identity: dad4e2fbe79cceca79b83f3e53bb59c180e55ebb6815c67bfcdcf81768d7cee8
+Checkpoint full file hash manifest: 42d571bd87f05f1182810f5a8bfa6d084c0d0dd277aff739bcf8f69868e6fb99
+Checkpoint layout assets+params (public inference checkpoint has no top-level training completion metadata). Public official README identifies 30k finetuned checkpoint; verification is source attribution and complete downloaded files, not a local training log.

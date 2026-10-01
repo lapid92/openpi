@@ -1,0 +1,79 @@
+{
+  "libero_spatial": {
+    "count": 2402,
+    "categories": {
+      "Background Textures": 258,
+      "Robot Initial States": 350,
+      "Camera Viewpoints": 376,
+      "Language Instructions": 390,
+      "Sensor Noise": 351,
+      "Objects Layout": 385,
+      "Light Conditions": 292
+    },
+    "difficulty": {
+      "2": 669,
+      "1": 480,
+      "3": 630,
+      "4": 432,
+      "5": 191
+    }
+  },
+  "libero_object": {
+    "count": 2518,
+    "categories": {
+      "Background Textures": 248,
+      "Robot Initial States": 398,
+      "Camera Viewpoints": 396,
+      "Language Instructions": 354,
+      "Sensor Noise": 422,
+      "Objects Layout": 403,
+      "Light Conditions": 297
+    },
+    "difficulty": {
+      "4": 481,
+      "3": 507,
+      "2": 511,
+      "1": 410,
+      "5": 609
+    }
+  },
+  "libero_goal": {
+    "count": 2591,
+    "categories": {
+      "Background Textures": 281,
+      "Robot Initial States": 409,
+      "Camera Viewpoints": 408,
+      "Language Instructions": 410,
+      "Sensor Noise": 379,
+      "Objects Layout": 425,
+      "Light Conditions": 279
+    },
+    "difficulty": {
+      "3": 473,
+      "1": 397,
+      "2": 572,
+      "4": 450,
+      "5": 578,
+      "None": 121
+    }
+  },
+  "libero_10": {
+    "count": 2519,
+    "categories": {
+      "Background Textures": 289,
+      "Robot Initial States": 393,
+      "Camera Viewpoints": 419,
+      "Language Instructions": 383,
+      "Sensor Noise": 449,
+      "Objects Layout": 312,
+      "Light Conditions": 274
+    },
+    "difficulty": {
+      "4": 523,
+      "3": 484,
+      "5": 705,
+      "1": 357,
+      "2": 450
+    }
+  }
+}
