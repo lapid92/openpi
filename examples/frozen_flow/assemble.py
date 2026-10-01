@@ -101,7 +101,7 @@ def main():
             "reason": "Completed public candidate save exists, but no verified checkpoint/configuration/observation-action/simulator interface provenance; see ROBOCASA_DISCOVERY.md",
         },
     }
-    out.write_text(json.dumps(protocol, indent=2, sort_keys=True) + "\n")
+    out.write_text(json.dumps(protocol, separators=(",", ":"), sort_keys=True) + "\n")
     out.with_suffix(".sha256").write_text(file_hash(out) + "  " + out.name + "\n")
     print(
         json.dumps(

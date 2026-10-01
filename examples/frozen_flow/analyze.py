@@ -309,7 +309,11 @@ def main():
             project=args.wandb_project,
             name=args.wandb_name,
             job_type="frozen-flow-analysis",
-            config={"protocol": manifest, "benchmark": args.benchmark, "manifest_sha256": summary["manifest_sha256"]},
+            config={
+                "protocol_sha256": summary["manifest_sha256"],
+                "benchmark": args.benchmark,
+                "manifest_sha256": summary["manifest_sha256"],
+            },
         ) as run:
             metrics = {"episodes": summary["completed_episodes"], "error_attempts": summary["error_attempt_count"]}
             for arm, values in summary["overall"]["arms"].items():
