@@ -1,0 +1,8 @@
+{
+  "benchmark": "libero",
+  "destination_thread": "01a0ec06-e756-7883-a055-1562891dce04",
+  "delivered_at": "2026-10-01T17:04:26.793761+00:00",
+  "episodes": 1600,
+  "audit": "passed",
+  "independent_final_audit": "pending"
+}
