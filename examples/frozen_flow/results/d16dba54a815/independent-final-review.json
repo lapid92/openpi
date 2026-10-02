@@ -1,0 +1,206 @@
+{
+  "manifest_sha256": "d16dba54a8157af011e872299883e071e681c0b4c6ad6bce1e5e62415f7910e6",
+  "checkpoint_sha256": "9cd1b00d402cc0447454dad6054dcc6f019b53e498469f209d2b749d4487e1d5",
+  "source_files_verified": 288,
+  "source_hash_audit": "passed",
+  "benchmarks": {
+    "libero": {
+      "audit": "passed",
+      "records": 1600,
+      "paired_cases": 400,
+      "families": 40,
+      "error_attempts": 0,
+      "recomputed_summary": "exact match excluding W&B URL and file-list metadata",
+      "published_raw_record_hashes": "all match",
+      "main_reference_calls_logged": 0,
+      "arms": {
+        "1": {
+          "successes": 386,
+          "episodes": 400,
+          "success_rate": 0.965,
+          "total_velocity_evaluations": 12880,
+          "policy_mean_ms": 33.01695499002285,
+          "policy_p95_ms": 34.01979005429894,
+          "episode_mean_seconds": 45.86088658404537
+        },
+        "2": {
+          "successes": 390,
+          "episodes": 400,
+          "success_rate": 0.975,
+          "total_velocity_evaluations": 25616,
+          "policy_mean_ms": 35.01987476744599,
+          "policy_p95_ms": 36.02586779743433,
+          "episode_mean_seconds": 45.71596490287688,
+          "rescues": 8,
+          "regressions": 4,
+          "ties": 388,
+          "one_step_failures": 14,
+          "fraction_one_step_failures_rescued": 0.5714285714285714,
+          "net_success_difference": 0.01,
+          "net_difference_condition_cluster_ci95": [
+            -0.005,
+            0.025
+          ],
+          "rescue_condition_count": 7,
+          "assessment": "Unresolved: too few one-step failures or rescues."
+        },
+        "4": {
+          "successes": 390,
+          "episodes": 400,
+          "success_rate": 0.975,
+          "total_velocity_evaluations": 51196,
+          "policy_mean_ms": 39.01735248107585,
+          "policy_p95_ms": 40.045056492090225,
+          "episode_mean_seconds": 45.81539009435568,
+          "rescues": 11,
+          "regressions": 7,
+          "ties": 382,
+          "one_step_failures": 14,
+          "fraction_one_step_failures_rescued": 0.7857142857142857,
+          "net_success_difference": 0.01,
+          "net_difference_condition_cluster_ci95": [
+            -0.01,
+            0.03
+          ],
+          "rescue_condition_count": 9,
+          "assessment": "Unresolved: too few one-step failures or rescues."
+        },
+        "10": {
+          "successes": 386,
+          "episodes": 400,
+          "success_rate": 0.965,
+          "total_velocity_evaluations": 128870,
+          "policy_mean_ms": 51.005566975537896,
+          "policy_p95_ms": 52.07403879612684,
+          "episode_mean_seconds": 46.30331256431295,
+          "rescues": 11,
+          "regressions": 11,
+          "ties": 378,
+          "one_step_failures": 14,
+          "fraction_one_step_failures_rescued": 0.7857142857142857,
+          "net_success_difference": 0.0,
+          "net_difference_condition_cluster_ci95": [
+            -0.02,
+            0.02
+          ],
+          "rescue_condition_count": 9,
+          "assessment": "Unresolved: too few one-step failures or rescues."
+        }
+      },
+      "wandb_url": "https://wandb.ai/arm-aair-idit/pi05-frozen-flow-study/runs/opu92158"
+    },
+    "libero_plus": {
+      "audit": "passed",
+      "records": 1920,
+      "paired_cases": 480,
+      "families": 15,
+      "error_attempts": 0,
+      "recomputed_summary": "exact match excluding W&B URL and file-list metadata",
+      "published_raw_record_hashes": "all match",
+      "main_reference_calls_logged": 0,
+      "arms": {
+        "1": {
+          "successes": 454,
+          "episodes": 480,
+          "success_rate": 0.9458333333333333,
+          "total_velocity_evaluations": 16608,
+          "policy_mean_ms": 32.995880357608215,
+          "policy_p95_ms": 34.04455359559506,
+          "episode_mean_seconds": 49.802322600179465
+        },
+        "2": {
+          "successes": 456,
+          "episodes": 480,
+          "success_rate": 0.95,
+          "total_velocity_evaluations": 33060,
+          "policy_mean_ms": 34.962037373001756,
+          "policy_p95_ms": 36.00893816910684,
+          "episode_mean_seconds": 49.59739132645287,
+          "rescues": 15,
+          "regressions": 13,
+          "ties": 452,
+          "one_step_failures": 26,
+          "fraction_one_step_failures_rescued": 0.5769230769230769,
+          "net_success_difference": 0.004166666666666667,
+          "net_difference_condition_cluster_ci95": [
+            -0.020833333333333332,
+            0.03125
+          ],
+          "rescue_condition_count": 10,
+          "assessment": "Paired rescue cases observed; interpret the net difference and clustered uncertainty."
+        },
+        "4": {
+          "successes": 459,
+          "episodes": 480,
+          "success_rate": 0.95625,
+          "total_velocity_evaluations": 65376,
+          "policy_mean_ms": 39.006124876629436,
+          "policy_p95_ms": 40.10032166261226,
+          "episode_mean_seconds": 49.39286845512688,
+          "rescues": 16,
+          "regressions": 11,
+          "ties": 453,
+          "one_step_failures": 26,
+          "fraction_one_step_failures_rescued": 0.6153846153846154,
+          "net_success_difference": 0.010416666666666666,
+          "net_difference_condition_cluster_ci95": [
+            -0.0125,
+            0.03333333333333333
+          ],
+          "rescue_condition_count": 10,
+          "assessment": "Paired rescue cases observed; interpret the net difference and clustered uncertainty."
+        },
+        "10": {
+          "successes": 463,
+          "episodes": 480,
+          "success_rate": 0.9645833333333333,
+          "total_velocity_evaluations": 161560,
+          "policy_mean_ms": 50.990842113899234,
+          "policy_p95_ms": 52.069055498577654,
+          "episode_mean_seconds": 49.20522698283312,
+          "rescues": 16,
+          "regressions": 7,
+          "ties": 457,
+          "one_step_failures": 26,
+          "fraction_one_step_failures_rescued": 0.6153846153846154,
+          "net_success_difference": 0.01875,
+          "net_difference_condition_cluster_ci95": [
+            -0.004166666666666667,
+            0.04375
+          ],
+          "rescue_condition_count": 10,
+          "assessment": "Paired rescue cases observed; interpret the net difference and clustered uncertainty."
+        }
+      },
+      "wandb_url": "https://wandb.ai/arm-aair-idit/pi05-frozen-flow-study/runs/egcqq28j"
+    }
+  },
+  "git_head": "d78523c97248cce548dbbeebdadef584aac730bf",
+  "git_status": "",
+  "published_diff_names": [
+    "examples/frozen_flow/results/d16dba54a815/full-REPORT.md",
+    "examples/frozen_flow/results/d16dba54a815/full-status.json",
+    "examples/frozen_flow/results/d16dba54a815/libero-completion-notification.json",
+    "examples/frozen_flow/results/d16dba54a815/libero-main-worker-0.jsonl",
+    "examples/frozen_flow/results/d16dba54a815/libero-main-worker-1.jsonl",
+    "examples/frozen_flow/results/d16dba54a815/libero-main-worker-2.jsonl",
+    "examples/frozen_flow/results/d16dba54a815/libero-main-worker-3.jsonl",
+    "examples/frozen_flow/results/d16dba54a815/libero-prepare-worker-0.jsonl",
+    "examples/frozen_flow/results/d16dba54a815/libero-prepare-worker-1.jsonl",
+    "examples/frozen_flow/results/d16dba54a815/libero-prepare-worker-2.jsonl",
+    "examples/frozen_flow/results/d16dba54a815/libero-prepare-worker-3.jsonl",
+    "examples/frozen_flow/results/d16dba54a815/libero-summary.json",
+    "examples/frozen_flow/results/d16dba54a815/libero_plus-completion-notification.json",
+    "examples/frozen_flow/results/d16dba54a815/libero_plus-main-worker-0.jsonl",
+    "examples/frozen_flow/results/d16dba54a815/libero_plus-main-worker-1.jsonl",
+    "examples/frozen_flow/results/d16dba54a815/libero_plus-main-worker-2.jsonl",
+    "examples/frozen_flow/results/d16dba54a815/libero_plus-main-worker-3.jsonl",
+    "examples/frozen_flow/results/d16dba54a815/libero_plus-prepare-worker-0.jsonl",
+    "examples/frozen_flow/results/d16dba54a815/libero_plus-prepare-worker-1.jsonl",
+    "examples/frozen_flow/results/d16dba54a815/libero_plus-prepare-worker-2.jsonl",
+    "examples/frozen_flow/results/d16dba54a815/libero_plus-prepare-worker-3.jsonl",
+    "examples/frozen_flow/results/d16dba54a815/libero_plus-summary.json",
+    "examples/frozen_flow/results/d16dba54a815/smoke-status.json"
+  ],
+  "note": "Independent complete-record audit; no new evaluations or source/protocol changes. Report reproduction requires documented RUN.md HUP wrapper correction."
+}
