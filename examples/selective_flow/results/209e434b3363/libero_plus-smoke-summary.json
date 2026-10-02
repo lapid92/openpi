@@ -1,0 +1,2118 @@
+{
+  "benchmark": "libero_plus",
+  "benchmark_commit": "4976dc30028e805ff8094b55501d532c48fec182",
+  "phase": "smoke",
+  "manifest_sha256": "209e434b336372b37d80b7a101912b4b8daeb9f5cd71a0e9772fdfe1579e782c",
+  "checkpoint_sha256": "9cd1b00d402cc0447454dad6054dcc6f019b53e498469f209d2b749d4487e1d5",
+  "head_sha256": "e41eb678b938d239fdadb8bc1c77f9466007e460ea0dd53326262b7960f27d10",
+  "audit": "passed",
+  "completed_episodes": 9,
+  "error_attempts": [],
+  "error_attempt_count": 0,
+  "overall": {
+    "pairs": 3,
+    "conditions": 3,
+    "families": 2,
+    "strategies": {
+      "fixed_1": {
+        "successes": 3,
+        "episodes": 3,
+        "success_rate": 1.0,
+        "cost": {
+          "policy_call_ms": {
+            "count": 67,
+            "mean": 32.9357793610265,
+            "p50": 32.932714093476534,
+            "p95": 33.43599317595363,
+            "sum": 2206.6972171887755
+          },
+          "head_ms": {
+            "count": 67,
+            "mean": 0.6226265330368014,
+            "p50": 0.6068800576031208,
+            "p95": 0.7923665922135112,
+            "sum": 41.71597771346569
+          },
+          "request_ms": {
+            "count": 67,
+            "mean": 265.83722816196394,
+            "p50": 405.727278906852,
+            "p95": 423.1072560418397,
+            "sum": 17811.094286851585
+          },
+          "episode_ms": {
+            "count": 3,
+            "mean": 43752.8270133771,
+            "p50": 40289.65668287128,
+            "p95": 54952.20985081978,
+            "sum": 131258.4810401313
+          },
+          "per_case_mean_policy_call_ms": {
+            "count": 3,
+            "mean": 32.960710251741325,
+            "p50": 32.86492036256407,
+            "p95": 33.148344724533,
+            "sum": 98.88213075522398
+          },
+          "per_case_total_policy_ms": {
+            "count": 3,
+            "mean": 735.5657390629252,
+            "p50": 722.4222295917571,
+            "p95": 900.4382160957903,
+            "sum": 2206.6972171887755
+          },
+          "per_case_velocity_evaluations_per_chunk": {
+            "count": 3,
+            "mean": 1.0,
+            "p50": 1.0,
+            "p95": 1.0,
+            "sum": 3.0
+          },
+          "total_velocity_evaluations": 67,
+          "total_head_evaluations": 67
+        }
+      },
+      "fixed_10": {
+        "successes": 3,
+        "episodes": 3,
+        "success_rate": 1.0,
+        "cost": {
+          "policy_call_ms": {
+            "count": 64,
+            "mean": 51.15303608181421,
+            "p50": 51.133882720023394,
+            "p95": 51.860741968266666,
+            "sum": 3273.7943092361093
+          },
+          "head_ms": {
+            "count": 64,
+            "mean": 0.6173783986014314,
+            "p50": 0.5925146397203207,
+            "p95": 0.7698127767071127,
+            "sum": 39.51221751049161
+          },
+          "request_ms": {
+            "count": 64,
+            "mean": 282.1025437078788,
+            "p50": 280.0265240948647,
+            "p95": 442.6941564772278,
+            "sum": 18054.562797304243
+          },
+          "episode_ms": {
+            "count": 3,
+            "mean": 42580.0937153399,
+            "p50": 41198.12026899308,
+            "p95": 50823.1515054591,
+            "sum": 127740.2811460197
+          },
+          "per_case_mean_policy_call_ms": {
+            "count": 3,
+            "mean": 51.19640289416918,
+            "p50": 51.10267229864131,
+            "p95": 51.55592782427664,
+            "sum": 153.58920868250755
+          },
+          "per_case_total_policy_ms": {
+            "count": 3,
+            "mean": 1091.2647697453697,
+            "p50": 1175.36146286875,
+            "p95": 1216.5494779124856,
+            "sum": 3273.7943092361093
+          },
+          "per_case_velocity_evaluations_per_chunk": {
+            "count": 3,
+            "mean": 10.0,
+            "p50": 10.0,
+            "p95": 10.0,
+            "sum": 30.0
+          },
+          "total_velocity_evaluations": 640,
+          "total_head_evaluations": 64
+        }
+      },
+      "metadata": {
+        "successes": 3,
+        "episodes": 3,
+        "success_rate": 1.0,
+        "cost": {
+          "policy_call_ms": {
+            "count": 63,
+            "mean": 44.77547739617645,
+            "p50": 50.7400082424283,
+            "p95": 51.86303467489779,
+            "sum": 2820.855075959116
+          },
+          "head_ms": {
+            "count": 63,
+            "mean": 0.6103768782128417,
+            "p50": 0.592429656535387,
+            "p95": 0.746977562084794,
+            "sum": 38.45374332740903
+          },
+          "request_ms": {
+            "count": 63,
+            "mean": 283.0043478114974,
+            "p50": 411.1315389163792,
+            "p95": 442.70956302061677,
+            "sum": 17829.273912124336
+          },
+          "episode_ms": {
+            "count": 3,
+            "mean": 42277.27251996597,
+            "p50": 40289.65668287128,
+            "p95": 50732.30514684692,
+            "sum": 126831.8175598979
+          },
+          "per_case_mean_policy_call_ms": {
+            "count": 3,
+            "mean": 45.107970152072944,
+            "p50": 50.880246834519006,
+            "p95": 51.53368527786441,
+            "sum": 135.32391045621884
+          },
+          "per_case_total_policy_ms": {
+            "count": 3,
+            "mean": 940.2850253197054,
+            "p50": 877.306922338903,
+            "p95": 1186.7440238595009,
+            "sum": 2820.855075959116
+          },
+          "per_case_velocity_evaluations_per_chunk": {
+            "count": 3,
+            "mean": 7.0,
+            "p50": 10.0,
+            "p95": 10.0,
+            "sum": 21.0
+          },
+          "total_velocity_evaluations": 432,
+          "total_head_evaluations": 63
+        }
+      }
+    },
+    "comparisons": {
+      "metadata_vs_fixed10": {
+        "rescues": 0,
+        "regressions": 0,
+        "net_success_difference": 0.0,
+        "condition_cluster_ci95": [
+          0.0,
+          0.0
+        ],
+        "family_cluster_ci95": [
+          0.0,
+          0.0
+        ],
+        "cost_differences": {
+          "mean_policy_call_ms": {
+            "mean": -6.088432742096238,
+            "condition_cluster_ci95": [
+              -18.265298226288714,
+              0.0
+            ],
+            "family_cluster_ci95": [
+              -9.132649113144357,
+              0.0
+            ]
+          },
+          "total_policy_ms": {
+            "mean": -150.97974442566434,
+            "condition_cluster_ci95": [
+              -452.93923327699304,
+              0.0
+            ],
+            "family_cluster_ci95": [
+              -226.46961663849652,
+              0.0
+            ]
+          },
+          "episode_ms": {
+            "mean": -302.82119537393254,
+            "condition_cluster_ci95": [
+              -908.4635861217976,
+              0.0
+            ],
+            "family_cluster_ci95": [
+              -454.2317930608988,
+              0.0
+            ]
+          },
+          "velocity_evaluations_per_chunk": {
+            "mean": -3.0,
+            "condition_cluster_ci95": [
+              -9.0,
+              0.0
+            ],
+            "family_cluster_ci95": [
+              -4.5,
+              0.0
+            ]
+          },
+          "total_velocity_evaluations": {
+            "mean": -69.33333333333333,
+            "condition_cluster_ci95": [
+              -208.0,
+              0.0
+            ],
+            "family_cluster_ci95": [
+              -104.0,
+              0.0
+            ]
+          }
+        },
+        "reference_failures": 0,
+        "fraction_reference_failures_rescued": null
+      },
+      "metadata_vs_fixed1": {
+        "rescues": 0,
+        "regressions": 0,
+        "net_success_difference": 0.0,
+        "condition_cluster_ci95": [
+          0.0,
+          0.0
+        ],
+        "family_cluster_ci95": [
+          0.0,
+          0.0
+        ],
+        "cost_differences": {
+          "mean_policy_call_ms": {
+            "mean": 12.147259900331614,
+            "condition_cluster_ci95": [
+              0.0,
+              18.426453229039907
+            ],
+            "family_cluster_ci95": [
+              9.007663235977468,
+              18.426453229039907
+            ]
+          },
+          "total_policy_ms": {
+            "mean": 204.71928625678024,
+            "condition_cluster_ci95": [
+              0.0,
+              313.2497048936784
+            ],
+            "family_cluster_ci95": [
+              150.45407693833113,
+              313.2497048936784
+            ]
+          },
+          "episode_ms": {
+            "mean": -1475.5544934111338,
+            "condition_cluster_ci95": [
+              -4688.78300441429,
+              262.11952418088913
+            ],
+            "family_cluster_ci95": [
+              -2344.391502207145,
+              262.11952418088913
+            ]
+          },
+          "velocity_evaluations_per_chunk": {
+            "mean": 6.0,
+            "condition_cluster_ci95": [
+              0.0,
+              9.0
+            ],
+            "family_cluster_ci95": [
+              4.5,
+              9.0
+            ]
+          },
+          "total_velocity_evaluations": {
+            "mean": 121.66666666666667,
+            "condition_cluster_ci95": [
+              0.0,
+              212.0
+            ],
+            "family_cluster_ci95": [
+              106.0,
+              153.0
+            ]
+          }
+        },
+        "reference_failures": 0,
+        "fraction_reference_failures_rescued": null
+      },
+      "fixed10_vs_fixed1": {
+        "rescues": 0,
+        "regressions": 0,
+        "net_success_difference": 0.0,
+        "condition_cluster_ci95": [
+          0.0,
+          0.0
+        ],
+        "family_cluster_ci95": [
+          0.0,
+          0.0
+        ],
+        "cost_differences": {
+          "mean_policy_call_ms": {
+            "mean": 18.235692642427853,
+            "condition_cluster_ci95": [
+              18.015326471954936,
+              18.426453229039907
+            ],
+            "family_cluster_ci95": [
+              18.140312349121825,
+              18.426453229039907
+            ]
+          },
+          "total_policy_ms": {
+            "mean": 355.6990306824446,
+            "condition_cluster_ci95": [
+              300.90815387666225,
+              452.93923327699304
+            ],
+            "family_cluster_ci95": [
+              313.2497048936784,
+              376.92369357682765
+            ]
+          },
+          "episode_ms": {
+            "mean": -1172.7332980372012,
+            "condition_cluster_ci95": [
+              -4688.78300441429,
+              908.4635861217976
+            ],
+            "family_cluster_ci95": [
+              -1890.1597091462463,
+              262.11952418088913
+            ]
+          },
+          "velocity_evaluations_per_chunk": {
+            "mean": 9.0,
+            "condition_cluster_ci95": [
+              9.0,
+              9.0
+            ],
+            "family_cluster_ci95": [
+              9.0,
+              9.0
+            ]
+          },
+          "total_velocity_evaluations": {
+            "mean": 191.0,
+            "condition_cluster_ci95": [
+              153.0,
+              212.0
+            ],
+            "family_cluster_ci95": [
+              153.0,
+              210.0
+            ]
+          }
+        },
+        "reference_failures": 0,
+        "fraction_reference_failures_rescued": null
+      }
+    },
+    "conservative_primary_support": false,
+    "decision": "Inconclusive under the predeclared joint success/cost support criterion."
+  },
+  "by_type": {
+    "Camera Viewpoints": {
+      "pairs": 1,
+      "conditions": 1,
+      "families": 1,
+      "strategies": {
+        "fixed_1": {
+          "successes": 1,
+          "episodes": 1,
+          "success_rate": 1.0,
+          "cost": {
+            "policy_call_ms": {
+              "count": 22,
+              "mean": 32.837374072352596,
+              "p50": 32.819508807733655,
+              "p95": 33.20890790782869,
+              "sum": 722.4222295917571
+            },
+            "head_ms": {
+              "count": 22,
+              "mean": 0.6022518924014135,
+              "p50": 0.5952401552349329,
+              "p95": 0.7099844980984926,
+              "sum": 13.249541632831097
+            },
+            "request_ms": {
+              "count": 22,
+              "mean": 276.0171716270799,
+              "p50": 409.11900252103806,
+              "p95": 421.59599598962814,
+              "sum": 6072.377775795758
+            },
+            "episode_ms": {
+              "count": 1,
+              "mean": 40289.65668287128,
+              "p50": 40289.65668287128,
+              "p95": 40289.65668287128,
+              "sum": 40289.65668287128
+            },
+            "per_case_mean_policy_call_ms": {
+              "count": 1,
+              "mean": 32.837374072352596,
+              "p50": 32.837374072352596,
+              "p95": 32.837374072352596,
+              "sum": 32.837374072352596
+            },
+            "per_case_total_policy_ms": {
+              "count": 1,
+              "mean": 722.4222295917571,
+              "p50": 722.4222295917571,
+              "p95": 722.4222295917571,
+              "sum": 722.4222295917571
+            },
+            "per_case_velocity_evaluations_per_chunk": {
+              "count": 1,
+              "mean": 1.0,
+              "p50": 1.0,
+              "p95": 1.0,
+              "sum": 1.0
+            },
+            "total_velocity_evaluations": 22,
+            "total_head_evaluations": 22
+          }
+        },
+        "fixed_10": {
+          "successes": 1,
+          "episodes": 1,
+          "success_rate": 1.0,
+          "cost": {
+            "policy_call_ms": {
+              "count": 23,
+              "mean": 51.10267229864131,
+              "p50": 51.139374263584614,
+              "p95": 51.589807169511914,
+              "sum": 1175.36146286875
+            },
+            "head_ms": {
+              "count": 23,
+              "mean": 0.6220876441701598,
+              "p50": 0.5934699438512325,
+              "p95": 0.7689807098358868,
+              "sum": 14.308015815913677
+            },
+            "request_ms": {
+              "count": 23,
+              "mean": 273.8115939554637,
+              "p50": 127.31734989210963,
+              "p95": 438.64754885435104,
+              "sum": 6297.666660975665
+            },
+            "episode_ms": {
+              "count": 1,
+              "mean": 41198.12026899308,
+              "p50": 41198.12026899308,
+              "p95": 41198.12026899308,
+              "sum": 41198.12026899308
+            },
+            "per_case_mean_policy_call_ms": {
+              "count": 1,
+              "mean": 51.10267229864131,
+              "p50": 51.10267229864131,
+              "p95": 51.10267229864131,
+              "sum": 51.10267229864131
+            },
+            "per_case_total_policy_ms": {
+              "count": 1,
+              "mean": 1175.36146286875,
+              "p50": 1175.36146286875,
+              "p95": 1175.36146286875,
+              "sum": 1175.36146286875
+            },
+            "per_case_velocity_evaluations_per_chunk": {
+              "count": 1,
+              "mean": 10.0,
+              "p50": 10.0,
+              "p95": 10.0,
+              "sum": 10.0
+            },
+            "total_velocity_evaluations": 230,
+            "total_head_evaluations": 23
+          }
+        },
+        "metadata": {
+          "successes": 1,
+          "episodes": 1,
+          "success_rate": 1.0,
+          "cost": {
+            "policy_call_ms": {
+              "count": 22,
+              "mean": 32.837374072352596,
+              "p50": 32.819508807733655,
+              "p95": 33.20890790782869,
+              "sum": 722.4222295917571
+            },
+            "head_ms": {
+              "count": 22,
+              "mean": 0.6022518924014135,
+              "p50": 0.5952401552349329,
+              "p95": 0.7099844980984926,
+              "sum": 13.249541632831097
+            },
+            "request_ms": {
+              "count": 22,
+              "mean": 276.0171716270799,
+              "p50": 409.11900252103806,
+              "p95": 421.59599598962814,
+              "sum": 6072.377775795758
+            },
+            "episode_ms": {
+              "count": 1,
+              "mean": 40289.65668287128,
+              "p50": 40289.65668287128,
+              "p95": 40289.65668287128,
+              "sum": 40289.65668287128
+            },
+            "per_case_mean_policy_call_ms": {
+              "count": 1,
+              "mean": 32.837374072352596,
+              "p50": 32.837374072352596,
+              "p95": 32.837374072352596,
+              "sum": 32.837374072352596
+            },
+            "per_case_total_policy_ms": {
+              "count": 1,
+              "mean": 722.4222295917571,
+              "p50": 722.4222295917571,
+              "p95": 722.4222295917571,
+              "sum": 722.4222295917571
+            },
+            "per_case_velocity_evaluations_per_chunk": {
+              "count": 1,
+              "mean": 1.0,
+              "p50": 1.0,
+              "p95": 1.0,
+              "sum": 1.0
+            },
+            "total_velocity_evaluations": 22,
+            "total_head_evaluations": 22
+          }
+        }
+      },
+      "comparisons": {
+        "metadata_vs_fixed10": {
+          "rescues": 0,
+          "regressions": 0,
+          "net_success_difference": 0.0,
+          "condition_cluster_ci95": null,
+          "family_cluster_ci95": null,
+          "cost_differences": {
+            "mean_policy_call_ms": {
+              "mean": -18.265298226288714,
+              "condition_cluster_ci95": null,
+              "family_cluster_ci95": null
+            },
+            "total_policy_ms": {
+              "mean": -452.93923327699304,
+              "condition_cluster_ci95": null,
+              "family_cluster_ci95": null
+            },
+            "episode_ms": {
+              "mean": -908.4635861217976,
+              "condition_cluster_ci95": null,
+              "family_cluster_ci95": null
+            },
+            "velocity_evaluations_per_chunk": {
+              "mean": -9.0,
+              "condition_cluster_ci95": null,
+              "family_cluster_ci95": null
+            },
+            "total_velocity_evaluations": {
+              "mean": -208.0,
+              "condition_cluster_ci95": null,
+              "family_cluster_ci95": null
+            }
+          },
+          "reference_failures": 0,
+          "fraction_reference_failures_rescued": null
+        },
+        "metadata_vs_fixed1": {
+          "rescues": 0,
+          "regressions": 0,
+          "net_success_difference": 0.0,
+          "condition_cluster_ci95": null,
+          "family_cluster_ci95": null,
+          "cost_differences": {
+            "mean_policy_call_ms": {
+              "mean": 0.0,
+              "condition_cluster_ci95": null,
+              "family_cluster_ci95": null
+            },
+            "total_policy_ms": {
+              "mean": 0.0,
+              "condition_cluster_ci95": null,
+              "family_cluster_ci95": null
+            },
+            "episode_ms": {
+              "mean": 0.0,
+              "condition_cluster_ci95": null,
+              "family_cluster_ci95": null
+            },
+            "velocity_evaluations_per_chunk": {
+              "mean": 0.0,
+              "condition_cluster_ci95": null,
+              "family_cluster_ci95": null
+            },
+            "total_velocity_evaluations": {
+              "mean": 0.0,
+              "condition_cluster_ci95": null,
+              "family_cluster_ci95": null
+            }
+          },
+          "reference_failures": 0,
+          "fraction_reference_failures_rescued": null
+        },
+        "fixed10_vs_fixed1": {
+          "rescues": 0,
+          "regressions": 0,
+          "net_success_difference": 0.0,
+          "condition_cluster_ci95": null,
+          "family_cluster_ci95": null,
+          "cost_differences": {
+            "mean_policy_call_ms": {
+              "mean": 18.265298226288714,
+              "condition_cluster_ci95": null,
+              "family_cluster_ci95": null
+            },
+            "total_policy_ms": {
+              "mean": 452.93923327699304,
+              "condition_cluster_ci95": null,
+              "family_cluster_ci95": null
+            },
+            "episode_ms": {
+              "mean": 908.4635861217976,
+              "condition_cluster_ci95": null,
+              "family_cluster_ci95": null
+            },
+            "velocity_evaluations_per_chunk": {
+              "mean": 9.0,
+              "condition_cluster_ci95": null,
+              "family_cluster_ci95": null
+            },
+            "total_velocity_evaluations": {
+              "mean": 208.0,
+              "condition_cluster_ci95": null,
+              "family_cluster_ci95": null
+            }
+          },
+          "reference_failures": 0,
+          "fraction_reference_failures_rescued": null
+        }
+      },
+      "conservative_primary_support": false,
+      "decision": "Inconclusive under the predeclared joint success/cost support criterion."
+    },
+    "Objects Layout": {
+      "pairs": 1,
+      "conditions": 1,
+      "families": 1,
+      "strategies": {
+        "fixed_1": {
+          "successes": 1,
+          "episodes": 1,
+          "success_rate": 1.0,
+          "cost": {
+            "policy_call_ms": {
+              "count": 28,
+              "mean": 32.86492036256407,
+              "p50": 32.893302384763956,
+              "p95": 33.19947125855833,
+              "sum": 920.217770151794
+            },
+            "head_ms": {
+              "count": 28,
+              "mean": 0.6323834116171513,
+              "p50": 0.6011843215674162,
+              "p95": 0.8377210237085818,
+              "sum": 17.706735525280237
+            },
+            "request_ms": {
+              "count": 28,
+              "mean": 253.44816615272845,
+              "p50": 120.41035946458578,
+              "p95": 422.2561618546024,
+              "sum": 7096.548652276397
+            },
+            "episode_ms": {
+              "count": 1,
+              "mean": 56581.38242503628,
+              "p50": 56581.38242503628,
+              "p95": 56581.38242503628,
+              "sum": 56581.38242503628
+            },
+            "per_case_mean_policy_call_ms": {
+              "count": 1,
+              "mean": 32.86492036256407,
+              "p50": 32.86492036256407,
+              "p95": 32.86492036256407,
+              "sum": 32.86492036256407
+            },
+            "per_case_total_policy_ms": {
+              "count": 1,
+              "mean": 920.217770151794,
+              "p50": 920.217770151794,
+              "p95": 920.217770151794,
+              "sum": 920.217770151794
+            },
+            "per_case_velocity_evaluations_per_chunk": {
+              "count": 1,
+              "mean": 1.0,
+              "p50": 1.0,
+              "p95": 1.0,
+              "sum": 1.0
+            },
+            "total_velocity_evaluations": 28,
+            "total_head_evaluations": 28
+          }
+        },
+        "fixed_10": {
+          "successes": 1,
+          "episodes": 1,
+          "success_rate": 1.0,
+          "cost": {
+            "policy_call_ms": {
+              "count": 24,
+              "mean": 50.880246834519006,
+              "p50": 50.92155816964805,
+              "p95": 51.1970289517194,
+              "sum": 1221.1259240284562
+            },
+            "head_ms": {
+              "count": 24,
+              "mean": 0.5943824265462657,
+              "p50": 0.5669482052326202,
+              "p95": 0.7437611231580376,
+              "sum": 14.265178237110376
+            },
+            "request_ms": {
+              "count": 24,
+              "mean": 281.90497611649334,
+              "p50": 275.026747956872,
+              "p95": 442.87164243869483,
+              "sum": 6765.71942679584
+            },
+            "episode_ms": {
+              "count": 1,
+              "mean": 51892.59942062199,
+              "p50": 51892.59942062199,
+              "p95": 51892.59942062199,
+              "sum": 51892.59942062199
+            },
+            "per_case_mean_policy_call_ms": {
+              "count": 1,
+              "mean": 50.880246834519006,
+              "p50": 50.880246834519006,
+              "p95": 50.880246834519006,
+              "sum": 50.880246834519006
+            },
+            "per_case_total_policy_ms": {
+              "count": 1,
+              "mean": 1221.1259240284562,
+              "p50": 1221.1259240284562,
+              "p95": 1221.1259240284562,
+              "sum": 1221.1259240284562
+            },
+            "per_case_velocity_evaluations_per_chunk": {
+              "count": 1,
+              "mean": 10.0,
+              "p50": 10.0,
+              "p95": 10.0,
+              "sum": 10.0
+            },
+            "total_velocity_evaluations": 240,
+            "total_head_evaluations": 24
+          }
+        },
+        "metadata": {
+          "successes": 1,
+          "episodes": 1,
+          "success_rate": 1.0,
+          "cost": {
+            "policy_call_ms": {
+              "count": 24,
+              "mean": 50.880246834519006,
+              "p50": 50.92155816964805,
+              "p95": 51.1970289517194,
+              "sum": 1221.1259240284562
+            },
+            "head_ms": {
+              "count": 24,
+              "mean": 0.5943824265462657,
+              "p50": 0.5669482052326202,
+              "p95": 0.7437611231580376,
+              "sum": 14.265178237110376
+            },
+            "request_ms": {
+              "count": 24,
+              "mean": 281.90497611649334,
+              "p50": 275.026747956872,
+              "p95": 442.87164243869483,
+              "sum": 6765.71942679584
+            },
+            "episode_ms": {
+              "count": 1,
+              "mean": 51892.59942062199,
+              "p50": 51892.59942062199,
+              "p95": 51892.59942062199,
+              "sum": 51892.59942062199
+            },
+            "per_case_mean_policy_call_ms": {
+              "count": 1,
+              "mean": 50.880246834519006,
+              "p50": 50.880246834519006,
+              "p95": 50.880246834519006,
+              "sum": 50.880246834519006
+            },
+            "per_case_total_policy_ms": {
+              "count": 1,
+              "mean": 1221.1259240284562,
+              "p50": 1221.1259240284562,
+              "p95": 1221.1259240284562,
+              "sum": 1221.1259240284562
+            },
+            "per_case_velocity_evaluations_per_chunk": {
+              "count": 1,
+              "mean": 10.0,
+              "p50": 10.0,
+              "p95": 10.0,
+              "sum": 10.0
+            },
+            "total_velocity_evaluations": 240,
+            "total_head_evaluations": 24
+          }
+        }
+      },
+      "comparisons": {
+        "metadata_vs_fixed10": {
+          "rescues": 0,
+          "regressions": 0,
+          "net_success_difference": 0.0,
+          "condition_cluster_ci95": null,
+          "family_cluster_ci95": null,
+          "cost_differences": {
+            "mean_policy_call_ms": {
+              "mean": 0.0,
+              "condition_cluster_ci95": null,
+              "family_cluster_ci95": null
+            },
+            "total_policy_ms": {
+              "mean": 0.0,
+              "condition_cluster_ci95": null,
+              "family_cluster_ci95": null
+            },
+            "episode_ms": {
+              "mean": 0.0,
+              "condition_cluster_ci95": null,
+              "family_cluster_ci95": null
+            },
+            "velocity_evaluations_per_chunk": {
+              "mean": 0.0,
+              "condition_cluster_ci95": null,
+              "family_cluster_ci95": null
+            },
+            "total_velocity_evaluations": {
+              "mean": 0.0,
+              "condition_cluster_ci95": null,
+              "family_cluster_ci95": null
+            }
+          },
+          "reference_failures": 0,
+          "fraction_reference_failures_rescued": null
+        },
+        "metadata_vs_fixed1": {
+          "rescues": 0,
+          "regressions": 0,
+          "net_success_difference": 0.0,
+          "condition_cluster_ci95": null,
+          "family_cluster_ci95": null,
+          "cost_differences": {
+            "mean_policy_call_ms": {
+              "mean": 18.015326471954936,
+              "condition_cluster_ci95": null,
+              "family_cluster_ci95": null
+            },
+            "total_policy_ms": {
+              "mean": 300.90815387666225,
+              "condition_cluster_ci95": null,
+              "family_cluster_ci95": null
+            },
+            "episode_ms": {
+              "mean": -4688.78300441429,
+              "condition_cluster_ci95": null,
+              "family_cluster_ci95": null
+            },
+            "velocity_evaluations_per_chunk": {
+              "mean": 9.0,
+              "condition_cluster_ci95": null,
+              "family_cluster_ci95": null
+            },
+            "total_velocity_evaluations": {
+              "mean": 212.0,
+              "condition_cluster_ci95": null,
+              "family_cluster_ci95": null
+            }
+          },
+          "reference_failures": 0,
+          "fraction_reference_failures_rescued": null
+        },
+        "fixed10_vs_fixed1": {
+          "rescues": 0,
+          "regressions": 0,
+          "net_success_difference": 0.0,
+          "condition_cluster_ci95": null,
+          "family_cluster_ci95": null,
+          "cost_differences": {
+            "mean_policy_call_ms": {
+              "mean": 18.015326471954936,
+              "condition_cluster_ci95": null,
+              "family_cluster_ci95": null
+            },
+            "total_policy_ms": {
+              "mean": 300.90815387666225,
+              "condition_cluster_ci95": null,
+              "family_cluster_ci95": null
+            },
+            "episode_ms": {
+              "mean": -4688.78300441429,
+              "condition_cluster_ci95": null,
+              "family_cluster_ci95": null
+            },
+            "velocity_evaluations_per_chunk": {
+              "mean": 9.0,
+              "condition_cluster_ci95": null,
+              "family_cluster_ci95": null
+            },
+            "total_velocity_evaluations": {
+              "mean": 212.0,
+              "condition_cluster_ci95": null,
+              "family_cluster_ci95": null
+            }
+          },
+          "reference_failures": 0,
+          "fraction_reference_failures_rescued": null
+        }
+      },
+      "conservative_primary_support": false,
+      "decision": "Inconclusive under the predeclared joint success/cost support criterion."
+    },
+    "Robot Initial States": {
+      "pairs": 1,
+      "conditions": 1,
+      "families": 1,
+      "strategies": {
+        "fixed_1": {
+          "successes": 1,
+          "episodes": 1,
+          "success_rate": 1.0,
+          "cost": {
+            "policy_call_ms": {
+              "count": 17,
+              "mean": 33.179836320307324,
+              "p50": 33.15717168152332,
+              "p95": 33.657858427613974,
+              "sum": 564.0572174452245
+            },
+            "head_ms": {
+              "count": 17,
+              "mean": 0.632923562079668,
+              "p50": 0.6386931054294109,
+              "p95": 0.7594109512865543,
+              "sum": 10.759700555354357
+            },
+            "request_ms": {
+              "count": 17,
+              "mean": 273.0686975752606,
+              "p50": 405.727278906852,
+              "p95": 427.6298549026251,
+              "sum": 4642.16785877943
+            },
+            "episode_ms": {
+              "count": 1,
+              "mean": 34387.44193222374,
+              "p50": 34387.44193222374,
+              "p95": 34387.44193222374,
+              "sum": 34387.44193222374
+            },
+            "per_case_mean_policy_call_ms": {
+              "count": 1,
+              "mean": 33.179836320307324,
+              "p50": 33.179836320307324,
+              "p95": 33.179836320307324,
+              "sum": 33.179836320307324
+            },
+            "per_case_total_policy_ms": {
+              "count": 1,
+              "mean": 564.0572174452245,
+              "p50": 564.0572174452245,
+              "p95": 564.0572174452245,
+              "sum": 564.0572174452245
+            },
+            "per_case_velocity_evaluations_per_chunk": {
+              "count": 1,
+              "mean": 1.0,
+              "p50": 1.0,
+              "p95": 1.0,
+              "sum": 1.0
+            },
+            "total_velocity_evaluations": 17,
+            "total_head_evaluations": 17
+          }
+        },
+        "fixed_10": {
+          "successes": 1,
+          "episodes": 1,
+          "success_rate": 1.0,
+          "cost": {
+            "policy_call_ms": {
+              "count": 17,
+              "mean": 51.60628954934723,
+              "p50": 51.46062234416604,
+              "p95": 52.254518773406744,
+              "sum": 877.306922338903
+            },
+            "head_ms": {
+              "count": 17,
+              "mean": 0.6434719680863268,
+              "p50": 0.6270818412303925,
+              "p95": 0.7335134781897068,
+              "sum": 10.939023457467556
+            },
+            "request_ms": {
+              "count": 17,
+              "mean": 293.598629972514,
+              "p50": 434.133545961231,
+              "p95": 442.81743420287967,
+              "sum": 4991.176709532738
+            },
+            "episode_ms": {
+              "count": 1,
+              "mean": 34649.56145640463,
+              "p50": 34649.56145640463,
+              "p95": 34649.56145640463,
+              "sum": 34649.56145640463
+            },
+            "per_case_mean_policy_call_ms": {
+              "count": 1,
+              "mean": 51.60628954934723,
+              "p50": 51.60628954934723,
+              "p95": 51.60628954934723,
+              "sum": 51.60628954934723
+            },
+            "per_case_total_policy_ms": {
+              "count": 1,
+              "mean": 877.306922338903,
+              "p50": 877.306922338903,
+              "p95": 877.306922338903,
+              "sum": 877.306922338903
+            },
+            "per_case_velocity_evaluations_per_chunk": {
+              "count": 1,
+              "mean": 10.0,
+              "p50": 10.0,
+              "p95": 10.0,
+              "sum": 10.0
+            },
+            "total_velocity_evaluations": 170,
+            "total_head_evaluations": 17
+          }
+        },
+        "metadata": {
+          "successes": 1,
+          "episodes": 1,
+          "success_rate": 1.0,
+          "cost": {
+            "policy_call_ms": {
+              "count": 17,
+              "mean": 51.60628954934723,
+              "p50": 51.46062234416604,
+              "p95": 52.254518773406744,
+              "sum": 877.306922338903
+            },
+            "head_ms": {
+              "count": 17,
+              "mean": 0.6434719680863268,
+              "p50": 0.6270818412303925,
+              "p95": 0.7335134781897068,
+              "sum": 10.939023457467556
+            },
+            "request_ms": {
+              "count": 17,
+              "mean": 293.598629972514,
+              "p50": 434.133545961231,
+              "p95": 442.81743420287967,
+              "sum": 4991.176709532738
+            },
+            "episode_ms": {
+              "count": 1,
+              "mean": 34649.56145640463,
+              "p50": 34649.56145640463,
+              "p95": 34649.56145640463,
+              "sum": 34649.56145640463
+            },
+            "per_case_mean_policy_call_ms": {
+              "count": 1,
+              "mean": 51.60628954934723,
+              "p50": 51.60628954934723,
+              "p95": 51.60628954934723,
+              "sum": 51.60628954934723
+            },
+            "per_case_total_policy_ms": {
+              "count": 1,
+              "mean": 877.306922338903,
+              "p50": 877.306922338903,
+              "p95": 877.306922338903,
+              "sum": 877.306922338903
+            },
+            "per_case_velocity_evaluations_per_chunk": {
+              "count": 1,
+              "mean": 10.0,
+              "p50": 10.0,
+              "p95": 10.0,
+              "sum": 10.0
+            },
+            "total_velocity_evaluations": 170,
+            "total_head_evaluations": 17
+          }
+        }
+      },
+      "comparisons": {
+        "metadata_vs_fixed10": {
+          "rescues": 0,
+          "regressions": 0,
+          "net_success_difference": 0.0,
+          "condition_cluster_ci95": null,
+          "family_cluster_ci95": null,
+          "cost_differences": {
+            "mean_policy_call_ms": {
+              "mean": 0.0,
+              "condition_cluster_ci95": null,
+              "family_cluster_ci95": null
+            },
+            "total_policy_ms": {
+              "mean": 0.0,
+              "condition_cluster_ci95": null,
+              "family_cluster_ci95": null
+            },
+            "episode_ms": {
+              "mean": 0.0,
+              "condition_cluster_ci95": null,
+              "family_cluster_ci95": null
+            },
+            "velocity_evaluations_per_chunk": {
+              "mean": 0.0,
+              "condition_cluster_ci95": null,
+              "family_cluster_ci95": null
+            },
+            "total_velocity_evaluations": {
+              "mean": 0.0,
+              "condition_cluster_ci95": null,
+              "family_cluster_ci95": null
+            }
+          },
+          "reference_failures": 0,
+          "fraction_reference_failures_rescued": null
+        },
+        "metadata_vs_fixed1": {
+          "rescues": 0,
+          "regressions": 0,
+          "net_success_difference": 0.0,
+          "condition_cluster_ci95": null,
+          "family_cluster_ci95": null,
+          "cost_differences": {
+            "mean_policy_call_ms": {
+              "mean": 18.426453229039907,
+              "condition_cluster_ci95": null,
+              "family_cluster_ci95": null
+            },
+            "total_policy_ms": {
+              "mean": 313.2497048936784,
+              "condition_cluster_ci95": null,
+              "family_cluster_ci95": null
+            },
+            "episode_ms": {
+              "mean": 262.11952418088913,
+              "condition_cluster_ci95": null,
+              "family_cluster_ci95": null
+            },
+            "velocity_evaluations_per_chunk": {
+              "mean": 9.0,
+              "condition_cluster_ci95": null,
+              "family_cluster_ci95": null
+            },
+            "total_velocity_evaluations": {
+              "mean": 153.0,
+              "condition_cluster_ci95": null,
+              "family_cluster_ci95": null
+            }
+          },
+          "reference_failures": 0,
+          "fraction_reference_failures_rescued": null
+        },
+        "fixed10_vs_fixed1": {
+          "rescues": 0,
+          "regressions": 0,
+          "net_success_difference": 0.0,
+          "condition_cluster_ci95": null,
+          "family_cluster_ci95": null,
+          "cost_differences": {
+            "mean_policy_call_ms": {
+              "mean": 18.426453229039907,
+              "condition_cluster_ci95": null,
+              "family_cluster_ci95": null
+            },
+            "total_policy_ms": {
+              "mean": 313.2497048936784,
+              "condition_cluster_ci95": null,
+              "family_cluster_ci95": null
+            },
+            "episode_ms": {
+              "mean": 262.11952418088913,
+              "condition_cluster_ci95": null,
+              "family_cluster_ci95": null
+            },
+            "velocity_evaluations_per_chunk": {
+              "mean": 9.0,
+              "condition_cluster_ci95": null,
+              "family_cluster_ci95": null
+            },
+            "total_velocity_evaluations": {
+              "mean": 153.0,
+              "condition_cluster_ci95": null,
+              "family_cluster_ci95": null
+            }
+          },
+          "reference_failures": 0,
+          "fraction_reference_failures_rescued": null
+        }
+      },
+      "conservative_primary_support": false,
+      "decision": "Inconclusive under the predeclared joint success/cost support criterion."
+    }
+  },
+  "by_family": {
+    "pick_up_the_black_bowl_between_the_plate_and_the_ramekin_and_place_it_on_the_plate": {
+      "pairs": 1,
+      "conditions": 1,
+      "families": 1,
+      "strategies": {
+        "fixed_1": {
+          "successes": 1,
+          "episodes": 1,
+          "success_rate": 1.0,
+          "cost": {
+            "policy_call_ms": {
+              "count": 17,
+              "mean": 33.179836320307324,
+              "p50": 33.15717168152332,
+              "p95": 33.657858427613974,
+              "sum": 564.0572174452245
+            },
+            "head_ms": {
+              "count": 17,
+              "mean": 0.632923562079668,
+              "p50": 0.6386931054294109,
+              "p95": 0.7594109512865543,
+              "sum": 10.759700555354357
+            },
+            "request_ms": {
+              "count": 17,
+              "mean": 273.0686975752606,
+              "p50": 405.727278906852,
+              "p95": 427.6298549026251,
+              "sum": 4642.16785877943
+            },
+            "episode_ms": {
+              "count": 1,
+              "mean": 34387.44193222374,
+              "p50": 34387.44193222374,
+              "p95": 34387.44193222374,
+              "sum": 34387.44193222374
+            },
+            "per_case_mean_policy_call_ms": {
+              "count": 1,
+              "mean": 33.179836320307324,
+              "p50": 33.179836320307324,
+              "p95": 33.179836320307324,
+              "sum": 33.179836320307324
+            },
+            "per_case_total_policy_ms": {
+              "count": 1,
+              "mean": 564.0572174452245,
+              "p50": 564.0572174452245,
+              "p95": 564.0572174452245,
+              "sum": 564.0572174452245
+            },
+            "per_case_velocity_evaluations_per_chunk": {
+              "count": 1,
+              "mean": 1.0,
+              "p50": 1.0,
+              "p95": 1.0,
+              "sum": 1.0
+            },
+            "total_velocity_evaluations": 17,
+            "total_head_evaluations": 17
+          }
+        },
+        "fixed_10": {
+          "successes": 1,
+          "episodes": 1,
+          "success_rate": 1.0,
+          "cost": {
+            "policy_call_ms": {
+              "count": 17,
+              "mean": 51.60628954934723,
+              "p50": 51.46062234416604,
+              "p95": 52.254518773406744,
+              "sum": 877.306922338903
+            },
+            "head_ms": {
+              "count": 17,
+              "mean": 0.6434719680863268,
+              "p50": 0.6270818412303925,
+              "p95": 0.7335134781897068,
+              "sum": 10.939023457467556
+            },
+            "request_ms": {
+              "count": 17,
+              "mean": 293.598629972514,
+              "p50": 434.133545961231,
+              "p95": 442.81743420287967,
+              "sum": 4991.176709532738
+            },
+            "episode_ms": {
+              "count": 1,
+              "mean": 34649.56145640463,
+              "p50": 34649.56145640463,
+              "p95": 34649.56145640463,
+              "sum": 34649.56145640463
+            },
+            "per_case_mean_policy_call_ms": {
+              "count": 1,
+              "mean": 51.60628954934723,
+              "p50": 51.60628954934723,
+              "p95": 51.60628954934723,
+              "sum": 51.60628954934723
+            },
+            "per_case_total_policy_ms": {
+              "count": 1,
+              "mean": 877.306922338903,
+              "p50": 877.306922338903,
+              "p95": 877.306922338903,
+              "sum": 877.306922338903
+            },
+            "per_case_velocity_evaluations_per_chunk": {
+              "count": 1,
+              "mean": 10.0,
+              "p50": 10.0,
+              "p95": 10.0,
+              "sum": 10.0
+            },
+            "total_velocity_evaluations": 170,
+            "total_head_evaluations": 17
+          }
+        },
+        "metadata": {
+          "successes": 1,
+          "episodes": 1,
+          "success_rate": 1.0,
+          "cost": {
+            "policy_call_ms": {
+              "count": 17,
+              "mean": 51.60628954934723,
+              "p50": 51.46062234416604,
+              "p95": 52.254518773406744,
+              "sum": 877.306922338903
+            },
+            "head_ms": {
+              "count": 17,
+              "mean": 0.6434719680863268,
+              "p50": 0.6270818412303925,
+              "p95": 0.7335134781897068,
+              "sum": 10.939023457467556
+            },
+            "request_ms": {
+              "count": 17,
+              "mean": 293.598629972514,
+              "p50": 434.133545961231,
+              "p95": 442.81743420287967,
+              "sum": 4991.176709532738
+            },
+            "episode_ms": {
+              "count": 1,
+              "mean": 34649.56145640463,
+              "p50": 34649.56145640463,
+              "p95": 34649.56145640463,
+              "sum": 34649.56145640463
+            },
+            "per_case_mean_policy_call_ms": {
+              "count": 1,
+              "mean": 51.60628954934723,
+              "p50": 51.60628954934723,
+              "p95": 51.60628954934723,
+              "sum": 51.60628954934723
+            },
+            "per_case_total_policy_ms": {
+              "count": 1,
+              "mean": 877.306922338903,
+              "p50": 877.306922338903,
+              "p95": 877.306922338903,
+              "sum": 877.306922338903
+            },
+            "per_case_velocity_evaluations_per_chunk": {
+              "count": 1,
+              "mean": 10.0,
+              "p50": 10.0,
+              "p95": 10.0,
+              "sum": 10.0
+            },
+            "total_velocity_evaluations": 170,
+            "total_head_evaluations": 17
+          }
+        }
+      },
+      "comparisons": {
+        "metadata_vs_fixed10": {
+          "rescues": 0,
+          "regressions": 0,
+          "net_success_difference": 0.0,
+          "condition_cluster_ci95": null,
+          "family_cluster_ci95": null,
+          "cost_differences": {
+            "mean_policy_call_ms": {
+              "mean": 0.0,
+              "condition_cluster_ci95": null,
+              "family_cluster_ci95": null
+            },
+            "total_policy_ms": {
+              "mean": 0.0,
+              "condition_cluster_ci95": null,
+              "family_cluster_ci95": null
+            },
+            "episode_ms": {
+              "mean": 0.0,
+              "condition_cluster_ci95": null,
+              "family_cluster_ci95": null
+            },
+            "velocity_evaluations_per_chunk": {
+              "mean": 0.0,
+              "condition_cluster_ci95": null,
+              "family_cluster_ci95": null
+            },
+            "total_velocity_evaluations": {
+              "mean": 0.0,
+              "condition_cluster_ci95": null,
+              "family_cluster_ci95": null
+            }
+          },
+          "reference_failures": 0,
+          "fraction_reference_failures_rescued": null
+        },
+        "metadata_vs_fixed1": {
+          "rescues": 0,
+          "regressions": 0,
+          "net_success_difference": 0.0,
+          "condition_cluster_ci95": null,
+          "family_cluster_ci95": null,
+          "cost_differences": {
+            "mean_policy_call_ms": {
+              "mean": 18.426453229039907,
+              "condition_cluster_ci95": null,
+              "family_cluster_ci95": null
+            },
+            "total_policy_ms": {
+              "mean": 313.2497048936784,
+              "condition_cluster_ci95": null,
+              "family_cluster_ci95": null
+            },
+            "episode_ms": {
+              "mean": 262.11952418088913,
+              "condition_cluster_ci95": null,
+              "family_cluster_ci95": null
+            },
+            "velocity_evaluations_per_chunk": {
+              "mean": 9.0,
+              "condition_cluster_ci95": null,
+              "family_cluster_ci95": null
+            },
+            "total_velocity_evaluations": {
+              "mean": 153.0,
+              "condition_cluster_ci95": null,
+              "family_cluster_ci95": null
+            }
+          },
+          "reference_failures": 0,
+          "fraction_reference_failures_rescued": null
+        },
+        "fixed10_vs_fixed1": {
+          "rescues": 0,
+          "regressions": 0,
+          "net_success_difference": 0.0,
+          "condition_cluster_ci95": null,
+          "family_cluster_ci95": null,
+          "cost_differences": {
+            "mean_policy_call_ms": {
+              "mean": 18.426453229039907,
+              "condition_cluster_ci95": null,
+              "family_cluster_ci95": null
+            },
+            "total_policy_ms": {
+              "mean": 313.2497048936784,
+              "condition_cluster_ci95": null,
+              "family_cluster_ci95": null
+            },
+            "episode_ms": {
+              "mean": 262.11952418088913,
+              "condition_cluster_ci95": null,
+              "family_cluster_ci95": null
+            },
+            "velocity_evaluations_per_chunk": {
+              "mean": 9.0,
+              "condition_cluster_ci95": null,
+              "family_cluster_ci95": null
+            },
+            "total_velocity_evaluations": {
+              "mean": 153.0,
+              "condition_cluster_ci95": null,
+              "family_cluster_ci95": null
+            }
+          },
+          "reference_failures": 0,
+          "fraction_reference_failures_rescued": null
+        }
+      },
+      "conservative_primary_support": false,
+      "decision": "Inconclusive under the predeclared joint success/cost support criterion."
+    },
+    "pick_up_the_black_bowl_next_to_the_ramekin_and_place_it_on_the_plate": {
+      "pairs": 2,
+      "conditions": 2,
+      "families": 1,
+      "strategies": {
+        "fixed_1": {
+          "successes": 2,
+          "episodes": 2,
+          "success_rate": 1.0,
+          "cost": {
+            "policy_call_ms": {
+              "count": 50,
+              "mean": 32.85279999487102,
+              "p50": 32.862066524103284,
+              "p95": 33.20857607759535,
+              "sum": 1642.639999743551
+            },
+            "head_ms": {
+              "count": 50,
+              "mean": 0.6191255431622267,
+              "p50": 0.5991493817418814,
+              "p95": 0.7832324830815194,
+              "sum": 30.956277158111334
+            },
+            "request_ms": {
+              "count": 50,
+              "mean": 263.3785285614431,
+              "p50": 267.32731726951897,
+              "p95": 422.211050032638,
+              "sum": 13168.926428072155
+            },
+            "episode_ms": {
+              "count": 2,
+              "mean": 48435.51955395378,
+              "p50": 48435.51955395378,
+              "p95": 55766.79613792803,
+              "sum": 96871.03910790756
+            },
+            "per_case_mean_policy_call_ms": {
+              "count": 2,
+              "mean": 32.85114721745833,
+              "p50": 32.85114721745833,
+              "p95": 32.863543048053494,
+              "sum": 65.70229443491667
+            },
+            "per_case_total_policy_ms": {
+              "count": 2,
+              "mean": 821.3199998717755,
+              "p50": 821.3199998717755,
+              "p95": 910.3279931237921,
+              "sum": 1642.639999743551
+            },
+            "per_case_velocity_evaluations_per_chunk": {
+              "count": 2,
+              "mean": 1.0,
+              "p50": 1.0,
+              "p95": 1.0,
+              "sum": 2.0
+            },
+            "total_velocity_evaluations": 50,
+            "total_head_evaluations": 50
+          }
+        },
+        "fixed_10": {
+          "successes": 2,
+          "episodes": 2,
+          "success_rate": 1.0,
+          "cost": {
+            "policy_call_ms": {
+              "count": 47,
+              "mean": 50.98909333823843,
+              "p50": 51.05964094400406,
+              "p95": 51.47177251055837,
+              "sum": 2396.4873868972063
+            },
+            "head_ms": {
+              "count": 47,
+              "mean": 0.6079402990005118,
+              "p50": 0.577809289097786,
+              "p95": 0.7662846241146325,
+              "sum": 28.573194053024054
+            },
+            "request_ms": {
+              "count": 47,
+              "mean": 277.94438484620224,
+              "p50": 129.2831669561565,
+              "p95": 442.6479368470609,
+              "sum": 13063.386087771505
+            },
+            "episode_ms": {
+              "count": 2,
+              "mean": 46545.359844807535,
+              "p50": 46545.359844807535,
+              "p95": 51357.875463040546,
+              "sum": 93090.71968961507
+            },
+            "per_case_mean_policy_call_ms": {
+              "count": 2,
+              "mean": 50.99145956658016,
+              "p50": 50.99145956658016,
+              "p95": 51.091551025435194,
+              "sum": 101.98291913316032
+            },
+            "per_case_total_policy_ms": {
+              "count": 2,
+              "mean": 1198.2436934486032,
+              "p50": 1198.2436934486032,
+              "p95": 1218.837700970471,
+              "sum": 2396.4873868972063
+            },
+            "per_case_velocity_evaluations_per_chunk": {
+              "count": 2,
+              "mean": 10.0,
+              "p50": 10.0,
+              "p95": 10.0,
+              "sum": 20.0
+            },
+            "total_velocity_evaluations": 470,
+            "total_head_evaluations": 47
+          }
+        },
+        "metadata": {
+          "successes": 2,
+          "episodes": 2,
+          "success_rate": 1.0,
+          "cost": {
+            "policy_call_ms": {
+              "count": 46,
+              "mean": 42.251046817830726,
+              "p50": 50.44742883183062,
+              "p95": 51.172907929867506,
+              "sum": 1943.5481536202133
+            },
+            "head_ms": {
+              "count": 46,
+              "mean": 0.5981460841291625,
+              "p50": 0.5747086834162474,
+              "p95": 0.7401250768452883,
+              "sum": 27.514719869941473
+            },
+            "request_ms": {
+              "count": 46,
+              "mean": 279.08906962155646,
+              "p50": 409.11900252103806,
+              "p95": 442.6633433904499,
+              "sum": 12838.097202591598
+            },
+            "episode_ms": {
+              "count": 2,
+              "mean": 46091.12805174664,
+              "p50": 46091.12805174664,
+              "p95": 51312.452283734456,
+              "sum": 92182.25610349327
+            },
+            "per_case_mean_policy_call_ms": {
+              "count": 2,
+              "mean": 41.8588104534358,
+              "p50": 41.8588104534358,
+              "p95": 49.978103196410686,
+              "sum": 83.7176209068716
+            },
+            "per_case_total_policy_ms": {
+              "count": 2,
+              "mean": 971.7740768101066,
+              "p50": 971.7740768101066,
+              "p95": 1196.1907393066213,
+              "sum": 1943.5481536202133
+            },
+            "per_case_velocity_evaluations_per_chunk": {
+              "count": 2,
+              "mean": 5.5,
+              "p50": 5.5,
+              "p95": 9.549999999999999,
+              "sum": 11.0
+            },
+            "total_velocity_evaluations": 262,
+            "total_head_evaluations": 46
+          }
+        }
+      },
+      "comparisons": {
+        "metadata_vs_fixed10": {
+          "rescues": 0,
+          "regressions": 0,
+          "net_success_difference": 0.0,
+          "condition_cluster_ci95": [
+            0.0,
+            0.0
+          ],
+          "family_cluster_ci95": null,
+          "cost_differences": {
+            "mean_policy_call_ms": {
+              "mean": -9.132649113144357,
+              "condition_cluster_ci95": [
+                -18.265298226288714,
+                0.0
+              ],
+              "family_cluster_ci95": null
+            },
+            "total_policy_ms": {
+              "mean": -226.46961663849652,
+              "condition_cluster_ci95": [
+                -452.93923327699304,
+                0.0
+              ],
+              "family_cluster_ci95": null
+            },
+            "episode_ms": {
+              "mean": -454.2317930608988,
+              "condition_cluster_ci95": [
+                -908.4635861217976,
+                0.0
+              ],
+              "family_cluster_ci95": null
+            },
+            "velocity_evaluations_per_chunk": {
+              "mean": -4.5,
+              "condition_cluster_ci95": [
+                -9.0,
+                0.0
+              ],
+              "family_cluster_ci95": null
+            },
+            "total_velocity_evaluations": {
+              "mean": -104.0,
+              "condition_cluster_ci95": [
+                -208.0,
+                0.0
+              ],
+              "family_cluster_ci95": null
+            }
+          },
+          "reference_failures": 0,
+          "fraction_reference_failures_rescued": null
+        },
+        "metadata_vs_fixed1": {
+          "rescues": 0,
+          "regressions": 0,
+          "net_success_difference": 0.0,
+          "condition_cluster_ci95": [
+            0.0,
+            0.0
+          ],
+          "family_cluster_ci95": null,
+          "cost_differences": {
+            "mean_policy_call_ms": {
+              "mean": 9.007663235977468,
+              "condition_cluster_ci95": [
+                0.0,
+                18.015326471954936
+              ],
+              "family_cluster_ci95": null
+            },
+            "total_policy_ms": {
+              "mean": 150.45407693833113,
+              "condition_cluster_ci95": [
+                0.0,
+                300.90815387666225
+              ],
+              "family_cluster_ci95": null
+            },
+            "episode_ms": {
+              "mean": -2344.391502207145,
+              "condition_cluster_ci95": [
+                -4688.78300441429,
+                0.0
+              ],
+              "family_cluster_ci95": null
+            },
+            "velocity_evaluations_per_chunk": {
+              "mean": 4.5,
+              "condition_cluster_ci95": [
+                0.0,
+                9.0
+              ],
+              "family_cluster_ci95": null
+            },
+            "total_velocity_evaluations": {
+              "mean": 106.0,
+              "condition_cluster_ci95": [
+                0.0,
+                212.0
+              ],
+              "family_cluster_ci95": null
+            }
+          },
+          "reference_failures": 0,
+          "fraction_reference_failures_rescued": null
+        },
+        "fixed10_vs_fixed1": {
+          "rescues": 0,
+          "regressions": 0,
+          "net_success_difference": 0.0,
+          "condition_cluster_ci95": [
+            0.0,
+            0.0
+          ],
+          "family_cluster_ci95": null,
+          "cost_differences": {
+            "mean_policy_call_ms": {
+              "mean": 18.140312349121825,
+              "condition_cluster_ci95": [
+                18.015326471954936,
+                18.265298226288714
+              ],
+              "family_cluster_ci95": null
+            },
+            "total_policy_ms": {
+              "mean": 376.92369357682765,
+              "condition_cluster_ci95": [
+                300.90815387666225,
+                452.93923327699304
+              ],
+              "family_cluster_ci95": null
+            },
+            "episode_ms": {
+              "mean": -1890.1597091462463,
+              "condition_cluster_ci95": [
+                -4688.78300441429,
+                908.4635861217976
+              ],
+              "family_cluster_ci95": null
+            },
+            "velocity_evaluations_per_chunk": {
+              "mean": 9.0,
+              "condition_cluster_ci95": [
+                9.0,
+                9.0
+              ],
+              "family_cluster_ci95": null
+            },
+            "total_velocity_evaluations": {
+              "mean": 210.0,
+              "condition_cluster_ci95": [
+                208.0,
+                212.0
+              ],
+              "family_cluster_ci95": null
+            }
+          },
+          "reference_failures": 0,
+          "fraction_reference_failures_rescued": null
+        }
+      },
+      "conservative_primary_support": false,
+      "decision": "Inconclusive under the predeclared joint success/cost support criterion."
+    }
+  },
+  "sigma": {
+    "overall": {
+      "cases": 3,
+      "discordant_cases": 0,
+      "rescues": 0,
+      "regressions": 0,
+      "discordant_conditions": 0,
+      "auc_higher_initial_sigma_predicts_rescue": null,
+      "credible_count_threshold_met": false,
+      "bootstrap": {
+        "condition_id": {
+          "clusters": 0,
+          "valid_draws": 0,
+          "requested_draws": 10000,
+          "ci95": null,
+          "note": "Single-class resamples excluded and counted; interval conditional on valid draws."
+        },
+        "family": {
+          "clusters": 0,
+          "valid_draws": 0,
+          "requested_draws": 10000,
+          "ci95": null,
+          "note": "Single-class resamples excluded and counted; interval conditional on valid draws."
+        }
+      },
+      "scope": "Retrospective rescue-versus-regression ranking among discordant fixed-arm cases, not an inference-time gate or a fitted predictor.",
+      "assessment": "Descriptive only: too few rescues, regressions or conditions."
+    },
+    "by_type": {
+      "Camera Viewpoints": {
+        "cases": 1,
+        "discordant_cases": 0,
+        "rescues": 0,
+        "regressions": 0,
+        "discordant_conditions": 0,
+        "auc_higher_initial_sigma_predicts_rescue": null,
+        "credible_count_threshold_met": false,
+        "bootstrap": {
+          "condition_id": {
+            "clusters": 0,
+            "valid_draws": 0,
+            "requested_draws": 10000,
+            "ci95": null,
+            "note": "Single-class resamples excluded and counted; interval conditional on valid draws."
+          },
+          "family": {
+            "clusters": 0,
+            "valid_draws": 0,
+            "requested_draws": 10000,
+            "ci95": null,
+            "note": "Single-class resamples excluded and counted; interval conditional on valid draws."
+          }
+        },
+        "scope": "Retrospective rescue-versus-regression ranking among discordant fixed-arm cases, not an inference-time gate or a fitted predictor.",
+        "assessment": "Descriptive only: too few rescues, regressions or conditions."
+      },
+      "Objects Layout": {
+        "cases": 1,
+        "discordant_cases": 0,
+        "rescues": 0,
+        "regressions": 0,
+        "discordant_conditions": 0,
+        "auc_higher_initial_sigma_predicts_rescue": null,
+        "credible_count_threshold_met": false,
+        "bootstrap": {
+          "condition_id": {
+            "clusters": 0,
+            "valid_draws": 0,
+            "requested_draws": 10000,
+            "ci95": null,
+            "note": "Single-class resamples excluded and counted; interval conditional on valid draws."
+          },
+          "family": {
+            "clusters": 0,
+            "valid_draws": 0,
+            "requested_draws": 10000,
+            "ci95": null,
+            "note": "Single-class resamples excluded and counted; interval conditional on valid draws."
+          }
+        },
+        "scope": "Retrospective rescue-versus-regression ranking among discordant fixed-arm cases, not an inference-time gate or a fitted predictor.",
+        "assessment": "Descriptive only: too few rescues, regressions or conditions."
+      },
+      "Robot Initial States": {
+        "cases": 1,
+        "discordant_cases": 0,
+        "rescues": 0,
+        "regressions": 0,
+        "discordant_conditions": 0,
+        "auc_higher_initial_sigma_predicts_rescue": null,
+        "credible_count_threshold_met": false,
+        "bootstrap": {
+          "condition_id": {
+            "clusters": 0,
+            "valid_draws": 0,
+            "requested_draws": 10000,
+            "ci95": null,
+            "note": "Single-class resamples excluded and counted; interval conditional on valid draws."
+          },
+          "family": {
+            "clusters": 0,
+            "valid_draws": 0,
+            "requested_draws": 10000,
+            "ci95": null,
+            "note": "Single-class resamples excluded and counted; interval conditional on valid draws."
+          }
+        },
+        "scope": "Retrospective rescue-versus-regression ranking among discordant fixed-arm cases, not an inference-time gate or a fitted predictor.",
+        "assessment": "Descriptive only: too few rescues, regressions or conditions."
+      }
+    }
+  },
+  "paired_cases": [
+    {
+      "condition_id": "libero_plus:libero_spatial:280",
+      "family": "pick_up_the_black_bowl_between_the_plate_and_the_ramekin_and_place_it_on_the_plate",
+      "category": "Robot Initial States",
+      "seed": 900101,
+      "init_index": 20,
+      "selected_flow_steps": 10,
+      "success": {
+        "fixed_1": true,
+        "fixed_10": true,
+        "metadata": true
+      },
+      "initial_sigma": 0.04201476228079862,
+      "initial_log_sigma": -3.169734239578247
+    },
+    {
+      "condition_id": "libero_plus:libero_spatial:624",
+      "family": "pick_up_the_black_bowl_next_to_the_ramekin_and_place_it_on_the_plate",
+      "category": "Camera Viewpoints",
+      "seed": 900102,
+      "init_index": 20,
+      "selected_flow_steps": 1,
+      "success": {
+        "fixed_1": true,
+        "fixed_10": true,
+        "metadata": true
+      },
+      "initial_sigma": 0.027442258383363904,
+      "initial_log_sigma": -3.5956711769104004
+    },
+    {
+      "condition_id": "libero_plus:libero_spatial:1918",
+      "family": "pick_up_the_black_bowl_next_to_the_ramekin_and_place_it_on_the_plate",
+      "category": "Objects Layout",
+      "seed": 900103,
+      "init_index": 0,
+      "selected_flow_steps": 10,
+      "success": {
+        "fixed_1": true,
+        "fixed_10": true,
+        "metadata": true
+      },
+      "initial_sigma": 0.031357614493795226,
+      "initial_log_sigma": -3.4622981548309326
+    }
+  ],
+  "limitations": [
+    "Metadata results reuse matched fixed-arm records; smoke separately checks actual wrapper equivalence.",
+    "Primary costs use equal-case mean scored-policy-call latency; total policy time and simulator time are separate.",
+    "The support criterion is not a conventional noninferiority margin, equivalence test or joint 95% confidence statement.",
+    "Condition-cluster inference has family-cluster sensitivity; repeated states and few families limit generalization.",
+    "Sigma ranking conditions on observed discordance and cannot by itself justify an episode-level selector.",
+    "No trained selector, modified predictor, adaptive speedup or pooled benchmark rate is inferred.",
+    "Smoke results are excluded from primary scientific interpretation."
+  ],
+  "uncertainty": {
+    "bootstrap_replicates": 10000,
+    "effect_condition_seed": 20261003,
+    "effect_family_seed": 20262003,
+    "sigma_condition_seed": 20263003,
+    "sigma_family_seed": 20264003
+  },
+  "record_files": [
+    {
+      "path": "/volt/artifacts/selective-flow-study/runs/libero_plus-smoke.jsonl",
+      "sha256": "a65ba0271eb2450dc1bcad4db1a630e22f059d0e09a3c355675abbd7b6dde2c6"
+    }
+  ],
+  "wandb_url": "https://wandb.ai/arm-aair-idit/pi05-independent-selective-steps/runs/la6kg4vn"
+}
