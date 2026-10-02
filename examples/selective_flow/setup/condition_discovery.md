@@ -1,0 +1,7 @@
+# Outcome-independent condition selection
+
+Only benchmark classification, initial-state files, BDDL metadata and the prior protocol determine selection. Four suites × three categories (Robot Initial States, Camera Viewpoints, Objects Layout) × severities2/3 × four distinct families =96 conditions. Within each cell, sort registry IDs ascending, exclude all prior task names, select first occurrence of each base family until four. Exclude prior condition IDs and task names. All cells have sufficient families; no reductions applied.
+
+Main seeds2001–2010 and initial-state indices10–19. Single-state layout conditions repeat index0, explicitly identified. Separate smoke conditions use spatial severity2, one per category, excluding both old and main names; seeds900101–900103, indices20/20/0. Main cap1920 episodes at two arms, smoke9 episodes (fixed1, fixed10 and metadata at each of three conditions).
+
+Metadata audit:31 suite-family identities overall,15 overlap prior families;252 unique new initial-state hashes and zero overlap with prior main106 distinct hashes. Shared states across different perturbations remain possible; task identities and physical start-state hashes are disjoint from prior main. No evaluation outcomes determine selection. An initial broad historical documentation search inadvertently emitted existing old pilot records; those were not used in the deterministic registry rule.
