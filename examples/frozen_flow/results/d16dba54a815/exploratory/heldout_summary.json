@@ -1,0 +1,228 @@
+[
+  {
+    "benchmark": "libero",
+    "dimension": "family",
+    "pairs": 400,
+    "conditions": 40,
+    "heldout_pairs_with_training_support": 0,
+    "heldout_conditions_with_training_support": 0,
+    "singleton_condition_groups": 40,
+    "chosen_arm_counts": {
+      "1": 400
+    },
+    "successes": 386,
+    "success_rate": 0.965,
+    "fixed1": {
+      "successes": 386,
+      "successes_gained": 0,
+      "net_difference": 0.0,
+      "condition_cluster_ci95": [
+        0.0,
+        0.0
+      ],
+      "rescues": 0,
+      "regressions": 0
+    },
+    "fixed10": {
+      "successes": 386,
+      "successes_gained": 0,
+      "net_difference": 0.0,
+      "condition_cluster_ci95": [
+        -0.02,
+        0.0225
+      ],
+      "rescues": 11,
+      "regressions": 11
+    }
+  },
+  {
+    "benchmark": "libero",
+    "dimension": "perturbation_type",
+    "pairs": 400,
+    "conditions": 40,
+    "heldout_pairs_with_training_support": 400,
+    "heldout_conditions_with_training_support": 40,
+    "singleton_condition_groups": 0,
+    "chosen_arm_counts": {
+      "2": 380,
+      "4": 20
+    },
+    "successes": 386,
+    "success_rate": 0.965,
+    "fixed1": {
+      "successes": 386,
+      "successes_gained": 0,
+      "net_difference": 0.0,
+      "condition_cluster_ci95": [
+        -0.02,
+        0.0175
+      ],
+      "rescues": 8,
+      "regressions": 8
+    },
+    "fixed10": {
+      "successes": 386,
+      "successes_gained": 0,
+      "net_difference": 0.0,
+      "condition_cluster_ci95": [
+        -0.0175,
+        0.0175
+      ],
+      "rescues": 7,
+      "regressions": 7
+    }
+  },
+  {
+    "benchmark": "libero",
+    "dimension": "severity",
+    "pairs": 400,
+    "conditions": 40,
+    "heldout_pairs_with_training_support": 400,
+    "heldout_conditions_with_training_support": 40,
+    "singleton_condition_groups": 0,
+    "chosen_arm_counts": {
+      "2": 380,
+      "4": 20
+    },
+    "successes": 386,
+    "success_rate": 0.965,
+    "fixed1": {
+      "successes": 386,
+      "successes_gained": 0,
+      "net_difference": 0.0,
+      "condition_cluster_ci95": [
+        -0.02,
+        0.0175
+      ],
+      "rescues": 8,
+      "regressions": 8
+    },
+    "fixed10": {
+      "successes": 386,
+      "successes_gained": 0,
+      "net_difference": 0.0,
+      "condition_cluster_ci95": [
+        -0.0175,
+        0.0175
+      ],
+      "rescues": 7,
+      "regressions": 7
+    }
+  },
+  {
+    "benchmark": "libero_plus",
+    "dimension": "family",
+    "pairs": 480,
+    "conditions": 48,
+    "heldout_pairs_with_training_support": 450,
+    "heldout_conditions_with_training_support": 45,
+    "singleton_condition_groups": 3,
+    "chosen_arm_counts": {
+      "1": 210,
+      "10": 80,
+      "2": 120,
+      "4": 70
+    },
+    "successes": 456,
+    "success_rate": 0.95,
+    "fixed1": {
+      "successes": 454,
+      "successes_gained": 2,
+      "net_difference": 0.004166666666666667,
+      "condition_cluster_ci95": [
+        -0.010416666666666666,
+        0.020833333333333332
+      ],
+      "rescues": 8,
+      "regressions": 6
+    },
+    "fixed10": {
+      "successes": 463,
+      "successes_gained": -7,
+      "net_difference": -0.014583333333333334,
+      "condition_cluster_ci95": [
+        -0.03125,
+        0.0
+      ],
+      "rescues": 5,
+      "regressions": 12
+    }
+  },
+  {
+    "benchmark": "libero_plus",
+    "dimension": "perturbation_type",
+    "pairs": 480,
+    "conditions": 48,
+    "heldout_pairs_with_training_support": 480,
+    "heldout_conditions_with_training_support": 48,
+    "singleton_condition_groups": 0,
+    "chosen_arm_counts": {
+      "1": 160,
+      "10": 160,
+      "2": 140,
+      "4": 20
+    },
+    "successes": 462,
+    "success_rate": 0.9625,
+    "fixed1": {
+      "successes": 454,
+      "successes_gained": 8,
+      "net_difference": 0.016666666666666666,
+      "condition_cluster_ci95": [
+        0.0020833333333333333,
+        0.03333333333333333
+      ],
+      "rescues": 13,
+      "regressions": 5
+    },
+    "fixed10": {
+      "successes": 463,
+      "successes_gained": -1,
+      "net_difference": -0.0020833333333333333,
+      "condition_cluster_ci95": [
+        -0.016666666666666666,
+        0.0125
+      ],
+      "rescues": 6,
+      "regressions": 7
+    }
+  },
+  {
+    "benchmark": "libero_plus",
+    "dimension": "severity",
+    "pairs": 480,
+    "conditions": 48,
+    "heldout_pairs_with_training_support": 480,
+    "heldout_conditions_with_training_support": 48,
+    "singleton_condition_groups": 0,
+    "chosen_arm_counts": {
+      "10": 250,
+      "2": 210,
+      "4": 20
+    },
+    "successes": 459,
+    "success_rate": 0.95625,
+    "fixed1": {
+      "successes": 454,
+      "successes_gained": 5,
+      "net_difference": 0.010416666666666666,
+      "condition_cluster_ci95": [
+        -0.010416666666666666,
+        0.03125
+      ],
+      "rescues": 15,
+      "regressions": 10
+    },
+    "fixed10": {
+      "successes": 463,
+      "successes_gained": -4,
+      "net_difference": -0.008333333333333333,
+      "condition_cluster_ci95": [
+        -0.01875,
+        0.0
+      ],
+      "rescues": 1,
+      "regressions": 5
+    }
+  }
+]

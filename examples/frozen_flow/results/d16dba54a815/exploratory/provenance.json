@@ -1,0 +1,44 @@
+{
+  "input_commit": "8d4aa1bd16b21f24f273a785ff2ea34be2a5a4be",
+  "execution_commit": "8d4aa1bd16b21f24f273a785ff2ea34be2a5a4be",
+  "manifest_sha256": "d16dba54a8157af011e872299883e071e681c0b4c6ad6bce1e5e62415f7910e6",
+  "checkpoint_sha256": "9cd1b00d402cc0447454dad6054dcc6f019b53e498469f209d2b749d4487e1d5",
+  "exploratory": true,
+  "command": "/volt/code/frozen-flow-study/.venv/bin/python examples/frozen_flow/explore_groups.py --manifest examples/frozen_flow/protocol.json --results examples/frozen_flow/results/d16dba54a815 --output examples/frozen_flow/results/d16dba54a815/exploratory",
+  "source_sha256": "62f639c614330e51fb6b846258273c4f17d87ac73cec89baa11319e74274151c",
+  "input_files": {
+    "examples/frozen_flow/results/d16dba54a815/libero-main-worker-0.jsonl": "90939ec22acd155c8263f56c677e97d608ec7b135ce6c9db2b9121c162b798b5",
+    "examples/frozen_flow/results/d16dba54a815/libero-main-worker-1.jsonl": "8f73651b9995f7d9116956684cee7363781f84a0dd43f1c644ec6bad472a6c05",
+    "examples/frozen_flow/results/d16dba54a815/libero-main-worker-2.jsonl": "09fbfb05443c74f154549e7e49994fedf03670ecfd87703ea6a3b1a7075ce7a6",
+    "examples/frozen_flow/results/d16dba54a815/libero-main-worker-3.jsonl": "ebcea1cae4200c197d6e7c078927ed307d6f1de68a06a63fe8e47184ce92fe77",
+    "examples/frozen_flow/results/d16dba54a815/libero-summary.json": "926c482ca45af553b66ab8eed9148c4cef6db361382aa64618229cc5e3d06a7a",
+    "examples/frozen_flow/results/d16dba54a815/libero_plus-main-worker-0.jsonl": "07bc800e33c1118b407c7fcfbdec2b56401bc4074c85d151e29b06a166621adf",
+    "examples/frozen_flow/results/d16dba54a815/libero_plus-main-worker-1.jsonl": "ff77d562cee86027d15f9162314332e1ca2abcf5057a87f7b7673a12ee292d50",
+    "examples/frozen_flow/results/d16dba54a815/libero_plus-main-worker-2.jsonl": "1a52568f12d648c5831faa2fb53c305c42e7c048b4615730ae2ca7620fb9c6c4",
+    "examples/frozen_flow/results/d16dba54a815/libero_plus-main-worker-3.jsonl": "1f1d68c3fbf902b503c506c0f9450418ac839b293d05414c1fda664ac5bdc413",
+    "examples/frozen_flow/results/d16dba54a815/libero_plus-summary.json": "4ae3a1705736a1f75a92d8c98a3dfd9d1e5d1d5e06cdd1460de3b1feb2e835fa"
+  },
+  "audits": {
+    "libero": "strict raw audit and exact published summary reproduction passed",
+    "libero_plus": "strict raw audit and exact published summary reproduction passed"
+  },
+  "sigma_availability": {
+    "libero": {
+      "rows": 1600,
+      "rows_with_sigma_or_residual_key": 0,
+      "conclusion": "Absent; residual-head predictive value cannot be tested"
+    },
+    "libero_plus": {
+      "rows": 1920,
+      "rows_with_sigma_or_residual_key": 0,
+      "conclusion": "Absent; residual-head predictive value cannot be tested"
+    }
+  },
+  "method": {
+    "grouping": "all cases; no selected evaluation subset",
+    "allocation": "leave one entire condition out; same-group training net gains versus one step; choose maximum positive gain from2,4,10, ties smaller arm; otherwise1",
+    "uncertainty": "10000 condition-cluster percentile draws; descriptive conditional on frozen cross-fitted assignments, overlapping training sets not re-fit; not independent validation",
+    "leakage": "no held-condition outcomes used for arm assignment; same base family and seeds may recur across conditions, so generalization only across held conditions",
+    "limits": "post-hoc taxonomy/rule; no trained model, no deployed adaptive policy, no adaptive speedup; condition identity and singleton families cannot be supported out of condition"
+  }
+}
