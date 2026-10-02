@@ -1,0 +1,29 @@
+{
+  "manifest_sha256": "209e434b336372b37d80b7a101912b4b8daeb9f5cd71a0e9772fdfe1579e782c",
+  "audit": "passed",
+  "records": 9,
+  "error_attempts": 0,
+  "summary_reproduced": true,
+  "parity_checks": 8,
+  "gpu_uuids": [
+    "GPU-0cb759da-a716-038e-f0a9-208ec138ccc7",
+    "GPU-56335fdf-6dc8-1d64-ce39-364d4a532435",
+    "GPU-967ff6df-a7e2-b65a-d051-87819b7725fc",
+    "GPU-b786fcd4-f878-69e6-3017-a2ae408151fd"
+  ],
+  "max_parity_difference": 0.0,
+  "record_sha256": "a65ba0271eb2450dc1bcad4db1a630e22f059d0e09a3c355675abbd7b6dde2c6",
+  "chunks": 194,
+  "velocity_evaluations": 1139,
+  "checks": [
+    "complete planned smoke arms",
+    "all chunk noise independently recomputed",
+    "checkpoint/head/benchmark provenance",
+    "initial and stabilized state pairing",
+    "initial score identity",
+    "metadata full-trajectory equivalence",
+    "cost and velocity/head call counts",
+    "zero reference calls in scored records",
+    "published summary reproduced"
+  ]
+}
