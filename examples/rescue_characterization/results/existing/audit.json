@@ -1,0 +1,91 @@
+{
+  "source_inventories": [
+    {
+      "study": "frozen_flow",
+      "manifest_path": "/volt/code/frozen-flow-study/examples/frozen_flow/protocol.json",
+      "manifest_sha256": "d16dba54a8157af011e872299883e071e681c0b4c6ad6bce1e5e62415f7910e6",
+      "checkpoint_sha256": "9cd1b00d402cc0447454dad6054dcc6f019b53e498469f209d2b749d4487e1d5",
+      "noise": {
+        "policy": {
+          "arm_independent": true,
+          "dtype": "float32",
+          "shape": [
+            10,
+            32
+          ]
+        },
+        "algorithm": "numpy default_rng SHA256 first8 little-endian of compact JSON [benchmark,suite,task_name,seed,init_index,chunk_index]; float32 standard_normal(10,32)"
+      },
+      "execution": {
+        "action_dim": 32,
+        "action_horizon": 10,
+        "batch_size": 1,
+        "image_size": 224,
+        "max_policy_steps": {
+          "libero_10": 520,
+          "libero_goal": 300,
+          "libero_object": 280,
+          "libero_spatial": 220
+        },
+        "render_size": 256,
+        "replan_steps": 5,
+        "success": "env.check_success(); termination without success is an error",
+        "wait_steps": 10
+      },
+      "benchmark_commits": {
+        "libero": "f78abd68ee283de9f9be3c8f7e2a9ad60246e95c",
+        "libero_plus": "4976dc30028e805ff8094b55501d532c48fec182"
+      }
+    },
+    {
+      "study": "selective_flow",
+      "manifest_path": "/volt/code/frozen-flow-study/examples/selective_flow/protocol.json",
+      "manifest_sha256": "209e434b336372b37d80b7a101912b4b8daeb9f5cd71a0e9772fdfe1579e782c",
+      "checkpoint_sha256": "9cd1b00d402cc0447454dad6054dcc6f019b53e498469f209d2b749d4487e1d5",
+      "noise": {
+        "policy": {
+          "arm_independent": true,
+          "dtype": "float32",
+          "shape": [
+            10,
+            32
+          ]
+        },
+        "algorithm": "numpy default_rng SHA256 first8 little-endian of compact JSON [benchmark,suite,task_name,seed,init_index,chunk_index]; float32 standard_normal(10,32)"
+      },
+      "execution": {
+        "action_dim": 32,
+        "action_horizon": 10,
+        "batch_size": 1,
+        "image_size": 224,
+        "max_policy_steps": {
+          "libero_10": 520,
+          "libero_goal": 300,
+          "libero_object": 280,
+          "libero_spatial": 220
+        },
+        "render_size": 256,
+        "replan_steps": 5,
+        "success": "env.check_success(); termination without success is an error",
+        "wait_steps": 10
+      },
+      "benchmark_commits": {
+        "libero_plus": "4976dc30028e805ff8094b55501d532c48fec182"
+      }
+    }
+  ],
+  "episode_records": 5454,
+  "case_records": 1845,
+  "unique_cases": 1845,
+  "duplicate_cases": [],
+  "excluded_records": {
+    "non_fixed_policy": 3
+  },
+  "notes": [
+    "All original main and smoke fixed-arm JSONL files are enumerated.",
+    "Main/smoke and study strata remain separate. No cross-study population pooling.",
+    "Historical action hashes are not numerical action traces; videos must be regenerated as audited replays.",
+    "Independent study fixed arms used head instrumentation; head outputs are not predictors in this analysis.",
+    "Manifest identities verified against raw rows; hardware/checkpoint disk validation is a separate audit."
+  ]
+}

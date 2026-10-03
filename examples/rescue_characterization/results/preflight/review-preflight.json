@@ -1,0 +1,50 @@
+{
+  "role": "Independent Reviewer",
+  "reviewed_at_utc": "2026-10-03T07:50:20.645042+00:00",
+  "verdict": "changes_requested_before_manifest_freeze",
+  "files": {
+    "examples/rescue_characterization/build_conditions.py": "b610689fae1e0f190e7419911e355b0e16991ba1a65aae641bad37833b30e8ed",
+    "examples/rescue_characterization/client.py": "58feb0bc74be515e186982083e0391624ece494331dce4c71e7a1f8796609aa6",
+    "examples/rescue_characterization/recording.py": "d28d9004f42c55d5297e6481da96d4e9ff9ea5fefb76e8649e8de97b3379911e",
+    "examples/rescue_characterization/supervise.py": "9ae5fd359ba7d9e9a86b432fed6ee22df3d54a528dcc464d5335491908c0aa94",
+    "examples/rescue_characterization/run_detached.sh": "c80cb9e63f757bf78d40870bbdd51efe62f2f721c9ed60e9495a2464d311e96f",
+    "examples/rescue_characterization/protocol.py": "7281b979d9a2a830253c4d4f34be02d4cda8c708317b5deb2087991d58eba472",
+    "examples/rescue_characterization/analyze.py": "92ecde5280db531fe86aa38a266a04e3ee2cdd90813ef88845eedb9fc0e2d44b",
+    "examples/rescue_characterization/analysis.py": "43bcae7c8469aa7d080538f054f7bdf42fb3ba0e4f97d2eeb68effcd13048866"
+  },
+  "verified": [
+    "Declared 40 standard tasks each 20 cases and 168 Plus conditions each 10 cases; exact seven axes, severities3/4, three conditions per suite/axis/severity.",
+    "Recorded observations are taken from existing env step outputs, no extra environment call added.",
+    "Language Instructions prompt is checked against BDDL language instruction.",
+    "Detached supervisor uses new ports and dedicated branch."
+  ],
+  "blockers": [
+    {
+      "id": "R1",
+      "path": "examples/rescue_characterization/analyze.py",
+      "finding": "Final analyzer is unchanged from original and ignores new recording evidence and RNG pairing.",
+      "required": "Independently check recording paths/digests, required chunk RNG hashes, action numeric arrays against action hashes and executed queue, per-step RNG pairing at common step indices, trace counts/success and video frame counts; require prompt/severity identity. Make smoke gate invoke these checks; do not accept two missing RNG hashes as equality."
+    },
+    {
+      "id": "R2",
+      "path": "examples/rescue_characterization/supervise.py",
+      "finding": "Detached completion invokes only original analyze.py/report.py; new first-success/nonmonotonic classifier not invoked.",
+      "required": "Integrate complete vector extraction and classification with audited records into detached publication (smoke excluded from main population)."
+    }
+  ],
+  "nonblocking": [
+    {
+      "id": "R3",
+      "path": "examples/rescue_characterization/build_conditions.py",
+      "finding": "Runtime source-string rewrite of original builder is brittle; generated stratum checks passed but future source updates could silently bypass replacements.",
+      "required": "Prefer explicit parameters/helper or assert every replacement appears exactly once and validate each stratum family cardinality."
+    },
+    {
+      "id": "R4",
+      "path": "examples/rescue_characterization/supervise.py",
+      "finding": "Videos and NPZ traces remain pod-only; current W&B artifact includes root JSON/JSONL/MD only.",
+      "required": "Publish an explicit recording inventory with byte sizes/hash/path and durable W&B artifact for selected review evidence or clearly document pod-only retention."
+    }
+  ],
+  "tests_run": "Read-only structural comparison and independent declaration count checks; no simulator or model execution in reviewer process."
+}
