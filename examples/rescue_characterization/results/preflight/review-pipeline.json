@@ -1,0 +1,36 @@
+{
+  "role": "Independent Reviewer",
+  "at_utc": "2026-10-03T08:09:39.448564+00:00",
+  "verdict": "approved_new_files_integration_and_single_detached_pipeline_launch",
+  "manifest_sha256": "e7537584d34855c24c1a38ca11da4f7e479b9bcbfc53d2cc7ec8f7ff46eadf9d",
+  "files": {
+    "/volt/artifacts/rescue-characterization/pipeline-development/pipeline.py": "c781e2b508f3298d884e80b6e03513712c641748850b7cb0b649cc5100777990",
+    "/volt/artifacts/rescue-characterization/audit-development/independent_audit.py": "c0ad5466372af17ade95b44e73e085b8e1202f52c4f77f1a0cb24f5e3f99baf2",
+    "/volt/artifacts/rescue-characterization/replay-development/replay.py": "545d14e3ae6e7c25c91cfada89d29785de8a9cea6534b5c698670b20f6b74dc0",
+    "/volt/artifacts/rescue-characterization/replay-development/replay_supervise.py": "1724e30ad539fb06bb67c4934370acf880304a8eeb79b720a26bd795d5f78868"
+  },
+  "resolved": [
+    "Independent audit enumerates all44smoke or9920main arms and independently recomputes noise/counts/patterns; requires successful publication and32current actual parity checks.",
+    "Replay audit independently recomputes equivalence against hash-verified original records and strict numeric action/video/RNG evidence; explicit checkpoint equality added.",
+    "Pipeline owns single-instance lock, refuses existing saved state, preserves evaluation command ledger, awaits smoke publication, gates each phase and waits for GPUs to become idle.",
+    "Pipeline never invokes old study supervisors; historical replay is outcome-selected and excluded from new population inference.",
+    "SIGTERM/SIGINT handler records interruption; duplicate saved-state refusal preserves recovery safety. Replay progress counts complete newline records rather than parsing concurrent writes."
+  ],
+  "validation": [
+    "Four draft files compiled.",
+    "independent_audit.py --self-test passed.",
+    "No model/simulator evaluation launched by this reviewer."
+  ],
+  "limitations": [
+    "Approval is for integration and one pipeline launch; independent smoke gate must pass before full scan can start.",
+    "Interruption may leave an active child; manual recovery must inspect child process groups and locks. Existing saved state prevents blind restart.",
+    "No blinded scientific labels assigned; pipeline ends numeric_and_replay_complete_review_pending.",
+    "Original frozen source files must remain unchanged; only new files are integrated."
+  ],
+  "integrated_files_verified": {
+    "/volt/code/frozen-flow-study/examples/rescue_characterization/pipeline.py": "c781e2b508f3298d884e80b6e03513712c641748850b7cb0b649cc5100777990",
+    "/volt/code/frozen-flow-study/examples/rescue_characterization/independent_audit.py": "c0ad5466372af17ade95b44e73e085b8e1202f52c4f77f1a0cb24f5e3f99baf2",
+    "/volt/code/frozen-flow-study/examples/rescue_characterization/replay.py": "545d14e3ae6e7c25c91cfada89d29785de8a9cea6534b5c698670b20f6b74dc0",
+    "/volt/code/frozen-flow-study/examples/rescue_characterization/replay_supervise.py": "1724e30ad539fb06bb67c4934370acf880304a8eeb79b720a26bd795d5f78868"
+  }
+}
