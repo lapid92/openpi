@@ -1,0 +1,569 @@
+{
+  "verdict": "passed",
+  "manifest_sha256": "209e434b336372b37d80b7a101912b4b8daeb9f5cd71a0e9772fdfe1579e782c",
+  "git_commit": "39779fa1a230e5135ae4aecfc211f78e226d8949",
+  "rows": 1920,
+  "pairs": 960,
+  "conditions": 96,
+  "families": 31,
+  "errors": 0,
+  "source_hashes_verified": 297,
+  "record_files": {
+    "/volt/artifacts/selective-flow-study/runs/libero_plus-main-worker-0.jsonl": "0614340f2b6c675a8a7e739eb7aca0c49a691569358e18d2b23b1161f6583f73",
+    "/volt/artifacts/selective-flow-study/runs/libero_plus-main-worker-1.jsonl": "467b49184cd9a3bb8c41644ef20037595a43b1c10b03f0ce9c11864d8e7befa5",
+    "/volt/artifacts/selective-flow-study/runs/libero_plus-main-worker-2.jsonl": "1e8c9d34e14076d09362a34be140218e2b2768b6b56909412cd4dd95fe8f4b82",
+    "/volt/artifacts/selective-flow-study/runs/libero_plus-main-worker-3.jsonl": "626fb8b98e2cc4395fb25caa359d44e06b77d1f15003f93ec719a5a24614b04e"
+  },
+  "summary_exactly_reproduced": true,
+  "report_exactly_reproduced": true,
+  "independent_pairwise_auc": 0.5095137420718816,
+  "overall": {
+    "pairs": 960,
+    "conditions": 96,
+    "families": 31,
+    "strategies": {
+      "fixed_1": {
+        "successes": 887,
+        "episodes": 960,
+        "success_rate": 0.9239583333333333,
+        "cost": {
+          "policy_call_ms": {
+            "count": 34117,
+            "mean": 32.90582624495739,
+            "p50": 32.87863591685891,
+            "p95": 33.83977897465229,
+            "sum": 1122648.0739992112
+          },
+          "head_ms": {
+            "count": 34117,
+            "mean": 0.5896523029844255,
+            "p50": 0.5817189812660217,
+            "p95": 0.7033106870949267,
+            "sum": 20117.167620919645
+          },
+          "request_ms": {
+            "count": 34117,
+            "mean": 295.4216030999361,
+            "p50": 350.22073006257415,
+            "p95": 555.3860469721257,
+            "sum": 10078898.83296052
+          },
+          "episode_ms": {
+            "count": 960,
+            "mean": 52299.1983655423,
+            "p50": 43827.01605651528,
+            "p95": 93281.31355366202,
+            "sum": 50207230.43092061
+          },
+          "per_case_mean_policy_call_ms": {
+            "count": 960,
+            "mean": 32.91950563148767,
+            "p50": 32.89162141950188,
+            "p95": 33.67974023055285,
+            "sum": 31602.72540622816
+          },
+          "per_case_total_policy_ms": {
+            "count": 960,
+            "mean": 1169.4250770825117,
+            "p50": 923.3412339817733,
+            "p95": 2401.0703974170606,
+            "sum": 1122648.0739992112
+          },
+          "per_case_velocity_evaluations_per_chunk": {
+            "count": 960,
+            "mean": 1.0,
+            "p50": 1.0,
+            "p95": 1.0,
+            "sum": 960.0
+          },
+          "total_velocity_evaluations": 34117,
+          "total_head_evaluations": 34117
+        }
+      },
+      "fixed_10": {
+        "successes": 877,
+        "episodes": 960,
+        "success_rate": 0.9135416666666667,
+        "cost": {
+          "policy_call_ms": {
+            "count": 34313,
+            "mean": 51.198431972112544,
+            "p50": 51.20277917012572,
+            "p95": 52.16102823615074,
+            "sum": 1756771.7962590978
+          },
+          "head_ms": {
+            "count": 34313,
+            "mean": 0.5972636797769998,
+            "p50": 0.5889390595257282,
+            "p95": 0.7141257636249065,
+            "sum": 20493.908644188195
+          },
+          "request_ms": {
+            "count": 34313,
+            "mean": 313.3366371369687,
+            "p50": 374.66056598350406,
+            "p95": 572.9835819453001,
+            "sum": 10751520.030080806
+          },
+          "episode_ms": {
+            "count": 960,
+            "mean": 53291.488032069174,
+            "p50": 44018.29557167366,
+            "p95": 92641.66984977186,
+            "sum": 51159828.51078641
+          },
+          "per_case_mean_policy_call_ms": {
+            "count": 960,
+            "mean": 51.212259855228965,
+            "p50": 51.22540070176173,
+            "p95": 52.04753742955456,
+            "sum": 49163.76946101981
+          },
+          "per_case_total_policy_ms": {
+            "count": 960,
+            "mean": 1829.970621103227,
+            "p50": 1444.0276310779154,
+            "p95": 3400.474146450868,
+            "sum": 1756771.7962590978
+          },
+          "per_case_velocity_evaluations_per_chunk": {
+            "count": 960,
+            "mean": 10.0,
+            "p50": 10.0,
+            "p95": 10.0,
+            "sum": 9600.0
+          },
+          "total_velocity_evaluations": 343130,
+          "total_head_evaluations": 34313
+        }
+      },
+      "metadata": {
+        "successes": 886,
+        "episodes": 960,
+        "success_rate": 0.9229166666666667,
+        "cost": {
+          "policy_call_ms": {
+            "count": 34100,
+            "mean": 45.19153320107642,
+            "p50": 50.82657583989203,
+            "p95": 52.073625614866614,
+            "sum": 1541031.2821567059
+          },
+          "head_ms": {
+            "count": 34100,
+            "mean": 0.595242467099839,
+            "p50": 0.5867138970643282,
+            "p95": 0.7114988518878818,
+            "sum": 20297.768128104508
+          },
+          "request_ms": {
+            "count": 34100,
+            "mean": 307.7419733175533,
+            "p50": 358.7761502712965,
+            "p95": 569.8393528582528,
+            "sum": 10494001.290128566
+          },
+          "episode_ms": {
+            "count": 960,
+            "mean": 52848.0330138865,
+            "p50": 43957.56288827397,
+            "p95": 92308.0973264994,
+            "sum": 50734111.69333104
+          },
+          "per_case_mean_policy_call_ms": {
+            "count": 960,
+            "mean": 45.11953991020254,
+            "p50": 50.910725307322835,
+            "p95": 52.01063786400482,
+            "sum": 43314.75831379444
+          },
+          "per_case_total_policy_ms": {
+            "count": 960,
+            "mean": 1605.2409189132352,
+            "p50": 1313.2389474194497,
+            "p95": 3187.64970821794,
+            "sum": 1541031.2821567059
+          },
+          "per_case_velocity_evaluations_per_chunk": {
+            "count": 960,
+            "mean": 7.0,
+            "p50": 10.0,
+            "p95": 10.0,
+            "sum": 6720.0
+          },
+          "total_velocity_evaluations": 240173,
+          "total_head_evaluations": 34100
+        }
+      }
+    },
+    "comparisons": {
+      "metadata_vs_fixed10": {
+        "rescues": 20,
+        "regressions": 11,
+        "net_success_difference": 0.009375,
+        "condition_cluster_ci95": [
+          -0.0020833333333333333,
+          0.021875
+        ],
+        "family_cluster_ci95": [
+          -0.0010872551361681795,
+          0.019820013979496735
+        ],
+        "cost_differences": {
+          "mean_policy_call_ms": {
+            "mean": -6.09271994502642,
+            "condition_cluster_ci95": [
+              -7.817337714183486,
+              -4.384253678581044
+            ],
+            "family_cluster_ci95": [
+              -7.1795900188005195,
+              -4.9884784154736295
+            ]
+          },
+          "total_policy_ms": {
+            "mean": -224.72970218999157,
+            "condition_cluster_ci95": [
+              -301.28370065854443,
+              -152.9235540170703
+            ],
+            "family_cluster_ci95": [
+              -287.9568348842691,
+              -166.50929068217792
+            ]
+          },
+          "episode_ms": {
+            "mean": -443.4550181826732,
+            "condition_cluster_ci95": [
+              -991.9428192539151,
+              60.836249610983835
+            ],
+            "family_cluster_ci95": [
+              -929.5155567009625,
+              32.78579709882664
+            ]
+          },
+          "velocity_evaluations_per_chunk": {
+            "mean": -3.0,
+            "condition_cluster_ci95": [
+              -3.84375,
+              -2.15625
+            ],
+            "family_cluster_ci95": [
+              -3.5294117647058822,
+              -2.4545454545454546
+            ]
+          },
+          "total_velocity_evaluations": {
+            "mean": -107.246875,
+            "condition_cluster_ci95": [
+              -142.80453125,
+              -74.44432291666666
+            ],
+            "family_cluster_ci95": [
+              -135.8063716108453,
+              -80.35598116325181
+            ]
+          }
+        },
+        "reference_failures": 83,
+        "fraction_reference_failures_rescued": 0.24096385542168675
+      },
+      "metadata_vs_fixed1": {
+        "rescues": 22,
+        "regressions": 23,
+        "net_success_difference": -0.0010416666666666667,
+        "condition_cluster_ci95": [
+          -0.01875,
+          0.016666666666666666
+        ],
+        "family_cluster_ci95": [
+          -0.017924528301886792,
+          0.019388498117693668
+        ],
+        "cost_differences": {
+          "mean_policy_call_ms": {
+            "mean": 12.200034278714876,
+            "condition_cluster_ci95": [
+              10.46903885373322,
+              13.909906952033573
+            ],
+            "family_cluster_ci95": [
+              11.132743788222566,
+              13.306844062016298
+            ]
+          },
+          "total_policy_ms": {
+            "mean": 435.8158418307236,
+            "condition_cluster_ci95": [
+              350.3638450188979,
+              524.9438279753304
+            ],
+            "family_cluster_ci95": [
+              345.01740573274856,
+              539.2562302118212
+            ]
+          },
+          "episode_ms": {
+            "mean": 548.8346483442001,
+            "condition_cluster_ci95": [
+              -335.28050482410134,
+              1425.4413729591147
+            ],
+            "family_cluster_ci95": [
+              -520.7465352881135,
+              1393.409788424278
+            ]
+          },
+          "velocity_evaluations_per_chunk": {
+            "mean": 6.0,
+            "condition_cluster_ci95": [
+              5.15625,
+              6.84375
+            ],
+            "family_cluster_ci95": [
+              5.470588235294118,
+              6.545454545454546
+            ]
+          },
+          "total_velocity_evaluations": {
+            "mean": 214.64166666666668,
+            "condition_cluster_ci95": [
+              174.60994791666667,
+              257.16828125
+            ],
+            "family_cluster_ci95": [
+              170.54313449148643,
+              265.46176283533765
+            ]
+          }
+        },
+        "reference_failures": 73,
+        "fraction_reference_failures_rescued": 0.3013698630136986
+      },
+      "fixed10_vs_fixed1": {
+        "rescues": 33,
+        "regressions": 43,
+        "net_success_difference": -0.010416666666666666,
+        "condition_cluster_ci95": [
+          -0.03125,
+          0.011458333333333333
+        ],
+        "family_cluster_ci95": [
+          -0.03158029001074114,
+          0.013636363636363636
+        ],
+        "cost_differences": {
+          "mean_policy_call_ms": {
+            "mean": 18.292754223741294,
+            "condition_cluster_ci95": [
+              18.2388923179447,
+              18.344595283280633
+            ],
+            "family_cluster_ci95": [
+              18.198078476111377,
+              18.384430386722308
+            ]
+          },
+          "total_policy_ms": {
+            "mean": 660.5455440207152,
+            "condition_cluster_ci95": [
+              592.2681676167365,
+              735.4926979856099
+            ],
+            "family_cluster_ci95": [
+              548.3706649147585,
+              781.2299467160423
+            ]
+          },
+          "episode_ms": {
+            "mean": 992.2896665268732,
+            "condition_cluster_ci95": [
+              -31.918071504223906,
+              2017.3825029003635
+            ],
+            "family_cluster_ci95": [
+              -225.28142654264397,
+              2035.7275132018553
+            ]
+          },
+          "velocity_evaluations_per_chunk": {
+            "mean": 9.0,
+            "condition_cluster_ci95": [
+              9.0,
+              9.0
+            ],
+            "family_cluster_ci95": [
+              9.0,
+              9.0
+            ]
+          },
+          "total_velocity_evaluations": {
+            "mean": 321.88854166666664,
+            "condition_cluster_ci95": [
+              291.086640625,
+              354.503359375
+            ],
+            "family_cluster_ci95": [
+              268.92913265306123,
+              378.61388945233267
+            ]
+          }
+        },
+        "reference_failures": 73,
+        "fraction_reference_failures_rescued": 0.4520547945205479
+      }
+    },
+    "conservative_primary_support": false,
+    "decision": "Inconclusive under the predeclared joint success/cost support criterion."
+  },
+  "sigma": {
+    "overall": {
+      "cases": 960,
+      "discordant_cases": 76,
+      "rescues": 33,
+      "regressions": 43,
+      "discordant_conditions": 42,
+      "auc_higher_initial_sigma_predicts_rescue": 0.5095137420718816,
+      "credible_count_threshold_met": true,
+      "bootstrap": {
+        "condition_id": {
+          "clusters": 42,
+          "valid_draws": 10000,
+          "requested_draws": 10000,
+          "ci95": [
+            0.3623481382684653,
+            0.6602878408141566
+          ],
+          "note": "Single-class resamples excluded and counted; interval conditional on valid draws."
+        },
+        "family": {
+          "clusters": 20,
+          "valid_draws": 10000,
+          "requested_draws": 10000,
+          "ci95": [
+            0.3713427086234104,
+            0.6503475191137463
+          ],
+          "note": "Single-class resamples excluded and counted; interval conditional on valid draws."
+        }
+      },
+      "scope": "Retrospective rescue-versus-regression ranking among discordant fixed-arm cases, not an inference-time gate or a fitted predictor.",
+      "assessment": "Count threshold met; interpret uncertainty and type/family sensitivity."
+    },
+    "by_type": {
+      "Camera Viewpoints": {
+        "cases": 320,
+        "discordant_cases": 31,
+        "rescues": 11,
+        "regressions": 20,
+        "discordant_conditions": 17,
+        "auc_higher_initial_sigma_predicts_rescue": 0.38636363636363635,
+        "credible_count_threshold_met": true,
+        "bootstrap": {
+          "condition_id": {
+            "clusters": 17,
+            "valid_draws": 10000,
+            "requested_draws": 10000,
+            "ci95": [
+              0.18124255952380952,
+              0.5777898550724635
+            ],
+            "note": "Single-class resamples excluded and counted; interval conditional on valid draws."
+          },
+          "family": {
+            "clusters": 13,
+            "valid_draws": 10000,
+            "requested_draws": 10000,
+            "ci95": [
+              0.2222222222222222,
+              0.5555555555555556
+            ],
+            "note": "Single-class resamples excluded and counted; interval conditional on valid draws."
+          }
+        },
+        "scope": "Retrospective rescue-versus-regression ranking among discordant fixed-arm cases, not an inference-time gate or a fitted predictor.",
+        "assessment": "Count threshold met; interpret uncertainty and type/family sensitivity."
+      },
+      "Objects Layout": {
+        "cases": 320,
+        "discordant_cases": 23,
+        "rescues": 11,
+        "regressions": 12,
+        "discordant_conditions": 12,
+        "auc_higher_initial_sigma_predicts_rescue": 0.6666666666666666,
+        "credible_count_threshold_met": true,
+        "bootstrap": {
+          "condition_id": {
+            "clusters": 12,
+            "valid_draws": 9982,
+            "requested_draws": 10000,
+            "ci95": [
+              0.297265625,
+              0.9230769230769231
+            ],
+            "note": "Single-class resamples excluded and counted; interval conditional on valid draws."
+          },
+          "family": {
+            "clusters": 8,
+            "valid_draws": 9963,
+            "requested_draws": 10000,
+            "ci95": [
+              0.25,
+              0.8888888888888888
+            ],
+            "note": "Single-class resamples excluded and counted; interval conditional on valid draws."
+          }
+        },
+        "scope": "Retrospective rescue-versus-regression ranking among discordant fixed-arm cases, not an inference-time gate or a fitted predictor.",
+        "assessment": "Count threshold met; interpret uncertainty and type/family sensitivity."
+      },
+      "Robot Initial States": {
+        "cases": 320,
+        "discordant_cases": 22,
+        "rescues": 11,
+        "regressions": 11,
+        "discordant_conditions": 13,
+        "auc_higher_initial_sigma_predicts_rescue": 0.5950413223140496,
+        "credible_count_threshold_met": true,
+        "bootstrap": {
+          "condition_id": {
+            "clusters": 13,
+            "valid_draws": 10000,
+            "requested_draws": 10000,
+            "ci95": [
+              0.2817727272727273,
+              1.0
+            ],
+            "note": "Single-class resamples excluded and counted; interval conditional on valid draws."
+          },
+          "family": {
+            "clusters": 10,
+            "valid_draws": 9999,
+            "requested_draws": 10000,
+            "ci95": [
+              0.2857142857142857,
+              1.0
+            ],
+            "note": "Single-class resamples excluded and counted; interval conditional on valid draws."
+          }
+        },
+        "scope": "Retrospective rescue-versus-regression ranking among discordant fixed-arm cases, not an inference-time gate or a fitted predictor.",
+        "assessment": "Count threshold met; interpret uncertainty and type/family sensitivity."
+      }
+    }
+  },
+  "checks": [
+    "all planned pairing/state/noise/head/cost invariants",
+    "all published raw hashes match",
+    "all aggregate/type/family/sigma bootstrap fields exactly reproduced",
+    "independent pairwise AUC",
+    "frozen source hashes unchanged",
+    "report criterion and limitations match frozen analysis"
+  ],
+  "limitations": [
+    "No new rollouts or source modifications",
+    "Checkpoint post-run hash gate is recorded by completed supervisor; no redundant full checkpoint rehash"
+  ]
+}
