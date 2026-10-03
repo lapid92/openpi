@@ -1,0 +1,808 @@
+{
+  "pi05-rescue-characterization/smoke/libero": {
+    "cases": 4,
+    "one_step_failures": 0,
+    "one_step_successes": 4,
+    "complete_four_arm": 4,
+    "patterns": {
+      "succeed/succeed/succeed/succeed": 4
+    },
+    "first_success_among_one_step_failures": {},
+    "first_success_rates_among_one_step_failures": {},
+    "first_success_rates_among_all_cases": {},
+    "nonmonotonic": 0,
+    "steps": {
+      "2": {
+        "paired_cases": 4,
+        "rescues": 0,
+        "regressions": 0,
+        "eligible_failures": 0,
+        "eligible_successes": 4,
+        "rescue_rate_among_failures": null,
+        "regression_rate_among_successes": 0.0,
+        "net_success_difference": 0.0
+      },
+      "4": {
+        "paired_cases": 4,
+        "rescues": 0,
+        "regressions": 0,
+        "eligible_failures": 0,
+        "eligible_successes": 4,
+        "rescue_rate_among_failures": null,
+        "regression_rate_among_successes": 0.0,
+        "net_success_difference": 0.0
+      },
+      "10": {
+        "paired_cases": 4,
+        "rescues": 0,
+        "regressions": 0,
+        "eligible_failures": 0,
+        "eligible_successes": 4,
+        "rescue_rate_among_failures": null,
+        "regression_rate_among_successes": 0.0,
+        "net_success_difference": 0.0
+      }
+    },
+    "uncertainty": {
+      "cluster": "condition_id",
+      "clusters": 4,
+      "replicates": 10000,
+      "seed": 20261003,
+      "method": "Paired percentile cluster bootstrap; undefined-denominator replicates omitted; exploratory, no multiplicity correction",
+      "intervals": {
+        "first_2_among_all": {
+          "lower": 0.0,
+          "upper": 0.0,
+          "valid_replicates": 10000
+        },
+        "first_4_among_all": {
+          "lower": 0.0,
+          "upper": 0.0,
+          "valid_replicates": 10000
+        },
+        "first_10_among_all": {
+          "lower": 0.0,
+          "upper": 0.0,
+          "valid_replicates": 10000
+        },
+        "first_never_among_all": {
+          "lower": 0.0,
+          "upper": 0.0,
+          "valid_replicates": 10000
+        },
+        "2_regression_rate_among_successes": {
+          "lower": 0.0,
+          "upper": 0.0,
+          "valid_replicates": 10000
+        },
+        "2_net_success_difference": {
+          "lower": 0.0,
+          "upper": 0.0,
+          "valid_replicates": 10000
+        },
+        "4_regression_rate_among_successes": {
+          "lower": 0.0,
+          "upper": 0.0,
+          "valid_replicates": 10000
+        },
+        "4_net_success_difference": {
+          "lower": 0.0,
+          "upper": 0.0,
+          "valid_replicates": 10000
+        },
+        "10_regression_rate_among_successes": {
+          "lower": 0.0,
+          "upper": 0.0,
+          "valid_replicates": 10000
+        },
+        "10_net_success_difference": {
+          "lower": 0.0,
+          "upper": 0.0,
+          "valid_replicates": 10000
+        }
+      }
+    },
+    "family_sensitivity": {
+      "cluster": "family",
+      "clusters": 4,
+      "replicates": 10000,
+      "seed": 20261004,
+      "method": "Paired percentile cluster bootstrap; undefined-denominator replicates omitted; exploratory, no multiplicity correction",
+      "intervals": {
+        "first_2_among_all": {
+          "lower": 0.0,
+          "upper": 0.0,
+          "valid_replicates": 10000
+        },
+        "first_4_among_all": {
+          "lower": 0.0,
+          "upper": 0.0,
+          "valid_replicates": 10000
+        },
+        "first_10_among_all": {
+          "lower": 0.0,
+          "upper": 0.0,
+          "valid_replicates": 10000
+        },
+        "first_never_among_all": {
+          "lower": 0.0,
+          "upper": 0.0,
+          "valid_replicates": 10000
+        },
+        "2_regression_rate_among_successes": {
+          "lower": 0.0,
+          "upper": 0.0,
+          "valid_replicates": 10000
+        },
+        "2_net_success_difference": {
+          "lower": 0.0,
+          "upper": 0.0,
+          "valid_replicates": 10000
+        },
+        "4_regression_rate_among_successes": {
+          "lower": 0.0,
+          "upper": 0.0,
+          "valid_replicates": 10000
+        },
+        "4_net_success_difference": {
+          "lower": 0.0,
+          "upper": 0.0,
+          "valid_replicates": 10000
+        },
+        "10_regression_rate_among_successes": {
+          "lower": 0.0,
+          "upper": 0.0,
+          "valid_replicates": 10000
+        },
+        "10_net_success_difference": {
+          "lower": 0.0,
+          "upper": 0.0,
+          "valid_replicates": 10000
+        }
+      }
+    },
+    "primary_uncertainty": "uncertainty",
+    "distributions": {
+      "suite": {
+        "libero_10": {
+          "cases": 1,
+          "one_step_failures": 0,
+          "one_step_successes": 1,
+          "complete_four_arm": 1,
+          "patterns": {
+            "succeed/succeed/succeed/succeed": 1
+          },
+          "first_success_among_one_step_failures": {},
+          "first_success_rates_among_one_step_failures": {},
+          "first_success_rates_among_all_cases": {},
+          "nonmonotonic": 0,
+          "steps": {
+            "2": {
+              "paired_cases": 1,
+              "rescues": 0,
+              "regressions": 0,
+              "eligible_failures": 0,
+              "eligible_successes": 1,
+              "rescue_rate_among_failures": null,
+              "regression_rate_among_successes": 0.0,
+              "net_success_difference": 0.0
+            },
+            "4": {
+              "paired_cases": 1,
+              "rescues": 0,
+              "regressions": 0,
+              "eligible_failures": 0,
+              "eligible_successes": 1,
+              "rescue_rate_among_failures": null,
+              "regression_rate_among_successes": 0.0,
+              "net_success_difference": 0.0
+            },
+            "10": {
+              "paired_cases": 1,
+              "rescues": 0,
+              "regressions": 0,
+              "eligible_failures": 0,
+              "eligible_successes": 1,
+              "rescue_rate_among_failures": null,
+              "regression_rate_among_successes": 0.0,
+              "net_success_difference": 0.0
+            }
+          }
+        },
+        "libero_goal": {
+          "cases": 1,
+          "one_step_failures": 0,
+          "one_step_successes": 1,
+          "complete_four_arm": 1,
+          "patterns": {
+            "succeed/succeed/succeed/succeed": 1
+          },
+          "first_success_among_one_step_failures": {},
+          "first_success_rates_among_one_step_failures": {},
+          "first_success_rates_among_all_cases": {},
+          "nonmonotonic": 0,
+          "steps": {
+            "2": {
+              "paired_cases": 1,
+              "rescues": 0,
+              "regressions": 0,
+              "eligible_failures": 0,
+              "eligible_successes": 1,
+              "rescue_rate_among_failures": null,
+              "regression_rate_among_successes": 0.0,
+              "net_success_difference": 0.0
+            },
+            "4": {
+              "paired_cases": 1,
+              "rescues": 0,
+              "regressions": 0,
+              "eligible_failures": 0,
+              "eligible_successes": 1,
+              "rescue_rate_among_failures": null,
+              "regression_rate_among_successes": 0.0,
+              "net_success_difference": 0.0
+            },
+            "10": {
+              "paired_cases": 1,
+              "rescues": 0,
+              "regressions": 0,
+              "eligible_failures": 0,
+              "eligible_successes": 1,
+              "rescue_rate_among_failures": null,
+              "regression_rate_among_successes": 0.0,
+              "net_success_difference": 0.0
+            }
+          }
+        },
+        "libero_object": {
+          "cases": 1,
+          "one_step_failures": 0,
+          "one_step_successes": 1,
+          "complete_four_arm": 1,
+          "patterns": {
+            "succeed/succeed/succeed/succeed": 1
+          },
+          "first_success_among_one_step_failures": {},
+          "first_success_rates_among_one_step_failures": {},
+          "first_success_rates_among_all_cases": {},
+          "nonmonotonic": 0,
+          "steps": {
+            "2": {
+              "paired_cases": 1,
+              "rescues": 0,
+              "regressions": 0,
+              "eligible_failures": 0,
+              "eligible_successes": 1,
+              "rescue_rate_among_failures": null,
+              "regression_rate_among_successes": 0.0,
+              "net_success_difference": 0.0
+            },
+            "4": {
+              "paired_cases": 1,
+              "rescues": 0,
+              "regressions": 0,
+              "eligible_failures": 0,
+              "eligible_successes": 1,
+              "rescue_rate_among_failures": null,
+              "regression_rate_among_successes": 0.0,
+              "net_success_difference": 0.0
+            },
+            "10": {
+              "paired_cases": 1,
+              "rescues": 0,
+              "regressions": 0,
+              "eligible_failures": 0,
+              "eligible_successes": 1,
+              "rescue_rate_among_failures": null,
+              "regression_rate_among_successes": 0.0,
+              "net_success_difference": 0.0
+            }
+          }
+        },
+        "libero_spatial": {
+          "cases": 1,
+          "one_step_failures": 0,
+          "one_step_successes": 1,
+          "complete_four_arm": 1,
+          "patterns": {
+            "succeed/succeed/succeed/succeed": 1
+          },
+          "first_success_among_one_step_failures": {},
+          "first_success_rates_among_one_step_failures": {},
+          "first_success_rates_among_all_cases": {},
+          "nonmonotonic": 0,
+          "steps": {
+            "2": {
+              "paired_cases": 1,
+              "rescues": 0,
+              "regressions": 0,
+              "eligible_failures": 0,
+              "eligible_successes": 1,
+              "rescue_rate_among_failures": null,
+              "regression_rate_among_successes": 0.0,
+              "net_success_difference": 0.0
+            },
+            "4": {
+              "paired_cases": 1,
+              "rescues": 0,
+              "regressions": 0,
+              "eligible_failures": 0,
+              "eligible_successes": 1,
+              "rescue_rate_among_failures": null,
+              "regression_rate_among_successes": 0.0,
+              "net_success_difference": 0.0
+            },
+            "10": {
+              "paired_cases": 1,
+              "rescues": 0,
+              "regressions": 0,
+              "eligible_failures": 0,
+              "eligible_successes": 1,
+              "rescue_rate_among_failures": null,
+              "regression_rate_among_successes": 0.0,
+              "net_success_difference": 0.0
+            }
+          }
+        }
+      },
+      "family": {
+        "LIVING_ROOM_SCENE2_put_both_the_alphabet_soup_and_the_tomato_sauce_in_the_basket": {
+          "cases": 1,
+          "one_step_failures": 0,
+          "one_step_successes": 1,
+          "complete_four_arm": 1,
+          "patterns": {
+            "succeed/succeed/succeed/succeed": 1
+          },
+          "first_success_among_one_step_failures": {},
+          "first_success_rates_among_one_step_failures": {},
+          "first_success_rates_among_all_cases": {},
+          "nonmonotonic": 0,
+          "steps": {
+            "2": {
+              "paired_cases": 1,
+              "rescues": 0,
+              "regressions": 0,
+              "eligible_failures": 0,
+              "eligible_successes": 1,
+              "rescue_rate_among_failures": null,
+              "regression_rate_among_successes": 0.0,
+              "net_success_difference": 0.0
+            },
+            "4": {
+              "paired_cases": 1,
+              "rescues": 0,
+              "regressions": 0,
+              "eligible_failures": 0,
+              "eligible_successes": 1,
+              "rescue_rate_among_failures": null,
+              "regression_rate_among_successes": 0.0,
+              "net_success_difference": 0.0
+            },
+            "10": {
+              "paired_cases": 1,
+              "rescues": 0,
+              "regressions": 0,
+              "eligible_failures": 0,
+              "eligible_successes": 1,
+              "rescue_rate_among_failures": null,
+              "regression_rate_among_successes": 0.0,
+              "net_success_difference": 0.0
+            }
+          }
+        },
+        "open_the_middle_drawer_of_the_cabinet": {
+          "cases": 1,
+          "one_step_failures": 0,
+          "one_step_successes": 1,
+          "complete_four_arm": 1,
+          "patterns": {
+            "succeed/succeed/succeed/succeed": 1
+          },
+          "first_success_among_one_step_failures": {},
+          "first_success_rates_among_one_step_failures": {},
+          "first_success_rates_among_all_cases": {},
+          "nonmonotonic": 0,
+          "steps": {
+            "2": {
+              "paired_cases": 1,
+              "rescues": 0,
+              "regressions": 0,
+              "eligible_failures": 0,
+              "eligible_successes": 1,
+              "rescue_rate_among_failures": null,
+              "regression_rate_among_successes": 0.0,
+              "net_success_difference": 0.0
+            },
+            "4": {
+              "paired_cases": 1,
+              "rescues": 0,
+              "regressions": 0,
+              "eligible_failures": 0,
+              "eligible_successes": 1,
+              "rescue_rate_among_failures": null,
+              "regression_rate_among_successes": 0.0,
+              "net_success_difference": 0.0
+            },
+            "10": {
+              "paired_cases": 1,
+              "rescues": 0,
+              "regressions": 0,
+              "eligible_failures": 0,
+              "eligible_successes": 1,
+              "rescue_rate_among_failures": null,
+              "regression_rate_among_successes": 0.0,
+              "net_success_difference": 0.0
+            }
+          }
+        },
+        "pick_up_the_alphabet_soup_and_place_it_in_the_basket": {
+          "cases": 1,
+          "one_step_failures": 0,
+          "one_step_successes": 1,
+          "complete_four_arm": 1,
+          "patterns": {
+            "succeed/succeed/succeed/succeed": 1
+          },
+          "first_success_among_one_step_failures": {},
+          "first_success_rates_among_one_step_failures": {},
+          "first_success_rates_among_all_cases": {},
+          "nonmonotonic": 0,
+          "steps": {
+            "2": {
+              "paired_cases": 1,
+              "rescues": 0,
+              "regressions": 0,
+              "eligible_failures": 0,
+              "eligible_successes": 1,
+              "rescue_rate_among_failures": null,
+              "regression_rate_among_successes": 0.0,
+              "net_success_difference": 0.0
+            },
+            "4": {
+              "paired_cases": 1,
+              "rescues": 0,
+              "regressions": 0,
+              "eligible_failures": 0,
+              "eligible_successes": 1,
+              "rescue_rate_among_failures": null,
+              "regression_rate_among_successes": 0.0,
+              "net_success_difference": 0.0
+            },
+            "10": {
+              "paired_cases": 1,
+              "rescues": 0,
+              "regressions": 0,
+              "eligible_failures": 0,
+              "eligible_successes": 1,
+              "rescue_rate_among_failures": null,
+              "regression_rate_among_successes": 0.0,
+              "net_success_difference": 0.0
+            }
+          }
+        },
+        "pick_up_the_black_bowl_between_the_plate_and_the_ramekin_and_place_it_on_the_plate": {
+          "cases": 1,
+          "one_step_failures": 0,
+          "one_step_successes": 1,
+          "complete_four_arm": 1,
+          "patterns": {
+            "succeed/succeed/succeed/succeed": 1
+          },
+          "first_success_among_one_step_failures": {},
+          "first_success_rates_among_one_step_failures": {},
+          "first_success_rates_among_all_cases": {},
+          "nonmonotonic": 0,
+          "steps": {
+            "2": {
+              "paired_cases": 1,
+              "rescues": 0,
+              "regressions": 0,
+              "eligible_failures": 0,
+              "eligible_successes": 1,
+              "rescue_rate_among_failures": null,
+              "regression_rate_among_successes": 0.0,
+              "net_success_difference": 0.0
+            },
+            "4": {
+              "paired_cases": 1,
+              "rescues": 0,
+              "regressions": 0,
+              "eligible_failures": 0,
+              "eligible_successes": 1,
+              "rescue_rate_among_failures": null,
+              "regression_rate_among_successes": 0.0,
+              "net_success_difference": 0.0
+            },
+            "10": {
+              "paired_cases": 1,
+              "rescues": 0,
+              "regressions": 0,
+              "eligible_failures": 0,
+              "eligible_successes": 1,
+              "rescue_rate_among_failures": null,
+              "regression_rate_among_successes": 0.0,
+              "net_success_difference": 0.0
+            }
+          }
+        }
+      },
+      "category": {
+        "standard": {
+          "cases": 4,
+          "one_step_failures": 0,
+          "one_step_successes": 4,
+          "complete_four_arm": 4,
+          "patterns": {
+            "succeed/succeed/succeed/succeed": 4
+          },
+          "first_success_among_one_step_failures": {},
+          "first_success_rates_among_one_step_failures": {},
+          "first_success_rates_among_all_cases": {},
+          "nonmonotonic": 0,
+          "steps": {
+            "2": {
+              "paired_cases": 4,
+              "rescues": 0,
+              "regressions": 0,
+              "eligible_failures": 0,
+              "eligible_successes": 4,
+              "rescue_rate_among_failures": null,
+              "regression_rate_among_successes": 0.0,
+              "net_success_difference": 0.0
+            },
+            "4": {
+              "paired_cases": 4,
+              "rescues": 0,
+              "regressions": 0,
+              "eligible_failures": 0,
+              "eligible_successes": 4,
+              "rescue_rate_among_failures": null,
+              "regression_rate_among_successes": 0.0,
+              "net_success_difference": 0.0
+            },
+            "10": {
+              "paired_cases": 4,
+              "rescues": 0,
+              "regressions": 0,
+              "eligible_failures": 0,
+              "eligible_successes": 4,
+              "rescue_rate_among_failures": null,
+              "regression_rate_among_successes": 0.0,
+              "net_success_difference": 0.0
+            }
+          }
+        }
+      },
+      "severity": {
+        "0": {
+          "cases": 4,
+          "one_step_failures": 0,
+          "one_step_successes": 4,
+          "complete_four_arm": 4,
+          "patterns": {
+            "succeed/succeed/succeed/succeed": 4
+          },
+          "first_success_among_one_step_failures": {},
+          "first_success_rates_among_one_step_failures": {},
+          "first_success_rates_among_all_cases": {},
+          "nonmonotonic": 0,
+          "steps": {
+            "2": {
+              "paired_cases": 4,
+              "rescues": 0,
+              "regressions": 0,
+              "eligible_failures": 0,
+              "eligible_successes": 4,
+              "rescue_rate_among_failures": null,
+              "regression_rate_among_successes": 0.0,
+              "net_success_difference": 0.0
+            },
+            "4": {
+              "paired_cases": 4,
+              "rescues": 0,
+              "regressions": 0,
+              "eligible_failures": 0,
+              "eligible_successes": 4,
+              "rescue_rate_among_failures": null,
+              "regression_rate_among_successes": 0.0,
+              "net_success_difference": 0.0
+            },
+            "10": {
+              "paired_cases": 4,
+              "rescues": 0,
+              "regressions": 0,
+              "eligible_failures": 0,
+              "eligible_successes": 4,
+              "rescue_rate_among_failures": null,
+              "regression_rate_among_successes": 0.0,
+              "net_success_difference": 0.0
+            }
+          }
+        }
+      },
+      "condition_id": {
+        "libero:libero_10:0": {
+          "cases": 1,
+          "one_step_failures": 0,
+          "one_step_successes": 1,
+          "complete_four_arm": 1,
+          "patterns": {
+            "succeed/succeed/succeed/succeed": 1
+          },
+          "first_success_among_one_step_failures": {},
+          "first_success_rates_among_one_step_failures": {},
+          "first_success_rates_among_all_cases": {},
+          "nonmonotonic": 0,
+          "steps": {
+            "2": {
+              "paired_cases": 1,
+              "rescues": 0,
+              "regressions": 0,
+              "eligible_failures": 0,
+              "eligible_successes": 1,
+              "rescue_rate_among_failures": null,
+              "regression_rate_among_successes": 0.0,
+              "net_success_difference": 0.0
+            },
+            "4": {
+              "paired_cases": 1,
+              "rescues": 0,
+              "regressions": 0,
+              "eligible_failures": 0,
+              "eligible_successes": 1,
+              "rescue_rate_among_failures": null,
+              "regression_rate_among_successes": 0.0,
+              "net_success_difference": 0.0
+            },
+            "10": {
+              "paired_cases": 1,
+              "rescues": 0,
+              "regressions": 0,
+              "eligible_failures": 0,
+              "eligible_successes": 1,
+              "rescue_rate_among_failures": null,
+              "regression_rate_among_successes": 0.0,
+              "net_success_difference": 0.0
+            }
+          }
+        },
+        "libero:libero_goal:0": {
+          "cases": 1,
+          "one_step_failures": 0,
+          "one_step_successes": 1,
+          "complete_four_arm": 1,
+          "patterns": {
+            "succeed/succeed/succeed/succeed": 1
+          },
+          "first_success_among_one_step_failures": {},
+          "first_success_rates_among_one_step_failures": {},
+          "first_success_rates_among_all_cases": {},
+          "nonmonotonic": 0,
+          "steps": {
+            "2": {
+              "paired_cases": 1,
+              "rescues": 0,
+              "regressions": 0,
+              "eligible_failures": 0,
+              "eligible_successes": 1,
+              "rescue_rate_among_failures": null,
+              "regression_rate_among_successes": 0.0,
+              "net_success_difference": 0.0
+            },
+            "4": {
+              "paired_cases": 1,
+              "rescues": 0,
+              "regressions": 0,
+              "eligible_failures": 0,
+              "eligible_successes": 1,
+              "rescue_rate_among_failures": null,
+              "regression_rate_among_successes": 0.0,
+              "net_success_difference": 0.0
+            },
+            "10": {
+              "paired_cases": 1,
+              "rescues": 0,
+              "regressions": 0,
+              "eligible_failures": 0,
+              "eligible_successes": 1,
+              "rescue_rate_among_failures": null,
+              "regression_rate_among_successes": 0.0,
+              "net_success_difference": 0.0
+            }
+          }
+        },
+        "libero:libero_object:0": {
+          "cases": 1,
+          "one_step_failures": 0,
+          "one_step_successes": 1,
+          "complete_four_arm": 1,
+          "patterns": {
+            "succeed/succeed/succeed/succeed": 1
+          },
+          "first_success_among_one_step_failures": {},
+          "first_success_rates_among_one_step_failures": {},
+          "first_success_rates_among_all_cases": {},
+          "nonmonotonic": 0,
+          "steps": {
+            "2": {
+              "paired_cases": 1,
+              "rescues": 0,
+              "regressions": 0,
+              "eligible_failures": 0,
+              "eligible_successes": 1,
+              "rescue_rate_among_failures": null,
+              "regression_rate_among_successes": 0.0,
+              "net_success_difference": 0.0
+            },
+            "4": {
+              "paired_cases": 1,
+              "rescues": 0,
+              "regressions": 0,
+              "eligible_failures": 0,
+              "eligible_successes": 1,
+              "rescue_rate_among_failures": null,
+              "regression_rate_among_successes": 0.0,
+              "net_success_difference": 0.0
+            },
+            "10": {
+              "paired_cases": 1,
+              "rescues": 0,
+              "regressions": 0,
+              "eligible_failures": 0,
+              "eligible_successes": 1,
+              "rescue_rate_among_failures": null,
+              "regression_rate_among_successes": 0.0,
+              "net_success_difference": 0.0
+            }
+          }
+        },
+        "libero:libero_spatial:0": {
+          "cases": 1,
+          "one_step_failures": 0,
+          "one_step_successes": 1,
+          "complete_four_arm": 1,
+          "patterns": {
+            "succeed/succeed/succeed/succeed": 1
+          },
+          "first_success_among_one_step_failures": {},
+          "first_success_rates_among_one_step_failures": {},
+          "first_success_rates_among_all_cases": {},
+          "nonmonotonic": 0,
+          "steps": {
+            "2": {
+              "paired_cases": 1,
+              "rescues": 0,
+              "regressions": 0,
+              "eligible_failures": 0,
+              "eligible_successes": 1,
+              "rescue_rate_among_failures": null,
+              "regression_rate_among_successes": 0.0,
+              "net_success_difference": 0.0
+            },
+            "4": {
+              "paired_cases": 1,
+              "rescues": 0,
+              "regressions": 0,
+              "eligible_failures": 0,
+              "eligible_successes": 1,
+              "rescue_rate_among_failures": null,
+              "regression_rate_among_successes": 0.0,
+              "net_success_difference": 0.0
+            },
+            "10": {
+              "paired_cases": 1,
+              "rescues": 0,
+              "regressions": 0,
+              "eligible_failures": 0,
+              "eligible_successes": 1,
+              "rescue_rate_among_failures": null,
+              "regression_rate_among_successes": 0.0,
+              "net_success_difference": 0.0
+            }
+          }
+        }
+      }
+    }
+  }
+}

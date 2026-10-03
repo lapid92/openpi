@@ -1,0 +1,2000 @@
+{
+  "benchmark": "libero",
+  "phase": "smoke",
+  "manifest_sha256": "e7537584d34855c24c1a38ca11da4f7e479b9bcbfc53d2cc7ec8f7ff46eadf9d",
+  "checkpoint_sha256": "9cd1b00d402cc0447454dad6054dcc6f019b53e498469f209d2b749d4487e1d5",
+  "benchmark_commit": "f78abd68ee283de9f9be3c8f7e2a9ad60246e95c",
+  "audit": "passed",
+  "completed_episodes": 16,
+  "error_attempts": [],
+  "error_attempt_count": 0,
+  "overall": {
+    "paired_cases": 4,
+    "conditions": 4,
+    "arms": {
+      "1": {
+        "episodes": 4,
+        "successes": 4,
+        "success_rate": 1.0,
+        "cost": {
+          "velocity_evaluations_per_chunk": {
+            "count": 128,
+            "mean": 1.0,
+            "p50": 1.0,
+            "p95": 1.0,
+            "sum": 128.0
+          },
+          "velocity_evaluations_per_episode": {
+            "count": 4,
+            "mean": 32.0,
+            "p50": 28.0,
+            "p95": 52.099999999999994,
+            "sum": 128.0
+          },
+          "total_velocity_evaluations": 128,
+          "scored_policy_call_ms": {
+            "count": 128,
+            "mean": 32.728682996093994,
+            "p50": 32.706424593925476,
+            "p95": 33.285921765491366,
+            "sum": 4189.271423500031
+          },
+          "http_request_ms": {
+            "count": 128,
+            "mean": 264.06355942526716,
+            "p50": 118.8959558494389,
+            "p95": 425.9339915122837,
+            "sum": 33800.135606434196
+          },
+          "simulator_inclusive_episode_ms": {
+            "count": 4,
+            "mean": 43889.03447438497,
+            "p50": 37998.50668036379,
+            "p95": 64319.29367315023,
+            "sum": 175556.13789753988
+          }
+        }
+      },
+      "2": {
+        "episodes": 4,
+        "successes": 4,
+        "success_rate": 1.0,
+        "cost": {
+          "velocity_evaluations_per_chunk": {
+            "count": 157,
+            "mean": 2.0,
+            "p50": 2.0,
+            "p95": 2.0,
+            "sum": 314.0
+          },
+          "velocity_evaluations_per_episode": {
+            "count": 4,
+            "mean": 78.5,
+            "p50": 56.0,
+            "p95": 153.49999999999997,
+            "sum": 314.0
+          },
+          "total_velocity_evaluations": 314,
+          "scored_policy_call_ms": {
+            "count": 157,
+            "mean": 34.556029236928865,
+            "p50": 34.548505675047636,
+            "p95": 35.057196486741304,
+            "sum": 5425.296590197831
+          },
+          "http_request_ms": {
+            "count": 157,
+            "mean": 267.97809660921143,
+            "p50": 407.84081211313605,
+            "p95": 426.0938810184598,
+            "sum": 42072.5611676462
+          },
+          "simulator_inclusive_episode_ms": {
+            "count": 4,
+            "mean": 51706.805319176055,
+            "p50": 37865.07267993875,
+            "p95": 90882.72894746621,
+            "sum": 206827.22127670422
+          }
+        },
+        "paired_vs_one": {
+          "rescues": 0,
+          "regressions": 0,
+          "ties": 4,
+          "one_step_failures": 0,
+          "fraction_one_step_failures_rescued": null,
+          "net_success_difference": 0.0,
+          "net_difference_condition_cluster_ci95": [
+            0.0,
+            0.0
+          ],
+          "rescue_condition_count": 0,
+          "assessment": "Unresolved: too few one-step failures or rescues."
+        }
+      },
+      "4": {
+        "episodes": 4,
+        "successes": 4,
+        "success_rate": 1.0,
+        "cost": {
+          "velocity_evaluations_per_chunk": {
+            "count": 138,
+            "mean": 4.0,
+            "p50": 4.0,
+            "p95": 4.0,
+            "sum": 552.0
+          },
+          "velocity_evaluations_per_episode": {
+            "count": 4,
+            "mean": 138.0,
+            "p50": 108.0,
+            "p95": 248.59999999999994,
+            "sum": 552.0
+          },
+          "total_velocity_evaluations": 552,
+          "scored_policy_call_ms": {
+            "count": 138,
+            "mean": 38.612476887478344,
+            "p50": 38.636319572106004,
+            "p95": 39.231253415346146,
+            "sum": 5328.521810472012
+          },
+          "http_request_ms": {
+            "count": 138,
+            "mean": 271.232305607502,
+            "p50": 267.70554995164275,
+            "p95": 432.63667605351657,
+            "sum": 37430.05817383528
+          },
+          "simulator_inclusive_episode_ms": {
+            "count": 4,
+            "mean": 46580.52332350053,
+            "p50": 36966.04934684001,
+            "p95": 74674.46434507145,
+            "sum": 186322.09329400212
+          }
+        },
+        "paired_vs_one": {
+          "rescues": 0,
+          "regressions": 0,
+          "ties": 4,
+          "one_step_failures": 0,
+          "fraction_one_step_failures_rescued": null,
+          "net_success_difference": 0.0,
+          "net_difference_condition_cluster_ci95": [
+            0.0,
+            0.0
+          ],
+          "rescue_condition_count": 0,
+          "assessment": "Unresolved: too few one-step failures or rescues."
+        }
+      },
+      "10": {
+        "episodes": 4,
+        "successes": 4,
+        "success_rate": 1.0,
+        "cost": {
+          "velocity_evaluations_per_chunk": {
+            "count": 138,
+            "mean": 10.0,
+            "p50": 10.0,
+            "p95": 10.0,
+            "sum": 1380.0
+          },
+          "velocity_evaluations_per_episode": {
+            "count": 4,
+            "mean": 345.0,
+            "p50": 275.0,
+            "p95": 614.4999999999999,
+            "sum": 1380.0
+          },
+          "total_velocity_evaluations": 1380,
+          "scored_policy_call_ms": {
+            "count": 138,
+            "mean": 50.559856871520914,
+            "p50": 50.57764635421336,
+            "p95": 51.284652622416615,
+            "sum": 6977.260248269886
+          },
+          "http_request_ms": {
+            "count": 138,
+            "mean": 283.04553863700426,
+            "p50": 280.85021977312863,
+            "p95": 441.96016683708876,
+            "sum": 39060.28433190659
+          },
+          "simulator_inclusive_episode_ms": {
+            "count": 4,
+            "mean": 46736.04750842787,
+            "p50": 37789.78171013296,
+            "p95": 74479.17917645535,
+            "sum": 186944.1900337115
+          }
+        },
+        "paired_vs_one": {
+          "rescues": 0,
+          "regressions": 0,
+          "ties": 4,
+          "one_step_failures": 0,
+          "fraction_one_step_failures_rescued": null,
+          "net_success_difference": 0.0,
+          "net_difference_condition_cluster_ci95": [
+            0.0,
+            0.0
+          ],
+          "rescue_condition_count": 0,
+          "assessment": "Unresolved: too few one-step failures or rescues."
+        }
+      }
+    }
+  },
+  "by_family": {
+    "LIVING_ROOM_SCENE2_put_both_the_alphabet_soup_and_the_tomato_sauce_in_the_basket": {
+      "paired_cases": 1,
+      "conditions": 1,
+      "arms": {
+        "1": {
+          "episodes": 1,
+          "successes": 1,
+          "success_rate": 1.0,
+          "cost": {
+            "velocity_evaluations_per_chunk": {
+              "count": 56,
+              "mean": 1.0,
+              "p50": 1.0,
+              "p95": 1.0,
+              "sum": 56.0
+            },
+            "velocity_evaluations_per_episode": {
+              "count": 1,
+              "mean": 56.0,
+              "p50": 56.0,
+              "p95": 56.0,
+              "sum": 56.0
+            },
+            "total_velocity_evaluations": 56,
+            "scored_policy_call_ms": {
+              "count": 56,
+              "mean": 32.88203151896596,
+              "p50": 32.888023648411036,
+              "p95": 33.27697212807834,
+              "sum": 1841.3937650620937
+            },
+            "http_request_ms": {
+              "count": 56,
+              "mean": 266.051538238701,
+              "p50": 263.39494809508324,
+              "p95": 421.8075155513361,
+              "sum": 14898.886141367257
+            },
+            "simulator_inclusive_episode_ms": {
+              "count": 1,
+              "mean": 68765.7915870659,
+              "p50": 68765.7915870659,
+              "p95": 68765.7915870659,
+              "sum": 68765.7915870659
+            }
+          }
+        },
+        "2": {
+          "episodes": 1,
+          "successes": 1,
+          "success_rate": 1.0,
+          "cost": {
+            "velocity_evaluations_per_chunk": {
+              "count": 85,
+              "mean": 2.0,
+              "p50": 2.0,
+              "p95": 2.0,
+              "sum": 170.0
+            },
+            "velocity_evaluations_per_episode": {
+              "count": 1,
+              "mean": 170.0,
+              "p50": 170.0,
+              "p95": 170.0,
+              "sum": 170.0
+            },
+            "total_velocity_evaluations": 170,
+            "scored_policy_call_ms": {
+              "count": 85,
+              "mean": 34.547550806446985,
+              "p50": 34.50316609814763,
+              "p95": 35.07682103663683,
+              "sum": 2936.541818547994
+            },
+            "http_request_ms": {
+              "count": 85,
+              "mean": 270.3566609553116,
+              "p50": 413.36841508746147,
+              "p95": 424.901029933244,
+              "sum": 22980.316181201488
+            },
+            "simulator_inclusive_episode_ms": {
+              "count": 1,
+              "mean": 100068.18652478978,
+              "p50": 100068.18652478978,
+              "p95": 100068.18652478978,
+              "sum": 100068.18652478978
+            }
+          },
+          "paired_vs_one": {
+            "rescues": 0,
+            "regressions": 0,
+            "ties": 1,
+            "one_step_failures": 0,
+            "fraction_one_step_failures_rescued": null,
+            "net_success_difference": 0.0,
+            "net_difference_condition_cluster_ci95": null,
+            "rescue_condition_count": 0,
+            "assessment": "Unresolved: too few one-step failures or rescues."
+          }
+        },
+        "4": {
+          "episodes": 1,
+          "successes": 1,
+          "success_rate": 1.0,
+          "cost": {
+            "velocity_evaluations_per_chunk": {
+              "count": 68,
+              "mean": 4.0,
+              "p50": 4.0,
+              "p95": 4.0,
+              "sum": 272.0
+            },
+            "velocity_evaluations_per_episode": {
+              "count": 1,
+              "mean": 272.0,
+              "p50": 272.0,
+              "p95": 272.0,
+              "sum": 272.0
+            },
+            "total_velocity_evaluations": 272,
+            "scored_policy_call_ms": {
+              "count": 68,
+              "mean": 38.794799331192145,
+              "p50": 38.81003777496517,
+              "p95": 39.25743268337101,
+              "sum": 2638.046354521066
+            },
+            "http_request_ms": {
+              "count": 68,
+              "mean": 272.8579510071808,
+              "p50": 271.0853887256235,
+              "p95": 435.6690437765792,
+              "sum": 18554.340668488294
+            },
+            "simulator_inclusive_episode_ms": {
+              "count": 1,
+              "mean": 81175.62386021018,
+              "p50": 81175.62386021018,
+              "p95": 81175.62386021018,
+              "sum": 81175.62386021018
+            }
+          },
+          "paired_vs_one": {
+            "rescues": 0,
+            "regressions": 0,
+            "ties": 1,
+            "one_step_failures": 0,
+            "fraction_one_step_failures_rescued": null,
+            "net_success_difference": 0.0,
+            "net_difference_condition_cluster_ci95": null,
+            "rescue_condition_count": 0,
+            "assessment": "Unresolved: too few one-step failures or rescues."
+          }
+        },
+        "10": {
+          "episodes": 1,
+          "successes": 1,
+          "success_rate": 1.0,
+          "cost": {
+            "velocity_evaluations_per_chunk": {
+              "count": 67,
+              "mean": 10.0,
+              "p50": 10.0,
+              "p95": 10.0,
+              "sum": 670.0
+            },
+            "velocity_evaluations_per_episode": {
+              "count": 1,
+              "mean": 670.0,
+              "p50": 670.0,
+              "p95": 670.0,
+              "sum": 670.0
+            },
+            "total_velocity_evaluations": 670,
+            "scored_policy_call_ms": {
+              "count": 67,
+              "mean": 50.54735349241032,
+              "p50": 50.52301799878478,
+              "p95": 51.353039778769016,
+              "sum": 3386.672683991492
+            },
+            "http_request_ms": {
+              "count": 67,
+              "mean": 281.75052307518337,
+              "p50": 134.23646474257112,
+              "p95": 443.36695838719606,
+              "sum": 18877.285046037287
+            },
+            "simulator_inclusive_episode_ms": {
+              "count": 1,
+              "mean": 80824.64182982221,
+              "p50": 80824.64182982221,
+              "p95": 80824.64182982221,
+              "sum": 80824.64182982221
+            }
+          },
+          "paired_vs_one": {
+            "rescues": 0,
+            "regressions": 0,
+            "ties": 1,
+            "one_step_failures": 0,
+            "fraction_one_step_failures_rescued": null,
+            "net_success_difference": 0.0,
+            "net_difference_condition_cluster_ci95": null,
+            "rescue_condition_count": 0,
+            "assessment": "Unresolved: too few one-step failures or rescues."
+          }
+        }
+      }
+    },
+    "open_the_middle_drawer_of_the_cabinet": {
+      "paired_cases": 1,
+      "conditions": 1,
+      "arms": {
+        "1": {
+          "episodes": 1,
+          "successes": 1,
+          "success_rate": 1.0,
+          "cost": {
+            "velocity_evaluations_per_chunk": {
+              "count": 26,
+              "mean": 1.0,
+              "p50": 1.0,
+              "p95": 1.0,
+              "sum": 26.0
+            },
+            "velocity_evaluations_per_episode": {
+              "count": 1,
+              "mean": 26.0,
+              "p50": 26.0,
+              "p95": 26.0,
+              "sum": 26.0
+            },
+            "total_velocity_evaluations": 26,
+            "scored_policy_call_ms": {
+              "count": 26,
+              "mean": 32.355026968826465,
+              "p50": 32.378019066527486,
+              "p95": 32.57896506693214,
+              "sum": 841.2307011894882
+            },
+            "http_request_ms": {
+              "count": 26,
+              "mean": 268.93474521616906,
+              "p50": 268.921508686617,
+              "p95": 426.5056572621688,
+              "sum": 6992.303375620395
+            },
+            "simulator_inclusive_episode_ms": {
+              "count": 1,
+              "mean": 39122.47216096148,
+              "p50": 39122.47216096148,
+              "p95": 39122.47216096148,
+              "sum": 39122.47216096148
+            }
+          }
+        },
+        "2": {
+          "episodes": 1,
+          "successes": 1,
+          "success_rate": 1.0,
+          "cost": {
+            "velocity_evaluations_per_chunk": {
+              "count": 26,
+              "mean": 2.0,
+              "p50": 2.0,
+              "p95": 2.0,
+              "sum": 52.0
+            },
+            "velocity_evaluations_per_episode": {
+              "count": 1,
+              "mean": 52.0,
+              "p50": 52.0,
+              "p95": 52.0,
+              "sum": 52.0
+            },
+            "total_velocity_evaluations": 52,
+            "scored_policy_call_ms": {
+              "count": 26,
+              "mean": 34.542959058084165,
+              "p50": 34.56554654985666,
+              "p95": 34.93661666288972,
+              "sum": 898.1169355101883
+            },
+            "http_request_ms": {
+              "count": 26,
+              "mean": 268.18524530300726,
+              "p50": 267.2219118103385,
+              "p95": 429.8573463456705,
+              "sum": 6972.816377878189
+            },
+            "simulator_inclusive_episode_ms": {
+              "count": 1,
+              "mean": 38831.80267596617,
+              "p50": 38831.80267596617,
+              "p95": 38831.80267596617,
+              "sum": 38831.80267596617
+            }
+          },
+          "paired_vs_one": {
+            "rescues": 0,
+            "regressions": 0,
+            "ties": 1,
+            "one_step_failures": 0,
+            "fraction_one_step_failures_rescued": null,
+            "net_success_difference": 0.0,
+            "net_difference_condition_cluster_ci95": null,
+            "rescue_condition_count": 0,
+            "assessment": "Unresolved: too few one-step failures or rescues."
+          }
+        },
+        "4": {
+          "episodes": 1,
+          "successes": 1,
+          "success_rate": 1.0,
+          "cost": {
+            "velocity_evaluations_per_chunk": {
+              "count": 25,
+              "mean": 4.0,
+              "p50": 4.0,
+              "p95": 4.0,
+              "sum": 100.0
+            },
+            "velocity_evaluations_per_episode": {
+              "count": 1,
+              "mean": 100.0,
+              "p50": 100.0,
+              "p95": 100.0,
+              "sum": 100.0
+            },
+            "total_velocity_evaluations": 100,
+            "scored_policy_call_ms": {
+              "count": 25,
+              "mean": 38.03039075806737,
+              "p50": 37.99005597829819,
+              "p95": 38.54742357507348,
+              "sum": 950.7597689516842
+            },
+            "http_request_ms": {
+              "count": 25,
+              "mean": 263.0721002817154,
+              "p50": 120.81254972144961,
+              "p95": 424.3450628593564,
+              "sum": 6576.802507042885
+            },
+            "simulator_inclusive_episode_ms": {
+              "count": 1,
+              "mean": 37834.56042595208,
+              "p50": 37834.56042595208,
+              "p95": 37834.56042595208,
+              "sum": 37834.56042595208
+            }
+          },
+          "paired_vs_one": {
+            "rescues": 0,
+            "regressions": 0,
+            "ties": 1,
+            "one_step_failures": 0,
+            "fraction_one_step_failures_rescued": null,
+            "net_success_difference": 0.0,
+            "net_difference_condition_cluster_ci95": null,
+            "rescue_condition_count": 0,
+            "assessment": "Unresolved: too few one-step failures or rescues."
+          }
+        },
+        "10": {
+          "episodes": 1,
+          "successes": 1,
+          "success_rate": 1.0,
+          "cost": {
+            "velocity_evaluations_per_chunk": {
+              "count": 25,
+              "mean": 10.0,
+              "p50": 10.0,
+              "p95": 10.0,
+              "sum": 250.0
+            },
+            "velocity_evaluations_per_episode": {
+              "count": 1,
+              "mean": 250.0,
+              "p50": 250.0,
+              "p95": 250.0,
+              "sum": 250.0
+            },
+            "total_velocity_evaluations": 250,
+            "scored_policy_call_ms": {
+              "count": 25,
+              "mean": 50.42859150096774,
+              "p50": 50.352985970675945,
+              "p95": 51.13220922648907,
+              "sum": 1260.7147875241935
+            },
+            "http_request_ms": {
+              "count": 25,
+              "mean": 289.51693085953593,
+              "p50": 428.51411923766136,
+              "p95": 442.5393844023347,
+              "sum": 7237.923271488398
+            },
+            "simulator_inclusive_episode_ms": {
+              "count": 1,
+              "mean": 38521.55747404322,
+              "p50": 38521.55747404322,
+              "p95": 38521.55747404322,
+              "sum": 38521.55747404322
+            }
+          },
+          "paired_vs_one": {
+            "rescues": 0,
+            "regressions": 0,
+            "ties": 1,
+            "one_step_failures": 0,
+            "fraction_one_step_failures_rescued": null,
+            "net_success_difference": 0.0,
+            "net_difference_condition_cluster_ci95": null,
+            "rescue_condition_count": 0,
+            "assessment": "Unresolved: too few one-step failures or rescues."
+          }
+        }
+      }
+    },
+    "pick_up_the_alphabet_soup_and_place_it_in_the_basket": {
+      "paired_cases": 1,
+      "conditions": 1,
+      "arms": {
+        "1": {
+          "episodes": 1,
+          "successes": 1,
+          "success_rate": 1.0,
+          "cost": {
+            "velocity_evaluations_per_chunk": {
+              "count": 30,
+              "mean": 1.0,
+              "p50": 1.0,
+              "p95": 1.0,
+              "sum": 30.0
+            },
+            "velocity_evaluations_per_episode": {
+              "count": 1,
+              "mean": 30.0,
+              "p50": 30.0,
+              "p95": 30.0,
+              "sum": 30.0
+            },
+            "total_velocity_evaluations": 30,
+            "scored_policy_call_ms": {
+              "count": 30,
+              "mean": 32.68529109967252,
+              "p50": 32.640676479786634,
+              "p95": 33.20712244603783,
+              "sum": 980.5587329901755
+            },
+            "http_request_ms": {
+              "count": 30,
+              "mean": 265.1837320377429,
+              "p50": 263.3167749736458,
+              "p95": 422.7802680572495,
+              "sum": 7955.511961132288
+            },
+            "simulator_inclusive_episode_ms": {
+              "count": 1,
+              "mean": 36874.5411997661,
+              "p50": 36874.5411997661,
+              "p95": 36874.5411997661,
+              "sum": 36874.5411997661
+            }
+          }
+        },
+        "2": {
+          "episodes": 1,
+          "successes": 1,
+          "success_rate": 1.0,
+          "cost": {
+            "velocity_evaluations_per_chunk": {
+              "count": 30,
+              "mean": 2.0,
+              "p50": 2.0,
+              "p95": 2.0,
+              "sum": 60.0
+            },
+            "velocity_evaluations_per_episode": {
+              "count": 1,
+              "mean": 60.0,
+              "p50": 60.0,
+              "p95": 60.0,
+              "sum": 60.0
+            },
+            "total_velocity_evaluations": 60,
+            "scored_policy_call_ms": {
+              "count": 30,
+              "mean": 34.51700868705908,
+              "p50": 34.532392397522926,
+              "p95": 34.891020762734115,
+              "sum": 1035.5102606117725
+            },
+            "http_request_ms": {
+              "count": 30,
+              "mean": 263.04925625833374,
+              "p50": 260.1332098711282,
+              "p95": 418.91601260285825,
+              "sum": 7891.477687750012
+            },
+            "simulator_inclusive_episode_ms": {
+              "count": 1,
+              "mean": 36898.34268391132,
+              "p50": 36898.34268391132,
+              "p95": 36898.34268391132,
+              "sum": 36898.34268391132
+            }
+          },
+          "paired_vs_one": {
+            "rescues": 0,
+            "regressions": 0,
+            "ties": 1,
+            "one_step_failures": 0,
+            "fraction_one_step_failures_rescued": null,
+            "net_success_difference": 0.0,
+            "net_difference_condition_cluster_ci95": null,
+            "rescue_condition_count": 0,
+            "assessment": "Unresolved: too few one-step failures or rescues."
+          }
+        },
+        "4": {
+          "episodes": 1,
+          "successes": 1,
+          "success_rate": 1.0,
+          "cost": {
+            "velocity_evaluations_per_chunk": {
+              "count": 29,
+              "mean": 4.0,
+              "p50": 4.0,
+              "p95": 4.0,
+              "sum": 116.0
+            },
+            "velocity_evaluations_per_episode": {
+              "count": 1,
+              "mean": 116.0,
+              "p50": 116.0,
+              "p95": 116.0,
+              "sum": 116.0
+            },
+            "total_velocity_evaluations": 116,
+            "scored_policy_call_ms": {
+              "count": 29,
+              "mean": 38.60591846550333,
+              "p50": 38.5385537520051,
+              "p95": 39.02149302884936,
+              "sum": 1119.5716354995966
+            },
+            "http_request_ms": {
+              "count": 29,
+              "mean": 274.9943596888976,
+              "p50": 418.532055336982,
+              "p95": 427.6784681715071,
+              "sum": 7974.83643097803
+            },
+            "simulator_inclusive_episode_ms": {
+              "count": 1,
+              "mean": 36097.53826772794,
+              "p50": 36097.53826772794,
+              "p95": 36097.53826772794,
+              "sum": 36097.53826772794
+            }
+          },
+          "paired_vs_one": {
+            "rescues": 0,
+            "regressions": 0,
+            "ties": 1,
+            "one_step_failures": 0,
+            "fraction_one_step_failures_rescued": null,
+            "net_success_difference": 0.0,
+            "net_difference_condition_cluster_ci95": null,
+            "rescue_condition_count": 0,
+            "assessment": "Unresolved: too few one-step failures or rescues."
+          }
+        },
+        "10": {
+          "episodes": 1,
+          "successes": 1,
+          "success_rate": 1.0,
+          "cost": {
+            "velocity_evaluations_per_chunk": {
+              "count": 30,
+              "mean": 10.0,
+              "p50": 10.0,
+              "p95": 10.0,
+              "sum": 300.0
+            },
+            "velocity_evaluations_per_episode": {
+              "count": 1,
+              "mean": 300.0,
+              "p50": 300.0,
+              "p95": 300.0,
+              "sum": 300.0
+            },
+            "total_velocity_evaluations": 300,
+            "scored_policy_call_ms": {
+              "count": 30,
+              "mean": 50.502023954565324,
+              "p50": 50.49659381620586,
+              "p95": 50.99117965437472,
+              "sum": 1515.0607186369598
+            },
+            "http_request_ms": {
+              "count": 30,
+              "mean": 281.86211669817567,
+              "p50": 282.15347649529576,
+              "p95": 438.37131939362735,
+              "sum": 8455.86350094527
+            },
+            "simulator_inclusive_episode_ms": {
+              "count": 1,
+              "mean": 37058.00594622269,
+              "p50": 37058.00594622269,
+              "p95": 37058.00594622269,
+              "sum": 37058.00594622269
+            }
+          },
+          "paired_vs_one": {
+            "rescues": 0,
+            "regressions": 0,
+            "ties": 1,
+            "one_step_failures": 0,
+            "fraction_one_step_failures_rescued": null,
+            "net_success_difference": 0.0,
+            "net_difference_condition_cluster_ci95": null,
+            "rescue_condition_count": 0,
+            "assessment": "Unresolved: too few one-step failures or rescues."
+          }
+        }
+      }
+    },
+    "pick_up_the_black_bowl_between_the_plate_and_the_ramekin_and_place_it_on_the_plate": {
+      "paired_cases": 1,
+      "conditions": 1,
+      "arms": {
+        "1": {
+          "episodes": 1,
+          "successes": 1,
+          "success_rate": 1.0,
+          "cost": {
+            "velocity_evaluations_per_chunk": {
+              "count": 16,
+              "mean": 1.0,
+              "p50": 1.0,
+              "p95": 1.0,
+              "sum": 16.0
+            },
+            "velocity_evaluations_per_episode": {
+              "count": 1,
+              "mean": 16.0,
+              "p50": 16.0,
+              "p95": 16.0,
+              "sum": 16.0
+            },
+            "total_velocity_evaluations": 16,
+            "scored_policy_call_ms": {
+              "count": 16,
+              "mean": 32.880514016142115,
+              "p50": 32.89177641272545,
+              "p95": 33.612076309509575,
+              "sum": 526.0882242582738
+            },
+            "http_request_ms": {
+              "count": 16,
+              "mean": 247.08963301964104,
+              "p50": 117.33699473552406,
+              "p95": 432.0065180072561,
+              "sum": 3953.4341283142567
+            },
+            "simulator_inclusive_episode_ms": {
+              "count": 1,
+              "mean": 30793.3329497464,
+              "p50": 30793.3329497464,
+              "p95": 30793.3329497464,
+              "sum": 30793.3329497464
+            }
+          }
+        },
+        "2": {
+          "episodes": 1,
+          "successes": 1,
+          "success_rate": 1.0,
+          "cost": {
+            "velocity_evaluations_per_chunk": {
+              "count": 16,
+              "mean": 2.0,
+              "p50": 2.0,
+              "p95": 2.0,
+              "sum": 32.0
+            },
+            "velocity_evaluations_per_episode": {
+              "count": 1,
+              "mean": 32.0,
+              "p50": 32.0,
+              "p95": 32.0,
+              "sum": 32.0
+            },
+            "total_velocity_evaluations": 32,
+            "scored_policy_call_ms": {
+              "count": 16,
+              "mean": 34.69547347049229,
+              "p50": 34.72363296896219,
+              "p95": 34.96282803826034,
+              "sum": 555.1275755278766
+            },
+            "http_request_ms": {
+              "count": 16,
+              "mean": 264.24693255103193,
+              "p50": 261.02426182478666,
+              "p95": 423.8830184331164,
+              "sum": 4227.950920816511
+            },
+            "simulator_inclusive_episode_ms": {
+              "count": 1,
+              "mean": 31028.889392036945,
+              "p50": 31028.889392036945,
+              "p95": 31028.889392036945,
+              "sum": 31028.889392036945
+            }
+          },
+          "paired_vs_one": {
+            "rescues": 0,
+            "regressions": 0,
+            "ties": 1,
+            "one_step_failures": 0,
+            "fraction_one_step_failures_rescued": null,
+            "net_success_difference": 0.0,
+            "net_difference_condition_cluster_ci95": null,
+            "rescue_condition_count": 0,
+            "assessment": "Unresolved: too few one-step failures or rescues."
+          }
+        },
+        "4": {
+          "episodes": 1,
+          "successes": 1,
+          "success_rate": 1.0,
+          "cost": {
+            "velocity_evaluations_per_chunk": {
+              "count": 16,
+              "mean": 4.0,
+              "p50": 4.0,
+              "p95": 4.0,
+              "sum": 64.0
+            },
+            "velocity_evaluations_per_episode": {
+              "count": 1,
+              "mean": 64.0,
+              "p50": 64.0,
+              "p95": 64.0,
+              "sum": 64.0
+            },
+            "total_velocity_evaluations": 64,
+            "scored_policy_call_ms": {
+              "count": 16,
+              "mean": 38.75900321872905,
+              "p50": 38.71405008248985,
+              "p95": 39.19696295633912,
+              "sum": 620.1440514996648
+            },
+            "http_request_ms": {
+              "count": 16,
+              "mean": 270.2549104578793,
+              "p50": 266.59662718884647,
+              "p95": 437.41958192549646,
+              "sum": 4324.078567326069
+            },
+            "simulator_inclusive_episode_ms": {
+              "count": 1,
+              "mean": 31214.370740111917,
+              "p50": 31214.370740111917,
+              "p95": 31214.370740111917,
+              "sum": 31214.370740111917
+            }
+          },
+          "paired_vs_one": {
+            "rescues": 0,
+            "regressions": 0,
+            "ties": 1,
+            "one_step_failures": 0,
+            "fraction_one_step_failures_rescued": null,
+            "net_success_difference": 0.0,
+            "net_difference_condition_cluster_ci95": null,
+            "rescue_condition_count": 0,
+            "assessment": "Unresolved: too few one-step failures or rescues."
+          }
+        },
+        "10": {
+          "episodes": 1,
+          "successes": 1,
+          "success_rate": 1.0,
+          "cost": {
+            "velocity_evaluations_per_chunk": {
+              "count": 16,
+              "mean": 10.0,
+              "p50": 10.0,
+              "p95": 10.0,
+              "sum": 160.0
+            },
+            "velocity_evaluations_per_episode": {
+              "count": 1,
+              "mean": 160.0,
+              "p50": 160.0,
+              "p95": 160.0,
+              "sum": 160.0
+            },
+            "total_velocity_evaluations": 160,
+            "scored_policy_call_ms": {
+              "count": 16,
+              "mean": 50.92575363232754,
+              "p50": 50.85610249079764,
+              "p95": 51.36577598750591,
+              "sum": 814.8120581172407
+            },
+            "http_request_ms": {
+              "count": 16,
+              "mean": 280.575782089727,
+              "p50": 279.33107200078666,
+              "p95": 436.53345899656415,
+              "sum": 4489.212513435632
+            },
+            "simulator_inclusive_episode_ms": {
+              "count": 1,
+              "mean": 30539.984783623368,
+              "p50": 30539.984783623368,
+              "p95": 30539.984783623368,
+              "sum": 30539.984783623368
+            }
+          },
+          "paired_vs_one": {
+            "rescues": 0,
+            "regressions": 0,
+            "ties": 1,
+            "one_step_failures": 0,
+            "fraction_one_step_failures_rescued": null,
+            "net_success_difference": 0.0,
+            "net_difference_condition_cluster_ci95": null,
+            "rescue_condition_count": 0,
+            "assessment": "Unresolved: too few one-step failures or rescues."
+          }
+        }
+      }
+    }
+  },
+  "by_condition": {
+    "libero:libero_10:0": {
+      "paired_cases": 1,
+      "conditions": 1,
+      "arms": {
+        "1": {
+          "episodes": 1,
+          "successes": 1,
+          "success_rate": 1.0,
+          "cost": {
+            "velocity_evaluations_per_chunk": {
+              "count": 56,
+              "mean": 1.0,
+              "p50": 1.0,
+              "p95": 1.0,
+              "sum": 56.0
+            },
+            "velocity_evaluations_per_episode": {
+              "count": 1,
+              "mean": 56.0,
+              "p50": 56.0,
+              "p95": 56.0,
+              "sum": 56.0
+            },
+            "total_velocity_evaluations": 56,
+            "scored_policy_call_ms": {
+              "count": 56,
+              "mean": 32.88203151896596,
+              "p50": 32.888023648411036,
+              "p95": 33.27697212807834,
+              "sum": 1841.3937650620937
+            },
+            "http_request_ms": {
+              "count": 56,
+              "mean": 266.051538238701,
+              "p50": 263.39494809508324,
+              "p95": 421.8075155513361,
+              "sum": 14898.886141367257
+            },
+            "simulator_inclusive_episode_ms": {
+              "count": 1,
+              "mean": 68765.7915870659,
+              "p50": 68765.7915870659,
+              "p95": 68765.7915870659,
+              "sum": 68765.7915870659
+            }
+          }
+        },
+        "2": {
+          "episodes": 1,
+          "successes": 1,
+          "success_rate": 1.0,
+          "cost": {
+            "velocity_evaluations_per_chunk": {
+              "count": 85,
+              "mean": 2.0,
+              "p50": 2.0,
+              "p95": 2.0,
+              "sum": 170.0
+            },
+            "velocity_evaluations_per_episode": {
+              "count": 1,
+              "mean": 170.0,
+              "p50": 170.0,
+              "p95": 170.0,
+              "sum": 170.0
+            },
+            "total_velocity_evaluations": 170,
+            "scored_policy_call_ms": {
+              "count": 85,
+              "mean": 34.547550806446985,
+              "p50": 34.50316609814763,
+              "p95": 35.07682103663683,
+              "sum": 2936.541818547994
+            },
+            "http_request_ms": {
+              "count": 85,
+              "mean": 270.3566609553116,
+              "p50": 413.36841508746147,
+              "p95": 424.901029933244,
+              "sum": 22980.316181201488
+            },
+            "simulator_inclusive_episode_ms": {
+              "count": 1,
+              "mean": 100068.18652478978,
+              "p50": 100068.18652478978,
+              "p95": 100068.18652478978,
+              "sum": 100068.18652478978
+            }
+          },
+          "paired_vs_one": {
+            "rescues": 0,
+            "regressions": 0,
+            "ties": 1,
+            "one_step_failures": 0,
+            "fraction_one_step_failures_rescued": null,
+            "net_success_difference": 0.0,
+            "net_difference_condition_cluster_ci95": null,
+            "rescue_condition_count": 0,
+            "assessment": "Unresolved: too few one-step failures or rescues."
+          }
+        },
+        "4": {
+          "episodes": 1,
+          "successes": 1,
+          "success_rate": 1.0,
+          "cost": {
+            "velocity_evaluations_per_chunk": {
+              "count": 68,
+              "mean": 4.0,
+              "p50": 4.0,
+              "p95": 4.0,
+              "sum": 272.0
+            },
+            "velocity_evaluations_per_episode": {
+              "count": 1,
+              "mean": 272.0,
+              "p50": 272.0,
+              "p95": 272.0,
+              "sum": 272.0
+            },
+            "total_velocity_evaluations": 272,
+            "scored_policy_call_ms": {
+              "count": 68,
+              "mean": 38.794799331192145,
+              "p50": 38.81003777496517,
+              "p95": 39.25743268337101,
+              "sum": 2638.046354521066
+            },
+            "http_request_ms": {
+              "count": 68,
+              "mean": 272.8579510071808,
+              "p50": 271.0853887256235,
+              "p95": 435.6690437765792,
+              "sum": 18554.340668488294
+            },
+            "simulator_inclusive_episode_ms": {
+              "count": 1,
+              "mean": 81175.62386021018,
+              "p50": 81175.62386021018,
+              "p95": 81175.62386021018,
+              "sum": 81175.62386021018
+            }
+          },
+          "paired_vs_one": {
+            "rescues": 0,
+            "regressions": 0,
+            "ties": 1,
+            "one_step_failures": 0,
+            "fraction_one_step_failures_rescued": null,
+            "net_success_difference": 0.0,
+            "net_difference_condition_cluster_ci95": null,
+            "rescue_condition_count": 0,
+            "assessment": "Unresolved: too few one-step failures or rescues."
+          }
+        },
+        "10": {
+          "episodes": 1,
+          "successes": 1,
+          "success_rate": 1.0,
+          "cost": {
+            "velocity_evaluations_per_chunk": {
+              "count": 67,
+              "mean": 10.0,
+              "p50": 10.0,
+              "p95": 10.0,
+              "sum": 670.0
+            },
+            "velocity_evaluations_per_episode": {
+              "count": 1,
+              "mean": 670.0,
+              "p50": 670.0,
+              "p95": 670.0,
+              "sum": 670.0
+            },
+            "total_velocity_evaluations": 670,
+            "scored_policy_call_ms": {
+              "count": 67,
+              "mean": 50.54735349241032,
+              "p50": 50.52301799878478,
+              "p95": 51.353039778769016,
+              "sum": 3386.672683991492
+            },
+            "http_request_ms": {
+              "count": 67,
+              "mean": 281.75052307518337,
+              "p50": 134.23646474257112,
+              "p95": 443.36695838719606,
+              "sum": 18877.285046037287
+            },
+            "simulator_inclusive_episode_ms": {
+              "count": 1,
+              "mean": 80824.64182982221,
+              "p50": 80824.64182982221,
+              "p95": 80824.64182982221,
+              "sum": 80824.64182982221
+            }
+          },
+          "paired_vs_one": {
+            "rescues": 0,
+            "regressions": 0,
+            "ties": 1,
+            "one_step_failures": 0,
+            "fraction_one_step_failures_rescued": null,
+            "net_success_difference": 0.0,
+            "net_difference_condition_cluster_ci95": null,
+            "rescue_condition_count": 0,
+            "assessment": "Unresolved: too few one-step failures or rescues."
+          }
+        }
+      }
+    },
+    "libero:libero_goal:0": {
+      "paired_cases": 1,
+      "conditions": 1,
+      "arms": {
+        "1": {
+          "episodes": 1,
+          "successes": 1,
+          "success_rate": 1.0,
+          "cost": {
+            "velocity_evaluations_per_chunk": {
+              "count": 26,
+              "mean": 1.0,
+              "p50": 1.0,
+              "p95": 1.0,
+              "sum": 26.0
+            },
+            "velocity_evaluations_per_episode": {
+              "count": 1,
+              "mean": 26.0,
+              "p50": 26.0,
+              "p95": 26.0,
+              "sum": 26.0
+            },
+            "total_velocity_evaluations": 26,
+            "scored_policy_call_ms": {
+              "count": 26,
+              "mean": 32.355026968826465,
+              "p50": 32.378019066527486,
+              "p95": 32.57896506693214,
+              "sum": 841.2307011894882
+            },
+            "http_request_ms": {
+              "count": 26,
+              "mean": 268.93474521616906,
+              "p50": 268.921508686617,
+              "p95": 426.5056572621688,
+              "sum": 6992.303375620395
+            },
+            "simulator_inclusive_episode_ms": {
+              "count": 1,
+              "mean": 39122.47216096148,
+              "p50": 39122.47216096148,
+              "p95": 39122.47216096148,
+              "sum": 39122.47216096148
+            }
+          }
+        },
+        "2": {
+          "episodes": 1,
+          "successes": 1,
+          "success_rate": 1.0,
+          "cost": {
+            "velocity_evaluations_per_chunk": {
+              "count": 26,
+              "mean": 2.0,
+              "p50": 2.0,
+              "p95": 2.0,
+              "sum": 52.0
+            },
+            "velocity_evaluations_per_episode": {
+              "count": 1,
+              "mean": 52.0,
+              "p50": 52.0,
+              "p95": 52.0,
+              "sum": 52.0
+            },
+            "total_velocity_evaluations": 52,
+            "scored_policy_call_ms": {
+              "count": 26,
+              "mean": 34.542959058084165,
+              "p50": 34.56554654985666,
+              "p95": 34.93661666288972,
+              "sum": 898.1169355101883
+            },
+            "http_request_ms": {
+              "count": 26,
+              "mean": 268.18524530300726,
+              "p50": 267.2219118103385,
+              "p95": 429.8573463456705,
+              "sum": 6972.816377878189
+            },
+            "simulator_inclusive_episode_ms": {
+              "count": 1,
+              "mean": 38831.80267596617,
+              "p50": 38831.80267596617,
+              "p95": 38831.80267596617,
+              "sum": 38831.80267596617
+            }
+          },
+          "paired_vs_one": {
+            "rescues": 0,
+            "regressions": 0,
+            "ties": 1,
+            "one_step_failures": 0,
+            "fraction_one_step_failures_rescued": null,
+            "net_success_difference": 0.0,
+            "net_difference_condition_cluster_ci95": null,
+            "rescue_condition_count": 0,
+            "assessment": "Unresolved: too few one-step failures or rescues."
+          }
+        },
+        "4": {
+          "episodes": 1,
+          "successes": 1,
+          "success_rate": 1.0,
+          "cost": {
+            "velocity_evaluations_per_chunk": {
+              "count": 25,
+              "mean": 4.0,
+              "p50": 4.0,
+              "p95": 4.0,
+              "sum": 100.0
+            },
+            "velocity_evaluations_per_episode": {
+              "count": 1,
+              "mean": 100.0,
+              "p50": 100.0,
+              "p95": 100.0,
+              "sum": 100.0
+            },
+            "total_velocity_evaluations": 100,
+            "scored_policy_call_ms": {
+              "count": 25,
+              "mean": 38.03039075806737,
+              "p50": 37.99005597829819,
+              "p95": 38.54742357507348,
+              "sum": 950.7597689516842
+            },
+            "http_request_ms": {
+              "count": 25,
+              "mean": 263.0721002817154,
+              "p50": 120.81254972144961,
+              "p95": 424.3450628593564,
+              "sum": 6576.802507042885
+            },
+            "simulator_inclusive_episode_ms": {
+              "count": 1,
+              "mean": 37834.56042595208,
+              "p50": 37834.56042595208,
+              "p95": 37834.56042595208,
+              "sum": 37834.56042595208
+            }
+          },
+          "paired_vs_one": {
+            "rescues": 0,
+            "regressions": 0,
+            "ties": 1,
+            "one_step_failures": 0,
+            "fraction_one_step_failures_rescued": null,
+            "net_success_difference": 0.0,
+            "net_difference_condition_cluster_ci95": null,
+            "rescue_condition_count": 0,
+            "assessment": "Unresolved: too few one-step failures or rescues."
+          }
+        },
+        "10": {
+          "episodes": 1,
+          "successes": 1,
+          "success_rate": 1.0,
+          "cost": {
+            "velocity_evaluations_per_chunk": {
+              "count": 25,
+              "mean": 10.0,
+              "p50": 10.0,
+              "p95": 10.0,
+              "sum": 250.0
+            },
+            "velocity_evaluations_per_episode": {
+              "count": 1,
+              "mean": 250.0,
+              "p50": 250.0,
+              "p95": 250.0,
+              "sum": 250.0
+            },
+            "total_velocity_evaluations": 250,
+            "scored_policy_call_ms": {
+              "count": 25,
+              "mean": 50.42859150096774,
+              "p50": 50.352985970675945,
+              "p95": 51.13220922648907,
+              "sum": 1260.7147875241935
+            },
+            "http_request_ms": {
+              "count": 25,
+              "mean": 289.51693085953593,
+              "p50": 428.51411923766136,
+              "p95": 442.5393844023347,
+              "sum": 7237.923271488398
+            },
+            "simulator_inclusive_episode_ms": {
+              "count": 1,
+              "mean": 38521.55747404322,
+              "p50": 38521.55747404322,
+              "p95": 38521.55747404322,
+              "sum": 38521.55747404322
+            }
+          },
+          "paired_vs_one": {
+            "rescues": 0,
+            "regressions": 0,
+            "ties": 1,
+            "one_step_failures": 0,
+            "fraction_one_step_failures_rescued": null,
+            "net_success_difference": 0.0,
+            "net_difference_condition_cluster_ci95": null,
+            "rescue_condition_count": 0,
+            "assessment": "Unresolved: too few one-step failures or rescues."
+          }
+        }
+      }
+    },
+    "libero:libero_object:0": {
+      "paired_cases": 1,
+      "conditions": 1,
+      "arms": {
+        "1": {
+          "episodes": 1,
+          "successes": 1,
+          "success_rate": 1.0,
+          "cost": {
+            "velocity_evaluations_per_chunk": {
+              "count": 30,
+              "mean": 1.0,
+              "p50": 1.0,
+              "p95": 1.0,
+              "sum": 30.0
+            },
+            "velocity_evaluations_per_episode": {
+              "count": 1,
+              "mean": 30.0,
+              "p50": 30.0,
+              "p95": 30.0,
+              "sum": 30.0
+            },
+            "total_velocity_evaluations": 30,
+            "scored_policy_call_ms": {
+              "count": 30,
+              "mean": 32.68529109967252,
+              "p50": 32.640676479786634,
+              "p95": 33.20712244603783,
+              "sum": 980.5587329901755
+            },
+            "http_request_ms": {
+              "count": 30,
+              "mean": 265.1837320377429,
+              "p50": 263.3167749736458,
+              "p95": 422.7802680572495,
+              "sum": 7955.511961132288
+            },
+            "simulator_inclusive_episode_ms": {
+              "count": 1,
+              "mean": 36874.5411997661,
+              "p50": 36874.5411997661,
+              "p95": 36874.5411997661,
+              "sum": 36874.5411997661
+            }
+          }
+        },
+        "2": {
+          "episodes": 1,
+          "successes": 1,
+          "success_rate": 1.0,
+          "cost": {
+            "velocity_evaluations_per_chunk": {
+              "count": 30,
+              "mean": 2.0,
+              "p50": 2.0,
+              "p95": 2.0,
+              "sum": 60.0
+            },
+            "velocity_evaluations_per_episode": {
+              "count": 1,
+              "mean": 60.0,
+              "p50": 60.0,
+              "p95": 60.0,
+              "sum": 60.0
+            },
+            "total_velocity_evaluations": 60,
+            "scored_policy_call_ms": {
+              "count": 30,
+              "mean": 34.51700868705908,
+              "p50": 34.532392397522926,
+              "p95": 34.891020762734115,
+              "sum": 1035.5102606117725
+            },
+            "http_request_ms": {
+              "count": 30,
+              "mean": 263.04925625833374,
+              "p50": 260.1332098711282,
+              "p95": 418.91601260285825,
+              "sum": 7891.477687750012
+            },
+            "simulator_inclusive_episode_ms": {
+              "count": 1,
+              "mean": 36898.34268391132,
+              "p50": 36898.34268391132,
+              "p95": 36898.34268391132,
+              "sum": 36898.34268391132
+            }
+          },
+          "paired_vs_one": {
+            "rescues": 0,
+            "regressions": 0,
+            "ties": 1,
+            "one_step_failures": 0,
+            "fraction_one_step_failures_rescued": null,
+            "net_success_difference": 0.0,
+            "net_difference_condition_cluster_ci95": null,
+            "rescue_condition_count": 0,
+            "assessment": "Unresolved: too few one-step failures or rescues."
+          }
+        },
+        "4": {
+          "episodes": 1,
+          "successes": 1,
+          "success_rate": 1.0,
+          "cost": {
+            "velocity_evaluations_per_chunk": {
+              "count": 29,
+              "mean": 4.0,
+              "p50": 4.0,
+              "p95": 4.0,
+              "sum": 116.0
+            },
+            "velocity_evaluations_per_episode": {
+              "count": 1,
+              "mean": 116.0,
+              "p50": 116.0,
+              "p95": 116.0,
+              "sum": 116.0
+            },
+            "total_velocity_evaluations": 116,
+            "scored_policy_call_ms": {
+              "count": 29,
+              "mean": 38.60591846550333,
+              "p50": 38.5385537520051,
+              "p95": 39.02149302884936,
+              "sum": 1119.5716354995966
+            },
+            "http_request_ms": {
+              "count": 29,
+              "mean": 274.9943596888976,
+              "p50": 418.532055336982,
+              "p95": 427.6784681715071,
+              "sum": 7974.83643097803
+            },
+            "simulator_inclusive_episode_ms": {
+              "count": 1,
+              "mean": 36097.53826772794,
+              "p50": 36097.53826772794,
+              "p95": 36097.53826772794,
+              "sum": 36097.53826772794
+            }
+          },
+          "paired_vs_one": {
+            "rescues": 0,
+            "regressions": 0,
+            "ties": 1,
+            "one_step_failures": 0,
+            "fraction_one_step_failures_rescued": null,
+            "net_success_difference": 0.0,
+            "net_difference_condition_cluster_ci95": null,
+            "rescue_condition_count": 0,
+            "assessment": "Unresolved: too few one-step failures or rescues."
+          }
+        },
+        "10": {
+          "episodes": 1,
+          "successes": 1,
+          "success_rate": 1.0,
+          "cost": {
+            "velocity_evaluations_per_chunk": {
+              "count": 30,
+              "mean": 10.0,
+              "p50": 10.0,
+              "p95": 10.0,
+              "sum": 300.0
+            },
+            "velocity_evaluations_per_episode": {
+              "count": 1,
+              "mean": 300.0,
+              "p50": 300.0,
+              "p95": 300.0,
+              "sum": 300.0
+            },
+            "total_velocity_evaluations": 300,
+            "scored_policy_call_ms": {
+              "count": 30,
+              "mean": 50.502023954565324,
+              "p50": 50.49659381620586,
+              "p95": 50.99117965437472,
+              "sum": 1515.0607186369598
+            },
+            "http_request_ms": {
+              "count": 30,
+              "mean": 281.86211669817567,
+              "p50": 282.15347649529576,
+              "p95": 438.37131939362735,
+              "sum": 8455.86350094527
+            },
+            "simulator_inclusive_episode_ms": {
+              "count": 1,
+              "mean": 37058.00594622269,
+              "p50": 37058.00594622269,
+              "p95": 37058.00594622269,
+              "sum": 37058.00594622269
+            }
+          },
+          "paired_vs_one": {
+            "rescues": 0,
+            "regressions": 0,
+            "ties": 1,
+            "one_step_failures": 0,
+            "fraction_one_step_failures_rescued": null,
+            "net_success_difference": 0.0,
+            "net_difference_condition_cluster_ci95": null,
+            "rescue_condition_count": 0,
+            "assessment": "Unresolved: too few one-step failures or rescues."
+          }
+        }
+      }
+    },
+    "libero:libero_spatial:0": {
+      "paired_cases": 1,
+      "conditions": 1,
+      "arms": {
+        "1": {
+          "episodes": 1,
+          "successes": 1,
+          "success_rate": 1.0,
+          "cost": {
+            "velocity_evaluations_per_chunk": {
+              "count": 16,
+              "mean": 1.0,
+              "p50": 1.0,
+              "p95": 1.0,
+              "sum": 16.0
+            },
+            "velocity_evaluations_per_episode": {
+              "count": 1,
+              "mean": 16.0,
+              "p50": 16.0,
+              "p95": 16.0,
+              "sum": 16.0
+            },
+            "total_velocity_evaluations": 16,
+            "scored_policy_call_ms": {
+              "count": 16,
+              "mean": 32.880514016142115,
+              "p50": 32.89177641272545,
+              "p95": 33.612076309509575,
+              "sum": 526.0882242582738
+            },
+            "http_request_ms": {
+              "count": 16,
+              "mean": 247.08963301964104,
+              "p50": 117.33699473552406,
+              "p95": 432.0065180072561,
+              "sum": 3953.4341283142567
+            },
+            "simulator_inclusive_episode_ms": {
+              "count": 1,
+              "mean": 30793.3329497464,
+              "p50": 30793.3329497464,
+              "p95": 30793.3329497464,
+              "sum": 30793.3329497464
+            }
+          }
+        },
+        "2": {
+          "episodes": 1,
+          "successes": 1,
+          "success_rate": 1.0,
+          "cost": {
+            "velocity_evaluations_per_chunk": {
+              "count": 16,
+              "mean": 2.0,
+              "p50": 2.0,
+              "p95": 2.0,
+              "sum": 32.0
+            },
+            "velocity_evaluations_per_episode": {
+              "count": 1,
+              "mean": 32.0,
+              "p50": 32.0,
+              "p95": 32.0,
+              "sum": 32.0
+            },
+            "total_velocity_evaluations": 32,
+            "scored_policy_call_ms": {
+              "count": 16,
+              "mean": 34.69547347049229,
+              "p50": 34.72363296896219,
+              "p95": 34.96282803826034,
+              "sum": 555.1275755278766
+            },
+            "http_request_ms": {
+              "count": 16,
+              "mean": 264.24693255103193,
+              "p50": 261.02426182478666,
+              "p95": 423.8830184331164,
+              "sum": 4227.950920816511
+            },
+            "simulator_inclusive_episode_ms": {
+              "count": 1,
+              "mean": 31028.889392036945,
+              "p50": 31028.889392036945,
+              "p95": 31028.889392036945,
+              "sum": 31028.889392036945
+            }
+          },
+          "paired_vs_one": {
+            "rescues": 0,
+            "regressions": 0,
+            "ties": 1,
+            "one_step_failures": 0,
+            "fraction_one_step_failures_rescued": null,
+            "net_success_difference": 0.0,
+            "net_difference_condition_cluster_ci95": null,
+            "rescue_condition_count": 0,
+            "assessment": "Unresolved: too few one-step failures or rescues."
+          }
+        },
+        "4": {
+          "episodes": 1,
+          "successes": 1,
+          "success_rate": 1.0,
+          "cost": {
+            "velocity_evaluations_per_chunk": {
+              "count": 16,
+              "mean": 4.0,
+              "p50": 4.0,
+              "p95": 4.0,
+              "sum": 64.0
+            },
+            "velocity_evaluations_per_episode": {
+              "count": 1,
+              "mean": 64.0,
+              "p50": 64.0,
+              "p95": 64.0,
+              "sum": 64.0
+            },
+            "total_velocity_evaluations": 64,
+            "scored_policy_call_ms": {
+              "count": 16,
+              "mean": 38.75900321872905,
+              "p50": 38.71405008248985,
+              "p95": 39.19696295633912,
+              "sum": 620.1440514996648
+            },
+            "http_request_ms": {
+              "count": 16,
+              "mean": 270.2549104578793,
+              "p50": 266.59662718884647,
+              "p95": 437.41958192549646,
+              "sum": 4324.078567326069
+            },
+            "simulator_inclusive_episode_ms": {
+              "count": 1,
+              "mean": 31214.370740111917,
+              "p50": 31214.370740111917,
+              "p95": 31214.370740111917,
+              "sum": 31214.370740111917
+            }
+          },
+          "paired_vs_one": {
+            "rescues": 0,
+            "regressions": 0,
+            "ties": 1,
+            "one_step_failures": 0,
+            "fraction_one_step_failures_rescued": null,
+            "net_success_difference": 0.0,
+            "net_difference_condition_cluster_ci95": null,
+            "rescue_condition_count": 0,
+            "assessment": "Unresolved: too few one-step failures or rescues."
+          }
+        },
+        "10": {
+          "episodes": 1,
+          "successes": 1,
+          "success_rate": 1.0,
+          "cost": {
+            "velocity_evaluations_per_chunk": {
+              "count": 16,
+              "mean": 10.0,
+              "p50": 10.0,
+              "p95": 10.0,
+              "sum": 160.0
+            },
+            "velocity_evaluations_per_episode": {
+              "count": 1,
+              "mean": 160.0,
+              "p50": 160.0,
+              "p95": 160.0,
+              "sum": 160.0
+            },
+            "total_velocity_evaluations": 160,
+            "scored_policy_call_ms": {
+              "count": 16,
+              "mean": 50.92575363232754,
+              "p50": 50.85610249079764,
+              "p95": 51.36577598750591,
+              "sum": 814.8120581172407
+            },
+            "http_request_ms": {
+              "count": 16,
+              "mean": 280.575782089727,
+              "p50": 279.33107200078666,
+              "p95": 436.53345899656415,
+              "sum": 4489.212513435632
+            },
+            "simulator_inclusive_episode_ms": {
+              "count": 1,
+              "mean": 30539.984783623368,
+              "p50": 30539.984783623368,
+              "p95": 30539.984783623368,
+              "sum": 30539.984783623368
+            }
+          },
+          "paired_vs_one": {
+            "rescues": 0,
+            "regressions": 0,
+            "ties": 1,
+            "one_step_failures": 0,
+            "fraction_one_step_failures_rescued": null,
+            "net_success_difference": 0.0,
+            "net_difference_condition_cluster_ci95": null,
+            "rescue_condition_count": 0,
+            "assessment": "Unresolved: too few one-step failures or rescues."
+          }
+        }
+      }
+    }
+  },
+  "paired_cases": [
+    {
+      "condition_id": "libero:libero_spatial:0",
+      "family": "pick_up_the_black_bowl_between_the_plate_and_the_ramekin_and_place_it_on_the_plate",
+      "suite": "libero_spatial",
+      "task_name": "pick_up_the_black_bowl_between_the_plate_and_the_ramekin_and_place_it_on_the_plate",
+      "seed": 930001,
+      "init_index": 30,
+      "success": {
+        "1": true,
+        "2": true,
+        "4": true,
+        "10": true
+      }
+    },
+    {
+      "condition_id": "libero:libero_object:0",
+      "family": "pick_up_the_alphabet_soup_and_place_it_in_the_basket",
+      "suite": "libero_object",
+      "task_name": "pick_up_the_alphabet_soup_and_place_it_in_the_basket",
+      "seed": 930011,
+      "init_index": 30,
+      "success": {
+        "1": true,
+        "2": true,
+        "4": true,
+        "10": true
+      }
+    },
+    {
+      "condition_id": "libero:libero_goal:0",
+      "family": "open_the_middle_drawer_of_the_cabinet",
+      "suite": "libero_goal",
+      "task_name": "open_the_middle_drawer_of_the_cabinet",
+      "seed": 930021,
+      "init_index": 30,
+      "success": {
+        "1": true,
+        "2": true,
+        "4": true,
+        "10": true
+      }
+    },
+    {
+      "condition_id": "libero:libero_10:0",
+      "family": "LIVING_ROOM_SCENE2_put_both_the_alphabet_soup_and_the_tomato_sauce_in_the_basket",
+      "suite": "libero_10",
+      "task_name": "LIVING_ROOM_SCENE2_put_both_the_alphabet_soup_and_the_tomato_sauce_in_the_basket",
+      "seed": 930031,
+      "init_index": 30,
+      "success": {
+        "1": true,
+        "2": true,
+        "4": true,
+        "10": true
+      }
+    }
+  ],
+  "uncertainty": {
+    "method": "condition-cluster percentile bootstrap, complete paired cases retained within clusters",
+    "replicates": 10000,
+    "seed": 20261001,
+    "seed_by_arm": {
+      "2": 20261003,
+      "4": 20261005,
+      "10": 20261011
+    },
+    "note": "Null interval means fewer than two conditions. Few clusters or no observed discordances can yield uninformative or degenerate intervals; these do not establish population equivalence. Costs are measured on potentially different later trajectories and episode lengths."
+  },
+  "assessment": "Smoke only; excluded from study inference.",
+  "record_files": [
+    {
+      "path": "/volt/artifacts/rescue-characterization/runs/libero-smoke.jsonl",
+      "sha256": "5a8b3a4445e264845d1dce75dde4e5f66442b5a9fb3b018d000e0494ea24616c"
+    }
+  ],
+  "wandb_url": "https://wandb.ai/arm-aair-idit/pi05-rescue-characterization/runs/ksvgwbi0"
+}
