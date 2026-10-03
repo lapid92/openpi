@@ -1,10 +1,10 @@
 {
-  "phase": "smoke",
-  "status": "published",
-  "started_at": "2026-10-02T19:19:01.899544+00:00",
-  "git_commit": "23334860d2a343b88411d0a00a6c5bea53f0e7bc",
+  "phase": "full",
+  "status": "validated",
+  "started_at": "2026-10-02T19:30:08.307600+00:00",
+  "git_commit": "e89a010b0fd8c4c6f81f2c895213cbef208255f2",
   "manifest_sha256": "209e434b336372b37d80b7a101912b4b8daeb9f5cd71a0e9772fdfe1579e782c",
-  "wandb_url": "https://wandb.ai/arm-aair-idit/pi05-independent-selective-steps/runs/xnxzrph7",
+  "wandb_url": "https://wandb.ai/arm-aair-idit/pi05-independent-selective-steps/runs/l83xzmjm",
   "commands": [
     {
       "label": "server-0",
@@ -139,7 +139,7 @@
       ]
     },
     {
-      "label": "libero_plus-smoke-0",
+      "label": "libero_plus-main-0",
       "argv": [
         "/volt/envs/libero/bin/python",
         "/volt/code/frozen-flow-study/examples/selective_flow/client.py",
@@ -150,12 +150,72 @@
         "--server",
         "http://127.0.0.1:8800",
         "--output",
-        "/volt/artifacts/selective-flow-study/runs/libero_plus-smoke.jsonl",
-        "--smoke"
+        "/volt/artifacts/selective-flow-study/runs/libero_plus-main-worker-0.jsonl",
+        "--worker-index",
+        "0",
+        "--workers",
+        "4"
       ]
     },
     {
-      "label": "libero_plus-smoke-analysis",
+      "label": "libero_plus-main-1",
+      "argv": [
+        "/volt/envs/libero/bin/python",
+        "/volt/code/frozen-flow-study/examples/selective_flow/client.py",
+        "--manifest",
+        "/volt/code/frozen-flow-study/examples/selective_flow/protocol.json",
+        "--benchmark",
+        "libero_plus",
+        "--server",
+        "http://127.0.0.1:8801",
+        "--output",
+        "/volt/artifacts/selective-flow-study/runs/libero_plus-main-worker-1.jsonl",
+        "--worker-index",
+        "1",
+        "--workers",
+        "4"
+      ]
+    },
+    {
+      "label": "libero_plus-main-2",
+      "argv": [
+        "/volt/envs/libero/bin/python",
+        "/volt/code/frozen-flow-study/examples/selective_flow/client.py",
+        "--manifest",
+        "/volt/code/frozen-flow-study/examples/selective_flow/protocol.json",
+        "--benchmark",
+        "libero_plus",
+        "--server",
+        "http://127.0.0.1:8802",
+        "--output",
+        "/volt/artifacts/selective-flow-study/runs/libero_plus-main-worker-2.jsonl",
+        "--worker-index",
+        "2",
+        "--workers",
+        "4"
+      ]
+    },
+    {
+      "label": "libero_plus-main-3",
+      "argv": [
+        "/volt/envs/libero/bin/python",
+        "/volt/code/frozen-flow-study/examples/selective_flow/client.py",
+        "--manifest",
+        "/volt/code/frozen-flow-study/examples/selective_flow/protocol.json",
+        "--benchmark",
+        "libero_plus",
+        "--server",
+        "http://127.0.0.1:8803",
+        "--output",
+        "/volt/artifacts/selective-flow-study/runs/libero_plus-main-worker-3.jsonl",
+        "--worker-index",
+        "3",
+        "--workers",
+        "4"
+      ]
+    },
+    {
+      "label": "libero_plus-analysis",
       "argv": [
         "/volt/code/frozen-flow-study/.venv/bin/python",
         "/volt/code/frozen-flow-study/examples/selective_flow/analyze.py",
@@ -164,18 +224,20 @@
         "--benchmark",
         "libero_plus",
         "--records",
-        "/volt/artifacts/selective-flow-study/runs/libero_plus-smoke.jsonl",
+        "/volt/artifacts/selective-flow-study/runs/libero_plus-main-worker-0.jsonl",
+        "/volt/artifacts/selective-flow-study/runs/libero_plus-main-worker-1.jsonl",
+        "/volt/artifacts/selective-flow-study/runs/libero_plus-main-worker-2.jsonl",
+        "/volt/artifacts/selective-flow-study/runs/libero_plus-main-worker-3.jsonl",
         "--output",
-        "/volt/artifacts/selective-flow-study/runs/libero_plus-smoke-summary.json",
+        "/volt/artifacts/selective-flow-study/runs/libero_plus-summary.json",
         "--wandb-project",
         "pi05-independent-selective-steps",
         "--wandb-name",
-        "libero_plus-smoke-209e434b3363",
-        "--smoke"
+        "libero_plus-full-209e434b3363"
       ]
     },
     {
-      "label": "smoke-report",
+      "label": "full-report",
       "argv": [
         "/volt/code/frozen-flow-study/.venv/bin/python",
         "/volt/code/frozen-flow-study/examples/selective_flow/report.py",
@@ -184,19 +246,21 @@
         "--results",
         "/volt/artifacts/selective-flow-study/runs",
         "--output",
-        "/volt/artifacts/selective-flow-study/runs/smoke-REPORT.md",
-        "--smoke"
+        "/volt/artifacts/selective-flow-study/runs/full-REPORT.md"
       ]
     }
   ],
-  "updated_at": "2026-10-02T19:29:19.682074+00:00",
+  "updated_at": "2026-10-03T02:44:37.944756+00:00",
   "record_counts": {
-    "libero_plus-prepare-worker-2": 1,
-    "libero_plus-prepare-worker-0": 1,
-    "libero_plus-prepare-worker-3": 1,
-    "libero_plus-prepare-worker-1": 1
+    "libero_plus-prepare-worker-2": 2,
+    "libero_plus-prepare-worker-0": 2,
+    "libero_plus-prepare-worker-3": 2,
+    "libero_plus-prepare-worker-1": 2,
+    "libero_plus-main-worker-0": 480,
+    "libero_plus-main-worker-3": 480,
+    "libero_plus-main-worker-1": 480,
+    "libero_plus-main-worker-2": 480
   },
-  "elapsed_seconds": 593.7666423111223,
-  "four_gpu_allocation_hours": 0.6597407136790248,
-  "published_commit": "6425b1c9be736a25353bf3af07c4a376b583e695"
+  "elapsed_seconds": 26069.63711536117,
+  "four_gpu_allocation_hours": 28.96626346151241
 }
