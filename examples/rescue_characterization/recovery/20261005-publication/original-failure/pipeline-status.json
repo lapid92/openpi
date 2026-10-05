@@ -1,0 +1,33 @@
+{
+  "status": "failed",
+  "started_at": "2026-10-03T08:10:31.272204+00:00",
+  "manifest_sha256": "e7537584d34855c24c1a38ca11da4f7e479b9bcbfc53d2cc7ec8f7ff46eadf9d",
+  "commands": [
+    {
+      "label": "independent-smoke-gate",
+      "argv": [
+        "/volt/code/frozen-flow-study/.venv/bin/python",
+        "/volt/code/frozen-flow-study/examples/rescue_characterization/independent_audit.py",
+        "--phase",
+        "smoke"
+      ]
+    },
+    {
+      "label": "full-pipeline-supervisor",
+      "argv": [
+        "/volt/code/frozen-flow-study/.venv/bin/python",
+        "-u",
+        "/volt/code/frozen-flow-study/examples/rescue_characterization/supervise.py",
+        "--manifest",
+        "/volt/code/frozen-flow-study/examples/rescue_characterization/protocol.json",
+        "--output",
+        "/volt/artifacts/rescue-characterization/runs",
+        "--phase",
+        "full"
+      ]
+    }
+  ],
+  "updated_at": "2026-10-05T04:32:44.603193+00:00",
+  "stage": "full-pipeline-supervisor",
+  "error": "CalledProcessError(1, ['/volt/code/frozen-flow-study/.venv/bin/python', '-u', '/volt/code/frozen-flow-study/examples/rescue_characterization/supervise.py', '--manifest', '/volt/code/frozen-flow-study/examples/rescue_characterization/protocol.json', '--output', '/volt/artifacts/rescue-characterization/runs', '--phase', 'full'])"
+}

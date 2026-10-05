@@ -1,0 +1,290 @@
+{
+  "schema_version": 1,
+  "purpose": "Exact byte reconstruction of raw JSONL publication snapshots",
+  "original_commit": "ae903b8818810cdf6481e8fe0177d801a160a7cc",
+  "backup_ref_local_only": "refs/heads/codex/recovery-backup-ae903b8",
+  "source_runs": "/volt/artifacts/rescue-characterization/runs",
+  "reconstruct_command": "python examples/rescue_characterization/recovery/20261005-publication/shard_records.py --index examples/rescue_characterization/results/e7537584d348/raw-shards/index.json --output-dir /volt/artifacts/rescue-characterization/reconstructed-main",
+  "files": [
+    {
+      "original_name": "libero-main-worker-0.jsonl",
+      "original_bytes": 44948794,
+      "original_lines": 800,
+      "original_sha256": "ad5c8bdf81f5564d9c567770285b37b459cb9ea634920fcd036d432841798515",
+      "parts": [
+        {
+          "name": "part-0001.jsonl",
+          "bytes": 38998463,
+          "lines": 742,
+          "first_line": 1,
+          "last_line": 742,
+          "sha256": "c12214114059ad2f6d24e3ab4a78d3a2a3211a9b341398b440a7a884e171902e"
+        },
+        {
+          "name": "part-0002.jsonl",
+          "bytes": 5950331,
+          "lines": 58,
+          "first_line": 743,
+          "last_line": 800,
+          "sha256": "abe97ae4bf22e2cb3fef142589fce8de132edafe351f9d77dac2dc4ea01e1776"
+        }
+      ],
+      "limit_exclusive_bytes": 39000000,
+      "original_snapshot_path": "examples/rescue_characterization/results/e7537584d348/libero-main-worker-0.jsonl",
+      "source_path": "/volt/artifacts/rescue-characterization/runs/libero-main-worker-0.jsonl",
+      "parts_directory": "libero-main-worker-0"
+    },
+    {
+      "original_name": "libero-main-worker-1.jsonl",
+      "original_bytes": 47885433,
+      "original_lines": 800,
+      "original_sha256": "1a9e90c7200a8fe618028ea6a86b4db3c32b224c21c01c886f80eecdf10d50ca",
+      "parts": [
+        {
+          "name": "part-0001.jsonl",
+          "bytes": 38863393,
+          "lines": 714,
+          "first_line": 1,
+          "last_line": 714,
+          "sha256": "457abc89009341bec46fc0be048fa2d650a0d827c3f2055e2357f35544d03435"
+        },
+        {
+          "name": "part-0002.jsonl",
+          "bytes": 9022040,
+          "lines": 86,
+          "first_line": 715,
+          "last_line": 800,
+          "sha256": "c64c0fca54b7452c0cf574e2083cd9faa96d506b89adb206fc2ee361d8c75e84"
+        }
+      ],
+      "limit_exclusive_bytes": 39000000,
+      "original_snapshot_path": "examples/rescue_characterization/results/e7537584d348/libero-main-worker-1.jsonl",
+      "source_path": "/volt/artifacts/rescue-characterization/runs/libero-main-worker-1.jsonl",
+      "parts_directory": "libero-main-worker-1"
+    },
+    {
+      "original_name": "libero-main-worker-2.jsonl",
+      "original_bytes": 59918364,
+      "original_lines": 800,
+      "original_sha256": "c6402f68f5ff2572d63e3ba0346c291ecf3b1baad798568af178b824bbf14c3e",
+      "parts": [
+        {
+          "name": "part-0001.jsonl",
+          "bytes": 38980178,
+          "lines": 655,
+          "first_line": 1,
+          "last_line": 655,
+          "sha256": "d29b6ec74e874caa932c0d33c5e89b795ad725546d9b464e2b58813882912029"
+        },
+        {
+          "name": "part-0002.jsonl",
+          "bytes": 20938186,
+          "lines": 145,
+          "first_line": 656,
+          "last_line": 800,
+          "sha256": "8757d42ec26d3a65cc993458caa74126e64193ced9b21c8f7061e699188250c2"
+        }
+      ],
+      "limit_exclusive_bytes": 39000000,
+      "original_snapshot_path": "examples/rescue_characterization/results/e7537584d348/libero-main-worker-2.jsonl",
+      "source_path": "/volt/artifacts/rescue-characterization/runs/libero-main-worker-2.jsonl",
+      "parts_directory": "libero-main-worker-2"
+    },
+    {
+      "original_name": "libero-main-worker-3.jsonl",
+      "original_bytes": 53801125,
+      "original_lines": 800,
+      "original_sha256": "8fc4a673725e006ca270acf6723033951cf10154633c26a23511853ad034a919",
+      "parts": [
+        {
+          "name": "part-0001.jsonl",
+          "bytes": 38935488,
+          "lines": 660,
+          "first_line": 1,
+          "last_line": 660,
+          "sha256": "6ad474018324de0a0a0abc6995cdee931c3e30b2fe2833c4c2535abde808b00a"
+        },
+        {
+          "name": "part-0002.jsonl",
+          "bytes": 14865637,
+          "lines": 140,
+          "first_line": 661,
+          "last_line": 800,
+          "sha256": "cae7d39430a260c0527e28c9c23fc2d0e268ee4cc1e0694b1ce81eeeef954e75"
+        }
+      ],
+      "limit_exclusive_bytes": 39000000,
+      "original_snapshot_path": "examples/rescue_characterization/results/e7537584d348/libero-main-worker-3.jsonl",
+      "source_path": "/volt/artifacts/rescue-characterization/runs/libero-main-worker-3.jsonl",
+      "parts_directory": "libero-main-worker-3"
+    },
+    {
+      "original_name": "libero_plus-main-worker-0.jsonl",
+      "original_bytes": 121200519,
+      "original_lines": 1680,
+      "original_sha256": "758054fbf172cb9d3f451d7a655f4d0bf9b99ccaf91a973833108488da100d7c",
+      "parts": [
+        {
+          "name": "part-0001.jsonl",
+          "bytes": 38993218,
+          "lines": 716,
+          "first_line": 1,
+          "last_line": 716,
+          "sha256": "08801b75aa7d2a1e0200ea48c08dc8b6a83ca6c13ce76d5d0be27e7ba6f9c61b"
+        },
+        {
+          "name": "part-0002.jsonl",
+          "bytes": 38922685,
+          "lines": 607,
+          "first_line": 717,
+          "last_line": 1323,
+          "sha256": "aac2c139908bfb1aca23fc7297922e0743f4631ccb79c2e6cda37ef831455710"
+        },
+        {
+          "name": "part-0003.jsonl",
+          "bytes": 38920632,
+          "lines": 318,
+          "first_line": 1324,
+          "last_line": 1641,
+          "sha256": "46292bdbe04808420fb931b19a25f012f73663c5d28dfd7c39b14d3d0399f775"
+        },
+        {
+          "name": "part-0004.jsonl",
+          "bytes": 4363984,
+          "lines": 39,
+          "first_line": 1642,
+          "last_line": 1680,
+          "sha256": "2fb7c07f14c5d151e3019638fe9bbb4c3507f28cccea87b9bf0e80954a371ddd"
+        }
+      ],
+      "limit_exclusive_bytes": 39000000,
+      "original_snapshot_path": "examples/rescue_characterization/results/e7537584d348/libero_plus-main-worker-0.jsonl",
+      "source_path": "/volt/artifacts/rescue-characterization/runs/libero_plus-main-worker-0.jsonl",
+      "parts_directory": "libero_plus-main-worker-0"
+    },
+    {
+      "original_name": "libero_plus-main-worker-1.jsonl",
+      "original_bytes": 123105596,
+      "original_lines": 1680,
+      "original_sha256": "c07cff692cbf10c362554f5aacd2a0cb8dc51c4d02598fba7910ba4816ff0600",
+      "parts": [
+        {
+          "name": "part-0001.jsonl",
+          "bytes": 38990930,
+          "lines": 720,
+          "first_line": 1,
+          "last_line": 720,
+          "sha256": "122e25991e41c794960a0ca8148dd9cff23234f0693a05b716b49c0a90c9f434"
+        },
+        {
+          "name": "part-0002.jsonl",
+          "bytes": 38936589,
+          "lines": 593,
+          "first_line": 721,
+          "last_line": 1313,
+          "sha256": "ac630c7f1f364ace0c839e260618266ad545ed158315016316d6459320a1eb2d"
+        },
+        {
+          "name": "part-0003.jsonl",
+          "bytes": 38904370,
+          "lines": 309,
+          "first_line": 1314,
+          "last_line": 1622,
+          "sha256": "a16b1a950b609e90b7e2c0b45e5960d797a8f2e7168058f6b16651da4d61f627"
+        },
+        {
+          "name": "part-0004.jsonl",
+          "bytes": 6273707,
+          "lines": 58,
+          "first_line": 1623,
+          "last_line": 1680,
+          "sha256": "de385214cb9a1e378c60c17a3a0aaf2b59f4270af9c4cb9fd4e897c2df047fbc"
+        }
+      ],
+      "limit_exclusive_bytes": 39000000,
+      "original_snapshot_path": "examples/rescue_characterization/results/e7537584d348/libero_plus-main-worker-1.jsonl",
+      "source_path": "/volt/artifacts/rescue-characterization/runs/libero_plus-main-worker-1.jsonl",
+      "parts_directory": "libero_plus-main-worker-1"
+    },
+    {
+      "original_name": "libero_plus-main-worker-2.jsonl",
+      "original_bytes": 117751170,
+      "original_lines": 1680,
+      "original_sha256": "b91c6f2151b978f07f7a502806b7c97db5ea5e16502bd541b7593d05e412edce",
+      "parts": [
+        {
+          "name": "part-0001.jsonl",
+          "bytes": 38995837,
+          "lines": 770,
+          "first_line": 1,
+          "last_line": 770,
+          "sha256": "26cc558f6462eb02da80686dbf01045c6c72e11c48e28e8cb658527d3b7e1172"
+        },
+        {
+          "name": "part-0002.jsonl",
+          "bytes": 38913909,
+          "lines": 547,
+          "first_line": 771,
+          "last_line": 1317,
+          "sha256": "cc781f82b3927fd6cf5de96a1d7d447d716b01ca0177a480bf5065eb6a642104"
+        },
+        {
+          "name": "part-0003.jsonl",
+          "bytes": 38965600,
+          "lines": 355,
+          "first_line": 1318,
+          "last_line": 1672,
+          "sha256": "869e4fd972b418577df79abe2b0690ae8b50584c824deb5edc676fbde1e4cc73"
+        },
+        {
+          "name": "part-0004.jsonl",
+          "bytes": 875824,
+          "lines": 8,
+          "first_line": 1673,
+          "last_line": 1680,
+          "sha256": "502d860077c5a24630fa4362aa44ded98dbdf44c8ad30c5c6102598d30945577"
+        }
+      ],
+      "limit_exclusive_bytes": 39000000,
+      "original_snapshot_path": "examples/rescue_characterization/results/e7537584d348/libero_plus-main-worker-2.jsonl",
+      "source_path": "/volt/artifacts/rescue-characterization/runs/libero_plus-main-worker-2.jsonl",
+      "parts_directory": "libero_plus-main-worker-2"
+    },
+    {
+      "original_name": "libero_plus-main-worker-3.jsonl",
+      "original_bytes": 115788155,
+      "original_lines": 1680,
+      "original_sha256": "7b724747f39da0f2cd79d26fb99efda944c4725ef246ccf27251f3349cf593a7",
+      "parts": [
+        {
+          "name": "part-0001.jsonl",
+          "bytes": 38940693,
+          "lines": 776,
+          "first_line": 1,
+          "last_line": 776,
+          "sha256": "e9d6a700441f8e06b8ef2ca740f47230f1e9a332ca70b7e31c2176c03050ab9e"
+        },
+        {
+          "name": "part-0002.jsonl",
+          "bytes": 38959262,
+          "lines": 560,
+          "first_line": 777,
+          "last_line": 1336,
+          "sha256": "799fa901605a2b814c9a89add516b456e122d769678716e223db50c4d6a96970"
+        },
+        {
+          "name": "part-0003.jsonl",
+          "bytes": 37888200,
+          "lines": 344,
+          "first_line": 1337,
+          "last_line": 1680,
+          "sha256": "60b5b5639daf3625b35a645774bfc60473c2b64c9302566927f46cda61934036"
+        }
+      ],
+      "limit_exclusive_bytes": 39000000,
+      "original_snapshot_path": "examples/rescue_characterization/results/e7537584d348/libero_plus-main-worker-3.jsonl",
+      "source_path": "/volt/artifacts/rescue-characterization/runs/libero_plus-main-worker-3.jsonl",
+      "parts_directory": "libero_plus-main-worker-3"
+    }
+  ]
+}

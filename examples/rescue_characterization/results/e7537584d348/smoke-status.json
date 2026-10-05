@@ -1,6 +1,6 @@
 {
   "phase": "smoke",
-  "status": "validated",
+  "status": "published",
   "started_at": "2026-10-03T07:58:27.816861+00:00",
   "git_commit": "7f8d2acec6adc4e4a5fe8592e1e239bb76a8c326",
   "manifest_sha256": "e7537584d34855c24c1a38ca11da4f7e479b9bcbfc53d2cc7ec8f7ff46eadf9d",
@@ -363,7 +363,7 @@
       ]
     }
   ],
-  "updated_at": "2026-10-03T08:34:01.179940+00:00",
+  "updated_at": "2026-10-03T08:34:13.186602+00:00",
   "record_counts": {
     "libero-prepare-worker-3": 1,
     "libero-prepare-worker-0": 1,
@@ -375,5 +375,6 @@
     "libero_plus-prepare-worker-2": 1
   },
   "elapsed_seconds": 2133.3630409250036,
-  "four_gpu_allocation_hours": 2.3704033788055594
+  "four_gpu_allocation_hours": 2.3704033788055594,
+  "published_commit": "862797a152f97d036c6235fd69890be61f2ee0c1"
 }

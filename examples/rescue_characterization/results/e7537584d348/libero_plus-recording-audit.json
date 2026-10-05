@@ -1,0 +1,29 @@
+{
+  "status": "passed",
+  "records": 6720,
+  "matched_cases": 1680,
+  "action_digest_dtypes": [
+    "float64"
+  ],
+  "video_decoding_checked": true,
+  "allow_partial": false,
+  "manifest_sha256": "e7537584d34855c24c1a38ca11da4f7e479b9bcbfc53d2cc7ec8f7ff46eadf9d",
+  "record_files": [
+    {
+      "path": "/volt/artifacts/rescue-characterization/runs/libero_plus-main-worker-0.jsonl",
+      "sha256": "758054fbf172cb9d3f451d7a655f4d0bf9b99ccaf91a973833108488da100d7c"
+    },
+    {
+      "path": "/volt/artifacts/rescue-characterization/runs/libero_plus-main-worker-1.jsonl",
+      "sha256": "c07cff692cbf10c362554f5aacd2a0cb8dc51c4d02598fba7910ba4816ff0600"
+    },
+    {
+      "path": "/volt/artifacts/rescue-characterization/runs/libero_plus-main-worker-2.jsonl",
+      "sha256": "b91c6f2151b978f07f7a502806b7c97db5ea5e16502bd541b7593d05e412edce"
+    },
+    {
+      "path": "/volt/artifacts/rescue-characterization/runs/libero_plus-main-worker-3.jsonl",
+      "sha256": "7b724747f39da0f2cd79d26fb99efda944c4725ef246ccf27251f3349cf593a7"
+    }
+  ]
+}

@@ -1,0 +1,521 @@
+{
+  "phase": "full",
+  "status": "failed",
+  "started_at": "2026-10-03T08:35:25.077923+00:00",
+  "git_commit": "ddb0e0770dcd0ef25b7917b8606c54d14f7497fb",
+  "manifest_sha256": "e7537584d34855c24c1a38ca11da4f7e479b9bcbfc53d2cc7ec8f7ff46eadf9d",
+  "wandb_url": "https://wandb.ai/arm-aair-idit/pi05-rescue-characterization/runs/f1mn4gtw",
+  "commands": [
+    {
+      "label": "server-0",
+      "argv": [
+        "/volt/code/frozen-flow-study/.venv/bin/python",
+        "/volt/code/frozen-flow-study/examples/rescue_characterization/policy_server.py",
+        "--manifest",
+        "/volt/code/frozen-flow-study/examples/rescue_characterization/protocol.json",
+        "--gpu-uuid",
+        "GPU-56335fdf-6dc8-1d64-ce39-364d4a532435",
+        "--port",
+        "8840"
+      ]
+    },
+    {
+      "label": "server-1",
+      "argv": [
+        "/volt/code/frozen-flow-study/.venv/bin/python",
+        "/volt/code/frozen-flow-study/examples/rescue_characterization/policy_server.py",
+        "--manifest",
+        "/volt/code/frozen-flow-study/examples/rescue_characterization/protocol.json",
+        "--gpu-uuid",
+        "GPU-b786fcd4-f878-69e6-3017-a2ae408151fd",
+        "--port",
+        "8841"
+      ]
+    },
+    {
+      "label": "server-2",
+      "argv": [
+        "/volt/code/frozen-flow-study/.venv/bin/python",
+        "/volt/code/frozen-flow-study/examples/rescue_characterization/policy_server.py",
+        "--manifest",
+        "/volt/code/frozen-flow-study/examples/rescue_characterization/protocol.json",
+        "--gpu-uuid",
+        "GPU-967ff6df-a7e2-b65a-d051-87819b7725fc",
+        "--port",
+        "8842"
+      ]
+    },
+    {
+      "label": "server-3",
+      "argv": [
+        "/volt/code/frozen-flow-study/.venv/bin/python",
+        "/volt/code/frozen-flow-study/examples/rescue_characterization/policy_server.py",
+        "--manifest",
+        "/volt/code/frozen-flow-study/examples/rescue_characterization/protocol.json",
+        "--gpu-uuid",
+        "GPU-0cb759da-a716-038e-f0a9-208ec138ccc7",
+        "--port",
+        "8843"
+      ]
+    },
+    {
+      "label": "libero-prepare-0",
+      "argv": [
+        "/volt/envs/libero/bin/python",
+        "/volt/code/frozen-flow-study/examples/rescue_characterization/client.py",
+        "--manifest",
+        "/volt/code/frozen-flow-study/examples/rescue_characterization/protocol.json",
+        "--benchmark",
+        "libero",
+        "--server",
+        "http://127.0.0.1:8840",
+        "--output",
+        "/volt/artifacts/rescue-characterization/runs/libero-prepare-worker-0.jsonl",
+        "--prepare-only",
+        "--worker-index",
+        "0",
+        "--workers",
+        "4"
+      ]
+    },
+    {
+      "label": "libero-prepare-1",
+      "argv": [
+        "/volt/envs/libero/bin/python",
+        "/volt/code/frozen-flow-study/examples/rescue_characterization/client.py",
+        "--manifest",
+        "/volt/code/frozen-flow-study/examples/rescue_characterization/protocol.json",
+        "--benchmark",
+        "libero",
+        "--server",
+        "http://127.0.0.1:8841",
+        "--output",
+        "/volt/artifacts/rescue-characterization/runs/libero-prepare-worker-1.jsonl",
+        "--prepare-only",
+        "--worker-index",
+        "1",
+        "--workers",
+        "4"
+      ]
+    },
+    {
+      "label": "libero-prepare-2",
+      "argv": [
+        "/volt/envs/libero/bin/python",
+        "/volt/code/frozen-flow-study/examples/rescue_characterization/client.py",
+        "--manifest",
+        "/volt/code/frozen-flow-study/examples/rescue_characterization/protocol.json",
+        "--benchmark",
+        "libero",
+        "--server",
+        "http://127.0.0.1:8842",
+        "--output",
+        "/volt/artifacts/rescue-characterization/runs/libero-prepare-worker-2.jsonl",
+        "--prepare-only",
+        "--worker-index",
+        "2",
+        "--workers",
+        "4"
+      ]
+    },
+    {
+      "label": "libero-prepare-3",
+      "argv": [
+        "/volt/envs/libero/bin/python",
+        "/volt/code/frozen-flow-study/examples/rescue_characterization/client.py",
+        "--manifest",
+        "/volt/code/frozen-flow-study/examples/rescue_characterization/protocol.json",
+        "--benchmark",
+        "libero",
+        "--server",
+        "http://127.0.0.1:8843",
+        "--output",
+        "/volt/artifacts/rescue-characterization/runs/libero-prepare-worker-3.jsonl",
+        "--prepare-only",
+        "--worker-index",
+        "3",
+        "--workers",
+        "4"
+      ]
+    },
+    {
+      "label": "libero-main-0",
+      "argv": [
+        "/volt/envs/libero/bin/python",
+        "/volt/code/frozen-flow-study/examples/rescue_characterization/client.py",
+        "--manifest",
+        "/volt/code/frozen-flow-study/examples/rescue_characterization/protocol.json",
+        "--benchmark",
+        "libero",
+        "--server",
+        "http://127.0.0.1:8840",
+        "--output",
+        "/volt/artifacts/rescue-characterization/runs/libero-main-worker-0.jsonl",
+        "--worker-index",
+        "0",
+        "--workers",
+        "4"
+      ]
+    },
+    {
+      "label": "libero-main-1",
+      "argv": [
+        "/volt/envs/libero/bin/python",
+        "/volt/code/frozen-flow-study/examples/rescue_characterization/client.py",
+        "--manifest",
+        "/volt/code/frozen-flow-study/examples/rescue_characterization/protocol.json",
+        "--benchmark",
+        "libero",
+        "--server",
+        "http://127.0.0.1:8841",
+        "--output",
+        "/volt/artifacts/rescue-characterization/runs/libero-main-worker-1.jsonl",
+        "--worker-index",
+        "1",
+        "--workers",
+        "4"
+      ]
+    },
+    {
+      "label": "libero-main-2",
+      "argv": [
+        "/volt/envs/libero/bin/python",
+        "/volt/code/frozen-flow-study/examples/rescue_characterization/client.py",
+        "--manifest",
+        "/volt/code/frozen-flow-study/examples/rescue_characterization/protocol.json",
+        "--benchmark",
+        "libero",
+        "--server",
+        "http://127.0.0.1:8842",
+        "--output",
+        "/volt/artifacts/rescue-characterization/runs/libero-main-worker-2.jsonl",
+        "--worker-index",
+        "2",
+        "--workers",
+        "4"
+      ]
+    },
+    {
+      "label": "libero-main-3",
+      "argv": [
+        "/volt/envs/libero/bin/python",
+        "/volt/code/frozen-flow-study/examples/rescue_characterization/client.py",
+        "--manifest",
+        "/volt/code/frozen-flow-study/examples/rescue_characterization/protocol.json",
+        "--benchmark",
+        "libero",
+        "--server",
+        "http://127.0.0.1:8843",
+        "--output",
+        "/volt/artifacts/rescue-characterization/runs/libero-main-worker-3.jsonl",
+        "--worker-index",
+        "3",
+        "--workers",
+        "4"
+      ]
+    },
+    {
+      "label": "libero-analysis",
+      "argv": [
+        "/volt/code/frozen-flow-study/.venv/bin/python",
+        "/volt/code/frozen-flow-study/examples/rescue_characterization/analyze.py",
+        "--manifest",
+        "/volt/code/frozen-flow-study/examples/rescue_characterization/protocol.json",
+        "--benchmark",
+        "libero",
+        "--records",
+        "/volt/artifacts/rescue-characterization/runs/libero-main-worker-0.jsonl",
+        "/volt/artifacts/rescue-characterization/runs/libero-main-worker-1.jsonl",
+        "/volt/artifacts/rescue-characterization/runs/libero-main-worker-2.jsonl",
+        "/volt/artifacts/rescue-characterization/runs/libero-main-worker-3.jsonl",
+        "--output",
+        "/volt/artifacts/rescue-characterization/runs/libero-summary.json",
+        "--wandb-project",
+        "pi05-rescue-characterization",
+        "--wandb-name",
+        "libero-full-e7537584d348"
+      ]
+    },
+    {
+      "label": "libero-recording-audit",
+      "argv": [
+        "/volt/envs/libero/bin/python",
+        "/volt/code/frozen-flow-study/examples/rescue_characterization/recording_audit.py",
+        "--manifest",
+        "/volt/code/frozen-flow-study/examples/rescue_characterization/protocol.json",
+        "--records",
+        "/volt/artifacts/rescue-characterization/runs/libero-main-worker-0.jsonl",
+        "/volt/artifacts/rescue-characterization/runs/libero-main-worker-1.jsonl",
+        "/volt/artifacts/rescue-characterization/runs/libero-main-worker-2.jsonl",
+        "/volt/artifacts/rescue-characterization/runs/libero-main-worker-3.jsonl",
+        "--output",
+        "/volt/artifacts/rescue-characterization/runs/libero-recording-audit.json"
+      ]
+    },
+    {
+      "label": "libero-patterns",
+      "argv": [
+        "/volt/code/frozen-flow-study/.venv/bin/python",
+        "/volt/code/frozen-flow-study/examples/rescue_characterization/analysis.py",
+        "--manifest",
+        "/volt/code/frozen-flow-study/examples/rescue_characterization/protocol.json",
+        "--benchmark",
+        "libero",
+        "--records",
+        "/volt/artifacts/rescue-characterization/runs/libero-main-worker-0.jsonl",
+        "/volt/artifacts/rescue-characterization/runs/libero-main-worker-1.jsonl",
+        "/volt/artifacts/rescue-characterization/runs/libero-main-worker-2.jsonl",
+        "/volt/artifacts/rescue-characterization/runs/libero-main-worker-3.jsonl",
+        "--output",
+        "/volt/artifacts/rescue-characterization/runs/libero-patterns.json"
+      ]
+    },
+    {
+      "label": "libero_plus-prepare-0",
+      "argv": [
+        "/volt/envs/libero/bin/python",
+        "/volt/code/frozen-flow-study/examples/rescue_characterization/client.py",
+        "--manifest",
+        "/volt/code/frozen-flow-study/examples/rescue_characterization/protocol.json",
+        "--benchmark",
+        "libero_plus",
+        "--server",
+        "http://127.0.0.1:8840",
+        "--output",
+        "/volt/artifacts/rescue-characterization/runs/libero_plus-prepare-worker-0.jsonl",
+        "--prepare-only",
+        "--worker-index",
+        "0",
+        "--workers",
+        "4"
+      ]
+    },
+    {
+      "label": "libero_plus-prepare-1",
+      "argv": [
+        "/volt/envs/libero/bin/python",
+        "/volt/code/frozen-flow-study/examples/rescue_characterization/client.py",
+        "--manifest",
+        "/volt/code/frozen-flow-study/examples/rescue_characterization/protocol.json",
+        "--benchmark",
+        "libero_plus",
+        "--server",
+        "http://127.0.0.1:8841",
+        "--output",
+        "/volt/artifacts/rescue-characterization/runs/libero_plus-prepare-worker-1.jsonl",
+        "--prepare-only",
+        "--worker-index",
+        "1",
+        "--workers",
+        "4"
+      ]
+    },
+    {
+      "label": "libero_plus-prepare-2",
+      "argv": [
+        "/volt/envs/libero/bin/python",
+        "/volt/code/frozen-flow-study/examples/rescue_characterization/client.py",
+        "--manifest",
+        "/volt/code/frozen-flow-study/examples/rescue_characterization/protocol.json",
+        "--benchmark",
+        "libero_plus",
+        "--server",
+        "http://127.0.0.1:8842",
+        "--output",
+        "/volt/artifacts/rescue-characterization/runs/libero_plus-prepare-worker-2.jsonl",
+        "--prepare-only",
+        "--worker-index",
+        "2",
+        "--workers",
+        "4"
+      ]
+    },
+    {
+      "label": "libero_plus-prepare-3",
+      "argv": [
+        "/volt/envs/libero/bin/python",
+        "/volt/code/frozen-flow-study/examples/rescue_characterization/client.py",
+        "--manifest",
+        "/volt/code/frozen-flow-study/examples/rescue_characterization/protocol.json",
+        "--benchmark",
+        "libero_plus",
+        "--server",
+        "http://127.0.0.1:8843",
+        "--output",
+        "/volt/artifacts/rescue-characterization/runs/libero_plus-prepare-worker-3.jsonl",
+        "--prepare-only",
+        "--worker-index",
+        "3",
+        "--workers",
+        "4"
+      ]
+    },
+    {
+      "label": "libero_plus-main-0",
+      "argv": [
+        "/volt/envs/libero/bin/python",
+        "/volt/code/frozen-flow-study/examples/rescue_characterization/client.py",
+        "--manifest",
+        "/volt/code/frozen-flow-study/examples/rescue_characterization/protocol.json",
+        "--benchmark",
+        "libero_plus",
+        "--server",
+        "http://127.0.0.1:8840",
+        "--output",
+        "/volt/artifacts/rescue-characterization/runs/libero_plus-main-worker-0.jsonl",
+        "--worker-index",
+        "0",
+        "--workers",
+        "4"
+      ]
+    },
+    {
+      "label": "libero_plus-main-1",
+      "argv": [
+        "/volt/envs/libero/bin/python",
+        "/volt/code/frozen-flow-study/examples/rescue_characterization/client.py",
+        "--manifest",
+        "/volt/code/frozen-flow-study/examples/rescue_characterization/protocol.json",
+        "--benchmark",
+        "libero_plus",
+        "--server",
+        "http://127.0.0.1:8841",
+        "--output",
+        "/volt/artifacts/rescue-characterization/runs/libero_plus-main-worker-1.jsonl",
+        "--worker-index",
+        "1",
+        "--workers",
+        "4"
+      ]
+    },
+    {
+      "label": "libero_plus-main-2",
+      "argv": [
+        "/volt/envs/libero/bin/python",
+        "/volt/code/frozen-flow-study/examples/rescue_characterization/client.py",
+        "--manifest",
+        "/volt/code/frozen-flow-study/examples/rescue_characterization/protocol.json",
+        "--benchmark",
+        "libero_plus",
+        "--server",
+        "http://127.0.0.1:8842",
+        "--output",
+        "/volt/artifacts/rescue-characterization/runs/libero_plus-main-worker-2.jsonl",
+        "--worker-index",
+        "2",
+        "--workers",
+        "4"
+      ]
+    },
+    {
+      "label": "libero_plus-main-3",
+      "argv": [
+        "/volt/envs/libero/bin/python",
+        "/volt/code/frozen-flow-study/examples/rescue_characterization/client.py",
+        "--manifest",
+        "/volt/code/frozen-flow-study/examples/rescue_characterization/protocol.json",
+        "--benchmark",
+        "libero_plus",
+        "--server",
+        "http://127.0.0.1:8843",
+        "--output",
+        "/volt/artifacts/rescue-characterization/runs/libero_plus-main-worker-3.jsonl",
+        "--worker-index",
+        "3",
+        "--workers",
+        "4"
+      ]
+    },
+    {
+      "label": "libero_plus-analysis",
+      "argv": [
+        "/volt/code/frozen-flow-study/.venv/bin/python",
+        "/volt/code/frozen-flow-study/examples/rescue_characterization/analyze.py",
+        "--manifest",
+        "/volt/code/frozen-flow-study/examples/rescue_characterization/protocol.json",
+        "--benchmark",
+        "libero_plus",
+        "--records",
+        "/volt/artifacts/rescue-characterization/runs/libero_plus-main-worker-0.jsonl",
+        "/volt/artifacts/rescue-characterization/runs/libero_plus-main-worker-1.jsonl",
+        "/volt/artifacts/rescue-characterization/runs/libero_plus-main-worker-2.jsonl",
+        "/volt/artifacts/rescue-characterization/runs/libero_plus-main-worker-3.jsonl",
+        "--output",
+        "/volt/artifacts/rescue-characterization/runs/libero_plus-summary.json",
+        "--wandb-project",
+        "pi05-rescue-characterization",
+        "--wandb-name",
+        "libero_plus-full-e7537584d348"
+      ]
+    },
+    {
+      "label": "libero_plus-recording-audit",
+      "argv": [
+        "/volt/envs/libero/bin/python",
+        "/volt/code/frozen-flow-study/examples/rescue_characterization/recording_audit.py",
+        "--manifest",
+        "/volt/code/frozen-flow-study/examples/rescue_characterization/protocol.json",
+        "--records",
+        "/volt/artifacts/rescue-characterization/runs/libero_plus-main-worker-0.jsonl",
+        "/volt/artifacts/rescue-characterization/runs/libero_plus-main-worker-1.jsonl",
+        "/volt/artifacts/rescue-characterization/runs/libero_plus-main-worker-2.jsonl",
+        "/volt/artifacts/rescue-characterization/runs/libero_plus-main-worker-3.jsonl",
+        "--output",
+        "/volt/artifacts/rescue-characterization/runs/libero_plus-recording-audit.json"
+      ]
+    },
+    {
+      "label": "libero_plus-patterns",
+      "argv": [
+        "/volt/code/frozen-flow-study/.venv/bin/python",
+        "/volt/code/frozen-flow-study/examples/rescue_characterization/analysis.py",
+        "--manifest",
+        "/volt/code/frozen-flow-study/examples/rescue_characterization/protocol.json",
+        "--benchmark",
+        "libero_plus",
+        "--records",
+        "/volt/artifacts/rescue-characterization/runs/libero_plus-main-worker-0.jsonl",
+        "/volt/artifacts/rescue-characterization/runs/libero_plus-main-worker-1.jsonl",
+        "/volt/artifacts/rescue-characterization/runs/libero_plus-main-worker-2.jsonl",
+        "/volt/artifacts/rescue-characterization/runs/libero_plus-main-worker-3.jsonl",
+        "--output",
+        "/volt/artifacts/rescue-characterization/runs/libero_plus-patterns.json"
+      ]
+    },
+    {
+      "label": "full-report",
+      "argv": [
+        "/volt/code/frozen-flow-study/.venv/bin/python",
+        "/volt/code/frozen-flow-study/examples/rescue_characterization/report.py",
+        "--manifest",
+        "/volt/code/frozen-flow-study/examples/rescue_characterization/protocol.json",
+        "--results",
+        "/volt/artifacts/rescue-characterization/runs",
+        "--output",
+        "/volt/artifacts/rescue-characterization/runs/full-REPORT.md"
+      ]
+    }
+  ],
+  "updated_at": "2026-10-05T04:32:39.123505+00:00",
+  "record_counts": {
+    "libero-prepare-worker-3": 2,
+    "libero-prepare-worker-0": 2,
+    "libero-prepare-worker-2": 2,
+    "libero-prepare-worker-1": 2,
+    "libero_plus-prepare-worker-1": 2,
+    "libero_plus-prepare-worker-0": 2,
+    "libero_plus-prepare-worker-3": 2,
+    "libero_plus-prepare-worker-2": 2,
+    "libero-main-worker-2": 800,
+    "libero-main-worker-3": 800,
+    "libero-main-worker-0": 800,
+    "libero-main-worker-1": 800,
+    "libero_plus-main-worker-0": 1680,
+    "libero_plus-main-worker-3": 1680,
+    "libero_plus-main-worker-2": 1680,
+    "libero_plus-main-worker-1": 1680
+  },
+  "elapsed_seconds": 158116.44833223708,
+  "four_gpu_allocation_hours": 175.68494259137452,
+  "error": "CalledProcessError(1, ['git', 'push', 'origin', 'HEAD:refs/heads/codex/pi05-rescue-characterization'])"
+}
