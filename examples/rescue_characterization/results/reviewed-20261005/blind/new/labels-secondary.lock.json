@@ -1,0 +1,29 @@
+{
+  "reviewer": "secondary",
+  "locked_at_utc": "2026-10-05T09:43:08.837908+00:00",
+  "labels_sha256": "70d0bb0640cbe7cc6db23d269e758510911f207b429df898d7bb44b9f61dd29c",
+  "groups": 34,
+  "clips": 136,
+  "outcomes": {
+    "not completed": 53,
+    "completed": 67,
+    "unclear": 16
+  },
+  "stages": {
+    "placement": 19,
+    "grasp": 35,
+    "completed": 67,
+    "manipulation": 10,
+    "unclear": 4,
+    "approach": 1
+  },
+  "confidence": {
+    "medium": 71,
+    "low": 20,
+    "high": 45
+  },
+  "viewing": "All136complete12-framecontact sheets plus explicitly recorded targeted decoded frames; no continuous full-video viewing claimed; traces inspected only for firstgroup.",
+  "index_convention": "frame f follows f executed actions; action zero-based f-1. Numeric states pre-action only.",
+  "blind_boundary": "Only blind/RUBRIC.md,packets.json,assigned media/traces and own labels read. No private metadata, source outcomes, other labels or provenance.",
+  "note": "Self-correction of group37 spatial reference and coverage schema revisions preserved separately before lock."
+}

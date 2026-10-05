@@ -1,0 +1,20 @@
+{
+  "status": "passed",
+  "tests": [
+    "roundtrip-0",
+    "refuse-overwrite-0",
+    "roundtrip-1",
+    "refuse-overwrite-1",
+    "roundtrip-2",
+    "refuse-overwrite-2",
+    "roundtrip-3",
+    "refuse-overwrite-3",
+    "reject-line-at-limit",
+    "reject-same-size-byte-corruption",
+    "reject-line-range-corruption",
+    "reject-original-hash-corruption"
+  ],
+  "script": "/volt/artifacts/rescue-characterization/recovery-20261005/shard_records.py",
+  "script_sha256": "84be4ff4ed86489cdc635844d07d1bb249fae7df1d92238e132a8aee8eb114ad",
+  "simulations_launched": 0
+}

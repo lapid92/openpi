@@ -1,0 +1,454 @@
+{
+  "coverage": [
+    {
+      "key": "historical/C122f9e9b67a4c0140de2",
+      "reasons": [
+        "family"
+      ],
+      "initial_reviewer": "historical",
+      "independent_reviewer": "secondary"
+    },
+    {
+      "key": "historical/C31713f4d99d0de8f7e4b",
+      "reasons": [
+        "family"
+      ],
+      "initial_reviewer": "historical",
+      "independent_reviewer": "secondary"
+    },
+    {
+      "key": "historical/C337e3f4d44fd6c087d12",
+      "reasons": [
+        "family"
+      ],
+      "initial_reviewer": "historical",
+      "independent_reviewer": "secondary"
+    },
+    {
+      "key": "historical/C3503184fe4e44f5f7be1",
+      "reasons": [
+        "family"
+      ],
+      "initial_reviewer": "historical",
+      "independent_reviewer": "secondary"
+    },
+    {
+      "key": "historical/C59b6bee159d6c789d537",
+      "reasons": [
+        "family"
+      ],
+      "initial_reviewer": "historical",
+      "independent_reviewer": "secondary"
+    },
+    {
+      "key": "historical/C6f1192dd092ee7923ad0",
+      "reasons": [
+        "family"
+      ],
+      "initial_reviewer": "historical",
+      "independent_reviewer": "secondary"
+    },
+    {
+      "key": "historical/C73d132aa9e4779f319fd",
+      "reasons": [
+        "family"
+      ],
+      "initial_reviewer": "historical",
+      "independent_reviewer": "secondary"
+    },
+    {
+      "key": "historical/C7460efb4db9e0647928c",
+      "reasons": [
+        "family"
+      ],
+      "initial_reviewer": "historical",
+      "independent_reviewer": "secondary"
+    },
+    {
+      "key": "historical/C7d4d942607bd1c66e00e",
+      "reasons": [
+        "family"
+      ],
+      "initial_reviewer": "historical",
+      "independent_reviewer": "secondary"
+    },
+    {
+      "key": "historical/C7ec74d8c80ac60ce7b7c",
+      "reasons": [
+        "family"
+      ],
+      "initial_reviewer": "historical",
+      "independent_reviewer": "secondary"
+    },
+    {
+      "key": "historical/Ca1b8487573883c2a308e",
+      "reasons": [
+        "family"
+      ],
+      "initial_reviewer": "historical",
+      "independent_reviewer": "secondary"
+    },
+    {
+      "key": "historical/Ca4f91273c257615a75df",
+      "reasons": [
+        "family"
+      ],
+      "initial_reviewer": "historical",
+      "independent_reviewer": "secondary"
+    },
+    {
+      "key": "historical/Cab10c0b03586687f6156",
+      "reasons": [
+        "family"
+      ],
+      "initial_reviewer": "historical",
+      "independent_reviewer": "secondary"
+    },
+    {
+      "key": "historical/Cad7fae7977ceb51d9aa1",
+      "reasons": [
+        "family"
+      ],
+      "initial_reviewer": "historical",
+      "independent_reviewer": "secondary"
+    },
+    {
+      "key": "historical/Cadd36dbaa744c4ca7569",
+      "reasons": [
+        "family"
+      ],
+      "initial_reviewer": "historical",
+      "independent_reviewer": "secondary"
+    },
+    {
+      "key": "historical/Ccf64bec0babc414171e5",
+      "reasons": [
+        "family"
+      ],
+      "initial_reviewer": "historical",
+      "independent_reviewer": "secondary"
+    },
+    {
+      "key": "historical/Cda4bef03e584918f9cc3",
+      "reasons": [
+        "family"
+      ],
+      "initial_reviewer": "historical",
+      "independent_reviewer": "secondary"
+    },
+    {
+      "key": "historical/Cdaaa5ff77bdeba1faa84",
+      "reasons": [
+        "family"
+      ],
+      "initial_reviewer": "historical",
+      "independent_reviewer": "secondary"
+    },
+    {
+      "key": "historical/Cdd58677c2a608593637f",
+      "reasons": [
+        "family"
+      ],
+      "initial_reviewer": "historical",
+      "independent_reviewer": "secondary"
+    },
+    {
+      "key": "historical/Cdd78f6b83f5c516c678f",
+      "reasons": [
+        "family"
+      ],
+      "initial_reviewer": "historical",
+      "independent_reviewer": "secondary"
+    },
+    {
+      "key": "historical/Ced4fb1349f29abf7a9b5",
+      "reasons": [
+        "family"
+      ],
+      "initial_reviewer": "historical",
+      "independent_reviewer": "secondary"
+    },
+    {
+      "key": "new/C02a606460f33d3c4a11f",
+      "reasons": [
+        "family"
+      ],
+      "initial_reviewer": "primary",
+      "independent_reviewer": "historical"
+    },
+    {
+      "key": "new/C053a195f4556f9e8fa48",
+      "reasons": [
+        "family"
+      ],
+      "initial_reviewer": "primary",
+      "independent_reviewer": "historical"
+    },
+    {
+      "key": "new/C0ace75dd78c305554e51",
+      "reasons": [
+        "family"
+      ],
+      "initial_reviewer": "secondary",
+      "independent_reviewer": "primary"
+    },
+    {
+      "key": "new/C187fe9bd9b13f78125c7",
+      "reasons": [
+        "family"
+      ],
+      "initial_reviewer": "secondary",
+      "independent_reviewer": "primary"
+    },
+    {
+      "key": "new/C244cd3576daf247fd6d1",
+      "reasons": [
+        "family"
+      ],
+      "initial_reviewer": "primary",
+      "independent_reviewer": "historical"
+    },
+    {
+      "key": "new/C2811a644bc492295d449",
+      "reasons": [
+        "family"
+      ],
+      "initial_reviewer": "secondary",
+      "independent_reviewer": "primary"
+    },
+    {
+      "key": "new/C3079520500f843051f2e",
+      "reasons": [
+        "family"
+      ],
+      "initial_reviewer": "primary",
+      "independent_reviewer": "historical"
+    },
+    {
+      "key": "new/C4847637d065f5bce1437",
+      "reasons": [
+        "family"
+      ],
+      "initial_reviewer": "secondary",
+      "independent_reviewer": "primary"
+    },
+    {
+      "key": "new/C5b4e9886937a6b19226b",
+      "reasons": [
+        "family"
+      ],
+      "initial_reviewer": "secondary",
+      "independent_reviewer": "primary"
+    },
+    {
+      "key": "new/C64378158e01828196b14",
+      "reasons": [
+        "family"
+      ],
+      "initial_reviewer": "primary",
+      "independent_reviewer": "historical"
+    },
+    {
+      "key": "new/C6b245a8d9e0644ae53ca",
+      "reasons": [
+        "family"
+      ],
+      "initial_reviewer": "secondary",
+      "independent_reviewer": "primary"
+    },
+    {
+      "key": "new/C6d7f671c3881b2b9fd00",
+      "reasons": [
+        "family"
+      ],
+      "initial_reviewer": "secondary",
+      "independent_reviewer": "primary"
+    },
+    {
+      "key": "new/C6e27fdf15b53bdcc5a8a",
+      "reasons": [
+        "family"
+      ],
+      "initial_reviewer": "secondary",
+      "independent_reviewer": "primary"
+    },
+    {
+      "key": "new/C6ed8cc4436d15008d5f1",
+      "reasons": [
+        "family"
+      ],
+      "initial_reviewer": "primary",
+      "independent_reviewer": "historical"
+    },
+    {
+      "key": "new/C729bd63b0c1bcf796e29",
+      "reasons": [
+        "family"
+      ],
+      "initial_reviewer": "primary",
+      "independent_reviewer": "historical"
+    },
+    {
+      "key": "new/C759d9691d9583f396418",
+      "reasons": [
+        "family"
+      ],
+      "initial_reviewer": "secondary",
+      "independent_reviewer": "primary"
+    },
+    {
+      "key": "new/C77917f6c387835e4d773",
+      "reasons": [
+        "family"
+      ],
+      "initial_reviewer": "primary",
+      "independent_reviewer": "historical"
+    },
+    {
+      "key": "new/C791cba2cb5ca59582ec8",
+      "reasons": [
+        "family"
+      ],
+      "initial_reviewer": "secondary",
+      "independent_reviewer": "primary"
+    },
+    {
+      "key": "new/C7e0321a920bfd326ee77",
+      "reasons": [
+        "family"
+      ],
+      "initial_reviewer": "primary",
+      "independent_reviewer": "historical"
+    },
+    {
+      "key": "new/C840d5738ae5cf6a31e98",
+      "reasons": [
+        "family"
+      ],
+      "initial_reviewer": "primary",
+      "independent_reviewer": "historical"
+    },
+    {
+      "key": "new/C8bc9b8502a0aa2814b96",
+      "reasons": [
+        "family"
+      ],
+      "initial_reviewer": "primary",
+      "independent_reviewer": "historical"
+    },
+    {
+      "key": "new/C9b233d28e2c3333e006f",
+      "reasons": [
+        "family"
+      ],
+      "initial_reviewer": "primary",
+      "independent_reviewer": "historical"
+    },
+    {
+      "key": "new/C9c5003287b4830be2565",
+      "reasons": [
+        "family"
+      ],
+      "initial_reviewer": "secondary",
+      "independent_reviewer": "primary"
+    },
+    {
+      "key": "new/Ca665d7c9b618610bcb81",
+      "reasons": [
+        "family"
+      ],
+      "initial_reviewer": "primary",
+      "independent_reviewer": "historical"
+    },
+    {
+      "key": "new/Caca8988b71da7ea934f7",
+      "reasons": [
+        "family"
+      ],
+      "initial_reviewer": "secondary",
+      "independent_reviewer": "primary"
+    },
+    {
+      "key": "new/Cb1979aa162e75568e3a6",
+      "reasons": [
+        "family"
+      ],
+      "initial_reviewer": "primary",
+      "independent_reviewer": "historical"
+    },
+    {
+      "key": "new/Cc2970455886914eefd2f",
+      "reasons": [
+        "family"
+      ],
+      "initial_reviewer": "primary",
+      "independent_reviewer": "historical"
+    },
+    {
+      "key": "new/Cd05c30d1fd00af82635d",
+      "reasons": [
+        "family"
+      ],
+      "initial_reviewer": "secondary",
+      "independent_reviewer": "primary"
+    },
+    {
+      "key": "new/Cd566777564d4f290ab8e",
+      "reasons": [
+        "family"
+      ],
+      "initial_reviewer": "secondary",
+      "independent_reviewer": "primary"
+    },
+    {
+      "key": "new/Ce3c2ec7abe52c101af56",
+      "reasons": [
+        "family"
+      ],
+      "initial_reviewer": "secondary",
+      "independent_reviewer": "primary"
+    },
+    {
+      "key": "new/Ce60db1fa132b11c8ec0b",
+      "reasons": [
+        "family"
+      ],
+      "initial_reviewer": "primary",
+      "independent_reviewer": "historical"
+    },
+    {
+      "key": "new/Ce9824add21995f5a5238",
+      "reasons": [
+        "family"
+      ],
+      "initial_reviewer": "primary",
+      "independent_reviewer": "historical"
+    },
+    {
+      "key": "new/Ceba4a3c8260e25b3ab47",
+      "reasons": [
+        "family"
+      ],
+      "initial_reviewer": "primary",
+      "independent_reviewer": "historical"
+    },
+    {
+      "key": "new/Ced0bb787841fb2124be7",
+      "reasons": [
+        "family"
+      ],
+      "initial_reviewer": "primary",
+      "independent_reviewer": "historical"
+    },
+    {
+      "key": "new/Cf3f03b63fb0bb9664857",
+      "reasons": [
+        "family"
+      ],
+      "initial_reviewer": "secondary",
+      "independent_reviewer": "primary"
+    }
+  ],
+  "selected_family_clusters": 56,
+  "target_clips": 56
+}

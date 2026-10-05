@@ -1,0 +1,42 @@
+{
+  "status": "joined_artifact_checks_passed",
+  "directory": "/volt/artifacts/rescue-characterization/review-final",
+  "files": {
+    "label-table.json": "faf76128b6524cb210e7fc8fe65e5c94dac34edef8bc648372fb1294c12803ae",
+    "paired-stages.json": "1d26a6ce8d21a42ed3b6b2f596f74ba8ffb2171fa555515482f129d70ae5abf2",
+    "review-summary.json": "80627effe0cd598d7549b8726576eb7040faa91a43ecaa6cec59e8f7147c5d68",
+    "characterization.json": "10dd7a659d5d40c8e84b3394d3ca8c615f77707d32ce7dd6387ac5f33f169daf",
+    "evidence-links.json": "d2269748df79df829919dfc26d09ecbe7cb1e17d712ab9e6c0d2e3aaf277ffcd",
+    "coverage-details.json": "45a7c6f67ed5f4def1b664cb8c76cd550dd0c07d59dd9b735f1849d236ee60db",
+    "disagreement-register.json": "0580c3d72dc6e96210abc3836b83918641bc50b2f16260d90d7ac816d3ec219f",
+    "labels.csv": "ff7bea44539d90b683ab179b3b386f1679c98767fe31bad7cbdc335684cde5c5",
+    "SUPERSEDED.md": "f7e4d945f9a51a9df2f6c97a9baf5f09c8787f31df39a37bd4a1a5802255b5ae"
+  },
+  "baseline": 388,
+  "overlap": 96,
+  "low_unclear_covered": 45,
+  "families_covered": 56,
+  "agreement_outcome": 62,
+  "agreement_stage": 67,
+  "substantive_differences": 39,
+  "unclear_adjudications": 4,
+  "primary_revision_preserved_exactly_one": true,
+  "no_new_recurring_class_qualifies": true,
+  "viewing_coverage": {
+    "baseline": {
+      "clips": 388,
+      "sheet_frame_views": 4656,
+      "additional_frame_views": 1103,
+      "numeric_trace_explicit_true": 0,
+      "continuous_full_video": 0
+    },
+    "independent_overlap": {
+      "clips": 96,
+      "sheet_frame_views": 1152,
+      "additional_frame_views": 301,
+      "numeric_trace_explicit_true": 0,
+      "continuous_full_video": 0
+    }
+  },
+  "remaining": "Review final report/package/diff; derived historical two-arm terminology needs v2 correction."
+}

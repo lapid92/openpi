@@ -1,0 +1,26 @@
+test_frame_action_dictionary_preserves_observed_frame (test_review_evidence.ExplicitIndexSchemaTests.test_frame_action_dictionary_preserves_observed_frame) ... ok
+test_mismatched_empty_or_missing_timestamp_rejected (test_review_evidence.FrameAuditTests.test_mismatched_empty_or_missing_timestamp_rejected) ... ok
+test_overlap_frame_outside_clip_rejected (test_review_evidence.FrameAuditTests.test_overlap_frame_outside_clip_rejected) ... ok
+test_assignments_sort_opaque_groups (test_review_evidence.RootReviewTests.test_assignments_sort_opaque_groups) ... ok
+test_failed_pair_in_rescued_case_is_not_never_control (test_review_evidence.RootReviewTests.test_failed_pair_in_rescued_case_is_not_never_control) ... ok
+test_actual_primary_and_secondary_schema (test_review_evidence.Tests.test_actual_primary_and_secondary_schema) ... ok
+test_agreement_preserves_baseline_and_adjudication (test_review_evidence.Tests.test_agreement_preserves_baseline_and_adjudication) ... ok
+test_complete_lock_and_changed_file_rejected (test_review_evidence.Tests.test_complete_lock_and_changed_file_rejected) ... ok
+test_crossplan_no_metadata_leak_and_low_unclear_additions (test_review_evidence.Tests.test_crossplan_no_metadata_leak_and_low_unclear_additions) ... ok
+test_duplicate_baseline_rejected (test_review_evidence.Tests.test_duplicate_baseline_rejected) ... ok
+test_existing_output_never_overwritten (test_review_evidence.Tests.test_existing_output_never_overwritten) ... ok
+test_historical_partial_not_paired_and_missing_overlap_visible (test_review_evidence.Tests.test_historical_partial_not_paired_and_missing_overlap_visible) ... ok
+test_missing_and_nonfinite_fields_rejected (test_review_evidence.Tests.test_missing_and_nonfinite_fields_rejected) ... ok
+test_missing_baseline_and_wrong_reviewer_rejected (test_review_evidence.Tests.test_missing_baseline_and_wrong_reviewer_rejected) ... ok
+test_missing_video_coverage_not_inferred_from_necessary (test_review_evidence.Tests.test_missing_video_coverage_not_inferred_from_necessary) ... ok
+test_unobserved_stage_must_be_unclear (test_review_evidence.Tests.test_unobserved_stage_must_be_unclear) ... ok
+test_unseen_decisive_frame_rejected (test_review_evidence.Tests.test_unseen_decisive_frame_rejected) ... ok
+test_counts_unique_cases_and_families (test_characterize_labels.Tests.test_counts_unique_cases_and_families) ... ok
+test_diagnostic_excluded_and_disagreement_preserved (test_characterize_labels.Tests.test_diagnostic_excluded_and_disagreement_preserved) ... ok
+test_unclear_adjudication_excludes_otherwise_clear_pair (test_characterize_labels.Tests.test_unclear_adjudication_excludes_otherwise_clear_pair) ... ok
+test_whole_cli_threshold_no_pooling_and_partial_exclusion (test_characterize_labels.Tests.test_whole_cli_threshold_no_pooling_and_partial_exclusion) ... ok
+
+----------------------------------------------------------------------
+Ran 21 tests in 0.038s
+
+OK

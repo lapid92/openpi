@@ -1,0 +1,58 @@
+{
+  "libero": {
+    "cases": 800,
+    "episodes": 3200,
+    "one_step_failures": 32,
+    "first_success": {
+      "2": 17,
+      "never": 8,
+      "10": 4,
+      "4": 3
+    },
+    "steps": {
+      "2": {
+        "rescues": 17,
+        "regressions": 14
+      },
+      "4": {
+        "rescues": 18,
+        "regressions": 17
+      },
+      "10": {
+        "rescues": 20,
+        "regressions": 10
+      }
+    },
+    "nonmonotonic": 37,
+    "persistent_rescues": 19,
+    "nonpersistent_rescues": 5
+  },
+  "libero_plus": {
+    "cases": 1680,
+    "episodes": 6720,
+    "one_step_failures": 149,
+    "first_success": {
+      "2": 42,
+      "4": 23,
+      "never": 80,
+      "10": 4
+    },
+    "steps": {
+      "2": {
+        "rescues": 42,
+        "regressions": 37
+      },
+      "4": {
+        "rescues": 53,
+        "regressions": 50
+      },
+      "10": {
+        "rescues": 53,
+        "regressions": 55
+      }
+    },
+    "nonmonotonic": 128,
+    "persistent_rescues": 48,
+    "nonpersistent_rescues": 21
+  }
+}

@@ -1,0 +1,98 @@
+{
+  "seed": 20261003,
+  "per_class": 12,
+  "coverage": {
+    "libero/regression": {
+      "available": 32,
+      "selected": 12,
+      "available_families": 18,
+      "selected_families": 12,
+      "selected_conditions": 12,
+      "matched_never_available": null,
+      "matched_never_selected": null
+    },
+    "libero/rescue": {
+      "available": 24,
+      "selected": 12,
+      "available_families": 16,
+      "selected_families": 12,
+      "selected_conditions": 12,
+      "matched_never_available": null,
+      "matched_never_selected": null
+    },
+    "libero_plus/regression": {
+      "available": 107,
+      "selected": 12,
+      "available_families": 25,
+      "selected_families": 12,
+      "selected_conditions": 12,
+      "matched_never_available": null,
+      "matched_never_selected": null
+    },
+    "libero_plus/rescue": {
+      "available": 69,
+      "selected": 12,
+      "available_families": 23,
+      "selected_families": 12,
+      "selected_conditions": 12,
+      "matched_never_available": null,
+      "matched_never_selected": null
+    },
+    "libero/never_rescued": {
+      "available": 8,
+      "selected": 8,
+      "available_families": 5,
+      "selected_families": 5,
+      "selected_conditions": 5,
+      "matched_never_available": 2,
+      "matched_never_selected": 2
+    },
+    "libero_plus/never_rescued": {
+      "available": 80,
+      "selected": 12,
+      "available_families": 14,
+      "selected_families": 5,
+      "selected_conditions": 7,
+      "matched_never_available": 10,
+      "matched_never_selected": 10
+    }
+  },
+  "source_files": [
+    {
+      "path": "/volt/artifacts/rescue-characterization/runs/libero-main-worker-0.jsonl",
+      "sha256": "ad5c8bdf81f5564d9c567770285b37b459cb9ea634920fcd036d432841798515"
+    },
+    {
+      "path": "/volt/artifacts/rescue-characterization/runs/libero-main-worker-1.jsonl",
+      "sha256": "1a9e90c7200a8fe618028ea6a86b4db3c32b224c21c01c886f80eecdf10d50ca"
+    },
+    {
+      "path": "/volt/artifacts/rescue-characterization/runs/libero-main-worker-2.jsonl",
+      "sha256": "c6402f68f5ff2572d63e3ba0346c291ecf3b1baad798568af178b824bbf14c3e"
+    },
+    {
+      "path": "/volt/artifacts/rescue-characterization/runs/libero-main-worker-3.jsonl",
+      "sha256": "8fc4a673725e006ca270acf6723033951cf10154633c26a23511853ad034a919"
+    },
+    {
+      "path": "/volt/artifacts/rescue-characterization/runs/libero_plus-main-worker-0.jsonl",
+      "sha256": "758054fbf172cb9d3f451d7a655f4d0bf9b99ccaf91a973833108488da100d7c"
+    },
+    {
+      "path": "/volt/artifacts/rescue-characterization/runs/libero_plus-main-worker-1.jsonl",
+      "sha256": "c07cff692cbf10c362554f5aacd2a0cb8dc51c4d02598fba7910ba4816ff0600"
+    },
+    {
+      "path": "/volt/artifacts/rescue-characterization/runs/libero_plus-main-worker-2.jsonl",
+      "sha256": "b91c6f2151b978f07f7a502806b7c97db5ea5e16502bd541b7593d05e412edce"
+    },
+    {
+      "path": "/volt/artifacts/rescue-characterization/runs/libero_plus-main-worker-3.jsonl",
+      "sha256": "7b724747f39da0f2cd79d26fb99efda944c4725ef246ccf27251f3349cf593a7"
+    }
+  ],
+  "manifest_sha256": "e7537584d34855c24c1a38ca11da4f7e479b9bcbfc53d2cc7ec8f7ff46eadf9d",
+  "error_attempts": [],
+  "selection": "Equal target per benchmark/class; round robin families then conditions; hash order within each level.",
+  "scope": "Outcome-stratified qualitative sample; never estimate population rates from selected clips."
+}

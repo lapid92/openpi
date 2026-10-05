@@ -1,0 +1,11 @@
+test_all_pair_classifications (__main__.IndependentReviewerTests.test_all_pair_classifications) ... ok
+test_duplicate_seed_not_counted_as_new_state (__main__.IndependentReviewerTests.test_duplicate_seed_not_counted_as_new_state) ... ok
+test_either_partial_arm_blocks_historical_pair (__main__.IndependentReviewerTests.test_either_partial_arm_blocks_historical_pair) ... ok
+test_missing_low_confidence_overlap_not_complete (__main__.IndependentReviewerTests.test_missing_low_confidence_overlap_not_complete) ... ok
+test_missing_one_family_overlap_not_complete (__main__.IndependentReviewerTests.test_missing_one_family_overlap_not_complete) ... ok
+test_warned_case_cannot_be_clear_policy_failure (__main__.IndependentReviewerTests.test_warned_case_cannot_be_clear_policy_failure) ... ok
+
+----------------------------------------------------------------------
+Ran 6 tests in 0.001s
+
+OK

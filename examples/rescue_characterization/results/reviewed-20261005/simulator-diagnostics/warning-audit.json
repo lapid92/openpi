@@ -1,0 +1,184 @@
+{
+  "warnings": [
+    {
+      "log": "/volt/artifacts/rescue-characterization/runs/libero-main-3.log",
+      "log_sha256": "bee0ad70d5a8a489a38da84e51d6f786d12b351c53fdd0ac32869ed439d264b1",
+      "warning_line": 1356,
+      "warning": "WARNING: Nan, Inf or huge value in QACC at DOF 9. The simulation is unstable. Time = 0.5480.",
+      "following_episode_summary": {
+        "benchmark": "libero",
+        "condition_id": "libero:libero_10:5",
+        "seed": 3009,
+        "init_index": 18,
+        "flow_steps": 1,
+        "success": false,
+        "policy_steps": 520,
+        "status": "ok",
+        "initial_state_sha256": "375083ca6c9ac0148a8821ed2b9cf5aedd191661dc54707967e67f777bc0e3ba",
+        "stabilized_state_sha256": "4d66a77971723f154e471a51d4f03bcb6f48e0f0d039c8d8ca4efb520da71fdd",
+        "recording": {
+          "video_path": "/volt/artifacts/rescue-characterization/media/37/37ab79d834705f3e29c067007a606865ba51ebb7559c5dc47d2bfe77f7383859-44dff57b21.mp4",
+          "video_sha256": "f9ab993504c411239941e26c92d82396de51dc0db2932f7912b3ffe30673d864",
+          "trace_path": "/volt/artifacts/rescue-characterization/media/37/37ab79d834705f3e29c067007a606865ba51ebb7559c5dc47d2bfe77f7383859-44dff57b21.npz",
+          "trace_sha256": "002148477a6c09820193737cec2f339d508388d8b053fb6df433a84bc747f10e",
+          "video_frames": 521,
+          "executed_actions": 520
+        }
+      },
+      "summary_line": 1358
+    },
+    {
+      "log": "/volt/artifacts/rescue-characterization/runs/libero-main-3.log",
+      "log_sha256": "bee0ad70d5a8a489a38da84e51d6f786d12b351c53fdd0ac32869ed439d264b1",
+      "warning_line": 1360,
+      "warning": "WARNING: Nan, Inf or huge value in QACC at DOF 9. The simulation is unstable. Time = 0.5480.",
+      "following_episode_summary": {
+        "benchmark": "libero",
+        "condition_id": "libero:libero_10:5",
+        "seed": 3009,
+        "init_index": 18,
+        "flow_steps": 2,
+        "success": false,
+        "policy_steps": 520,
+        "status": "ok",
+        "initial_state_sha256": "375083ca6c9ac0148a8821ed2b9cf5aedd191661dc54707967e67f777bc0e3ba",
+        "stabilized_state_sha256": "4d66a77971723f154e471a51d4f03bcb6f48e0f0d039c8d8ca4efb520da71fdd",
+        "recording": {
+          "video_path": "/volt/artifacts/rescue-characterization/media/74/74cefc5bb915807e9317f172d3d2044053c194d165e5be7b86c650babcda0d23-c49c26075a.mp4",
+          "video_sha256": "3adc982f4088cf215bb93c146925ff452d5c0d23a0f7d5d8210326c37117e596",
+          "trace_path": "/volt/artifacts/rescue-characterization/media/74/74cefc5bb915807e9317f172d3d2044053c194d165e5be7b86c650babcda0d23-c49c26075a.npz",
+          "trace_sha256": "b5b011313b1f9329e9ddd479c15df440c511d37f3d5273e3e50ff587b4f08cbb",
+          "video_frames": 521,
+          "executed_actions": 520
+        }
+      },
+      "summary_line": 1362
+    },
+    {
+      "log": "/volt/artifacts/rescue-characterization/runs/libero-main-3.log",
+      "log_sha256": "bee0ad70d5a8a489a38da84e51d6f786d12b351c53fdd0ac32869ed439d264b1",
+      "warning_line": 1364,
+      "warning": "WARNING: Nan, Inf or huge value in QACC at DOF 9. The simulation is unstable. Time = 0.5480.",
+      "following_episode_summary": {
+        "benchmark": "libero",
+        "condition_id": "libero:libero_10:5",
+        "seed": 3009,
+        "init_index": 18,
+        "flow_steps": 4,
+        "success": false,
+        "policy_steps": 520,
+        "status": "ok",
+        "initial_state_sha256": "375083ca6c9ac0148a8821ed2b9cf5aedd191661dc54707967e67f777bc0e3ba",
+        "stabilized_state_sha256": "4d66a77971723f154e471a51d4f03bcb6f48e0f0d039c8d8ca4efb520da71fdd",
+        "recording": {
+          "video_path": "/volt/artifacts/rescue-characterization/media/25/25ca0445d884ab30bd93dd0a92379856b5563808f23f2b1c5bd7e82028b8e688-f96f588274.mp4",
+          "video_sha256": "3298fdd000bd46a820458ef909fc5a2e30a5499c043a64ebde762fb72bbc50a2",
+          "trace_path": "/volt/artifacts/rescue-characterization/media/25/25ca0445d884ab30bd93dd0a92379856b5563808f23f2b1c5bd7e82028b8e688-f96f588274.npz",
+          "trace_sha256": "25d7319e6eb27e7e45954607af49600e2a57f605f3413961d1dff48f32ad2821",
+          "video_frames": 521,
+          "executed_actions": 520
+        }
+      },
+      "summary_line": 1366
+    },
+    {
+      "log": "/volt/artifacts/rescue-characterization/runs/libero-main-3.log",
+      "log_sha256": "bee0ad70d5a8a489a38da84e51d6f786d12b351c53fdd0ac32869ed439d264b1",
+      "warning_line": 1368,
+      "warning": "WARNING: Nan, Inf or huge value in QACC at DOF 9. The simulation is unstable. Time = 0.5480.",
+      "following_episode_summary": {
+        "benchmark": "libero",
+        "condition_id": "libero:libero_10:5",
+        "seed": 3009,
+        "init_index": 18,
+        "flow_steps": 10,
+        "success": false,
+        "policy_steps": 520,
+        "status": "ok",
+        "initial_state_sha256": "375083ca6c9ac0148a8821ed2b9cf5aedd191661dc54707967e67f777bc0e3ba",
+        "stabilized_state_sha256": "4d66a77971723f154e471a51d4f03bcb6f48e0f0d039c8d8ca4efb520da71fdd",
+        "recording": {
+          "video_path": "/volt/artifacts/rescue-characterization/media/b1/b16ff3ee16efa632cd1a3053123b4c844240ef792d76c9ce8e49f9e29cae99ab-964fb4f716.mp4",
+          "video_sha256": "80ccc447ce29d5d99faa97faaea53f63983f353793e2e69a34414f14171e191a",
+          "trace_path": "/volt/artifacts/rescue-characterization/media/b1/b16ff3ee16efa632cd1a3053123b4c844240ef792d76c9ce8e49f9e29cae99ab-964fb4f716.npz",
+          "trace_sha256": "d65e16096aa48810f155a1f9994edbbe97076aab27baf912dbbbf826824f88f0",
+          "video_frames": 521,
+          "executed_actions": 520
+        }
+      },
+      "summary_line": 1370
+    }
+  ],
+  "affected_raw_records": [
+    {
+      "path": "/volt/artifacts/rescue-characterization/runs/libero-main-worker-3.jsonl",
+      "line": 673,
+      "record_sha256": "bdcdaf6a4e43274306e3a0df4abdb5ad69cf53ad6b42c3ac2e0856ef0268d765",
+      "flow_steps": 1,
+      "success": false,
+      "status": "ok",
+      "policy_steps": 520,
+      "recording": {
+        "video_path": "/volt/artifacts/rescue-characterization/media/37/37ab79d834705f3e29c067007a606865ba51ebb7559c5dc47d2bfe77f7383859-44dff57b21.mp4",
+        "video_sha256": "f9ab993504c411239941e26c92d82396de51dc0db2932f7912b3ffe30673d864",
+        "trace_path": "/volt/artifacts/rescue-characterization/media/37/37ab79d834705f3e29c067007a606865ba51ebb7559c5dc47d2bfe77f7383859-44dff57b21.npz",
+        "trace_sha256": "002148477a6c09820193737cec2f339d508388d8b053fb6df433a84bc747f10e",
+        "video_frames": 521,
+        "executed_actions": 520
+      }
+    },
+    {
+      "path": "/volt/artifacts/rescue-characterization/runs/libero-main-worker-3.jsonl",
+      "line": 674,
+      "record_sha256": "3509b68dc24f16646b28e0db2c16d34543512678ee249155d1da2b3358108fe8",
+      "flow_steps": 2,
+      "success": false,
+      "status": "ok",
+      "policy_steps": 520,
+      "recording": {
+        "video_path": "/volt/artifacts/rescue-characterization/media/74/74cefc5bb915807e9317f172d3d2044053c194d165e5be7b86c650babcda0d23-c49c26075a.mp4",
+        "video_sha256": "3adc982f4088cf215bb93c146925ff452d5c0d23a0f7d5d8210326c37117e596",
+        "trace_path": "/volt/artifacts/rescue-characterization/media/74/74cefc5bb915807e9317f172d3d2044053c194d165e5be7b86c650babcda0d23-c49c26075a.npz",
+        "trace_sha256": "b5b011313b1f9329e9ddd479c15df440c511d37f3d5273e3e50ff587b4f08cbb",
+        "video_frames": 521,
+        "executed_actions": 520
+      }
+    },
+    {
+      "path": "/volt/artifacts/rescue-characterization/runs/libero-main-worker-3.jsonl",
+      "line": 675,
+      "record_sha256": "815dfab976e3d690373c4b9d01a7bf81369ac45c97adc88c668f7a25e9b1f360",
+      "flow_steps": 4,
+      "success": false,
+      "status": "ok",
+      "policy_steps": 520,
+      "recording": {
+        "video_path": "/volt/artifacts/rescue-characterization/media/25/25ca0445d884ab30bd93dd0a92379856b5563808f23f2b1c5bd7e82028b8e688-f96f588274.mp4",
+        "video_sha256": "3298fdd000bd46a820458ef909fc5a2e30a5499c043a64ebde762fb72bbc50a2",
+        "trace_path": "/volt/artifacts/rescue-characterization/media/25/25ca0445d884ab30bd93dd0a92379856b5563808f23f2b1c5bd7e82028b8e688-f96f588274.npz",
+        "trace_sha256": "25d7319e6eb27e7e45954607af49600e2a57f605f3413961d1dff48f32ad2821",
+        "video_frames": 521,
+        "executed_actions": 520
+      }
+    },
+    {
+      "path": "/volt/artifacts/rescue-characterization/runs/libero-main-worker-3.jsonl",
+      "line": 676,
+      "record_sha256": "e02f4ab1a8fc9456f4b88bf368d7ccf209aa6392948825fca6ccbc9393e14309",
+      "flow_steps": 10,
+      "success": false,
+      "status": "ok",
+      "policy_steps": 520,
+      "recording": {
+        "video_path": "/volt/artifacts/rescue-characterization/media/b1/b16ff3ee16efa632cd1a3053123b4c844240ef792d76c9ce8e49f9e29cae99ab-964fb4f716.mp4",
+        "video_sha256": "80ccc447ce29d5d99faa97faaea53f63983f353793e2e69a34414f14171e191a",
+        "trace_path": "/volt/artifacts/rescue-characterization/media/b1/b16ff3ee16efa632cd1a3053123b4c844240ef792d76c9ce8e49f9e29cae99ab-964fb4f716.npz",
+        "trace_sha256": "d65e16096aa48810f155a1f9994edbbe97076aab27baf912dbbbf826824f88f0",
+        "video_frames": 521,
+        "executed_actions": 520
+      }
+    }
+  ],
+  "episode_error_rows": 0,
+  "interpretation": "Four simulator instability warnings correspond to all four arms of one predeclared standard case. Preserve the case in all primary counts; do not attribute these failures solely to the policy. No reruns or substitutions. Warning association uses sequential per-worker logs."
+}

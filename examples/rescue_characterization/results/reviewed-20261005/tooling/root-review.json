@@ -1,0 +1,25 @@
+{
+  "status": "reviewed_tests_passed",
+  "reviewed_at": "2026-10-05T09:18:24.454424+00:00",
+  "reviewer": "root",
+  "test_count": 15,
+  "test_command": "/volt/code/frozen-flow-study/.venv/bin/python -m unittest test_review_evidence -v",
+  "changes": [
+    "sort opaque group IDs before assignment",
+    "distinguish both-fail arms in rescued cases from never-rescued controls",
+    "preserve original labels while normalizing explicit coverage aliases and null alternatives",
+    "validate frame/action dictionaries with last executed action = frame - 1"
+  ],
+  "forbidden_actions_not_performed": [
+    "evaluation relaunch",
+    "training",
+    "pinned-source edits",
+    "labels inferred from outcomes"
+  ],
+  "files": {
+    "review_evidence.py": "ccbbd95620e69d301f22ca14cfa8059b68445636592041fb48451e88a6f75362",
+    "publish_review.py": "a04dddb3b6b37abf1bd6306876e2837cb1272ff6aadd22d8f1c9b7aefe4c551c",
+    "test_review_evidence.py": "1056fa471c992102b797e1706a8572a90a16408ce015da9828a1712838d2cf22",
+    "root-review-tests.log": "8012c00429882429bac9e41e0a7b96bcd4abdc0860a6c624412aae65b266d49e"
+  }
+}

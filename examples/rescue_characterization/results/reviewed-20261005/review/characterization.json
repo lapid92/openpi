@@ -1,0 +1,3538 @@
+{
+  "interpretation": "Outcome-stratified qualitative sample only; counts are not population rates, intervals, or causal mechanisms. Primary and overlap labels are retained. Clear-outcome rule requires medium/high confidence in baseline and any overlap label and no observed stage/outcome disagreement where overlap exists; it does not imply every pair was independently double-reviewed. Alternatives remain in label table.",
+  "classes": [
+    {
+      "cohort": "historical",
+      "study": "frozen_flow",
+      "benchmark": "libero",
+      "step": 2,
+      "stage": "placement",
+      "evidence_rule": "baseline_failure_stage",
+      "cases": 2,
+      "families": 2,
+      "conditions": 2,
+      "distinct_initial_state_hashes": 2,
+      "distinct_stabilized_state_hashes": 2,
+      "groups": [
+        "G146bd322fcaa8b6d",
+        "G4099f5572aed6656"
+      ],
+      "clip_ids": [
+        "C097e0fd4955952e0c8c0",
+        "C2883f40c250b2b764a47"
+      ],
+      "meets_declared_new_rescue_threshold": false
+    },
+    {
+      "cohort": "historical",
+      "study": "frozen_flow",
+      "benchmark": "libero",
+      "step": 4,
+      "stage": "completed",
+      "evidence_rule": "regression_failure_stage",
+      "cases": 1,
+      "families": 1,
+      "conditions": 1,
+      "distinct_initial_state_hashes": 1,
+      "distinct_stabilized_state_hashes": 1,
+      "groups": [
+        "G73708eeb5227c71f"
+      ],
+      "clip_ids": [
+        "C7c05e882db02e1a5463c"
+      ],
+      "meets_declared_new_rescue_threshold": false
+    },
+    {
+      "cohort": "historical",
+      "study": "frozen_flow",
+      "benchmark": "libero",
+      "step": 4,
+      "stage": "grasp",
+      "evidence_rule": "baseline_failure_stage",
+      "cases": 1,
+      "families": 1,
+      "conditions": 1,
+      "distinct_initial_state_hashes": 1,
+      "distinct_stabilized_state_hashes": 1,
+      "groups": [
+        "G1bc4aa3be46b991d"
+      ],
+      "clip_ids": [
+        "C8c700c642d9c969d06ec"
+      ],
+      "meets_declared_new_rescue_threshold": false
+    },
+    {
+      "cohort": "historical",
+      "study": "frozen_flow",
+      "benchmark": "libero",
+      "step": 4,
+      "stage": "grasp",
+      "evidence_rule": "clear_outcomes_no_observed_disagreement",
+      "cases": 1,
+      "families": 1,
+      "conditions": 1,
+      "distinct_initial_state_hashes": 1,
+      "distinct_stabilized_state_hashes": 1,
+      "groups": [
+        "G1bc4aa3be46b991d"
+      ],
+      "clip_ids": [
+        "C8c700c642d9c969d06ec"
+      ],
+      "meets_declared_new_rescue_threshold": false
+    },
+    {
+      "cohort": "historical",
+      "study": "frozen_flow",
+      "benchmark": "libero",
+      "step": 4,
+      "stage": "placement",
+      "evidence_rule": "baseline_failure_stage",
+      "cases": 1,
+      "families": 1,
+      "conditions": 1,
+      "distinct_initial_state_hashes": 1,
+      "distinct_stabilized_state_hashes": 1,
+      "groups": [
+        "G4099f5572aed6656"
+      ],
+      "clip_ids": [
+        "C2883f40c250b2b764a47"
+      ],
+      "meets_declared_new_rescue_threshold": false
+    },
+    {
+      "cohort": "historical",
+      "study": "frozen_flow",
+      "benchmark": "libero",
+      "step": 10,
+      "stage": "grasp",
+      "evidence_rule": "baseline_failure_stage",
+      "cases": 1,
+      "families": 1,
+      "conditions": 1,
+      "distinct_initial_state_hashes": 1,
+      "distinct_stabilized_state_hashes": 1,
+      "groups": [
+        "G1bc4aa3be46b991d"
+      ],
+      "clip_ids": [
+        "C8c700c642d9c969d06ec"
+      ],
+      "meets_declared_new_rescue_threshold": false
+    },
+    {
+      "cohort": "historical",
+      "study": "frozen_flow",
+      "benchmark": "libero",
+      "step": 10,
+      "stage": "grasp",
+      "evidence_rule": "clear_outcomes_no_observed_disagreement",
+      "cases": 1,
+      "families": 1,
+      "conditions": 1,
+      "distinct_initial_state_hashes": 1,
+      "distinct_stabilized_state_hashes": 1,
+      "groups": [
+        "G1bc4aa3be46b991d"
+      ],
+      "clip_ids": [
+        "C8c700c642d9c969d06ec"
+      ],
+      "meets_declared_new_rescue_threshold": false
+    },
+    {
+      "cohort": "historical",
+      "study": "frozen_flow",
+      "benchmark": "libero",
+      "step": 10,
+      "stage": "placement",
+      "evidence_rule": "baseline_failure_stage",
+      "cases": 1,
+      "families": 1,
+      "conditions": 1,
+      "distinct_initial_state_hashes": 1,
+      "distinct_stabilized_state_hashes": 1,
+      "groups": [
+        "G4099f5572aed6656"
+      ],
+      "clip_ids": [
+        "C2883f40c250b2b764a47"
+      ],
+      "meets_declared_new_rescue_threshold": false
+    },
+    {
+      "cohort": "historical",
+      "study": "frozen_flow",
+      "benchmark": "libero",
+      "step": 10,
+      "stage": "placement",
+      "evidence_rule": "regression_failure_stage",
+      "cases": 1,
+      "families": 1,
+      "conditions": 1,
+      "distinct_initial_state_hashes": 1,
+      "distinct_stabilized_state_hashes": 1,
+      "groups": [
+        "G73708eeb5227c71f"
+      ],
+      "clip_ids": [
+        "Ccec42b90d80b0e004aa0"
+      ],
+      "meets_declared_new_rescue_threshold": false
+    },
+    {
+      "cohort": "historical",
+      "study": "frozen_flow",
+      "benchmark": "libero_plus",
+      "step": 2,
+      "stage": "approach",
+      "evidence_rule": "never_rescued_control",
+      "cases": 3,
+      "families": 3,
+      "conditions": 3,
+      "distinct_initial_state_hashes": 3,
+      "distinct_stabilized_state_hashes": 3,
+      "groups": [
+        "G6638e665fff62699",
+        "G72df827fcb404956",
+        "Gb5bb56b994923d36"
+      ],
+      "clip_ids": [
+        "C108c262ccb80fa80f43b",
+        "C6e6ba1afb361c50f6f71",
+        "C73d132aa9e4779f319fd"
+      ],
+      "meets_declared_new_rescue_threshold": false
+    },
+    {
+      "cohort": "historical",
+      "study": "frozen_flow",
+      "benchmark": "libero_plus",
+      "step": 2,
+      "stage": "completed",
+      "evidence_rule": "regression_failure_stage",
+      "cases": 1,
+      "families": 1,
+      "conditions": 1,
+      "distinct_initial_state_hashes": 1,
+      "distinct_stabilized_state_hashes": 1,
+      "groups": [
+        "G132144b71bf7dcaf"
+      ],
+      "clip_ids": [
+        "C96331e411a8ba06202dc"
+      ],
+      "meets_declared_new_rescue_threshold": false
+    },
+    {
+      "cohort": "historical",
+      "study": "frozen_flow",
+      "benchmark": "libero_plus",
+      "step": 2,
+      "stage": "grasp",
+      "evidence_rule": "regression_failure_stage",
+      "cases": 1,
+      "families": 1,
+      "conditions": 1,
+      "distinct_initial_state_hashes": 1,
+      "distinct_stabilized_state_hashes": 1,
+      "groups": [
+        "G08af8489a483c371"
+      ],
+      "clip_ids": [
+        "C89f5ab12444d7b56a2d2"
+      ],
+      "meets_declared_new_rescue_threshold": false
+    },
+    {
+      "cohort": "historical",
+      "study": "frozen_flow",
+      "benchmark": "libero_plus",
+      "step": 4,
+      "stage": "approach",
+      "evidence_rule": "never_rescued_control",
+      "cases": 3,
+      "families": 3,
+      "conditions": 3,
+      "distinct_initial_state_hashes": 3,
+      "distinct_stabilized_state_hashes": 3,
+      "groups": [
+        "G6638e665fff62699",
+        "G72df827fcb404956",
+        "Gb5bb56b994923d36"
+      ],
+      "clip_ids": [
+        "C194699ba0bac2fbae4e3",
+        "C65b733e6a3b1fa988990",
+        "C71f4f3e69d93bd0adb64"
+      ],
+      "meets_declared_new_rescue_threshold": false
+    },
+    {
+      "cohort": "historical",
+      "study": "frozen_flow",
+      "benchmark": "libero_plus",
+      "step": 4,
+      "stage": "completed",
+      "evidence_rule": "regression_failure_stage",
+      "cases": 1,
+      "families": 1,
+      "conditions": 1,
+      "distinct_initial_state_hashes": 1,
+      "distinct_stabilized_state_hashes": 1,
+      "groups": [
+        "Gfae200c54cac1009"
+      ],
+      "clip_ids": [
+        "C6f1192dd092ee7923ad0"
+      ],
+      "meets_declared_new_rescue_threshold": false
+    },
+    {
+      "cohort": "historical",
+      "study": "frozen_flow",
+      "benchmark": "libero_plus",
+      "step": 4,
+      "stage": "grasp",
+      "evidence_rule": "baseline_failure_stage",
+      "cases": 1,
+      "families": 1,
+      "conditions": 1,
+      "distinct_initial_state_hashes": 1,
+      "distinct_stabilized_state_hashes": 1,
+      "groups": [
+        "Gf3ce7a9dab5900bc"
+      ],
+      "clip_ids": [
+        "Cfebb12787b0d52af1225"
+      ],
+      "meets_declared_new_rescue_threshold": false
+    },
+    {
+      "cohort": "historical",
+      "study": "frozen_flow",
+      "benchmark": "libero_plus",
+      "step": 4,
+      "stage": "grasp",
+      "evidence_rule": "clear_outcomes_no_observed_disagreement",
+      "cases": 1,
+      "families": 1,
+      "conditions": 1,
+      "distinct_initial_state_hashes": 1,
+      "distinct_stabilized_state_hashes": 1,
+      "groups": [
+        "Gf3ce7a9dab5900bc"
+      ],
+      "clip_ids": [
+        "Cfebb12787b0d52af1225"
+      ],
+      "meets_declared_new_rescue_threshold": false
+    },
+    {
+      "cohort": "historical",
+      "study": "frozen_flow",
+      "benchmark": "libero_plus",
+      "step": 4,
+      "stage": "placement",
+      "evidence_rule": "baseline_failure_stage",
+      "cases": 1,
+      "families": 1,
+      "conditions": 1,
+      "distinct_initial_state_hashes": 1,
+      "distinct_stabilized_state_hashes": 1,
+      "groups": [
+        "G992af73562a1634b"
+      ],
+      "clip_ids": [
+        "Cde72d149d6474df8b758"
+      ],
+      "meets_declared_new_rescue_threshold": false
+    },
+    {
+      "cohort": "historical",
+      "study": "frozen_flow",
+      "benchmark": "libero_plus",
+      "step": 10,
+      "stage": "approach",
+      "evidence_rule": "never_rescued_control",
+      "cases": 3,
+      "families": 3,
+      "conditions": 3,
+      "distinct_initial_state_hashes": 3,
+      "distinct_stabilized_state_hashes": 3,
+      "groups": [
+        "G6638e665fff62699",
+        "G72df827fcb404956",
+        "Gb5bb56b994923d36"
+      ],
+      "clip_ids": [
+        "C1f61738f3b7e94ff6984",
+        "Cdd78f6b83f5c516c678f",
+        "Ced394e90bdb201dd831f"
+      ],
+      "meets_declared_new_rescue_threshold": false
+    },
+    {
+      "cohort": "historical",
+      "study": "frozen_flow",
+      "benchmark": "libero_plus",
+      "step": 10,
+      "stage": "completed",
+      "evidence_rule": "regression_failure_stage",
+      "cases": 1,
+      "families": 1,
+      "conditions": 1,
+      "distinct_initial_state_hashes": 1,
+      "distinct_stabilized_state_hashes": 1,
+      "groups": [
+        "G132144b71bf7dcaf"
+      ],
+      "clip_ids": [
+        "C0a58d0c50522593b730e"
+      ],
+      "meets_declared_new_rescue_threshold": false
+    },
+    {
+      "cohort": "historical",
+      "study": "frozen_flow",
+      "benchmark": "libero_plus",
+      "step": 10,
+      "stage": "grasp",
+      "evidence_rule": "baseline_failure_stage",
+      "cases": 1,
+      "families": 1,
+      "conditions": 1,
+      "distinct_initial_state_hashes": 1,
+      "distinct_stabilized_state_hashes": 1,
+      "groups": [
+        "G1e471a4d2aa7f024"
+      ],
+      "clip_ids": [
+        "C242c6d052b64b8109a9f"
+      ],
+      "meets_declared_new_rescue_threshold": false
+    },
+    {
+      "cohort": "historical",
+      "study": "frozen_flow",
+      "benchmark": "libero_plus",
+      "step": 10,
+      "stage": "grasp",
+      "evidence_rule": "clear_outcomes_no_observed_disagreement",
+      "cases": 1,
+      "families": 1,
+      "conditions": 1,
+      "distinct_initial_state_hashes": 1,
+      "distinct_stabilized_state_hashes": 1,
+      "groups": [
+        "G1e471a4d2aa7f024"
+      ],
+      "clip_ids": [
+        "C242c6d052b64b8109a9f"
+      ],
+      "meets_declared_new_rescue_threshold": false
+    },
+    {
+      "cohort": "historical",
+      "study": "frozen_flow",
+      "benchmark": "libero_plus",
+      "step": 10,
+      "stage": "grasp",
+      "evidence_rule": "regression_failure_stage",
+      "cases": 1,
+      "families": 1,
+      "conditions": 1,
+      "distinct_initial_state_hashes": 1,
+      "distinct_stabilized_state_hashes": 1,
+      "groups": [
+        "G7cd78a71d456ccd8"
+      ],
+      "clip_ids": [
+        "C5b1a69a14349c57e90d6"
+      ],
+      "meets_declared_new_rescue_threshold": false
+    },
+    {
+      "cohort": "historical",
+      "study": "selective_flow",
+      "benchmark": "libero_plus",
+      "step": 10,
+      "stage": "completed",
+      "evidence_rule": "failed_at_1_and_10_control_intermediates_unmeasured",
+      "cases": 1,
+      "families": 1,
+      "conditions": 1,
+      "distinct_initial_state_hashes": 1,
+      "distinct_stabilized_state_hashes": 1,
+      "groups": [
+        "Gc6bf96cc2cbe7113"
+      ],
+      "clip_ids": [
+        "Cdcc71ff47d78f3a4ed6f"
+      ],
+      "meets_declared_new_rescue_threshold": false
+    },
+    {
+      "cohort": "historical",
+      "study": "selective_flow",
+      "benchmark": "libero_plus",
+      "step": 10,
+      "stage": "completed",
+      "evidence_rule": "regression_failure_stage",
+      "cases": 3,
+      "families": 2,
+      "conditions": 2,
+      "distinct_initial_state_hashes": 2,
+      "distinct_stabilized_state_hashes": 2,
+      "groups": [
+        "G447590676fdf33df",
+        "G9d2619fed60414a9",
+        "Gd4140e24a9fd7caf"
+      ],
+      "clip_ids": [
+        "C051dd6f7b2c8c6cb3cbb",
+        "C20e57c1f3d14fef5c020",
+        "C511b66d95673cbc8830d"
+      ],
+      "meets_declared_new_rescue_threshold": false
+    },
+    {
+      "cohort": "historical",
+      "study": "selective_flow",
+      "benchmark": "libero_plus",
+      "step": 10,
+      "stage": "grasp",
+      "evidence_rule": "baseline_failure_stage",
+      "cases": 7,
+      "families": 4,
+      "conditions": 6,
+      "distinct_initial_state_hashes": 7,
+      "distinct_stabilized_state_hashes": 7,
+      "groups": [
+        "G120d7aaceca2a605",
+        "G87a9c6e9bbf3fe94",
+        "Gb560805eabad9e72",
+        "Gc3e547a256cde08c",
+        "Gd72f944651e79f0e",
+        "Gd741d7ce81046b27",
+        "Gdf3c9dbfefa0d0eb"
+      ],
+      "clip_ids": [
+        "C24d59cdb0d25dadc6235",
+        "C305ef674a0a5289b558a",
+        "C3ec947c87cc2f649b2be",
+        "C48e8b747e9b2aac0e949",
+        "Cd0d8bfdb366a4a8a0ce7",
+        "Cddb1da4b795e07e504f5",
+        "Cf7f5044c8c198678b55b"
+      ],
+      "meets_declared_new_rescue_threshold": false
+    },
+    {
+      "cohort": "historical",
+      "study": "selective_flow",
+      "benchmark": "libero_plus",
+      "step": 10,
+      "stage": "grasp",
+      "evidence_rule": "clear_outcomes_no_observed_disagreement",
+      "cases": 7,
+      "families": 4,
+      "conditions": 6,
+      "distinct_initial_state_hashes": 7,
+      "distinct_stabilized_state_hashes": 7,
+      "groups": [
+        "G120d7aaceca2a605",
+        "G87a9c6e9bbf3fe94",
+        "Gb560805eabad9e72",
+        "Gc3e547a256cde08c",
+        "Gd72f944651e79f0e",
+        "Gd741d7ce81046b27",
+        "Gdf3c9dbfefa0d0eb"
+      ],
+      "clip_ids": [
+        "C24d59cdb0d25dadc6235",
+        "C305ef674a0a5289b558a",
+        "C3ec947c87cc2f649b2be",
+        "C48e8b747e9b2aac0e949",
+        "Cd0d8bfdb366a4a8a0ce7",
+        "Cddb1da4b795e07e504f5",
+        "Cf7f5044c8c198678b55b"
+      ],
+      "meets_declared_new_rescue_threshold": false
+    },
+    {
+      "cohort": "historical",
+      "study": "selective_flow",
+      "benchmark": "libero_plus",
+      "step": 10,
+      "stage": "grasp",
+      "evidence_rule": "failed_at_1_and_10_control_intermediates_unmeasured",
+      "cases": 4,
+      "families": 3,
+      "conditions": 3,
+      "distinct_initial_state_hashes": 3,
+      "distinct_stabilized_state_hashes": 3,
+      "groups": [
+        "G5f7565d037e9cec8",
+        "G8406fa1879d75b0d",
+        "Gd5cbf437a16ede25",
+        "Ge64f1e622dcc6e19"
+      ],
+      "clip_ids": [
+        "Cd40439756ca4b266fb2e",
+        "Cd640f63438fe4d521732",
+        "Cd97aa4acf8c6a6fca931",
+        "Cdab462071ecc7fbf7fa5"
+      ],
+      "meets_declared_new_rescue_threshold": false
+    },
+    {
+      "cohort": "historical",
+      "study": "selective_flow",
+      "benchmark": "libero_plus",
+      "step": 10,
+      "stage": "grasp",
+      "evidence_rule": "regression_failure_stage",
+      "cases": 4,
+      "families": 4,
+      "conditions": 4,
+      "distinct_initial_state_hashes": 4,
+      "distinct_stabilized_state_hashes": 4,
+      "groups": [
+        "G2f359bd46a55d143",
+        "G84f8a35efb0de155",
+        "Ga8dbf68a9dfbce1b",
+        "Gfdc1a6b07b4a7f54"
+      ],
+      "clip_ids": [
+        "C09ca248f13fb0e2bae03",
+        "Ca9a38cd804f5e8cecf07",
+        "Cf6e42bf39cc9ac89bb32",
+        "Cfaaed7facdf6ac7e134b"
+      ],
+      "meets_declared_new_rescue_threshold": false
+    },
+    {
+      "cohort": "historical",
+      "study": "selective_flow",
+      "benchmark": "libero_plus",
+      "step": 10,
+      "stage": "manipulation",
+      "evidence_rule": "failed_at_1_and_10_control_intermediates_unmeasured",
+      "cases": 2,
+      "families": 1,
+      "conditions": 1,
+      "distinct_initial_state_hashes": 1,
+      "distinct_stabilized_state_hashes": 1,
+      "groups": [
+        "G3205d81229ab96d1",
+        "G5a099f73fd9e9ef7"
+      ],
+      "clip_ids": [
+        "C053b149fcda4f4e20f91",
+        "Cbf5f2fc433ba8b83db23"
+      ],
+      "meets_declared_new_rescue_threshold": false
+    },
+    {
+      "cohort": "historical",
+      "study": "selective_flow",
+      "benchmark": "libero_plus",
+      "step": 10,
+      "stage": "manipulation",
+      "evidence_rule": "regression_failure_stage",
+      "cases": 2,
+      "families": 1,
+      "conditions": 2,
+      "distinct_initial_state_hashes": 2,
+      "distinct_stabilized_state_hashes": 2,
+      "groups": [
+        "G8e77a4189ab6d2a0",
+        "Gea7c2f1228c36588"
+      ],
+      "clip_ids": [
+        "C7460efb4db9e0647928c",
+        "Cca6a501d11c4e7aeeb65"
+      ],
+      "meets_declared_new_rescue_threshold": false
+    },
+    {
+      "cohort": "historical",
+      "study": "selective_flow",
+      "benchmark": "libero_plus",
+      "step": 10,
+      "stage": "placement",
+      "evidence_rule": "baseline_failure_stage",
+      "cases": 1,
+      "families": 1,
+      "conditions": 1,
+      "distinct_initial_state_hashes": 1,
+      "distinct_stabilized_state_hashes": 1,
+      "groups": [
+        "Gb7ae2ad0c076e125"
+      ],
+      "clip_ids": [
+        "Ca4f91273c257615a75df"
+      ],
+      "meets_declared_new_rescue_threshold": false
+    },
+    {
+      "cohort": "historical",
+      "study": "selective_flow",
+      "benchmark": "libero_plus",
+      "step": 10,
+      "stage": "placement",
+      "evidence_rule": "clear_outcomes_no_observed_disagreement",
+      "cases": 1,
+      "families": 1,
+      "conditions": 1,
+      "distinct_initial_state_hashes": 1,
+      "distinct_stabilized_state_hashes": 1,
+      "groups": [
+        "Gb7ae2ad0c076e125"
+      ],
+      "clip_ids": [
+        "Ca4f91273c257615a75df"
+      ],
+      "meets_declared_new_rescue_threshold": false
+    },
+    {
+      "cohort": "historical",
+      "study": "selective_flow",
+      "benchmark": "libero_plus",
+      "step": 10,
+      "stage": "placement",
+      "evidence_rule": "failed_at_1_and_10_control_intermediates_unmeasured",
+      "cases": 1,
+      "families": 1,
+      "conditions": 1,
+      "distinct_initial_state_hashes": 1,
+      "distinct_stabilized_state_hashes": 1,
+      "groups": [
+        "Ge7e9636ebadfc8f7"
+      ],
+      "clip_ids": [
+        "Cf2b12b434018dc273d73"
+      ],
+      "meets_declared_new_rescue_threshold": false
+    },
+    {
+      "cohort": "historical",
+      "study": "selective_flow",
+      "benchmark": "libero_plus",
+      "step": 10,
+      "stage": "placement",
+      "evidence_rule": "regression_failure_stage",
+      "cases": 3,
+      "families": 3,
+      "conditions": 3,
+      "distinct_initial_state_hashes": 3,
+      "distinct_stabilized_state_hashes": 3,
+      "groups": [
+        "G0a3484d76ec07c97",
+        "G0c781d8a18b22944",
+        "G25b016d27ea298f1"
+      ],
+      "clip_ids": [
+        "C31713f4d99d0de8f7e4b",
+        "C8cc49b6f03a831b2d539",
+        "Ccf64bec0babc414171e5"
+      ],
+      "meets_declared_new_rescue_threshold": false
+    },
+    {
+      "cohort": "new",
+      "study": "rescue_characterization",
+      "benchmark": "libero",
+      "step": 2,
+      "stage": "approach",
+      "evidence_rule": "never_rescued_control",
+      "cases": 1,
+      "families": 1,
+      "conditions": 1,
+      "distinct_initial_state_hashes": 1,
+      "distinct_stabilized_state_hashes": 1,
+      "groups": [
+        "G36f14bc550238327"
+      ],
+      "clip_ids": [
+        "C053a195f4556f9e8fa48"
+      ],
+      "meets_declared_new_rescue_threshold": false
+    },
+    {
+      "cohort": "new",
+      "study": "rescue_characterization",
+      "benchmark": "libero",
+      "step": 2,
+      "stage": "completed",
+      "evidence_rule": "baseline_failure_stage",
+      "cases": 2,
+      "families": 2,
+      "conditions": 2,
+      "distinct_initial_state_hashes": 2,
+      "distinct_stabilized_state_hashes": 2,
+      "groups": [
+        "G3fba0db55f61a0e3",
+        "G735054a775744c17"
+      ],
+      "clip_ids": [
+        "C4ee42041eed9ae103c8e",
+        "Ceba4a3c8260e25b3ab47"
+      ],
+      "meets_declared_new_rescue_threshold": false
+    },
+    {
+      "cohort": "new",
+      "study": "rescue_characterization",
+      "benchmark": "libero",
+      "step": 2,
+      "stage": "completed",
+      "evidence_rule": "never_rescued_control",
+      "cases": 1,
+      "families": 1,
+      "conditions": 1,
+      "distinct_initial_state_hashes": 1,
+      "distinct_stabilized_state_hashes": 1,
+      "groups": [
+        "G7e64e0ea203fe514"
+      ],
+      "clip_ids": [
+        "C92e25ddbb4f4855bf66f"
+      ],
+      "meets_declared_new_rescue_threshold": false
+    },
+    {
+      "cohort": "new",
+      "study": "rescue_characterization",
+      "benchmark": "libero",
+      "step": 2,
+      "stage": "completed",
+      "evidence_rule": "regression_failure_stage",
+      "cases": 1,
+      "families": 1,
+      "conditions": 1,
+      "distinct_initial_state_hashes": 1,
+      "distinct_stabilized_state_hashes": 1,
+      "groups": [
+        "G8492693c4ee4f492"
+      ],
+      "clip_ids": [
+        "C4919c124c38f292fff06"
+      ],
+      "meets_declared_new_rescue_threshold": false
+    },
+    {
+      "cohort": "new",
+      "study": "rescue_characterization",
+      "benchmark": "libero",
+      "step": 2,
+      "stage": "grasp",
+      "evidence_rule": "baseline_failure_stage",
+      "cases": 4,
+      "families": 4,
+      "conditions": 4,
+      "distinct_initial_state_hashes": 4,
+      "distinct_stabilized_state_hashes": 4,
+      "groups": [
+        "G6fd11df76811bb3a",
+        "G800335dfe9ed6082",
+        "Gd4c2ee67ce6d5483",
+        "Ge032776e112124b9"
+      ],
+      "clip_ids": [
+        "C090dc827d4cc4a9e19a5",
+        "C187fe9bd9b13f78125c7",
+        "C706e749549466b832a10",
+        "C9ee9211a391b043db209"
+      ],
+      "meets_declared_new_rescue_threshold": false
+    },
+    {
+      "cohort": "new",
+      "study": "rescue_characterization",
+      "benchmark": "libero",
+      "step": 2,
+      "stage": "grasp",
+      "evidence_rule": "clear_outcomes_no_observed_disagreement",
+      "cases": 4,
+      "families": 4,
+      "conditions": 4,
+      "distinct_initial_state_hashes": 4,
+      "distinct_stabilized_state_hashes": 4,
+      "groups": [
+        "G6fd11df76811bb3a",
+        "G800335dfe9ed6082",
+        "Gd4c2ee67ce6d5483",
+        "Ge032776e112124b9"
+      ],
+      "clip_ids": [
+        "C090dc827d4cc4a9e19a5",
+        "C187fe9bd9b13f78125c7",
+        "C706e749549466b832a10",
+        "C9ee9211a391b043db209"
+      ],
+      "meets_declared_new_rescue_threshold": false
+    },
+    {
+      "cohort": "new",
+      "study": "rescue_characterization",
+      "benchmark": "libero",
+      "step": 2,
+      "stage": "grasp",
+      "evidence_rule": "never_rescued_control",
+      "cases": 3,
+      "families": 3,
+      "conditions": 3,
+      "distinct_initial_state_hashes": 3,
+      "distinct_stabilized_state_hashes": 3,
+      "groups": [
+        "G3aa7391c5f4d1e25",
+        "G97fbeee4b64e202c",
+        "Gada064ba4e3d5c9a"
+      ],
+      "clip_ids": [
+        "C29bd7e61687401f96999",
+        "C38f9649fbda157619f74",
+        "Cabbaa55faf942efebb79"
+      ],
+      "meets_declared_new_rescue_threshold": false
+    },
+    {
+      "cohort": "new",
+      "study": "rescue_characterization",
+      "benchmark": "libero",
+      "step": 2,
+      "stage": "grasp",
+      "evidence_rule": "regression_failure_stage",
+      "cases": 2,
+      "families": 2,
+      "conditions": 2,
+      "distinct_initial_state_hashes": 2,
+      "distinct_stabilized_state_hashes": 2,
+      "groups": [
+        "Gacd15e4728da2f10",
+        "Gb4b40bd986d07706"
+      ],
+      "clip_ids": [
+        "C2811a644bc492295d449",
+        "C6b245a8d9e0644ae53ca"
+      ],
+      "meets_declared_new_rescue_threshold": false
+    },
+    {
+      "cohort": "new",
+      "study": "rescue_characterization",
+      "benchmark": "libero",
+      "step": 2,
+      "stage": "manipulation",
+      "evidence_rule": "never_rescued_control",
+      "cases": 1,
+      "families": 1,
+      "conditions": 1,
+      "distinct_initial_state_hashes": 1,
+      "distinct_stabilized_state_hashes": 1,
+      "groups": [
+        "Gc6677747c69f90c7"
+      ],
+      "clip_ids": [
+        "Cf6c994d677ceca17d3b3"
+      ],
+      "meets_declared_new_rescue_threshold": false
+    },
+    {
+      "cohort": "new",
+      "study": "rescue_characterization",
+      "benchmark": "libero",
+      "step": 2,
+      "stage": "manipulation",
+      "evidence_rule": "regression_failure_stage",
+      "cases": 1,
+      "families": 1,
+      "conditions": 1,
+      "distinct_initial_state_hashes": 1,
+      "distinct_stabilized_state_hashes": 1,
+      "groups": [
+        "G2a128a6fe4fbf4e8"
+      ],
+      "clip_ids": [
+        "C9f587d34b44f8075a4b0"
+      ],
+      "meets_declared_new_rescue_threshold": false
+    },
+    {
+      "cohort": "new",
+      "study": "rescue_characterization",
+      "benchmark": "libero",
+      "step": 2,
+      "stage": "placement",
+      "evidence_rule": "baseline_failure_stage",
+      "cases": 4,
+      "families": 4,
+      "conditions": 4,
+      "distinct_initial_state_hashes": 4,
+      "distinct_stabilized_state_hashes": 4,
+      "groups": [
+        "G881f7de5c4612fc6",
+        "G9b7cd2b6e43c13e6",
+        "Gaade50e2c017058d",
+        "Ge8d63611d2dc1534"
+      ],
+      "clip_ids": [
+        "C74df75eeaf22693f518e",
+        "C759d9691d9583f396418",
+        "Caca8988b71da7ea934f7",
+        "Cdf50ddc940b46edba83c"
+      ],
+      "meets_declared_new_rescue_threshold": false
+    },
+    {
+      "cohort": "new",
+      "study": "rescue_characterization",
+      "benchmark": "libero",
+      "step": 2,
+      "stage": "placement",
+      "evidence_rule": "clear_outcomes_no_observed_disagreement",
+      "cases": 3,
+      "families": 3,
+      "conditions": 3,
+      "distinct_initial_state_hashes": 3,
+      "distinct_stabilized_state_hashes": 3,
+      "groups": [
+        "G881f7de5c4612fc6",
+        "Gaade50e2c017058d",
+        "Ge8d63611d2dc1534"
+      ],
+      "clip_ids": [
+        "C74df75eeaf22693f518e",
+        "C759d9691d9583f396418",
+        "Caca8988b71da7ea934f7"
+      ],
+      "meets_declared_new_rescue_threshold": false
+    },
+    {
+      "cohort": "new",
+      "study": "rescue_characterization",
+      "benchmark": "libero",
+      "step": 2,
+      "stage": "placement",
+      "evidence_rule": "never_rescued_control",
+      "cases": 1,
+      "families": 1,
+      "conditions": 1,
+      "distinct_initial_state_hashes": 1,
+      "distinct_stabilized_state_hashes": 1,
+      "groups": [
+        "G014ef3e86286482d"
+      ],
+      "clip_ids": [
+        "Cb8dfd3c748e85ebd16df"
+      ],
+      "meets_declared_new_rescue_threshold": false
+    },
+    {
+      "cohort": "new",
+      "study": "rescue_characterization",
+      "benchmark": "libero",
+      "step": 2,
+      "stage": "unclear",
+      "evidence_rule": "baseline_failure_stage",
+      "cases": 1,
+      "families": 1,
+      "conditions": 1,
+      "distinct_initial_state_hashes": 1,
+      "distinct_stabilized_state_hashes": 1,
+      "groups": [
+        "G33d4c2cab778bf33"
+      ],
+      "clip_ids": [
+        "C4839e3189c0aba81dfbe"
+      ],
+      "meets_declared_new_rescue_threshold": false
+    },
+    {
+      "cohort": "new",
+      "study": "rescue_characterization",
+      "benchmark": "libero",
+      "step": 2,
+      "stage": "unclear",
+      "evidence_rule": "never_rescued_control",
+      "cases": 1,
+      "families": 1,
+      "conditions": 1,
+      "distinct_initial_state_hashes": 1,
+      "distinct_stabilized_state_hashes": 1,
+      "groups": [
+        "Gb4f4b6fe698a58f7"
+      ],
+      "clip_ids": [
+        "Cf351c028d50feb96ab1f"
+      ],
+      "meets_declared_new_rescue_threshold": false
+    },
+    {
+      "cohort": "new",
+      "study": "rescue_characterization",
+      "benchmark": "libero",
+      "step": 2,
+      "stage": "unclear",
+      "evidence_rule": "regression_failure_stage",
+      "cases": 1,
+      "families": 1,
+      "conditions": 1,
+      "distinct_initial_state_hashes": 1,
+      "distinct_stabilized_state_hashes": 1,
+      "groups": [
+        "G3feab64fb7585af4"
+      ],
+      "clip_ids": [
+        "Ca665d7c9b618610bcb81"
+      ],
+      "meets_declared_new_rescue_threshold": false
+    },
+    {
+      "cohort": "new",
+      "study": "rescue_characterization",
+      "benchmark": "libero",
+      "step": 4,
+      "stage": "approach",
+      "evidence_rule": "never_rescued_control",
+      "cases": 1,
+      "families": 1,
+      "conditions": 1,
+      "distinct_initial_state_hashes": 1,
+      "distinct_stabilized_state_hashes": 1,
+      "groups": [
+        "G36f14bc550238327"
+      ],
+      "clip_ids": [
+        "Cbd1b5ceafe5f5826161a"
+      ],
+      "meets_declared_new_rescue_threshold": false
+    },
+    {
+      "cohort": "new",
+      "study": "rescue_characterization",
+      "benchmark": "libero",
+      "step": 4,
+      "stage": "completed",
+      "evidence_rule": "baseline_failure_stage",
+      "cases": 3,
+      "families": 3,
+      "conditions": 3,
+      "distinct_initial_state_hashes": 3,
+      "distinct_stabilized_state_hashes": 3,
+      "groups": [
+        "G23edfcdde3b39a23",
+        "G3fba0db55f61a0e3",
+        "G735054a775744c17"
+      ],
+      "clip_ids": [
+        "C4ee42041eed9ae103c8e",
+        "Ce60db1fa132b11c8ec0b",
+        "Ceba4a3c8260e25b3ab47"
+      ],
+      "meets_declared_new_rescue_threshold": false
+    },
+    {
+      "cohort": "new",
+      "study": "rescue_characterization",
+      "benchmark": "libero",
+      "step": 4,
+      "stage": "completed",
+      "evidence_rule": "never_rescued_control",
+      "cases": 1,
+      "families": 1,
+      "conditions": 1,
+      "distinct_initial_state_hashes": 1,
+      "distinct_stabilized_state_hashes": 1,
+      "groups": [
+        "G7e64e0ea203fe514"
+      ],
+      "clip_ids": [
+        "Cb7a20a0f593d1bd46c18"
+      ],
+      "meets_declared_new_rescue_threshold": false
+    },
+    {
+      "cohort": "new",
+      "study": "rescue_characterization",
+      "benchmark": "libero",
+      "step": 4,
+      "stage": "completed",
+      "evidence_rule": "regression_failure_stage",
+      "cases": 3,
+      "families": 3,
+      "conditions": 3,
+      "distinct_initial_state_hashes": 3,
+      "distinct_stabilized_state_hashes": 3,
+      "groups": [
+        "G84e72ba4b0ffc175",
+        "Gc0d0448d966ccda6",
+        "Ge47ac602ef37a4dc"
+      ],
+      "clip_ids": [
+        "C02a606460f33d3c4a11f",
+        "C046f1f46bfa1ad47603d",
+        "C85acaeb4d31ad13b4487"
+      ],
+      "meets_declared_new_rescue_threshold": false
+    },
+    {
+      "cohort": "new",
+      "study": "rescue_characterization",
+      "benchmark": "libero",
+      "step": 4,
+      "stage": "grasp",
+      "evidence_rule": "baseline_failure_stage",
+      "cases": 3,
+      "families": 3,
+      "conditions": 3,
+      "distinct_initial_state_hashes": 3,
+      "distinct_stabilized_state_hashes": 3,
+      "groups": [
+        "G800335dfe9ed6082",
+        "Gd4c2ee67ce6d5483",
+        "Ge032776e112124b9"
+      ],
+      "clip_ids": [
+        "C090dc827d4cc4a9e19a5",
+        "C187fe9bd9b13f78125c7",
+        "C9ee9211a391b043db209"
+      ],
+      "meets_declared_new_rescue_threshold": false
+    },
+    {
+      "cohort": "new",
+      "study": "rescue_characterization",
+      "benchmark": "libero",
+      "step": 4,
+      "stage": "grasp",
+      "evidence_rule": "clear_outcomes_no_observed_disagreement",
+      "cases": 3,
+      "families": 3,
+      "conditions": 3,
+      "distinct_initial_state_hashes": 3,
+      "distinct_stabilized_state_hashes": 3,
+      "groups": [
+        "G800335dfe9ed6082",
+        "Gd4c2ee67ce6d5483",
+        "Ge032776e112124b9"
+      ],
+      "clip_ids": [
+        "C090dc827d4cc4a9e19a5",
+        "C187fe9bd9b13f78125c7",
+        "C9ee9211a391b043db209"
+      ],
+      "meets_declared_new_rescue_threshold": false
+    },
+    {
+      "cohort": "new",
+      "study": "rescue_characterization",
+      "benchmark": "libero",
+      "step": 4,
+      "stage": "grasp",
+      "evidence_rule": "never_rescued_control",
+      "cases": 3,
+      "families": 3,
+      "conditions": 3,
+      "distinct_initial_state_hashes": 3,
+      "distinct_stabilized_state_hashes": 3,
+      "groups": [
+        "G3aa7391c5f4d1e25",
+        "G97fbeee4b64e202c",
+        "Gada064ba4e3d5c9a"
+      ],
+      "clip_ids": [
+        "C18bffea8c1949f10ef6c",
+        "C827a70f26e6d4d9e4076",
+        "Cc27016fc38562658a1d8"
+      ],
+      "meets_declared_new_rescue_threshold": false
+    },
+    {
+      "cohort": "new",
+      "study": "rescue_characterization",
+      "benchmark": "libero",
+      "step": 4,
+      "stage": "placement",
+      "evidence_rule": "baseline_failure_stage",
+      "cases": 4,
+      "families": 4,
+      "conditions": 4,
+      "distinct_initial_state_hashes": 4,
+      "distinct_stabilized_state_hashes": 4,
+      "groups": [
+        "G881f7de5c4612fc6",
+        "G9b7cd2b6e43c13e6",
+        "Gaade50e2c017058d",
+        "Ge8d63611d2dc1534"
+      ],
+      "clip_ids": [
+        "C74df75eeaf22693f518e",
+        "C759d9691d9583f396418",
+        "Caca8988b71da7ea934f7",
+        "Cdf50ddc940b46edba83c"
+      ],
+      "meets_declared_new_rescue_threshold": false
+    },
+    {
+      "cohort": "new",
+      "study": "rescue_characterization",
+      "benchmark": "libero",
+      "step": 4,
+      "stage": "placement",
+      "evidence_rule": "clear_outcomes_no_observed_disagreement",
+      "cases": 3,
+      "families": 3,
+      "conditions": 3,
+      "distinct_initial_state_hashes": 3,
+      "distinct_stabilized_state_hashes": 3,
+      "groups": [
+        "G881f7de5c4612fc6",
+        "Gaade50e2c017058d",
+        "Ge8d63611d2dc1534"
+      ],
+      "clip_ids": [
+        "C74df75eeaf22693f518e",
+        "C759d9691d9583f396418",
+        "Caca8988b71da7ea934f7"
+      ],
+      "meets_declared_new_rescue_threshold": false
+    },
+    {
+      "cohort": "new",
+      "study": "rescue_characterization",
+      "benchmark": "libero",
+      "step": 4,
+      "stage": "placement",
+      "evidence_rule": "never_rescued_control",
+      "cases": 2,
+      "families": 2,
+      "conditions": 2,
+      "distinct_initial_state_hashes": 2,
+      "distinct_stabilized_state_hashes": 2,
+      "groups": [
+        "G014ef3e86286482d",
+        "Gc6677747c69f90c7"
+      ],
+      "clip_ids": [
+        "C729bd63b0c1bcf796e29",
+        "Cd691d0553ad36daf9b58"
+      ],
+      "meets_declared_new_rescue_threshold": false
+    },
+    {
+      "cohort": "new",
+      "study": "rescue_characterization",
+      "benchmark": "libero",
+      "step": 4,
+      "stage": "placement",
+      "evidence_rule": "regression_failure_stage",
+      "cases": 1,
+      "families": 1,
+      "conditions": 1,
+      "distinct_initial_state_hashes": 1,
+      "distinct_stabilized_state_hashes": 1,
+      "groups": [
+        "G554ac75b0b46e78d"
+      ],
+      "clip_ids": [
+        "Cd20f21d253c6a7a1260e"
+      ],
+      "meets_declared_new_rescue_threshold": false
+    },
+    {
+      "cohort": "new",
+      "study": "rescue_characterization",
+      "benchmark": "libero",
+      "step": 4,
+      "stage": "unclear",
+      "evidence_rule": "never_rescued_control",
+      "cases": 1,
+      "families": 1,
+      "conditions": 1,
+      "distinct_initial_state_hashes": 1,
+      "distinct_stabilized_state_hashes": 1,
+      "groups": [
+        "Gb4f4b6fe698a58f7"
+      ],
+      "clip_ids": [
+        "Ca32bfdc8d8bf15fd485a"
+      ],
+      "meets_declared_new_rescue_threshold": false
+    },
+    {
+      "cohort": "new",
+      "study": "rescue_characterization",
+      "benchmark": "libero",
+      "step": 4,
+      "stage": "unclear",
+      "evidence_rule": "regression_failure_stage",
+      "cases": 2,
+      "families": 2,
+      "conditions": 2,
+      "distinct_initial_state_hashes": 2,
+      "distinct_stabilized_state_hashes": 2,
+      "groups": [
+        "G3feab64fb7585af4",
+        "G7bd0c5aa3e1341bd"
+      ],
+      "clip_ids": [
+        "C9760d40b635a0036ec54",
+        "Cdf5a6d8bedfb883ce184"
+      ],
+      "meets_declared_new_rescue_threshold": false
+    },
+    {
+      "cohort": "new",
+      "study": "rescue_characterization",
+      "benchmark": "libero",
+      "step": 10,
+      "stage": "approach",
+      "evidence_rule": "never_rescued_control",
+      "cases": 1,
+      "families": 1,
+      "conditions": 1,
+      "distinct_initial_state_hashes": 1,
+      "distinct_stabilized_state_hashes": 1,
+      "groups": [
+        "G36f14bc550238327"
+      ],
+      "clip_ids": [
+        "Cd48eff38ca54f563781e"
+      ],
+      "meets_declared_new_rescue_threshold": false
+    },
+    {
+      "cohort": "new",
+      "study": "rescue_characterization",
+      "benchmark": "libero",
+      "step": 10,
+      "stage": "completed",
+      "evidence_rule": "baseline_failure_stage",
+      "cases": 3,
+      "families": 3,
+      "conditions": 3,
+      "distinct_initial_state_hashes": 3,
+      "distinct_stabilized_state_hashes": 3,
+      "groups": [
+        "G23edfcdde3b39a23",
+        "G3fba0db55f61a0e3",
+        "G735054a775744c17"
+      ],
+      "clip_ids": [
+        "C4ee42041eed9ae103c8e",
+        "Ce60db1fa132b11c8ec0b",
+        "Ceba4a3c8260e25b3ab47"
+      ],
+      "meets_declared_new_rescue_threshold": false
+    },
+    {
+      "cohort": "new",
+      "study": "rescue_characterization",
+      "benchmark": "libero",
+      "step": 10,
+      "stage": "completed",
+      "evidence_rule": "never_rescued_control",
+      "cases": 1,
+      "families": 1,
+      "conditions": 1,
+      "distinct_initial_state_hashes": 1,
+      "distinct_stabilized_state_hashes": 1,
+      "groups": [
+        "G7e64e0ea203fe514"
+      ],
+      "clip_ids": [
+        "C43e76a060863fe269718"
+      ],
+      "meets_declared_new_rescue_threshold": false
+    },
+    {
+      "cohort": "new",
+      "study": "rescue_characterization",
+      "benchmark": "libero",
+      "step": 10,
+      "stage": "grasp",
+      "evidence_rule": "baseline_failure_stage",
+      "cases": 1,
+      "families": 1,
+      "conditions": 1,
+      "distinct_initial_state_hashes": 1,
+      "distinct_stabilized_state_hashes": 1,
+      "groups": [
+        "Ge032776e112124b9"
+      ],
+      "clip_ids": [
+        "C9ee9211a391b043db209"
+      ],
+      "meets_declared_new_rescue_threshold": false
+    },
+    {
+      "cohort": "new",
+      "study": "rescue_characterization",
+      "benchmark": "libero",
+      "step": 10,
+      "stage": "grasp",
+      "evidence_rule": "clear_outcomes_no_observed_disagreement",
+      "cases": 1,
+      "families": 1,
+      "conditions": 1,
+      "distinct_initial_state_hashes": 1,
+      "distinct_stabilized_state_hashes": 1,
+      "groups": [
+        "Ge032776e112124b9"
+      ],
+      "clip_ids": [
+        "C9ee9211a391b043db209"
+      ],
+      "meets_declared_new_rescue_threshold": false
+    },
+    {
+      "cohort": "new",
+      "study": "rescue_characterization",
+      "benchmark": "libero",
+      "step": 10,
+      "stage": "grasp",
+      "evidence_rule": "never_rescued_control",
+      "cases": 3,
+      "families": 3,
+      "conditions": 3,
+      "distinct_initial_state_hashes": 3,
+      "distinct_stabilized_state_hashes": 3,
+      "groups": [
+        "G3aa7391c5f4d1e25",
+        "G97fbeee4b64e202c",
+        "Gc6677747c69f90c7"
+      ],
+      "clip_ids": [
+        "C3959dcaa240d1cb5b9b6",
+        "Ca7f8e2467f22bc46c411",
+        "Cc2b1b529bcf6824cd5b3"
+      ],
+      "meets_declared_new_rescue_threshold": false
+    },
+    {
+      "cohort": "new",
+      "study": "rescue_characterization",
+      "benchmark": "libero",
+      "step": 10,
+      "stage": "manipulation",
+      "evidence_rule": "never_rescued_control",
+      "cases": 1,
+      "families": 1,
+      "conditions": 1,
+      "distinct_initial_state_hashes": 1,
+      "distinct_stabilized_state_hashes": 1,
+      "groups": [
+        "Gada064ba4e3d5c9a"
+      ],
+      "clip_ids": [
+        "Ce8c18902237ed3e38676"
+      ],
+      "meets_declared_new_rescue_threshold": false
+    },
+    {
+      "cohort": "new",
+      "study": "rescue_characterization",
+      "benchmark": "libero",
+      "step": 10,
+      "stage": "placement",
+      "evidence_rule": "baseline_failure_stage",
+      "cases": 4,
+      "families": 4,
+      "conditions": 4,
+      "distinct_initial_state_hashes": 4,
+      "distinct_stabilized_state_hashes": 4,
+      "groups": [
+        "G881f7de5c4612fc6",
+        "G9b7cd2b6e43c13e6",
+        "Gaade50e2c017058d",
+        "Ge8d63611d2dc1534"
+      ],
+      "clip_ids": [
+        "C74df75eeaf22693f518e",
+        "C759d9691d9583f396418",
+        "Caca8988b71da7ea934f7",
+        "Cdf50ddc940b46edba83c"
+      ],
+      "meets_declared_new_rescue_threshold": false
+    },
+    {
+      "cohort": "new",
+      "study": "rescue_characterization",
+      "benchmark": "libero",
+      "step": 10,
+      "stage": "placement",
+      "evidence_rule": "clear_outcomes_no_observed_disagreement",
+      "cases": 3,
+      "families": 3,
+      "conditions": 3,
+      "distinct_initial_state_hashes": 3,
+      "distinct_stabilized_state_hashes": 3,
+      "groups": [
+        "G881f7de5c4612fc6",
+        "Gaade50e2c017058d",
+        "Ge8d63611d2dc1534"
+      ],
+      "clip_ids": [
+        "C74df75eeaf22693f518e",
+        "C759d9691d9583f396418",
+        "Caca8988b71da7ea934f7"
+      ],
+      "meets_declared_new_rescue_threshold": false
+    },
+    {
+      "cohort": "new",
+      "study": "rescue_characterization",
+      "benchmark": "libero",
+      "step": 10,
+      "stage": "placement",
+      "evidence_rule": "never_rescued_control",
+      "cases": 1,
+      "families": 1,
+      "conditions": 1,
+      "distinct_initial_state_hashes": 1,
+      "distinct_stabilized_state_hashes": 1,
+      "groups": [
+        "G014ef3e86286482d"
+      ],
+      "clip_ids": [
+        "C494bacde64e005337916"
+      ],
+      "meets_declared_new_rescue_threshold": false
+    },
+    {
+      "cohort": "new",
+      "study": "rescue_characterization",
+      "benchmark": "libero",
+      "step": 10,
+      "stage": "placement",
+      "evidence_rule": "regression_failure_stage",
+      "cases": 3,
+      "families": 3,
+      "conditions": 3,
+      "distinct_initial_state_hashes": 3,
+      "distinct_stabilized_state_hashes": 3,
+      "groups": [
+        "Gbe821765f7e87f87",
+        "Gc0d0448d966ccda6",
+        "Ge72b1b6e450afd16"
+      ],
+      "clip_ids": [
+        "C418f43fb47ca05d2a276",
+        "C5690e3a3e0d28300291c",
+        "C94a303bef1e738caaf29"
+      ],
+      "meets_declared_new_rescue_threshold": false
+    },
+    {
+      "cohort": "new",
+      "study": "rescue_characterization",
+      "benchmark": "libero",
+      "step": 10,
+      "stage": "unclear",
+      "evidence_rule": "baseline_failure_stage",
+      "cases": 1,
+      "families": 1,
+      "conditions": 1,
+      "distinct_initial_state_hashes": 1,
+      "distinct_stabilized_state_hashes": 1,
+      "groups": [
+        "G33d4c2cab778bf33"
+      ],
+      "clip_ids": [
+        "C4839e3189c0aba81dfbe"
+      ],
+      "meets_declared_new_rescue_threshold": false
+    },
+    {
+      "cohort": "new",
+      "study": "rescue_characterization",
+      "benchmark": "libero",
+      "step": 10,
+      "stage": "unclear",
+      "evidence_rule": "never_rescued_control",
+      "cases": 1,
+      "families": 1,
+      "conditions": 1,
+      "distinct_initial_state_hashes": 1,
+      "distinct_stabilized_state_hashes": 1,
+      "groups": [
+        "Gb4f4b6fe698a58f7"
+      ],
+      "clip_ids": [
+        "C69ea382475d52d648c72"
+      ],
+      "meets_declared_new_rescue_threshold": false
+    },
+    {
+      "cohort": "new",
+      "study": "rescue_characterization",
+      "benchmark": "libero_plus",
+      "step": 2,
+      "stage": "approach",
+      "evidence_rule": "baseline_failure_stage",
+      "cases": 1,
+      "families": 1,
+      "conditions": 1,
+      "distinct_initial_state_hashes": 1,
+      "distinct_stabilized_state_hashes": 1,
+      "groups": [
+        "G1ee3b27cb9424309"
+      ],
+      "clip_ids": [
+        "Cde63382791f36ec95a54"
+      ],
+      "meets_declared_new_rescue_threshold": false
+    },
+    {
+      "cohort": "new",
+      "study": "rescue_characterization",
+      "benchmark": "libero_plus",
+      "step": 2,
+      "stage": "approach",
+      "evidence_rule": "clear_outcomes_no_observed_disagreement",
+      "cases": 1,
+      "families": 1,
+      "conditions": 1,
+      "distinct_initial_state_hashes": 1,
+      "distinct_stabilized_state_hashes": 1,
+      "groups": [
+        "G1ee3b27cb9424309"
+      ],
+      "clip_ids": [
+        "Cde63382791f36ec95a54"
+      ],
+      "meets_declared_new_rescue_threshold": false
+    },
+    {
+      "cohort": "new",
+      "study": "rescue_characterization",
+      "benchmark": "libero_plus",
+      "step": 2,
+      "stage": "approach",
+      "evidence_rule": "never_rescued_control",
+      "cases": 4,
+      "families": 3,
+      "conditions": 3,
+      "distinct_initial_state_hashes": 4,
+      "distinct_stabilized_state_hashes": 4,
+      "groups": [
+        "G0d8027ba454a63be",
+        "G1f06c2d613c75e03",
+        "G40951377b4a94fea",
+        "G445fe9cd07f4db2e"
+      ],
+      "clip_ids": [
+        "C1f81e4097b4493919d9f",
+        "C444a624b1a98ff08a09e",
+        "Ca32a2300da1db5c13217",
+        "Cd4b789ef7bc93a51eded"
+      ],
+      "meets_declared_new_rescue_threshold": false
+    },
+    {
+      "cohort": "new",
+      "study": "rescue_characterization",
+      "benchmark": "libero_plus",
+      "step": 2,
+      "stage": "completed",
+      "evidence_rule": "baseline_failure_stage",
+      "cases": 1,
+      "families": 1,
+      "conditions": 1,
+      "distinct_initial_state_hashes": 1,
+      "distinct_stabilized_state_hashes": 1,
+      "groups": [
+        "G11922684633c5bf1"
+      ],
+      "clip_ids": [
+        "C7fe0b9da99063dec29fe"
+      ],
+      "meets_declared_new_rescue_threshold": false
+    },
+    {
+      "cohort": "new",
+      "study": "rescue_characterization",
+      "benchmark": "libero_plus",
+      "step": 2,
+      "stage": "grasp",
+      "evidence_rule": "baseline_failure_stage",
+      "cases": 3,
+      "families": 3,
+      "conditions": 3,
+      "distinct_initial_state_hashes": 3,
+      "distinct_stabilized_state_hashes": 3,
+      "groups": [
+        "Gbc05c37d1848b629",
+        "Gc16b0a80c8bcd7c2",
+        "Gf9f9b0f1ce88c73f"
+      ],
+      "clip_ids": [
+        "C6404f5a08cf6bbde17d5",
+        "C6763369ecfb239562ceb",
+        "C6b29182d2174413c8caa"
+      ],
+      "meets_declared_new_rescue_threshold": false
+    },
+    {
+      "cohort": "new",
+      "study": "rescue_characterization",
+      "benchmark": "libero_plus",
+      "step": 2,
+      "stage": "grasp",
+      "evidence_rule": "clear_outcomes_no_observed_disagreement",
+      "cases": 3,
+      "families": 3,
+      "conditions": 3,
+      "distinct_initial_state_hashes": 3,
+      "distinct_stabilized_state_hashes": 3,
+      "groups": [
+        "Gbc05c37d1848b629",
+        "Gc16b0a80c8bcd7c2",
+        "Gf9f9b0f1ce88c73f"
+      ],
+      "clip_ids": [
+        "C6404f5a08cf6bbde17d5",
+        "C6763369ecfb239562ceb",
+        "C6b29182d2174413c8caa"
+      ],
+      "meets_declared_new_rescue_threshold": false
+    },
+    {
+      "cohort": "new",
+      "study": "rescue_characterization",
+      "benchmark": "libero_plus",
+      "step": 2,
+      "stage": "grasp",
+      "evidence_rule": "never_rescued_control",
+      "cases": 5,
+      "families": 3,
+      "conditions": 3,
+      "distinct_initial_state_hashes": 5,
+      "distinct_stabilized_state_hashes": 5,
+      "groups": [
+        "G337d80c1daa69be4",
+        "G7cf75393d47fd9d6",
+        "Gbb560c33d089a71c",
+        "Gbdac1560b49a07e4",
+        "Gea62804a145758a7"
+      ],
+      "clip_ids": [
+        "C233f7753e7ab0bacba61",
+        "C325ff9ecf46a9465ebdd",
+        "C515b4b9e7522b7c84a67",
+        "C7d4ee677dfd6af5c51e9",
+        "Cd61fea13f5e756f854f5"
+      ],
+      "meets_declared_new_rescue_threshold": false
+    },
+    {
+      "cohort": "new",
+      "study": "rescue_characterization",
+      "benchmark": "libero_plus",
+      "step": 2,
+      "stage": "grasp",
+      "evidence_rule": "regression_failure_stage",
+      "cases": 2,
+      "families": 2,
+      "conditions": 2,
+      "distinct_initial_state_hashes": 2,
+      "distinct_stabilized_state_hashes": 2,
+      "groups": [
+        "Ge041abb97d04c2ec",
+        "Gf1be2e4889d13d45"
+      ],
+      "clip_ids": [
+        "Cd5bd31bffe2bcd22a183",
+        "Cefd7d44a5acc818bcbc8"
+      ],
+      "meets_declared_new_rescue_threshold": false
+    },
+    {
+      "cohort": "new",
+      "study": "rescue_characterization",
+      "benchmark": "libero_plus",
+      "step": 2,
+      "stage": "manipulation",
+      "evidence_rule": "never_rescued_control",
+      "cases": 1,
+      "families": 1,
+      "conditions": 1,
+      "distinct_initial_state_hashes": 1,
+      "distinct_stabilized_state_hashes": 1,
+      "groups": [
+        "Gdffaa541f7a0c869"
+      ],
+      "clip_ids": [
+        "C326d5928f2121df41375"
+      ],
+      "meets_declared_new_rescue_threshold": false
+    },
+    {
+      "cohort": "new",
+      "study": "rescue_characterization",
+      "benchmark": "libero_plus",
+      "step": 2,
+      "stage": "placement",
+      "evidence_rule": "baseline_failure_stage",
+      "cases": 2,
+      "families": 2,
+      "conditions": 2,
+      "distinct_initial_state_hashes": 2,
+      "distinct_stabilized_state_hashes": 2,
+      "groups": [
+        "G737f6da6af5c8890",
+        "Gb9a283bc231f8b14"
+      ],
+      "clip_ids": [
+        "C24d7eb20fa5fc04270df",
+        "C9fe34110bc86af164805"
+      ],
+      "meets_declared_new_rescue_threshold": false
+    },
+    {
+      "cohort": "new",
+      "study": "rescue_characterization",
+      "benchmark": "libero_plus",
+      "step": 2,
+      "stage": "placement",
+      "evidence_rule": "clear_outcomes_no_observed_disagreement",
+      "cases": 1,
+      "families": 1,
+      "conditions": 1,
+      "distinct_initial_state_hashes": 1,
+      "distinct_stabilized_state_hashes": 1,
+      "groups": [
+        "Gb9a283bc231f8b14"
+      ],
+      "clip_ids": [
+        "C9fe34110bc86af164805"
+      ],
+      "meets_declared_new_rescue_threshold": false
+    },
+    {
+      "cohort": "new",
+      "study": "rescue_characterization",
+      "benchmark": "libero_plus",
+      "step": 2,
+      "stage": "placement",
+      "evidence_rule": "never_rescued_control",
+      "cases": 1,
+      "families": 1,
+      "conditions": 1,
+      "distinct_initial_state_hashes": 1,
+      "distinct_stabilized_state_hashes": 1,
+      "groups": [
+        "Gc5f8d3b8a84e1010"
+      ],
+      "clip_ids": [
+        "C20c242e605572fc7fe45"
+      ],
+      "meets_declared_new_rescue_threshold": false
+    },
+    {
+      "cohort": "new",
+      "study": "rescue_characterization",
+      "benchmark": "libero_plus",
+      "step": 2,
+      "stage": "placement",
+      "evidence_rule": "regression_failure_stage",
+      "cases": 1,
+      "families": 1,
+      "conditions": 1,
+      "distinct_initial_state_hashes": 1,
+      "distinct_stabilized_state_hashes": 1,
+      "groups": [
+        "Ge3abe279b1c13f63"
+      ],
+      "clip_ids": [
+        "C0745d49d50317e73aab7"
+      ],
+      "meets_declared_new_rescue_threshold": false
+    },
+    {
+      "cohort": "new",
+      "study": "rescue_characterization",
+      "benchmark": "libero_plus",
+      "step": 2,
+      "stage": "unclear",
+      "evidence_rule": "baseline_failure_stage",
+      "cases": 2,
+      "families": 2,
+      "conditions": 2,
+      "distinct_initial_state_hashes": 2,
+      "distinct_stabilized_state_hashes": 2,
+      "groups": [
+        "G1d15b5eba0cb618a",
+        "G624b1639e11d89a2"
+      ],
+      "clip_ids": [
+        "C44f940a313564fa14df1",
+        "Cce733059423b3333f54c"
+      ],
+      "meets_declared_new_rescue_threshold": false
+    },
+    {
+      "cohort": "new",
+      "study": "rescue_characterization",
+      "benchmark": "libero_plus",
+      "step": 2,
+      "stage": "unclear",
+      "evidence_rule": "never_rescued_control",
+      "cases": 1,
+      "families": 1,
+      "conditions": 1,
+      "distinct_initial_state_hashes": 1,
+      "distinct_stabilized_state_hashes": 1,
+      "groups": [
+        "G1eb5795994708a8b"
+      ],
+      "clip_ids": [
+        "Cf422e63768b1475f0494"
+      ],
+      "meets_declared_new_rescue_threshold": false
+    },
+    {
+      "cohort": "new",
+      "study": "rescue_characterization",
+      "benchmark": "libero_plus",
+      "step": 4,
+      "stage": "approach",
+      "evidence_rule": "baseline_failure_stage",
+      "cases": 1,
+      "families": 1,
+      "conditions": 1,
+      "distinct_initial_state_hashes": 1,
+      "distinct_stabilized_state_hashes": 1,
+      "groups": [
+        "G1ee3b27cb9424309"
+      ],
+      "clip_ids": [
+        "Cde63382791f36ec95a54"
+      ],
+      "meets_declared_new_rescue_threshold": false
+    },
+    {
+      "cohort": "new",
+      "study": "rescue_characterization",
+      "benchmark": "libero_plus",
+      "step": 4,
+      "stage": "approach",
+      "evidence_rule": "clear_outcomes_no_observed_disagreement",
+      "cases": 1,
+      "families": 1,
+      "conditions": 1,
+      "distinct_initial_state_hashes": 1,
+      "distinct_stabilized_state_hashes": 1,
+      "groups": [
+        "G1ee3b27cb9424309"
+      ],
+      "clip_ids": [
+        "Cde63382791f36ec95a54"
+      ],
+      "meets_declared_new_rescue_threshold": false
+    },
+    {
+      "cohort": "new",
+      "study": "rescue_characterization",
+      "benchmark": "libero_plus",
+      "step": 4,
+      "stage": "approach",
+      "evidence_rule": "never_rescued_control",
+      "cases": 4,
+      "families": 3,
+      "conditions": 3,
+      "distinct_initial_state_hashes": 4,
+      "distinct_stabilized_state_hashes": 4,
+      "groups": [
+        "G0d8027ba454a63be",
+        "G1f06c2d613c75e03",
+        "G40951377b4a94fea",
+        "G445fe9cd07f4db2e"
+      ],
+      "clip_ids": [
+        "C32af2a8f106242bfa695",
+        "C50411a57629386836d90",
+        "C7950d480e0f9e432dfdc",
+        "C7bf22a28c4a379e17373"
+      ],
+      "meets_declared_new_rescue_threshold": false
+    },
+    {
+      "cohort": "new",
+      "study": "rescue_characterization",
+      "benchmark": "libero_plus",
+      "step": 4,
+      "stage": "grasp",
+      "evidence_rule": "baseline_failure_stage",
+      "cases": 3,
+      "families": 3,
+      "conditions": 3,
+      "distinct_initial_state_hashes": 3,
+      "distinct_stabilized_state_hashes": 3,
+      "groups": [
+        "Gbc05c37d1848b629",
+        "Gf7a36b2945feefcc",
+        "Gf9f9b0f1ce88c73f"
+      ],
+      "clip_ids": [
+        "C6404f5a08cf6bbde17d5",
+        "C6b29182d2174413c8caa",
+        "Cf9b7ed33688d32a46b01"
+      ],
+      "meets_declared_new_rescue_threshold": false
+    },
+    {
+      "cohort": "new",
+      "study": "rescue_characterization",
+      "benchmark": "libero_plus",
+      "step": 4,
+      "stage": "grasp",
+      "evidence_rule": "clear_outcomes_no_observed_disagreement",
+      "cases": 3,
+      "families": 3,
+      "conditions": 3,
+      "distinct_initial_state_hashes": 3,
+      "distinct_stabilized_state_hashes": 3,
+      "groups": [
+        "Gbc05c37d1848b629",
+        "Gf7a36b2945feefcc",
+        "Gf9f9b0f1ce88c73f"
+      ],
+      "clip_ids": [
+        "C6404f5a08cf6bbde17d5",
+        "C6b29182d2174413c8caa",
+        "Cf9b7ed33688d32a46b01"
+      ],
+      "meets_declared_new_rescue_threshold": false
+    },
+    {
+      "cohort": "new",
+      "study": "rescue_characterization",
+      "benchmark": "libero_plus",
+      "step": 4,
+      "stage": "grasp",
+      "evidence_rule": "never_rescued_control",
+      "cases": 5,
+      "families": 3,
+      "conditions": 3,
+      "distinct_initial_state_hashes": 5,
+      "distinct_stabilized_state_hashes": 5,
+      "groups": [
+        "G337d80c1daa69be4",
+        "Gbb560c33d089a71c",
+        "Gbdac1560b49a07e4",
+        "Gc5f8d3b8a84e1010",
+        "Gea62804a145758a7"
+      ],
+      "clip_ids": [
+        "C922f31e74022e220e48e",
+        "Cb2184c53183fad67861b",
+        "Cd4c56fbbe78b369ef3dd",
+        "Cf7080db17e0e398c1df9",
+        "Cfa4e3d5f06a39c8b35e5"
+      ],
+      "meets_declared_new_rescue_threshold": false
+    },
+    {
+      "cohort": "new",
+      "study": "rescue_characterization",
+      "benchmark": "libero_plus",
+      "step": 4,
+      "stage": "grasp",
+      "evidence_rule": "regression_failure_stage",
+      "cases": 1,
+      "families": 1,
+      "conditions": 1,
+      "distinct_initial_state_hashes": 1,
+      "distinct_stabilized_state_hashes": 1,
+      "groups": [
+        "Gf1be2e4889d13d45"
+      ],
+      "clip_ids": [
+        "C4759d2cc147ed33d52c9"
+      ],
+      "meets_declared_new_rescue_threshold": false
+    },
+    {
+      "cohort": "new",
+      "study": "rescue_characterization",
+      "benchmark": "libero_plus",
+      "step": 4,
+      "stage": "manipulation",
+      "evidence_rule": "baseline_failure_stage",
+      "cases": 1,
+      "families": 1,
+      "conditions": 1,
+      "distinct_initial_state_hashes": 1,
+      "distinct_stabilized_state_hashes": 1,
+      "groups": [
+        "Gab3c085fc8cd7616"
+      ],
+      "clip_ids": [
+        "C8c37dfcf5ec6bb8e2301"
+      ],
+      "meets_declared_new_rescue_threshold": false
+    },
+    {
+      "cohort": "new",
+      "study": "rescue_characterization",
+      "benchmark": "libero_plus",
+      "step": 4,
+      "stage": "manipulation",
+      "evidence_rule": "never_rescued_control",
+      "cases": 1,
+      "families": 1,
+      "conditions": 1,
+      "distinct_initial_state_hashes": 1,
+      "distinct_stabilized_state_hashes": 1,
+      "groups": [
+        "Gdffaa541f7a0c869"
+      ],
+      "clip_ids": [
+        "C078d00ff97894cb69647"
+      ],
+      "meets_declared_new_rescue_threshold": false
+    },
+    {
+      "cohort": "new",
+      "study": "rescue_characterization",
+      "benchmark": "libero_plus",
+      "step": 4,
+      "stage": "placement",
+      "evidence_rule": "baseline_failure_stage",
+      "cases": 2,
+      "families": 2,
+      "conditions": 2,
+      "distinct_initial_state_hashes": 2,
+      "distinct_stabilized_state_hashes": 2,
+      "groups": [
+        "Gb9a283bc231f8b14",
+        "Ge2ba69987337c526"
+      ],
+      "clip_ids": [
+        "C6d7f671c3881b2b9fd00",
+        "C9fe34110bc86af164805"
+      ],
+      "meets_declared_new_rescue_threshold": false
+    },
+    {
+      "cohort": "new",
+      "study": "rescue_characterization",
+      "benchmark": "libero_plus",
+      "step": 4,
+      "stage": "placement",
+      "evidence_rule": "clear_outcomes_no_observed_disagreement",
+      "cases": 1,
+      "families": 1,
+      "conditions": 1,
+      "distinct_initial_state_hashes": 1,
+      "distinct_stabilized_state_hashes": 1,
+      "groups": [
+        "Gb9a283bc231f8b14"
+      ],
+      "clip_ids": [
+        "C9fe34110bc86af164805"
+      ],
+      "meets_declared_new_rescue_threshold": false
+    },
+    {
+      "cohort": "new",
+      "study": "rescue_characterization",
+      "benchmark": "libero_plus",
+      "step": 4,
+      "stage": "placement",
+      "evidence_rule": "never_rescued_control",
+      "cases": 1,
+      "families": 1,
+      "conditions": 1,
+      "distinct_initial_state_hashes": 1,
+      "distinct_stabilized_state_hashes": 1,
+      "groups": [
+        "G7cf75393d47fd9d6"
+      ],
+      "clip_ids": [
+        "C52ed6bd8ab7de1d9a37e"
+      ],
+      "meets_declared_new_rescue_threshold": false
+    },
+    {
+      "cohort": "new",
+      "study": "rescue_characterization",
+      "benchmark": "libero_plus",
+      "step": 4,
+      "stage": "placement",
+      "evidence_rule": "regression_failure_stage",
+      "cases": 2,
+      "families": 2,
+      "conditions": 2,
+      "distinct_initial_state_hashes": 2,
+      "distinct_stabilized_state_hashes": 2,
+      "groups": [
+        "G068fce7a3355df95",
+        "G7c91f89ed27a883d"
+      ],
+      "clip_ids": [
+        "C546e1bc6475fe2f45efe",
+        "Cff17872409f668514ba0"
+      ],
+      "meets_declared_new_rescue_threshold": false
+    },
+    {
+      "cohort": "new",
+      "study": "rescue_characterization",
+      "benchmark": "libero_plus",
+      "step": 4,
+      "stage": "unclear",
+      "evidence_rule": "baseline_failure_stage",
+      "cases": 2,
+      "families": 2,
+      "conditions": 2,
+      "distinct_initial_state_hashes": 2,
+      "distinct_stabilized_state_hashes": 2,
+      "groups": [
+        "G1d15b5eba0cb618a",
+        "G624b1639e11d89a2"
+      ],
+      "clip_ids": [
+        "C44f940a313564fa14df1",
+        "Cce733059423b3333f54c"
+      ],
+      "meets_declared_new_rescue_threshold": false
+    },
+    {
+      "cohort": "new",
+      "study": "rescue_characterization",
+      "benchmark": "libero_plus",
+      "step": 4,
+      "stage": "unclear",
+      "evidence_rule": "never_rescued_control",
+      "cases": 1,
+      "families": 1,
+      "conditions": 1,
+      "distinct_initial_state_hashes": 1,
+      "distinct_stabilized_state_hashes": 1,
+      "groups": [
+        "G1eb5795994708a8b"
+      ],
+      "clip_ids": [
+        "C2f54fb0061e9d8c9332f"
+      ],
+      "meets_declared_new_rescue_threshold": false
+    },
+    {
+      "cohort": "new",
+      "study": "rescue_characterization",
+      "benchmark": "libero_plus",
+      "step": 10,
+      "stage": "approach",
+      "evidence_rule": "baseline_failure_stage",
+      "cases": 1,
+      "families": 1,
+      "conditions": 1,
+      "distinct_initial_state_hashes": 1,
+      "distinct_stabilized_state_hashes": 1,
+      "groups": [
+        "G1ee3b27cb9424309"
+      ],
+      "clip_ids": [
+        "Cde63382791f36ec95a54"
+      ],
+      "meets_declared_new_rescue_threshold": false
+    },
+    {
+      "cohort": "new",
+      "study": "rescue_characterization",
+      "benchmark": "libero_plus",
+      "step": 10,
+      "stage": "approach",
+      "evidence_rule": "clear_outcomes_no_observed_disagreement",
+      "cases": 1,
+      "families": 1,
+      "conditions": 1,
+      "distinct_initial_state_hashes": 1,
+      "distinct_stabilized_state_hashes": 1,
+      "groups": [
+        "G1ee3b27cb9424309"
+      ],
+      "clip_ids": [
+        "Cde63382791f36ec95a54"
+      ],
+      "meets_declared_new_rescue_threshold": false
+    },
+    {
+      "cohort": "new",
+      "study": "rescue_characterization",
+      "benchmark": "libero_plus",
+      "step": 10,
+      "stage": "approach",
+      "evidence_rule": "never_rescued_control",
+      "cases": 4,
+      "families": 3,
+      "conditions": 3,
+      "distinct_initial_state_hashes": 4,
+      "distinct_stabilized_state_hashes": 4,
+      "groups": [
+        "G0d8027ba454a63be",
+        "G1f06c2d613c75e03",
+        "G40951377b4a94fea",
+        "G445fe9cd07f4db2e"
+      ],
+      "clip_ids": [
+        "C8bc9b8502a0aa2814b96",
+        "Cb778aa8e5accbf242853",
+        "Cc2970455886914eefd2f",
+        "Ccb7d1b6cfaec0c160493"
+      ],
+      "meets_declared_new_rescue_threshold": false
+    },
+    {
+      "cohort": "new",
+      "study": "rescue_characterization",
+      "benchmark": "libero_plus",
+      "step": 10,
+      "stage": "grasp",
+      "evidence_rule": "baseline_failure_stage",
+      "cases": 3,
+      "families": 3,
+      "conditions": 3,
+      "distinct_initial_state_hashes": 3,
+      "distinct_stabilized_state_hashes": 3,
+      "groups": [
+        "Gbc05c37d1848b629",
+        "Gf7a36b2945feefcc",
+        "Gf9f9b0f1ce88c73f"
+      ],
+      "clip_ids": [
+        "C6404f5a08cf6bbde17d5",
+        "C6b29182d2174413c8caa",
+        "Cf9b7ed33688d32a46b01"
+      ],
+      "meets_declared_new_rescue_threshold": false
+    },
+    {
+      "cohort": "new",
+      "study": "rescue_characterization",
+      "benchmark": "libero_plus",
+      "step": 10,
+      "stage": "grasp",
+      "evidence_rule": "clear_outcomes_no_observed_disagreement",
+      "cases": 3,
+      "families": 3,
+      "conditions": 3,
+      "distinct_initial_state_hashes": 3,
+      "distinct_stabilized_state_hashes": 3,
+      "groups": [
+        "Gbc05c37d1848b629",
+        "Gf7a36b2945feefcc",
+        "Gf9f9b0f1ce88c73f"
+      ],
+      "clip_ids": [
+        "C6404f5a08cf6bbde17d5",
+        "C6b29182d2174413c8caa",
+        "Cf9b7ed33688d32a46b01"
+      ],
+      "meets_declared_new_rescue_threshold": false
+    },
+    {
+      "cohort": "new",
+      "study": "rescue_characterization",
+      "benchmark": "libero_plus",
+      "step": 10,
+      "stage": "grasp",
+      "evidence_rule": "never_rescued_control",
+      "cases": 4,
+      "families": 2,
+      "conditions": 2,
+      "distinct_initial_state_hashes": 4,
+      "distinct_stabilized_state_hashes": 4,
+      "groups": [
+        "G337d80c1daa69be4",
+        "Gbb560c33d089a71c",
+        "Gbdac1560b49a07e4",
+        "Gea62804a145758a7"
+      ],
+      "clip_ids": [
+        "C6217bce0d2e93de15f5c",
+        "C68b9c204aeedfec243fd",
+        "Ca7e5da6125d604aad4cb",
+        "Cdc3f6340e1f1b0478cd4"
+      ],
+      "meets_declared_new_rescue_threshold": false
+    },
+    {
+      "cohort": "new",
+      "study": "rescue_characterization",
+      "benchmark": "libero_plus",
+      "step": 10,
+      "stage": "grasp",
+      "evidence_rule": "regression_failure_stage",
+      "cases": 2,
+      "families": 2,
+      "conditions": 2,
+      "distinct_initial_state_hashes": 2,
+      "distinct_stabilized_state_hashes": 2,
+      "groups": [
+        "G2e7cadeb53e42234",
+        "Gd1e9120f5fb8cda4"
+      ],
+      "clip_ids": [
+        "C896fdc7d613485f1ed46",
+        "C899e793319c44a700b78"
+      ],
+      "meets_declared_new_rescue_threshold": false
+    },
+    {
+      "cohort": "new",
+      "study": "rescue_characterization",
+      "benchmark": "libero_plus",
+      "step": 10,
+      "stage": "manipulation",
+      "evidence_rule": "never_rescued_control",
+      "cases": 1,
+      "families": 1,
+      "conditions": 1,
+      "distinct_initial_state_hashes": 1,
+      "distinct_stabilized_state_hashes": 1,
+      "groups": [
+        "Gdffaa541f7a0c869"
+      ],
+      "clip_ids": [
+        "Cd566777564d4f290ab8e"
+      ],
+      "meets_declared_new_rescue_threshold": false
+    },
+    {
+      "cohort": "new",
+      "study": "rescue_characterization",
+      "benchmark": "libero_plus",
+      "step": 10,
+      "stage": "manipulation",
+      "evidence_rule": "regression_failure_stage",
+      "cases": 1,
+      "families": 1,
+      "conditions": 1,
+      "distinct_initial_state_hashes": 1,
+      "distinct_stabilized_state_hashes": 1,
+      "groups": [
+        "G141d70e1ea74a360"
+      ],
+      "clip_ids": [
+        "C4a7eca1593f1829d7fe0"
+      ],
+      "meets_declared_new_rescue_threshold": false
+    },
+    {
+      "cohort": "new",
+      "study": "rescue_characterization",
+      "benchmark": "libero_plus",
+      "step": 10,
+      "stage": "placement",
+      "evidence_rule": "baseline_failure_stage",
+      "cases": 2,
+      "families": 2,
+      "conditions": 2,
+      "distinct_initial_state_hashes": 2,
+      "distinct_stabilized_state_hashes": 2,
+      "groups": [
+        "Gb9a283bc231f8b14",
+        "Ge2ba69987337c526"
+      ],
+      "clip_ids": [
+        "C6d7f671c3881b2b9fd00",
+        "C9fe34110bc86af164805"
+      ],
+      "meets_declared_new_rescue_threshold": false
+    },
+    {
+      "cohort": "new",
+      "study": "rescue_characterization",
+      "benchmark": "libero_plus",
+      "step": 10,
+      "stage": "placement",
+      "evidence_rule": "clear_outcomes_no_observed_disagreement",
+      "cases": 1,
+      "families": 1,
+      "conditions": 1,
+      "distinct_initial_state_hashes": 1,
+      "distinct_stabilized_state_hashes": 1,
+      "groups": [
+        "Gb9a283bc231f8b14"
+      ],
+      "clip_ids": [
+        "C9fe34110bc86af164805"
+      ],
+      "meets_declared_new_rescue_threshold": false
+    },
+    {
+      "cohort": "new",
+      "study": "rescue_characterization",
+      "benchmark": "libero_plus",
+      "step": 10,
+      "stage": "placement",
+      "evidence_rule": "never_rescued_control",
+      "cases": 2,
+      "families": 1,
+      "conditions": 2,
+      "distinct_initial_state_hashes": 1,
+      "distinct_stabilized_state_hashes": 1,
+      "groups": [
+        "G7cf75393d47fd9d6",
+        "Gc5f8d3b8a84e1010"
+      ],
+      "clip_ids": [
+        "C353593c04d0b9f74b279",
+        "Cad24ee3bf84bb48dc458"
+      ],
+      "meets_declared_new_rescue_threshold": false
+    },
+    {
+      "cohort": "new",
+      "study": "rescue_characterization",
+      "benchmark": "libero_plus",
+      "step": 10,
+      "stage": "placement",
+      "evidence_rule": "regression_failure_stage",
+      "cases": 4,
+      "families": 4,
+      "conditions": 4,
+      "distinct_initial_state_hashes": 4,
+      "distinct_stabilized_state_hashes": 4,
+      "groups": [
+        "G7c91f89ed27a883d",
+        "Gc851ee3b66f265a3",
+        "Ge10a5fc1003e6264",
+        "Gfb31b8e2d95f0378"
+      ],
+      "clip_ids": [
+        "C2746dddb81c06ac6a8cb",
+        "C954dcd4956421e55f879",
+        "Ce228360d0d677d10fec0",
+        "Cfd1df599a490dae47425"
+      ],
+      "meets_declared_new_rescue_threshold": false
+    },
+    {
+      "cohort": "new",
+      "study": "rescue_characterization",
+      "benchmark": "libero_plus",
+      "step": 10,
+      "stage": "unclear",
+      "evidence_rule": "baseline_failure_stage",
+      "cases": 2,
+      "families": 2,
+      "conditions": 2,
+      "distinct_initial_state_hashes": 2,
+      "distinct_stabilized_state_hashes": 2,
+      "groups": [
+        "G1d15b5eba0cb618a",
+        "G624b1639e11d89a2"
+      ],
+      "clip_ids": [
+        "C44f940a313564fa14df1",
+        "Cce733059423b3333f54c"
+      ],
+      "meets_declared_new_rescue_threshold": false
+    },
+    {
+      "cohort": "new",
+      "study": "rescue_characterization",
+      "benchmark": "libero_plus",
+      "step": 10,
+      "stage": "unclear",
+      "evidence_rule": "never_rescued_control",
+      "cases": 1,
+      "families": 1,
+      "conditions": 1,
+      "distinct_initial_state_hashes": 1,
+      "distinct_stabilized_state_hashes": 1,
+      "groups": [
+        "G1eb5795994708a8b"
+      ],
+      "clip_ids": [
+        "Cb51ffcb4f0ad3f57adf1"
+      ],
+      "meets_declared_new_rescue_threshold": false
+    },
+    {
+      "cohort": "new",
+      "study": "rescue_characterization",
+      "benchmark": "libero_plus",
+      "step": 10,
+      "stage": "unclear",
+      "evidence_rule": "regression_failure_stage",
+      "cases": 1,
+      "families": 1,
+      "conditions": 1,
+      "distinct_initial_state_hashes": 1,
+      "distinct_stabilized_state_hashes": 1,
+      "groups": [
+        "G0bb9314041164df1"
+      ],
+      "clip_ids": [
+        "C77917f6c387835e4d773"
+      ],
+      "meets_declared_new_rescue_threshold": false
+    }
+  ],
+  "clear_rescue_pairs": [
+    {
+      "cohort": "historical",
+      "study": "selective_flow",
+      "benchmark": "libero_plus",
+      "step": 10,
+      "stage": "grasp",
+      "group_id": "Gb560805eabad9e72",
+      "one": "C24d59cdb0d25dadc6235",
+      "other": "C01d8d05a09a8be868bdb",
+      "family": "pick_up_the_bbq_sauce_and_place_it_in_the_basket",
+      "condition_id": "libero_plus:libero_object:1869"
+    },
+    {
+      "cohort": "historical",
+      "study": "frozen_flow",
+      "benchmark": "libero_plus",
+      "step": 10,
+      "stage": "grasp",
+      "group_id": "G1e471a4d2aa7f024",
+      "one": "C242c6d052b64b8109a9f",
+      "other": "C0f644f8ae6c83daff557",
+      "family": "KITCHEN_SCENE3_turn_on_the_stove_and_put_the_moka_pot_on_it",
+      "condition_id": "libero_plus:libero_10:1940"
+    },
+    {
+      "cohort": "historical",
+      "study": "frozen_flow",
+      "benchmark": "libero",
+      "step": 4,
+      "stage": "grasp",
+      "group_id": "G1bc4aa3be46b991d",
+      "one": "C8c700c642d9c969d06ec",
+      "other": "Cda4bef03e584918f9cc3",
+      "family": "put_the_wine_bottle_on_the_rack",
+      "condition_id": "libero:libero_goal:9"
+    },
+    {
+      "cohort": "historical",
+      "study": "frozen_flow",
+      "benchmark": "libero",
+      "step": 10,
+      "stage": "grasp",
+      "group_id": "G1bc4aa3be46b991d",
+      "one": "C8c700c642d9c969d06ec",
+      "other": "C13025af0b16d7eec66b4",
+      "family": "put_the_wine_bottle_on_the_rack",
+      "condition_id": "libero:libero_goal:9"
+    },
+    {
+      "cohort": "historical",
+      "study": "selective_flow",
+      "benchmark": "libero_plus",
+      "step": 10,
+      "stage": "grasp",
+      "group_id": "Gd72f944651e79f0e",
+      "one": "Cddb1da4b795e07e504f5",
+      "other": "C1ed06ef343cac319c80f",
+      "family": "pick_up_the_bbq_sauce_and_place_it_in_the_basket",
+      "condition_id": "libero_plus:libero_object:369"
+    },
+    {
+      "cohort": "historical",
+      "study": "frozen_flow",
+      "benchmark": "libero_plus",
+      "step": 4,
+      "stage": "grasp",
+      "group_id": "Gf3ce7a9dab5900bc",
+      "one": "Cfebb12787b0d52af1225",
+      "other": "C2ce472e44da5724f4cda",
+      "family": "LIVING_ROOM_SCENE2_put_both_the_alphabet_soup_and_the_tomato_sauce_in_the_basket",
+      "condition_id": "libero_plus:libero_10:299"
+    },
+    {
+      "cohort": "historical",
+      "study": "selective_flow",
+      "benchmark": "libero_plus",
+      "step": 10,
+      "stage": "grasp",
+      "group_id": "Gd741d7ce81046b27",
+      "one": "C305ef674a0a5289b558a",
+      "other": "C36a47823513c8b1bd6c1",
+      "family": "KITCHEN_SCENE8_put_both_moka_pots_on_the_stove",
+      "condition_id": "libero_plus:libero_10:2039"
+    },
+    {
+      "cohort": "historical",
+      "study": "selective_flow",
+      "benchmark": "libero_plus",
+      "step": 10,
+      "stage": "grasp",
+      "group_id": "Gc3e547a256cde08c",
+      "one": "C3ec947c87cc2f649b2be",
+      "other": "Cdf12f56c3909e6d90ed5",
+      "family": "pick_up_the_cream_cheese_and_place_it_in_the_basket",
+      "condition_id": "libero_plus:libero_object:296"
+    },
+    {
+      "cohort": "historical",
+      "study": "selective_flow",
+      "benchmark": "libero_plus",
+      "step": 10,
+      "stage": "grasp",
+      "group_id": "Gdf3c9dbfefa0d0eb",
+      "one": "C48e8b747e9b2aac0e949",
+      "other": "C50965944976c43df6502",
+      "family": "pick_up_the_bbq_sauce_and_place_it_in_the_basket",
+      "condition_id": "libero_plus:libero_object:735"
+    },
+    {
+      "cohort": "historical",
+      "study": "selective_flow",
+      "benchmark": "libero_plus",
+      "step": 10,
+      "stage": "placement",
+      "group_id": "Gb7ae2ad0c076e125",
+      "one": "Ca4f91273c257615a75df",
+      "other": "Cbdfb69ba9c8ca2b8114a",
+      "family": "KITCHEN_SCENE6_put_the_yellow_and_white_mug_in_the_microwave_and_close_it",
+      "condition_id": "libero_plus:libero_10:1985"
+    },
+    {
+      "cohort": "historical",
+      "study": "selective_flow",
+      "benchmark": "libero_plus",
+      "step": 10,
+      "stage": "grasp",
+      "group_id": "G87a9c6e9bbf3fe94",
+      "one": "Cd0d8bfdb366a4a8a0ce7",
+      "other": "Cad7fae7977ceb51d9aa1",
+      "family": "put_the_bowl_on_the_stove",
+      "condition_id": "libero_plus:libero_goal:720"
+    },
+    {
+      "cohort": "historical",
+      "study": "selective_flow",
+      "benchmark": "libero_plus",
+      "step": 10,
+      "stage": "grasp",
+      "group_id": "G120d7aaceca2a605",
+      "one": "Cf7f5044c8c198678b55b",
+      "other": "Ce53dc1eb37da2671b9b3",
+      "family": "pick_up_the_cream_cheese_and_place_it_in_the_basket",
+      "condition_id": "libero_plus:libero_object:296"
+    },
+    {
+      "cohort": "new",
+      "study": "rescue_characterization",
+      "benchmark": "libero",
+      "step": 2,
+      "stage": "grasp",
+      "group_id": "G800335dfe9ed6082",
+      "one": "C090dc827d4cc4a9e19a5",
+      "other": "C1bec2653e5f2bd8a1fea",
+      "family": "put_the_wine_bottle_on_top_of_the_cabinet",
+      "condition_id": "libero:libero_goal:2"
+    },
+    {
+      "cohort": "new",
+      "study": "rescue_characterization",
+      "benchmark": "libero",
+      "step": 4,
+      "stage": "grasp",
+      "group_id": "G800335dfe9ed6082",
+      "one": "C090dc827d4cc4a9e19a5",
+      "other": "C840d5738ae5cf6a31e98",
+      "family": "put_the_wine_bottle_on_top_of_the_cabinet",
+      "condition_id": "libero:libero_goal:2"
+    },
+    {
+      "cohort": "new",
+      "study": "rescue_characterization",
+      "benchmark": "libero_plus",
+      "step": 2,
+      "stage": "placement",
+      "group_id": "Gb9a283bc231f8b14",
+      "one": "C9fe34110bc86af164805",
+      "other": "C09a0e9a744cec9b09a6b",
+      "family": "pick_up_the_butter_and_place_it_in_the_basket",
+      "condition_id": "libero_plus:libero_object:81"
+    },
+    {
+      "cohort": "new",
+      "study": "rescue_characterization",
+      "benchmark": "libero_plus",
+      "step": 4,
+      "stage": "placement",
+      "group_id": "Gb9a283bc231f8b14",
+      "one": "C9fe34110bc86af164805",
+      "other": "C2bc81d0c9eab56e910ef",
+      "family": "pick_up_the_butter_and_place_it_in_the_basket",
+      "condition_id": "libero_plus:libero_object:81"
+    },
+    {
+      "cohort": "new",
+      "study": "rescue_characterization",
+      "benchmark": "libero_plus",
+      "step": 10,
+      "stage": "placement",
+      "group_id": "Gb9a283bc231f8b14",
+      "one": "C9fe34110bc86af164805",
+      "other": "Cf3f03b63fb0bb9664857",
+      "family": "pick_up_the_butter_and_place_it_in_the_basket",
+      "condition_id": "libero_plus:libero_object:81"
+    },
+    {
+      "cohort": "new",
+      "study": "rescue_characterization",
+      "benchmark": "libero_plus",
+      "step": 2,
+      "stage": "approach",
+      "group_id": "G1ee3b27cb9424309",
+      "one": "Cde63382791f36ec95a54",
+      "other": "C30a4570226a3bc58e447",
+      "family": "pick_up_the_cream_cheese_and_place_it_in_the_basket",
+      "condition_id": "libero_plus:libero_object:1068"
+    },
+    {
+      "cohort": "new",
+      "study": "rescue_characterization",
+      "benchmark": "libero_plus",
+      "step": 4,
+      "stage": "approach",
+      "group_id": "G1ee3b27cb9424309",
+      "one": "Cde63382791f36ec95a54",
+      "other": "C0d300c4117243ccc1e5a",
+      "family": "pick_up_the_cream_cheese_and_place_it_in_the_basket",
+      "condition_id": "libero_plus:libero_object:1068"
+    },
+    {
+      "cohort": "new",
+      "study": "rescue_characterization",
+      "benchmark": "libero_plus",
+      "step": 10,
+      "stage": "approach",
+      "group_id": "G1ee3b27cb9424309",
+      "one": "Cde63382791f36ec95a54",
+      "other": "C1229623e81cd6c2df446",
+      "family": "pick_up_the_cream_cheese_and_place_it_in_the_basket",
+      "condition_id": "libero_plus:libero_object:1068"
+    },
+    {
+      "cohort": "new",
+      "study": "rescue_characterization",
+      "benchmark": "libero",
+      "step": 2,
+      "stage": "grasp",
+      "group_id": "Gd4c2ee67ce6d5483",
+      "one": "C187fe9bd9b13f78125c7",
+      "other": "C8cd83f794b546f968135",
+      "family": "LIVING_ROOM_SCENE2_put_both_the_cream_cheese_box_and_the_butter_in_the_basket",
+      "condition_id": "libero:libero_10:1"
+    },
+    {
+      "cohort": "new",
+      "study": "rescue_characterization",
+      "benchmark": "libero",
+      "step": 4,
+      "stage": "grasp",
+      "group_id": "Gd4c2ee67ce6d5483",
+      "one": "C187fe9bd9b13f78125c7",
+      "other": "C640fdfd867fe25f7eaa9",
+      "family": "LIVING_ROOM_SCENE2_put_both_the_cream_cheese_box_and_the_butter_in_the_basket",
+      "condition_id": "libero:libero_10:1"
+    },
+    {
+      "cohort": "new",
+      "study": "rescue_characterization",
+      "benchmark": "libero_plus",
+      "step": 2,
+      "stage": "grasp",
+      "group_id": "Gbc05c37d1848b629",
+      "one": "C6404f5a08cf6bbde17d5",
+      "other": "Cb872c7c957a004c61816",
+      "family": "open_the_middle_drawer_of_the_cabinet",
+      "condition_id": "libero_plus:libero_goal:286"
+    },
+    {
+      "cohort": "new",
+      "study": "rescue_characterization",
+      "benchmark": "libero_plus",
+      "step": 4,
+      "stage": "grasp",
+      "group_id": "Gbc05c37d1848b629",
+      "one": "C6404f5a08cf6bbde17d5",
+      "other": "C20669d69e54e7295697e",
+      "family": "open_the_middle_drawer_of_the_cabinet",
+      "condition_id": "libero_plus:libero_goal:286"
+    },
+    {
+      "cohort": "new",
+      "study": "rescue_characterization",
+      "benchmark": "libero_plus",
+      "step": 10,
+      "stage": "grasp",
+      "group_id": "Gbc05c37d1848b629",
+      "one": "C6404f5a08cf6bbde17d5",
+      "other": "C9c5003287b4830be2565",
+      "family": "open_the_middle_drawer_of_the_cabinet",
+      "condition_id": "libero_plus:libero_goal:286"
+    },
+    {
+      "cohort": "new",
+      "study": "rescue_characterization",
+      "benchmark": "libero",
+      "step": 2,
+      "stage": "grasp",
+      "group_id": "G6fd11df76811bb3a",
+      "one": "C706e749549466b832a10",
+      "other": "C67493fc227b411b71513",
+      "family": "put_the_bowl_on_the_stove",
+      "condition_id": "libero:libero_goal:1"
+    },
+    {
+      "cohort": "new",
+      "study": "rescue_characterization",
+      "benchmark": "libero",
+      "step": 2,
+      "stage": "placement",
+      "group_id": "Ge8d63611d2dc1534",
+      "one": "Caca8988b71da7ea934f7",
+      "other": "C38cbeb0656839cce20a2",
+      "family": "pick_up_the_cream_cheese_and_place_it_in_the_basket",
+      "condition_id": "libero:libero_object:1"
+    },
+    {
+      "cohort": "new",
+      "study": "rescue_characterization",
+      "benchmark": "libero",
+      "step": 4,
+      "stage": "placement",
+      "group_id": "Ge8d63611d2dc1534",
+      "one": "Caca8988b71da7ea934f7",
+      "other": "C5ffc4ac481b39cd2654b",
+      "family": "pick_up_the_cream_cheese_and_place_it_in_the_basket",
+      "condition_id": "libero:libero_object:1"
+    },
+    {
+      "cohort": "new",
+      "study": "rescue_characterization",
+      "benchmark": "libero",
+      "step": 10,
+      "stage": "placement",
+      "group_id": "Ge8d63611d2dc1534",
+      "one": "Caca8988b71da7ea934f7",
+      "other": "C2c85242822563aa9b133",
+      "family": "pick_up_the_cream_cheese_and_place_it_in_the_basket",
+      "condition_id": "libero:libero_object:1"
+    },
+    {
+      "cohort": "new",
+      "study": "rescue_characterization",
+      "benchmark": "libero_plus",
+      "step": 4,
+      "stage": "grasp",
+      "group_id": "Gf7a36b2945feefcc",
+      "one": "Cf9b7ed33688d32a46b01",
+      "other": "Cc966f5e6b8d1779d5bf0",
+      "family": "LIVING_ROOM_SCENE2_put_both_the_cream_cheese_box_and_the_butter_in_the_basket",
+      "condition_id": "libero_plus:libero_10:345"
+    },
+    {
+      "cohort": "new",
+      "study": "rescue_characterization",
+      "benchmark": "libero_plus",
+      "step": 10,
+      "stage": "grasp",
+      "group_id": "Gf7a36b2945feefcc",
+      "one": "Cf9b7ed33688d32a46b01",
+      "other": "C30a413506fe95ca00cff",
+      "family": "LIVING_ROOM_SCENE2_put_both_the_cream_cheese_box_and_the_butter_in_the_basket",
+      "condition_id": "libero_plus:libero_10:345"
+    },
+    {
+      "cohort": "new",
+      "study": "rescue_characterization",
+      "benchmark": "libero_plus",
+      "step": 2,
+      "stage": "grasp",
+      "group_id": "Gc16b0a80c8bcd7c2",
+      "one": "C6763369ecfb239562ceb",
+      "other": "Cf30e5bff0f62d554f902",
+      "family": "put_the_bowl_on_the_stove",
+      "condition_id": "libero_plus:libero_goal:1146"
+    },
+    {
+      "cohort": "new",
+      "study": "rescue_characterization",
+      "benchmark": "libero",
+      "step": 2,
+      "stage": "placement",
+      "group_id": "Gaade50e2c017058d",
+      "one": "C759d9691d9583f396418",
+      "other": "Cb9bb8a630f6dad83eba7",
+      "family": "pick_up_the_chocolate_pudding_and_place_it_in_the_basket",
+      "condition_id": "libero:libero_object:8"
+    },
+    {
+      "cohort": "new",
+      "study": "rescue_characterization",
+      "benchmark": "libero",
+      "step": 4,
+      "stage": "placement",
+      "group_id": "Gaade50e2c017058d",
+      "one": "C759d9691d9583f396418",
+      "other": "C48ed6d285b1aaf13545e",
+      "family": "pick_up_the_chocolate_pudding_and_place_it_in_the_basket",
+      "condition_id": "libero:libero_object:8"
+    },
+    {
+      "cohort": "new",
+      "study": "rescue_characterization",
+      "benchmark": "libero",
+      "step": 10,
+      "stage": "placement",
+      "group_id": "Gaade50e2c017058d",
+      "one": "C759d9691d9583f396418",
+      "other": "Ca4321af25f1705ee2484",
+      "family": "pick_up_the_chocolate_pudding_and_place_it_in_the_basket",
+      "condition_id": "libero:libero_object:8"
+    },
+    {
+      "cohort": "new",
+      "study": "rescue_characterization",
+      "benchmark": "libero",
+      "step": 2,
+      "stage": "placement",
+      "group_id": "G881f7de5c4612fc6",
+      "one": "C74df75eeaf22693f518e",
+      "other": "C6a390c19b8861c659c5a",
+      "family": "LIVING_ROOM_SCENE5_put_the_white_mug_on_the_left_plate_and_put_the_yellow_and_white_mug_on_the_right_plate",
+      "condition_id": "libero:libero_10:4"
+    },
+    {
+      "cohort": "new",
+      "study": "rescue_characterization",
+      "benchmark": "libero",
+      "step": 4,
+      "stage": "placement",
+      "group_id": "G881f7de5c4612fc6",
+      "one": "C74df75eeaf22693f518e",
+      "other": "C5f8d5eec3b71e35d68eb",
+      "family": "LIVING_ROOM_SCENE5_put_the_white_mug_on_the_left_plate_and_put_the_yellow_and_white_mug_on_the_right_plate",
+      "condition_id": "libero:libero_10:4"
+    },
+    {
+      "cohort": "new",
+      "study": "rescue_characterization",
+      "benchmark": "libero",
+      "step": 10,
+      "stage": "placement",
+      "group_id": "G881f7de5c4612fc6",
+      "one": "C74df75eeaf22693f518e",
+      "other": "C7a63a678e924de24f166",
+      "family": "LIVING_ROOM_SCENE5_put_the_white_mug_on_the_left_plate_and_put_the_yellow_and_white_mug_on_the_right_plate",
+      "condition_id": "libero:libero_10:4"
+    },
+    {
+      "cohort": "new",
+      "study": "rescue_characterization",
+      "benchmark": "libero",
+      "step": 2,
+      "stage": "grasp",
+      "group_id": "Ge032776e112124b9",
+      "one": "C9ee9211a391b043db209",
+      "other": "C791cba2cb5ca59582ec8",
+      "family": "LIVING_ROOM_SCENE1_put_both_the_alphabet_soup_and_the_cream_cheese_box_in_the_basket",
+      "condition_id": "libero:libero_10:7"
+    },
+    {
+      "cohort": "new",
+      "study": "rescue_characterization",
+      "benchmark": "libero",
+      "step": 4,
+      "stage": "grasp",
+      "group_id": "Ge032776e112124b9",
+      "one": "C9ee9211a391b043db209",
+      "other": "C6832861c0fae8b99c52a",
+      "family": "LIVING_ROOM_SCENE1_put_both_the_alphabet_soup_and_the_cream_cheese_box_in_the_basket",
+      "condition_id": "libero:libero_10:7"
+    },
+    {
+      "cohort": "new",
+      "study": "rescue_characterization",
+      "benchmark": "libero",
+      "step": 10,
+      "stage": "grasp",
+      "group_id": "Ge032776e112124b9",
+      "one": "C9ee9211a391b043db209",
+      "other": "Ca58067ac9e3eef66afe6",
+      "family": "LIVING_ROOM_SCENE1_put_both_the_alphabet_soup_and_the_cream_cheese_box_in_the_basket",
+      "condition_id": "libero:libero_10:7"
+    },
+    {
+      "cohort": "new",
+      "study": "rescue_characterization",
+      "benchmark": "libero_plus",
+      "step": 2,
+      "stage": "grasp",
+      "group_id": "Gf9f9b0f1ce88c73f",
+      "one": "C6b29182d2174413c8caa",
+      "other": "Ca85ca5364290e827e616",
+      "family": "LIVING_ROOM_SCENE2_put_both_the_alphabet_soup_and_the_tomato_sauce_in_the_basket",
+      "condition_id": "libero_plus:libero_10:691"
+    },
+    {
+      "cohort": "new",
+      "study": "rescue_characterization",
+      "benchmark": "libero_plus",
+      "step": 4,
+      "stage": "grasp",
+      "group_id": "Gf9f9b0f1ce88c73f",
+      "one": "C6b29182d2174413c8caa",
+      "other": "Cd14736a9ae3061211b7c",
+      "family": "LIVING_ROOM_SCENE2_put_both_the_alphabet_soup_and_the_tomato_sauce_in_the_basket",
+      "condition_id": "libero_plus:libero_10:691"
+    },
+    {
+      "cohort": "new",
+      "study": "rescue_characterization",
+      "benchmark": "libero_plus",
+      "step": 10,
+      "stage": "grasp",
+      "group_id": "Gf9f9b0f1ce88c73f",
+      "one": "C6b29182d2174413c8caa",
+      "other": "Ce631d0b3c0013b521fe4",
+      "family": "LIVING_ROOM_SCENE2_put_both_the_alphabet_soup_and_the_tomato_sauce_in_the_basket",
+      "condition_id": "libero_plus:libero_10:691"
+    }
+  ],
+  "visual_vs_numeric_disagreements": [
+    {
+      "cohort": "historical",
+      "clip_id": "C051dd6f7b2c8c6cb3cbb",
+      "raw_success": false,
+      "visible_outcome": "completed",
+      "source": {
+        "file_sha256": "626fb8b98e2cc4395fb25caa359d44e06b77d1f15003f93ec719a5a24614b04e",
+        "line": 446,
+        "path": "/volt/artifacts/selective-flow-study/runs/libero_plus-main-worker-3.jsonl",
+        "record_sha256": "c12c342a3096d1583091dd5599927f40e28d954eae7e2145c4d23569ae213e26"
+      }
+    },
+    {
+      "cohort": "historical",
+      "clip_id": "C0a58d0c50522593b730e",
+      "raw_success": false,
+      "visible_outcome": "completed",
+      "source": {
+        "file_sha256": "07bc800e33c1118b407c7fcfbdec2b56401bc4074c85d151e29b06a166621adf",
+        "line": 69,
+        "path": "/volt/artifacts/frozen-flow-study/runs/libero_plus-main-worker-0.jsonl",
+        "record_sha256": "597b699b4e633a64680ea16a344b4c512f75f7f75aee4e342db4a4c4cc517d6e"
+      }
+    },
+    {
+      "cohort": "historical",
+      "clip_id": "C20e57c1f3d14fef5c020",
+      "raw_success": false,
+      "visible_outcome": "completed",
+      "source": {
+        "file_sha256": "1e8c9d34e14076d09362a34be140218e2b2768b6b56909412cd4dd95fe8f4b82",
+        "line": 339,
+        "path": "/volt/artifacts/selective-flow-study/runs/libero_plus-main-worker-2.jsonl",
+        "record_sha256": "fbe7da4884824ae279f260fb8f577e4f3b1585186b64bbc44358c0079fa60772"
+      }
+    },
+    {
+      "cohort": "historical",
+      "clip_id": "C3045c8c3995363dd157b",
+      "raw_success": false,
+      "visible_outcome": "completed",
+      "source": {
+        "file_sha256": "467b49184cd9a3bb8c41644ef20037595a43b1c10b03f0ce9c11864d8e7befa5",
+        "line": 189,
+        "path": "/volt/artifacts/selective-flow-study/runs/libero_plus-main-worker-1.jsonl",
+        "record_sha256": "b0a84f9495e82f53dad3cd3132cfb5dc9182fe07a8083a58422c9c71f6593046"
+      }
+    },
+    {
+      "cohort": "historical",
+      "clip_id": "C511b66d95673cbc8830d",
+      "raw_success": false,
+      "visible_outcome": "completed",
+      "source": {
+        "file_sha256": "1e8c9d34e14076d09362a34be140218e2b2768b6b56909412cd4dd95fe8f4b82",
+        "line": 323,
+        "path": "/volt/artifacts/selective-flow-study/runs/libero_plus-main-worker-2.jsonl",
+        "record_sha256": "63f3a833b53583a033500d83061477aab01fd10ce3def843f6aaf1becd318058"
+      }
+    },
+    {
+      "cohort": "historical",
+      "clip_id": "C6f1192dd092ee7923ad0",
+      "raw_success": false,
+      "visible_outcome": "completed",
+      "source": {
+        "file_sha256": "1a52568f12d648c5831faa2fb53c305c42e7c048b4615730ae2ca7620fb9c6c4",
+        "line": 166,
+        "path": "/volt/artifacts/frozen-flow-study/runs/libero_plus-main-worker-2.jsonl",
+        "record_sha256": "3dceb7bae0ba2e1a034c137c760e68e713826115e2a7681e72bb9b8757dc4b49"
+      }
+    },
+    {
+      "cohort": "historical",
+      "clip_id": "C79d293fa1528ad940677",
+      "raw_success": false,
+      "visible_outcome": "completed",
+      "source": {
+        "file_sha256": "1a52568f12d648c5831faa2fb53c305c42e7c048b4615730ae2ca7620fb9c6c4",
+        "line": 370,
+        "path": "/volt/artifacts/frozen-flow-study/runs/libero_plus-main-worker-2.jsonl",
+        "record_sha256": "55418a7c99a839c8f335a06fe38a6881963a2596d2d6eff02799dd24f3328c46"
+      }
+    },
+    {
+      "cohort": "historical",
+      "clip_id": "C7c05e882db02e1a5463c",
+      "raw_success": false,
+      "visible_outcome": "completed",
+      "source": {
+        "file_sha256": "09fbfb05443c74f154549e7e49994fedf03670ecfd87703ea6a3b1a7075ce7a6",
+        "line": 398,
+        "path": "/volt/artifacts/frozen-flow-study/runs/libero-main-worker-2.jsonl",
+        "record_sha256": "67d07a8bd07f798c4ddb140f46395703088263d5429c070a2ff646c4f70d5948"
+      }
+    },
+    {
+      "cohort": "historical",
+      "clip_id": "C96331e411a8ba06202dc",
+      "raw_success": false,
+      "visible_outcome": "completed",
+      "source": {
+        "file_sha256": "07bc800e33c1118b407c7fcfbdec2b56401bc4074c85d151e29b06a166621adf",
+        "line": 71,
+        "path": "/volt/artifacts/frozen-flow-study/runs/libero_plus-main-worker-0.jsonl",
+        "record_sha256": "0b017de0e112b45597252e67a34a8ad20aca8c5c0c9ca232ad0f1183d07cc2e4"
+      }
+    },
+    {
+      "cohort": "historical",
+      "clip_id": "Cdcc71ff47d78f3a4ed6f",
+      "raw_success": false,
+      "visible_outcome": "completed",
+      "source": {
+        "file_sha256": "467b49184cd9a3bb8c41644ef20037595a43b1c10b03f0ce9c11864d8e7befa5",
+        "line": 190,
+        "path": "/volt/artifacts/selective-flow-study/runs/libero_plus-main-worker-1.jsonl",
+        "record_sha256": "0f2707f0c5f3670d4993acfb7dab8b3a0914d724ed389f99d2ce135731bfab87"
+      }
+    },
+    {
+      "cohort": "new",
+      "clip_id": "C02a606460f33d3c4a11f",
+      "raw_success": false,
+      "visible_outcome": "completed",
+      "source": {
+        "path": "/volt/artifacts/rescue-characterization/runs/libero-main-worker-2.jsonl",
+        "line": 560,
+        "file_sha256": "c6402f68f5ff2572d63e3ba0346c291ecf3b1baad798568af178b824bbf14c3e",
+        "record_sha256": "03254ee7a84518df924a6742060985f8a215b6bcfb1dd6c1bb06c940ec7d56e3"
+      }
+    },
+    {
+      "cohort": "new",
+      "clip_id": "C046f1f46bfa1ad47603d",
+      "raw_success": false,
+      "visible_outcome": "completed",
+      "source": {
+        "path": "/volt/artifacts/rescue-characterization/runs/libero-main-worker-1.jsonl",
+        "line": 633,
+        "file_sha256": "1a9e90c7200a8fe618028ea6a86b4db3c32b224c21c01c886f80eecdf10d50ca",
+        "record_sha256": "206916eab7f25409d7223cbcebee7a6dedd1965fa7912aabc1a98f2cf240ad0e"
+      }
+    },
+    {
+      "cohort": "new",
+      "clip_id": "C43e76a060863fe269718",
+      "raw_success": false,
+      "visible_outcome": "completed",
+      "source": {
+        "path": "/volt/artifacts/rescue-characterization/runs/libero-main-worker-2.jsonl",
+        "line": 797,
+        "file_sha256": "c6402f68f5ff2572d63e3ba0346c291ecf3b1baad798568af178b824bbf14c3e",
+        "record_sha256": "920f93820a77b1e8683aaf7c7297e6441caebe3b2b55777cf11e70281c0976c9"
+      }
+    },
+    {
+      "cohort": "new",
+      "clip_id": "C4883fc5bcb766d960719",
+      "raw_success": false,
+      "visible_outcome": "completed",
+      "source": {
+        "path": "/volt/artifacts/rescue-characterization/runs/libero-main-worker-2.jsonl",
+        "line": 798,
+        "file_sha256": "c6402f68f5ff2572d63e3ba0346c291ecf3b1baad798568af178b824bbf14c3e",
+        "record_sha256": "3d637de0ec4110a9d3586f80709f5b128b5d6f1c70e34c7444d96cc0bc48f564"
+      }
+    },
+    {
+      "cohort": "new",
+      "clip_id": "C4919c124c38f292fff06",
+      "raw_success": false,
+      "visible_outcome": "completed",
+      "source": {
+        "path": "/volt/artifacts/rescue-characterization/runs/libero-main-worker-1.jsonl",
+        "line": 181,
+        "file_sha256": "1a9e90c7200a8fe618028ea6a86b4db3c32b224c21c01c886f80eecdf10d50ca",
+        "record_sha256": "811fa3d95e59035de5e6edc2d58a4fe2e3f71d3236f758277083ca5557f4a08b"
+      }
+    },
+    {
+      "cohort": "new",
+      "clip_id": "C4ee42041eed9ae103c8e",
+      "raw_success": false,
+      "visible_outcome": "completed",
+      "source": {
+        "path": "/volt/artifacts/rescue-characterization/runs/libero-main-worker-0.jsonl",
+        "line": 430,
+        "file_sha256": "ad5c8bdf81f5564d9c567770285b37b459cb9ea634920fcd036d432841798515",
+        "record_sha256": "f6afaa1df28e16846308818dfa2d1dae29b52a949ed6100841171dce5a1715c1"
+      }
+    },
+    {
+      "cohort": "new",
+      "clip_id": "C7e0321a920bfd326ee77",
+      "raw_success": false,
+      "visible_outcome": "completed",
+      "source": {
+        "path": "/volt/artifacts/rescue-characterization/runs/libero_plus-main-worker-1.jsonl",
+        "line": 138,
+        "file_sha256": "c07cff692cbf10c362554f5aacd2a0cb8dc51c4d02598fba7910ba4816ff0600",
+        "record_sha256": "0a6a9a22499ffe50c960ffc1b17741c71774f1de1d26be9b4f4177e7773339c2"
+      }
+    },
+    {
+      "cohort": "new",
+      "clip_id": "C7fe0b9da99063dec29fe",
+      "raw_success": false,
+      "visible_outcome": "completed",
+      "source": {
+        "path": "/volt/artifacts/rescue-characterization/runs/libero_plus-main-worker-1.jsonl",
+        "line": 139,
+        "file_sha256": "c07cff692cbf10c362554f5aacd2a0cb8dc51c4d02598fba7910ba4816ff0600",
+        "record_sha256": "0433cfc4349244cddf4a27f1a56c116cfe33c536d38b7948fcda1f4794c61461"
+      }
+    },
+    {
+      "cohort": "new",
+      "clip_id": "C85acaeb4d31ad13b4487",
+      "raw_success": false,
+      "visible_outcome": "completed",
+      "source": {
+        "path": "/volt/artifacts/rescue-characterization/runs/libero-main-worker-1.jsonl",
+        "line": 115,
+        "file_sha256": "1a9e90c7200a8fe618028ea6a86b4db3c32b224c21c01c886f80eecdf10d50ca",
+        "record_sha256": "b4750ca16e1c623cb2b4179eff862abaf8295d9779676b5bbca8a9db5a69f573"
+      }
+    },
+    {
+      "cohort": "new",
+      "clip_id": "C92e25ddbb4f4855bf66f",
+      "raw_success": false,
+      "visible_outcome": "completed",
+      "source": {
+        "path": "/volt/artifacts/rescue-characterization/runs/libero-main-worker-2.jsonl",
+        "line": 799,
+        "file_sha256": "c6402f68f5ff2572d63e3ba0346c291ecf3b1baad798568af178b824bbf14c3e",
+        "record_sha256": "6f50f136ab50e209efd5311de34e2383029fe7d03f4d06f0ddefb028d096cf5a"
+      }
+    },
+    {
+      "cohort": "new",
+      "clip_id": "C97f4fd811ff826ded5f1",
+      "raw_success": false,
+      "visible_outcome": "completed",
+      "source": {
+        "path": "/volt/artifacts/rescue-characterization/runs/libero_plus-main-worker-1.jsonl",
+        "line": 137,
+        "file_sha256": "c07cff692cbf10c362554f5aacd2a0cb8dc51c4d02598fba7910ba4816ff0600",
+        "record_sha256": "e489edb0e0729cd9a73ba36d63db980b7b2c934c4b4fa6ee9fd6b3ed620868eb"
+      }
+    },
+    {
+      "cohort": "new",
+      "clip_id": "Cab600980533db941239c",
+      "raw_success": false,
+      "visible_outcome": "completed",
+      "source": {
+        "path": "/volt/artifacts/rescue-characterization/runs/libero-main-worker-1.jsonl",
+        "line": 581,
+        "file_sha256": "1a9e90c7200a8fe618028ea6a86b4db3c32b224c21c01c886f80eecdf10d50ca",
+        "record_sha256": "8612b89e33fda9ca090ea006d6197ee1e1e163973667d7ef7f1e148f9cde50d5"
+      }
+    },
+    {
+      "cohort": "new",
+      "clip_id": "Cb7a20a0f593d1bd46c18",
+      "raw_success": false,
+      "visible_outcome": "completed",
+      "source": {
+        "path": "/volt/artifacts/rescue-characterization/runs/libero-main-worker-2.jsonl",
+        "line": 800,
+        "file_sha256": "c6402f68f5ff2572d63e3ba0346c291ecf3b1baad798568af178b824bbf14c3e",
+        "record_sha256": "d62d71979ed01a7d043e8075097cc205165f4b34bc58e4ca9ebf6e363f1c4fcc"
+      }
+    },
+    {
+      "cohort": "new",
+      "clip_id": "Ce60db1fa132b11c8ec0b",
+      "raw_success": false,
+      "visible_outcome": "completed",
+      "source": {
+        "path": "/volt/artifacts/rescue-characterization/runs/libero-main-worker-1.jsonl",
+        "line": 584,
+        "file_sha256": "1a9e90c7200a8fe618028ea6a86b4db3c32b224c21c01c886f80eecdf10d50ca",
+        "record_sha256": "d2155f2af9d9298f13426d1f06e82eb136dcdf89be034470025afb22e2b25c87"
+      }
+    },
+    {
+      "cohort": "new",
+      "clip_id": "Ceba4a3c8260e25b3ab47",
+      "raw_success": false,
+      "visible_outcome": "completed",
+      "source": {
+        "path": "/volt/artifacts/rescue-characterization/runs/libero-main-worker-1.jsonl",
+        "line": 129,
+        "file_sha256": "1a9e90c7200a8fe618028ea6a86b4db3c32b224c21c01c886f80eecdf10d50ca",
+        "record_sha256": "d99f10bfde00a9089f484bec3e3abc6406479d769075acb8b001bbb67a2c848d"
+      }
+    }
+  ],
+  "simulator_diagnostic_flags": [
+    {
+      "clip_id": "C69ea382475d52d648c72",
+      "group_id": "Gb4f4b6fe698a58f7",
+      "reason": "Preserved MuJoCo instability warning; not solely policy-attributable"
+    },
+    {
+      "clip_id": "Ca32bfdc8d8bf15fd485a",
+      "group_id": "Gb4f4b6fe698a58f7",
+      "reason": "Preserved MuJoCo instability warning; not solely policy-attributable"
+    },
+    {
+      "clip_id": "Ca38d9e6720868f30da6a",
+      "group_id": "Gb4f4b6fe698a58f7",
+      "reason": "Preserved MuJoCo instability warning; not solely policy-attributable"
+    },
+    {
+      "clip_id": "Cf351c028d50feb96ab1f",
+      "group_id": "Gb4f4b6fe698a58f7",
+      "reason": "Preserved MuJoCo instability warning; not solely policy-attributable"
+    }
+  ],
+  "baseline_clips": 388
+}

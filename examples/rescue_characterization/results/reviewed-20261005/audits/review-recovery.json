@@ -1,0 +1,113 @@
+{
+  "role": "Independent Reviewer",
+  "at_utc": "2026-10-05T04:42:36.103688+00:00",
+  "verdict": "approved_single_detached_continue_after_prepared_commit_review",
+  "raw_coverage": {
+    "expected": 9920,
+    "observed_unique": 9920,
+    "observed_rows": 9920,
+    "duplicate_keys": 0,
+    "missing": 0,
+    "extra": 0,
+    "error_rows": 0
+  },
+  "pinned_source_mismatches": [],
+  "unpublished_commit": "ae903b8",
+  "verified_remote_tip_and_parent": "ddb0e0770dcd0ef25b7917b8606c54d14f7497fb",
+  "gpu_compute_processes": 0,
+  "required_gates": [
+    "Preserve original unpublished commit via durable ref/bundle plus failed statuses/logs before amendment.",
+    "Lossless line-boundary sharding only of repo snapshots; verify reconstruction length/content hash against unchanged pod originals.",
+    "Amend only unpublished commit and preserve ddb0e07 as parent; ordinary fast-forward push only.",
+    "Keep original failed pipeline status; explicit recovery publication status may unlock independent audit only after verified remote push.",
+    "Do not rerun original pipeline/full supervisor or any scored episode.",
+    "Require independent full audit before one historical replay supervisor launch; preserve all existing command history."
+  ],
+  "reviewed_files": {
+    "/volt/artifacts/rescue-characterization/recovery-20261005/shard_records.py": "84be4ff4ed86489cdc635844d07d1bb249fae7df1d92238e132a8aee8eb114ad",
+    "/volt/artifacts/rescue-characterization/recovery-20261005/recover.py": "d8000321f6f4fba34eef4c1661afa06209834221ba85cdcb9a69ba8bc520eade"
+  },
+  "actual_review": [
+    "prepare requires exactly unpublished ae903b8 atop live remote ddb0e077, no tracked/staged changes and passed local base/media audits.",
+    "Backup ref and original failure evidence are preserved before deleting tracked raw snapshots only; original pod run files remain intact.",
+    "All eight snapshot sharding records validate byte reconstruction, source stability and exclusive39MB part size.",
+    "Amend parent and all new reachable blobs checked; only ordinary fast-forward push used.",
+    "Continue corrects operational publication status only after remote HEAD verification, archives original failure, runs independent main audit then exactly one historical replay.",
+    "Recovery locks old pipeline and supervisor to preclude duplicate scored launches; script never invokes either."
+  ],
+  "open_findings": [],
+  "resolved_findings": [
+    "Named backup ref must be absent or match original commit.",
+    "Interrupted status is preserved by outer exception handler."
+  ],
+  "sharder_test_evidence": "/volt/artifacts/rescue-characterization/recovery-20261005/test-shards-d0f1bty9/test-result.json",
+  "prepared_verification": {
+    "head": "a841fe7692de474effa285b8b015f1d56ff361ca",
+    "parent_remote": "ddb0e0770dcd0ef25b7917b8606c54d14f7497fb",
+    "backup": "ae903b8818810cdf6481e8fe0177d801a160a7cc",
+    "files": [
+      {
+        "name": "libero-main-worker-0.jsonl",
+        "bytes": 44948794,
+        "lines": 800,
+        "sha256": "ad5c8bdf81f5564d9c567770285b37b459cb9ea634920fcd036d432841798515",
+        "parts": 2
+      },
+      {
+        "name": "libero-main-worker-1.jsonl",
+        "bytes": 47885433,
+        "lines": 800,
+        "sha256": "1a9e90c7200a8fe618028ea6a86b4db3c32b224c21c01c886f80eecdf10d50ca",
+        "parts": 2
+      },
+      {
+        "name": "libero-main-worker-2.jsonl",
+        "bytes": 59918364,
+        "lines": 800,
+        "sha256": "c6402f68f5ff2572d63e3ba0346c291ecf3b1baad798568af178b824bbf14c3e",
+        "parts": 2
+      },
+      {
+        "name": "libero-main-worker-3.jsonl",
+        "bytes": 53801125,
+        "lines": 800,
+        "sha256": "8fc4a673725e006ca270acf6723033951cf10154633c26a23511853ad034a919",
+        "parts": 2
+      },
+      {
+        "name": "libero_plus-main-worker-0.jsonl",
+        "bytes": 121200519,
+        "lines": 1680,
+        "sha256": "758054fbf172cb9d3f451d7a655f4d0bf9b99ccaf91a973833108488da100d7c",
+        "parts": 4
+      },
+      {
+        "name": "libero_plus-main-worker-1.jsonl",
+        "bytes": 123105596,
+        "lines": 1680,
+        "sha256": "c07cff692cbf10c362554f5aacd2a0cb8dc51c4d02598fba7910ba4816ff0600",
+        "parts": 4
+      },
+      {
+        "name": "libero_plus-main-worker-2.jsonl",
+        "bytes": 117751170,
+        "lines": 1680,
+        "sha256": "b91c6f2151b978f07f7a502806b7c97db5ea5e16502bd541b7593d05e412edce",
+        "parts": 4
+      },
+      {
+        "name": "libero_plus-main-worker-3.jsonl",
+        "bytes": 115788155,
+        "lines": 1680,
+        "sha256": "7b724747f39da0f2cd79d26fb99efda944c4725ef246ccf27251f3349cf593a7",
+        "parts": 3
+      }
+    ],
+    "index_sha256": "848965e1aadbf389d71cc792d8086b1f43ee7570028185303b417c5a4ea71e62",
+    "frozen_sources_unchanged": true,
+    "failed_evidence_preserved": true,
+    "largest_new_blob_bytes": 38998463,
+    "only_results_and_recovery_paths_changed": true
+  },
+  "approval_scope": "Single explicit recovery continue: ordinary push, operational publication correction, independent main audit, then one historical replay. Never rerun main supervisor/pipeline."
+}

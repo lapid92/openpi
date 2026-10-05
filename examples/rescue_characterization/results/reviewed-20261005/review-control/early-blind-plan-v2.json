@@ -1,0 +1,284 @@
+{
+  "assignments": [
+    {
+      "cohort": "historical",
+      "clip_id": "C122f9e9b67a4c0140de2",
+      "reviewer": "secondary"
+    },
+    {
+      "cohort": "historical",
+      "clip_id": "C31713f4d99d0de8f7e4b",
+      "reviewer": "secondary"
+    },
+    {
+      "cohort": "historical",
+      "clip_id": "C337e3f4d44fd6c087d12",
+      "reviewer": "secondary"
+    },
+    {
+      "cohort": "historical",
+      "clip_id": "C3503184fe4e44f5f7be1",
+      "reviewer": "secondary"
+    },
+    {
+      "cohort": "historical",
+      "clip_id": "C59b6bee159d6c789d537",
+      "reviewer": "secondary"
+    },
+    {
+      "cohort": "historical",
+      "clip_id": "C6f1192dd092ee7923ad0",
+      "reviewer": "secondary"
+    },
+    {
+      "cohort": "historical",
+      "clip_id": "C73d132aa9e4779f319fd",
+      "reviewer": "secondary"
+    },
+    {
+      "cohort": "historical",
+      "clip_id": "C7460efb4db9e0647928c",
+      "reviewer": "secondary"
+    },
+    {
+      "cohort": "historical",
+      "clip_id": "C7d4d942607bd1c66e00e",
+      "reviewer": "secondary"
+    },
+    {
+      "cohort": "historical",
+      "clip_id": "C7ec74d8c80ac60ce7b7c",
+      "reviewer": "secondary"
+    },
+    {
+      "cohort": "historical",
+      "clip_id": "Ca1b8487573883c2a308e",
+      "reviewer": "secondary"
+    },
+    {
+      "cohort": "historical",
+      "clip_id": "Ca4f91273c257615a75df",
+      "reviewer": "secondary"
+    },
+    {
+      "cohort": "historical",
+      "clip_id": "Cab10c0b03586687f6156",
+      "reviewer": "secondary"
+    },
+    {
+      "cohort": "historical",
+      "clip_id": "Cad7fae7977ceb51d9aa1",
+      "reviewer": "secondary"
+    },
+    {
+      "cohort": "historical",
+      "clip_id": "Cadd36dbaa744c4ca7569",
+      "reviewer": "secondary"
+    },
+    {
+      "cohort": "historical",
+      "clip_id": "Ccf64bec0babc414171e5",
+      "reviewer": "secondary"
+    },
+    {
+      "cohort": "historical",
+      "clip_id": "Cda4bef03e584918f9cc3",
+      "reviewer": "secondary"
+    },
+    {
+      "cohort": "historical",
+      "clip_id": "Cdaaa5ff77bdeba1faa84",
+      "reviewer": "secondary"
+    },
+    {
+      "cohort": "historical",
+      "clip_id": "Cdd58677c2a608593637f",
+      "reviewer": "secondary"
+    },
+    {
+      "cohort": "historical",
+      "clip_id": "Cdd78f6b83f5c516c678f",
+      "reviewer": "secondary"
+    },
+    {
+      "cohort": "historical",
+      "clip_id": "Ced4fb1349f29abf7a9b5",
+      "reviewer": "secondary"
+    },
+    {
+      "cohort": "new",
+      "clip_id": "C02a606460f33d3c4a11f",
+      "reviewer": "historical"
+    },
+    {
+      "cohort": "new",
+      "clip_id": "C053a195f4556f9e8fa48",
+      "reviewer": "historical"
+    },
+    {
+      "cohort": "new",
+      "clip_id": "C0ace75dd78c305554e51",
+      "reviewer": "primary"
+    },
+    {
+      "cohort": "new",
+      "clip_id": "C187fe9bd9b13f78125c7",
+      "reviewer": "primary"
+    },
+    {
+      "cohort": "new",
+      "clip_id": "C244cd3576daf247fd6d1",
+      "reviewer": "historical"
+    },
+    {
+      "cohort": "new",
+      "clip_id": "C2811a644bc492295d449",
+      "reviewer": "primary"
+    },
+    {
+      "cohort": "new",
+      "clip_id": "C3079520500f843051f2e",
+      "reviewer": "historical"
+    },
+    {
+      "cohort": "new",
+      "clip_id": "C4847637d065f5bce1437",
+      "reviewer": "primary"
+    },
+    {
+      "cohort": "new",
+      "clip_id": "C5b4e9886937a6b19226b",
+      "reviewer": "primary"
+    },
+    {
+      "cohort": "new",
+      "clip_id": "C64378158e01828196b14",
+      "reviewer": "historical"
+    },
+    {
+      "cohort": "new",
+      "clip_id": "C6b245a8d9e0644ae53ca",
+      "reviewer": "primary"
+    },
+    {
+      "cohort": "new",
+      "clip_id": "C6d7f671c3881b2b9fd00",
+      "reviewer": "primary"
+    },
+    {
+      "cohort": "new",
+      "clip_id": "C6e27fdf15b53bdcc5a8a",
+      "reviewer": "primary"
+    },
+    {
+      "cohort": "new",
+      "clip_id": "C6ed8cc4436d15008d5f1",
+      "reviewer": "historical"
+    },
+    {
+      "cohort": "new",
+      "clip_id": "C729bd63b0c1bcf796e29",
+      "reviewer": "historical"
+    },
+    {
+      "cohort": "new",
+      "clip_id": "C759d9691d9583f396418",
+      "reviewer": "primary"
+    },
+    {
+      "cohort": "new",
+      "clip_id": "C77917f6c387835e4d773",
+      "reviewer": "historical"
+    },
+    {
+      "cohort": "new",
+      "clip_id": "C791cba2cb5ca59582ec8",
+      "reviewer": "primary"
+    },
+    {
+      "cohort": "new",
+      "clip_id": "C7e0321a920bfd326ee77",
+      "reviewer": "historical"
+    },
+    {
+      "cohort": "new",
+      "clip_id": "C840d5738ae5cf6a31e98",
+      "reviewer": "historical"
+    },
+    {
+      "cohort": "new",
+      "clip_id": "C8bc9b8502a0aa2814b96",
+      "reviewer": "historical"
+    },
+    {
+      "cohort": "new",
+      "clip_id": "C9b233d28e2c3333e006f",
+      "reviewer": "historical"
+    },
+    {
+      "cohort": "new",
+      "clip_id": "C9c5003287b4830be2565",
+      "reviewer": "primary"
+    },
+    {
+      "cohort": "new",
+      "clip_id": "Ca665d7c9b618610bcb81",
+      "reviewer": "historical"
+    },
+    {
+      "cohort": "new",
+      "clip_id": "Caca8988b71da7ea934f7",
+      "reviewer": "primary"
+    },
+    {
+      "cohort": "new",
+      "clip_id": "Cb1979aa162e75568e3a6",
+      "reviewer": "historical"
+    },
+    {
+      "cohort": "new",
+      "clip_id": "Cc2970455886914eefd2f",
+      "reviewer": "historical"
+    },
+    {
+      "cohort": "new",
+      "clip_id": "Cd05c30d1fd00af82635d",
+      "reviewer": "primary"
+    },
+    {
+      "cohort": "new",
+      "clip_id": "Cd566777564d4f290ab8e",
+      "reviewer": "primary"
+    },
+    {
+      "cohort": "new",
+      "clip_id": "Ce3c2ec7abe52c101af56",
+      "reviewer": "primary"
+    },
+    {
+      "cohort": "new",
+      "clip_id": "Ce60db1fa132b11c8ec0b",
+      "reviewer": "historical"
+    },
+    {
+      "cohort": "new",
+      "clip_id": "Ce9824add21995f5a5238",
+      "reviewer": "historical"
+    },
+    {
+      "cohort": "new",
+      "clip_id": "Ceba4a3c8260e25b3ab47",
+      "reviewer": "historical"
+    },
+    {
+      "cohort": "new",
+      "clip_id": "Ced0bb787841fb2124be7",
+      "reviewer": "historical"
+    },
+    {
+      "cohort": "new",
+      "clip_id": "Cf3f03b63fb0bb9664857",
+      "reviewer": "primary"
+    }
+  ]
+}

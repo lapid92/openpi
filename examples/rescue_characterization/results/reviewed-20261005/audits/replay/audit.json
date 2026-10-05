@@ -1,0 +1,86 @@
+{
+  "status": "passed",
+  "manifest_sha256": "d9cfdf88561ec89206bd78d7104671e2d72e28cf48b12c947fc59cfd2b18cbdb",
+  "declared_cases": 195,
+  "declared_episodes": 548,
+  "actual_episodes": 548,
+  "reported_live_counter": 547,
+  "final_summary_counter": 548,
+  "raw_files": [
+    {
+      "path": "/volt/artifacts/rescue-characterization/replay/libero-worker-0.jsonl",
+      "sha256": "34a1cbf6925a0358073914b8e4ae5f6ca213bb0a52f70676e0752365b0808ef6",
+      "records": 32
+    },
+    {
+      "path": "/volt/artifacts/rescue-characterization/replay/libero-worker-1.jsonl",
+      "sha256": "ab1196526735798e2076da98fdb1f9a9779e6b6735dfb2e280c66bc4013d5750",
+      "records": 32
+    },
+    {
+      "path": "/volt/artifacts/rescue-characterization/replay/libero-worker-2.jsonl",
+      "sha256": "f694d582ee4d33f95cc247f30764f8bf7a39efa7f510b211f4a88ed60deddd9f",
+      "records": 28
+    },
+    {
+      "path": "/volt/artifacts/rescue-characterization/replay/libero-worker-3.jsonl",
+      "sha256": "cf39cb234ac36b62030466e38cebc061564c8db34d7a313c541c318306f01fa4",
+      "records": 28
+    },
+    {
+      "path": "/volt/artifacts/rescue-characterization/replay/libero_plus-worker-0.jsonl",
+      "sha256": "d2afb6c64020f926a40f1fe4afd554e1f716043cb6e97500c6d55a34c0ca507e",
+      "records": 110
+    },
+    {
+      "path": "/volt/artifacts/rescue-characterization/replay/libero_plus-worker-1.jsonl",
+      "sha256": "c542d6cca2c25e43108c34dc97bb468d3093a4c3194be79c343e50599b6fe8c3",
+      "records": 106
+    },
+    {
+      "path": "/volt/artifacts/rescue-characterization/replay/libero_plus-worker-2.jsonl",
+      "sha256": "7921275aa3a0007630ba2ea06cb8ad21ec807c9c2452965bdcf7b249de7a9297",
+      "records": 106
+    },
+    {
+      "path": "/volt/artifacts/rescue-characterization/replay/libero_plus-worker-3.jsonl",
+      "sha256": "a22f8e9944b43a36a3a0ea492a6eee514e60c0633c12bfb3ced27b1a981eeee4",
+      "records": 106
+    }
+  ],
+  "equivalence": {
+    "reconstruction-not-equivalent": 432,
+    "exact_replay": 116
+  },
+  "by_study_benchmark": {
+    "frozen_flow/libero": {
+      "reconstruction-not-equivalent": 103,
+      "exact_replay": 17
+    },
+    "frozen_flow/libero_plus": {
+      "reconstruction-not-equivalent": 154,
+      "exact_replay": 42
+    },
+    "selective_flow/libero_plus": {
+      "reconstruction-not-equivalent": 175,
+      "exact_replay": 57
+    }
+  },
+  "mismatch_categories": {
+    "observation_sha256": 432,
+    "success": 111,
+    "chunk_count": 227,
+    "policy_steps": 262,
+    "action_sha256": 432,
+    "total_velocity_evaluations": 227
+  },
+  "fully_equivalent_selected_cases": 42,
+  "one_step_plus_higher_equivalent_cases": 42,
+  "counter_explanation": "replay_supervise.py updates state.records only inside worker polling loop. Completion assigns status/summary but never refreshes records; 547 is stale last progress snapshot, exact raw/final audited coverage is548.",
+  "source_files_verified": 304,
+  "media_hashes_and_numeric_traces_reverified": true,
+  "media_decoding_rerun": false,
+  "prior_full_decode_audit_hash": "28e6e8ec8cb990ae5e1039c6a09418d667e9831c60e2c72fc8c1442d8702608e",
+  "media_gate": "Prior successful complete video decoding binds identical SHA256 raw files; each current recording file/hash/numeric trace rechecked. Pairing/RNG audit rerun.",
+  "attribution_rule": "Only individually exact arms may support original-episode labels; original paired comparisons require both relevant arms exact. All non-equivalent videos are reconstruction-only, even when outcomes happen to agree."
+}

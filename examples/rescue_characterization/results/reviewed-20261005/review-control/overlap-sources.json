@@ -1,0 +1,17 @@
+[
+  {
+    "cohort": "new",
+    "reviewer": "historical",
+    "path": "/volt/artifacts/rescue-characterization/visual-review-new/blind/labels-overlap-historical.jsonl"
+  },
+  {
+    "cohort": "new",
+    "reviewer": "primary",
+    "path": "/volt/artifacts/rescue-characterization/visual-review-new/blind/labels-overlap-primary-effective.jsonl"
+  },
+  {
+    "cohort": "historical",
+    "reviewer": "secondary",
+    "path": "/volt/artifacts/rescue-characterization/visual-review-historical/blind/labels-overlap-secondary.jsonl"
+  }
+]

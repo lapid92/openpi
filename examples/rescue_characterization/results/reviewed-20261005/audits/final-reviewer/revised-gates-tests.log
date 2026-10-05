@@ -1,0 +1,7 @@
+test_history_and_controls_never_qualify (__main__.RevisedGateTests.test_history_and_controls_never_qualify) ... ok
+test_unclear_adjudication_and_low_overlap_each_exclude (__main__.RevisedGateTests.test_unclear_adjudication_and_low_overlap_each_exclude) ... ok
+
+----------------------------------------------------------------------
+Ran 2 tests in 0.032s
+
+OK

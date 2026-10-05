@@ -1,0 +1,419 @@
+{
+  "distributions": [
+    {
+      "cohort": "historical",
+      "study": "frozen_flow",
+      "benchmark": "libero",
+      "selection_class": "regression",
+      "clips": 5,
+      "cases": 2,
+      "families": 2,
+      "conditions": 2,
+      "distinct_initial_state_hashes": 2,
+      "baseline_stages": {
+        "completed": 4,
+        "placement": 1
+      },
+      "baseline_confidence": {
+        "medium": 2,
+        "high": 3
+      },
+      "baseline_observed_outcomes": {
+        "completed": 4,
+        "not completed": 1
+      }
+    },
+    {
+      "cohort": "historical",
+      "study": "frozen_flow",
+      "benchmark": "libero",
+      "selection_class": "rescue",
+      "clips": 12,
+      "cases": 3,
+      "families": 3,
+      "conditions": 3,
+      "distinct_initial_state_hashes": 3,
+      "baseline_stages": {
+        "placement": 4,
+        "grasp": 2,
+        "completed": 6
+      },
+      "baseline_confidence": {
+        "low": 3,
+        "high": 4,
+        "medium": 5
+      },
+      "baseline_observed_outcomes": {
+        "unclear": 3,
+        "not completed": 3,
+        "completed": 6
+      }
+    },
+    {
+      "cohort": "historical",
+      "study": "frozen_flow",
+      "benchmark": "libero_plus",
+      "selection_class": "never_rescued",
+      "clips": 12,
+      "cases": 3,
+      "families": 3,
+      "conditions": 3,
+      "distinct_initial_state_hashes": 3,
+      "baseline_stages": {
+        "approach": 12
+      },
+      "baseline_confidence": {
+        "medium": 8,
+        "high": 4
+      },
+      "baseline_observed_outcomes": {
+        "not completed": 12
+      }
+    },
+    {
+      "cohort": "historical",
+      "study": "frozen_flow",
+      "benchmark": "libero_plus",
+      "selection_class": "regression",
+      "clips": 17,
+      "cases": 5,
+      "families": 5,
+      "conditions": 5,
+      "distinct_initial_state_hashes": 5,
+      "baseline_stages": {
+        "completed": 15,
+        "grasp": 2
+      },
+      "baseline_confidence": {
+        "medium": 10,
+        "high": 7
+      },
+      "baseline_observed_outcomes": {
+        "completed": 15,
+        "not completed": 2
+      }
+    },
+    {
+      "cohort": "historical",
+      "study": "frozen_flow",
+      "benchmark": "libero_plus",
+      "selection_class": "rescue",
+      "clips": 13,
+      "cases": 4,
+      "families": 4,
+      "conditions": 4,
+      "distinct_initial_state_hashes": 4,
+      "baseline_stages": {
+        "completed": 5,
+        "grasp": 6,
+        "placement": 2
+      },
+      "baseline_confidence": {
+        "high": 4,
+        "medium": 8,
+        "low": 1
+      },
+      "baseline_observed_outcomes": {
+        "completed": 5,
+        "not completed": 7,
+        "unclear": 1
+      }
+    },
+    {
+      "cohort": "historical",
+      "study": "selective_flow",
+      "benchmark": "libero_plus",
+      "selection_class": "failed_at_1_and_10_intermediates_unmeasured",
+      "clips": 16,
+      "cases": 8,
+      "families": 5,
+      "conditions": 5,
+      "distinct_initial_state_hashes": 5,
+      "baseline_stages": {
+        "manipulation": 5,
+        "completed": 2,
+        "grasp": 7,
+        "placement": 2
+      },
+      "baseline_confidence": {
+        "medium": 14,
+        "high": 2
+      },
+      "baseline_observed_outcomes": {
+        "not completed": 14,
+        "completed": 2
+      }
+    },
+    {
+      "cohort": "historical",
+      "study": "selective_flow",
+      "benchmark": "libero_plus",
+      "selection_class": "regression",
+      "clips": 25,
+      "cases": 13,
+      "families": 8,
+      "conditions": 10,
+      "distinct_initial_state_hashes": 12,
+      "baseline_stages": {
+        "completed": 16,
+        "grasp": 4,
+        "placement": 3,
+        "manipulation": 2
+      },
+      "baseline_confidence": {
+        "high": 11,
+        "medium": 12,
+        "low": 2
+      },
+      "baseline_observed_outcomes": {
+        "completed": 16,
+        "not completed": 7,
+        "unclear": 2
+      }
+    },
+    {
+      "cohort": "historical",
+      "study": "selective_flow",
+      "benchmark": "libero_plus",
+      "selection_class": "rescue",
+      "clips": 16,
+      "cases": 8,
+      "families": 5,
+      "conditions": 7,
+      "distinct_initial_state_hashes": 8,
+      "baseline_stages": {
+        "completed": 8,
+        "grasp": 7,
+        "placement": 1
+      },
+      "baseline_confidence": {
+        "high": 9,
+        "medium": 7
+      },
+      "baseline_observed_outcomes": {
+        "completed": 8,
+        "not completed": 8
+      }
+    },
+    {
+      "cohort": "new",
+      "study": "rescue_characterization",
+      "benchmark": "libero",
+      "selection_class": "never_rescued",
+      "clips": 32,
+      "cases": 8,
+      "families": 5,
+      "conditions": 5,
+      "distinct_initial_state_hashes": 8,
+      "baseline_stages": {
+        "approach": 4,
+        "placement": 6,
+        "grasp": 12,
+        "completed": 4,
+        "unclear": 4,
+        "manipulation": 2
+      },
+      "baseline_confidence": {
+        "high": 4,
+        "medium": 24,
+        "low": 4
+      },
+      "baseline_observed_outcomes": {
+        "not completed": 27,
+        "completed": 4,
+        "unclear": 1
+      }
+    },
+    {
+      "cohort": "new",
+      "study": "rescue_characterization",
+      "benchmark": "libero",
+      "selection_class": "regression",
+      "clips": 48,
+      "cases": 12,
+      "families": 12,
+      "conditions": 12,
+      "distinct_initial_state_hashes": 12,
+      "baseline_stages": {
+        "completed": 38,
+        "grasp": 2,
+        "placement": 4,
+        "unclear": 3,
+        "manipulation": 1
+      },
+      "baseline_confidence": {
+        "medium": 27,
+        "high": 17,
+        "low": 4
+      },
+      "baseline_observed_outcomes": {
+        "completed": 38,
+        "not completed": 6,
+        "unclear": 4
+      }
+    },
+    {
+      "cohort": "new",
+      "study": "rescue_characterization",
+      "benchmark": "libero",
+      "selection_class": "rescue",
+      "clips": 48,
+      "cases": 12,
+      "families": 12,
+      "conditions": 12,
+      "distinct_initial_state_hashes": 12,
+      "baseline_stages": {
+        "completed": 34,
+        "grasp": 7,
+        "unclear": 2,
+        "placement": 5
+      },
+      "baseline_confidence": {
+        "medium": 23,
+        "high": 21,
+        "low": 4
+      },
+      "baseline_observed_outcomes": {
+        "completed": 34,
+        "not completed": 10,
+        "unclear": 4
+      }
+    },
+    {
+      "cohort": "new",
+      "study": "rescue_characterization",
+      "benchmark": "libero_plus",
+      "selection_class": "never_rescued",
+      "clips": 48,
+      "cases": 12,
+      "families": 5,
+      "conditions": 7,
+      "distinct_initial_state_hashes": 11,
+      "baseline_stages": {
+        "manipulation": 4,
+        "approach": 16,
+        "placement": 4,
+        "grasp": 21,
+        "unclear": 3
+      },
+      "baseline_confidence": {
+        "low": 11,
+        "medium": 33,
+        "high": 4
+      },
+      "baseline_observed_outcomes": {
+        "unclear": 11,
+        "not completed": 37
+      }
+    },
+    {
+      "cohort": "new",
+      "study": "rescue_characterization",
+      "benchmark": "libero_plus",
+      "selection_class": "regression",
+      "clips": 48,
+      "cases": 12,
+      "families": 12,
+      "conditions": 12,
+      "distinct_initial_state_hashes": 12,
+      "baseline_stages": {
+        "placement": 7,
+        "completed": 34,
+        "grasp": 5,
+        "manipulation": 1,
+        "unclear": 1
+      },
+      "baseline_confidence": {
+        "low": 4,
+        "medium": 32,
+        "high": 12
+      },
+      "baseline_observed_outcomes": {
+        "unclear": 4,
+        "completed": 34,
+        "not completed": 10
+      }
+    },
+    {
+      "cohort": "new",
+      "study": "rescue_characterization",
+      "benchmark": "libero_plus",
+      "selection_class": "rescue",
+      "clips": 48,
+      "cases": 12,
+      "families": 12,
+      "conditions": 12,
+      "distinct_initial_state_hashes": 12,
+      "baseline_stages": {
+        "completed": 28,
+        "manipulation": 4,
+        "placement": 7,
+        "unclear": 2,
+        "grasp": 5,
+        "approach": 2
+      },
+      "baseline_confidence": {
+        "high": 14,
+        "medium": 23,
+        "low": 11
+      },
+      "baseline_observed_outcomes": {
+        "completed": 28,
+        "unclear": 11,
+        "not completed": 9
+      }
+    }
+  ],
+  "agreement_by_cohort": {
+    "new": {
+      "observed_outcome": {
+        "n": 70,
+        "agree": 43
+      },
+      "primary_stage": {
+        "n": 70,
+        "agree": 48
+      },
+      "confidence": {
+        "n": 70,
+        "agree": 32
+      }
+    },
+    "historical": {
+      "observed_outcome": {
+        "n": 26,
+        "agree": 19
+      },
+      "primary_stage": {
+        "n": 26,
+        "agree": 19
+      },
+      "confidence": {
+        "n": 26,
+        "agree": 14
+      }
+    }
+  },
+  "viewing_coverage": {
+    "baseline": {
+      "clips": 388,
+      "sheet_frame_views": 4656,
+      "additional_frame_views": 1103,
+      "numeric_trace_explicit_true": 0,
+      "numeric_trace_narrative_records": 181,
+      "continuous_full_video": 0
+    },
+    "independent_overlap": {
+      "clips": 96,
+      "sheet_frame_views": 1152,
+      "additional_frame_views": 301,
+      "numeric_trace_explicit_true": 0,
+      "numeric_trace_narrative_records": 43,
+      "continuous_full_video": 0
+    }
+  },
+  "disagreements": 56,
+  "substantive_disagreements": 39,
+  "coordinator_unclear_adjudications": 4,
+  "method": "Frame views may overlap between sheet/additional views and reviewers. Overlap oversamples ambiguous clips; agreement is descriptive for this selected review sample, not population annotation reliability. All differing labels are retained; unresolved differences cannot support clear class claims."
+}

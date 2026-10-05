@@ -1,0 +1,12 @@
+{
+  "clip_id": "C73d132aa9e4779f319fd",
+  "cohort": "historical",
+  "frames": [
+    130,
+    170,
+    300
+  ],
+  "video": "/volt/artifacts/rescue-characterization/visual-review-historical/blind/C73d132aa9e4779f319fd.mp4",
+  "image_sha256": "373e759fbb9e011a9334b0b0e4ade1cd6af5bcfd810822c094d4138f5b50bb75",
+  "generated_at": "2026-10-05T09:59:45.904155+00:00"
+}

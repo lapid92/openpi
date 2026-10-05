@@ -1,0 +1,44 @@
+{
+  "status": "joined_artifact_checks_passed",
+  "directory": "/volt/artifacts/rescue-characterization/review-final-v2",
+  "files": {
+    "label-table.json": "93725b08f89ddc36e83e7aad78d26037cea15768eecf679ba3ad4cdc18752be6",
+    "paired-stages.json": "b1b492e7af3cf9733399765f217970d66141ab8b6033d269c98c8168c9a4d4ae",
+    "review-summary.json": "55db2c6cab76fa60174c95bec42719a028cf32d22196e4ed13a26095de62a1e4",
+    "characterization.json": "9f61514d464aa4c22579af9a0598f177cdeec23b5ef35862e497a257ce6845ae",
+    "evidence-links.json": "d2269748df79df829919dfc26d09ecbe7cb1e17d712ab9e6c0d2e3aaf277ffcd",
+    "coverage-details.json": "064aa8c0b4cadb203dd58a25cbd51adeb461b8c1580a70350f499b7acae51053",
+    "disagreement-register.json": "0580c3d72dc6e96210abc3836b83918641bc50b2f16260d90d7ac816d3ec219f",
+    "labels.csv": "7ff29a548d7466090992272c5d946324083795637a2ade5b727b03e4bcf59009",
+    "SUPERSEDED.md": "681a58f75d3d28b76afb6fb3559b90a1b8d8058d8680b56d54a483ac72c02c09"
+  },
+  "baseline": 388,
+  "overlap": 96,
+  "low_unclear_covered": 45,
+  "families_covered": 56,
+  "agreement_outcome": 62,
+  "agreement_stage": 67,
+  "substantive_differences": 39,
+  "unclear_adjudications": 4,
+  "primary_revision_preserved_exactly_one": true,
+  "no_new_recurring_class_qualifies": true,
+  "viewing_coverage": {
+    "baseline": {
+      "clips": 388,
+      "sheet_frame_views": 4656,
+      "additional_frame_views": 1103,
+      "numeric_trace_explicit_true": 0,
+      "numeric_trace_narrative_records": 181,
+      "continuous_full_video": 0
+    },
+    "independent_overlap": {
+      "clips": 96,
+      "sheet_frame_views": 1152,
+      "additional_frame_views": 301,
+      "numeric_trace_explicit_true": 0,
+      "numeric_trace_narrative_records": 43,
+      "continuous_full_video": 0
+    }
+  },
+  "remaining": "Review final report/package/diff; derived historical two-arm terminology needs v2 correction."
+}

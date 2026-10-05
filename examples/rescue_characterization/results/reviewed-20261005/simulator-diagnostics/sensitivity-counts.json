@@ -1,0 +1,28 @@
+{
+  "primary": {
+    "cases": 800,
+    "one_step_failures": 32,
+    "any_rescues": 24,
+    "never": 8
+  },
+  "supplementary_without_one_warned_case": {
+    "cases": 799,
+    "one_step_failures": 31,
+    "any_rescues": 24,
+    "any_rescue_rate": 0.7741935483870968,
+    "never": 7,
+    "rescues_by_steps": {
+      "2": 17,
+      "4": 18,
+      "10": 20
+    },
+    "regressions_by_steps": {
+      "2": 14,
+      "4": 17,
+      "10": 10
+    }
+  },
+  "all_primary_cases_preserved": true,
+  "rerun_episodes": 0,
+  "replacement_cases": 0
+}

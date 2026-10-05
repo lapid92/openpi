@@ -1,0 +1,52 @@
+{
+  "agreement_by_cohort": {
+    "new": {
+      "observed_outcome": {
+        "n": 70,
+        "agree": 43
+      },
+      "primary_stage": {
+        "n": 70,
+        "agree": 48
+      },
+      "confidence": {
+        "n": 70,
+        "agree": 32
+      }
+    },
+    "historical": {
+      "observed_outcome": {
+        "n": 26,
+        "agree": 19
+      },
+      "primary_stage": {
+        "n": 26,
+        "agree": 19
+      },
+      "confidence": {
+        "n": 26,
+        "agree": 14
+      }
+    }
+  },
+  "viewing_coverage": {
+    "baseline": {
+      "clips": 388,
+      "sheet_frame_views": 4656,
+      "additional_frame_views": 1103,
+      "numeric_trace_explicit_true": 0,
+      "numeric_trace_narrative_records": 181,
+      "continuous_full_video": 0
+    },
+    "independent_overlap": {
+      "clips": 96,
+      "sheet_frame_views": 1152,
+      "additional_frame_views": 301,
+      "numeric_trace_explicit_true": 0,
+      "numeric_trace_narrative_records": 43,
+      "continuous_full_video": 0
+    }
+  },
+  "substantive_disagreements": 39,
+  "coordinator_unclear_adjudications": 4
+}

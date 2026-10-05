@@ -1,0 +1,27 @@
+{
+  "status": "complete_and_stable",
+  "reviewer": "historical independent overlap",
+  "expected": 36,
+  "rows": 36,
+  "unique": 36,
+  "missing": [],
+  "unexpected": [],
+  "coverage_errors": [],
+  "sha256": "b9f1747b100e10ae91c2ccfec79d83f169619143324b99a65dc6a0f07ceb2639",
+  "outcomes": {
+    "completed": 11,
+    "not_completed": 19,
+    "unclear": 6
+  },
+  "confidence": {
+    "medium": 18,
+    "high": 12,
+    "low": 6
+  },
+  "contact_sheet_frames": 432,
+  "additional_frame_views": 117,
+  "continuous_full_video_count": 0,
+  "numeric_trace_count": 9,
+  "completed_at": "2026-10-05T09:58:05.537011+00:00",
+  "baseline_modified": false
+}

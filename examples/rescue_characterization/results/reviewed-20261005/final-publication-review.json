@@ -1,0 +1,26 @@
+{
+  "status": "approved_for_publication",
+  "manifest_sha256": "8668277a3777779622133892484f2988abe0a0f68dfa6591f14186311e884ec0",
+  "manifest_reports": 157,
+  "report_source_and_copy_hashes_checked": 157,
+  "staged_report_hashes_checked": 157,
+  "staged_total": 159,
+  "missing_manifest_files": [],
+  "hash_mismatches": [],
+  "unexpected_staged_paths": [],
+  "selected_media_hashes_checked": 24,
+  "no_pinned_source_or_media_changes": true,
+  "approval": "Independent final reviewer approves the fixed 157-report/24-media manifest and staged package. W&B publication, additive publication receipt and this approval record, then commit/push may proceed. No evidence content edits approved or required.",
+  "reviewed_at_utc": "2026-10-05T10:23:06.715558+00:00",
+  "branch": "codex/pi05-rescue-characterization",
+  "report_sha256": "fdfff35c2d03071c4341172321eb8f7fd5d21609c8b2ed799ec4a2c23aaa69e7",
+  "manifest_validation": "passed",
+  "historical_adapter_review": "Reviewed actual 107-line staged adapter; exact source and media checks, all exact clips retained, non-equivalent excluded, partial groups restricted to standalone attribution.",
+  "whitespace_check": {
+    "exit_code": 2,
+    "preserved_evidence_warning_locations": 399,
+    "unexpected_error_locations": [],
+    "judgment": "Existing EOF blank lines and CSV CRLF/recorded whitespace are cosmetic; preserve hash-bound evidence byte-for-byte."
+  },
+  "review_scope": "Report claims/tables, final v3 joins/classes/coverage/revision, original and replay links, warning provenance, manifest contents, copied bytes and actual Git index. No simulations or publication performed by reviewer."
+}

@@ -1,0 +1,1223 @@
+{
+  "status": "complete",
+  "baseline_clips": 388,
+  "planned_overlap": 96,
+  "completed_overlap": 96,
+  "missing_overlap": [],
+  "low_or_unclear_clips": 45,
+  "low_or_unclear_cross_reviewed": 45,
+  "selected_family_clusters": 56,
+  "cross_reviewed_family_clusters": 56,
+  "agreement": {
+    "observed_outcome": {
+      "reviewed": 96,
+      "agreed": 62,
+      "raw_agreement": 0.6458333333333334,
+      "confusion": {
+        "completed -> completed": 25,
+        "not completed -> not completed": 23,
+        "completed -> unclear": 3,
+        "not completed -> completed": 2,
+        "unclear -> completed": 8,
+        "unclear -> not completed": 19,
+        "completed -> not completed": 2,
+        "unclear -> unclear": 14
+      }
+    },
+    "primary_stage": {
+      "reviewed": 96,
+      "agreed": 67,
+      "raw_agreement": 0.6979166666666666,
+      "confusion": {
+        "completed -> completed": 25,
+        "approach -> approach": 4,
+        "completed -> unclear": 2,
+        "placement -> completed": 7,
+        "unclear -> completed": 1,
+        "unclear -> placement": 7,
+        "grasp -> grasp": 7,
+        "completed -> placement": 3,
+        "placement -> placement": 17,
+        "unclear -> manipulation": 2,
+        "placement -> unclear": 3,
+        "grasp -> completed": 1,
+        "unclear -> unclear": 5,
+        "grasp -> unclear": 1,
+        "manipulation -> manipulation": 9,
+        "approach -> completed": 1,
+        "approach -> grasp": 1
+      }
+    },
+    "confidence": {
+      "reviewed": 96,
+      "agreed": 46,
+      "raw_agreement": 0.4791666666666667,
+      "confusion": {
+        "medium -> medium": 21,
+        "high -> high": 7,
+        "medium -> low": 4,
+        "medium -> high": 9,
+        "low -> high": 4,
+        "high -> medium": 11,
+        "low -> medium": 22,
+        "low -> low": 18
+      }
+    }
+  },
+  "adjudications": 4,
+  "historical_full_cases": 42,
+  "historical_partial_cases": 4,
+  "historical_excluded_arms": 432,
+  "interpretation": "Outcome-stratified qualitative review; no population rates or unobserved stage inference",
+  "baseline_labels_preserved": true,
+  "distributions": {
+    "benchmark": {
+      "historical/libero": {
+        "clips": 17,
+        "stage:placement": 5,
+        "confidence:low": 3,
+        "stage:completed": 10,
+        "confidence:medium": 7,
+        "stage:grasp": 2,
+        "confidence:high": 7
+      },
+      "historical/libero_plus": {
+        "clips": 99,
+        "stage:completed": 46,
+        "confidence:high": 37,
+        "stage:manipulation": 7,
+        "confidence:medium": 59,
+        "stage:grasp": 26,
+        "stage:approach": 12,
+        "stage:placement": 8,
+        "confidence:low": 3
+      },
+      "new/libero": {
+        "clips": 128,
+        "stage:completed": 76,
+        "confidence:medium": 74,
+        "stage:approach": 4,
+        "confidence:high": 42,
+        "stage:grasp": 21,
+        "stage:placement": 15,
+        "stage:unclear": 9,
+        "confidence:low": 12,
+        "stage:manipulation": 3
+      },
+      "new/libero_plus": {
+        "clips": 144,
+        "stage:placement": 18,
+        "confidence:low": 26,
+        "stage:manipulation": 9,
+        "stage:completed": 62,
+        "confidence:high": 30,
+        "confidence:medium": 88,
+        "stage:approach": 18,
+        "stage:grasp": 31,
+        "stage:unclear": 6
+      }
+    },
+    "selection_class": {
+      "historical/failed_at_1_and_10_intermediates_unmeasured": {
+        "clips": 16,
+        "stage:manipulation": 5,
+        "confidence:medium": 14,
+        "stage:completed": 2,
+        "stage:grasp": 7,
+        "stage:placement": 2,
+        "confidence:high": 2
+      },
+      "historical/never_rescued": {
+        "clips": 12,
+        "stage:approach": 12,
+        "confidence:medium": 8,
+        "confidence:high": 4
+      },
+      "historical/regression": {
+        "clips": 47,
+        "stage:completed": 35,
+        "confidence:high": 21,
+        "stage:grasp": 6,
+        "confidence:medium": 24,
+        "stage:placement": 4,
+        "stage:manipulation": 2,
+        "confidence:low": 2
+      },
+      "historical/rescue": {
+        "clips": 41,
+        "stage:completed": 19,
+        "confidence:high": 17,
+        "stage:placement": 7,
+        "confidence:low": 4,
+        "stage:grasp": 15,
+        "confidence:medium": 20
+      },
+      "new/never_rescued": {
+        "clips": 80,
+        "stage:approach": 20,
+        "confidence:high": 8,
+        "stage:manipulation": 6,
+        "confidence:low": 15,
+        "stage:placement": 10,
+        "confidence:medium": 57,
+        "stage:grasp": 33,
+        "stage:unclear": 7,
+        "stage:completed": 4
+      },
+      "new/regression": {
+        "clips": 96,
+        "stage:completed": 72,
+        "confidence:medium": 59,
+        "stage:placement": 11,
+        "confidence:low": 8,
+        "confidence:high": 29,
+        "stage:grasp": 7,
+        "stage:manipulation": 2,
+        "stage:unclear": 4
+      },
+      "new/rescue": {
+        "clips": 96,
+        "stage:completed": 62,
+        "confidence:medium": 46,
+        "stage:grasp": 12,
+        "confidence:high": 35,
+        "stage:unclear": 4,
+        "confidence:low": 15,
+        "stage:manipulation": 4,
+        "stage:placement": 12,
+        "stage:approach": 2
+      }
+    },
+    "family": {
+      "historical/KITCHEN_SCENE3_turn_on_the_stove_and_put_the_moka_pot_on_it": {
+        "clips": 10,
+        "stage:completed": 5,
+        "confidence:high": 4,
+        "stage:grasp": 5,
+        "confidence:medium": 6
+      },
+      "historical/KITCHEN_SCENE4_put_the_black_bowl_in_the_bottom_drawer_of_the_cabinet_and_close_it": {
+        "clips": 4,
+        "stage:completed": 2,
+        "confidence:high": 3,
+        "stage:manipulation": 2,
+        "confidence:medium": 1
+      },
+      "historical/KITCHEN_SCENE6_put_the_yellow_and_white_mug_in_the_microwave_and_close_it": {
+        "clips": 2,
+        "stage:placement": 1,
+        "confidence:medium": 2,
+        "stage:completed": 1
+      },
+      "historical/KITCHEN_SCENE8_put_both_moka_pots_on_the_stove": {
+        "clips": 20,
+        "stage:completed": 7,
+        "confidence:high": 3,
+        "stage:manipulation": 5,
+        "confidence:medium": 15,
+        "stage:placement": 4,
+        "confidence:low": 2,
+        "stage:grasp": 4
+      },
+      "historical/LIVING_ROOM_SCENE2_put_both_the_alphabet_soup_and_the_tomato_sauce_in_the_basket": {
+        "clips": 12,
+        "stage:approach": 4,
+        "confidence:medium": 7,
+        "stage:completed": 5,
+        "confidence:high": 5,
+        "stage:grasp": 2,
+        "stage:placement": 1
+      },
+      "historical/LIVING_ROOM_SCENE6_put_the_white_mug_on_the_plate_and_put_the_chocolate_pudding_to_the_right_of_the_plate": {
+        "clips": 2,
+        "stage:grasp": 2,
+        "confidence:medium": 2
+      },
+      "historical/STUDY_SCENE1_pick_up_the_book_and_place_it_in_the_back_compartment_of_the_caddy": {
+        "clips": 4,
+        "stage:placement": 1,
+        "confidence:low": 1,
+        "stage:completed": 3,
+        "confidence:medium": 3
+      },
+      "historical/open_the_middle_drawer_of_the_cabinet": {
+        "clips": 4,
+        "stage:approach": 4,
+        "confidence:medium": 4
+      },
+      "historical/open_the_top_drawer_and_put_the_bowl_inside": {
+        "clips": 2,
+        "stage:placement": 2,
+        "confidence:high": 2
+      },
+      "historical/pick_up_the_alphabet_soup_and_place_it_in_the_basket": {
+        "clips": 5,
+        "stage:completed": 5,
+        "confidence:high": 3,
+        "confidence:medium": 2
+      },
+      "historical/pick_up_the_bbq_sauce_and_place_it_in_the_basket": {
+        "clips": 12,
+        "stage:completed": 7,
+        "confidence:high": 10,
+        "stage:grasp": 4,
+        "confidence:medium": 2,
+        "stage:placement": 1
+      },
+      "historical/pick_up_the_black_bowl_between_the_plate_and_the_ramekin_and_place_it_on_the_plate": {
+        "clips": 5,
+        "stage:completed": 5,
+        "confidence:medium": 5
+      },
+      "historical/pick_up_the_black_bowl_in_the_top_drawer_of_the_wooden_cabinet_and_place_it_on_the_plate": {
+        "clips": 4,
+        "stage:completed": 1,
+        "confidence:medium": 3,
+        "stage:grasp": 3,
+        "confidence:high": 1
+      },
+      "historical/pick_up_the_black_bowl_next_to_the_ramekin_and_place_it_on_the_plate": {
+        "clips": 2,
+        "stage:completed": 1,
+        "confidence:medium": 1,
+        "stage:placement": 1,
+        "confidence:low": 1
+      },
+      "historical/pick_up_the_black_bowl_on_the_cookie_box_and_place_it_on_the_plate": {
+        "clips": 5,
+        "stage:completed": 3,
+        "confidence:medium": 4,
+        "stage:placement": 1,
+        "confidence:low": 1,
+        "stage:grasp": 1
+      },
+      "historical/pick_up_the_cream_cheese_and_place_it_in_the_basket": {
+        "clips": 12,
+        "stage:approach": 4,
+        "confidence:high": 7,
+        "stage:grasp": 4,
+        "confidence:medium": 4,
+        "stage:completed": 3,
+        "stage:placement": 1,
+        "confidence:low": 1
+      },
+      "historical/push_the_plate_to_the_front_of_the_stove": {
+        "clips": 4,
+        "stage:completed": 4,
+        "confidence:medium": 4
+      },
+      "historical/put_the_bowl_on_the_stove": {
+        "clips": 3,
+        "stage:completed": 2,
+        "confidence:high": 2,
+        "confidence:medium": 1,
+        "stage:grasp": 1
+      },
+      "historical/put_the_wine_bottle_on_the_rack": {
+        "clips": 4,
+        "stage:grasp": 2,
+        "confidence:high": 4,
+        "stage:completed": 2
+      },
+      "new/KITCHEN_SCENE8_put_both_moka_pots_on_the_stove": {
+        "clips": 12,
+        "stage:grasp": 5,
+        "confidence:medium": 12,
+        "stage:completed": 4,
+        "stage:placement": 1,
+        "stage:manipulation": 2
+      },
+      "new/LIVING_ROOM_SCENE1_put_both_the_alphabet_soup_and_the_cream_cheese_box_in_the_basket": {
+        "clips": 4,
+        "stage:completed": 3,
+        "confidence:high": 4,
+        "stage:grasp": 1
+      },
+      "new/LIVING_ROOM_SCENE2_put_both_the_alphabet_soup_and_the_tomato_sauce_in_the_basket": {
+        "clips": 20,
+        "stage:completed": 11,
+        "confidence:medium": 17,
+        "stage:grasp": 7,
+        "confidence:high": 2,
+        "stage:placement": 2,
+        "confidence:low": 1
+      },
+      "new/LIVING_ROOM_SCENE2_put_both_the_cream_cheese_box_and_the_butter_in_the_basket": {
+        "clips": 28,
+        "stage:grasp": 16,
+        "confidence:high": 6,
+        "stage:completed": 7,
+        "confidence:medium": 21,
+        "stage:approach": 4,
+        "stage:placement": 1,
+        "confidence:low": 1
+      },
+      "new/LIVING_ROOM_SCENE5_put_the_white_mug_on_the_left_plate_and_put_the_yellow_and_white_mug_on_the_right_plate": {
+        "clips": 8,
+        "stage:completed": 5,
+        "confidence:medium": 5,
+        "stage:placement": 1,
+        "confidence:high": 1,
+        "stage:unclear": 2,
+        "confidence:low": 2
+      },
+      "new/LIVING_ROOM_SCENE6_put_the_white_mug_on_the_plate_and_put_the_chocolate_pudding_to_the_right_of_the_plate": {
+        "clips": 20,
+        "stage:completed": 11,
+        "confidence:medium": 16,
+        "stage:placement": 2,
+        "stage:unclear": 4,
+        "confidence:low": 4,
+        "stage:grasp": 3
+      },
+      "new/STUDY_SCENE1_pick_up_the_book_and_place_it_in_the_back_compartment_of_the_caddy": {
+        "clips": 8,
+        "stage:approach": 4,
+        "confidence:high": 4,
+        "stage:unclear": 4,
+        "confidence:low": 4
+      },
+      "new/open_the_middle_drawer_of_the_cabinet": {
+        "clips": 12,
+        "stage:completed": 7,
+        "confidence:medium": 6,
+        "confidence:high": 3,
+        "stage:unclear": 3,
+        "confidence:low": 3,
+        "stage:grasp": 2
+      },
+      "new/open_the_top_drawer_and_put_the_bowl_inside": {
+        "clips": 24,
+        "stage:completed": 7,
+        "confidence:high": 6,
+        "stage:approach": 4,
+        "confidence:medium": 11,
+        "stage:placement": 7,
+        "confidence:low": 7,
+        "stage:grasp": 6
+      },
+      "new/pick_up_the_black_bowl_from_table_center_and_place_it_on_the_plate": {
+        "clips": 8,
+        "stage:completed": 6,
+        "confidence:medium": 7,
+        "stage:unclear": 1,
+        "confidence:low": 1,
+        "stage:placement": 1
+      },
+      "new/pick_up_the_black_bowl_on_the_cookie_box_and_place_it_on_the_plate": {
+        "clips": 12,
+        "stage:placement": 2,
+        "confidence:low": 1,
+        "stage:completed": 10,
+        "confidence:high": 4,
+        "confidence:medium": 7
+      },
+      "new/pick_up_the_black_bowl_on_the_ramekin_and_place_it_on_the_plate": {
+        "clips": 12,
+        "stage:placement": 1,
+        "confidence:low": 2,
+        "stage:completed": 10,
+        "confidence:medium": 8,
+        "stage:unclear": 1,
+        "confidence:high": 2
+      },
+      "new/pick_up_the_black_bowl_on_the_stove_and_place_it_on_the_plate": {
+        "clips": 12,
+        "stage:completed": 7,
+        "confidence:medium": 7,
+        "stage:placement": 5,
+        "confidence:low": 4,
+        "confidence:high": 1
+      },
+      "new/pick_up_the_black_bowl_on_the_wooden_cabinet_and_place_it_on_the_plate": {
+        "clips": 4,
+        "stage:completed": 4,
+        "confidence:medium": 4
+      },
+      "new/pick_up_the_butter_and_place_it_in_the_basket": {
+        "clips": 8,
+        "stage:completed": 6,
+        "confidence:high": 7,
+        "stage:placement": 2,
+        "confidence:medium": 1
+      },
+      "new/pick_up_the_chocolate_pudding_and_place_it_in_the_basket": {
+        "clips": 4,
+        "stage:completed": 3,
+        "confidence:high": 4,
+        "stage:placement": 1
+      },
+      "new/pick_up_the_cream_cheese_and_place_it_in_the_basket": {
+        "clips": 24,
+        "stage:completed": 9,
+        "confidence:high": 13,
+        "stage:grasp": 5,
+        "confidence:medium": 11,
+        "stage:approach": 9,
+        "stage:placement": 1
+      },
+      "new/pick_up_the_orange_juice_and_place_it_in_the_basket": {
+        "clips": 4,
+        "stage:placement": 4,
+        "confidence:medium": 4
+      },
+      "new/pick_up_the_tomato_sauce_and_place_it_in_the_basket": {
+        "clips": 4,
+        "stage:grasp": 1,
+        "confidence:medium": 1,
+        "stage:completed": 3,
+        "confidence:high": 3
+      },
+      "new/push_the_plate_to_the_front_of_the_stove": {
+        "clips": 16,
+        "stage:manipulation": 10,
+        "confidence:low": 8,
+        "stage:completed": 6,
+        "confidence:medium": 8
+      },
+      "new/put_the_bowl_on_the_stove": {
+        "clips": 12,
+        "stage:completed": 5,
+        "confidence:medium": 7,
+        "stage:grasp": 4,
+        "confidence:high": 5,
+        "stage:placement": 2,
+        "stage:approach": 1
+      },
+      "new/put_the_cream_cheese_in_the_bowl": {
+        "clips": 4,
+        "stage:completed": 4,
+        "confidence:medium": 4
+      },
+      "new/put_the_wine_bottle_on_the_rack": {
+        "clips": 8,
+        "stage:completed": 8,
+        "confidence:medium": 5,
+        "confidence:high": 3
+      },
+      "new/put_the_wine_bottle_on_top_of_the_cabinet": {
+        "clips": 4,
+        "stage:grasp": 2,
+        "confidence:high": 4,
+        "stage:completed": 2
+      }
+    },
+    "condition_id": {
+      "historical/libero:libero_10:5": {
+        "clips": 4,
+        "stage:placement": 1,
+        "confidence:low": 1,
+        "stage:completed": 3,
+        "confidence:medium": 3
+      },
+      "historical/libero:libero_10:8": {
+        "clips": 8,
+        "stage:placement": 4,
+        "confidence:low": 2,
+        "stage:completed": 4,
+        "confidence:medium": 4,
+        "confidence:high": 2
+      },
+      "historical/libero:libero_goal:9": {
+        "clips": 4,
+        "stage:grasp": 2,
+        "confidence:high": 4,
+        "stage:completed": 2
+      },
+      "historical/libero:libero_object:0": {
+        "clips": 1,
+        "stage:completed": 1,
+        "confidence:high": 1
+      },
+      "historical/libero_plus:libero_10:1940": {
+        "clips": 4,
+        "stage:completed": 1,
+        "confidence:high": 1,
+        "stage:grasp": 3,
+        "confidence:medium": 3
+      },
+      "historical/libero_plus:libero_10:1957": {
+        "clips": 4,
+        "stage:completed": 3,
+        "confidence:medium": 3,
+        "stage:grasp": 1,
+        "confidence:high": 1
+      },
+      "historical/libero_plus:libero_10:1963": {
+        "clips": 2,
+        "stage:completed": 1,
+        "confidence:high": 1,
+        "stage:manipulation": 1,
+        "confidence:medium": 1
+      },
+      "historical/libero_plus:libero_10:1985": {
+        "clips": 2,
+        "stage:placement": 1,
+        "confidence:medium": 2,
+        "stage:completed": 1
+      },
+      "historical/libero_plus:libero_10:2024": {
+        "clips": 2,
+        "stage:completed": 2,
+        "confidence:high": 1,
+        "confidence:medium": 1
+      },
+      "historical/libero_plus:libero_10:2039": {
+        "clips": 10,
+        "stage:manipulation": 5,
+        "confidence:medium": 10,
+        "stage:grasp": 4,
+        "stage:completed": 1
+      },
+      "historical/libero_plus:libero_10:299": {
+        "clips": 8,
+        "stage:approach": 4,
+        "confidence:medium": 6,
+        "stage:completed": 2,
+        "confidence:high": 2,
+        "stage:placement": 1,
+        "stage:grasp": 1
+      },
+      "historical/libero_plus:libero_10:365": {
+        "clips": 2,
+        "stage:completed": 1,
+        "confidence:high": 2,
+        "stage:grasp": 1
+      },
+      "historical/libero_plus:libero_10:685": {
+        "clips": 4,
+        "stage:completed": 3,
+        "confidence:high": 3,
+        "stage:grasp": 1,
+        "confidence:medium": 1
+      },
+      "historical/libero_plus:libero_10:787": {
+        "clips": 2,
+        "stage:completed": 1,
+        "confidence:high": 2,
+        "stage:manipulation": 1
+      },
+      "historical/libero_plus:libero_10:936": {
+        "clips": 2,
+        "stage:grasp": 2,
+        "confidence:medium": 2
+      },
+      "historical/libero_plus:libero_goal:1976": {
+        "clips": 4,
+        "stage:completed": 4,
+        "confidence:medium": 4
+      },
+      "historical/libero_plus:libero_goal:284": {
+        "clips": 4,
+        "stage:approach": 4,
+        "confidence:medium": 4
+      },
+      "historical/libero_plus:libero_goal:720": {
+        "clips": 2,
+        "stage:completed": 1,
+        "confidence:medium": 1,
+        "stage:grasp": 1,
+        "confidence:high": 1
+      },
+      "historical/libero_plus:libero_goal:727": {
+        "clips": 1,
+        "stage:completed": 1,
+        "confidence:high": 1
+      },
+      "historical/libero_plus:libero_goal:783": {
+        "clips": 2,
+        "stage:placement": 2,
+        "confidence:high": 2
+      },
+      "historical/libero_plus:libero_object:1860": {
+        "clips": 2,
+        "stage:grasp": 1,
+        "confidence:high": 2,
+        "stage:completed": 1
+      },
+      "historical/libero_plus:libero_object:1869": {
+        "clips": 2,
+        "stage:completed": 1,
+        "confidence:high": 2,
+        "stage:grasp": 1
+      },
+      "historical/libero_plus:libero_object:290": {
+        "clips": 4,
+        "stage:completed": 1,
+        "confidence:high": 1,
+        "stage:grasp": 2,
+        "confidence:medium": 2,
+        "stage:placement": 1,
+        "confidence:low": 1
+      },
+      "historical/libero_plus:libero_object:292": {
+        "clips": 4,
+        "stage:approach": 4,
+        "confidence:high": 4
+      },
+      "historical/libero_plus:libero_object:296": {
+        "clips": 4,
+        "stage:grasp": 2,
+        "confidence:medium": 2,
+        "stage:completed": 2,
+        "confidence:high": 2
+      },
+      "historical/libero_plus:libero_object:369": {
+        "clips": 2,
+        "stage:completed": 1,
+        "confidence:high": 2,
+        "stage:grasp": 1
+      },
+      "historical/libero_plus:libero_object:657": {
+        "clips": 4,
+        "stage:completed": 4,
+        "confidence:high": 2,
+        "confidence:medium": 2
+      },
+      "historical/libero_plus:libero_object:734": {
+        "clips": 4,
+        "stage:completed": 3,
+        "confidence:medium": 2,
+        "stage:placement": 1,
+        "confidence:high": 2
+      },
+      "historical/libero_plus:libero_object:735": {
+        "clips": 2,
+        "stage:grasp": 1,
+        "confidence:high": 2,
+        "stage:completed": 1
+      },
+      "historical/libero_plus:libero_spatial:1767": {
+        "clips": 1,
+        "stage:completed": 1,
+        "confidence:medium": 1
+      },
+      "historical/libero_plus:libero_spatial:611": {
+        "clips": 4,
+        "stage:completed": 4,
+        "confidence:medium": 4
+      },
+      "historical/libero_plus:libero_spatial:615": {
+        "clips": 2,
+        "stage:completed": 1,
+        "confidence:medium": 1,
+        "stage:placement": 1,
+        "confidence:low": 1
+      },
+      "historical/libero_plus:libero_spatial:733": {
+        "clips": 5,
+        "stage:completed": 3,
+        "confidence:medium": 4,
+        "stage:placement": 1,
+        "confidence:low": 1,
+        "stage:grasp": 1
+      },
+      "historical/libero_plus:libero_spatial:737": {
+        "clips": 4,
+        "stage:completed": 1,
+        "confidence:medium": 3,
+        "stage:grasp": 3,
+        "confidence:high": 1
+      },
+      "new/libero:libero_10:0": {
+        "clips": 12,
+        "stage:completed": 6,
+        "confidence:medium": 10,
+        "stage:grasp": 4,
+        "stage:placement": 2,
+        "confidence:high": 1,
+        "confidence:low": 1
+      },
+      "new/libero:libero_10:1": {
+        "clips": 4,
+        "stage:grasp": 1,
+        "confidence:high": 1,
+        "stage:completed": 2,
+        "confidence:medium": 2,
+        "stage:placement": 1,
+        "confidence:low": 1
+      },
+      "new/libero:libero_10:4": {
+        "clips": 8,
+        "stage:completed": 5,
+        "confidence:medium": 5,
+        "stage:placement": 1,
+        "confidence:high": 1,
+        "stage:unclear": 2,
+        "confidence:low": 2
+      },
+      "new/libero:libero_10:5": {
+        "clips": 8,
+        "stage:approach": 4,
+        "confidence:high": 4,
+        "stage:unclear": 4,
+        "confidence:low": 4
+      },
+      "new/libero:libero_10:6": {
+        "clips": 12,
+        "stage:completed": 5,
+        "confidence:medium": 9,
+        "stage:placement": 1,
+        "stage:unclear": 3,
+        "confidence:low": 3,
+        "stage:grasp": 3
+      },
+      "new/libero:libero_10:7": {
+        "clips": 4,
+        "stage:completed": 3,
+        "confidence:high": 4,
+        "stage:grasp": 1
+      },
+      "new/libero:libero_10:8": {
+        "clips": 12,
+        "stage:grasp": 5,
+        "confidence:medium": 12,
+        "stage:completed": 4,
+        "stage:placement": 1,
+        "stage:manipulation": 2
+      },
+      "new/libero:libero_goal:0": {
+        "clips": 4,
+        "stage:completed": 4,
+        "confidence:medium": 4
+      },
+      "new/libero:libero_goal:1": {
+        "clips": 4,
+        "stage:grasp": 3,
+        "confidence:high": 4,
+        "stage:completed": 1
+      },
+      "new/libero:libero_goal:2": {
+        "clips": 4,
+        "stage:grasp": 2,
+        "confidence:high": 4,
+        "stage:completed": 2
+      },
+      "new/libero:libero_goal:3": {
+        "clips": 4,
+        "stage:grasp": 1,
+        "confidence:medium": 1,
+        "stage:completed": 3,
+        "confidence:high": 3
+      },
+      "new/libero:libero_goal:5": {
+        "clips": 4,
+        "stage:completed": 3,
+        "confidence:medium": 4,
+        "stage:manipulation": 1
+      },
+      "new/libero:libero_goal:6": {
+        "clips": 4,
+        "stage:completed": 4,
+        "confidence:medium": 4
+      },
+      "new/libero:libero_goal:9": {
+        "clips": 8,
+        "stage:completed": 8,
+        "confidence:medium": 5,
+        "confidence:high": 3
+      },
+      "new/libero:libero_object:1": {
+        "clips": 4,
+        "stage:completed": 3,
+        "confidence:high": 3,
+        "confidence:medium": 1,
+        "stage:placement": 1
+      },
+      "new/libero:libero_object:5": {
+        "clips": 4,
+        "stage:grasp": 1,
+        "confidence:medium": 1,
+        "stage:completed": 3,
+        "confidence:high": 3
+      },
+      "new/libero:libero_object:8": {
+        "clips": 4,
+        "stage:completed": 3,
+        "confidence:high": 4,
+        "stage:placement": 1
+      },
+      "new/libero:libero_object:9": {
+        "clips": 4,
+        "stage:placement": 4,
+        "confidence:medium": 4
+      },
+      "new/libero:libero_spatial:3": {
+        "clips": 4,
+        "stage:completed": 3,
+        "confidence:high": 4,
+        "stage:placement": 1
+      },
+      "new/libero:libero_spatial:5": {
+        "clips": 8,
+        "stage:placement": 1,
+        "confidence:low": 1,
+        "stage:completed": 7,
+        "confidence:medium": 5,
+        "confidence:high": 2
+      },
+      "new/libero:libero_spatial:7": {
+        "clips": 4,
+        "stage:completed": 3,
+        "confidence:medium": 3,
+        "stage:placement": 1,
+        "confidence:high": 1
+      },
+      "new/libero:libero_spatial:9": {
+        "clips": 4,
+        "stage:completed": 4,
+        "confidence:medium": 4
+      },
+      "new/libero_plus:libero_10:1150": {
+        "clips": 4,
+        "stage:completed": 3,
+        "confidence:high": 3,
+        "stage:grasp": 1,
+        "confidence:medium": 1
+      },
+      "new/libero_plus:libero_10:2195": {
+        "clips": 8,
+        "stage:placement": 1,
+        "confidence:medium": 7,
+        "stage:unclear": 1,
+        "confidence:low": 1,
+        "stage:completed": 6
+      },
+      "new/libero_plus:libero_10:340": {
+        "clips": 4,
+        "stage:approach": 4,
+        "confidence:medium": 4
+      },
+      "new/libero_plus:libero_10:345": {
+        "clips": 16,
+        "stage:completed": 2,
+        "confidence:high": 2,
+        "stage:grasp": 14,
+        "confidence:medium": 14
+      },
+      "new/libero_plus:libero_10:683": {
+        "clips": 4,
+        "stage:grasp": 2,
+        "confidence:medium": 4,
+        "stage:completed": 2
+      },
+      "new/libero_plus:libero_10:691": {
+        "clips": 4,
+        "stage:grasp": 1,
+        "confidence:high": 1,
+        "stage:completed": 3,
+        "confidence:medium": 3
+      },
+      "new/libero_plus:libero_goal:1146": {
+        "clips": 4,
+        "stage:placement": 1,
+        "confidence:medium": 3,
+        "stage:grasp": 1,
+        "stage:approach": 1,
+        "stage:completed": 1,
+        "confidence:high": 1
+      },
+      "new/libero_plus:libero_goal:1558": {
+        "clips": 4,
+        "stage:completed": 3,
+        "confidence:medium": 4,
+        "stage:placement": 1
+      },
+      "new/libero_plus:libero_goal:2419": {
+        "clips": 8,
+        "stage:completed": 3,
+        "confidence:medium": 4,
+        "stage:manipulation": 5,
+        "confidence:low": 4
+      },
+      "new/libero_plus:libero_goal:286": {
+        "clips": 8,
+        "stage:completed": 3,
+        "confidence:high": 3,
+        "stage:unclear": 3,
+        "confidence:low": 3,
+        "stage:grasp": 2,
+        "confidence:medium": 2
+      },
+      "new/libero_plus:libero_goal:35": {
+        "clips": 12,
+        "stage:completed": 3,
+        "confidence:high": 3,
+        "stage:approach": 4,
+        "confidence:medium": 7,
+        "stage:placement": 2,
+        "confidence:low": 2,
+        "stage:grasp": 3
+      },
+      "new/libero_plus:libero_goal:75": {
+        "clips": 4,
+        "stage:manipulation": 4,
+        "confidence:low": 4
+      },
+      "new/libero_plus:libero_goal:785": {
+        "clips": 8,
+        "stage:placement": 5,
+        "confidence:low": 5,
+        "stage:completed": 1,
+        "confidence:medium": 3,
+        "stage:grasp": 2
+      },
+      "new/libero_plus:libero_object:1068": {
+        "clips": 20,
+        "stage:completed": 6,
+        "confidence:high": 10,
+        "stage:grasp": 5,
+        "confidence:medium": 10,
+        "stage:approach": 9
+      },
+      "new/libero_plus:libero_object:79": {
+        "clips": 4,
+        "stage:completed": 3,
+        "confidence:high": 3,
+        "stage:placement": 1,
+        "confidence:medium": 1
+      },
+      "new/libero_plus:libero_object:81": {
+        "clips": 4,
+        "stage:completed": 3,
+        "confidence:high": 4,
+        "stage:placement": 1
+      },
+      "new/libero_plus:libero_spatial:1461": {
+        "clips": 8,
+        "stage:completed": 6,
+        "confidence:medium": 7,
+        "stage:unclear": 1,
+        "confidence:low": 1,
+        "stage:placement": 1
+      },
+      "new/libero_plus:libero_spatial:734": {
+        "clips": 8,
+        "stage:placement": 1,
+        "confidence:low": 1,
+        "stage:completed": 7,
+        "confidence:medium": 7
+      },
+      "new/libero_plus:libero_spatial:791": {
+        "clips": 4,
+        "stage:completed": 3,
+        "confidence:medium": 3,
+        "stage:unclear": 1,
+        "confidence:low": 1
+      },
+      "new/libero_plus:libero_spatial:873": {
+        "clips": 8,
+        "stage:placement": 4,
+        "confidence:low": 4,
+        "stage:completed": 4,
+        "confidence:medium": 4
+      }
+    },
+    "category": {
+      "historical/Camera Viewpoints": {
+        "clips": 38,
+        "stage:completed": 23,
+        "confidence:medium": 20,
+        "confidence:high": 16,
+        "stage:placement": 5,
+        "stage:grasp": 9,
+        "stage:manipulation": 1,
+        "confidence:low": 2
+      },
+      "historical/Objects Layout": {
+        "clips": 33,
+        "stage:completed": 16,
+        "confidence:high": 8,
+        "stage:manipulation": 6,
+        "confidence:medium": 25,
+        "stage:grasp": 10,
+        "stage:placement": 1
+      },
+      "historical/Robot Initial States": {
+        "clips": 28,
+        "stage:approach": 12,
+        "confidence:medium": 14,
+        "confidence:high": 13,
+        "stage:completed": 7,
+        "stage:grasp": 7,
+        "stage:placement": 2,
+        "confidence:low": 1
+      },
+      "historical/standard": {
+        "clips": 17,
+        "stage:placement": 5,
+        "confidence:low": 3,
+        "stage:completed": 10,
+        "confidence:medium": 7,
+        "stage:grasp": 2,
+        "confidence:high": 7
+      },
+      "new/Background Textures": {
+        "clips": 24,
+        "stage:manipulation": 4,
+        "confidence:low": 6,
+        "stage:completed": 9,
+        "confidence:high": 10,
+        "stage:approach": 4,
+        "confidence:medium": 8,
+        "stage:placement": 4,
+        "stage:grasp": 3
+      },
+      "new/Camera Viewpoints": {
+        "clips": 36,
+        "stage:placement": 10,
+        "confidence:low": 11,
+        "stage:grasp": 5,
+        "confidence:medium": 24,
+        "stage:completed": 20,
+        "confidence:high": 1,
+        "stage:unclear": 1
+      },
+      "new/Language Instructions": {
+        "clips": 28,
+        "stage:completed": 10,
+        "confidence:high": 14,
+        "stage:grasp": 7,
+        "confidence:medium": 14,
+        "stage:placement": 1,
+        "stage:approach": 10
+      },
+      "new/Light Conditions": {
+        "clips": 8,
+        "stage:completed": 3,
+        "confidence:medium": 4,
+        "stage:manipulation": 5,
+        "confidence:low": 4
+      },
+      "new/Objects Layout": {
+        "clips": 8,
+        "stage:placement": 1,
+        "confidence:medium": 7,
+        "stage:unclear": 1,
+        "confidence:low": 1,
+        "stage:completed": 6
+      },
+      "new/Robot Initial States": {
+        "clips": 28,
+        "stage:completed": 5,
+        "confidence:high": 5,
+        "stage:unclear": 3,
+        "confidence:low": 3,
+        "stage:grasp": 16,
+        "confidence:medium": 20,
+        "stage:approach": 4
+      },
+      "new/Sensor Noise": {
+        "clips": 12,
+        "stage:completed": 9,
+        "confidence:medium": 11,
+        "stage:placement": 2,
+        "stage:unclear": 1,
+        "confidence:low": 1
+      },
+      "new/standard": {
+        "clips": 128,
+        "stage:completed": 76,
+        "confidence:medium": 74,
+        "stage:approach": 4,
+        "confidence:high": 42,
+        "stage:grasp": 21,
+        "stage:placement": 15,
+        "stage:unclear": 9,
+        "confidence:low": 12,
+        "stage:manipulation": 3
+      }
+    },
+    "severity": {
+      "historical/0": {
+        "clips": 17,
+        "stage:placement": 5,
+        "confidence:low": 3,
+        "stage:completed": 10,
+        "confidence:medium": 7,
+        "stage:grasp": 2,
+        "confidence:high": 7
+      },
+      "historical/2": {
+        "clips": 43,
+        "stage:completed": 23,
+        "confidence:high": 14,
+        "stage:grasp": 12,
+        "confidence:medium": 27,
+        "stage:approach": 4,
+        "stage:placement": 3,
+        "stage:manipulation": 1,
+        "confidence:low": 2
+      },
+      "historical/3": {
+        "clips": 56,
+        "stage:completed": 23,
+        "confidence:high": 23,
+        "stage:manipulation": 6,
+        "confidence:medium": 32,
+        "stage:approach": 8,
+        "stage:grasp": 14,
+        "stage:placement": 5,
+        "confidence:low": 1
+      },
+      "new/0": {
+        "clips": 128,
+        "stage:completed": 76,
+        "confidence:medium": 74,
+        "stage:approach": 4,
+        "confidence:high": 42,
+        "stage:grasp": 21,
+        "stage:placement": 15,
+        "stage:unclear": 9,
+        "confidence:low": 12,
+        "stage:manipulation": 3
+      },
+      "new/3": {
+        "clips": 100,
+        "stage:placement": 10,
+        "confidence:low": 19,
+        "stage:manipulation": 9,
+        "stage:completed": 37,
+        "confidence:high": 26,
+        "confidence:medium": 55,
+        "stage:approach": 13,
+        "stage:grasp": 28,
+        "stage:unclear": 3
+      },
+      "new/4": {
+        "clips": 44,
+        "stage:completed": 25,
+        "confidence:medium": 33,
+        "stage:placement": 8,
+        "confidence:high": 4,
+        "stage:unclear": 3,
+        "confidence:low": 7,
+        "stage:grasp": 3,
+        "stage:approach": 5
+      }
+    }
+  },
+  "baseline_lock_sha256": "b7896f7ffbf3cf6bae18cd234c5f03197634632a852ea8b32c708e753fe52980",
+  "baseline_lock_path": "/volt/artifacts/rescue-characterization/review-control/baseline-lock.json",
+  "cross_plan_sha256": "988c7a385073b851b6411b64ad4a657051479c24af889e5598890c097dc060dc",
+  "overlap_source_files": [
+    {
+      "cohort": "new",
+      "reviewer": "historical",
+      "path": "/volt/artifacts/rescue-characterization/visual-review-new/blind/labels-overlap-historical.jsonl",
+      "sha256": "b9f1747b100e10ae91c2ccfec79d83f169619143324b99a65dc6a0f07ceb2639"
+    },
+    {
+      "cohort": "new",
+      "reviewer": "primary",
+      "path": "/volt/artifacts/rescue-characterization/visual-review-new/blind/labels-overlap-primary-effective.jsonl",
+      "sha256": "982fee2c47e5f772a430fa47842400dbe0287d4c27adbbfab0f6a72f4eded690"
+    },
+    {
+      "cohort": "historical",
+      "reviewer": "secondary",
+      "path": "/volt/artifacts/rescue-characterization/visual-review-historical/blind/labels-overlap-secondary.jsonl",
+      "sha256": "e6982b383bf6cc9fc48803a035bd655ebf595dd95b82a7a45ee2f57bcca26bed"
+    }
+  ]
+}

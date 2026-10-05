@@ -1,0 +1,25 @@
+{
+  "status": "preliminary_read_only_audit_passed_not_final_approval",
+  "checks": {
+    "groups_metadata_and_arm_uniqueness": "passed",
+    "planned_all_low_unclear_and_family_coverage": "passed",
+    "warning_log_and_raw_identity": "passed",
+    "exact_historical_42full_4partial_116arms": "passed",
+    "all_388_raw_and_116_replay_immutable_links_hash_checked": "passed"
+  },
+  "baseline": 388,
+  "low_unclear": 45,
+  "family_clusters": 56,
+  "planned_overlap": 96,
+  "new_groups": 68,
+  "historical_groups": 46,
+  "reviewed_tool_hashes": {
+    "review_evidence.py": "06f8fe1afa9d626f8b92550de18613bb554061d7c83c8a66fbf27ffdb40ad219",
+    "publish_review.py": "a04dddb3b6b37abf1bd6306876e2837cb1272ff6aadd22d8f1c9b7aefe4c551c",
+    "test_review_evidence.py": "a1ead0e418b66636c576f8751f591358282c173df295ea66474183f4bc4a35f3",
+    "characterize_labels.py": "bf009eed9c194f98f915dd0dc1f5ed63db59de53b130dda810380631d58df9ff",
+    "test_characterize_labels.py": "b58bc52a7b37b7eec254742e25226702e4947654651d661c7e8741880ecd353e",
+    "link_evidence.py": "ba78372210e49899b8fc6271d3504e2bb77fb69e80caf741642786a63c981470"
+  },
+  "report_draft_sha256": "3f7f6c7f08e376cf4412adf7625d9a7faa560d9d2f69cbfa08d38c59d18a27cc"
+}

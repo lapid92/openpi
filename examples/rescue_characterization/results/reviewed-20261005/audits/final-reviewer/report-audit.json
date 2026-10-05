@@ -1,0 +1,29 @@
+{
+  "status": "numerical_tables_and_immutable_targets_passed",
+  "report_sha256": "fdfff35c2d03071c4341172321eb8f7fd5d21609c8b2ed799ec4a2c23aaa69e7",
+  "table_rows_checked": 59,
+  "github_link_occurrences_resolved": 58,
+  "relative_targets_for_package_audit": [
+    "PUBLICATION.json",
+    "audits/counts/README.md",
+    "audits/counts/audit.json",
+    "audits/final-reviewer/",
+    "audits/replay/README.md",
+    "audits/review-recovery.json",
+    "coordinator/observations-supplement.json",
+    "coordinator/observations.json",
+    "publication-manifest.json",
+    "recovery/state.json",
+    "review-control/baseline-lock.json",
+    "review-control/final-blind-plan.json",
+    "review-control/finalize-commands-v3.sh",
+    "review/characterization.json",
+    "review/coverage-details.json",
+    "review/disagreement-register.json",
+    "review/evidence-links.json",
+    "review/label-table.json",
+    "review/labels.csv",
+    "review/review-summary.json",
+    "simulator-diagnostics/warning-audit.json"
+  ]
+}

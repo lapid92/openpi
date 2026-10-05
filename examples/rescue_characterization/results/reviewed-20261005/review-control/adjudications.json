@@ -1,0 +1,171 @@
+{
+  "new/C729bd63b0c1bcf796e29": {
+    "reviewer": "root coordinator (unblinded)",
+    "rationale": "The two ratings differ in whether being within the visible opening suffices to establish placement; the inspected frames do not resolve support/release. Baseline and independent labels are preserved. Numeric success is not changed.",
+    "label": {
+      "clip_id": "C729bd63b0c1bcf796e29",
+      "observed_outcome": "unclear",
+      "primary_stage": "unclear",
+      "confidence": "low",
+      "decisive_frame_action_indices": [
+        127,
+        204,
+        280
+      ],
+      "decisive_timestamps_seconds": [
+        6.35,
+        10.2,
+        14.0
+      ],
+      "literal_observation": "Carton is aligned with the basket opening and lower portion overlaps it, while hand remains immediately above/around carton. Bottom support and release are not resolved.",
+      "interpretation": "Conservative coordinator adjudication; visible evidence does not settle the conflicting completion judgments.",
+      "alternative_label": [
+        "completed",
+        "placement"
+      ],
+      "full_video_necessary": false,
+      "viewing_coverage": {
+        "contact_sheet_frames": [],
+        "additional_video_frames": [
+          127,
+          204,
+          280
+        ],
+        "camera_views": [
+          "external",
+          "wrist"
+        ],
+        "continuous_full_video": false,
+        "numeric_trace": false
+      },
+      "reviewed_at": "2026-10-05T10:02:00.553832+00:00"
+    }
+  },
+  "new/Ced0bb787841fb2124be7": {
+    "reviewer": "root coordinator (unblinded)",
+    "rationale": "Do not force completion from adjacency or failure from image-left without establishing task-relative coordinates. Baseline and independent labels are preserved. Numeric success is not changed.",
+    "label": {
+      "clip_id": "Ced0bb787841fb2124be7",
+      "observed_outcome": "unclear",
+      "primary_stage": "unclear",
+      "confidence": "low",
+      "decisive_frame_action_indices": [
+        212,
+        265,
+        291
+      ],
+      "decisive_timestamps_seconds": [
+        10.6,
+        13.25,
+        14.55
+      ],
+      "literal_observation": "Mug is upright on plate. Pudding is beside plate on image-left at endpoint; hand remains near it. Task-relative right/left convention is not resolved by these images alone.",
+      "interpretation": "Conservative coordinator adjudication; visible evidence does not settle the conflicting completion judgments.",
+      "alternative_label": [
+        "completed",
+        "placement"
+      ],
+      "full_video_necessary": false,
+      "viewing_coverage": {
+        "contact_sheet_frames": [],
+        "additional_video_frames": [
+          212,
+          265,
+          291
+        ],
+        "camera_views": [
+          "external",
+          "wrist"
+        ],
+        "continuous_full_video": false,
+        "numeric_trace": false
+      },
+      "reviewed_at": "2026-10-05T10:02:00.553862+00:00"
+    }
+  },
+  "historical/C6f1192dd092ee7923ad0": {
+    "reviewer": "root coordinator (unblinded)",
+    "rationale": "The opposite ratings reflect containment versus support/release interpretation; both remain possible from the inspected views. Baseline and independent labels are preserved. Numeric success is not changed.",
+    "label": {
+      "clip_id": "C6f1192dd092ee7923ad0",
+      "observed_outcome": "unclear",
+      "primary_stage": "unclear",
+      "confidence": "low",
+      "decisive_frame_action_indices": [
+        150,
+        220,
+        280
+      ],
+      "decisive_timestamps_seconds": [
+        7.5,
+        11.0,
+        14.0
+      ],
+      "literal_observation": "Can is held at basket opening with lower portion occluded; hand stays adjacent/above it. Images do not establish whether it is supported inside or suspended at the rim.",
+      "interpretation": "Conservative coordinator adjudication; visible evidence does not settle the conflicting completion judgments.",
+      "alternative_label": [
+        "completed",
+        "placement"
+      ],
+      "full_video_necessary": false,
+      "viewing_coverage": {
+        "contact_sheet_frames": [],
+        "additional_video_frames": [
+          150,
+          220,
+          280
+        ],
+        "camera_views": [
+          "external",
+          "wrist"
+        ],
+        "continuous_full_video": false,
+        "numeric_trace": false
+      },
+      "reviewed_at": "2026-10-05T10:02:00.553867+00:00"
+    }
+  },
+  "historical/C73d132aa9e4779f319fd": {
+    "reviewer": "root coordinator (unblinded)",
+    "rationale": "The view favors opening a lower drawer but conflicting middle-versus-bottom identification is retained as unresolved task completion and stage ambiguity; no forced consensus. Baseline and independent labels are preserved. Numeric success is not changed.",
+    "label": {
+      "clip_id": "C73d132aa9e4779f319fd",
+      "observed_outcome": "unclear",
+      "primary_stage": "unclear",
+      "confidence": "low",
+      "decisive_frame_action_indices": [
+        130,
+        170,
+        300
+      ],
+      "decisive_timestamps_seconds": [
+        6.5,
+        8.5,
+        15.0
+      ],
+      "literal_observation": "A low drawer is extended, with two handle/front regions visible above it in the external view. The hand withdraws.",
+      "interpretation": "Conservative coordinator adjudication; visible evidence does not settle the conflicting completion judgments.",
+      "alternative_label": [
+        "approach",
+        "manipulation",
+        "completed"
+      ],
+      "full_video_necessary": false,
+      "viewing_coverage": {
+        "contact_sheet_frames": [],
+        "additional_video_frames": [
+          130,
+          170,
+          300
+        ],
+        "camera_views": [
+          "external",
+          "wrist"
+        ],
+        "continuous_full_video": false,
+        "numeric_trace": false
+      },
+      "reviewed_at": "2026-10-05T10:02:00.553871+00:00"
+    }
+  }
+}

@@ -1,0 +1,35 @@
+{
+  "role": "Independent Reviewer",
+  "at_utc": "2026-10-05T08:44:57.554251+00:00",
+  "verdict": "published_numeric_recovery_and_replay_evidence_verified_visual_review_pending",
+  "remote_commit_verified": "f631acc42573a5de5217cd57de4bf7c9b4bf8891",
+  "pinned_sources_unchanged": true,
+  "published_audit_summary_bytes_match_pod": true,
+  "recovery_commands": {
+    "count": 6,
+    "all_returncodes_zero": true,
+    "main_evaluation_relaunches": 0
+  },
+  "replay": {
+    "episodes": 548,
+    "cases": 195,
+    "exact_arms": 116,
+    "non_equivalent_arms": 432,
+    "fully_exact_cases": 42,
+    "outcome_changed_arms": 111
+  },
+  "historical_adapter": {
+    "path": "/volt/artifacts/rescue-characterization/visual-review-control/build_historical_blind_packets.py",
+    "sha256": "bb5d218741bc1e474f6b91058d3756566018a304ba6fe621942b8e192a9de3a9",
+    "verdict": "approved_for_blind_packaging",
+    "conditions": "Only116exact clips;432private exclusions;42fullyexact cases eligible for paired claims;partial exact clips standalone only."
+  },
+  "report_draft": "/volt/artifacts/rescue-characterization/report-draft.md",
+  "open_requirements": [
+    "Finish fresh blind labels before unblinding; report coverage and agreement.",
+    "Restrict historical claims to exact replay evidence; disclose111changed outcomes.",
+    "Keep old descriptive cohorts separate from new declared scan; independent old2/4 unknown.",
+    "No overall superiority claim because all new net-success intervals include zero.",
+    "Final behavioral repeatability conclusion must be grounded in paired videos/traces, not task names or numerical patterns."
+  ]
+}

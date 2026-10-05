@@ -1,0 +1,14 @@
+{
+  "status": "draft_package_inventory_passed_pending_regenerated_hashes_and_copy",
+  "manifest_sha256": "fca04e2b8f5ac33c82eac6c54e463371a761efb453d2a7f4ea958d45769fa251",
+  "reports": 153,
+  "report_bytes": 14805702,
+  "selected_media": 24,
+  "selected_media_bytes": 22511331,
+  "stale_report_hashes_expected_to_regenerate": [
+    "REPORT.md",
+    "tooling/compose_report.py"
+  ],
+  "missing_relative_targets": [],
+  "reserved_postpublication_target": "PUBLICATION.json"
+}

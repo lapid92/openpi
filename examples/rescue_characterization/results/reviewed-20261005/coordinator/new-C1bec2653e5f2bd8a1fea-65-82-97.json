@@ -1,0 +1,12 @@
+{
+  "clip_id": "C1bec2653e5f2bd8a1fea",
+  "cohort": "new",
+  "frames": [
+    65,
+    82,
+    97
+  ],
+  "video": "/volt/artifacts/rescue-characterization/visual-review-new/blind/C1bec2653e5f2bd8a1fea.mp4",
+  "image_sha256": "608dcc1f301f6ddb87ce24402418c4826bf09f7877e30b33684e6963f03cab6d",
+  "generated_at": "2026-10-05T09:46:54.172886+00:00"
+}

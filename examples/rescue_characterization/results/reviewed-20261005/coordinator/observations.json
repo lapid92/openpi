@@ -1,0 +1,57 @@
+{
+  "reviewer": "root coordinator, unblinded",
+  "reviewed_at_utc": "2026-10-05T09:49:16.532331+00:00",
+  "observations": [
+    {
+      "clips": [
+        "C090dc827d4cc4a9e19a5",
+        "C1bec2653e5f2bd8a1fea",
+        "C840d5738ae5cf6a31e98",
+        "C5b01e854d990fdcb590e"
+      ],
+      "observation": "Bottle remains on tabletop in the inspected 1- and 10-step frames (including frame300). In 2- and4-step clips it is lifted and positioned upright over/on the cabinet top by frame97. Gripper/support separation at the endpoint is not independently resolved from these sparse frames.",
+      "interpretation": "Supports a visible acquisition/transport contrast and the numerical F/S/S/F counterexample, not a monotonic rescue ladder. Exact contact cause remains uncertain; approach is an alternative to grasp."
+    },
+    {
+      "clips": [
+        "C9fe34110bc86af164805",
+        "C09a0e9a744cec9b09a6b"
+      ],
+      "observation": "At1step the butter package stays high near the basket rim and hand atframes140,200,280. At2steps the package is lower inside the basket at149 with fingers visibly apart.",
+      "interpretation": "Consistent with incomplete placement/release versus completed placement. No force data or continuous-contact claim."
+    },
+    {
+      "clips": [
+        "Ca38d9e6720868f30da6a"
+      ],
+      "observation": "Book and mug are present in external view atframe0; byframe5 neither is visible in that table region. At520 the caddy appears empty.",
+      "interpretation": "Early scene change is consistent with the preserved simulator diagnostic association; underlying cause is not determined from images. Excluded from policy-only behavioral attribution, retained in population counts."
+    },
+    {
+      "clips": [
+        "C6404f5a08cf6bbde17d5",
+        "Cb872c7c957a004c61816",
+        "C4ad67fde7962ff97214a",
+        "Cf422e63768b1475f0494"
+      ],
+      "observation": "Both inspected1step clips leave cabinet fronts flush despite hand near handles. At2steps a drawer extends in both cases. The never-rescued control final view has two handles/panels above the extended drawer.",
+      "interpretation": "Same condition, different declared initial states/noise seeds: a numeric rescue and a non-rescue can share gross drawer-opening behavior. Exact target drawer identity/contact is a visual uncertainty; preserve blind alternatives and numeric predicate separately."
+    }
+  ],
+  "frame_receipts": [
+    "new-C090dc827d4cc4a9e19a5-55-75-300.json",
+    "new-C09a0e9a744cec9b09a6b-120-149.json",
+    "new-C1bec2653e5f2bd8a1fea-65-82-97.json",
+    "new-C4ad67fde7962ff97214a-80-130-300.json",
+    "new-C5b01e854d990fdcb590e-55-150-300.json",
+    "new-C6404f5a08cf6bbde17d5-80-120-300.json",
+    "new-C840d5738ae5cf6a31e98-65-97.json",
+    "new-C9fe34110bc86af164805-140-200-280.json",
+    "new-Ca38d9e6720868f30da6a-0-5-520.json",
+    "new-Cb872c7c957a004c61816-80-130-167.json",
+    "new-Cf422e63768b1475f0494-80-130-300.json"
+  ],
+  "continuous_full_video_viewed": false,
+  "baseline_labels_changed": false,
+  "scope": "Representative evidence checks after baseline hash lock; not independent blind ratings or population estimates."
+}

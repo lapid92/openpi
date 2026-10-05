@@ -1,0 +1,11 @@
+{
+  "status": "passed",
+  "v3_preserves_all_baseline_overlap_adjudications": true,
+  "sixteen_selective_control_arms_explicitly_partial": true,
+  "eight_selective_pairs_not_never_over_four_arms": true,
+  "all_tested_arm_metadata_correct": true,
+  "numeric_trace_narrative_records": {
+    "baseline": 181,
+    "independent_overlap": 43
+  }
+}

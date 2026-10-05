@@ -1,0 +1,23 @@
+{
+  "reviewer": "root coordinator",
+  "scope": "Auxiliary review tooling only; no pinned study source changes",
+  "changes": [
+    "Validate nonempty decisive frame/time pairing at20fps and maximum overlap frame",
+    "Preserve original label schema aliases and explicit coverage",
+    "Treat both-fail arms in rescued cases separately from never controls",
+    "Retain historical study identity and distinct initial/stabilized state hashes",
+    "Retain simulator-warning exclusion from policy-only visual interpretation"
+  ],
+  "tests": 20,
+  "test_result": "passed",
+  "test_log": "root-combined-tests.log",
+  "created_at_utc": "2026-10-05T09:51:23.094869+00:00",
+  "source_sha256": {
+    "review_evidence.py": "06f8fe1afa9d626f8b92550de18613bb554061d7c83c8a66fbf27ffdb40ad219",
+    "publish_review.py": "a04dddb3b6b37abf1bd6306876e2837cb1272ff6aadd22d8f1c9b7aefe4c551c",
+    "characterize_labels.py": "4a449ed73716c7ce917f858fccf3fdeb04619c3bafab58c65175f02b42372bbc",
+    "test_review_evidence.py": "a1ead0e418b66636c576f8751f591358282c173df295ea66474183f4bc4a35f3",
+    "test_characterize_labels.py": "c1b87e246afae160e3a1490e69a0d26eff7a47106bc36c69864082405e8ace5f"
+  },
+  "independent_final_review": "pending"
+}

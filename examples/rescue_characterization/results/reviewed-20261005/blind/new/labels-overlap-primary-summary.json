@@ -1,0 +1,13 @@
+{
+  "status": "stable",
+  "count": 34,
+  "sha256": "ce19616cdba3e16e9f23a3a7c22251c1abd4e5d184d45a1c39da4ec4ac49e907",
+  "revision_sidecar": "labels-overlap-primary-revisions.jsonl",
+  "revision_sha256": "30775e2ba8ac3682b00a54aab905151fd888ee30166cc50fff2bd4b3f5dea5a0",
+  "all_contact_sheets": true,
+  "all_additional_native_video_frames": true,
+  "continuous_full_video_count": 0,
+  "index_convention": "Frame f follows f executed actions; last zero-based action f-1. Traces pre-action and final pose absent.",
+  "limitations": "Sparse and denser actual frames, not continuous videos; unclear labels retain unresolved visibility or target boundary uncertainty.",
+  "frozen_at": "2026-10-05T10:05:46.490877+00:00"
+}

@@ -1,0 +1,9 @@
+{
+  "created_at": "2026-10-05T09:30:45.393804+00:00",
+  "reason": "Three baseline reviewers available; distribute independent overlap cyclically by reviewer role before baseline label join, for balanced workload. No outcome/arm information disclosed. Original early route plan preserved.",
+  "routes": {
+    "primary": "historical",
+    "secondary": "primary",
+    "historical": "secondary"
+  }
+}

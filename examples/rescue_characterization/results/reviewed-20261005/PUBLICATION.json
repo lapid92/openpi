@@ -1,0 +1,11 @@
+{
+  "status": "published_to_wandb",
+  "manifest": "/volt/artifacts/rescue-characterization/publication-manifest-final.json",
+  "manifest_sha256": "8668277a3777779622133892484f2988abe0a0f68dfa6591f14186311e884ec0",
+  "reports": 157,
+  "selected_media": 24,
+  "git_commit_or_push_performed": false,
+  "wandb_run_url": "https://wandb.ai/arm-aair-idit/pi05-rescue-characterization/runs/qgrc7my6",
+  "report_artifact": "arm-aair-idit/pi05-rescue-characterization/pi05-reviewed-evidence:v0",
+  "selected_media_artifact": "arm-aair-idit/pi05-rescue-characterization/pi05-selected-review-examples:v0"
+}

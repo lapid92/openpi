@@ -1,0 +1,17 @@
+[
+  {
+    "cohort": "new",
+    "reviewer": "primary",
+    "path": "/volt/artifacts/rescue-characterization/visual-review-new/blind/labels-primary.jsonl"
+  },
+  {
+    "cohort": "new",
+    "reviewer": "secondary",
+    "path": "/volt/artifacts/rescue-characterization/visual-review-new/blind/labels-secondary.jsonl"
+  },
+  {
+    "cohort": "historical",
+    "reviewer": "historical",
+    "path": "/volt/artifacts/rescue-characterization/visual-review-historical/blind/labels-historical.jsonl"
+  }
+]

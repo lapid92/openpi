@@ -1,0 +1,43 @@
+{
+  "reviewer": "root coordinator, unblinded",
+  "reviewed_at_utc": "2026-10-05T09:53:57.724011+00:00",
+  "continuous_full_video_viewed": false,
+  "baseline_labels_changed": false,
+  "observations": [
+    {
+      "cohort": "historical",
+      "clips": [
+        "C8c700c642d9c969d06ec",
+        "C13025af0b16d7eec66b4"
+      ],
+      "observation": "One-step bottle near hand at140 is separate and lying on table at160/191. Ten-step bottle remains near hand at149 and is positioned lengthwise on the rack at186/205.",
+      "interpretation": "Consistent with historical failed retention versus transport/placement. Eligible only through exact replay of available recorded hashes; no historical per-frame equality claim."
+    },
+    {
+      "cohort": "new",
+      "clips": [
+        "C0ace75dd78c305554e51",
+        "C954dcd4956421e55f879"
+      ],
+      "observation": "Wrist view shows one-step bowl roughly horizontal over burner at90. Ten-step bowl is steeply tilted at90/150 and displaced relative to burner at300. External camera is strongly blurred.",
+      "interpretation": "Consistent with the numeric one-step-success/ten-step-failure regression and a placement/orientation contrast. Final support cannot be fully resolved from the external camera; do not infer contact forces."
+    }
+  ],
+  "frame_receipts": [
+    "historical-C13025af0b16d7eec66b4-149-186-205.json",
+    "historical-C8c700c642d9c969d06ec-140-160-191.json",
+    "new-C090dc827d4cc4a9e19a5-55-75-300.json",
+    "new-C09a0e9a744cec9b09a6b-120-149.json",
+    "new-C0ace75dd78c305554e51-60-75-90.json",
+    "new-C1bec2653e5f2bd8a1fea-65-82-97.json",
+    "new-C4ad67fde7962ff97214a-80-130-300.json",
+    "new-C5b01e854d990fdcb590e-55-150-300.json",
+    "new-C6404f5a08cf6bbde17d5-80-120-300.json",
+    "new-C840d5738ae5cf6a31e98-65-97.json",
+    "new-C954dcd4956421e55f879-90-150-300.json",
+    "new-C9fe34110bc86af164805-140-200-280.json",
+    "new-Ca38d9e6720868f30da6a-0-5-520.json",
+    "new-Cb872c7c957a004c61816-80-130-167.json",
+    "new-Cf422e63768b1475f0494-80-130-300.json"
+  ]
+}

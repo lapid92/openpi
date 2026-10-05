@@ -1,0 +1,25 @@
+{
+  "rows": 26,
+  "sha256": "e6982b383bf6cc9fc48803a035bd655ebf595dd95b82a7a45ee2f57bcca26bed",
+  "frozen_at_utc": "2026-10-05T09:59:09.037194+00:00",
+  "outcomes": {
+    "unclear": 3,
+    "completed": 13,
+    "not completed": 10
+  },
+  "stages": {
+    "placement": 8,
+    "completed": 13,
+    "manipulation": 1,
+    "grasp": 4
+  },
+  "confidence": {
+    "low": 3,
+    "medium": 19,
+    "high": 4
+  },
+  "contact_sheet_frames_total": 312,
+  "additional_frame_views_total": 66,
+  "continuous_full_video": false,
+  "index_convention": "frame f follows f executed actions; timestamps f/20"
+}

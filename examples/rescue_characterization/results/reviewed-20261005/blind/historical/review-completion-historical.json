@@ -1,0 +1,23 @@
+{
+  "reviewed_at": "2026-10-05T09:32:42.843334+00:00",
+  "labels": 116,
+  "groups": 46,
+  "missing": [],
+  "duplicate_count": 0,
+  "decisive_coverage_errors": [],
+  "outcomes": {
+    "completed": 56,
+    "not completed": 54,
+    "unclear": 6
+  },
+  "confidence": {
+    "medium": 66,
+    "high": 44,
+    "low": 6
+  },
+  "additional_native_frame_views": 374,
+  "continuous_full_video_count": 0,
+  "numeric_trace_clips": 41,
+  "sha256": "ae6921edc56f3d33ae8a396c158305b71a099f72b355da092105d3b8ead065c8",
+  "status": "baseline complete and stable; no further modifications authorized without preserving revision history"
+}

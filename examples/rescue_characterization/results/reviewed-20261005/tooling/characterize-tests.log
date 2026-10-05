@@ -1,0 +1,8 @@
+test_counts_unique_cases_and_families (test_characterize_labels.Tests.test_counts_unique_cases_and_families) ... ok
+test_diagnostic_excluded_and_disagreement_preserved (test_characterize_labels.Tests.test_diagnostic_excluded_and_disagreement_preserved) ... ok
+test_whole_cli_threshold_no_pooling_and_partial_exclusion (test_characterize_labels.Tests.test_whole_cli_threshold_no_pooling_and_partial_exclusion) ... ok
+
+----------------------------------------------------------------------
+Ran 3 tests in 0.031s
+
+OK

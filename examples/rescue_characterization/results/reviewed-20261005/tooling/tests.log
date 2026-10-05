@@ -1,0 +1,17 @@
+test_actual_primary_and_secondary_schema (test_review_evidence.Tests.test_actual_primary_and_secondary_schema) ... ok
+test_agreement_preserves_baseline_and_adjudication (test_review_evidence.Tests.test_agreement_preserves_baseline_and_adjudication) ... ok
+test_complete_lock_and_changed_file_rejected (test_review_evidence.Tests.test_complete_lock_and_changed_file_rejected) ... ok
+test_crossplan_no_metadata_leak_and_low_unclear_additions (test_review_evidence.Tests.test_crossplan_no_metadata_leak_and_low_unclear_additions) ... ok
+test_duplicate_baseline_rejected (test_review_evidence.Tests.test_duplicate_baseline_rejected) ... ok
+test_existing_output_never_overwritten (test_review_evidence.Tests.test_existing_output_never_overwritten) ... ok
+test_historical_partial_not_paired_and_missing_overlap_visible (test_review_evidence.Tests.test_historical_partial_not_paired_and_missing_overlap_visible) ... ok
+test_missing_and_nonfinite_fields_rejected (test_review_evidence.Tests.test_missing_and_nonfinite_fields_rejected) ... ok
+test_missing_baseline_and_wrong_reviewer_rejected (test_review_evidence.Tests.test_missing_baseline_and_wrong_reviewer_rejected) ... ok
+test_missing_video_coverage_not_inferred_from_necessary (test_review_evidence.Tests.test_missing_video_coverage_not_inferred_from_necessary) ... ok
+test_unobserved_stage_must_be_unclear (test_review_evidence.Tests.test_unobserved_stage_must_be_unclear) ... ok
+test_unseen_decisive_frame_rejected (test_review_evidence.Tests.test_unseen_decisive_frame_rejected) ... ok
+
+----------------------------------------------------------------------
+Ran 12 tests in 0.005s
+
+OK

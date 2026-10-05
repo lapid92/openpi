@@ -1,0 +1,25 @@
+# Frozen π₀.₅ rescue characterization
+
+This retrospective classification study evaluates fixed 1, 2, 4 and 10 flow steps. No training, predictor, adaptive rule, TVM or adaptive speedup claim.
+
+## Independent population declared before new rollouts
+- LIBERO: all 40 tasks across spatial, object, goal and long-horizon suites; 20 cases per task, seeds 3001–3020 paired with initial-state indices 10–29. 800 matched cases, 3,200 episodes.
+- LIBERO-Plus: all seven registry axes; severity 3 and 4; all four suites; first three distinct base families by registry ID per stratum, excluding all 144 previously tested condition names. 168 conditions, seeds 4001–4010, states 20–29 except single-state layout conditions use state 0. 1,680 cases, 6,720 episodes.
+- Exact task names, conditions, prompts, seeds, state/content hashes: libero-conditions.json and libero_plus-conditions.json. One separate smoke case per standard suite and Plus axis, 44 episodes in total; no smoke outcome used to change the scan.
+- Language Instructions use the actual perturbed BDDL prompt. Other axes retain the standard base-family prompt. Sensor Noise follows the installed benchmark (agent camera corruption); per-step simulator RNG fingerprints are audited.
+- Same full checkpoint hash 9cd1b00d402cc0447454dad6054dcc6f019b53e498469f209d2b749d4487e1d5; LIBERO revision f78abd68ee283de9f9be3c8f7e2a9ad60246e95c; Plus 4976dc30028e805ff8094b55501d532c48fec182. protocol.json pins complete content manifests and source hashes.
+- Same initial state, chunk-keyed Gaussian policy noise, five executed actions per chunk, ten stabilization steps, image transforms and task-success definition across all arms. Head logging is omitted. Real checkpoint output parity at each step arm is required.
+
+## Budget and stopping
+Exactly 9,920 scored episodes plus 44 smoke episodes. Estimated 40–70 hours on four H100s (160–280 allocated H100-hours); 30–150 GiB video/trace storage, excluding checkpoint and installed assets. Estimate extrapolates the previous 1,920-episode scan's 7.24h and allows harder conditions and recording overhead. Stop at the fixed case budget regardless of outcomes. No favorable-case replacement, statistical stopping or outcome-driven budget extension. Fail closed on execution, identity, pairing or recording errors. Preserve attempts; infrastructure repairs may only rerun the same declared cases. Hard full-supervisor limit 96h and minimum 100GiB free disk. Fewer than 50 one-step failures leaves population rescue characterization underpowered by the declared adequacy target; report regardless.
+
+## Analysis and visual review
+Old records remain descriptive, separate from new confirmations. Catalogue all16 success vectors, first tested successful count, persistence, nonmonotonicity and regressions. A partial1/10 vector has unknown first success and cannot establish never-rescued status. Report first-success counts/rates among one-step failures and among all cases; fixed-arm rescues/regressions; suite, family, condition, perturbation and severity distributions. Bootstrap whole tasks for LIBERO and base families for Plus (10,000 draws), with condition-cluster Plus sensitivity. Repeated single-state seeds are not new initial states. No claim of causal mechanisms from video appearance alone.
+A descriptive recurring class needs at least10 rescues across3 base families and5 conditions in the new population; show counterexamples and uncertainty. This is not an online predictor.
+
+Videos retain both views from already-returned observations; traces retain every predicted chunk and executed action, eef/gripper state and simulator RNG fingerprints. Original studies did not save videos/action arrays, so any old-case visual evidence must be labelled reconstructed and checked against original action hashes/outcomes.
+
+Failure rubric: **approach** (does not reach target region), **grasp** (contact/closure without stable acquisition or early drop), **manipulation** (acquired object or contacted mechanism fails intended intermediate operation), **placement** (transported object fails target placement/release), **recovery** (a visible error is followed by unsuccessful correction), **unclear** (evidence cannot distinguish). Record timestamp/action index, visible event, confidence, possible alternate label and raw links. Labels may be multiple, but name a primary observed failure stage. Blinded reviewer receives opaque clip IDs without arm labels; document remaining outcome cues and agreement.
+
+## Delivery gates
+Leader declares scope; Developer implements; Reviewer checks actual diffs; Test Writer independently reproduces raw counts and tests pairing/recording/analysis. Commit and push protocol before smoke. Independently audit all44 smoke episodes and fixed-sampler parity before full launch. Detached execution and durable output remain on Volt uz2ptakxucbe, under /volt/artifacts/rescue-characterization. W&B project pi05-rescue-characterization. Publish commands, raw sources, results, uncertainty, review coverage and limitations to codex/pi05-rescue-characterization.

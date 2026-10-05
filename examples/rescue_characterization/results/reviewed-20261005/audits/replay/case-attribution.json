@@ -1,0 +1,2857 @@
+[
+  {
+    "case_id": "8a91061971094753cea4c807118af156b2d12e11b740370231bb4edd74254e9f",
+    "study": "frozen_flow",
+    "benchmark": "libero",
+    "category": "standard",
+    "selected_steps": [
+      1,
+      2,
+      4,
+      10
+    ],
+    "equivalent_steps": [],
+    "all_selected_arms_equivalent": false,
+    "one_step_and_higher_equivalent": false
+  },
+  {
+    "case_id": "f7eea039a86ffe0b25d653d4e8de67de79981dea0a653a6716ee13151075c549",
+    "study": "frozen_flow",
+    "benchmark": "libero",
+    "category": "standard",
+    "selected_steps": [
+      1,
+      2,
+      4,
+      10
+    ],
+    "equivalent_steps": [],
+    "all_selected_arms_equivalent": false,
+    "one_step_and_higher_equivalent": false
+  },
+  {
+    "case_id": "5cd94196f39941c19036a88c11b2677a1716a05d045275c83022e94e9e69e16f",
+    "study": "frozen_flow",
+    "benchmark": "libero",
+    "category": "standard",
+    "selected_steps": [
+      1,
+      2,
+      4,
+      10
+    ],
+    "equivalent_steps": [],
+    "all_selected_arms_equivalent": false,
+    "one_step_and_higher_equivalent": false
+  },
+  {
+    "case_id": "08954fca1736825eba8988455cf5deae82b2176a4e1e042e536c9d2d56481d55",
+    "study": "frozen_flow",
+    "benchmark": "libero",
+    "category": "standard",
+    "selected_steps": [
+      1,
+      2,
+      4,
+      10
+    ],
+    "equivalent_steps": [],
+    "all_selected_arms_equivalent": false,
+    "one_step_and_higher_equivalent": false
+  },
+  {
+    "case_id": "9148f4ab8bf47d54cf1e7cd2a69eca4988a0b8f2ec6fe25459356b65e029fb37",
+    "study": "frozen_flow",
+    "benchmark": "libero",
+    "category": "standard",
+    "selected_steps": [
+      1,
+      2,
+      4,
+      10
+    ],
+    "equivalent_steps": [],
+    "all_selected_arms_equivalent": false,
+    "one_step_and_higher_equivalent": false
+  },
+  {
+    "case_id": "274927778055585d9d50e31eb16ff747ff6c59b26b09872dca3710d43e5e4fbb",
+    "study": "frozen_flow",
+    "benchmark": "libero",
+    "category": "standard",
+    "selected_steps": [
+      1,
+      2,
+      4,
+      10
+    ],
+    "equivalent_steps": [],
+    "all_selected_arms_equivalent": false,
+    "one_step_and_higher_equivalent": false
+  },
+  {
+    "case_id": "8db1088ea20416abe87194846a847b9a96d146dd5098f6164c6158fdd325f0ff",
+    "study": "frozen_flow",
+    "benchmark": "libero",
+    "category": "standard",
+    "selected_steps": [
+      1,
+      2,
+      4,
+      10
+    ],
+    "equivalent_steps": [
+      1
+    ],
+    "all_selected_arms_equivalent": false,
+    "one_step_and_higher_equivalent": false
+  },
+  {
+    "case_id": "e7c021cb6b83b0522f74abcef800dd7616fcd1a28fa9f1ce97680601bf611b0b",
+    "study": "frozen_flow",
+    "benchmark": "libero",
+    "category": "standard",
+    "selected_steps": [
+      1,
+      2,
+      4,
+      10
+    ],
+    "equivalent_steps": [],
+    "all_selected_arms_equivalent": false,
+    "one_step_and_higher_equivalent": false
+  },
+  {
+    "case_id": "c013944885ebebf7280b5566feeb4e33adef1a8b91abc952ab847432679b9c49",
+    "study": "frozen_flow",
+    "benchmark": "libero",
+    "category": "standard",
+    "selected_steps": [
+      1,
+      2,
+      4,
+      10
+    ],
+    "equivalent_steps": [
+      1,
+      2,
+      4,
+      10
+    ],
+    "all_selected_arms_equivalent": true,
+    "one_step_and_higher_equivalent": true
+  },
+  {
+    "case_id": "30dc421671330a44e7d8ee0dde8ddd5f8ac907f7d5106d385b1ac94676af11bf",
+    "study": "frozen_flow",
+    "benchmark": "libero",
+    "category": "standard",
+    "selected_steps": [
+      1,
+      2,
+      4,
+      10
+    ],
+    "equivalent_steps": [],
+    "all_selected_arms_equivalent": false,
+    "one_step_and_higher_equivalent": false
+  },
+  {
+    "case_id": "8100e5ab9e5ae208f9f1fc66b86f3d03459a48bbf32f9f82a2363141e17e6c67",
+    "study": "frozen_flow",
+    "benchmark": "libero",
+    "category": "standard",
+    "selected_steps": [
+      1,
+      2,
+      4,
+      10
+    ],
+    "equivalent_steps": [
+      1,
+      2,
+      4,
+      10
+    ],
+    "all_selected_arms_equivalent": true,
+    "one_step_and_higher_equivalent": true
+  },
+  {
+    "case_id": "2031ba57f9531240b38e9c6928c0c097fe46394d6a01bcb2a0b13e4b4ba094f0",
+    "study": "frozen_flow",
+    "benchmark": "libero",
+    "category": "standard",
+    "selected_steps": [
+      1,
+      2,
+      4,
+      10
+    ],
+    "equivalent_steps": [
+      1,
+      2,
+      4,
+      10
+    ],
+    "all_selected_arms_equivalent": true,
+    "one_step_and_higher_equivalent": true
+  },
+  {
+    "case_id": "4f400c43950a84b5318df900d36f6a073078c24e18098850f21fba8597d8cc12",
+    "study": "frozen_flow",
+    "benchmark": "libero",
+    "category": "standard",
+    "selected_steps": [
+      1,
+      2,
+      4,
+      10
+    ],
+    "equivalent_steps": [],
+    "all_selected_arms_equivalent": false,
+    "one_step_and_higher_equivalent": false
+  },
+  {
+    "case_id": "6d164da22c9066cb86ea1ac2022198086e24d2a45f325a025df611c6d4c53f09",
+    "study": "frozen_flow",
+    "benchmark": "libero",
+    "category": "standard",
+    "selected_steps": [
+      1,
+      2,
+      4,
+      10
+    ],
+    "equivalent_steps": [],
+    "all_selected_arms_equivalent": false,
+    "one_step_and_higher_equivalent": false
+  },
+  {
+    "case_id": "8ef074d6e20384d4e7214a765fcac02592039cf8e96f3a058b966039910d0cb4",
+    "study": "frozen_flow",
+    "benchmark": "libero",
+    "category": "standard",
+    "selected_steps": [
+      1,
+      2,
+      4,
+      10
+    ],
+    "equivalent_steps": [],
+    "all_selected_arms_equivalent": false,
+    "one_step_and_higher_equivalent": false
+  },
+  {
+    "case_id": "51f57933cad2eee140504d2dbbf759892c8bd76b649b5b11f48ac2044572dd22",
+    "study": "frozen_flow",
+    "benchmark": "libero",
+    "category": "standard",
+    "selected_steps": [
+      1,
+      2,
+      4,
+      10
+    ],
+    "equivalent_steps": [],
+    "all_selected_arms_equivalent": false,
+    "one_step_and_higher_equivalent": false
+  },
+  {
+    "case_id": "21c7da8ee357d57f39493e994efabec91feceb5f8181519401d52382fa291091",
+    "study": "frozen_flow",
+    "benchmark": "libero",
+    "category": "standard",
+    "selected_steps": [
+      1,
+      2,
+      4,
+      10
+    ],
+    "equivalent_steps": [],
+    "all_selected_arms_equivalent": false,
+    "one_step_and_higher_equivalent": false
+  },
+  {
+    "case_id": "9ac65ca81e9a8cc6e4d5983c5db98107e717723036b4713a5cf28ad23986e6d9",
+    "study": "frozen_flow",
+    "benchmark": "libero",
+    "category": "standard",
+    "selected_steps": [
+      1,
+      2,
+      4,
+      10
+    ],
+    "equivalent_steps": [],
+    "all_selected_arms_equivalent": false,
+    "one_step_and_higher_equivalent": false
+  },
+  {
+    "case_id": "173062d340b3d27323bf5932760cb542ce78fa054a3e01286042f159e2b5bd6a",
+    "study": "frozen_flow",
+    "benchmark": "libero",
+    "category": "standard",
+    "selected_steps": [
+      1,
+      2,
+      4,
+      10
+    ],
+    "equivalent_steps": [],
+    "all_selected_arms_equivalent": false,
+    "one_step_and_higher_equivalent": false
+  },
+  {
+    "case_id": "2af203113b8d0df46ee7e2a3e64e6ae27580241e994355ddef52bbff945c72be",
+    "study": "frozen_flow",
+    "benchmark": "libero",
+    "category": "standard",
+    "selected_steps": [
+      1,
+      2,
+      4,
+      10
+    ],
+    "equivalent_steps": [],
+    "all_selected_arms_equivalent": false,
+    "one_step_and_higher_equivalent": false
+  },
+  {
+    "case_id": "227563e0791353d2a0351a157d3fefe2e38ce25e0bfa9b92d18937d9771841f7",
+    "study": "frozen_flow",
+    "benchmark": "libero",
+    "category": "standard",
+    "selected_steps": [
+      1,
+      2,
+      4,
+      10
+    ],
+    "equivalent_steps": [],
+    "all_selected_arms_equivalent": false,
+    "one_step_and_higher_equivalent": false
+  },
+  {
+    "case_id": "b3b0da3fbff5aaeabfc3822102cfb4bf7ac5719c20c189348f47108f818bab3f",
+    "study": "frozen_flow",
+    "benchmark": "libero",
+    "category": "standard",
+    "selected_steps": [
+      1,
+      2,
+      4,
+      10
+    ],
+    "equivalent_steps": [
+      1,
+      2,
+      4,
+      10
+    ],
+    "all_selected_arms_equivalent": true,
+    "one_step_and_higher_equivalent": true
+  },
+  {
+    "case_id": "1dd1dd1901dde071fce24b79a5c6e7c0a6a9482c25ec36b180f5666fe0a9f213",
+    "study": "frozen_flow",
+    "benchmark": "libero",
+    "category": "standard",
+    "selected_steps": [
+      1,
+      2,
+      4,
+      10
+    ],
+    "equivalent_steps": [],
+    "all_selected_arms_equivalent": false,
+    "one_step_and_higher_equivalent": false
+  },
+  {
+    "case_id": "eaabca65e3e846cf5eabcadd20b1508232b81c0bf5bbf44cacb64d95b996b31e",
+    "study": "frozen_flow",
+    "benchmark": "libero",
+    "category": "standard",
+    "selected_steps": [
+      1,
+      2,
+      4,
+      10
+    ],
+    "equivalent_steps": [],
+    "all_selected_arms_equivalent": false,
+    "one_step_and_higher_equivalent": false
+  },
+  {
+    "case_id": "484719728682725853b9d7093d63e0e49e660891923d52352264b99a94f682f5",
+    "study": "frozen_flow",
+    "benchmark": "libero",
+    "category": "standard",
+    "selected_steps": [
+      1,
+      2,
+      4,
+      10
+    ],
+    "equivalent_steps": [],
+    "all_selected_arms_equivalent": false,
+    "one_step_and_higher_equivalent": false
+  },
+  {
+    "case_id": "7b8f2eb6dd0510b8995983075d74c727ef045df28f58e3d517e9928b6f0659ed",
+    "study": "frozen_flow",
+    "benchmark": "libero",
+    "category": "standard",
+    "selected_steps": [
+      1,
+      2,
+      4,
+      10
+    ],
+    "equivalent_steps": [],
+    "all_selected_arms_equivalent": false,
+    "one_step_and_higher_equivalent": false
+  },
+  {
+    "case_id": "efc5f35c51a47c7f6651d55a8321e46ab5be2dda3351ad71c40111fbb9d7a327",
+    "study": "frozen_flow",
+    "benchmark": "libero",
+    "category": "standard",
+    "selected_steps": [
+      1,
+      2,
+      4,
+      10
+    ],
+    "equivalent_steps": [],
+    "all_selected_arms_equivalent": false,
+    "one_step_and_higher_equivalent": false
+  },
+  {
+    "case_id": "8466d02a3187d96c84c38c2d7868f2b8abcafd9ad60658861c8286a49109c074",
+    "study": "frozen_flow",
+    "benchmark": "libero",
+    "category": "standard",
+    "selected_steps": [
+      1,
+      2,
+      4,
+      10
+    ],
+    "equivalent_steps": [],
+    "all_selected_arms_equivalent": false,
+    "one_step_and_higher_equivalent": false
+  },
+  {
+    "case_id": "b0137234d9b457bde77dba8d662b1e3159a9232ce0c6ef1d2d23d02353bafabe",
+    "study": "frozen_flow",
+    "benchmark": "libero",
+    "category": "standard",
+    "selected_steps": [
+      1,
+      2,
+      4,
+      10
+    ],
+    "equivalent_steps": [],
+    "all_selected_arms_equivalent": false,
+    "one_step_and_higher_equivalent": false
+  },
+  {
+    "case_id": "08b4c944bf8b4be600756fd9c52eed24cc9d9dcd5ca9253d5380e3f6989edb97",
+    "study": "frozen_flow",
+    "benchmark": "libero",
+    "category": "standard",
+    "selected_steps": [
+      1,
+      2,
+      4,
+      10
+    ],
+    "equivalent_steps": [],
+    "all_selected_arms_equivalent": false,
+    "one_step_and_higher_equivalent": false
+  },
+  {
+    "case_id": "1040a784bb1f311b4d3c123cf73765bf3e48528e8273f9371e163693c456a432",
+    "study": "frozen_flow",
+    "benchmark": "libero_plus",
+    "category": "Objects Layout",
+    "selected_steps": [
+      1,
+      2,
+      4,
+      10
+    ],
+    "equivalent_steps": [],
+    "all_selected_arms_equivalent": false,
+    "one_step_and_higher_equivalent": false
+  },
+  {
+    "case_id": "f9fe52b774aaaa9b0f034531567b8f43dffed56ab2a033443380110524f17a7e",
+    "study": "frozen_flow",
+    "benchmark": "libero_plus",
+    "category": "Objects Layout",
+    "selected_steps": [
+      1,
+      2,
+      4,
+      10
+    ],
+    "equivalent_steps": [],
+    "all_selected_arms_equivalent": false,
+    "one_step_and_higher_equivalent": false
+  },
+  {
+    "case_id": "dcd372ac26a18261b12ae1939c7ee37d39a931c3dcd678df5950344671e167ed",
+    "study": "frozen_flow",
+    "benchmark": "libero_plus",
+    "category": "Objects Layout",
+    "selected_steps": [
+      1,
+      2,
+      4,
+      10
+    ],
+    "equivalent_steps": [],
+    "all_selected_arms_equivalent": false,
+    "one_step_and_higher_equivalent": false
+  },
+  {
+    "case_id": "dac7f1842d6213d5b1f670ed1ee80850d4de5745756edd16bd096f355070f5a2",
+    "study": "frozen_flow",
+    "benchmark": "libero_plus",
+    "category": "Robot Initial States",
+    "selected_steps": [
+      1,
+      2,
+      4,
+      10
+    ],
+    "equivalent_steps": [],
+    "all_selected_arms_equivalent": false,
+    "one_step_and_higher_equivalent": false
+  },
+  {
+    "case_id": "c714840cb4dd771b93a1b3bba54f1b35dcdb4bad969eac6671dc55a5c63662ec",
+    "study": "frozen_flow",
+    "benchmark": "libero_plus",
+    "category": "Robot Initial States",
+    "selected_steps": [
+      1,
+      2,
+      4,
+      10
+    ],
+    "equivalent_steps": [],
+    "all_selected_arms_equivalent": false,
+    "one_step_and_higher_equivalent": false
+  },
+  {
+    "case_id": "2ac63030b9f7b3fca0e9495b0415cb5b21af6f884a24b93eeb97ad4645c9f005",
+    "study": "frozen_flow",
+    "benchmark": "libero_plus",
+    "category": "Objects Layout",
+    "selected_steps": [
+      1,
+      2,
+      4,
+      10
+    ],
+    "equivalent_steps": [],
+    "all_selected_arms_equivalent": false,
+    "one_step_and_higher_equivalent": false
+  },
+  {
+    "case_id": "3b7c49d6917390f1640e4dcf9d78e210d173adfb450fae71c89f130cb84631f1",
+    "study": "frozen_flow",
+    "benchmark": "libero_plus",
+    "category": "Camera Viewpoints",
+    "selected_steps": [
+      1,
+      2,
+      4,
+      10
+    ],
+    "equivalent_steps": [],
+    "all_selected_arms_equivalent": false,
+    "one_step_and_higher_equivalent": false
+  },
+  {
+    "case_id": "73bf35492b9a248ec8db272c26b078efdcbebacb418a25e85e9ccb19f6028fa1",
+    "study": "frozen_flow",
+    "benchmark": "libero_plus",
+    "category": "Camera Viewpoints",
+    "selected_steps": [
+      1,
+      2,
+      4,
+      10
+    ],
+    "equivalent_steps": [
+      1
+    ],
+    "all_selected_arms_equivalent": false,
+    "one_step_and_higher_equivalent": false
+  },
+  {
+    "case_id": "d19dfc99408dc83c8b2c1f9dcd1335ee1b86220eddc739ba397e7e49d7279413",
+    "study": "frozen_flow",
+    "benchmark": "libero_plus",
+    "category": "Robot Initial States",
+    "selected_steps": [
+      1,
+      2,
+      4,
+      10
+    ],
+    "equivalent_steps": [],
+    "all_selected_arms_equivalent": false,
+    "one_step_and_higher_equivalent": false
+  },
+  {
+    "case_id": "0fa1952c0f1947e12f021c0ecf81a68b85cb614462361c6a8b031795d0036b3b",
+    "study": "frozen_flow",
+    "benchmark": "libero_plus",
+    "category": "Robot Initial States",
+    "selected_steps": [
+      1,
+      2,
+      4,
+      10
+    ],
+    "equivalent_steps": [],
+    "all_selected_arms_equivalent": false,
+    "one_step_and_higher_equivalent": false
+  },
+  {
+    "case_id": "d7ec16144101d1a4b091ddc7a0b5285acae26f283aa56fd57542d322cecd35be",
+    "study": "frozen_flow",
+    "benchmark": "libero_plus",
+    "category": "Robot Initial States",
+    "selected_steps": [
+      1,
+      2,
+      4,
+      10
+    ],
+    "equivalent_steps": [],
+    "all_selected_arms_equivalent": false,
+    "one_step_and_higher_equivalent": false
+  },
+  {
+    "case_id": "0b63adad9d43f3cd2ee003b6a886263990121d85408b4d6be1e2b989681bdd3f",
+    "study": "frozen_flow",
+    "benchmark": "libero_plus",
+    "category": "Objects Layout",
+    "selected_steps": [
+      1,
+      2,
+      4,
+      10
+    ],
+    "equivalent_steps": [
+      2
+    ],
+    "all_selected_arms_equivalent": false,
+    "one_step_and_higher_equivalent": false
+  },
+  {
+    "case_id": "2ed63018b95648bd91b435b972beaba10403a2b6e1661e087cd4297783d0dcdc",
+    "study": "frozen_flow",
+    "benchmark": "libero_plus",
+    "category": "Camera Viewpoints",
+    "selected_steps": [
+      1,
+      2,
+      4,
+      10
+    ],
+    "equivalent_steps": [],
+    "all_selected_arms_equivalent": false,
+    "one_step_and_higher_equivalent": false
+  },
+  {
+    "case_id": "05a3e72ddf88ce54de4d547458825b0f087a1f80a4325fe82aa71c02853bee00",
+    "study": "selective_flow",
+    "benchmark": "libero_plus",
+    "category": "Objects Layout",
+    "selected_steps": [
+      1,
+      10
+    ],
+    "equivalent_steps": [],
+    "all_selected_arms_equivalent": false,
+    "one_step_and_higher_equivalent": false
+  },
+  {
+    "case_id": "bd04d416e7005385cd65b93207200db4ea25a8cb889c7a151152db62592427d4",
+    "study": "selective_flow",
+    "benchmark": "libero_plus",
+    "category": "Objects Layout",
+    "selected_steps": [
+      1,
+      10
+    ],
+    "equivalent_steps": [],
+    "all_selected_arms_equivalent": false,
+    "one_step_and_higher_equivalent": false
+  },
+  {
+    "case_id": "420aa77ec96f23b0233cd2fe56c367ae9a58a8d50cdbb616018539a97c1231bc",
+    "study": "selective_flow",
+    "benchmark": "libero_plus",
+    "category": "Objects Layout",
+    "selected_steps": [
+      1,
+      10
+    ],
+    "equivalent_steps": [],
+    "all_selected_arms_equivalent": false,
+    "one_step_and_higher_equivalent": false
+  },
+  {
+    "case_id": "f9e0a851a2c5f61430a0c57571eccc5ab323f6a20bf4895e60ca0486ad44fed1",
+    "study": "selective_flow",
+    "benchmark": "libero_plus",
+    "category": "Objects Layout",
+    "selected_steps": [
+      1,
+      10
+    ],
+    "equivalent_steps": [
+      1,
+      10
+    ],
+    "all_selected_arms_equivalent": true,
+    "one_step_and_higher_equivalent": true
+  },
+  {
+    "case_id": "ba58284a6c2715bd2e8abe63f2bd4f3b034c8e74fae049239fc0a76a684ec10a",
+    "study": "selective_flow",
+    "benchmark": "libero_plus",
+    "category": "Objects Layout",
+    "selected_steps": [
+      1,
+      10
+    ],
+    "equivalent_steps": [
+      1,
+      10
+    ],
+    "all_selected_arms_equivalent": true,
+    "one_step_and_higher_equivalent": true
+  },
+  {
+    "case_id": "6a32d8909bc591ee7d05c47e86c45497d3607634c9b28c2f108791879dfe2f5e",
+    "study": "selective_flow",
+    "benchmark": "libero_plus",
+    "category": "Objects Layout",
+    "selected_steps": [
+      1,
+      10
+    ],
+    "equivalent_steps": [
+      1,
+      10
+    ],
+    "all_selected_arms_equivalent": true,
+    "one_step_and_higher_equivalent": true
+  },
+  {
+    "case_id": "f8e63facf59353de72f0e3d1baa817b5cee666e43a7cfb3b8b14de0ed058ae39",
+    "study": "selective_flow",
+    "benchmark": "libero_plus",
+    "category": "Robot Initial States",
+    "selected_steps": [
+      1,
+      10
+    ],
+    "equivalent_steps": [],
+    "all_selected_arms_equivalent": false,
+    "one_step_and_higher_equivalent": false
+  },
+  {
+    "case_id": "cdfc84b5834fbf91481ab87c2635302f4a42942501ab17a2dafa3ed275fbd5e4",
+    "study": "selective_flow",
+    "benchmark": "libero_plus",
+    "category": "Robot Initial States",
+    "selected_steps": [
+      1,
+      10
+    ],
+    "equivalent_steps": [],
+    "all_selected_arms_equivalent": false,
+    "one_step_and_higher_equivalent": false
+  },
+  {
+    "case_id": "24ad64fb54c6990fd39495d8214ea35d8fc08c00d04c11a549008e742369c943",
+    "study": "selective_flow",
+    "benchmark": "libero_plus",
+    "category": "Camera Viewpoints",
+    "selected_steps": [
+      1,
+      10
+    ],
+    "equivalent_steps": [],
+    "all_selected_arms_equivalent": false,
+    "one_step_and_higher_equivalent": false
+  },
+  {
+    "case_id": "0d5d9458d40c3e9a5f313c65d049281153b6be1fd11177778e1656539787a227",
+    "study": "selective_flow",
+    "benchmark": "libero_plus",
+    "category": "Camera Viewpoints",
+    "selected_steps": [
+      1,
+      10
+    ],
+    "equivalent_steps": [],
+    "all_selected_arms_equivalent": false,
+    "one_step_and_higher_equivalent": false
+  },
+  {
+    "case_id": "6e3d9135fd84eccd4d24ca5e625d23d0e5c544ebc3c794a1a34fc3a33b188d38",
+    "study": "selective_flow",
+    "benchmark": "libero_plus",
+    "category": "Camera Viewpoints",
+    "selected_steps": [
+      1,
+      10
+    ],
+    "equivalent_steps": [],
+    "all_selected_arms_equivalent": false,
+    "one_step_and_higher_equivalent": false
+  },
+  {
+    "case_id": "71c19f2ad4f1eb54083127fcdbf9367a0877b97a0a14e50ee770aa4cefb631a7",
+    "study": "selective_flow",
+    "benchmark": "libero_plus",
+    "category": "Objects Layout",
+    "selected_steps": [
+      1,
+      10
+    ],
+    "equivalent_steps": [],
+    "all_selected_arms_equivalent": false,
+    "one_step_and_higher_equivalent": false
+  },
+  {
+    "case_id": "46464b4d79b6a2b7b4f0666d2c8e74bd13e7fd3a42ce6dac4826402ef781035e",
+    "study": "selective_flow",
+    "benchmark": "libero_plus",
+    "category": "Objects Layout",
+    "selected_steps": [
+      1,
+      10
+    ],
+    "equivalent_steps": [],
+    "all_selected_arms_equivalent": false,
+    "one_step_and_higher_equivalent": false
+  },
+  {
+    "case_id": "a0d62928c606c0dc3f52d440f05c79d814ea43718639f9ea2961eb46813aaa5f",
+    "study": "selective_flow",
+    "benchmark": "libero_plus",
+    "category": "Camera Viewpoints",
+    "selected_steps": [
+      1,
+      10
+    ],
+    "equivalent_steps": [
+      1,
+      10
+    ],
+    "all_selected_arms_equivalent": true,
+    "one_step_and_higher_equivalent": true
+  },
+  {
+    "case_id": "1be8bc2f27353327ffacb6e81223653158ac57377bed516010dbf988125e344d",
+    "study": "selective_flow",
+    "benchmark": "libero_plus",
+    "category": "Camera Viewpoints",
+    "selected_steps": [
+      1,
+      10
+    ],
+    "equivalent_steps": [],
+    "all_selected_arms_equivalent": false,
+    "one_step_and_higher_equivalent": false
+  },
+  {
+    "case_id": "0a9436e90ab98eacd30a4bd45336d6af7158a48ebb5d92d3e02a45c22ac960f4",
+    "study": "selective_flow",
+    "benchmark": "libero_plus",
+    "category": "Camera Viewpoints",
+    "selected_steps": [
+      1,
+      10
+    ],
+    "equivalent_steps": [],
+    "all_selected_arms_equivalent": false,
+    "one_step_and_higher_equivalent": false
+  },
+  {
+    "case_id": "0951b29c2662454347071d92c37a8e67798ebfca89e5081259ab54d12384edfe",
+    "study": "selective_flow",
+    "benchmark": "libero_plus",
+    "category": "Objects Layout",
+    "selected_steps": [
+      1,
+      10
+    ],
+    "equivalent_steps": [
+      1,
+      10
+    ],
+    "all_selected_arms_equivalent": true,
+    "one_step_and_higher_equivalent": true
+  },
+  {
+    "case_id": "71e502a968592205c89148e847705147a2447cb140c17ed642bcf8dcec854247",
+    "study": "selective_flow",
+    "benchmark": "libero_plus",
+    "category": "Robot Initial States",
+    "selected_steps": [
+      1,
+      10
+    ],
+    "equivalent_steps": [],
+    "all_selected_arms_equivalent": false,
+    "one_step_and_higher_equivalent": false
+  },
+  {
+    "case_id": "0b6b66b0a85e52b00a0b737b8cd06bc583ec0b79492c44f0797f9c9e215f1130",
+    "study": "selective_flow",
+    "benchmark": "libero_plus",
+    "category": "Robot Initial States",
+    "selected_steps": [
+      1,
+      10
+    ],
+    "equivalent_steps": [],
+    "all_selected_arms_equivalent": false,
+    "one_step_and_higher_equivalent": false
+  },
+  {
+    "case_id": "b5e70b331779c70da3c87c18c6ab73713d99fa24a39749619cea896d665dbf1f",
+    "study": "selective_flow",
+    "benchmark": "libero_plus",
+    "category": "Robot Initial States",
+    "selected_steps": [
+      1,
+      10
+    ],
+    "equivalent_steps": [],
+    "all_selected_arms_equivalent": false,
+    "one_step_and_higher_equivalent": false
+  },
+  {
+    "case_id": "7f5a0c25aee81c35cef82e8701a83a8a64f2f384d6f6868d5e517262e6796eb9",
+    "study": "selective_flow",
+    "benchmark": "libero_plus",
+    "category": "Robot Initial States",
+    "selected_steps": [
+      1,
+      10
+    ],
+    "equivalent_steps": [
+      1,
+      10
+    ],
+    "all_selected_arms_equivalent": true,
+    "one_step_and_higher_equivalent": true
+  },
+  {
+    "case_id": "9be8e48627c637e0617bd4113d6693f3f97d7faf89c78de9e75b3e0a8c53fb3f",
+    "study": "selective_flow",
+    "benchmark": "libero_plus",
+    "category": "Robot Initial States",
+    "selected_steps": [
+      1,
+      10
+    ],
+    "equivalent_steps": [],
+    "all_selected_arms_equivalent": false,
+    "one_step_and_higher_equivalent": false
+  },
+  {
+    "case_id": "51f98b57edfe6aa9b1b000d0684a3aff48ecf4363dc97abdd7a4dd8c383f1eca",
+    "study": "selective_flow",
+    "benchmark": "libero_plus",
+    "category": "Camera Viewpoints",
+    "selected_steps": [
+      1,
+      10
+    ],
+    "equivalent_steps": [
+      1,
+      10
+    ],
+    "all_selected_arms_equivalent": true,
+    "one_step_and_higher_equivalent": true
+  },
+  {
+    "case_id": "92031b34e533379493073cb17d46eb249d83c3627d62e74a2ae6c4bccd7db4dd",
+    "study": "selective_flow",
+    "benchmark": "libero_plus",
+    "category": "Robot Initial States",
+    "selected_steps": [
+      1,
+      10
+    ],
+    "equivalent_steps": [],
+    "all_selected_arms_equivalent": false,
+    "one_step_and_higher_equivalent": false
+  },
+  {
+    "case_id": "01ac4bfc6ff73ce720a4236716867897cd5a28aa560cc49f864b58c486fd793f",
+    "study": "selective_flow",
+    "benchmark": "libero_plus",
+    "category": "Camera Viewpoints",
+    "selected_steps": [
+      1,
+      10
+    ],
+    "equivalent_steps": [],
+    "all_selected_arms_equivalent": false,
+    "one_step_and_higher_equivalent": false
+  },
+  {
+    "case_id": "22385ffb74c4a3294ee1e9c412ba8bf6ed2b7847964199a131dc0f41bf6db627",
+    "study": "selective_flow",
+    "benchmark": "libero_plus",
+    "category": "Camera Viewpoints",
+    "selected_steps": [
+      1,
+      10
+    ],
+    "equivalent_steps": [],
+    "all_selected_arms_equivalent": false,
+    "one_step_and_higher_equivalent": false
+  },
+  {
+    "case_id": "2429deca5a7da8d4819343c69faa0f09031e7419a6692e49b3c91ad504c182ed",
+    "study": "selective_flow",
+    "benchmark": "libero_plus",
+    "category": "Camera Viewpoints",
+    "selected_steps": [
+      1,
+      10
+    ],
+    "equivalent_steps": [
+      1,
+      10
+    ],
+    "all_selected_arms_equivalent": true,
+    "one_step_and_higher_equivalent": true
+  },
+  {
+    "case_id": "7cb8dd0adfa39add49f16250cd17bbe8f5c72088a59f685095362d8e3666ade8",
+    "study": "selective_flow",
+    "benchmark": "libero_plus",
+    "category": "Camera Viewpoints",
+    "selected_steps": [
+      1,
+      10
+    ],
+    "equivalent_steps": [],
+    "all_selected_arms_equivalent": false,
+    "one_step_and_higher_equivalent": false
+  },
+  {
+    "case_id": "e4beb11995d51832177f4ca3be85e8d2cab78970a90f4318c2ec1689fde63178",
+    "study": "selective_flow",
+    "benchmark": "libero_plus",
+    "category": "Camera Viewpoints",
+    "selected_steps": [
+      1,
+      10
+    ],
+    "equivalent_steps": [],
+    "all_selected_arms_equivalent": false,
+    "one_step_and_higher_equivalent": false
+  },
+  {
+    "case_id": "6a55acf4701f936d3a150954a12ea1325dd57aa0a731ed02bc5e5046690a2fef",
+    "study": "frozen_flow",
+    "benchmark": "libero_plus",
+    "category": "Objects Layout",
+    "selected_steps": [
+      1,
+      2,
+      4,
+      10
+    ],
+    "equivalent_steps": [
+      1,
+      2,
+      4,
+      10
+    ],
+    "all_selected_arms_equivalent": true,
+    "one_step_and_higher_equivalent": true
+  },
+  {
+    "case_id": "768f22fcd4405c7b38e87ca6cda848f6d36964e49355d4cf1162dd64838cbe08",
+    "study": "frozen_flow",
+    "benchmark": "libero_plus",
+    "category": "Objects Layout",
+    "selected_steps": [
+      1,
+      2,
+      4,
+      10
+    ],
+    "equivalent_steps": [
+      1,
+      2,
+      4,
+      10
+    ],
+    "all_selected_arms_equivalent": true,
+    "one_step_and_higher_equivalent": true
+  },
+  {
+    "case_id": "0954de41189179b467075e619a223ad9f3f9c4bb25a6af68557f20bcb8f82686",
+    "study": "frozen_flow",
+    "benchmark": "libero_plus",
+    "category": "Robot Initial States",
+    "selected_steps": [
+      1,
+      2,
+      4,
+      10
+    ],
+    "equivalent_steps": [
+      1,
+      2,
+      4,
+      10
+    ],
+    "all_selected_arms_equivalent": true,
+    "one_step_and_higher_equivalent": true
+  },
+  {
+    "case_id": "cb70f8c26c7edcc6881c7688ce656133a570e0281ab04d0941661de864f46b4f",
+    "study": "frozen_flow",
+    "benchmark": "libero_plus",
+    "category": "Robot Initial States",
+    "selected_steps": [
+      1,
+      2,
+      4,
+      10
+    ],
+    "equivalent_steps": [
+      1,
+      2,
+      4,
+      10
+    ],
+    "all_selected_arms_equivalent": true,
+    "one_step_and_higher_equivalent": true
+  },
+  {
+    "case_id": "a9b9787284e74e67990a2db51d893f8176dcc2d94db9e97d522cdc1640da59e1",
+    "study": "frozen_flow",
+    "benchmark": "libero_plus",
+    "category": "Camera Viewpoints",
+    "selected_steps": [
+      1,
+      2,
+      4,
+      10
+    ],
+    "equivalent_steps": [
+      1,
+      2,
+      4,
+      10
+    ],
+    "all_selected_arms_equivalent": true,
+    "one_step_and_higher_equivalent": true
+  },
+  {
+    "case_id": "86b40b0878b9c8beaf2acb36f32099976a8ffc458025fab0470f2921513f75c5",
+    "study": "frozen_flow",
+    "benchmark": "libero_plus",
+    "category": "Robot Initial States",
+    "selected_steps": [
+      1,
+      2,
+      4,
+      10
+    ],
+    "equivalent_steps": [
+      1,
+      2,
+      4,
+      10
+    ],
+    "all_selected_arms_equivalent": true,
+    "one_step_and_higher_equivalent": true
+  },
+  {
+    "case_id": "11e5553bf2593dd48765c4c2718a5cfcacb3e61a98058b87a3965933f08d2907",
+    "study": "frozen_flow",
+    "benchmark": "libero_plus",
+    "category": "Camera Viewpoints",
+    "selected_steps": [
+      1,
+      2,
+      4,
+      10
+    ],
+    "equivalent_steps": [],
+    "all_selected_arms_equivalent": false,
+    "one_step_and_higher_equivalent": false
+  },
+  {
+    "case_id": "d2b3fcc0ae28795021f4e62fa586e61f5375f7a7c85592d69d8863a0b45f1cfd",
+    "study": "frozen_flow",
+    "benchmark": "libero_plus",
+    "category": "Objects Layout",
+    "selected_steps": [
+      1,
+      2,
+      4,
+      10
+    ],
+    "equivalent_steps": [],
+    "all_selected_arms_equivalent": false,
+    "one_step_and_higher_equivalent": false
+  },
+  {
+    "case_id": "007032074e2cb785343d33a2237a019da09a4166bf271b98f1245e176376fdbb",
+    "study": "frozen_flow",
+    "benchmark": "libero_plus",
+    "category": "Robot Initial States",
+    "selected_steps": [
+      1,
+      2,
+      4,
+      10
+    ],
+    "equivalent_steps": [],
+    "all_selected_arms_equivalent": false,
+    "one_step_and_higher_equivalent": false
+  },
+  {
+    "case_id": "45fc379190caa9524ee60c0d87485b9504ea88638abbed89a6373fe2c9bc13c5",
+    "study": "frozen_flow",
+    "benchmark": "libero_plus",
+    "category": "Robot Initial States",
+    "selected_steps": [
+      1,
+      2,
+      4,
+      10
+    ],
+    "equivalent_steps": [
+      1,
+      2,
+      4,
+      10
+    ],
+    "all_selected_arms_equivalent": true,
+    "one_step_and_higher_equivalent": true
+  },
+  {
+    "case_id": "9ad957cd8888d5e529f7228f840b27a06a090617f61d968055e3a93c668802cd",
+    "study": "frozen_flow",
+    "benchmark": "libero_plus",
+    "category": "Camera Viewpoints",
+    "selected_steps": [
+      1,
+      2,
+      4,
+      10
+    ],
+    "equivalent_steps": [
+      1,
+      2,
+      4,
+      10
+    ],
+    "all_selected_arms_equivalent": true,
+    "one_step_and_higher_equivalent": true
+  },
+  {
+    "case_id": "5d62b9b73de3c7e651c47623847a112e30e01bd6dab39c5485ab786ee829fb0c",
+    "study": "frozen_flow",
+    "benchmark": "libero_plus",
+    "category": "Camera Viewpoints",
+    "selected_steps": [
+      1,
+      2,
+      4,
+      10
+    ],
+    "equivalent_steps": [
+      1,
+      2,
+      4,
+      10
+    ],
+    "all_selected_arms_equivalent": true,
+    "one_step_and_higher_equivalent": true
+  },
+  {
+    "case_id": "a6e95344fd695aa969cb4e8b19a941631c6656f93614c07550b77c272b47991f",
+    "study": "selective_flow",
+    "benchmark": "libero_plus",
+    "category": "Objects Layout",
+    "selected_steps": [
+      1,
+      10
+    ],
+    "equivalent_steps": [],
+    "all_selected_arms_equivalent": false,
+    "one_step_and_higher_equivalent": false
+  },
+  {
+    "case_id": "e0f3e07340aeb63b357390f6471b2606b8473e987980dd836675eaf896f40354",
+    "study": "selective_flow",
+    "benchmark": "libero_plus",
+    "category": "Objects Layout",
+    "selected_steps": [
+      1,
+      10
+    ],
+    "equivalent_steps": [
+      1,
+      10
+    ],
+    "all_selected_arms_equivalent": true,
+    "one_step_and_higher_equivalent": true
+  },
+  {
+    "case_id": "8a597c577a934a87ebfa39d0b29089f8ea93cfefcd779c3062155220daba4005",
+    "study": "selective_flow",
+    "benchmark": "libero_plus",
+    "category": "Objects Layout",
+    "selected_steps": [
+      1,
+      10
+    ],
+    "equivalent_steps": [],
+    "all_selected_arms_equivalent": false,
+    "one_step_and_higher_equivalent": false
+  },
+  {
+    "case_id": "40e1629b5c1149f340ef1ace99604c0cdd1e03bc91c8f5517605e9a9ce4ea25b",
+    "study": "selective_flow",
+    "benchmark": "libero_plus",
+    "category": "Objects Layout",
+    "selected_steps": [
+      1,
+      10
+    ],
+    "equivalent_steps": [
+      1,
+      10
+    ],
+    "all_selected_arms_equivalent": true,
+    "one_step_and_higher_equivalent": true
+  },
+  {
+    "case_id": "5ceaf37d2c18fcc1990b364a852619287f9ca6155134d091f9eb05d8a5dd369c",
+    "study": "selective_flow",
+    "benchmark": "libero_plus",
+    "category": "Objects Layout",
+    "selected_steps": [
+      1,
+      10
+    ],
+    "equivalent_steps": [],
+    "all_selected_arms_equivalent": false,
+    "one_step_and_higher_equivalent": false
+  },
+  {
+    "case_id": "e41b7b368bf129c347cf7b5f7ba2f8a23eb45b9824b5c1b1ac53a2a9835d9b20",
+    "study": "selective_flow",
+    "benchmark": "libero_plus",
+    "category": "Objects Layout",
+    "selected_steps": [
+      1,
+      10
+    ],
+    "equivalent_steps": [],
+    "all_selected_arms_equivalent": false,
+    "one_step_and_higher_equivalent": false
+  },
+  {
+    "case_id": "b3d9c567f8ecad4a3361755802c0036efcbd0c8afff43dfa22032759a2fa66de",
+    "study": "selective_flow",
+    "benchmark": "libero_plus",
+    "category": "Objects Layout",
+    "selected_steps": [
+      1,
+      10
+    ],
+    "equivalent_steps": [],
+    "all_selected_arms_equivalent": false,
+    "one_step_and_higher_equivalent": false
+  },
+  {
+    "case_id": "0ccf10751207f5431ae3b113be903709d508ce5fe6b6fd53019b9b5c2f57d102",
+    "study": "selective_flow",
+    "benchmark": "libero_plus",
+    "category": "Robot Initial States",
+    "selected_steps": [
+      1,
+      10
+    ],
+    "equivalent_steps": [],
+    "all_selected_arms_equivalent": false,
+    "one_step_and_higher_equivalent": false
+  },
+  {
+    "case_id": "f9f4752725b3d204908a67ba18b02aa8632b6bfa01473bc31a3254e70411245b",
+    "study": "selective_flow",
+    "benchmark": "libero_plus",
+    "category": "Robot Initial States",
+    "selected_steps": [
+      1,
+      10
+    ],
+    "equivalent_steps": [
+      1,
+      10
+    ],
+    "all_selected_arms_equivalent": true,
+    "one_step_and_higher_equivalent": true
+  },
+  {
+    "case_id": "444bc661da11e73afeee45a1bb68e378e6ab6cda2c1f88f4563845153a9fb343",
+    "study": "selective_flow",
+    "benchmark": "libero_plus",
+    "category": "Camera Viewpoints",
+    "selected_steps": [
+      1,
+      10
+    ],
+    "equivalent_steps": [],
+    "all_selected_arms_equivalent": false,
+    "one_step_and_higher_equivalent": false
+  },
+  {
+    "case_id": "a8520dee7f49db38a7331e8451a61d9f67c0819271d7581adbaeb158887f29ac",
+    "study": "selective_flow",
+    "benchmark": "libero_plus",
+    "category": "Camera Viewpoints",
+    "selected_steps": [
+      1,
+      10
+    ],
+    "equivalent_steps": [
+      1,
+      10
+    ],
+    "all_selected_arms_equivalent": true,
+    "one_step_and_higher_equivalent": true
+  },
+  {
+    "case_id": "9b939199d11a59539da4624b1dd73a1a3f53fd60f30e7ede40b8384c8d937020",
+    "study": "selective_flow",
+    "benchmark": "libero_plus",
+    "category": "Camera Viewpoints",
+    "selected_steps": [
+      1,
+      10
+    ],
+    "equivalent_steps": [
+      1,
+      10
+    ],
+    "all_selected_arms_equivalent": true,
+    "one_step_and_higher_equivalent": true
+  },
+  {
+    "case_id": "9d4d420092fb989182eadc231c46d00023889e27c1fbc27fb7dfaa51c684381d",
+    "study": "selective_flow",
+    "benchmark": "libero_plus",
+    "category": "Objects Layout",
+    "selected_steps": [
+      1,
+      10
+    ],
+    "equivalent_steps": [
+      1,
+      10
+    ],
+    "all_selected_arms_equivalent": true,
+    "one_step_and_higher_equivalent": true
+  },
+  {
+    "case_id": "e293b54b58a0e5cf715601f720d6a1df00cc8440d0cad9418423c8b042e24f51",
+    "study": "selective_flow",
+    "benchmark": "libero_plus",
+    "category": "Objects Layout",
+    "selected_steps": [
+      1,
+      10
+    ],
+    "equivalent_steps": [
+      1,
+      10
+    ],
+    "all_selected_arms_equivalent": true,
+    "one_step_and_higher_equivalent": true
+  },
+  {
+    "case_id": "faf1f27f5ad8e980cd15107146c0acea490c35b3a1142a451ca42d1c112fb7b6",
+    "study": "selective_flow",
+    "benchmark": "libero_plus",
+    "category": "Camera Viewpoints",
+    "selected_steps": [
+      1,
+      10
+    ],
+    "equivalent_steps": [],
+    "all_selected_arms_equivalent": false,
+    "one_step_and_higher_equivalent": false
+  },
+  {
+    "case_id": "14101503ef6f049daccf59d1d7b96aa6cca199ad236caae833f256154ed6577c",
+    "study": "selective_flow",
+    "benchmark": "libero_plus",
+    "category": "Camera Viewpoints",
+    "selected_steps": [
+      1,
+      10
+    ],
+    "equivalent_steps": [
+      1,
+      10
+    ],
+    "all_selected_arms_equivalent": true,
+    "one_step_and_higher_equivalent": true
+  },
+  {
+    "case_id": "6272fcf509d1508bcc757609ebee6b08698f244a47ed2e468de93db0ee131190",
+    "study": "selective_flow",
+    "benchmark": "libero_plus",
+    "category": "Objects Layout",
+    "selected_steps": [
+      1,
+      10
+    ],
+    "equivalent_steps": [],
+    "all_selected_arms_equivalent": false,
+    "one_step_and_higher_equivalent": false
+  },
+  {
+    "case_id": "36e2622e90c64847e070edfb94541053b60fadd1394561ac7cca8a59a026b325",
+    "study": "selective_flow",
+    "benchmark": "libero_plus",
+    "category": "Objects Layout",
+    "selected_steps": [
+      1,
+      10
+    ],
+    "equivalent_steps": [],
+    "all_selected_arms_equivalent": false,
+    "one_step_and_higher_equivalent": false
+  },
+  {
+    "case_id": "4b2109583ee11980e650ae20372bae9cb05d64bd517d7a469d439cd2b2147c51",
+    "study": "selective_flow",
+    "benchmark": "libero_plus",
+    "category": "Robot Initial States",
+    "selected_steps": [
+      1,
+      10
+    ],
+    "equivalent_steps": [],
+    "all_selected_arms_equivalent": false,
+    "one_step_and_higher_equivalent": false
+  },
+  {
+    "case_id": "db0eb23c2fcefb798874bed9f7d3c820ad9f124172652163d31dccafadfe480b",
+    "study": "selective_flow",
+    "benchmark": "libero_plus",
+    "category": "Robot Initial States",
+    "selected_steps": [
+      1,
+      10
+    ],
+    "equivalent_steps": [],
+    "all_selected_arms_equivalent": false,
+    "one_step_and_higher_equivalent": false
+  },
+  {
+    "case_id": "69f59e8636d9cd277bda60ec2fbfc7dac979230735be4e7b3c84400f3dd3e471",
+    "study": "selective_flow",
+    "benchmark": "libero_plus",
+    "category": "Robot Initial States",
+    "selected_steps": [
+      1,
+      10
+    ],
+    "equivalent_steps": [],
+    "all_selected_arms_equivalent": false,
+    "one_step_and_higher_equivalent": false
+  },
+  {
+    "case_id": "c86b2c17310eb172078bc8c99986add84f501cb56aa31dbbc64fd1185f365757",
+    "study": "selective_flow",
+    "benchmark": "libero_plus",
+    "category": "Robot Initial States",
+    "selected_steps": [
+      1,
+      10
+    ],
+    "equivalent_steps": [],
+    "all_selected_arms_equivalent": false,
+    "one_step_and_higher_equivalent": false
+  },
+  {
+    "case_id": "2e9a870e388decd2250ffa8ebce582e1c62bcac43152436496d7e0211493ea28",
+    "study": "selective_flow",
+    "benchmark": "libero_plus",
+    "category": "Robot Initial States",
+    "selected_steps": [
+      1,
+      10
+    ],
+    "equivalent_steps": [
+      1,
+      10
+    ],
+    "all_selected_arms_equivalent": true,
+    "one_step_and_higher_equivalent": true
+  },
+  {
+    "case_id": "15361f5e4b01468286a0afa7d55aa40766ca182b0eb344b216745bb6aecb1953",
+    "study": "selective_flow",
+    "benchmark": "libero_plus",
+    "category": "Camera Viewpoints",
+    "selected_steps": [
+      1,
+      10
+    ],
+    "equivalent_steps": [
+      1,
+      10
+    ],
+    "all_selected_arms_equivalent": true,
+    "one_step_and_higher_equivalent": true
+  },
+  {
+    "case_id": "4d5c13f59187dc7a11604b0c083ba9e83ec046bab729c43aaff2cc5101449d2f",
+    "study": "selective_flow",
+    "benchmark": "libero_plus",
+    "category": "Robot Initial States",
+    "selected_steps": [
+      1,
+      10
+    ],
+    "equivalent_steps": [],
+    "all_selected_arms_equivalent": false,
+    "one_step_and_higher_equivalent": false
+  },
+  {
+    "case_id": "efe3c21c0c8249907a8a9d22a6b7dd1b14546452e4c9fac020d2675171d90906",
+    "study": "selective_flow",
+    "benchmark": "libero_plus",
+    "category": "Camera Viewpoints",
+    "selected_steps": [
+      1,
+      10
+    ],
+    "equivalent_steps": [],
+    "all_selected_arms_equivalent": false,
+    "one_step_and_higher_equivalent": false
+  },
+  {
+    "case_id": "42af63322d9d5a4e28d2dc607f16d6901bf416c4e5279be3cb48d1f425564b70",
+    "study": "selective_flow",
+    "benchmark": "libero_plus",
+    "category": "Camera Viewpoints",
+    "selected_steps": [
+      1,
+      10
+    ],
+    "equivalent_steps": [
+      1
+    ],
+    "all_selected_arms_equivalent": false,
+    "one_step_and_higher_equivalent": false
+  },
+  {
+    "case_id": "9a432cea6c8593483323ed310703c4b5bf85acb1514bfe16e264a507ed27fb97",
+    "study": "selective_flow",
+    "benchmark": "libero_plus",
+    "category": "Camera Viewpoints",
+    "selected_steps": [
+      1,
+      10
+    ],
+    "equivalent_steps": [
+      1,
+      10
+    ],
+    "all_selected_arms_equivalent": true,
+    "one_step_and_higher_equivalent": true
+  },
+  {
+    "case_id": "16d4cbe275d30d9d49ad022cf033aec51fde6363ba06fef5d5fb3cd9346654c0",
+    "study": "selective_flow",
+    "benchmark": "libero_plus",
+    "category": "Camera Viewpoints",
+    "selected_steps": [
+      1,
+      10
+    ],
+    "equivalent_steps": [
+      1,
+      10
+    ],
+    "all_selected_arms_equivalent": true,
+    "one_step_and_higher_equivalent": true
+  },
+  {
+    "case_id": "a76c68e4604cb2afe03953ca59e919debf375422b897fbc0b76da951adbbc252",
+    "study": "frozen_flow",
+    "benchmark": "libero_plus",
+    "category": "Objects Layout",
+    "selected_steps": [
+      1,
+      2,
+      4,
+      10
+    ],
+    "equivalent_steps": [],
+    "all_selected_arms_equivalent": false,
+    "one_step_and_higher_equivalent": false
+  },
+  {
+    "case_id": "dd16f6707ad56f1b20f9a45354a9131fc1a60c9d6d678f4677f5432225bc9a63",
+    "study": "frozen_flow",
+    "benchmark": "libero_plus",
+    "category": "Objects Layout",
+    "selected_steps": [
+      1,
+      2,
+      4,
+      10
+    ],
+    "equivalent_steps": [],
+    "all_selected_arms_equivalent": false,
+    "one_step_and_higher_equivalent": false
+  },
+  {
+    "case_id": "5566d5b8eb44462844928170e3e095be91e379dd70e9f059221be01bb2bca6f5",
+    "study": "frozen_flow",
+    "benchmark": "libero_plus",
+    "category": "Robot Initial States",
+    "selected_steps": [
+      1,
+      2,
+      4,
+      10
+    ],
+    "equivalent_steps": [],
+    "all_selected_arms_equivalent": false,
+    "one_step_and_higher_equivalent": false
+  },
+  {
+    "case_id": "6f563b95e7574e72ed64475c8082927bb141cbe80fd1d36d381bfd1533f280ec",
+    "study": "frozen_flow",
+    "benchmark": "libero_plus",
+    "category": "Robot Initial States",
+    "selected_steps": [
+      1,
+      2,
+      4,
+      10
+    ],
+    "equivalent_steps": [],
+    "all_selected_arms_equivalent": false,
+    "one_step_and_higher_equivalent": false
+  },
+  {
+    "case_id": "cc83879116a0901b12032407bb4403b427553e2e887e92c791a096a51133d4e9",
+    "study": "frozen_flow",
+    "benchmark": "libero_plus",
+    "category": "Camera Viewpoints",
+    "selected_steps": [
+      1,
+      2,
+      4,
+      10
+    ],
+    "equivalent_steps": [],
+    "all_selected_arms_equivalent": false,
+    "one_step_and_higher_equivalent": false
+  },
+  {
+    "case_id": "4243ab82ff09224360fe13e4ab45418b25dd7c2d0253753973deff21296abafc",
+    "study": "frozen_flow",
+    "benchmark": "libero_plus",
+    "category": "Robot Initial States",
+    "selected_steps": [
+      1,
+      2,
+      4,
+      10
+    ],
+    "equivalent_steps": [],
+    "all_selected_arms_equivalent": false,
+    "one_step_and_higher_equivalent": false
+  },
+  {
+    "case_id": "4d1f5a3207712c3ed146c1a1c26274a883c2a1cc752610fdc1b9ef0c61a53878",
+    "study": "frozen_flow",
+    "benchmark": "libero_plus",
+    "category": "Camera Viewpoints",
+    "selected_steps": [
+      1,
+      2,
+      4,
+      10
+    ],
+    "equivalent_steps": [],
+    "all_selected_arms_equivalent": false,
+    "one_step_and_higher_equivalent": false
+  },
+  {
+    "case_id": "c53a0b0d2e410c9893979b6b649ad5280ffee498f1168f36ac7d084ac2f36bc4",
+    "study": "frozen_flow",
+    "benchmark": "libero_plus",
+    "category": "Robot Initial States",
+    "selected_steps": [
+      1,
+      2,
+      4,
+      10
+    ],
+    "equivalent_steps": [],
+    "all_selected_arms_equivalent": false,
+    "one_step_and_higher_equivalent": false
+  },
+  {
+    "case_id": "b839620aa8e15b9de5bb89f184e77aae1479287dede4453f4a626f8b2841b9ca",
+    "study": "frozen_flow",
+    "benchmark": "libero_plus",
+    "category": "Robot Initial States",
+    "selected_steps": [
+      1,
+      2,
+      4,
+      10
+    ],
+    "equivalent_steps": [
+      1,
+      2,
+      4,
+      10
+    ],
+    "all_selected_arms_equivalent": true,
+    "one_step_and_higher_equivalent": true
+  },
+  {
+    "case_id": "d5e65430e9e196534162b0184f49ebc4f50002138e0516c84ee1ee48feba732a",
+    "study": "frozen_flow",
+    "benchmark": "libero_plus",
+    "category": "Robot Initial States",
+    "selected_steps": [
+      1,
+      2,
+      4,
+      10
+    ],
+    "equivalent_steps": [],
+    "all_selected_arms_equivalent": false,
+    "one_step_and_higher_equivalent": false
+  },
+  {
+    "case_id": "31cf8cbd60e0f5a19d3b8f146a5b5a5410efda80c728c041155ccdc80cbaae7c",
+    "study": "frozen_flow",
+    "benchmark": "libero_plus",
+    "category": "Camera Viewpoints",
+    "selected_steps": [
+      1,
+      2,
+      4,
+      10
+    ],
+    "equivalent_steps": [],
+    "all_selected_arms_equivalent": false,
+    "one_step_and_higher_equivalent": false
+  },
+  {
+    "case_id": "6b1fa1c3372092b40049b209df82942be95a3e5760a39f3a76bdcbf71a15dff0",
+    "study": "frozen_flow",
+    "benchmark": "libero_plus",
+    "category": "Camera Viewpoints",
+    "selected_steps": [
+      1,
+      2,
+      4,
+      10
+    ],
+    "equivalent_steps": [],
+    "all_selected_arms_equivalent": false,
+    "one_step_and_higher_equivalent": false
+  },
+  {
+    "case_id": "25692ecbeae9f081067c54caca4a87c41889910ef5bacf63ce0722a6c77eaa3f",
+    "study": "selective_flow",
+    "benchmark": "libero_plus",
+    "category": "Objects Layout",
+    "selected_steps": [
+      1,
+      10
+    ],
+    "equivalent_steps": [],
+    "all_selected_arms_equivalent": false,
+    "one_step_and_higher_equivalent": false
+  },
+  {
+    "case_id": "be11cf03d69771c0812c0555ac34814e9bc45652a91449604ba1c065a482376c",
+    "study": "selective_flow",
+    "benchmark": "libero_plus",
+    "category": "Objects Layout",
+    "selected_steps": [
+      1,
+      10
+    ],
+    "equivalent_steps": [],
+    "all_selected_arms_equivalent": false,
+    "one_step_and_higher_equivalent": false
+  },
+  {
+    "case_id": "53ab477320c846a2dfcf1aa0740295e90e950719bd9edbe7da0cb00e81ef4f0f",
+    "study": "selective_flow",
+    "benchmark": "libero_plus",
+    "category": "Objects Layout",
+    "selected_steps": [
+      1,
+      10
+    ],
+    "equivalent_steps": [],
+    "all_selected_arms_equivalent": false,
+    "one_step_and_higher_equivalent": false
+  },
+  {
+    "case_id": "8947a9d1d03be987076a742d8efaaf7be0fc6450be5a72db0d069e930bf2d2f4",
+    "study": "selective_flow",
+    "benchmark": "libero_plus",
+    "category": "Objects Layout",
+    "selected_steps": [
+      1,
+      10
+    ],
+    "equivalent_steps": [],
+    "all_selected_arms_equivalent": false,
+    "one_step_and_higher_equivalent": false
+  },
+  {
+    "case_id": "f746cf0748126fcb6b2667872dd323c758bf34dc0201b07e6ab134928955df4c",
+    "study": "selective_flow",
+    "benchmark": "libero_plus",
+    "category": "Objects Layout",
+    "selected_steps": [
+      1,
+      10
+    ],
+    "equivalent_steps": [],
+    "all_selected_arms_equivalent": false,
+    "one_step_and_higher_equivalent": false
+  },
+  {
+    "case_id": "f14e3f795399dd349eb046a21a471d19cbf154c75fa99e489275927846e2332f",
+    "study": "selective_flow",
+    "benchmark": "libero_plus",
+    "category": "Objects Layout",
+    "selected_steps": [
+      1,
+      10
+    ],
+    "equivalent_steps": [],
+    "all_selected_arms_equivalent": false,
+    "one_step_and_higher_equivalent": false
+  },
+  {
+    "case_id": "3f058be4e6a037a9661b0c2841276ceadbbdc77352ab637140df2a3eef03d08b",
+    "study": "selective_flow",
+    "benchmark": "libero_plus",
+    "category": "Robot Initial States",
+    "selected_steps": [
+      1,
+      10
+    ],
+    "equivalent_steps": [],
+    "all_selected_arms_equivalent": false,
+    "one_step_and_higher_equivalent": false
+  },
+  {
+    "case_id": "0960cb5046f442afca74ee4f29e4d6a4b2c3db5c3ec167313479059511b80c62",
+    "study": "selective_flow",
+    "benchmark": "libero_plus",
+    "category": "Robot Initial States",
+    "selected_steps": [
+      1,
+      10
+    ],
+    "equivalent_steps": [],
+    "all_selected_arms_equivalent": false,
+    "one_step_and_higher_equivalent": false
+  },
+  {
+    "case_id": "915d2a164cad0b0820b26034b8db3ccbf8014334e286465eaf4621166b766006",
+    "study": "selective_flow",
+    "benchmark": "libero_plus",
+    "category": "Robot Initial States",
+    "selected_steps": [
+      1,
+      10
+    ],
+    "equivalent_steps": [],
+    "all_selected_arms_equivalent": false,
+    "one_step_and_higher_equivalent": false
+  },
+  {
+    "case_id": "0e5b7bfe4c7b1268df5c4842ea72e4af0f03df1414902a6c0ef0da913f394be2",
+    "study": "selective_flow",
+    "benchmark": "libero_plus",
+    "category": "Camera Viewpoints",
+    "selected_steps": [
+      1,
+      10
+    ],
+    "equivalent_steps": [],
+    "all_selected_arms_equivalent": false,
+    "one_step_and_higher_equivalent": false
+  },
+  {
+    "case_id": "d83c07671a7462a787bf966ed9d1e3d97a1ab1610e96c181460f9ac9333f05ee",
+    "study": "selective_flow",
+    "benchmark": "libero_plus",
+    "category": "Camera Viewpoints",
+    "selected_steps": [
+      1,
+      10
+    ],
+    "equivalent_steps": [],
+    "all_selected_arms_equivalent": false,
+    "one_step_and_higher_equivalent": false
+  },
+  {
+    "case_id": "cd7c2ea7e4f7697a4f8960115a13b01b8df26bae81a5f7cb0db95cb8609a8ba3",
+    "study": "selective_flow",
+    "benchmark": "libero_plus",
+    "category": "Camera Viewpoints",
+    "selected_steps": [
+      1,
+      10
+    ],
+    "equivalent_steps": [],
+    "all_selected_arms_equivalent": false,
+    "one_step_and_higher_equivalent": false
+  },
+  {
+    "case_id": "f884a790c211771b0e89535a1fa6b8056365eb7efcb5022d39c61ff857a54eae",
+    "study": "selective_flow",
+    "benchmark": "libero_plus",
+    "category": "Objects Layout",
+    "selected_steps": [
+      1,
+      10
+    ],
+    "equivalent_steps": [],
+    "all_selected_arms_equivalent": false,
+    "one_step_and_higher_equivalent": false
+  },
+  {
+    "case_id": "b7f18028b795fec94ae96c517c755e6cfa01612cacbba99ad8e1443899338858",
+    "study": "selective_flow",
+    "benchmark": "libero_plus",
+    "category": "Robot Initial States",
+    "selected_steps": [
+      1,
+      10
+    ],
+    "equivalent_steps": [],
+    "all_selected_arms_equivalent": false,
+    "one_step_and_higher_equivalent": false
+  },
+  {
+    "case_id": "a2d2c88d8ab2dd28b58bd9126a26062a63c4b3b109647bb887c3039413865aee",
+    "study": "selective_flow",
+    "benchmark": "libero_plus",
+    "category": "Camera Viewpoints",
+    "selected_steps": [
+      1,
+      10
+    ],
+    "equivalent_steps": [],
+    "all_selected_arms_equivalent": false,
+    "one_step_and_higher_equivalent": false
+  },
+  {
+    "case_id": "2d64f7f7f3913e9bbffa90957da33813e9ae6a12661b4d925fec32b6df4cd4af",
+    "study": "selective_flow",
+    "benchmark": "libero_plus",
+    "category": "Camera Viewpoints",
+    "selected_steps": [
+      1,
+      10
+    ],
+    "equivalent_steps": [],
+    "all_selected_arms_equivalent": false,
+    "one_step_and_higher_equivalent": false
+  },
+  {
+    "case_id": "463ee686426c716e03c320d7b9aa2a31cf80a81f3f029108332bdb04e6db5b80",
+    "study": "selective_flow",
+    "benchmark": "libero_plus",
+    "category": "Objects Layout",
+    "selected_steps": [
+      1,
+      10
+    ],
+    "equivalent_steps": [],
+    "all_selected_arms_equivalent": false,
+    "one_step_and_higher_equivalent": false
+  },
+  {
+    "case_id": "f4e166d3b590fa0de8dad0299d3dc5892b9387a6280c3f6416845a79d12d40b2",
+    "study": "selective_flow",
+    "benchmark": "libero_plus",
+    "category": "Robot Initial States",
+    "selected_steps": [
+      1,
+      10
+    ],
+    "equivalent_steps": [],
+    "all_selected_arms_equivalent": false,
+    "one_step_and_higher_equivalent": false
+  },
+  {
+    "case_id": "215fab537096a9194f45007d4f586f61fa5f7aef8092ea6d578ca80eafe13c25",
+    "study": "selective_flow",
+    "benchmark": "libero_plus",
+    "category": "Robot Initial States",
+    "selected_steps": [
+      1,
+      10
+    ],
+    "equivalent_steps": [],
+    "all_selected_arms_equivalent": false,
+    "one_step_and_higher_equivalent": false
+  },
+  {
+    "case_id": "68aa67e77469e2f656efc5f54f6ba55b5cf4e6be2ca30877c06e0efa478479bd",
+    "study": "selective_flow",
+    "benchmark": "libero_plus",
+    "category": "Robot Initial States",
+    "selected_steps": [
+      1,
+      10
+    ],
+    "equivalent_steps": [],
+    "all_selected_arms_equivalent": false,
+    "one_step_and_higher_equivalent": false
+  },
+  {
+    "case_id": "56c0cec3f356315cb27b7794d5370469c7b07018af13ea2b3605d715d1cdcc56",
+    "study": "selective_flow",
+    "benchmark": "libero_plus",
+    "category": "Robot Initial States",
+    "selected_steps": [
+      1,
+      10
+    ],
+    "equivalent_steps": [],
+    "all_selected_arms_equivalent": false,
+    "one_step_and_higher_equivalent": false
+  },
+  {
+    "case_id": "4cb9ba27e76c720f2f1812a1c6d3a1ba069196c1537387ef4a2c1e0017fc0c12",
+    "study": "selective_flow",
+    "benchmark": "libero_plus",
+    "category": "Robot Initial States",
+    "selected_steps": [
+      1,
+      10
+    ],
+    "equivalent_steps": [],
+    "all_selected_arms_equivalent": false,
+    "one_step_and_higher_equivalent": false
+  },
+  {
+    "case_id": "8c4563ba5aa6a1b5fbc2aee5ccd642a8f91e12f7f765f72536c6647250629e17",
+    "study": "selective_flow",
+    "benchmark": "libero_plus",
+    "category": "Robot Initial States",
+    "selected_steps": [
+      1,
+      10
+    ],
+    "equivalent_steps": [],
+    "all_selected_arms_equivalent": false,
+    "one_step_and_higher_equivalent": false
+  },
+  {
+    "case_id": "5cd43cbb389f898e332ab8aac9eba2d76da38443deebe54fcf1ef9b315b97292",
+    "study": "selective_flow",
+    "benchmark": "libero_plus",
+    "category": "Objects Layout",
+    "selected_steps": [
+      1,
+      10
+    ],
+    "equivalent_steps": [],
+    "all_selected_arms_equivalent": false,
+    "one_step_and_higher_equivalent": false
+  },
+  {
+    "case_id": "7f407977ba528df631ca74d5cd8e9daacc84e96c258e340d21081942cce231f5",
+    "study": "selective_flow",
+    "benchmark": "libero_plus",
+    "category": "Robot Initial States",
+    "selected_steps": [
+      1,
+      10
+    ],
+    "equivalent_steps": [],
+    "all_selected_arms_equivalent": false,
+    "one_step_and_higher_equivalent": false
+  },
+  {
+    "case_id": "34643219a227c36111f2a1d5301fb739b742bd85e00d65f01431709be82c3547",
+    "study": "selective_flow",
+    "benchmark": "libero_plus",
+    "category": "Camera Viewpoints",
+    "selected_steps": [
+      1,
+      10
+    ],
+    "equivalent_steps": [],
+    "all_selected_arms_equivalent": false,
+    "one_step_and_higher_equivalent": false
+  },
+  {
+    "case_id": "bf532ed6484468add4104d73edb7468c816012adaea07cf2e20460d08bb089bb",
+    "study": "selective_flow",
+    "benchmark": "libero_plus",
+    "category": "Camera Viewpoints",
+    "selected_steps": [
+      1,
+      10
+    ],
+    "equivalent_steps": [],
+    "all_selected_arms_equivalent": false,
+    "one_step_and_higher_equivalent": false
+  },
+  {
+    "case_id": "82459a05022d9e3cfdf919729b77e6cea80bdc5cbee41243d06cd57bc2e05f15",
+    "study": "selective_flow",
+    "benchmark": "libero_plus",
+    "category": "Camera Viewpoints",
+    "selected_steps": [
+      1,
+      10
+    ],
+    "equivalent_steps": [],
+    "all_selected_arms_equivalent": false,
+    "one_step_and_higher_equivalent": false
+  },
+  {
+    "case_id": "791d365d26c576a7534eea8afae9abfcfa60a5b11856d7f11a4d4afbf6411410",
+    "study": "selective_flow",
+    "benchmark": "libero_plus",
+    "category": "Camera Viewpoints",
+    "selected_steps": [
+      1,
+      10
+    ],
+    "equivalent_steps": [],
+    "all_selected_arms_equivalent": false,
+    "one_step_and_higher_equivalent": false
+  },
+  {
+    "case_id": "f3d82666b850b35e828034140d826ab90e9325cc10e210267e75d6b6864e56ac",
+    "study": "frozen_flow",
+    "benchmark": "libero_plus",
+    "category": "Objects Layout",
+    "selected_steps": [
+      1,
+      2,
+      4,
+      10
+    ],
+    "equivalent_steps": [],
+    "all_selected_arms_equivalent": false,
+    "one_step_and_higher_equivalent": false
+  },
+  {
+    "case_id": "6dddbb78bf6efef1c6a424f4dd95e223859bbc96ea589a994169f6e078580fe2",
+    "study": "frozen_flow",
+    "benchmark": "libero_plus",
+    "category": "Objects Layout",
+    "selected_steps": [
+      1,
+      2,
+      4,
+      10
+    ],
+    "equivalent_steps": [],
+    "all_selected_arms_equivalent": false,
+    "one_step_and_higher_equivalent": false
+  },
+  {
+    "case_id": "f4f5c99277c1e8c267218a4749fe7969b8dbc1d73769d9e12f2e2c376b5b4878",
+    "study": "frozen_flow",
+    "benchmark": "libero_plus",
+    "category": "Robot Initial States",
+    "selected_steps": [
+      1,
+      2,
+      4,
+      10
+    ],
+    "equivalent_steps": [],
+    "all_selected_arms_equivalent": false,
+    "one_step_and_higher_equivalent": false
+  },
+  {
+    "case_id": "4cd897f2020abe0316be181a9ff021bb30b166eb5717d8e2c4fe69256876df26",
+    "study": "frozen_flow",
+    "benchmark": "libero_plus",
+    "category": "Robot Initial States",
+    "selected_steps": [
+      1,
+      2,
+      4,
+      10
+    ],
+    "equivalent_steps": [],
+    "all_selected_arms_equivalent": false,
+    "one_step_and_higher_equivalent": false
+  },
+  {
+    "case_id": "6b0f4d27a08b47a74d4af54abaf1edff1e811c7753087bbcf72450c4095ec644",
+    "study": "frozen_flow",
+    "benchmark": "libero_plus",
+    "category": "Camera Viewpoints",
+    "selected_steps": [
+      1,
+      2,
+      4,
+      10
+    ],
+    "equivalent_steps": [],
+    "all_selected_arms_equivalent": false,
+    "one_step_and_higher_equivalent": false
+  },
+  {
+    "case_id": "072bd99e04f3195070d7a0abd6b1d725e10057dd39ff6595a63b4baacac296e2",
+    "study": "frozen_flow",
+    "benchmark": "libero_plus",
+    "category": "Robot Initial States",
+    "selected_steps": [
+      1,
+      2,
+      4,
+      10
+    ],
+    "equivalent_steps": [],
+    "all_selected_arms_equivalent": false,
+    "one_step_and_higher_equivalent": false
+  },
+  {
+    "case_id": "5e61e758c5d61a21b13d6b5541f0c19d89b6c30b88e27628cb66f1110006e192",
+    "study": "frozen_flow",
+    "benchmark": "libero_plus",
+    "category": "Camera Viewpoints",
+    "selected_steps": [
+      1,
+      2,
+      4,
+      10
+    ],
+    "equivalent_steps": [],
+    "all_selected_arms_equivalent": false,
+    "one_step_and_higher_equivalent": false
+  },
+  {
+    "case_id": "a07eee3c6e2b6d54b98af6d8fb48ed343ad8687febc992aea1f080f2c2b0887d",
+    "study": "frozen_flow",
+    "benchmark": "libero_plus",
+    "category": "Robot Initial States",
+    "selected_steps": [
+      1,
+      2,
+      4,
+      10
+    ],
+    "equivalent_steps": [],
+    "all_selected_arms_equivalent": false,
+    "one_step_and_higher_equivalent": false
+  },
+  {
+    "case_id": "257e0a90921f0a1d75601102f94cd42e2e87b860e1c5dc1537ec2db7f74e950c",
+    "study": "frozen_flow",
+    "benchmark": "libero_plus",
+    "category": "Robot Initial States",
+    "selected_steps": [
+      1,
+      2,
+      4,
+      10
+    ],
+    "equivalent_steps": [],
+    "all_selected_arms_equivalent": false,
+    "one_step_and_higher_equivalent": false
+  },
+  {
+    "case_id": "dc2256420f40a3f6a96553993ef5e5283d231d85d3cf9efaf9de3a7fb8d3d2e4",
+    "study": "frozen_flow",
+    "benchmark": "libero_plus",
+    "category": "Robot Initial States",
+    "selected_steps": [
+      1,
+      2,
+      4,
+      10
+    ],
+    "equivalent_steps": [],
+    "all_selected_arms_equivalent": false,
+    "one_step_and_higher_equivalent": false
+  },
+  {
+    "case_id": "4f3e31c5637abf61900e441985d26ae12554545837e604e66b41fd9c0823d473",
+    "study": "frozen_flow",
+    "benchmark": "libero_plus",
+    "category": "Camera Viewpoints",
+    "selected_steps": [
+      1,
+      2,
+      4,
+      10
+    ],
+    "equivalent_steps": [],
+    "all_selected_arms_equivalent": false,
+    "one_step_and_higher_equivalent": false
+  },
+  {
+    "case_id": "5edf3a7b4e642b6ac7b450ff12c9f8eeaa0113dc1592310bf4a32e6f80ed1a07",
+    "study": "frozen_flow",
+    "benchmark": "libero_plus",
+    "category": "Camera Viewpoints",
+    "selected_steps": [
+      1,
+      2,
+      4,
+      10
+    ],
+    "equivalent_steps": [],
+    "all_selected_arms_equivalent": false,
+    "one_step_and_higher_equivalent": false
+  },
+  {
+    "case_id": "7c90243b36ba401a834a527db26350d33dcc73162c8fec1df8a53f0f4fa3db6b",
+    "study": "selective_flow",
+    "benchmark": "libero_plus",
+    "category": "Objects Layout",
+    "selected_steps": [
+      1,
+      10
+    ],
+    "equivalent_steps": [
+      1,
+      10
+    ],
+    "all_selected_arms_equivalent": true,
+    "one_step_and_higher_equivalent": true
+  },
+  {
+    "case_id": "6545248961aabd4d1117347c3831709cb7b9490cd83f1dfc42659112d615a31b",
+    "study": "selective_flow",
+    "benchmark": "libero_plus",
+    "category": "Objects Layout",
+    "selected_steps": [
+      1,
+      10
+    ],
+    "equivalent_steps": [],
+    "all_selected_arms_equivalent": false,
+    "one_step_and_higher_equivalent": false
+  },
+  {
+    "case_id": "cc244326f7a44b996256a4838b0666e28593d70b8aa0aa210de62f1e3aa98cf5",
+    "study": "selective_flow",
+    "benchmark": "libero_plus",
+    "category": "Objects Layout",
+    "selected_steps": [
+      1,
+      10
+    ],
+    "equivalent_steps": [],
+    "all_selected_arms_equivalent": false,
+    "one_step_and_higher_equivalent": false
+  },
+  {
+    "case_id": "8b5481df3c1f7b21d279deb558b8a466ffd37c88d8cb5e2c804b6f2bcdada32e",
+    "study": "selective_flow",
+    "benchmark": "libero_plus",
+    "category": "Objects Layout",
+    "selected_steps": [
+      1,
+      10
+    ],
+    "equivalent_steps": [],
+    "all_selected_arms_equivalent": false,
+    "one_step_and_higher_equivalent": false
+  },
+  {
+    "case_id": "0a0ad0b094b56472b4fb9dabc9d29a4be78070b5ee035afa53fca596050759be",
+    "study": "selective_flow",
+    "benchmark": "libero_plus",
+    "category": "Objects Layout",
+    "selected_steps": [
+      1,
+      10
+    ],
+    "equivalent_steps": [
+      1,
+      10
+    ],
+    "all_selected_arms_equivalent": true,
+    "one_step_and_higher_equivalent": true
+  },
+  {
+    "case_id": "ec53c864fc6311854552f68f993d825bc100fa96dc196d54be7ab1e116414e56",
+    "study": "selective_flow",
+    "benchmark": "libero_plus",
+    "category": "Objects Layout",
+    "selected_steps": [
+      1,
+      10
+    ],
+    "equivalent_steps": [
+      1,
+      10
+    ],
+    "all_selected_arms_equivalent": true,
+    "one_step_and_higher_equivalent": true
+  },
+  {
+    "case_id": "bcc65e2ea408bd5302c59598613e94bea8975f603b02958f544f904851dc153a",
+    "study": "selective_flow",
+    "benchmark": "libero_plus",
+    "category": "Robot Initial States",
+    "selected_steps": [
+      1,
+      10
+    ],
+    "equivalent_steps": [],
+    "all_selected_arms_equivalent": false,
+    "one_step_and_higher_equivalent": false
+  },
+  {
+    "case_id": "f1a5e5f94d42237deab12acc85ed677e0e6040a3ae925b06e0ca8b2f40d9ba36",
+    "study": "selective_flow",
+    "benchmark": "libero_plus",
+    "category": "Robot Initial States",
+    "selected_steps": [
+      1,
+      10
+    ],
+    "equivalent_steps": [],
+    "all_selected_arms_equivalent": false,
+    "one_step_and_higher_equivalent": false
+  },
+  {
+    "case_id": "20d18c748fc313ec63b164c9c8f5afed56ca0ee4dd31a2de24d39541d2aa81b7",
+    "study": "selective_flow",
+    "benchmark": "libero_plus",
+    "category": "Camera Viewpoints",
+    "selected_steps": [
+      1,
+      10
+    ],
+    "equivalent_steps": [],
+    "all_selected_arms_equivalent": false,
+    "one_step_and_higher_equivalent": false
+  },
+  {
+    "case_id": "02e0559be6cd3e1309ac8202dcb0e8c7893785957eabea6c6b66342f3a4a7f81",
+    "study": "selective_flow",
+    "benchmark": "libero_plus",
+    "category": "Camera Viewpoints",
+    "selected_steps": [
+      1,
+      10
+    ],
+    "equivalent_steps": [],
+    "all_selected_arms_equivalent": false,
+    "one_step_and_higher_equivalent": false
+  },
+  {
+    "case_id": "dd69db04e69fe6240e929c5b191aca4746b43a6820bc752e257e9bb487b2b64d",
+    "study": "selective_flow",
+    "benchmark": "libero_plus",
+    "category": "Camera Viewpoints",
+    "selected_steps": [
+      1,
+      10
+    ],
+    "equivalent_steps": [],
+    "all_selected_arms_equivalent": false,
+    "one_step_and_higher_equivalent": false
+  },
+  {
+    "case_id": "ab697808ac3172778b17efe3840d9bfa84fe5420865ad55110a883d09115a0eb",
+    "study": "selective_flow",
+    "benchmark": "libero_plus",
+    "category": "Objects Layout",
+    "selected_steps": [
+      1,
+      10
+    ],
+    "equivalent_steps": [],
+    "all_selected_arms_equivalent": false,
+    "one_step_and_higher_equivalent": false
+  },
+  {
+    "case_id": "df0f2a77ff6f0c04d7750c90b217b6d791486751da3e34ee17892fb18b8adc48",
+    "study": "selective_flow",
+    "benchmark": "libero_plus",
+    "category": "Objects Layout",
+    "selected_steps": [
+      1,
+      10
+    ],
+    "equivalent_steps": [],
+    "all_selected_arms_equivalent": false,
+    "one_step_and_higher_equivalent": false
+  },
+  {
+    "case_id": "a5f0ab302f1e7e705ebd086d5fdbde9343cd2b24486681a1a45d903da51f7c7e",
+    "study": "selective_flow",
+    "benchmark": "libero_plus",
+    "category": "Robot Initial States",
+    "selected_steps": [
+      1,
+      10
+    ],
+    "equivalent_steps": [],
+    "all_selected_arms_equivalent": false,
+    "one_step_and_higher_equivalent": false
+  },
+  {
+    "case_id": "024ddb639c4d93b018fe11203570b6922a3a5bfd1f42dbc8b26bf898c9d890e6",
+    "study": "selective_flow",
+    "benchmark": "libero_plus",
+    "category": "Camera Viewpoints",
+    "selected_steps": [
+      1,
+      10
+    ],
+    "equivalent_steps": [],
+    "all_selected_arms_equivalent": false,
+    "one_step_and_higher_equivalent": false
+  },
+  {
+    "case_id": "acc61dd0e5b427cb13fadc3c483256c018cc0b0e13bce1db2286ddef9338dbef",
+    "study": "selective_flow",
+    "benchmark": "libero_plus",
+    "category": "Camera Viewpoints",
+    "selected_steps": [
+      1,
+      10
+    ],
+    "equivalent_steps": [],
+    "all_selected_arms_equivalent": false,
+    "one_step_and_higher_equivalent": false
+  },
+  {
+    "case_id": "6e0c587daa7a62268ffce973b2465854dbfc4a0be0e1d8fb03499f1b2878f104",
+    "study": "selective_flow",
+    "benchmark": "libero_plus",
+    "category": "Objects Layout",
+    "selected_steps": [
+      1,
+      10
+    ],
+    "equivalent_steps": [
+      1,
+      10
+    ],
+    "all_selected_arms_equivalent": true,
+    "one_step_and_higher_equivalent": true
+  },
+  {
+    "case_id": "c53d195ba2bf60af4c54cb11fd2677690597223849c835bea7a88ec865cf233c",
+    "study": "selective_flow",
+    "benchmark": "libero_plus",
+    "category": "Robot Initial States",
+    "selected_steps": [
+      1,
+      10
+    ],
+    "equivalent_steps": [],
+    "all_selected_arms_equivalent": false,
+    "one_step_and_higher_equivalent": false
+  },
+  {
+    "case_id": "4466ab71c531a8f716eaff013bf1a7918f0a7038fd13569418a31e1a47c378db",
+    "study": "selective_flow",
+    "benchmark": "libero_plus",
+    "category": "Robot Initial States",
+    "selected_steps": [
+      1,
+      10
+    ],
+    "equivalent_steps": [],
+    "all_selected_arms_equivalent": false,
+    "one_step_and_higher_equivalent": false
+  },
+  {
+    "case_id": "dfbf7d9e88aec726cbf56d94411441269d9b055a8f3d22ca8b7e9c3b21915dad",
+    "study": "selective_flow",
+    "benchmark": "libero_plus",
+    "category": "Robot Initial States",
+    "selected_steps": [
+      1,
+      10
+    ],
+    "equivalent_steps": [],
+    "all_selected_arms_equivalent": false,
+    "one_step_and_higher_equivalent": false
+  },
+  {
+    "case_id": "27a7fdc1477460db108805d1206254b0aae106da29aada9653e1bdb98c6e6d67",
+    "study": "selective_flow",
+    "benchmark": "libero_plus",
+    "category": "Robot Initial States",
+    "selected_steps": [
+      1,
+      10
+    ],
+    "equivalent_steps": [
+      1,
+      10
+    ],
+    "all_selected_arms_equivalent": true,
+    "one_step_and_higher_equivalent": true
+  },
+  {
+    "case_id": "9804db1f50f20fef37b042a3c8777b9b6a6c4ea10215cc7df810d727f9e5db78",
+    "study": "selective_flow",
+    "benchmark": "libero_plus",
+    "category": "Robot Initial States",
+    "selected_steps": [
+      1,
+      10
+    ],
+    "equivalent_steps": [],
+    "all_selected_arms_equivalent": false,
+    "one_step_and_higher_equivalent": false
+  },
+  {
+    "case_id": "ed14ffdda01f62bde42ca38d24daa736d8dc3ac785dda8a1a33d78267c374c85",
+    "study": "selective_flow",
+    "benchmark": "libero_plus",
+    "category": "Camera Viewpoints",
+    "selected_steps": [
+      1,
+      10
+    ],
+    "equivalent_steps": [
+      1,
+      10
+    ],
+    "all_selected_arms_equivalent": true,
+    "one_step_and_higher_equivalent": true
+  },
+  {
+    "case_id": "11c715275f92fb9af7117118df4f4e098a0171f85948d3986ddcdc840d8927c0",
+    "study": "selective_flow",
+    "benchmark": "libero_plus",
+    "category": "Objects Layout",
+    "selected_steps": [
+      1,
+      10
+    ],
+    "equivalent_steps": [],
+    "all_selected_arms_equivalent": false,
+    "one_step_and_higher_equivalent": false
+  },
+  {
+    "case_id": "ca57a821535a895d9f2952148c2264ca2c9537d9f418dd290d7253e4a6fe6fdc",
+    "study": "selective_flow",
+    "benchmark": "libero_plus",
+    "category": "Camera Viewpoints",
+    "selected_steps": [
+      1,
+      10
+    ],
+    "equivalent_steps": [],
+    "all_selected_arms_equivalent": false,
+    "one_step_and_higher_equivalent": false
+  },
+  {
+    "case_id": "0b8ec8f97dd14968477a2f06e2d0cb3e1dc161ff4031a495a8775e90c29bd61b",
+    "study": "selective_flow",
+    "benchmark": "libero_plus",
+    "category": "Camera Viewpoints",
+    "selected_steps": [
+      1,
+      10
+    ],
+    "equivalent_steps": [
+      1,
+      10
+    ],
+    "all_selected_arms_equivalent": true,
+    "one_step_and_higher_equivalent": true
+  },
+  {
+    "case_id": "f4ccb13af45430ee317c99ba4a80c61625b14819cf176a526919a2ba020514c4",
+    "study": "selective_flow",
+    "benchmark": "libero_plus",
+    "category": "Camera Viewpoints",
+    "selected_steps": [
+      1,
+      10
+    ],
+    "equivalent_steps": [
+      1,
+      10
+    ],
+    "all_selected_arms_equivalent": true,
+    "one_step_and_higher_equivalent": true
+  },
+  {
+    "case_id": "f7dbf9245d6a2dfc2efa64b23ad31fd52b2774fc8ebd6bd410100678bfec0c2d",
+    "study": "selective_flow",
+    "benchmark": "libero_plus",
+    "category": "Camera Viewpoints",
+    "selected_steps": [
+      1,
+      10
+    ],
+    "equivalent_steps": [],
+    "all_selected_arms_equivalent": false,
+    "one_step_and_higher_equivalent": false
+  },
+  {
+    "case_id": "cd7c1ab3e4f87b55fabcfd8719766d6f302d3d81a389bc4c8f5bcfe98a100260",
+    "study": "selective_flow",
+    "benchmark": "libero_plus",
+    "category": "Camera Viewpoints",
+    "selected_steps": [
+      1,
+      10
+    ],
+    "equivalent_steps": [],
+    "all_selected_arms_equivalent": false,
+    "one_step_and_higher_equivalent": false
+  }
+]

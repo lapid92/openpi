@@ -1,0 +1,44 @@
+{
+  "status": "passed",
+  "manifest_sha256": "d9cfdf88561ec89206bd78d7104671e2d72e28cf48b12c947fc59cfd2b18cbdb",
+  "declared_cases": 195,
+  "declared_episodes": 548,
+  "actual_episodes": 548,
+  "reported_live_counter": 547,
+  "final_summary_counter": 548,
+  "equivalence": {
+    "reconstruction-not-equivalent": 432,
+    "exact_replay": 116
+  },
+  "by_study_benchmark": {
+    "frozen_flow/libero": {
+      "reconstruction-not-equivalent": 103,
+      "exact_replay": 17
+    },
+    "frozen_flow/libero_plus": {
+      "reconstruction-not-equivalent": 154,
+      "exact_replay": 42
+    },
+    "selective_flow/libero_plus": {
+      "reconstruction-not-equivalent": 175,
+      "exact_replay": 57
+    }
+  },
+  "mismatch_categories": {
+    "observation_sha256": 432,
+    "success": 111,
+    "chunk_count": 227,
+    "policy_steps": 262,
+    "action_sha256": 432,
+    "total_velocity_evaluations": 227
+  },
+  "fully_equivalent_selected_cases": 42,
+  "one_step_plus_higher_equivalent_cases": 42,
+  "counter_explanation": "replay_supervise.py updates state.records only inside worker polling loop. Completion assigns status/summary but never refreshes records; 547 is stale last progress snapshot, exact raw/final audited coverage is548.",
+  "source_files_verified": 304,
+  "media_hashes_and_numeric_traces_reverified": true,
+  "media_decoding_rerun": false,
+  "prior_full_decode_audit_hash": "28e6e8ec8cb990ae5e1039c6a09418d667e9831c60e2c72fc8c1442d8702608e",
+  "media_gate": "Prior successful complete video decoding binds identical SHA256 raw files; each current recording file/hash/numeric trace rechecked. Pairing/RNG audit rerun.",
+  "attribution_rule": "Only individually exact arms may support original-episode labels; original paired comparisons require both relevant arms exact. All non-equivalent videos are reconstruction-only, even when outcomes happen to agree."
+}

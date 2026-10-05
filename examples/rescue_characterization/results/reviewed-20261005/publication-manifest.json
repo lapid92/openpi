@@ -1,0 +1,967 @@
+{
+  "baseline_locked": true,
+  "baseline_lock": "/volt/artifacts/rescue-characterization/review-control/baseline-lock.json",
+  "baseline_lock_sha256": "b7896f7ffbf3cf6bae18cd234c5f03197634632a852ea8b32c708e753fe52980",
+  "review_summary": "/volt/artifacts/rescue-characterization/review-final-v3/review-summary.json",
+  "review_summary_sha256": "55db2c6cab76fa60174c95bec42719a028cf32d22196e4ed13a26095de62a1e4",
+  "reports": [
+    {
+      "path": "/volt/artifacts/rescue-characterization/final-report.md",
+      "name": "REPORT.md",
+      "sha256": "fdfff35c2d03071c4341172321eb8f7fd5d21609c8b2ed799ec4a2c23aaa69e7"
+    },
+    {
+      "path": "/volt/artifacts/rescue-characterization/final-independent-counts/README.md",
+      "name": "audits/counts/README.md",
+      "sha256": "fea3298c01715c106f6f02623b8091bcfb1a3138ba478ae4cdb99533f0548acd"
+    },
+    {
+      "path": "/volt/artifacts/rescue-characterization/final-independent-counts/audit.json",
+      "name": "audits/counts/audit.json",
+      "sha256": "77cfa51764cda489d93e445dedd52af560455969a83c498c46a8bba7c99bfa55"
+    },
+    {
+      "path": "/volt/artifacts/rescue-characterization/final-independent-counts/case-vectors.jsonl",
+      "name": "audits/counts/case-vectors.jsonl",
+      "sha256": "7238e86b71473faa597a9e2900be6e272c2bea94d75ad8821ac780b07b914b53"
+    },
+    {
+      "path": "/volt/artifacts/rescue-characterization/final-independent-counts/execution.log",
+      "name": "audits/counts/execution.log",
+      "sha256": "e938fbbcd306c7eca52b19e9babc3b6a2a0f2cb6d09267bc956b94b0fa3a667a"
+    },
+    {
+      "path": "/volt/artifacts/rescue-characterization/final-independent-counts/reproduce.py",
+      "name": "audits/counts/reproduce.py",
+      "sha256": "2854ab5337cf3b7ba1d64f263ed0df12d9860a8f196516a2fa51f07c7dffc54c"
+    },
+    {
+      "path": "/volt/artifacts/rescue-characterization/final-independent-counts/sharder-test-evidence.json",
+      "name": "audits/counts/sharder-test-evidence.json",
+      "sha256": "64cd07f8c80f804804b08658b6f6ee61cfdf42fc13f1b42d01c46879ff742eca"
+    },
+    {
+      "path": "/volt/artifacts/rescue-characterization/final-independent-replay/README.md",
+      "name": "audits/replay/README.md",
+      "sha256": "ffdfb02740af6a6dd2d0edc86267f02a8d8365f38768a47813892b6941bdccb5"
+    },
+    {
+      "path": "/volt/artifacts/rescue-characterization/final-independent-replay/audit.json",
+      "name": "audits/replay/audit.json",
+      "sha256": "2005d8cd56e0460dfc0911e247d82733954087a445fe1e1d7533288239a6aaed"
+    },
+    {
+      "path": "/volt/artifacts/rescue-characterization/final-independent-replay/audit_replay.py",
+      "name": "audits/replay/audit_replay.py",
+      "sha256": "99be7b214db5c3196e29f9aebbd5f1072a4f0330ba07ac19930711e304778491"
+    },
+    {
+      "path": "/volt/artifacts/rescue-characterization/final-independent-replay/case-attribution.json",
+      "name": "audits/replay/case-attribution.json",
+      "sha256": "8f87ac015860660cde9cff89df30fe888bd679730d9b4d10007097c181cd20de"
+    },
+    {
+      "path": "/volt/artifacts/rescue-characterization/final-independent-replay/episode-attribution.jsonl",
+      "name": "audits/replay/episode-attribution.jsonl",
+      "sha256": "b547d37c212ccc3643ef204d0b1307f50f8b510d4ff9923ee8e3338f43bd5328"
+    },
+    {
+      "path": "/volt/artifacts/rescue-characterization/final-independent-replay/execution.log",
+      "name": "audits/replay/execution.log",
+      "sha256": "cf2669abb8b0c438f9b784b691deb30bfdc9160f763cad20c0d327da7fc24a92"
+    },
+    {
+      "path": "/volt/artifacts/rescue-characterization/final-reviewer/FINAL_REPORT_REVIEW.md",
+      "name": "audits/final-reviewer/FINAL_REPORT_REVIEW.md",
+      "sha256": "a7d750b404966bbc1fabaeb488a8a1dabdd5a471f0b3b8b4c6dbaac557c16c56"
+    },
+    {
+      "path": "/volt/artifacts/rescue-characterization/final-reviewer/PRELIMINARY_REVIEW.md",
+      "name": "audits/final-reviewer/PRELIMINARY_REVIEW.md",
+      "sha256": "80116914ea58f1fdfa57952d283cebc40c39b875b2f1bd049c4385340360e963"
+    },
+    {
+      "path": "/volt/artifacts/rescue-characterization/final-reviewer/REVISED_HELPER_REVIEW.md",
+      "name": "audits/final-reviewer/REVISED_HELPER_REVIEW.md",
+      "sha256": "a69e5c26952adb207cda60200dc21fa9c6ffb2c9ee4f814b703f8092260a3e7f"
+    },
+    {
+      "path": "/volt/artifacts/rescue-characterization/final-reviewer/audit_final_join.py",
+      "name": "audits/final-reviewer/audit_final_join.py",
+      "sha256": "28b6fb3a642db94e816dacbde2dcd740a3eca88455fa8d0e9c4f5540d2678e08"
+    },
+    {
+      "path": "/volt/artifacts/rescue-characterization/final-reviewer/audit_preliminary.py",
+      "name": "audits/final-reviewer/audit_preliminary.py",
+      "sha256": "fbb10aa100a6d4747af4a0c694928ed4f37746c2663198117f3004666e8d74b4"
+    },
+    {
+      "path": "/volt/artifacts/rescue-characterization/final-reviewer/audit_report.py",
+      "name": "audits/final-reviewer/audit_report.py",
+      "sha256": "baee8878729f64a2dc667ee093967c9f8673b259443e0658cb2def63ec94ef59"
+    },
+    {
+      "path": "/volt/artifacts/rescue-characterization/final-reviewer/existing-tests.log",
+      "name": "audits/final-reviewer/existing-tests.log",
+      "sha256": "1a277bdc90e1aca0f0d6d2951e269907a2d5677eb449341cc22bf5057e477ddd"
+    },
+    {
+      "path": "/volt/artifacts/rescue-characterization/final-reviewer/independent-tests.log",
+      "name": "audits/final-reviewer/independent-tests.log",
+      "sha256": "456a76ffb4dde2aa1038da286aec277dfeab966837b33974b7ab6cb02fa22096"
+    },
+    {
+      "path": "/volt/artifacts/rescue-characterization/final-reviewer/package-draft-audit.json",
+      "name": "audits/final-reviewer/package-draft-audit.json",
+      "sha256": "de0f4479c39cb717aeaf59a97a5e2672587208c75d1ea09e694506ec99e47dce"
+    },
+    {
+      "path": "/volt/artifacts/rescue-characterization/final-reviewer/preliminary-audit.json",
+      "name": "audits/final-reviewer/preliminary-audit.json",
+      "sha256": "daf0a0329ac133c597d9f3d9bed6d0af128ef315cfd8002bb129d46c1f350e28"
+    },
+    {
+      "path": "/volt/artifacts/rescue-characterization/final-reviewer/preliminary-label-table.json",
+      "name": "audits/final-reviewer/preliminary-label-table.json",
+      "sha256": "39cee0fcfaf60e632851260a008aee56d5bd58b3857ad4325e10808505461540"
+    },
+    {
+      "path": "/volt/artifacts/rescue-characterization/final-reviewer/preliminary-links.json",
+      "name": "audits/final-reviewer/preliminary-links.json",
+      "sha256": "8d06bb874b023d6e5eebfdba0892ebb6ecf6afc0d2f3f7173d2743a829f7beef"
+    },
+    {
+      "path": "/volt/artifacts/rescue-characterization/final-reviewer/report-audit.json",
+      "name": "audits/final-reviewer/report-audit.json",
+      "sha256": "17fc2d3933485ba04c2d965b0545717cc1dc2c08a24055f6577ae0645300065d"
+    },
+    {
+      "path": "/volt/artifacts/rescue-characterization/final-reviewer/review-final-audit.json",
+      "name": "audits/final-reviewer/review-final-audit.json",
+      "sha256": "3f316379d24dfc20a928c0fc4b9aac66b60fea98e119afc9c4eabceb0e4ce493"
+    },
+    {
+      "path": "/volt/artifacts/rescue-characterization/final-reviewer/review-final-v2-audit.json",
+      "name": "audits/final-reviewer/review-final-v2-audit.json",
+      "sha256": "e2e1e058c1d38d3f9dfed589bf83d1186e99734c5c8b54a3e9187e98925b04a7"
+    },
+    {
+      "path": "/volt/artifacts/rescue-characterization/final-reviewer/review-final-v3-audit.json",
+      "name": "audits/final-reviewer/review-final-v3-audit.json",
+      "sha256": "8533961bb2b7cfabd95fb01478b6d307b11c7027b69a95a0e09af729dd49afd6"
+    },
+    {
+      "path": "/volt/artifacts/rescue-characterization/final-reviewer/revised-existing-tests.log",
+      "name": "audits/final-reviewer/revised-existing-tests.log",
+      "sha256": "c4b12b24c6a080999d4b9d2962cb2c8de5d4b47dd118f31953d9685463db8009"
+    },
+    {
+      "path": "/volt/artifacts/rescue-characterization/final-reviewer/revised-gates-tests.log",
+      "name": "audits/final-reviewer/revised-gates-tests.log",
+      "sha256": "ec14a7cd188262781c0ea7399a9b447fbea72038cf994192997da487b9f725ec"
+    },
+    {
+      "path": "/volt/artifacts/rescue-characterization/final-reviewer/revised-helper-hashes.txt",
+      "name": "audits/final-reviewer/revised-helper-hashes.txt",
+      "sha256": "f6f9c2c6b9aa8f4c785533847d22d710b967db013c8ebe24c498f5c968d74231"
+    },
+    {
+      "path": "/volt/artifacts/rescue-characterization/final-reviewer/test_independent_reviewer.py",
+      "name": "audits/final-reviewer/test_independent_reviewer.py",
+      "sha256": "0f250cf5e04a2ea2823466c3b78bd37f197986434c8d7066fbb6465af530833d"
+    },
+    {
+      "path": "/volt/artifacts/rescue-characterization/final-reviewer/test_revised_gates.py",
+      "name": "audits/final-reviewer/test_revised_gates.py",
+      "sha256": "7ebd2de2b2360bf66ebc2daf8089f9a6ed224b2fa7c4490b7b217bce1ce64c08"
+    },
+    {
+      "path": "/volt/artifacts/rescue-characterization/final-reviewer/v3-existing-tests.log",
+      "name": "audits/final-reviewer/v3-existing-tests.log",
+      "sha256": "4250c3a72ec870fb7949ff421c8c942032d4162a612166d689328d4f90dff5c9"
+    },
+    {
+      "path": "/volt/artifacts/rescue-characterization/final-reviewer/v3-semantics-audit.json",
+      "name": "audits/final-reviewer/v3-semantics-audit.json",
+      "sha256": "81dd0bb437d208c6cae679877b465cb1b7f967ff1ba52faa8f433c54264cca84"
+    },
+    {
+      "path": "/volt/artifacts/rescue-characterization/review-final-v3/characterization.json",
+      "name": "review/characterization.json",
+      "sha256": "9f61514d464aa4c22579af9a0598f177cdeec23b5ef35862e497a257ce6845ae"
+    },
+    {
+      "path": "/volt/artifacts/rescue-characterization/review-final-v3/coverage-details.json",
+      "name": "review/coverage-details.json",
+      "sha256": "064aa8c0b4cadb203dd58a25cbd51adeb461b8c1580a70350f499b7acae51053"
+    },
+    {
+      "path": "/volt/artifacts/rescue-characterization/review-final-v3/disagreement-register.json",
+      "name": "review/disagreement-register.json",
+      "sha256": "0580c3d72dc6e96210abc3836b83918641bc50b2f16260d90d7ac816d3ec219f"
+    },
+    {
+      "path": "/volt/artifacts/rescue-characterization/review-final-v3/evidence-links.json",
+      "name": "review/evidence-links.json",
+      "sha256": "d2269748df79df829919dfc26d09ecbe7cb1e17d712ab9e6c0d2e3aaf277ffcd"
+    },
+    {
+      "path": "/volt/artifacts/rescue-characterization/review-final-v3/label-table.json",
+      "name": "review/label-table.json",
+      "sha256": "364242d8de3680c0f7bf88f9a3fbabc778fcfe03ac70c1bcde94d9e0fdc95b5f"
+    },
+    {
+      "path": "/volt/artifacts/rescue-characterization/review-final-v3/labels.csv",
+      "name": "review/labels.csv",
+      "sha256": "7ff29a548d7466090992272c5d946324083795637a2ade5b727b03e4bcf59009"
+    },
+    {
+      "path": "/volt/artifacts/rescue-characterization/review-final-v3/paired-stages.json",
+      "name": "review/paired-stages.json",
+      "sha256": "b3b97bc8ca19e26537df9b2482e31178280e37edc70bd0a6b449f2351978ebc0"
+    },
+    {
+      "path": "/volt/artifacts/rescue-characterization/review-final-v3/review-summary.json",
+      "name": "review/review-summary.json",
+      "sha256": "55db2c6cab76fa60174c95bec42719a028cf32d22196e4ed13a26095de62a1e4"
+    },
+    {
+      "path": "/volt/artifacts/rescue-characterization/review-control/adjudications.json",
+      "name": "review-control/adjudications.json",
+      "sha256": "c19b7f9b7b45088894be5ff890c6dbe00f1066dbfbd460307a29670460eb2873"
+    },
+    {
+      "path": "/volt/artifacts/rescue-characterization/review-control/assignments.json",
+      "name": "review-control/assignments.json",
+      "sha256": "85e6613ab63d3ab1acd5f776c513e4c83c62d7390af7a20e4bf0ff2df31ffe59"
+    },
+    {
+      "path": "/volt/artifacts/rescue-characterization/review-control/baseline-lock.json",
+      "name": "review-control/baseline-lock.json",
+      "sha256": "b7896f7ffbf3cf6bae18cd234c5f03197634632a852ea8b32c708e753fe52980"
+    },
+    {
+      "path": "/volt/artifacts/rescue-characterization/review-control/baseline-sources.json",
+      "name": "review-control/baseline-sources.json",
+      "sha256": "43cdf1e44d34ecd3c158710fcfba3312b8f8b55facf4a9cae5b77fe5e162950d"
+    },
+    {
+      "path": "/volt/artifacts/rescue-characterization/review-control/coverage-execution-v3.log",
+      "name": "review-control/coverage-execution-v3.log",
+      "sha256": "2ba6757dc32361f5c571931a79f915cf1ae61648ecaf8e11105e2393ad06228d"
+    },
+    {
+      "path": "/volt/artifacts/rescue-characterization/review-control/early-blind-plan-v2.json",
+      "name": "review-control/early-blind-plan-v2.json",
+      "sha256": "5d344bf9d7721649172521e57a5933925a37aa2d0b5475c66ed68d012ae7175d"
+    },
+    {
+      "path": "/volt/artifacts/rescue-characterization/review-control/early-blind-plan.json",
+      "name": "review-control/early-blind-plan.json",
+      "sha256": "d5659ace1ab7bfea7f2801fde3ae142fb9c51082f3d0f1983c7ea83b561d343e"
+    },
+    {
+      "path": "/volt/artifacts/rescue-characterization/review-control/early-private-plan-v2.json",
+      "name": "review-control/early-private-plan-v2.json",
+      "sha256": "3a5c3e15648b9b01fafdb8fd264afc1508f05ad2993eb7ec1d6e98ff201f5dc4"
+    },
+    {
+      "path": "/volt/artifacts/rescue-characterization/review-control/early-private-plan.json",
+      "name": "review-control/early-private-plan.json",
+      "sha256": "8517cb5989905c387c8f0574352d09093db155a28d045704864f54381cb4fd78"
+    },
+    {
+      "path": "/volt/artifacts/rescue-characterization/review-control/empty-overlap-sources.json",
+      "name": "review-control/empty-overlap-sources.json",
+      "sha256": "37517e5f3dc66819f61f5a7bb8ace1921282415f10551d2defa5c3eb0985b570"
+    },
+    {
+      "path": "/volt/artifacts/rescue-characterization/review-control/final-blind-plan.json",
+      "name": "review-control/final-blind-plan.json",
+      "sha256": "988c7a385073b851b6411b64ad4a657051479c24af889e5598890c097dc060dc"
+    },
+    {
+      "path": "/volt/artifacts/rescue-characterization/review-control/final-private-plan.json",
+      "name": "review-control/final-private-plan.json",
+      "sha256": "23d32f842c2c0979aec66307b2f8b91eb1df5ae74f11aefda7450182a3d702e1"
+    },
+    {
+      "path": "/volt/artifacts/rescue-characterization/review-control/finalize-commands-v2.sh",
+      "name": "review-control/finalize-commands-v2.sh",
+      "sha256": "ab10c9e3ea085904685e52031eba77e712a203305ab48f08306876c9efb51cbb"
+    },
+    {
+      "path": "/volt/artifacts/rescue-characterization/review-control/finalize-commands-v3.sh",
+      "name": "review-control/finalize-commands-v3.sh",
+      "sha256": "d9af26d50050c5f620df143ab4fb97d6bfdab90c7057cc85a4652671f57c154d"
+    },
+    {
+      "path": "/volt/artifacts/rescue-characterization/review-control/finalize-commands.sh",
+      "name": "review-control/finalize-commands.sh",
+      "sha256": "45058391e08270cee805eb9881d43991d189ba9f53bef02b080027550368b91e"
+    },
+    {
+      "path": "/volt/artifacts/rescue-characterization/review-control/finalize-execution-v2.log",
+      "name": "review-control/finalize-execution-v2.log",
+      "sha256": "60ea48242d31ced915f7a8e6a5e13ba7fe6a7869a6e7f2f4e10d2565e0d63e75"
+    },
+    {
+      "path": "/volt/artifacts/rescue-characterization/review-control/finalize-execution-v3.log",
+      "name": "review-control/finalize-execution-v3.log",
+      "sha256": "60ea48242d31ced915f7a8e6a5e13ba7fe6a7869a6e7f2f4e10d2565e0d63e75"
+    },
+    {
+      "path": "/volt/artifacts/rescue-characterization/review-control/finalize-execution.log",
+      "name": "review-control/finalize-execution.log",
+      "sha256": "60ea48242d31ced915f7a8e6a5e13ba7fe6a7869a6e7f2f4e10d2565e0d63e75"
+    },
+    {
+      "path": "/volt/artifacts/rescue-characterization/review-control/overlap-sources-pre-revision.json",
+      "name": "review-control/overlap-sources-pre-revision.json",
+      "sha256": "d6d9c834953640451ff529c820d8d2e9ba32e42b5a6eb928235ba8841a9f9160"
+    },
+    {
+      "path": "/volt/artifacts/rescue-characterization/review-control/overlap-sources.json",
+      "name": "review-control/overlap-sources.json",
+      "sha256": "2c713ceac772314f6adeebda9d528e953001a1741417b9a3c697ca4a9008fa05"
+    },
+    {
+      "path": "/volt/artifacts/rescue-characterization/review-control/routes-v2-reason.json",
+      "name": "review-control/routes-v2-reason.json",
+      "sha256": "c4c48f3d76435980770ed196ab5899a07fcafe26c32618d142efb89ac29d7fa9"
+    },
+    {
+      "path": "/volt/artifacts/rescue-characterization/review-control/routes-v2.json",
+      "name": "review-control/routes-v2.json",
+      "sha256": "1b47d68b6095f16e1d372a5734f09f1d83c10c2c630343f6d632521972162b89"
+    },
+    {
+      "path": "/volt/artifacts/rescue-characterization/review-control/routes.json",
+      "name": "review-control/routes.json",
+      "sha256": "d00d1e25459d44223ac83e029d7f93a69c68b0fe8923f9c5da7d9fbf6504e44b"
+    },
+    {
+      "path": "/volt/artifacts/rescue-characterization/review-tooling/README.md",
+      "name": "tooling/README.md",
+      "sha256": "0f8fbf3e8571320ba713bf060a1270769be82cbcfa3f01c85f474eb9e4a4e35b"
+    },
+    {
+      "path": "/volt/artifacts/rescue-characterization/review-tooling/apply_overlap_revision.py",
+      "name": "tooling/apply_overlap_revision.py",
+      "sha256": "1b0e157d0ca38edd36c527f9d84dfe28022c26a916fe14ad0da8848eb1d2cd03"
+    },
+    {
+      "path": "/volt/artifacts/rescue-characterization/review-tooling/assemble_publication.py",
+      "name": "tooling/assemble_publication.py",
+      "sha256": "f63db452bec3a56d3c9caaf1531e7b72b1f9c8721e3c95223561a8900386083a"
+    },
+    {
+      "path": "/volt/artifacts/rescue-characterization/review-tooling/catalog-test.json",
+      "name": "tooling/catalog-test.json",
+      "sha256": "0464839806174fbcdc4212307b9f70a7542083ad15d0c3e6cbb92e949d2ddc24"
+    },
+    {
+      "path": "/volt/artifacts/rescue-characterization/review-tooling/characterize-tests.log",
+      "name": "tooling/characterize-tests.log",
+      "sha256": "29ee6ce2e1d05cf2d8cec33caca24cef47e553e3b6383ae8fec6d449df6169de"
+    },
+    {
+      "path": "/volt/artifacts/rescue-characterization/review-tooling/characterize_labels.py",
+      "name": "tooling/characterize_labels.py",
+      "sha256": "2716a2aeb94988d0a57644a704f36f780413ef90dd50f3c7f925fd1491235999"
+    },
+    {
+      "path": "/volt/artifacts/rescue-characterization/review-tooling/compose_report.py",
+      "name": "tooling/compose_report.py",
+      "sha256": "5c72118e5424b4b4c8de48ad25f61d1988abf5c3d27feb4d7686b87a7fda0dfe"
+    },
+    {
+      "path": "/volt/artifacts/rescue-characterization/review-tooling/link_evidence.py",
+      "name": "tooling/link_evidence.py",
+      "sha256": "ba78372210e49899b8fc6271d3504e2bb77fb69e80caf741642786a63c981470"
+    },
+    {
+      "path": "/volt/artifacts/rescue-characterization/review-tooling/publish_review.py",
+      "name": "tooling/publish_review.py",
+      "sha256": "cad4ce95d954631c4729b89e1dab88b7145261249374adf7a0907d136bcc1dd6"
+    },
+    {
+      "path": "/volt/artifacts/rescue-characterization/review-tooling/review_evidence.py",
+      "name": "tooling/review_evidence.py",
+      "sha256": "16820c9ba5fa662c62fb3c6133f0158866ed66bba6f76886de481274b6f40ed4"
+    },
+    {
+      "path": "/volt/artifacts/rescue-characterization/review-tooling/root-combined-tests-v3.log",
+      "name": "tooling/root-combined-tests-v3.log",
+      "sha256": "10f3be851d726bf18e129fd6e3fa2ab6a3ffcd441da5288d4883c17fb7e884ef"
+    },
+    {
+      "path": "/volt/artifacts/rescue-characterization/review-tooling/root-combined-tests-v4.log",
+      "name": "tooling/root-combined-tests-v4.log",
+      "sha256": "41c11db790ebc7fcb009b35fb77a656f48147c36a0391703745925595fd1f055"
+    },
+    {
+      "path": "/volt/artifacts/rescue-characterization/review-tooling/root-combined-tests-v5.log",
+      "name": "tooling/root-combined-tests-v5.log",
+      "sha256": "fa45e082c83d5e9ee0ff7d2734598d32a66ed0b5c2e87edc3683195b5bf83338"
+    },
+    {
+      "path": "/volt/artifacts/rescue-characterization/review-tooling/root-combined-tests-v6.log",
+      "name": "tooling/root-combined-tests-v6.log",
+      "sha256": "5277c56297764c62e8b3b5e2466ffa8a453028c4c8fb13c285a34cc6c207c256"
+    },
+    {
+      "path": "/volt/artifacts/rescue-characterization/review-tooling/root-combined-tests.log",
+      "name": "tooling/root-combined-tests.log",
+      "sha256": "f6732a86f3141cc96bf524badfacd1103c0564571a7081b8144a5ab97897037f"
+    },
+    {
+      "path": "/volt/artifacts/rescue-characterization/review-tooling/root-review-tests-v2.log",
+      "name": "tooling/root-review-tests-v2.log",
+      "sha256": "d13267721388cfaab8e99ec6fa56699611ec931c9bef0210311c8e471e0155e4"
+    },
+    {
+      "path": "/volt/artifacts/rescue-characterization/review-tooling/root-review-tests.log",
+      "name": "tooling/root-review-tests.log",
+      "sha256": "8012c00429882429bac9e41e0a7b96bcd4abdc0860a6c624412aae65b266d49e"
+    },
+    {
+      "path": "/volt/artifacts/rescue-characterization/review-tooling/root-review-v2.json",
+      "name": "tooling/root-review-v2.json",
+      "sha256": "078e408afd7da2db61cbf378ff236797f8784c660761423e52b680624a9b9097"
+    },
+    {
+      "path": "/volt/artifacts/rescue-characterization/review-tooling/root-review.json",
+      "name": "tooling/root-review.json",
+      "sha256": "99eb34cc208c5c0d3256453dd560c90c3989058bedcc3430dd1cef3b00ee9d9b"
+    },
+    {
+      "path": "/volt/artifacts/rescue-characterization/review-tooling/summarize_review.py",
+      "name": "tooling/summarize_review.py",
+      "sha256": "0aa8ce1baada804c0e452a1214c42b20fc4d0f03594ac1e9b996b6e7c275a4b3"
+    },
+    {
+      "path": "/volt/artifacts/rescue-characterization/review-tooling/test_characterize_labels.py",
+      "name": "tooling/test_characterize_labels.py",
+      "sha256": "1ae056ad114eb763ab20f55d28597ec8a712b29469a29ee4beb9f3735ca9c79e"
+    },
+    {
+      "path": "/volt/artifacts/rescue-characterization/review-tooling/test_review_evidence.py",
+      "name": "tooling/test_review_evidence.py",
+      "sha256": "56a05e1ff70e1b877fb23b3ea3038f83386ab3ba00e3034c46d225f51ba45add"
+    },
+    {
+      "path": "/volt/artifacts/rescue-characterization/review-tooling/tests.log",
+      "name": "tooling/tests.log",
+      "sha256": "b82c911fef6f35edef9e65996bd3f62827a963b6cf006902840d86d2a3fbdf4d"
+    },
+    {
+      "path": "/volt/artifacts/rescue-characterization/simulator-diagnostics/sensitivity-counts.json",
+      "name": "simulator-diagnostics/sensitivity-counts.json",
+      "sha256": "35d578139e9519271259199fbc7142f0679a6ee9d41c358f3fee8376dc3d93c7"
+    },
+    {
+      "path": "/volt/artifacts/rescue-characterization/simulator-diagnostics/trace_warnings.py",
+      "name": "simulator-diagnostics/trace_warnings.py",
+      "sha256": "673b4f333fe6ff3ddff8907da771870c3be140514ecabe521604cb680130ccf1"
+    },
+    {
+      "path": "/volt/artifacts/rescue-characterization/simulator-diagnostics/warning-audit.json",
+      "name": "simulator-diagnostics/warning-audit.json",
+      "sha256": "a3e07571cc0742fbdf98c50c4bf5c253bfdb731259be160cd8a857ef76daeaf9"
+    },
+    {
+      "path": "/volt/artifacts/rescue-characterization/simulator-diagnostics/warning-excerpts.txt",
+      "name": "simulator-diagnostics/warning-excerpts.txt",
+      "sha256": "bf6387d3eae239dc96e585f0560e86a8e2054cbc8de48acc8f19755cbb40578a"
+    },
+    {
+      "path": "/volt/artifacts/rescue-characterization/review-recovery.json",
+      "name": "audits/review-recovery.json",
+      "sha256": "c9d342282c6550e44758aeeb8bab372e5b4034d6308d8765233b44689db5b039"
+    },
+    {
+      "path": "/volt/artifacts/rescue-characterization/review-postpublication.json",
+      "name": "audits/review-postpublication.json",
+      "sha256": "52e0abc448d6dd903954f64a0a59fc970bd82f223d60270f8422a45b98d9d8f9"
+    },
+    {
+      "path": "/volt/artifacts/rescue-characterization/independent-final-audit.json",
+      "name": "audits/independent-final-audit.json",
+      "sha256": "90a89bc1be32d152a492fc93960ee92d528095ab03f580d0cf91b4fbf595ab62"
+    },
+    {
+      "path": "/volt/artifacts/rescue-characterization/independent-smoke-audit.json",
+      "name": "audits/independent-smoke-audit.json",
+      "sha256": "e7ee7d1be3ca87583c4cc59177a007f724553bf23a23f29804686ab77e98c5a9"
+    },
+    {
+      "path": "/volt/artifacts/rescue-characterization/review-preflight.json",
+      "name": "audits/review-preflight.json",
+      "sha256": "dee0b0cace784e6aa339a0a7b7ccb6dc7882bb2955e4f67fa71fb9e41c56e593"
+    },
+    {
+      "path": "/volt/artifacts/rescue-characterization/review-pipeline.json",
+      "name": "audits/review-pipeline.json",
+      "sha256": "c6455721321c3cb05f5bae3856b90f13ff4b83686d2df69b5ca87b4a6542401a"
+    },
+    {
+      "path": "/volt/artifacts/rescue-characterization/recovery-20261005/state.json",
+      "name": "recovery/state.json",
+      "sha256": "3efea1cc8dab97fd594c07a5c6a4a1469c4d0904f33136f05df9799a3439dc36"
+    },
+    {
+      "path": "/volt/artifacts/rescue-characterization/coordinator-review/historical-C13025af0b16d7eec66b4-149-186-205.json",
+      "name": "coordinator/historical-C13025af0b16d7eec66b4-149-186-205.json",
+      "sha256": "be29954886139a8f7c5751ee67b4aefb5f610f275fdedc7bc46421fe028f0372"
+    },
+    {
+      "path": "/volt/artifacts/rescue-characterization/coordinator-review/historical-C6f1192dd092ee7923ad0-150-220-280.json",
+      "name": "coordinator/historical-C6f1192dd092ee7923ad0-150-220-280.json",
+      "sha256": "554b6a23e8fa4bcd155dca6a1a18b327ee2f7831ed3b4b05ea5977a3b0f7753d"
+    },
+    {
+      "path": "/volt/artifacts/rescue-characterization/coordinator-review/historical-C73d132aa9e4779f319fd-130-170-300.json",
+      "name": "coordinator/historical-C73d132aa9e4779f319fd-130-170-300.json",
+      "sha256": "77585caf6c091e520bd79d9618f8780b34a51246f7f01862934add387bc69823"
+    },
+    {
+      "path": "/volt/artifacts/rescue-characterization/coordinator-review/historical-C8c700c642d9c969d06ec-140-160-191.json",
+      "name": "coordinator/historical-C8c700c642d9c969d06ec-140-160-191.json",
+      "sha256": "ba242e2796a5036bf7bef9368911fe47327bff57b503e2522f63b90cda075f7d"
+    },
+    {
+      "path": "/volt/artifacts/rescue-characterization/coordinator-review/new-C090dc827d4cc4a9e19a5-55-75-300.json",
+      "name": "coordinator/new-C090dc827d4cc4a9e19a5-55-75-300.json",
+      "sha256": "fbbd0709735be83f6bb82f3e1b8a567e19d9bb2f1ffd7b23c63c6b73ed566cde"
+    },
+    {
+      "path": "/volt/artifacts/rescue-characterization/coordinator-review/new-C09a0e9a744cec9b09a6b-120-149.json",
+      "name": "coordinator/new-C09a0e9a744cec9b09a6b-120-149.json",
+      "sha256": "572f59b2f7186dd01a9bc05100a7849ab9be95e4327f3ee9832ba6aea852c902"
+    },
+    {
+      "path": "/volt/artifacts/rescue-characterization/coordinator-review/new-C0ace75dd78c305554e51-60-75-90.json",
+      "name": "coordinator/new-C0ace75dd78c305554e51-60-75-90.json",
+      "sha256": "a1580b1c60e932de56845e28f59dd33e723764d1fccb027f042fe17d6796c3fc"
+    },
+    {
+      "path": "/volt/artifacts/rescue-characterization/coordinator-review/new-C1bec2653e5f2bd8a1fea-65-82-97.json",
+      "name": "coordinator/new-C1bec2653e5f2bd8a1fea-65-82-97.json",
+      "sha256": "43433d2e90b2df019dc26d6588d1179eb4528fff9e3acd1dd81f108623a5943e"
+    },
+    {
+      "path": "/volt/artifacts/rescue-characterization/coordinator-review/new-C4ad67fde7962ff97214a-80-130-300.json",
+      "name": "coordinator/new-C4ad67fde7962ff97214a-80-130-300.json",
+      "sha256": "f0acfd8ad6ed75a4c271414e9c9ada5f2806cbf7edc2142eeb55c05b91c24daa"
+    },
+    {
+      "path": "/volt/artifacts/rescue-characterization/coordinator-review/new-C5b01e854d990fdcb590e-55-150-300.json",
+      "name": "coordinator/new-C5b01e854d990fdcb590e-55-150-300.json",
+      "sha256": "d0444d93b557e9c6a352f6e875fa7f5debe3d93b3c07b1deedfcf3a69f1c3095"
+    },
+    {
+      "path": "/volt/artifacts/rescue-characterization/coordinator-review/new-C6404f5a08cf6bbde17d5-80-120-300.json",
+      "name": "coordinator/new-C6404f5a08cf6bbde17d5-80-120-300.json",
+      "sha256": "6fc3ad997c8888acf5364be4fc8224430bff866aa1d234278848c78c11f1c97d"
+    },
+    {
+      "path": "/volt/artifacts/rescue-characterization/coordinator-review/new-C729bd63b0c1bcf796e29-127-204-280.json",
+      "name": "coordinator/new-C729bd63b0c1bcf796e29-127-204-280.json",
+      "sha256": "0f3fb4c7ab9b4f6cd8b516283379e230a444ad3dc1a5f26d3b8c09c5a1370a5e"
+    },
+    {
+      "path": "/volt/artifacts/rescue-characterization/coordinator-review/new-C840d5738ae5cf6a31e98-65-97.json",
+      "name": "coordinator/new-C840d5738ae5cf6a31e98-65-97.json",
+      "sha256": "f57c6fb339300ea4df70c8cf1bf3a9f6c971305c590600fa71c689df03537cc0"
+    },
+    {
+      "path": "/volt/artifacts/rescue-characterization/coordinator-review/new-C954dcd4956421e55f879-90-150-300.json",
+      "name": "coordinator/new-C954dcd4956421e55f879-90-150-300.json",
+      "sha256": "421146aa85cd08c4f1df4159922b4feddb70fa165a3d82fd2b3fd8a335df7b25"
+    },
+    {
+      "path": "/volt/artifacts/rescue-characterization/coordinator-review/new-C9fe34110bc86af164805-140-200-280.json",
+      "name": "coordinator/new-C9fe34110bc86af164805-140-200-280.json",
+      "sha256": "98d0942cfe6fdac35b7a92754ea2c0f934a595af6fd48b3fb0d9386a1209dc39"
+    },
+    {
+      "path": "/volt/artifacts/rescue-characterization/coordinator-review/new-Ca38d9e6720868f30da6a-0-5-520.json",
+      "name": "coordinator/new-Ca38d9e6720868f30da6a-0-5-520.json",
+      "sha256": "35635cfcbf67f402e703e40e2fea952a9071ee37fcc6ce7836da1b4a71534227"
+    },
+    {
+      "path": "/volt/artifacts/rescue-characterization/coordinator-review/new-Cb872c7c957a004c61816-80-130-167.json",
+      "name": "coordinator/new-Cb872c7c957a004c61816-80-130-167.json",
+      "sha256": "8ff327e46036c58b00663210743ce21b26f015182a1cb80918ac851cf9c7671b"
+    },
+    {
+      "path": "/volt/artifacts/rescue-characterization/coordinator-review/new-Ced0bb787841fb2124be7-212-265-291.json",
+      "name": "coordinator/new-Ced0bb787841fb2124be7-212-265-291.json",
+      "sha256": "1aa2376b76ba5728549f31edc5e7d5ea084d3a4a7aea6706386cfcb93ec04ae0"
+    },
+    {
+      "path": "/volt/artifacts/rescue-characterization/coordinator-review/new-Cf422e63768b1475f0494-80-130-300.json",
+      "name": "coordinator/new-Cf422e63768b1475f0494-80-130-300.json",
+      "sha256": "c9918f3c19f804c5e5e7fe467e47dc82855606c1414129449cddcf3951394d20"
+    },
+    {
+      "path": "/volt/artifacts/rescue-characterization/coordinator-review/observations-supplement.json",
+      "name": "coordinator/observations-supplement.json",
+      "sha256": "f14cf4dc45d1232e9629d37e183bd2c6c28e149cca7db27f27be44249b27655d"
+    },
+    {
+      "path": "/volt/artifacts/rescue-characterization/coordinator-review/observations.json",
+      "name": "coordinator/observations.json",
+      "sha256": "1949c9945bdb26b3427d47e86d83a6604c152dc17614a882d7374ac56e713ebe"
+    },
+    {
+      "path": "/volt/artifacts/rescue-characterization/coordinator-review/view_frames.py",
+      "name": "coordinator/view_frames.py",
+      "sha256": "cc2787b197c9d56de1d469fe1f943366bb0a7b1c16d287e2419f8c10c8bdaa03"
+    },
+    {
+      "path": "/volt/artifacts/rescue-characterization/visual-review-new/blind/RUBRIC.md",
+      "name": "blind/new/RUBRIC.md",
+      "sha256": "5cffd28a78bd29353e7cd062e37fd536aa9f043a26c779aac06586c94e862f4e"
+    },
+    {
+      "path": "/volt/artifacts/rescue-characterization/visual-review-new/blind/labels-overlap-historical.jsonl",
+      "name": "blind/new/labels-overlap-historical.jsonl",
+      "sha256": "b9f1747b100e10ae91c2ccfec79d83f169619143324b99a65dc6a0f07ceb2639"
+    },
+    {
+      "path": "/volt/artifacts/rescue-characterization/visual-review-new/blind/labels-overlap-primary-effective.jsonl",
+      "name": "blind/new/labels-overlap-primary-effective.jsonl",
+      "sha256": "982fee2c47e5f772a430fa47842400dbe0287d4c27adbbfab0f6a72f4eded690"
+    },
+    {
+      "path": "/volt/artifacts/rescue-characterization/visual-review-new/blind/labels-overlap-primary-revisions.jsonl",
+      "name": "blind/new/labels-overlap-primary-revisions.jsonl",
+      "sha256": "30775e2ba8ac3682b00a54aab905151fd888ee30166cc50fff2bd4b3f5dea5a0"
+    },
+    {
+      "path": "/volt/artifacts/rescue-characterization/visual-review-new/blind/labels-overlap-primary-summary.json",
+      "name": "blind/new/labels-overlap-primary-summary.json",
+      "sha256": "149ac8d4016bf235822993e32437f7f1b99b867eb8baf4df25a29ec9ee347d12"
+    },
+    {
+      "path": "/volt/artifacts/rescue-characterization/visual-review-new/blind/labels-overlap-primary.jsonl",
+      "name": "blind/new/labels-overlap-primary.jsonl",
+      "sha256": "ce19616cdba3e16e9f23a3a7c22251c1abd4e5d184d45a1c39da4ec4ac49e907"
+    },
+    {
+      "path": "/volt/artifacts/rescue-characterization/visual-review-new/blind/labels-primary-revisions.jsonl",
+      "name": "blind/new/labels-primary-revisions.jsonl",
+      "sha256": "9be660671265d6e312a532a903139cbaa18f8d7f4cf4d03e2865545d69c270b4"
+    },
+    {
+      "path": "/volt/artifacts/rescue-characterization/visual-review-new/blind/labels-primary-summary.json",
+      "name": "blind/new/labels-primary-summary.json",
+      "sha256": "6f6167303ae46bbc3db1d9aa794c2f6d326d845ae549dd87989450dbd97fc135"
+    },
+    {
+      "path": "/volt/artifacts/rescue-characterization/visual-review-new/blind/labels-primary.jsonl",
+      "name": "blind/new/labels-primary.jsonl",
+      "sha256": "3d184e477e9b94f8ac090033ac8f3ccc81b42a451ca453347fc346b17b8a0b9c"
+    },
+    {
+      "path": "/volt/artifacts/rescue-characterization/visual-review-new/blind/labels-secondary.group37-pre-spatial-correction.jsonl",
+      "name": "blind/new/labels-secondary.group37-pre-spatial-correction.jsonl",
+      "sha256": "26cadadf5066a2c8006c8f2b6a475daa079de88491907db9b0442dbe20429d70"
+    },
+    {
+      "path": "/volt/artifacts/rescue-characterization/visual-review-new/blind/labels-secondary.jsonl",
+      "name": "blind/new/labels-secondary.jsonl",
+      "sha256": "70d0bb0640cbe7cc6db23d269e758510911f207b429df898d7bb44b9f61dd29c"
+    },
+    {
+      "path": "/volt/artifacts/rescue-characterization/visual-review-new/blind/labels-secondary.lock.json",
+      "name": "blind/new/labels-secondary.lock.json",
+      "sha256": "6e93b00fdf83c9d31447cc52ca3d20006425b426264da579d5ddd2c94785b641"
+    },
+    {
+      "path": "/volt/artifacts/rescue-characterization/visual-review-new/blind/labels-secondary.pre-coverage-normalization.jsonl",
+      "name": "blind/new/labels-secondary.pre-coverage-normalization.jsonl",
+      "sha256": "d5624e1093864ef9404775eae59f403f5fefedecde5454d20e312015516a630e"
+    },
+    {
+      "path": "/volt/artifacts/rescue-characterization/visual-review-new/blind/overlap-plan-final-historical.json",
+      "name": "blind/new/overlap-plan-final-historical.json",
+      "sha256": "daa5ec72089fedcc767630c3d5c96c650fc7f3473690b40421c1071217ebf9d8"
+    },
+    {
+      "path": "/volt/artifacts/rescue-characterization/visual-review-new/blind/overlap-plan-final-primary.json",
+      "name": "blind/new/overlap-plan-final-primary.json",
+      "sha256": "a47bb6463a919f9eef1811f2f1eeebc479e3e9c043ee077006d2d1e5fe181934"
+    },
+    {
+      "path": "/volt/artifacts/rescue-characterization/visual-review-new/blind/overlap-plan-initial-historical.json",
+      "name": "blind/new/overlap-plan-initial-historical.json",
+      "sha256": "9fad6b731f89af59cc1ab19172f02db4c11ce27b1b1198f01c769a85080dbf18"
+    },
+    {
+      "path": "/volt/artifacts/rescue-characterization/visual-review-new/blind/overlap-plan-initial-primary.json",
+      "name": "blind/new/overlap-plan-initial-primary.json",
+      "sha256": "566892ad012ae4565dba9a5d90928da5965640e916a952767fab5083c52e2ba8"
+    },
+    {
+      "path": "/volt/artifacts/rescue-characterization/visual-review-new/blind/packets.json",
+      "name": "blind/new/packets.json",
+      "sha256": "21beb3bfb76f459abc3ec1f3ee23a388c80c6c56635832f13cab4810a43469a8"
+    },
+    {
+      "path": "/volt/artifacts/rescue-characterization/visual-review-new/blind/review-completion-overlap-historical.json",
+      "name": "blind/new/review-completion-overlap-historical.json",
+      "sha256": "bdf17b427e3691fbb0aed157fda3c50d74e000ad8925471b9c4824662c963f37"
+    },
+    {
+      "path": "/volt/artifacts/rescue-characterization/visual-review-new/private/selection.json",
+      "name": "mapping/new/selection.json",
+      "sha256": "c53b435fa41ae94e50e37a901a942797682071d0033eac1c35ec228f44e032e9"
+    },
+    {
+      "path": "/volt/artifacts/rescue-characterization/visual-review-new/private/unblinding.json",
+      "name": "mapping/new/unblinding.json",
+      "sha256": "53b6063655aa0beb6a0db4936fd3d85c7703336d9911e98680cf7c7721babeb0"
+    },
+    {
+      "path": "/volt/artifacts/rescue-characterization/visual-review-historical/blind/RUBRIC.md",
+      "name": "blind/historical/RUBRIC.md",
+      "sha256": "af70a22e33ae29b5447cf677722d166a8e7976a62a6fdd322c8d2d1fd499a4c1"
+    },
+    {
+      "path": "/volt/artifacts/rescue-characterization/visual-review-historical/blind/labels-historical.jsonl",
+      "name": "blind/historical/labels-historical.jsonl",
+      "sha256": "ae6921edc56f3d33ae8a396c158305b71a099f72b355da092105d3b8ead065c8"
+    },
+    {
+      "path": "/volt/artifacts/rescue-characterization/visual-review-historical/blind/labels-overlap-secondary.jsonl",
+      "name": "blind/historical/labels-overlap-secondary.jsonl",
+      "sha256": "e6982b383bf6cc9fc48803a035bd655ebf595dd95b82a7a45ee2f57bcca26bed"
+    },
+    {
+      "path": "/volt/artifacts/rescue-characterization/visual-review-historical/blind/labels-overlap-secondary.lock.json",
+      "name": "blind/historical/labels-overlap-secondary.lock.json",
+      "sha256": "1f7325d1b935f97e1b917a967fed6abbd3479f8c6d307d4aea41fb7747323c90"
+    },
+    {
+      "path": "/volt/artifacts/rescue-characterization/visual-review-historical/blind/overlap-plan-final-secondary.json",
+      "name": "blind/historical/overlap-plan-final-secondary.json",
+      "sha256": "fdb5539a0d6c3610f522cf53a7939461c402345c1ac0e26084691feeddfec918"
+    },
+    {
+      "path": "/volt/artifacts/rescue-characterization/visual-review-historical/blind/overlap-plan-initial-secondary.json",
+      "name": "blind/historical/overlap-plan-initial-secondary.json",
+      "sha256": "fef5e4ca32705907895cbae54c662a769ca8469a2b1147cf72ebf201ef5dc683"
+    },
+    {
+      "path": "/volt/artifacts/rescue-characterization/visual-review-historical/blind/packets.json",
+      "name": "blind/historical/packets.json",
+      "sha256": "940ef90fe7a69c23670b82d2585d023a2aafb49ac6d68146bd641c35e5562f36"
+    },
+    {
+      "path": "/volt/artifacts/rescue-characterization/visual-review-historical/blind/review-completion-historical.json",
+      "name": "blind/historical/review-completion-historical.json",
+      "sha256": "cb7496796e9859f43803d0b1eaa71a07c4870972845d08995429d8b2f6dca330"
+    },
+    {
+      "path": "/volt/artifacts/rescue-characterization/visual-review-historical/private/coverage.json",
+      "name": "mapping/historical/coverage.json",
+      "sha256": "b10ee76a056f62ebaa8a280762f793f69446cda7192419b2bb02b5318dba11ec"
+    },
+    {
+      "path": "/volt/artifacts/rescue-characterization/visual-review-historical/private/unblinding.json",
+      "name": "mapping/historical/unblinding.json",
+      "sha256": "a61aaeecb5fe1ea1cde9a379af8159c12a6a520018ae21dc4c1317038e925615"
+    },
+    {
+      "path": "/volt/code/frozen-flow-study/examples/rescue_characterization/PROTOCOL.md",
+      "name": "protocol/PROTOCOL.md",
+      "sha256": "366c4b66c4edad5f2619b89a6e5206ef55ad0e224c8aaa468acc0c8fb694d32e"
+    },
+    {
+      "path": "/volt/code/frozen-flow-study/examples/rescue_characterization/BLIND_REVIEW.md",
+      "name": "protocol/BLIND_REVIEW.md",
+      "sha256": "5cffd28a78bd29353e7cd062e37fd536aa9f043a26c779aac06586c94e862f4e"
+    },
+    {
+      "path": "/volt/code/frozen-flow-study/examples/rescue_characterization/build_historical_blind_packets.py",
+      "name": "protocol/build_historical_blind_packets.py",
+      "sha256": "bb5d218741bc1e474f6b91058d3756566018a304ba6fe621942b8e192a9de3a9"
+    }
+  ],
+  "selected_media": [
+    {
+      "path": "/volt/artifacts/rescue-characterization/visual-review-new/blind/C090dc827d4cc4a9e19a5.mp4",
+      "clip_id": "C090dc827d4cc4a9e19a5",
+      "cohort": "new",
+      "reason": "Bottle acquisition failure in F/S/S/F case",
+      "sha256": "bd6f953afadb0337ee40e0e2081f3f419d6280e3a38388f79f15dde1590cb3e6"
+    },
+    {
+      "path": "/volt/artifacts/rescue-characterization/visual-review-new/blind/C1bec2653e5f2bd8a1fea.mp4",
+      "clip_id": "C1bec2653e5f2bd8a1fea",
+      "cohort": "new",
+      "reason": "Same bottle case two-step rescue",
+      "sha256": "fb4b603d82584c2e01887371b695134ad40b81502c280d748af26b69b6cdb2e6"
+    },
+    {
+      "path": "/volt/artifacts/rescue-characterization/visual-review-new/blind/C840d5738ae5cf6a31e98.mp4",
+      "clip_id": "C840d5738ae5cf6a31e98",
+      "cohort": "new",
+      "reason": "Same bottle case four-step rescue",
+      "sha256": "8a049743480d441f27a4fe9bcb877dd98d5187db4ede8ed41de5e4ed7196f3fd"
+    },
+    {
+      "path": "/volt/artifacts/rescue-characterization/visual-review-new/blind/C5b01e854d990fdcb590e.mp4",
+      "clip_id": "C5b01e854d990fdcb590e",
+      "cohort": "new",
+      "reason": "Same bottle case ten-step failure; non-monotonic counterexample",
+      "sha256": "3ffaef96ba121fdb11036074c449236d2fdc01e148ef4b9baf172fe6bf4a2433"
+    },
+    {
+      "path": "/volt/artifacts/rescue-characterization/visual-review-new/blind/C9fe34110bc86af164805.mp4",
+      "clip_id": "C9fe34110bc86af164805",
+      "cohort": "new",
+      "reason": "Butter placement/retention ambiguity at basket rim",
+      "sha256": "0af3c4b593e890604e62778154accd041ec34b065ebbdffea468873ad845f951"
+    },
+    {
+      "path": "/volt/artifacts/rescue-characterization/visual-review-new/blind/C09a0e9a744cec9b09a6b.mp4",
+      "clip_id": "C09a0e9a744cec9b09a6b",
+      "cohort": "new",
+      "reason": "Paired butter placement completion",
+      "sha256": "921f8778451451ab7a7c0cb0a9be424487af0a731990002bb60b1224a7a60bcf"
+    },
+    {
+      "path": "/volt/artifacts/rescue-characterization/visual-review-new/blind/C6404f5a08cf6bbde17d5.mp4",
+      "clip_id": "C6404f5a08cf6bbde17d5",
+      "cohort": "new",
+      "reason": "Drawer case one-step failure",
+      "sha256": "a43f9d6e53dda884465d5e9cf6a449ba504d7d7cfe3c46e4bd5597e97280bfaa"
+    },
+    {
+      "path": "/volt/artifacts/rescue-characterization/visual-review-new/blind/Cb872c7c957a004c61816.mp4",
+      "clip_id": "Cb872c7c957a004c61816",
+      "cohort": "new",
+      "reason": "Paired drawer two-step rescue",
+      "sha256": "2e5677c9d22f54b5fbc9404510251df7e5a66708987e8613267e2ec665fff3d8"
+    },
+    {
+      "path": "/volt/artifacts/rescue-characterization/visual-review-new/blind/C4ad67fde7962ff97214a.mp4",
+      "clip_id": "C4ad67fde7962ff97214a",
+      "cohort": "new",
+      "reason": "Matched same-condition control one-step failure",
+      "sha256": "f11e4d2bf4e3e6be172f8b5a74c8e256cbbc74c35ad264682e2c27820118db69"
+    },
+    {
+      "path": "/volt/artifacts/rescue-characterization/visual-review-new/blind/Cf422e63768b1475f0494.mp4",
+      "clip_id": "Cf422e63768b1475f0494",
+      "cohort": "new",
+      "reason": "Matched control remains numeric failure despite drawer opening",
+      "sha256": "d725aa999ee655ab01086c91da7654b10b8278692493065bfbf492d3ed481cbb"
+    },
+    {
+      "path": "/volt/artifacts/rescue-characterization/visual-review-new/blind/Ca38d9e6720868f30da6a.mp4",
+      "clip_id": "Ca38d9e6720868f30da6a",
+      "cohort": "new",
+      "reason": "Preserved simulator-affected book case, not policy-only attribution",
+      "sha256": "f9ab993504c411239941e26c92d82396de51dc0db2932f7912b3ffe30673d864"
+    },
+    {
+      "path": "/volt/artifacts/rescue-characterization/visual-review-new/blind/C0ace75dd78c305554e51.mp4",
+      "clip_id": "C0ace75dd78c305554e51",
+      "cohort": "new",
+      "reason": "One-step bowl placement success before higher-count regression",
+      "sha256": "ccf3a60d11da029ecc2ed4699bf4921fc98c04fe90241c1e5f3c64b80def0016"
+    },
+    {
+      "path": "/volt/artifacts/rescue-characterization/visual-review-new/blind/C954dcd4956421e55f879.mp4",
+      "clip_id": "C954dcd4956421e55f879",
+      "cohort": "new",
+      "reason": "Ten-step bowl placement regression with limited external visibility",
+      "sha256": "2601ef6bdc920821ed5743db77f02b2e8218b074d6984f1d17e950b981b2a4e0"
+    },
+    {
+      "path": "/volt/artifacts/rescue-characterization/visual-review-historical/blind/C8c700c642d9c969d06ec.mp4",
+      "clip_id": "C8c700c642d9c969d06ec",
+      "cohort": "historical",
+      "reason": "Exactly reconstructed earlier bottle-retention failure",
+      "sha256": "820d1edf547543271ca7e94b76c60bb0c4351db87a769dd1dda038f7efb6c848"
+    },
+    {
+      "path": "/volt/artifacts/rescue-characterization/visual-review-historical/blind/C13025af0b16d7eec66b4.mp4",
+      "clip_id": "C13025af0b16d7eec66b4",
+      "cohort": "historical",
+      "reason": "Exactly reconstructed earlier bottle/rack rescue",
+      "sha256": "ac57e1d7c35889e058bc3c872af5a764d01ffebb8bbd27f965893dd593de31e9"
+    },
+    {
+      "path": "/volt/artifacts/rescue-characterization/visual-review-new/blind/C090dc827d4cc4a9e19a5.png",
+      "clip_id": "C090dc827d4cc4a9e19a5",
+      "cohort": "new",
+      "reason": "Bottle acquisition failure in F/S/S/F case; twelve-frame overview only",
+      "sha256": "7bddb6a67a1aac6d21ada14735b415e204ee59e630f45745bf0b1a32a5362cee"
+    },
+    {
+      "path": "/volt/artifacts/rescue-characterization/visual-review-new/blind/C1bec2653e5f2bd8a1fea.png",
+      "clip_id": "C1bec2653e5f2bd8a1fea",
+      "cohort": "new",
+      "reason": "Same bottle case two-step rescue; twelve-frame overview only",
+      "sha256": "92b64a888cb51c6cc54dc33b399996ea3d10d8b78074fc65b49876f4db11ca9a"
+    },
+    {
+      "path": "/volt/artifacts/rescue-characterization/visual-review-new/blind/C5b01e854d990fdcb590e.png",
+      "clip_id": "C5b01e854d990fdcb590e",
+      "cohort": "new",
+      "reason": "Same bottle case ten-step failure; non-monotonic counterexample; twelve-frame overview only",
+      "sha256": "c75604590533ff63f776316ee103cd41b639cac3874ae10dfee0fe957e5baf66"
+    },
+    {
+      "path": "/volt/artifacts/rescue-characterization/visual-review-new/blind/C6404f5a08cf6bbde17d5.png",
+      "clip_id": "C6404f5a08cf6bbde17d5",
+      "cohort": "new",
+      "reason": "Drawer case one-step failure; twelve-frame overview only",
+      "sha256": "109e66997b92907d8eb45277abf22a7ed9332850e707438106bac2de771992b1"
+    },
+    {
+      "path": "/volt/artifacts/rescue-characterization/visual-review-new/blind/Cb872c7c957a004c61816.png",
+      "clip_id": "Cb872c7c957a004c61816",
+      "cohort": "new",
+      "reason": "Paired drawer two-step rescue; twelve-frame overview only",
+      "sha256": "26a0cf9c756033c30481c9fd942e6fb6dbe3e43c6fff805d4b900ac9ccb9c284"
+    },
+    {
+      "path": "/volt/artifacts/rescue-characterization/visual-review-new/blind/Cf422e63768b1475f0494.png",
+      "clip_id": "Cf422e63768b1475f0494",
+      "cohort": "new",
+      "reason": "Matched control remains numeric failure despite drawer opening; twelve-frame overview only",
+      "sha256": "db4d4802ef198987f2ccbba0390204fba965791574a84ced51c5dc8b5dc52cf4"
+    },
+    {
+      "path": "/volt/artifacts/rescue-characterization/visual-review-new/blind/Ca38d9e6720868f30da6a.png",
+      "clip_id": "Ca38d9e6720868f30da6a",
+      "cohort": "new",
+      "reason": "Preserved simulator-affected book case, not policy-only attribution; twelve-frame overview only",
+      "sha256": "87c573cf0b0c4bae9bd92e310a53b1ac5ca030203facfa00fe379deb4ac5e6ce"
+    },
+    {
+      "path": "/volt/artifacts/rescue-characterization/visual-review-new/blind/C954dcd4956421e55f879.png",
+      "clip_id": "C954dcd4956421e55f879",
+      "cohort": "new",
+      "reason": "Ten-step bowl placement regression with limited external visibility; twelve-frame overview only",
+      "sha256": "56e9bc6c277175c3d9aa59e6269e533c9028ccaba02679feaaba38ff32aaad69"
+    },
+    {
+      "path": "/volt/artifacts/rescue-characterization/visual-review-historical/blind/C8c700c642d9c969d06ec.png",
+      "clip_id": "C8c700c642d9c969d06ec",
+      "cohort": "historical",
+      "reason": "Exactly reconstructed earlier bottle-retention failure; twelve-frame overview only",
+      "sha256": "b624d886dade990e8ccf10c3df1f4df4b4bf70da068765305b76f88a344ad0e7"
+    }
+  ],
+  "scope": "All raw/complete media stay on Volt; selected post-hoc illustrations are not a statistical sample.",
+  "numerical_base_commit": "f631acc42573a5de5217cd57de4bf7c9b4bf8891",
+  "branch": "codex/pi05-rescue-characterization"
+}

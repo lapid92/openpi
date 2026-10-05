@@ -1,0 +1,530 @@
+{
+  "status": "passed",
+  "phase": "smoke",
+  "manifest_sha256": "e7537584d34855c24c1a38ca11da4f7e479b9bcbfc53d2cc7ec8f7ff46eadf9d",
+  "published_commit": "862797a152f97d036c6235fd69890be61f2ee0c1",
+  "wandb_url": "https://wandb.ai/arm-aair-idit/pi05-rescue-characterization/runs/ocahm4fr",
+  "checkpoint_sha256": "9cd1b00d402cc0447454dad6054dcc6f019b53e498469f209d2b749d4487e1d5",
+  "gpu_uuids": [
+    "GPU-0cb759da-a716-038e-f0a9-208ec138ccc7",
+    "GPU-56335fdf-6dc8-1d64-ce39-364d4a532435",
+    "GPU-967ff6df-a7e2-b65a-d051-87819b7725fc",
+    "GPU-b786fcd4-f878-69e6-3017-a2ae408151fd"
+  ],
+  "source_files_verified": 302,
+  "parity_checks": [
+    {
+      "benchmark": "libero",
+      "gpu_uuid": "GPU-56335fdf-6dc8-1d64-ce39-364d4a532435",
+      "flow_steps": 1,
+      "max_abs_action_difference": 0.0,
+      "preparation_record_index": 0
+    },
+    {
+      "benchmark": "libero",
+      "gpu_uuid": "GPU-56335fdf-6dc8-1d64-ce39-364d4a532435",
+      "flow_steps": 2,
+      "max_abs_action_difference": 0.0,
+      "preparation_record_index": 0
+    },
+    {
+      "benchmark": "libero",
+      "gpu_uuid": "GPU-56335fdf-6dc8-1d64-ce39-364d4a532435",
+      "flow_steps": 4,
+      "max_abs_action_difference": 0.0,
+      "preparation_record_index": 0
+    },
+    {
+      "benchmark": "libero",
+      "gpu_uuid": "GPU-56335fdf-6dc8-1d64-ce39-364d4a532435",
+      "flow_steps": 10,
+      "max_abs_action_difference": 0.0,
+      "preparation_record_index": 0
+    },
+    {
+      "benchmark": "libero",
+      "gpu_uuid": "GPU-b786fcd4-f878-69e6-3017-a2ae408151fd",
+      "flow_steps": 1,
+      "max_abs_action_difference": 0.0,
+      "preparation_record_index": 0
+    },
+    {
+      "benchmark": "libero",
+      "gpu_uuid": "GPU-b786fcd4-f878-69e6-3017-a2ae408151fd",
+      "flow_steps": 2,
+      "max_abs_action_difference": 0.0,
+      "preparation_record_index": 0
+    },
+    {
+      "benchmark": "libero",
+      "gpu_uuid": "GPU-b786fcd4-f878-69e6-3017-a2ae408151fd",
+      "flow_steps": 4,
+      "max_abs_action_difference": 0.0,
+      "preparation_record_index": 0
+    },
+    {
+      "benchmark": "libero",
+      "gpu_uuid": "GPU-b786fcd4-f878-69e6-3017-a2ae408151fd",
+      "flow_steps": 10,
+      "max_abs_action_difference": 0.0,
+      "preparation_record_index": 0
+    },
+    {
+      "benchmark": "libero",
+      "gpu_uuid": "GPU-967ff6df-a7e2-b65a-d051-87819b7725fc",
+      "flow_steps": 1,
+      "max_abs_action_difference": 0.0,
+      "preparation_record_index": 0
+    },
+    {
+      "benchmark": "libero",
+      "gpu_uuid": "GPU-967ff6df-a7e2-b65a-d051-87819b7725fc",
+      "flow_steps": 2,
+      "max_abs_action_difference": 0.0,
+      "preparation_record_index": 0
+    },
+    {
+      "benchmark": "libero",
+      "gpu_uuid": "GPU-967ff6df-a7e2-b65a-d051-87819b7725fc",
+      "flow_steps": 4,
+      "max_abs_action_difference": 0.0,
+      "preparation_record_index": 0
+    },
+    {
+      "benchmark": "libero",
+      "gpu_uuid": "GPU-967ff6df-a7e2-b65a-d051-87819b7725fc",
+      "flow_steps": 10,
+      "max_abs_action_difference": 0.0,
+      "preparation_record_index": 0
+    },
+    {
+      "benchmark": "libero",
+      "gpu_uuid": "GPU-0cb759da-a716-038e-f0a9-208ec138ccc7",
+      "flow_steps": 1,
+      "max_abs_action_difference": 0.0,
+      "preparation_record_index": 0
+    },
+    {
+      "benchmark": "libero",
+      "gpu_uuid": "GPU-0cb759da-a716-038e-f0a9-208ec138ccc7",
+      "flow_steps": 2,
+      "max_abs_action_difference": 0.0,
+      "preparation_record_index": 0
+    },
+    {
+      "benchmark": "libero",
+      "gpu_uuid": "GPU-0cb759da-a716-038e-f0a9-208ec138ccc7",
+      "flow_steps": 4,
+      "max_abs_action_difference": 0.0,
+      "preparation_record_index": 0
+    },
+    {
+      "benchmark": "libero",
+      "gpu_uuid": "GPU-0cb759da-a716-038e-f0a9-208ec138ccc7",
+      "flow_steps": 10,
+      "max_abs_action_difference": 0.0,
+      "preparation_record_index": 0
+    },
+    {
+      "benchmark": "libero_plus",
+      "gpu_uuid": "GPU-56335fdf-6dc8-1d64-ce39-364d4a532435",
+      "flow_steps": 1,
+      "max_abs_action_difference": 0.0,
+      "preparation_record_index": 0
+    },
+    {
+      "benchmark": "libero_plus",
+      "gpu_uuid": "GPU-56335fdf-6dc8-1d64-ce39-364d4a532435",
+      "flow_steps": 2,
+      "max_abs_action_difference": 0.0,
+      "preparation_record_index": 0
+    },
+    {
+      "benchmark": "libero_plus",
+      "gpu_uuid": "GPU-56335fdf-6dc8-1d64-ce39-364d4a532435",
+      "flow_steps": 4,
+      "max_abs_action_difference": 0.0,
+      "preparation_record_index": 0
+    },
+    {
+      "benchmark": "libero_plus",
+      "gpu_uuid": "GPU-56335fdf-6dc8-1d64-ce39-364d4a532435",
+      "flow_steps": 10,
+      "max_abs_action_difference": 0.0,
+      "preparation_record_index": 0
+    },
+    {
+      "benchmark": "libero_plus",
+      "gpu_uuid": "GPU-b786fcd4-f878-69e6-3017-a2ae408151fd",
+      "flow_steps": 1,
+      "max_abs_action_difference": 0.0,
+      "preparation_record_index": 0
+    },
+    {
+      "benchmark": "libero_plus",
+      "gpu_uuid": "GPU-b786fcd4-f878-69e6-3017-a2ae408151fd",
+      "flow_steps": 2,
+      "max_abs_action_difference": 0.0,
+      "preparation_record_index": 0
+    },
+    {
+      "benchmark": "libero_plus",
+      "gpu_uuid": "GPU-b786fcd4-f878-69e6-3017-a2ae408151fd",
+      "flow_steps": 4,
+      "max_abs_action_difference": 0.0,
+      "preparation_record_index": 0
+    },
+    {
+      "benchmark": "libero_plus",
+      "gpu_uuid": "GPU-b786fcd4-f878-69e6-3017-a2ae408151fd",
+      "flow_steps": 10,
+      "max_abs_action_difference": 0.0,
+      "preparation_record_index": 0
+    },
+    {
+      "benchmark": "libero_plus",
+      "gpu_uuid": "GPU-967ff6df-a7e2-b65a-d051-87819b7725fc",
+      "flow_steps": 1,
+      "max_abs_action_difference": 0.0,
+      "preparation_record_index": 0
+    },
+    {
+      "benchmark": "libero_plus",
+      "gpu_uuid": "GPU-967ff6df-a7e2-b65a-d051-87819b7725fc",
+      "flow_steps": 2,
+      "max_abs_action_difference": 0.0,
+      "preparation_record_index": 0
+    },
+    {
+      "benchmark": "libero_plus",
+      "gpu_uuid": "GPU-967ff6df-a7e2-b65a-d051-87819b7725fc",
+      "flow_steps": 4,
+      "max_abs_action_difference": 0.0,
+      "preparation_record_index": 0
+    },
+    {
+      "benchmark": "libero_plus",
+      "gpu_uuid": "GPU-967ff6df-a7e2-b65a-d051-87819b7725fc",
+      "flow_steps": 10,
+      "max_abs_action_difference": 0.0,
+      "preparation_record_index": 0
+    },
+    {
+      "benchmark": "libero_plus",
+      "gpu_uuid": "GPU-0cb759da-a716-038e-f0a9-208ec138ccc7",
+      "flow_steps": 1,
+      "max_abs_action_difference": 0.0,
+      "preparation_record_index": 0
+    },
+    {
+      "benchmark": "libero_plus",
+      "gpu_uuid": "GPU-0cb759da-a716-038e-f0a9-208ec138ccc7",
+      "flow_steps": 2,
+      "max_abs_action_difference": 0.0,
+      "preparation_record_index": 0
+    },
+    {
+      "benchmark": "libero_plus",
+      "gpu_uuid": "GPU-0cb759da-a716-038e-f0a9-208ec138ccc7",
+      "flow_steps": 4,
+      "max_abs_action_difference": 0.0,
+      "preparation_record_index": 0
+    },
+    {
+      "benchmark": "libero_plus",
+      "gpu_uuid": "GPU-0cb759da-a716-038e-f0a9-208ec138ccc7",
+      "flow_steps": 10,
+      "max_abs_action_difference": 0.0,
+      "preparation_record_index": 0
+    }
+  ],
+  "prior_smoke_parity_checks": [],
+  "benchmarks": {
+    "libero": {
+      "cases": 4,
+      "one_step_failures": 0,
+      "one_step_successes": 4,
+      "patterns": {
+        "succeed/succeed/succeed/succeed": 4
+      },
+      "first_success_among_one_step_failures": {},
+      "nonmonotonic": 0,
+      "persistent_rescues": 0,
+      "nonpersistent_rescues": 0,
+      "rescues": {
+        "2": 0,
+        "4": 0,
+        "10": 0
+      },
+      "regressions": {
+        "2": 0,
+        "4": 0,
+        "10": 0
+      },
+      "vectors": [
+        {
+          "key": [
+            "libero:libero_10:0",
+            930031,
+            30
+          ],
+          "success_vector": [
+            true,
+            true,
+            true,
+            true
+          ],
+          "pattern": "succeed/succeed/succeed/succeed"
+        },
+        {
+          "key": [
+            "libero:libero_goal:0",
+            930021,
+            30
+          ],
+          "success_vector": [
+            true,
+            true,
+            true,
+            true
+          ],
+          "pattern": "succeed/succeed/succeed/succeed"
+        },
+        {
+          "key": [
+            "libero:libero_object:0",
+            930011,
+            30
+          ],
+          "success_vector": [
+            true,
+            true,
+            true,
+            true
+          ],
+          "pattern": "succeed/succeed/succeed/succeed"
+        },
+        {
+          "key": [
+            "libero:libero_spatial:0",
+            930001,
+            30
+          ],
+          "success_vector": [
+            true,
+            true,
+            true,
+            true
+          ],
+          "pattern": "succeed/succeed/succeed/succeed"
+        }
+      ],
+      "episodes": 16,
+      "recording_audit": {
+        "status": "passed",
+        "records": 16,
+        "matched_cases": 4,
+        "action_digest_dtypes": [
+          "float64"
+        ],
+        "video_decoding_checked": true,
+        "allow_partial": false
+      }
+    },
+    "libero_plus": {
+      "cases": 7,
+      "one_step_failures": 0,
+      "one_step_successes": 7,
+      "patterns": {
+        "succeed/succeed/succeed/succeed": 7
+      },
+      "first_success_among_one_step_failures": {},
+      "nonmonotonic": 0,
+      "persistent_rescues": 0,
+      "nonpersistent_rescues": 0,
+      "rescues": {
+        "2": 0,
+        "4": 0,
+        "10": 0
+      },
+      "regressions": {
+        "2": 0,
+        "4": 0,
+        "10": 0
+      },
+      "vectors": [
+        {
+          "key": [
+            "libero_plus:libero_spatial:1380",
+            930025,
+            30
+          ],
+          "success_vector": [
+            true,
+            true,
+            true,
+            true
+          ],
+          "pattern": "succeed/succeed/succeed/succeed"
+        },
+        {
+          "key": [
+            "libero_plus:libero_spatial:1749",
+            930031,
+            0
+          ],
+          "success_vector": [
+            true,
+            true,
+            true,
+            true
+          ],
+          "pattern": "succeed/succeed/succeed/succeed"
+        },
+        {
+          "key": [
+            "libero_plus:libero_spatial:2113",
+            930037,
+            30
+          ],
+          "success_vector": [
+            true,
+            true,
+            true,
+            true
+          ],
+          "pattern": "succeed/succeed/succeed/succeed"
+        },
+        {
+          "key": [
+            "libero_plus:libero_spatial:282",
+            930007,
+            30
+          ],
+          "success_vector": [
+            true,
+            true,
+            true,
+            true
+          ],
+          "pattern": "succeed/succeed/succeed/succeed"
+        },
+        {
+          "key": [
+            "libero_plus:libero_spatial:5",
+            930001,
+            30
+          ],
+          "success_vector": [
+            true,
+            true,
+            true,
+            true
+          ],
+          "pattern": "succeed/succeed/succeed/succeed"
+        },
+        {
+          "key": [
+            "libero_plus:libero_spatial:619",
+            930013,
+            30
+          ],
+          "success_vector": [
+            true,
+            true,
+            true,
+            true
+          ],
+          "pattern": "succeed/succeed/succeed/succeed"
+        },
+        {
+          "key": [
+            "libero_plus:libero_spatial:990",
+            930019,
+            30
+          ],
+          "success_vector": [
+            true,
+            true,
+            true,
+            true
+          ],
+          "pattern": "succeed/succeed/succeed/succeed"
+        }
+      ],
+      "episodes": 28,
+      "recording_audit": {
+        "status": "passed",
+        "records": 28,
+        "matched_cases": 7,
+        "action_digest_dtypes": [
+          "float64"
+        ],
+        "video_decoding_checked": true,
+        "allow_partial": false
+      }
+    }
+  },
+  "evidence_files": [
+    {
+      "path": "/volt/artifacts/rescue-characterization/runs/smoke-status.json",
+      "sha256": "fa5a1744d62d3070711fe12332402ae6f1732319111f05b1ea1fd1b88d3963e2"
+    },
+    {
+      "path": "/volt/code/frozen-flow-study/examples/rescue_characterization/protocol.json",
+      "sha256": "e7537584d34855c24c1a38ca11da4f7e479b9bcbfc53d2cc7ec8f7ff46eadf9d"
+    },
+    {
+      "path": "/volt/artifacts/rescue-characterization/runs/libero-smoke.jsonl",
+      "sha256": "5a8b3a4445e264845d1dce75dde4e5f66442b5a9fb3b018d000e0494ea24616c"
+    },
+    {
+      "path": "/volt/artifacts/rescue-characterization/runs/libero-smoke-patterns.json",
+      "sha256": "d5e6477a9e7f77ee1dcc48643b1cbbff0af3a7d2dd12211df9e83da0a831657e"
+    },
+    {
+      "path": "/volt/artifacts/rescue-characterization/runs/libero-prepare-worker-0.jsonl",
+      "sha256": "1d8d44da22575fc04ee0432b48c57be23dcc9a835a168755281b350821def904"
+    },
+    {
+      "path": "/volt/artifacts/rescue-characterization/runs/libero-prepare-worker-1.jsonl",
+      "sha256": "ddc49330c71c00e0bd78da335181aff4129d7110906b19091d63e67defce840f"
+    },
+    {
+      "path": "/volt/artifacts/rescue-characterization/runs/libero-prepare-worker-2.jsonl",
+      "sha256": "5d37557f178f7519d3885828e847efecd0a2e72d9132e5b8fc4037609cee49b1"
+    },
+    {
+      "path": "/volt/artifacts/rescue-characterization/runs/libero-prepare-worker-3.jsonl",
+      "sha256": "cc23adfed8f4350ff7d97e810572b9c186f8587d9c9dc205af30ecd6051b4b1d"
+    },
+    {
+      "path": "/volt/artifacts/rescue-characterization/runs/libero_plus-smoke.jsonl",
+      "sha256": "b60cc87f640887563aba891e26426ec5176b3872ae34530072a5922ed3577f59"
+    },
+    {
+      "path": "/volt/artifacts/rescue-characterization/runs/libero_plus-smoke-patterns.json",
+      "sha256": "bad1d2de86e692fda240bafa0f883ccb0475a083ecd4cb8481b39a59fc2627a0"
+    },
+    {
+      "path": "/volt/artifacts/rescue-characterization/runs/libero_plus-prepare-worker-0.jsonl",
+      "sha256": "d283c0cb8bdf5a6408df5216465a354a06dbafbf6ff78e9e762fc8d6c4fec8a5"
+    },
+    {
+      "path": "/volt/artifacts/rescue-characterization/runs/libero_plus-prepare-worker-1.jsonl",
+      "sha256": "046ab7d98ae373af525b6e297f9c537e6deb762adc46c2bc47ffc27b7590d392"
+    },
+    {
+      "path": "/volt/artifacts/rescue-characterization/runs/libero_plus-prepare-worker-2.jsonl",
+      "sha256": "817e5bd04fd3e0b0cfdd96c3c83a18cc95a870bdea38734e173104b542c2142c"
+    },
+    {
+      "path": "/volt/artifacts/rescue-characterization/runs/libero_plus-prepare-worker-3.jsonl",
+      "sha256": "65111f2075a4db4f58691f8b6365650c17442a7fa73111f40c38df83363a0ccd"
+    }
+  ],
+  "methodology": "Independent expected-case enumeration, seeded-noise reproduction and counts; pinned recording_audit reused for trace/video decoding only",
+  "limitations": "No video failure-mode labels or online prediction inferred by this integrity gate",
+  "created_at_utc": "2026-10-03T08:34:46.511667+00:00",
+  "audit_script_sha256": "c0ad5466372af17ade95b44e73e085b8e1202f52c4f77f1a0cb24f5e3f99baf2"
+}

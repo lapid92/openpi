@@ -1,0 +1,70 @@
+{
+  "role": "Independent Reviewer",
+  "reviewed_at_utc": "2026-10-03T07:50:20.645042+00:00",
+  "verdict": "approved_for_manifest_freeze_and_smoke_not_full_run",
+  "files": {
+    "examples/rescue_characterization/build_conditions.py": "b610689fae1e0f190e7419911e355b0e16991ba1a65aae641bad37833b30e8ed",
+    "examples/rescue_characterization/client.py": "0bf695e547c2dc9a09b5997c92820bcb3d65ecb1c92e881b5dd2607204d4140f",
+    "examples/rescue_characterization/recording.py": "d28d9004f42c55d5297e6481da96d4e9ff9ea5fefb76e8649e8de97b3379911e",
+    "examples/rescue_characterization/supervise.py": "1aadb28e9042608c66fa9d6ff87faa46fbe30223a6ce9f0bb1c52f10b8e28e04",
+    "examples/rescue_characterization/run_detached.sh": "c80cb9e63f757bf78d40870bbdd51efe62f2f721c9ed60e9495a2464d311e96f",
+    "examples/rescue_characterization/protocol.py": "7281b979d9a2a830253c4d4f34be02d4cda8c708317b5deb2087991d58eba472",
+    "examples/rescue_characterization/analyze.py": "92ecde5280db531fe86aa38a266a04e3ee2cdd90813ef88845eedb9fc0e2d44b",
+    "examples/rescue_characterization/analysis.py": "b187115cacfa72285320fe42d87c68fa0ae4982438910d8e025fe7c204162619",
+    "examples/rescue_characterization/recording_audit.py": "cdfdf23f9d78f107af59b5cd4eff5037991b093d6d44910649c36060e7de6690",
+    "examples/rescue_characterization/extract_existing.py": "817245d464765e65b2b31b4c4c1a72745e4bfa1ca6c09ad893693365bd47696a",
+    "examples/rescue_characterization/report.py": "35f4b6a1f209c191ff8b581828df56dedfbada95740f6f88a2215576c7e61178"
+  },
+  "verified": [
+    "Declared 40 standard tasks each 20 cases and 168 Plus conditions each 10 cases; exact seven axes, severities3/4, three conditions per suite/axis/severity.",
+    "Recorded observations are taken from existing env step outputs, no extra environment call added.",
+    "Language Instructions prompt is checked against BDDL language instruction.",
+    "Detached supervisor uses new ports and dedicated branch."
+  ],
+  "nonblocking": [
+    {
+      "id": "R3",
+      "path": "examples/rescue_characterization/build_conditions.py",
+      "finding": "Runtime source-string rewrite of original builder is brittle; generated stratum checks passed but future source updates could silently bypass replacements.",
+      "required": "Prefer explicit parameters/helper or assert every replacement appears exactly once and validate each stratum family cardinality."
+    },
+    {
+      "id": "R4",
+      "path": "examples/rescue_characterization/supervise.py",
+      "finding": "Videos and NPZ traces remain pod-only; current W&B artifact includes root JSON/JSONL/MD only.",
+      "required": "Publish an explicit recording inventory with byte sizes/hash/path and durable W&B artifact for selected review evidence or clearly document pod-only retention."
+    }
+  ],
+  "tests_run": ".venv/bin/python -m pytest -q examples/rescue_characterization/test_analysis.py examples/rescue_characterization/test_execution.py :16 passed in0.05s",
+  "revision_reviewed_at_utc": "2026-10-03T07:56:27.593964+00:00",
+  "initial_blockers": [
+    {
+      "id": "R1",
+      "path": "examples/rescue_characterization/analyze.py",
+      "finding": "Final analyzer is unchanged from original and ignores new recording evidence and RNG pairing.",
+      "required": "Independently check recording paths/digests, required chunk RNG hashes, action numeric arrays against action hashes and executed queue, per-step RNG pairing at common step indices, trace counts/success and video frame counts; require prompt/severity identity. Make smoke gate invoke these checks; do not accept two missing RNG hashes as equality."
+    },
+    {
+      "id": "R2",
+      "path": "examples/rescue_characterization/supervise.py",
+      "finding": "Detached completion invokes only original analyze.py/report.py; new first-success/nonmonotonic classifier not invoked.",
+      "required": "Integrate complete vector extraction and classification with audited records into detached publication (smoke excluded from main population)."
+    }
+  ],
+  "blockers": [],
+  "resolved": {
+    "R1": "recording_audit.py validates file digests, action arrays and source action digests, executed chunk prefixes, success/frame accounting, metadata and per-action RNG pairing. Client checks per-record/resume evidence; supervisor runs full decoded-media audit and repeats audit in smoke gate.",
+    "R2": "Supervisor now runs analysis.py on declared records after base and recording audit. Classifier writes per-case vectors and clustered first-success/rescue/regression/pattern summaries. Report reads corrected patterns key."
+  },
+  "runtime_gates": [
+    "Commit and push exact fully enumerated manifest and all source hashes before smoke.",
+    "Pass real checkpoint sampler parity on all four GPU UUIDs and all four steps for each benchmark.",
+    "Pass complete declared 4 standard-suite and7 Plus-axis smoke cases, original identity auditor and decoded media/RNG/action auditor before full run.",
+    "Report contains no new population finding before full declared scan completes."
+  ],
+  "operational_limitations": [
+    "Preserved error attempt rows currently fail recording audit and classification even after successful retry. This is fail-closed, not false scoring; explicitly separate preserved error diagnostics from audited successful attempts before retry publication.",
+    "All videos/NPZ remain pod-side; selected review clips may later be uploaded. Raw episode record includes paths and content digests.",
+    "No blinded labels or simulator outcomes reviewed in this preflight approval."
+  ]
+}

@@ -1,0 +1,15 @@
+{
+  "reviewer": "blind_primary",
+  "assigned_sorted_group_indices": [
+    0,
+    34
+  ],
+  "clips_labeled": 136,
+  "index_convention": "Video frame0 is stabilized initial state. Frame f is after f executed actions; zero-based last action is f-1. This applies to ALL decisive_frame_action_indices, including first rows that omit coverage index convention.",
+  "continuous_full_videos_viewed": 0,
+  "coverage": "Every labeled clip: entire12-frame contact-sheet overview plus additional decoded native or dense frames explicitly listed in per-clip coverage. Both cameras inspected. Success-free numeric pre-action end states checked; no force/contact ground truth. No condition/arm/outcome tables consulted.",
+  "limitations": "Observed completion is visual, not simulator success. Medium/low confidence and alternative labels preserve ambiguous support, release, exact spatial tolerance and occlusion. No clips labeled from summary alone.",
+  "revisions_file": "labels-primary-revisions.jsonl",
+  "locked_at": "2026-10-05T09:40:06.471379+00:00",
+  "sha256": "3d184e477e9b94f8ac090033ac8f3ccc81b42a451ca453347fc346b17b8a0b9c"
+}

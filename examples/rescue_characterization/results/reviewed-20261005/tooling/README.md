@@ -1,0 +1,19 @@
+Review evidence helpers (unpinned auxiliary tooling)
+
+No labels were read to implement/test this helper; tests use synthetic records. Source mappings remain private. Do not give this directory, private mapping, or joined reports to blind reviewers before labels lock.
+
+Canonicalization preserves original_label and explicitly maps decisive_frame_action_indices -> decisive_indices; literal_observation -> observation; reviewed_at_utc -> reviewed_at; not_completed -> not completed. Actual viewing coverage comes from viewing_coverage or actual_viewing_coverage. continuous_full_video alone controls full_video_viewed; if absent it is false with full_video_viewed_reported=false. full_video_necessary never implies full video was viewed. All supplied viewed and decisive indices are retained; unseen decisive frames fail validation. Missing/unobserved stages are never filled; explicit unobserved stage must be unclear.
+
+Commands (use absolute artifact paths in arguments):
+
+1. initial-plan --new-reviewers PRIMARY SECONDARY --historical-reviewers HIST_FIRST HIST_SECOND --output assignments.json. New first34/last34 groups are fixed. Historical IDs must reflect actual assignment; edit a new explicit assignment file if historical allocation differs. Can provide same historical reviewer twice for a single baseline reviewer.
+2. cross-plan --assignments assignments.json --routes routes.json --output blind-plan.json --private-output private-plan.json. Routes JSON maps each baseline reviewer to a distinct independent reviewer. Public plan contains only cohort,clip_id,reviewer. Early plan targets one deterministic opaque clip per selected family; no labels needed.
+3. lock --sources baseline-sources.json --assignments assignments.json --output baseline-lock.json. Sources JSON is list of cohort/reviewer/path. Exact272new+116historical required, one baseline perclip, expected reviewer, complete rubric and auditable viewing evidence. Never overwrite a lock or source.
+4. cross-plan again with --lock baseline-lock.json and NEW output paths adds all low-confidence or unclear-stage/outcome clips. It must be regenerated after baseline lock; early plan alone does not establish completion.
+5. join --lock baseline-lock.json --overlap-sources overlap-sources.json --cross-plan final-blind-plan.json --adjudications adjudications.json --output NEW-DIRECTORY. Overlap sources have same source-list schema. Adjudications optional, keyed cohort/clip_id, preserving label and rationale. Never replaces either independent label. Missing cross-review remains explicit cross_review_incomplete; agreement uses raw independent labels.
+
+Publication helper takes explicit hashed manifest of reports and optional <=24selected media (<=256MB total), complete review-summary and immutable baseline lock. Default validates only. --copy-git copies small reports into a NEW results subdirectory, never git add/commit/push. --execute-wandb publishes reports plus optional selected examples; all full media remains on pod. Requires full388baseline and all planned/low/unclear cross-review. It does not compute population rates from outcome-stratified clips.
+
+Publication manifest required fields: baseline_locked:true, baseline_lock,path and baseline_lock_sha256, review_summary,path and review_summary_sha256, reports:[{path,name,sha256}], optional selected_media:[{path,clip_id,reason,sha256}]. W&B receipts retain run/artifact identifiers. Root should review scripts and select report/media inputs before execution.
+
+Root-reviewed aliases: explicit alternative_label:null normalizes to empty string, with original_label retained. Coverage dense_frame_action_indices maps to additional_video_frames; coverage full_video_viewed maps to continuous_full_video. Prose contact-sheet coverage does not fabricate frame lists; reviewer must supply actual sampled indices.
