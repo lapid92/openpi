@@ -1,0 +1,22 @@
+{
+  "libero": {
+    "cases": 760,
+    "conditions": 40,
+    "unique_tuple_cases": 760,
+    "shared_prior_suite_family_state_hash_cases": 0,
+    "prior_condition_names_overlap": 40,
+    "smoke_cases": 4,
+    "sha256": "5442a6f5bb6404deaf3cac12eaf52facb2ea1b2b87e5165d6fe42aaac5889568",
+    "passed": true
+  },
+  "libero_plus": {
+    "cases": 1680,
+    "conditions": 168,
+    "unique_tuple_cases": 1680,
+    "shared_prior_suite_family_state_hash_cases": 0,
+    "prior_condition_names_overlap": 0,
+    "smoke_cases": 7,
+    "sha256": "d25d9f1a3b17655d6ed4b5d42aeaa0ac0c1fc55a5beafa66f36da2f18f6a9d85",
+    "passed": true
+  }
+}

@@ -1,0 +1,16 @@
+{
+  "libero": {
+    "replay_catalog_cases": 30,
+    "new_main_case_overlap": 0,
+    "prior_suite_family_state_hash_overlap": 0,
+    "prior_task_name_overlap": 17
+  },
+  "libero_plus": {
+    "replay_catalog_cases": 165,
+    "new_main_case_overlap": 0,
+    "prior_suite_family_state_hash_overlap": 0,
+    "prior_task_name_overlap": 0
+  },
+  "replay_manifest_sha256": "d9cfdf88561ec89206bd78d7104671e2d72e28cf48b12c947fc59cfd2b18cbdb",
+  "passed": true
+}

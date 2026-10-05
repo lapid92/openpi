@@ -1,0 +1,31 @@
+{
+  "reviewed_at_utc": "2026-10-05T13:57:19.647180+00:00",
+  "scope": "Concrete implementation inspection, before runtime smoke. Builder excluded because reviewer authored it.",
+  "files": {
+    "probe.py": "a334742af8e0e0f1a7552649bc8f8aa6c7cdfa7e5b11b389d39a491c9ce2ba86",
+    "policy_server.py": "0a390c3ada7f53afd7f60cd53275dcf7d0b94dc918d46e0d8f046235ce357f7f",
+    "client.py": "588a996d7ec39a15fae095729f7adf1c4438a2e6cd34264413c51960b45b7bf0",
+    "PROTOCOL.md": "d0f17a181ac6660ed57bfa16347ad8ef899e32c1bee6a58ac77a130f32891cb8"
+  },
+  "findings": [
+    {
+      "severity": "nonblocking-documentation",
+      "description": "Protocol promises replay-catalog exclusion; builder reads three prior protocol main/smoke declarations. Verify replay cases subset independently or narrow wording."
+    }
+  ],
+  "verified_by_inspection": [
+    "Midpoint from two-step frozen cached trace; t1=1,t2=.5 and actual noise equality check.",
+    "Score all70 executed model coordinates, float32 normalized RMS delta and1e-6 floor, finite checks.",
+    "Probe runs after unchanged production inference, does not feed actions, explicit noise and constant probe key.",
+    "Exact production output hash parity distinct from cached-public1e-5 tolerance; repeated probe exact tensor/score equality.",
+    "Explicit two extra NFE per initial arm, no later observations; head frozen hash+metadata check.",
+    "Primary gate fixed4step75% maximum-horizon budget; probe overhead included and no future episode-length cutoff."
+  ],
+  "not_yet_approved": [
+    "Runtime real-checkpoint parity",
+    "Smoke outcome/complete accounting audit",
+    "Analysis implementation and raw independent metric reproduction",
+    "Casebuilder independent validation",
+    "Final publication"
+  ]
+}

@@ -1,0 +1,37 @@
+test_closed_form_constant (examples.flow_probe.test_probe.ScoreTests.test_closed_form_constant) ... ok
+test_finite_padding_excluded (examples.flow_probe.test_probe.ScoreTests.test_finite_padding_excluded) ... ok
+test_independent_scalar_oracle (examples.flow_probe.test_probe.ScoreTests.test_independent_scalar_oracle) ... ok
+test_no_input_or_rng_mutation (examples.flow_probe.test_probe.ScoreTests.test_no_input_or_rng_mutation) ... ok
+test_nonfinite_padding_still_fails_closed (examples.flow_probe.test_probe.ScoreTests.test_nonfinite_padding_still_fails_closed) ... ok
+test_overflow_rejected (examples.flow_probe.test_probe.ScoreTests.test_overflow_rejected) ... ok
+test_scale_invariance_away_from_floor (examples.flow_probe.test_probe.ScoreTests.test_scale_invariance_away_from_floor) ... ok
+test_shape_must_be_exact (examples.flow_probe.test_probe.ScoreTests.test_shape_must_be_exact) ... ok
+test_zero_and_floor (examples.flow_probe.test_probe.ScoreTests.test_zero_and_floor) ... ok
+test_array_hash_is_recorded_bytes (examples.flow_probe.test_probe.TraceTests.test_array_hash_is_recorded_bytes) ... ok
+test_declared_midpoint (examples.flow_probe.test_probe.TraceTests.test_declared_midpoint) ... ok
+test_nonfinite_and_shape_rejected (examples.flow_probe.test_probe.TraceTests.test_nonfinite_and_shape_rejected) ... ok
+test_wrong_midpoint_and_time_rejected (examples.flow_probe.test_probe.TraceTests.test_wrong_midpoint_and_time_rejected) ... ok
+test_actual_lengths_do_not_change_selection (examples.flow_probe.test_analysis.BudgetTests.test_actual_lengths_do_not_change_selection) ... ok
+test_all_four_selected_labels_and_net (examples.flow_probe.test_analysis.BudgetTests.test_all_four_selected_labels_and_net) ... ok
+test_bootstrap_duplicate_occurrences_charged_separately (examples.flow_probe.test_analysis.BudgetTests.test_bootstrap_duplicate_occurrences_charged_separately) ... ok
+test_infeasible_overhead_explicit (examples.flow_probe.test_analysis.BudgetTests.test_infeasible_overhead_explicit) ... ok
+test_prefix_does_not_skip_expensive_next (examples.flow_probe.test_analysis.BudgetTests.test_prefix_does_not_skip_expensive_next) ... ok
+test_probe_overhead_reserved_for_all (examples.flow_probe.test_analysis.BudgetTests.test_probe_overhead_reserved_for_all) ... ok
+test_ties_use_identity_not_outcome_or_input_order (examples.flow_probe.test_analysis.BudgetTests.test_ties_use_identity_not_outcome_or_input_order) ... ok
+test_independent_bootstrap_reproduction (examples.flow_probe.test_analysis.IndependentAuditTests.test_independent_bootstrap_reproduction) ... ok
+test_independent_point_oracles (examples.flow_probe.test_analysis.IndependentAuditTests.test_independent_point_oracles) ... ok
+test_mismatch_comparison_fails_closed (examples.flow_probe.test_analysis.IndependentAuditTests.test_mismatch_comparison_fails_closed) ... ok
+test_all_pair_labels (examples.flow_probe.test_analysis.RankingTests.test_all_pair_labels) ... ok
+test_constant_score_ties (examples.flow_probe.test_analysis.RankingTests.test_constant_score_ties) ... ok
+test_grouped_tie_ap_not_order_sensitive (examples.flow_probe.test_analysis.RankingTests.test_grouped_tie_ap_not_order_sensitive) ... ok
+test_nonmonotonic_pattern_keeps_comparisons_separate (examples.flow_probe.test_analysis.RankingTests.test_nonmonotonic_pattern_keeps_comparisons_separate) ... ok
+test_pairwise_auc_independent_enumeration (examples.flow_probe.test_analysis.RankingTests.test_pairwise_auc_independent_enumeration) ... ok
+test_perfect_ranking (examples.flow_probe.test_analysis.RankingTests.test_perfect_ranking) ... ok
+test_regressions_are_all_case_negatives (examples.flow_probe.test_analysis.RankingTests.test_regressions_are_all_case_negatives) ... ok
+test_reverse_ranking_closed_form (examples.flow_probe.test_analysis.RankingTests.test_reverse_ranking_closed_form) ... ok
+test_undefined_auc_without_classes (examples.flow_probe.test_analysis.RankingTests.test_undefined_auc_without_classes) ... ok
+
+----------------------------------------------------------------------
+Ran 32 tests in 0.183s
+
+OK

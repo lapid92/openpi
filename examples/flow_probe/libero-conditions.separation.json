@@ -1,0 +1,27 @@
+{
+  "distinct_suite_family_state_hashes": 760,
+  "explicitly_shared_singleton_cases": [],
+  "main_cases": 760,
+  "passed": true,
+  "plus_limitation": "New conditions and seeds; singleton state conditions reuse base physical state.",
+  "prior_case_tuple_overlap": 0,
+  "prior_condition_name_overlap": 40,
+  "prior_named_seed_state_overlap": 0,
+  "prior_protocols": [
+    {
+      "path": "/volt/code/frozen-flow-study/examples/frozen_flow/protocol.json",
+      "sha256": "d16dba54a8157af011e872299883e071e681c0b4c6ad6bce1e5e62415f7910e6"
+    },
+    {
+      "path": "/volt/code/frozen-flow-study/examples/selective_flow/protocol.json",
+      "sha256": "209e434b336372b37d80b7a101912b4b8daeb9f5cd71a0e9772fdfe1579e782c"
+    },
+    {
+      "path": "/volt/code/frozen-flow-study/examples/rescue_characterization/protocol.json",
+      "sha256": "e7537584d34855c24c1a38ca11da4f7e479b9bcbfc53d2cc7ec8f7ff46eadf9d"
+    }
+  ],
+  "prior_within_family_state_overlap": 0,
+  "standard_limitation": "All standard tasks were previously analyzed; only state/seed/noise cases are new.",
+  "unique_case_keys": 760
+}

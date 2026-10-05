@@ -1,0 +1,40 @@
+{
+  "reviewed_at_utc": "2026-10-05T13:55:40.514575+00:00",
+  "case_builds": {
+    "libero": {
+      "main_cases": 760,
+      "unique_case_keys": 760,
+      "distinct_suite_family_state_hashes": 760,
+      "prior_case_tuple_overlap": 0,
+      "prior_named_seed_state_overlap": 0,
+      "prior_condition_name_overlap": 40,
+      "prior_within_family_state_overlap": 0,
+      "conditions_sha256": "5442a6f5bb6404deaf3cac12eaf52facb2ea1b2b87e5165d6fe42aaac5889568",
+      "family_count": 40,
+      "singleton_conditions": 0
+    },
+    "libero_plus": {
+      "main_cases": 1680,
+      "unique_case_keys": 1680,
+      "distinct_suite_family_state_hashes": 274,
+      "prior_case_tuple_overlap": 0,
+      "prior_named_seed_state_overlap": 0,
+      "prior_condition_name_overlap": 0,
+      "prior_within_family_state_overlap": 0,
+      "conditions_sha256": "d25d9f1a3b17655d6ed4b5d42aeaa0ac0c1fc55a5beafa66f36da2f18f6a9d85",
+      "family_count": 28,
+      "singleton_conditions": 24,
+      "minimum_available_families_per_stratum": 3
+    }
+  },
+  "observations": [
+    "Inspected actual first main JSONL record and first chunk schema in all three predecessor studies. Neither two velocities nor exact observation pixels stored. frozen-flow and selective-flow artifact directories contain zero NPZ files.",
+    "Rescue recorder NPZ contains actions/eef_gripper_states/rng_sha256/success only; compressed MP4 pixels cannot reconstruct exact inference inputs. Existing scores cannot be computed without fresh model inference. No old evaluation rerun authorized or performed.",
+    "Pi0 implementation integrates time1 to0. Proposed midpoint z-.5*v1,time.5 agrees two-step Euler provisional first state. Independent score is normalized RMS velocity change in first10x7 model-normalized action coordinates; not a calibrated error bound.",
+    "Pi0.cached_fixed_step_trace doc warns separately compiled suffix paths can diverge in bfloat16. Probe must not substitute any production outputs and must demonstrate probe-off/on exact output/hash parity with unmodified policy RNG.",
+    "Head file from selective protocol is frozen /volt/checkpoints/selective-flow/head-3000.npz, declaredSHA e41eb678b938d239fdadb8bc1c77f9466007e460ea0dd53326262b7960f27d10; identity must be reverified at runtime.",
+    "Accepted primary4-step gate at75%extra maximum-horizon NFE cap with reserve2Nprobe and score-prefix selection based solely horizon metadata. Actual rollout lengths only used after selection for accounting; never selection.",
+    "Both benchmarks primary gates required to propose general closed-loop test: selectedrescues>=10 over>=5clusters, overallrescue/regression counts>=10, precision>=.1 recall>=.2,95%clustered lowerbounds precision-minus-prevalence>0, selectednet/N>0, rescue/regression AUROC>.5. Insufficient evidence stops without controller; no posthoc threshold relaxation.",
+    "Builder is my implementation and requires independent Test Writer review. All modifications restricted to new flow_probe builder and metadata declarations; no predecessor source changes or rollout execution."
+  ]
+}

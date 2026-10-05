@@ -1,0 +1,49 @@
+{
+  "reviewed_at_utc": "2026-10-05T14:06:30.639090+00:00",
+  "status": "approved_prelaunch_smoke",
+  "reviewed_sha256": {
+    "/volt/code/frozen-flow-study/examples/flow_probe/PROTOCOL.md": "062324ba6cffc49ae92292e143b2a4b46ccdb2ab9f8085eca333d3d06d086f90",
+    "/volt/code/frozen-flow-study/examples/flow_probe/RUN.md": "75b7a3ea50b7bbc82bbc8a9875b4558009b96cdd5965397f3c61ccd2b2c5832a",
+    "/volt/code/frozen-flow-study/examples/flow_probe/analysis.py": "4c05b78d554548f98ce2895fe0753b273b7d7259d54df390d31d651bb0bc0ba9",
+    "/volt/code/frozen-flow-study/examples/flow_probe/assemble.py": "0dc540ff397f5967023c110be14683aa6a6a1c4ecd198bc182d0ce3552f7a7ab",
+    "/volt/code/frozen-flow-study/examples/flow_probe/build_conditions.py": "0e33cd5a7c8e165a901fdaf9e8f89c1060b24b020b248aebd41f8e61816c20cc",
+    "/volt/code/frozen-flow-study/examples/flow_probe/client.py": "588a996d7ec39a15fae095729f7adf1c4438a2e6cd34264413c51960b45b7bf0",
+    "/volt/code/frozen-flow-study/examples/flow_probe/independent_audit.py": "58cf6b0adfca59b32bb864f68414f17c147d910ea01b4d5b4ed58ee49b2ef4a0",
+    "/volt/code/frozen-flow-study/examples/flow_probe/libero-conditions.json": "5442a6f5bb6404deaf3cac12eaf52facb2ea1b2b87e5165d6fe42aaac5889568",
+    "/volt/code/frozen-flow-study/examples/flow_probe/libero-conditions.separation.json": "63d3fb16befe6cb9f9c811aa37eed31e643852aab67a5f4383faeae49fba3a12",
+    "/volt/code/frozen-flow-study/examples/flow_probe/libero_plus-conditions.json": "d25d9f1a3b17655d6ed4b5d42aeaa0ac0c1fc55a5beafa66f36da2f18f6a9d85",
+    "/volt/code/frozen-flow-study/examples/flow_probe/libero_plus-conditions.separation.json": "6315ed0486baa0494375fa4e42b720cc1905edb46d10ecbe5c15f23b51c39766",
+    "/volt/code/frozen-flow-study/examples/flow_probe/policy_server.py": "7021c0ff9da9a0b1b9ad986ba3cfa0d1509063d96db0f296643d6dbd42f03581",
+    "/volt/code/frozen-flow-study/examples/flow_probe/probe.py": "a334742af8e0e0f1a7552649bc8f8aa6c7cdfa7e5b11b389d39a491c9ce2ba86",
+    "/volt/code/frozen-flow-study/examples/flow_probe/report.py": "20f08207ee4e15e0b5ecbc3ea812bdf2bd61d52a9df581c99f757bcf47d78a90",
+    "/volt/code/frozen-flow-study/examples/flow_probe/supervise.py": "5af03ec02cf6086fac89e43a95468ed9e4f2edffa6b7df40ab2f263a5bf4aa70",
+    "/volt/code/frozen-flow-study/examples/flow_probe/test_analysis.py": "1972c7af75306a491719838640b07727b81b4f8ba41df2ff7e781fdbc1b55ef7",
+    "/volt/code/frozen-flow-study/examples/flow_probe/test_probe.py": "3037c0c17f94bfa32e053cee49cda2f853bb1d04c3299f67e11fa721fe269f60"
+  },
+  "scope": "Approval to freeze/commit/push prospective protocol and execute one smoke; not approval that runtime parity passes or study scientific success.",
+  "approval_basis": [
+    "Concrete probe/server/client source inspected; production sampler unchanged, isolated initial diagnostic explicitly charges2extraNFE and frozenhead.",
+    "Exact on/off production output parity and RNG progression mandatory, separately cached/public1e-5 parity and repeatedprobe tensoridentity.",
+    "Analysis grouped-tie AP/AUC, fouroutcomelabels, initial-only score, fixed maximum-horizon prefixbudget, pairedcluster uncertainty and primary4step75percent gate reviewed.",
+    "All prior review findings resolved: strict boolean outcomes/statehash declarations/chunkorder/probetensor pairidentity; independent rawnoise/action/media/head/score audits mandatory before publication.",
+    "Independent implementation reproduces all point metrics plus10k primary4step75percent confidence intervals and independent gate; fullreportrequires explicit true reproductionflags.",
+    "Full supervisor refuses existingphase state and checks hashed published smoke evidence; RUN.md requires Reviewer inspection of actualsmoke before full launch.",
+    "Lossless small rawshards preserve originalbyte hashes; rawprobe arrays published W&B separately before resultGitpush; source/checkpoint/head hashes rechecked.",
+    "Prospective casebuilder authored by thisreviewer but independently audited by TestWriter; 195replays independently confirmed subsetpriorcases anddisjoint new.",
+    "32 targeted CPU tests passed in reviewer execution; no changed tracked predecessor sources; newcode under examples/flow_probe only."
+  ],
+  "remaining_gates": [
+    "Freeze manifest once and verify pinned source/protocol hashes match thisreview or explicitly review any changes.",
+    "Realweight smoke parity, all44smoke outcome/probe/media/audit evidence require actual independent review before full launch.",
+    "Complete9760main episodes or reportfailure/incomplete without decisiveclaim; no duplicate/restarted evaluations.",
+    "Full actualartifact/diff review, warning disclosure, primaryuncertainty reproduction and finalpublication.",
+    "All secondary interval arms/budgets/comparators are produced with validated productionbootstrap, not independently reproduced; report thislimit honestly."
+  ],
+  "validation_command": ".venv/bin/python -m pytest -q examples/flow_probe/test_probe.py examples/flow_probe/test_analysis.py",
+  "validation_result": "32 passed in0.21s",
+  "prohibited_interpretations": [
+    "Offline ranking is not closedloop validation or speedup.",
+    "Failed/inconclusiveprimary gate cannot be rescued by posthoc alternate score/sign/budget/arm/subgroup.",
+    "Standard tasks are reused; cases are newstate/seed/noise, not unseenstandardtasks."
+  ]
+}

@@ -1,0 +1,15 @@
+{
+  "reviewed_at_utc": "2026-10-05T14:09:27.980102+00:00",
+  "status": "approved_prelaunch_smoke",
+  "supersedes_only_hashes_in": "/volt/artifacts/flow-probe/reviewer/prelaunch-review.json",
+  "changed_sha256": {
+    "/volt/code/frozen-flow-study/examples/flow_probe/supervise.py": "94f0938249c3e8550b390138be229ae0b8b74eca8cf8070331ea590afda19083"
+  },
+  "reviewed_delta": [
+    "Existing MuJoCo log copied exclusively before childlaunch withcontenthashverification; oldbytes preserved if loggertruncates.",
+    "Beforelength/hash/inode snapshot separates authenticated appendedsuffix fromunknownboundary currentlog; truncation/replacement count remainsnull.",
+    "Currentwarningevidencecaptured beforefullreport andfinally afterchildrenstop; preexisting/suffix/unknownboundarylogs includedsmallpublication.",
+    "Allother17-fileinitialreviewhashes unchanged exceptsupervisor."
+  ],
+  "scope": "Same approval and remainingruntime gates as prelaunch-review.json; no new evaluation performed."
+}

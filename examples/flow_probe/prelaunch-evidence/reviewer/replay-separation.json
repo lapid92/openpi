@@ -1,0 +1,5 @@
+{
+  "replay_manifest_sha256": "d9cfdf88561ec89206bd78d7104671e2d72e28cf48b12c947fc59cfd2b18cbdb",
+  "replay_case_count": 195,
+  "all_cases_subset_prior_protocols_and_disjoint_new": true
+}

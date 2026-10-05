@@ -1,0 +1,18 @@
+test_closed_form_constant (examples.flow_probe.test_probe.ScoreTests.test_closed_form_constant) ... ok
+test_finite_padding_excluded (examples.flow_probe.test_probe.ScoreTests.test_finite_padding_excluded) ... ok
+test_independent_scalar_oracle (examples.flow_probe.test_probe.ScoreTests.test_independent_scalar_oracle) ... ok
+test_no_input_or_rng_mutation (examples.flow_probe.test_probe.ScoreTests.test_no_input_or_rng_mutation) ... ok
+test_nonfinite_padding_still_fails_closed (examples.flow_probe.test_probe.ScoreTests.test_nonfinite_padding_still_fails_closed) ... ok
+test_overflow_rejected (examples.flow_probe.test_probe.ScoreTests.test_overflow_rejected) ... ok
+test_scale_invariance_away_from_floor (examples.flow_probe.test_probe.ScoreTests.test_scale_invariance_away_from_floor) ... ok
+test_shape_must_be_exact (examples.flow_probe.test_probe.ScoreTests.test_shape_must_be_exact) ... ok
+test_zero_and_floor (examples.flow_probe.test_probe.ScoreTests.test_zero_and_floor) ... ok
+test_array_hash_is_recorded_bytes (examples.flow_probe.test_probe.TraceTests.test_array_hash_is_recorded_bytes) ... ok
+test_declared_midpoint (examples.flow_probe.test_probe.TraceTests.test_declared_midpoint) ... ok
+test_nonfinite_and_shape_rejected (examples.flow_probe.test_probe.TraceTests.test_nonfinite_and_shape_rejected) ... ok
+test_wrong_midpoint_and_time_rejected (examples.flow_probe.test_probe.TraceTests.test_wrong_midpoint_and_time_rejected) ... ok
+
+----------------------------------------------------------------------
+Ran 13 tests in 0.088s
+
+OK

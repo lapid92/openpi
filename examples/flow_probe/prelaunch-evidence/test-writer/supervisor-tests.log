@@ -1,0 +1,11 @@
+test_existing_shards_refused (examples.flow_probe.test_supervise.SupervisorTests.test_existing_shards_refused) ... ok
+test_gate_exact_evidence_and_tamper (examples.flow_probe.test_supervise.SupervisorTests.test_gate_exact_evidence_and_tamper) ... ok
+test_gate_missing_preparation_refused (examples.flow_probe.test_supervise.SupervisorTests.test_gate_missing_preparation_refused) ... ok
+test_gate_unpublished_refused (examples.flow_probe.test_supervise.SupervisorTests.test_gate_unpublished_refused) ... ok
+test_lossless_boundaries (examples.flow_probe.test_supervise.SupervisorTests.test_lossless_boundaries) ... ok
+test_oversized_row_refused (examples.flow_probe.test_supervise.SupervisorTests.test_oversized_row_refused) ... ok
+
+----------------------------------------------------------------------
+Ran 6 tests in 0.008s
+
+OK

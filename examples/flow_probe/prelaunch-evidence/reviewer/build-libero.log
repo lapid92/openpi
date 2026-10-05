@@ -1,0 +1,171 @@
+[robosuite WARNING] No private macro file found! (macros.py:53)
+[robosuite WARNING] It is recommended to use a private macro file (macros.py:54)
+[robosuite WARNING] To setup, run: python /volt/envs/libero/lib/python3.8/site-packages/robosuite/scripts/setup_macros.py (macros.py:55)
+Gym has been unmaintained since 2022 and does not support NumPy 2.0 amongst other critical functionality.
+Please upgrade to Gymnasium, the maintained drop-in replacement of Gym, or contact the authors of your software and request that they upgrade.
+See the migration guide at https://gymnasium.farama.org/introduction/migration_guide/ for additional information.
+[info] using task orders [0, 1, 2, 3, 4, 5, 6, 7, 8, 9]
+[Warning]: datasets path /volt/code/frozen-flow-study/third_party/libero/libero/datasets does not exist!
+[Warning]: datasets path /volt/code/frozen-flow-study/third_party/libero/libero/datasets does not exist!
+[Warning]: datasets path /volt/code/frozen-flow-study/third_party/libero/libero/datasets does not exist!
+[Warning]: datasets path /volt/code/frozen-flow-study/third_party/libero/libero/datasets does not exist!
+[Warning]: datasets path /volt/code/frozen-flow-study/third_party/libero/libero/datasets does not exist!
+[Warning]: datasets path /volt/code/frozen-flow-study/third_party/libero/libero/datasets does not exist!
+[Warning]: datasets path /volt/code/frozen-flow-study/third_party/libero/libero/datasets does not exist!
+[Warning]: datasets path /volt/code/frozen-flow-study/third_party/libero/libero/datasets does not exist!
+[Warning]: datasets path /volt/code/frozen-flow-study/third_party/libero/libero/datasets does not exist!
+[Warning]: datasets path /volt/code/frozen-flow-study/third_party/libero/libero/datasets does not exist!
+[Warning]: datasets path /volt/code/frozen-flow-study/third_party/libero/libero/datasets does not exist!
+[Warning]: datasets path /volt/code/frozen-flow-study/third_party/libero/libero/datasets does not exist!
+[Warning]: datasets path /volt/code/frozen-flow-study/third_party/libero/libero/datasets does not exist!
+[Warning]: datasets path /volt/code/frozen-flow-study/third_party/libero/libero/datasets does not exist!
+[Warning]: datasets path /volt/code/frozen-flow-study/third_party/libero/libero/datasets does not exist!
+[Warning]: datasets path /volt/code/frozen-flow-study/third_party/libero/libero/datasets does not exist!
+[Warning]: datasets path /volt/code/frozen-flow-study/third_party/libero/libero/datasets does not exist!
+[Warning]: datasets path /volt/code/frozen-flow-study/third_party/libero/libero/datasets does not exist!
+[Warning]: datasets path /volt/code/frozen-flow-study/third_party/libero/libero/datasets does not exist!
+[Warning]: datasets path /volt/code/frozen-flow-study/third_party/libero/libero/datasets does not exist!
+[info] using task orders [0, 1, 2, 3, 4, 5, 6, 7, 8, 9]
+[Warning]: datasets path /volt/code/frozen-flow-study/third_party/libero/libero/datasets does not exist!
+[Warning]: datasets path /volt/code/frozen-flow-study/third_party/libero/libero/datasets does not exist!
+[Warning]: datasets path /volt/code/frozen-flow-study/third_party/libero/libero/datasets does not exist!
+[Warning]: datasets path /volt/code/frozen-flow-study/third_party/libero/libero/datasets does not exist!
+[Warning]: datasets path /volt/code/frozen-flow-study/third_party/libero/libero/datasets does not exist!
+[Warning]: datasets path /volt/code/frozen-flow-study/third_party/libero/libero/datasets does not exist!
+[Warning]: datasets path /volt/code/frozen-flow-study/third_party/libero/libero/datasets does not exist!
+[Warning]: datasets path /volt/code/frozen-flow-study/third_party/libero/libero/datasets does not exist!
+[Warning]: datasets path /volt/code/frozen-flow-study/third_party/libero/libero/datasets does not exist!
+[Warning]: datasets path /volt/code/frozen-flow-study/third_party/libero/libero/datasets does not exist!
+[Warning]: datasets path /volt/code/frozen-flow-study/third_party/libero/libero/datasets does not exist!
+[Warning]: datasets path /volt/code/frozen-flow-study/third_party/libero/libero/datasets does not exist!
+[Warning]: datasets path /volt/code/frozen-flow-study/third_party/libero/libero/datasets does not exist!
+[Warning]: datasets path /volt/code/frozen-flow-study/third_party/libero/libero/datasets does not exist!
+[Warning]: datasets path /volt/code/frozen-flow-study/third_party/libero/libero/datasets does not exist!
+[Warning]: datasets path /volt/code/frozen-flow-study/third_party/libero/libero/datasets does not exist!
+[Warning]: datasets path /volt/code/frozen-flow-study/third_party/libero/libero/datasets does not exist!
+[Warning]: datasets path /volt/code/frozen-flow-study/third_party/libero/libero/datasets does not exist!
+[Warning]: datasets path /volt/code/frozen-flow-study/third_party/libero/libero/datasets does not exist!
+[Warning]: datasets path /volt/code/frozen-flow-study/third_party/libero/libero/datasets does not exist!
+[info] using task orders [0, 1, 2, 3, 4, 5, 6, 7, 8, 9]
+[Warning]: datasets path /volt/code/frozen-flow-study/third_party/libero/libero/datasets does not exist!
+[Warning]: datasets path /volt/code/frozen-flow-study/third_party/libero/libero/datasets does not exist!
+[Warning]: datasets path /volt/code/frozen-flow-study/third_party/libero/libero/datasets does not exist!
+[Warning]: datasets path /volt/code/frozen-flow-study/third_party/libero/libero/datasets does not exist!
+[Warning]: datasets path /volt/code/frozen-flow-study/third_party/libero/libero/datasets does not exist!
+[Warning]: datasets path /volt/code/frozen-flow-study/third_party/libero/libero/datasets does not exist!
+[Warning]: datasets path /volt/code/frozen-flow-study/third_party/libero/libero/datasets does not exist!
+[Warning]: datasets path /volt/code/frozen-flow-study/third_party/libero/libero/datasets does not exist!
+[Warning]: datasets path /volt/code/frozen-flow-study/third_party/libero/libero/datasets does not exist!
+[Warning]: datasets path /volt/code/frozen-flow-study/third_party/libero/libero/datasets does not exist!
+[Warning]: datasets path /volt/code/frozen-flow-study/third_party/libero/libero/datasets does not exist!
+[Warning]: datasets path /volt/code/frozen-flow-study/third_party/libero/libero/datasets does not exist!
+[Warning]: datasets path /volt/code/frozen-flow-study/third_party/libero/libero/datasets does not exist!
+[Warning]: datasets path /volt/code/frozen-flow-study/third_party/libero/libero/datasets does not exist!
+[Warning]: datasets path /volt/code/frozen-flow-study/third_party/libero/libero/datasets does not exist!
+[Warning]: datasets path /volt/code/frozen-flow-study/third_party/libero/libero/datasets does not exist!
+[Warning]: datasets path /volt/code/frozen-flow-study/third_party/libero/libero/datasets does not exist!
+[Warning]: datasets path /volt/code/frozen-flow-study/third_party/libero/libero/datasets does not exist!
+[Warning]: datasets path /volt/code/frozen-flow-study/third_party/libero/libero/datasets does not exist!
+[Warning]: datasets path /volt/code/frozen-flow-study/third_party/libero/libero/datasets does not exist!
+[info] using task orders [0, 1, 2, 3, 4, 5, 6, 7, 8, 9]
+[Warning]: datasets path /volt/code/frozen-flow-study/third_party/libero/libero/datasets does not exist!
+[Warning]: datasets path /volt/code/frozen-flow-study/third_party/libero/libero/datasets does not exist!
+[Warning]: datasets path /volt/code/frozen-flow-study/third_party/libero/libero/datasets does not exist!
+[Warning]: datasets path /volt/code/frozen-flow-study/third_party/libero/libero/datasets does not exist!
+[Warning]: datasets path /volt/code/frozen-flow-study/third_party/libero/libero/datasets does not exist!
+[Warning]: datasets path /volt/code/frozen-flow-study/third_party/libero/libero/datasets does not exist!
+[Warning]: datasets path /volt/code/frozen-flow-study/third_party/libero/libero/datasets does not exist!
+[Warning]: datasets path /volt/code/frozen-flow-study/third_party/libero/libero/datasets does not exist!
+[Warning]: datasets path /volt/code/frozen-flow-study/third_party/libero/libero/datasets does not exist!
+[Warning]: datasets path /volt/code/frozen-flow-study/third_party/libero/libero/datasets does not exist!
+[Warning]: datasets path /volt/code/frozen-flow-study/third_party/libero/libero/datasets does not exist!
+[Warning]: datasets path /volt/code/frozen-flow-study/third_party/libero/libero/datasets does not exist!
+[Warning]: datasets path /volt/code/frozen-flow-study/third_party/libero/libero/datasets does not exist!
+[Warning]: datasets path /volt/code/frozen-flow-study/third_party/libero/libero/datasets does not exist!
+[Warning]: datasets path /volt/code/frozen-flow-study/third_party/libero/libero/datasets does not exist!
+[Warning]: datasets path /volt/code/frozen-flow-study/third_party/libero/libero/datasets does not exist!
+[Warning]: datasets path /volt/code/frozen-flow-study/third_party/libero/libero/datasets does not exist!
+[Warning]: datasets path /volt/code/frozen-flow-study/third_party/libero/libero/datasets does not exist!
+[Warning]: datasets path /volt/code/frozen-flow-study/third_party/libero/libero/datasets does not exist!
+[Warning]: datasets path /volt/code/frozen-flow-study/third_party/libero/libero/datasets does not exist!
+[info] using task orders [0, 1, 2, 3, 4, 5, 6, 7, 8, 9]
+[Warning]: datasets path /volt/code/frozen-flow-study/third_party/libero/libero/datasets does not exist!
+[info] using task orders [0, 1, 2, 3, 4, 5, 6, 7, 8, 9]
+[Warning]: datasets path /volt/code/frozen-flow-study/third_party/libero/libero/datasets does not exist!
+[info] using task orders [0, 1, 2, 3, 4, 5, 6, 7, 8, 9]
+[Warning]: datasets path /volt/code/frozen-flow-study/third_party/libero/libero/datasets does not exist!
+[info] using task orders [0, 1, 2, 3, 4, 5, 6, 7, 8, 9]
+[Warning]: datasets path /volt/code/frozen-flow-study/third_party/libero/libero/datasets does not exist!
+[info] using task orders [0, 1, 2, 3, 4, 5, 6, 7, 8, 9]
+[Warning]: datasets path /volt/code/frozen-flow-study/third_party/libero/libero/datasets does not exist!
+[info] using task orders [0, 1, 2, 3, 4, 5, 6, 7, 8, 9]
+[Warning]: datasets path /volt/code/frozen-flow-study/third_party/libero/libero/datasets does not exist!
+[info] using task orders [0, 1, 2, 3, 4, 5, 6, 7, 8, 9]
+[Warning]: datasets path /volt/code/frozen-flow-study/third_party/libero/libero/datasets does not exist!
+[info] using task orders [0, 1, 2, 3, 4, 5, 6, 7, 8, 9]
+[Warning]: datasets path /volt/code/frozen-flow-study/third_party/libero/libero/datasets does not exist!
+[info] using task orders [0, 1, 2, 3, 4, 5, 6, 7, 8, 9]
+[Warning]: datasets path /volt/code/frozen-flow-study/third_party/libero/libero/datasets does not exist!
+[info] using task orders [0, 1, 2, 3, 4, 5, 6, 7, 8, 9]
+[Warning]: datasets path /volt/code/frozen-flow-study/third_party/libero/libero/datasets does not exist!
+[info] using task orders [0, 1, 2, 3, 4, 5, 6, 7, 8, 9]
+[Warning]: datasets path /volt/code/frozen-flow-study/third_party/libero/libero/datasets does not exist!
+[info] using task orders [0, 1, 2, 3, 4, 5, 6, 7, 8, 9]
+[Warning]: datasets path /volt/code/frozen-flow-study/third_party/libero/libero/datasets does not exist!
+[info] using task orders [0, 1, 2, 3, 4, 5, 6, 7, 8, 9]
+[Warning]: datasets path /volt/code/frozen-flow-study/third_party/libero/libero/datasets does not exist!
+[info] using task orders [0, 1, 2, 3, 4, 5, 6, 7, 8, 9]
+[Warning]: datasets path /volt/code/frozen-flow-study/third_party/libero/libero/datasets does not exist!
+[info] using task orders [0, 1, 2, 3, 4, 5, 6, 7, 8, 9]
+[Warning]: datasets path /volt/code/frozen-flow-study/third_party/libero/libero/datasets does not exist!
+[info] using task orders [0, 1, 2, 3, 4, 5, 6, 7, 8, 9]
+[Warning]: datasets path /volt/code/frozen-flow-study/third_party/libero/libero/datasets does not exist!
+[info] using task orders [0, 1, 2, 3, 4, 5, 6, 7, 8, 9]
+[Warning]: datasets path /volt/code/frozen-flow-study/third_party/libero/libero/datasets does not exist!
+[info] using task orders [0, 1, 2, 3, 4, 5, 6, 7, 8, 9]
+[Warning]: datasets path /volt/code/frozen-flow-study/third_party/libero/libero/datasets does not exist!
+[info] using task orders [0, 1, 2, 3, 4, 5, 6, 7, 8, 9]
+[Warning]: datasets path /volt/code/frozen-flow-study/third_party/libero/libero/datasets does not exist!
+[info] using task orders [0, 1, 2, 3, 4, 5, 6, 7, 8, 9]
+[Warning]: datasets path /volt/code/frozen-flow-study/third_party/libero/libero/datasets does not exist!
+[info] using task orders [0, 1, 2, 3, 4, 5, 6, 7, 8, 9]
+[Warning]: datasets path /volt/code/frozen-flow-study/third_party/libero/libero/datasets does not exist!
+[info] using task orders [0, 1, 2, 3, 4, 5, 6, 7, 8, 9]
+[Warning]: datasets path /volt/code/frozen-flow-study/third_party/libero/libero/datasets does not exist!
+[info] using task orders [0, 1, 2, 3, 4, 5, 6, 7, 8, 9]
+[Warning]: datasets path /volt/code/frozen-flow-study/third_party/libero/libero/datasets does not exist!
+[info] using task orders [0, 1, 2, 3, 4, 5, 6, 7, 8, 9]
+[Warning]: datasets path /volt/code/frozen-flow-study/third_party/libero/libero/datasets does not exist!
+[info] using task orders [0, 1, 2, 3, 4, 5, 6, 7, 8, 9]
+[Warning]: datasets path /volt/code/frozen-flow-study/third_party/libero/libero/datasets does not exist!
+[info] using task orders [0, 1, 2, 3, 4, 5, 6, 7, 8, 9]
+[Warning]: datasets path /volt/code/frozen-flow-study/third_party/libero/libero/datasets does not exist!
+[info] using task orders [0, 1, 2, 3, 4, 5, 6, 7, 8, 9]
+[Warning]: datasets path /volt/code/frozen-flow-study/third_party/libero/libero/datasets does not exist!
+[info] using task orders [0, 1, 2, 3, 4, 5, 6, 7, 8, 9]
+[Warning]: datasets path /volt/code/frozen-flow-study/third_party/libero/libero/datasets does not exist!
+[info] using task orders [0, 1, 2, 3, 4, 5, 6, 7, 8, 9]
+[Warning]: datasets path /volt/code/frozen-flow-study/third_party/libero/libero/datasets does not exist!
+[info] using task orders [0, 1, 2, 3, 4, 5, 6, 7, 8, 9]
+[Warning]: datasets path /volt/code/frozen-flow-study/third_party/libero/libero/datasets does not exist!
+[info] using task orders [0, 1, 2, 3, 4, 5, 6, 7, 8, 9]
+[Warning]: datasets path /volt/code/frozen-flow-study/third_party/libero/libero/datasets does not exist!
+[info] using task orders [0, 1, 2, 3, 4, 5, 6, 7, 8, 9]
+[Warning]: datasets path /volt/code/frozen-flow-study/third_party/libero/libero/datasets does not exist!
+[info] using task orders [0, 1, 2, 3, 4, 5, 6, 7, 8, 9]
+[Warning]: datasets path /volt/code/frozen-flow-study/third_party/libero/libero/datasets does not exist!
+[info] using task orders [0, 1, 2, 3, 4, 5, 6, 7, 8, 9]
+[Warning]: datasets path /volt/code/frozen-flow-study/third_party/libero/libero/datasets does not exist!
+[info] using task orders [0, 1, 2, 3, 4, 5, 6, 7, 8, 9]
+[Warning]: datasets path /volt/code/frozen-flow-study/third_party/libero/libero/datasets does not exist!
+[info] using task orders [0, 1, 2, 3, 4, 5, 6, 7, 8, 9]
+[Warning]: datasets path /volt/code/frozen-flow-study/third_party/libero/libero/datasets does not exist!
+[info] using task orders [0, 1, 2, 3, 4, 5, 6, 7, 8, 9]
+[Warning]: datasets path /volt/code/frozen-flow-study/third_party/libero/libero/datasets does not exist!
+[info] using task orders [0, 1, 2, 3, 4, 5, 6, 7, 8, 9]
+[Warning]: datasets path /volt/code/frozen-flow-study/third_party/libero/libero/datasets does not exist!
+[info] using task orders [0, 1, 2, 3, 4, 5, 6, 7, 8, 9]
+[Warning]: datasets path /volt/code/frozen-flow-study/third_party/libero/libero/datasets does not exist!
+[info] using task orders [0, 1, 2, 3, 4, 5, 6, 7, 8, 9]
+[Warning]: datasets path /volt/code/frozen-flow-study/third_party/libero/libero/datasets does not exist!
+{"benchmark": "libero", "conditions": 40, "cases": 760, "episodes": 3040, "smoke_episodes": 16, "output": "examples/flow_probe/libero-conditions.json", "sha256": "5442a6f5bb6404deaf3cac12eaf52facb2ea1b2b87e5165d6fe42aaac5889568", "separation_audit": "examples/flow_probe/libero-conditions.separation.json"}

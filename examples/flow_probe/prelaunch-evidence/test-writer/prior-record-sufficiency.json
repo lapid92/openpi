@@ -1,0 +1,583 @@
+{
+  "scope": "Representative first row and linked NPZ of each of eight main worker files; source inspection of recording.py and policy_server.py.verify",
+  "samples": [
+    {
+      "raw_path": "/volt/artifacts/rescue-characterization/runs/libero-main-worker-0.jsonl",
+      "raw_first_row_fields": [
+        "benchmark",
+        "benchmark_commit",
+        "category",
+        "checkpoint_sha256",
+        "chunks",
+        "condition_id",
+        "episode_ms",
+        "family",
+        "flow_steps",
+        "gpu_uuid",
+        "init_index",
+        "initial_state_sha256",
+        "manifest_sha256",
+        "phase",
+        "policy_steps",
+        "prompt",
+        "recording",
+        "seed",
+        "severity",
+        "stabilized_state_sha256",
+        "status",
+        "success",
+        "suite",
+        "task_name",
+        "total_velocity_evaluations"
+      ],
+      "first_chunk_fields": [
+        "action_sha256",
+        "actions",
+        "chunk_index",
+        "noise_sha256",
+        "observation_sha256",
+        "policy_ms",
+        "request_ms",
+        "simulator_rng_sha256",
+        "velocity_evaluations",
+        "verification"
+      ],
+      "trace_path": "/volt/artifacts/rescue-characterization/media/e3/e37c3225ae3a523182b59c2a198ce2dc4f72ec8b47f42ed4c815790a860eb7a7-21f96a1103.npz",
+      "trace_sha256": "3b01e9ccc3a8a5fc8d5c780b710ce973e1adaf5fed3b8cb739161994aa195ce5",
+      "trace_fields": {
+        "actions": {
+          "shape": [
+            110,
+            7
+          ],
+          "dtype": "float64"
+        },
+        "eef_gripper_states": {
+          "shape": [
+            110,
+            9
+          ],
+          "dtype": "float64"
+        },
+        "rng_sha256": {
+          "shape": [
+            110
+          ],
+          "dtype": "<U64"
+        },
+        "success": {
+          "shape": [
+            110
+          ],
+          "dtype": "bool"
+        }
+      }
+    },
+    {
+      "raw_path": "/volt/artifacts/rescue-characterization/runs/libero-main-worker-1.jsonl",
+      "raw_first_row_fields": [
+        "benchmark",
+        "benchmark_commit",
+        "category",
+        "checkpoint_sha256",
+        "chunks",
+        "condition_id",
+        "episode_ms",
+        "family",
+        "flow_steps",
+        "gpu_uuid",
+        "init_index",
+        "initial_state_sha256",
+        "manifest_sha256",
+        "phase",
+        "policy_steps",
+        "prompt",
+        "recording",
+        "seed",
+        "severity",
+        "stabilized_state_sha256",
+        "status",
+        "success",
+        "suite",
+        "task_name",
+        "total_velocity_evaluations"
+      ],
+      "first_chunk_fields": [
+        "action_sha256",
+        "actions",
+        "chunk_index",
+        "noise_sha256",
+        "observation_sha256",
+        "policy_ms",
+        "request_ms",
+        "simulator_rng_sha256",
+        "velocity_evaluations",
+        "verification"
+      ],
+      "trace_path": "/volt/artifacts/rescue-characterization/media/e4/e4388698cd21706e851b0564b33a0159b9428fe1cf720d3b3fd86f57542e4180-00e769d318.npz",
+      "trace_sha256": "7fa897ec4bd717b16301c51f9b4cacf80ddf4dea811232e052774016b25f9eee",
+      "trace_fields": {
+        "actions": {
+          "shape": [
+            104,
+            7
+          ],
+          "dtype": "float64"
+        },
+        "eef_gripper_states": {
+          "shape": [
+            104,
+            9
+          ],
+          "dtype": "float64"
+        },
+        "rng_sha256": {
+          "shape": [
+            104
+          ],
+          "dtype": "<U64"
+        },
+        "success": {
+          "shape": [
+            104
+          ],
+          "dtype": "bool"
+        }
+      }
+    },
+    {
+      "raw_path": "/volt/artifacts/rescue-characterization/runs/libero-main-worker-2.jsonl",
+      "raw_first_row_fields": [
+        "benchmark",
+        "benchmark_commit",
+        "category",
+        "checkpoint_sha256",
+        "chunks",
+        "condition_id",
+        "episode_ms",
+        "family",
+        "flow_steps",
+        "gpu_uuid",
+        "init_index",
+        "initial_state_sha256",
+        "manifest_sha256",
+        "phase",
+        "policy_steps",
+        "prompt",
+        "recording",
+        "seed",
+        "severity",
+        "stabilized_state_sha256",
+        "status",
+        "success",
+        "suite",
+        "task_name",
+        "total_velocity_evaluations"
+      ],
+      "first_chunk_fields": [
+        "action_sha256",
+        "actions",
+        "chunk_index",
+        "noise_sha256",
+        "observation_sha256",
+        "policy_ms",
+        "request_ms",
+        "simulator_rng_sha256",
+        "velocity_evaluations",
+        "verification"
+      ],
+      "trace_path": "/volt/artifacts/rescue-characterization/media/d9/d9b35cbf97da91ce737f9bd55c8d779ce9591a8d8457fb2230c6eb3b132e72bb-f702514ff1.npz",
+      "trace_sha256": "8aa8a84ae6607af64089f56c2927f4b417ca0c4469b02162e645386fd2dd9505",
+      "trace_fields": {
+        "actions": {
+          "shape": [
+            92,
+            7
+          ],
+          "dtype": "float64"
+        },
+        "eef_gripper_states": {
+          "shape": [
+            92,
+            9
+          ],
+          "dtype": "float64"
+        },
+        "rng_sha256": {
+          "shape": [
+            92
+          ],
+          "dtype": "<U64"
+        },
+        "success": {
+          "shape": [
+            92
+          ],
+          "dtype": "bool"
+        }
+      }
+    },
+    {
+      "raw_path": "/volt/artifacts/rescue-characterization/runs/libero-main-worker-3.jsonl",
+      "raw_first_row_fields": [
+        "benchmark",
+        "benchmark_commit",
+        "category",
+        "checkpoint_sha256",
+        "chunks",
+        "condition_id",
+        "episode_ms",
+        "family",
+        "flow_steps",
+        "gpu_uuid",
+        "init_index",
+        "initial_state_sha256",
+        "manifest_sha256",
+        "phase",
+        "policy_steps",
+        "prompt",
+        "recording",
+        "seed",
+        "severity",
+        "stabilized_state_sha256",
+        "status",
+        "success",
+        "suite",
+        "task_name",
+        "total_velocity_evaluations"
+      ],
+      "first_chunk_fields": [
+        "action_sha256",
+        "actions",
+        "chunk_index",
+        "noise_sha256",
+        "observation_sha256",
+        "policy_ms",
+        "request_ms",
+        "simulator_rng_sha256",
+        "velocity_evaluations",
+        "verification"
+      ],
+      "trace_path": "/volt/artifacts/rescue-characterization/media/87/8764c60bd9490c963a1733d17ece9e5c95b722eca58ebbfc7adb45b9f50d7e4e-f5512764b3.npz",
+      "trace_sha256": "5cfc8b9dd6e3f180916a051be0474d15ae3daf0b84464b2ff66e4c54cdfc1a75",
+      "trace_fields": {
+        "actions": {
+          "shape": [
+            86,
+            7
+          ],
+          "dtype": "float64"
+        },
+        "eef_gripper_states": {
+          "shape": [
+            86,
+            9
+          ],
+          "dtype": "float64"
+        },
+        "rng_sha256": {
+          "shape": [
+            86
+          ],
+          "dtype": "<U64"
+        },
+        "success": {
+          "shape": [
+            86
+          ],
+          "dtype": "bool"
+        }
+      }
+    },
+    {
+      "raw_path": "/volt/artifacts/rescue-characterization/runs/libero_plus-main-worker-0.jsonl",
+      "raw_first_row_fields": [
+        "benchmark",
+        "benchmark_commit",
+        "category",
+        "checkpoint_sha256",
+        "chunks",
+        "condition_id",
+        "episode_ms",
+        "family",
+        "flow_steps",
+        "gpu_uuid",
+        "init_index",
+        "initial_state_sha256",
+        "manifest_sha256",
+        "phase",
+        "policy_steps",
+        "prompt",
+        "recording",
+        "seed",
+        "severity",
+        "stabilized_state_sha256",
+        "status",
+        "success",
+        "suite",
+        "task_name",
+        "total_velocity_evaluations"
+      ],
+      "first_chunk_fields": [
+        "action_sha256",
+        "actions",
+        "chunk_index",
+        "noise_sha256",
+        "observation_sha256",
+        "policy_ms",
+        "request_ms",
+        "simulator_rng_sha256",
+        "velocity_evaluations",
+        "verification"
+      ],
+      "trace_path": "/volt/artifacts/rescue-characterization/media/03/03aaf8f65422bdae2fe0ef1217727fa2b47b529ec7e130c273789cc8bf46c6e7-c1229523b7.npz",
+      "trace_sha256": "c8a6ebafb6d14666739df72cd3c6562befde86c71fdc7de5dceb4e38eee38d14",
+      "trace_fields": {
+        "actions": {
+          "shape": [
+            79,
+            7
+          ],
+          "dtype": "float64"
+        },
+        "eef_gripper_states": {
+          "shape": [
+            79,
+            9
+          ],
+          "dtype": "float64"
+        },
+        "rng_sha256": {
+          "shape": [
+            79
+          ],
+          "dtype": "<U64"
+        },
+        "success": {
+          "shape": [
+            79
+          ],
+          "dtype": "bool"
+        }
+      }
+    },
+    {
+      "raw_path": "/volt/artifacts/rescue-characterization/runs/libero_plus-main-worker-1.jsonl",
+      "raw_first_row_fields": [
+        "benchmark",
+        "benchmark_commit",
+        "category",
+        "checkpoint_sha256",
+        "chunks",
+        "condition_id",
+        "episode_ms",
+        "family",
+        "flow_steps",
+        "gpu_uuid",
+        "init_index",
+        "initial_state_sha256",
+        "manifest_sha256",
+        "phase",
+        "policy_steps",
+        "prompt",
+        "recording",
+        "seed",
+        "severity",
+        "stabilized_state_sha256",
+        "status",
+        "success",
+        "suite",
+        "task_name",
+        "total_velocity_evaluations"
+      ],
+      "first_chunk_fields": [
+        "action_sha256",
+        "actions",
+        "chunk_index",
+        "noise_sha256",
+        "observation_sha256",
+        "policy_ms",
+        "request_ms",
+        "simulator_rng_sha256",
+        "velocity_evaluations",
+        "verification"
+      ],
+      "trace_path": "/volt/artifacts/rescue-characterization/media/42/42dbcd21b5f4fb010be70f15b80e6a0d0ac418e2d609fd839c016ccdd3894c40-c37711dff4.npz",
+      "trace_sha256": "937ea4ba074fbe06807f08a394750cf344fc4a08ce5a37e5705c6f30b1c98994",
+      "trace_fields": {
+        "actions": {
+          "shape": [
+            129,
+            7
+          ],
+          "dtype": "float64"
+        },
+        "eef_gripper_states": {
+          "shape": [
+            129,
+            9
+          ],
+          "dtype": "float64"
+        },
+        "rng_sha256": {
+          "shape": [
+            129
+          ],
+          "dtype": "<U64"
+        },
+        "success": {
+          "shape": [
+            129
+          ],
+          "dtype": "bool"
+        }
+      }
+    },
+    {
+      "raw_path": "/volt/artifacts/rescue-characterization/runs/libero_plus-main-worker-2.jsonl",
+      "raw_first_row_fields": [
+        "benchmark",
+        "benchmark_commit",
+        "category",
+        "checkpoint_sha256",
+        "chunks",
+        "condition_id",
+        "episode_ms",
+        "family",
+        "flow_steps",
+        "gpu_uuid",
+        "init_index",
+        "initial_state_sha256",
+        "manifest_sha256",
+        "phase",
+        "policy_steps",
+        "prompt",
+        "recording",
+        "seed",
+        "severity",
+        "stabilized_state_sha256",
+        "status",
+        "success",
+        "suite",
+        "task_name",
+        "total_velocity_evaluations"
+      ],
+      "first_chunk_fields": [
+        "action_sha256",
+        "actions",
+        "chunk_index",
+        "noise_sha256",
+        "observation_sha256",
+        "policy_ms",
+        "request_ms",
+        "simulator_rng_sha256",
+        "velocity_evaluations",
+        "verification"
+      ],
+      "trace_path": "/volt/artifacts/rescue-characterization/media/45/45030a4a50248645e54aea6d9b562593254b104758c7ee90c6d5ae58c1bef54f-99cb8ca257.npz",
+      "trace_sha256": "1ac03647ce941bbc5556f59dabf9cc32d1ee9fd2209e3adbaee8bd8450c1b674",
+      "trace_fields": {
+        "actions": {
+          "shape": [
+            134,
+            7
+          ],
+          "dtype": "float64"
+        },
+        "eef_gripper_states": {
+          "shape": [
+            134,
+            9
+          ],
+          "dtype": "float64"
+        },
+        "rng_sha256": {
+          "shape": [
+            134
+          ],
+          "dtype": "<U64"
+        },
+        "success": {
+          "shape": [
+            134
+          ],
+          "dtype": "bool"
+        }
+      }
+    },
+    {
+      "raw_path": "/volt/artifacts/rescue-characterization/runs/libero_plus-main-worker-3.jsonl",
+      "raw_first_row_fields": [
+        "benchmark",
+        "benchmark_commit",
+        "category",
+        "checkpoint_sha256",
+        "chunks",
+        "condition_id",
+        "episode_ms",
+        "family",
+        "flow_steps",
+        "gpu_uuid",
+        "init_index",
+        "initial_state_sha256",
+        "manifest_sha256",
+        "phase",
+        "policy_steps",
+        "prompt",
+        "recording",
+        "seed",
+        "severity",
+        "stabilized_state_sha256",
+        "status",
+        "success",
+        "suite",
+        "task_name",
+        "total_velocity_evaluations"
+      ],
+      "first_chunk_fields": [
+        "action_sha256",
+        "actions",
+        "chunk_index",
+        "noise_sha256",
+        "observation_sha256",
+        "policy_ms",
+        "request_ms",
+        "simulator_rng_sha256",
+        "velocity_evaluations",
+        "verification"
+      ],
+      "trace_path": "/volt/artifacts/rescue-characterization/media/dc/dc03e105f2f96ab0f1ac5d893d0c002177cea630420f251f7c5c01648236297d-c2a862bc6e.npz",
+      "trace_sha256": "3996d200f8fc89c54b678d9c51e45eca1c675ecacb4808da52eb6f1c13a674a5",
+      "trace_fields": {
+        "actions": {
+          "shape": [
+            123,
+            7
+          ],
+          "dtype": "float64"
+        },
+        "eef_gripper_states": {
+          "shape": [
+            123,
+            9
+          ],
+          "dtype": "float64"
+        },
+        "rng_sha256": {
+          "shape": [
+            123
+          ],
+          "dtype": "<U64"
+        },
+        "success": {
+          "shape": [
+            123
+          ],
+          "dtype": "bool"
+        }
+      }
+    }
+  ],
+  "finding": "No raw velocity v1 or midpoint velocity, no lossless initial image observations. Action/noise/observation hashes cannot reconstruct missing vectors. Stored actions are transformed and not a full latent trace. Existing verification computes then discards cached velocities. New observational probe required for proposed score.",
+  "not_claimed": "Does not assert every historical research artifact lacks cached vectors; separate archives may support exploratory implementation checks."
+}

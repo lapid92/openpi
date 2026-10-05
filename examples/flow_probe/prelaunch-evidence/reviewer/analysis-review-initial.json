@@ -1,0 +1,23 @@
+{
+  "time_utc": "2026-10-05T13:59:19.014508+00:00",
+  "analysis_sha256": "49f0689bd615d1fc667ffc6b234bed6fe64ed0359ea2059523c9b5cff4ad2b0d",
+  "approved": "ranking formulas conditional; full pipeline not approved until mandatory raw audit",
+  "formula_review": [
+    "Grouped ties in AP and AUROC correct by inspection",
+    "Budget selection based only cap_chunks and fixed overhead; actual outcome lengths only after selection",
+    "Replicate clusters carried together; ranking and capacity recalculated each replicate",
+    "Primary gate4step75%, adequate counts and clustered bounds agree protocol",
+    "Separate labels retain nonmonotonic4armvector"
+  ],
+  "blockers_if_not_enforced_by_independent_audit": [
+    "success type must be bool, not truthy values",
+    "Initial state hash must equal manifest, not only other arms",
+    "Head/probe/checkpoint/noise/input identities and raw tensor hashes must be verified",
+    "Recompute score from actual raw trace; equality of3scalars across arms insufficient",
+    "Nonempty ordered chunks and action/media consistency must be verified before decisive ranking"
+  ],
+  "missing_protocol_output": [
+    "Descriptive task/family/axis/severity counts and denominators not emitted by analysis.py yet"
+  ],
+  "performance_note": "Full10k bootstrap must remain fixed; optimize algebra/cache if needed, never reduce after outcomes"
+}
