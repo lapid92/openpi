@@ -1,0 +1,100 @@
+{
+  "status": "numeric_and_replay_complete_review_pending",
+  "original_commit": "ae903b8818810cdf6481e8fe0177d801a160a7cc",
+  "remote_parent": "ddb0e0770dcd0ef25b7917b8606c54d14f7497fb",
+  "backup_ref": "refs/heads/codex/recovery-backup-ae903b8",
+  "manifest_sha256": "e7537584d34855c24c1a38ca11da4f7e479b9bcbfc53d2cc7ec8f7ff46eadf9d",
+  "started_at": "2026-10-05T04:44:13.351758+00:00",
+  "commands": [
+    {
+      "label": "publish-lossless-main-shards",
+      "argv": [
+        "git",
+        "push",
+        "origin",
+        "HEAD:refs/heads/codex/pi05-rescue-characterization"
+      ],
+      "started_at": "2026-10-05T04:47:17.473014+00:00",
+      "returncode": 0,
+      "ended_at": "2026-10-05T04:49:34.967752+00:00"
+    },
+    {
+      "label": "independent-main-audit",
+      "argv": [
+        "/volt/code/frozen-flow-study/.venv/bin/python",
+        "/volt/code/frozen-flow-study/examples/rescue_characterization/independent_audit.py",
+        "--phase",
+        "main"
+      ],
+      "started_at": "2026-10-05T04:49:35.604382+00:00",
+      "returncode": 0,
+      "ended_at": "2026-10-05T05:15:59.429088+00:00"
+    },
+    {
+      "label": "publish-independent-main-audit",
+      "argv": [
+        "git",
+        "push",
+        "origin",
+        "HEAD:refs/heads/codex/pi05-rescue-characterization"
+      ],
+      "started_at": "2026-10-05T05:16:00.027611+00:00",
+      "returncode": 0,
+      "ended_at": "2026-10-05T05:16:01.756453+00:00"
+    },
+    {
+      "label": "historical-replay-once",
+      "argv": [
+        "/volt/code/frozen-flow-study/.venv/bin/python",
+        "-u",
+        "/volt/code/frozen-flow-study/examples/rescue_characterization/replay_supervise.py",
+        "--manifest",
+        "/volt/code/frozen-flow-study/examples/rescue_characterization/replay-protocol.json",
+        "--output",
+        "/volt/artifacts/rescue-characterization/replay"
+      ],
+      "started_at": "2026-10-05T05:16:04.036595+00:00",
+      "returncode": 0,
+      "ended_at": "2026-10-05T08:33:46.527754+00:00"
+    },
+    {
+      "label": "publish-historical-replay",
+      "argv": [
+        "git",
+        "push",
+        "origin",
+        "HEAD:refs/heads/codex/pi05-rescue-characterization"
+      ],
+      "started_at": "2026-10-05T08:33:48.045756+00:00",
+      "returncode": 0,
+      "ended_at": "2026-10-05T08:34:00.105772+00:00"
+    }
+  ],
+  "original_pipeline_rerun": false,
+  "main_evaluations_rerun": false,
+  "updated_at": "2026-10-05T08:34:00.464150+00:00",
+  "original_evidence": [
+    {
+      "source": "/volt/artifacts/rescue-characterization/pipeline-status.json",
+      "copy": "/volt/artifacts/rescue-characterization/recovery-20261005/original-failure/pipeline-status.json",
+      "sha256": "807e614a2042a655198657a11389ac1b5e5471ca25e3fdb08d91c5efba2cca7f"
+    },
+    {
+      "source": "/volt/artifacts/rescue-characterization/runs/full-status.json",
+      "copy": "/volt/artifacts/rescue-characterization/recovery-20261005/original-failure/full-status.json",
+      "sha256": "39a3bc3458fc1c1a4184f140845e25ebe8ef4dc17fc23e33bc0dace256f0793e"
+    },
+    {
+      "source": "/volt/artifacts/rescue-characterization/full-pipeline-supervisor.log",
+      "copy": "/volt/artifacts/rescue-characterization/recovery-20261005/original-failure/full-pipeline-supervisor.log",
+      "sha256": "3d838225e54fabaaedf7e7894504769e9fffd75d4e9dcc6bfbf47f34e51f53c0"
+    }
+  ],
+  "prepared_commit": "a841fe7692de474effa285b8b015f1d56ff361ca",
+  "shard_index_sha256": "848965e1aadbf389d71cc792d8086b1f43ee7570028185303b417c5a4ea71e62",
+  "recovery_script_sha256": "d8000321f6f4fba34eef4c1661afa06209834221ba85cdcb9a69ba8bc520eade",
+  "sharder_sha256": "84be4ff4ed86489cdc635844d07d1bb249fae7df1d92238e132a8aee8eb114ad",
+  "stage": "publish-historical-replay",
+  "last_published_commit": "75c7543a0fd567f05e357db3b0c9d3164713a807",
+  "replay_launch_authorized_once_at": "2026-10-05T05:16:04.036137+00:00"
+}
