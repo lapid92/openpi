@@ -1,0 +1,97 @@
+{
+  "status": "passed",
+  "completed": 548,
+  "maximum_episodes": 548,
+  "equivalence": {
+    "reconstruction-not-equivalent": 432,
+    "exact_replay": 116
+  },
+  "invalid_equivalence_labels": 0,
+  "population_inference": false,
+  "original_sources": [
+    {
+      "path": "/volt/artifacts/frozen-flow-study/runs/libero-main-worker-0.jsonl",
+      "sha256": "90939ec22acd155c8263f56c677e97d608ec7b135ce6c9db2b9121c162b798b5"
+    },
+    {
+      "path": "/volt/artifacts/frozen-flow-study/runs/libero-main-worker-1.jsonl",
+      "sha256": "8f73651b9995f7d9116956684cee7363781f84a0dd43f1c644ec6bad472a6c05"
+    },
+    {
+      "path": "/volt/artifacts/frozen-flow-study/runs/libero-main-worker-2.jsonl",
+      "sha256": "09fbfb05443c74f154549e7e49994fedf03670ecfd87703ea6a3b1a7075ce7a6"
+    },
+    {
+      "path": "/volt/artifacts/frozen-flow-study/runs/libero-main-worker-3.jsonl",
+      "sha256": "ebcea1cae4200c197d6e7c078927ed307d6f1de68a06a63fe8e47184ce92fe77"
+    },
+    {
+      "path": "/volt/artifacts/frozen-flow-study/runs/libero_plus-main-worker-0.jsonl",
+      "sha256": "07bc800e33c1118b407c7fcfbdec2b56401bc4074c85d151e29b06a166621adf"
+    },
+    {
+      "path": "/volt/artifacts/frozen-flow-study/runs/libero_plus-main-worker-1.jsonl",
+      "sha256": "ff77d562cee86027d15f9162314332e1ca2abcf5057a87f7b7673a12ee292d50"
+    },
+    {
+      "path": "/volt/artifacts/frozen-flow-study/runs/libero_plus-main-worker-2.jsonl",
+      "sha256": "1a52568f12d648c5831faa2fb53c305c42e7c048b4615730ae2ca7620fb9c6c4"
+    },
+    {
+      "path": "/volt/artifacts/frozen-flow-study/runs/libero_plus-main-worker-3.jsonl",
+      "sha256": "1f1d68c3fbf902b503c506c0f9450418ac839b293d05414c1fda664ac5bdc413"
+    },
+    {
+      "path": "/volt/artifacts/selective-flow-study/runs/libero_plus-main-worker-0.jsonl",
+      "sha256": "0614340f2b6c675a8a7e739eb7aca0c49a691569358e18d2b23b1161f6583f73"
+    },
+    {
+      "path": "/volt/artifacts/selective-flow-study/runs/libero_plus-main-worker-1.jsonl",
+      "sha256": "467b49184cd9a3bb8c41644ef20037595a43b1c10b03f0ce9c11864d8e7befa5"
+    },
+    {
+      "path": "/volt/artifacts/selective-flow-study/runs/libero_plus-main-worker-2.jsonl",
+      "sha256": "1e8c9d34e14076d09362a34be140218e2b2768b6b56909412cd4dd95fe8f4b82"
+    },
+    {
+      "path": "/volt/artifacts/selective-flow-study/runs/libero_plus-main-worker-3.jsonl",
+      "sha256": "626fb8b98e2cc4395fb25caa359d44e06b77d1f15003f93ec719a5a24614b04e"
+    }
+  ],
+  "video_decoding_checked": true,
+  "interpretation": "Only exact replays support original-case visual labels; mismatched reconstructions are excluded.",
+  "raw_files": [
+    {
+      "path": "/volt/artifacts/rescue-characterization/replay/libero-worker-3.jsonl",
+      "sha256": "cf39cb234ac36b62030466e38cebc061564c8db34d7a313c541c318306f01fa4"
+    },
+    {
+      "path": "/volt/artifacts/rescue-characterization/replay/libero-worker-2.jsonl",
+      "sha256": "f694d582ee4d33f95cc247f30764f8bf7a39efa7f510b211f4a88ed60deddd9f"
+    },
+    {
+      "path": "/volt/artifacts/rescue-characterization/replay/libero-worker-1.jsonl",
+      "sha256": "ab1196526735798e2076da98fdb1f9a9779e6b6735dfb2e280c66bc4013d5750"
+    },
+    {
+      "path": "/volt/artifacts/rescue-characterization/replay/libero-worker-0.jsonl",
+      "sha256": "34a1cbf6925a0358073914b8e4ae5f6ca213bb0a52f70676e0752365b0808ef6"
+    },
+    {
+      "path": "/volt/artifacts/rescue-characterization/replay/libero_plus-worker-3.jsonl",
+      "sha256": "a22f8e9944b43a36a3a0ea492a6eee514e60c0633c12bfb3ced27b1a981eeee4"
+    },
+    {
+      "path": "/volt/artifacts/rescue-characterization/replay/libero_plus-worker-2.jsonl",
+      "sha256": "7921275aa3a0007630ba2ea06cb8ad21ec807c9c2452965bdcf7b249de7a9297"
+    },
+    {
+      "path": "/volt/artifacts/rescue-characterization/replay/libero_plus-worker-1.jsonl",
+      "sha256": "c542d6cca2c25e43108c34dc97bb468d3093a4c3194be79c343e50599b6fe8c3"
+    },
+    {
+      "path": "/volt/artifacts/rescue-characterization/replay/libero_plus-worker-0.jsonl",
+      "sha256": "d2afb6c64020f926a40f1fe4afd554e1f716043cb6e97500c6d55a34c0ca507e"
+    }
+  ]
+}
