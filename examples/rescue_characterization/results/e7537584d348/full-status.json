@@ -1,6 +1,6 @@
 {
   "phase": "full",
-  "status": "validated",
+  "status": "published",
   "started_at": "2026-10-03T08:35:25.077923+00:00",
   "git_commit": "ddb0e0770dcd0ef25b7917b8606c54d14f7497fb",
   "manifest_sha256": "e7537584d34855c24c1a38ca11da4f7e479b9bcbfc53d2cc7ec8f7ff46eadf9d",
@@ -496,7 +496,7 @@
       ]
     }
   ],
-  "updated_at": "2026-10-05T04:30:41.526291+00:00",
+  "updated_at": "2026-10-05T04:32:39.123505+00:00",
   "record_counts": {
     "libero-prepare-worker-3": 2,
     "libero-prepare-worker-0": 2,
@@ -516,5 +516,15 @@
     "libero_plus-main-worker-1": 1680
   },
   "elapsed_seconds": 158116.44833223708,
-  "four_gpu_allocation_hours": 175.68494259137452
+  "four_gpu_allocation_hours": 175.68494259137452,
+  "published_commit": "a841fe7692de474effa285b8b015f1d56ff361ca",
+  "publication_recovery": {
+    "original_failed_commit": "ae903b8818810cdf6481e8fe0177d801a160a7cc",
+    "backup_ref": "refs/heads/codex/recovery-backup-ae903b8",
+    "failed_status_path": "/volt/artifacts/rescue-characterization/recovery-20261005/original-failure/full-status.json",
+    "recovered_at": "2026-10-05T04:49:35.603757+00:00",
+    "recovery_state": "/volt/artifacts/rescue-characterization/recovery-20261005/state.json",
+    "no_evaluation_rerun": true
+  },
+  "original_publication_error": "CalledProcessError(1, ['git', 'push', 'origin', 'HEAD:refs/heads/codex/pi05-rescue-characterization'])"
 }
