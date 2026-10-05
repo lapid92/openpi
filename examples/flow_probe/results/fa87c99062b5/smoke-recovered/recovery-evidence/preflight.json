@@ -1,0 +1,28 @@
+{
+  "checked_at_utc": "2026-10-05T15:19:01.982896+00:00",
+  "lock_unheld": true,
+  "gpu_inventory": "GPU-56335fdf-6dc8-1d64-ce39-364d4a532435, 0 MiB, 0 %\nGPU-b786fcd4-f878-69e6-3017-a2ae408151fd, 0 MiB, 0 %\nGPU-967ff6df-a7e2-b65a-d051-87819b7725fc, 0 MiB, 0 %\nGPU-0cb759da-a716-038e-f0a9-208ec138ccc7, 0 MiB, 0 %\n",
+  "compute_processes": "",
+  "source_manifest_sha256": "fa87c99062b537cac51004f251394a11c7517e17f119acd827c4ee05359240db",
+  "preserved": {
+    "original-smoke-status.json": "a18a474b5daecfaf05d0555a9eed4926445213b630f63d11ccac762248d945de",
+    "original-audit-failure.log": "7595d3105813c705ce7f461c86ba29ab0253e37797e2f280d2f861f2e26c0804",
+    "original-detached.log": "c3f44666c4bbe41a74e6a9d5b769676d1807174a0b3489ff6605924c197574ce"
+  },
+  "raw_files": {
+    "libero-smoke-prepare-worker-1.jsonl": "124238d440b02b222366a6a3d89d57f4d52876a43ed7abda3d06456acf596a4d",
+    "libero-smoke-prepare-worker-0.jsonl": "e475ba2a876a540725a8a9d8e5f0d27d7a6f0c217d53f0a8edccbf2412d20810",
+    "libero-smoke-prepare-worker-2.jsonl": "6cfbebda3cef6fdbf08f9c19b69cfc98b82b5f8508ecd0ccdfe042917fa964c0",
+    "libero-smoke-prepare-worker-3.jsonl": "4682e70916a329ef19e3b961c915366da1f2f503fe5960f55d09b37ee1531ddf",
+    "libero-smoke.jsonl": "3a6eaa5c59fd84defd8b6e0ff2b957cebf9fd7e8809836fde803d83f98ba8105",
+    "libero-smoke-metrics.cases.jsonl": "69bea336cd1972ec2ad89194ef295396121d908eca8ead75e3b83cb4ffae3f88",
+    "libero_plus-smoke-prepare-worker-3.jsonl": "8e3e4307c8ef475c55c894ad95988e2433ab4452edbdc8e20d13dfd9fb696a3e",
+    "libero_plus-smoke-prepare-worker-2.jsonl": "2bf10fe07d9a8fe37490c845895d89623f54be34cd3d426b1a1b5a5284b7f596",
+    "libero_plus-smoke-prepare-worker-1.jsonl": "8cd9fbd7c55349e56f85ca7227427d21d6e6160b8a88aa27eecb8edc0d19c6c7",
+    "libero_plus-smoke-prepare-worker-0.jsonl": "14ed48cb72d501040ba6ea31c213a5bc71f7428cb0bca1976a5072dcabd38aba",
+    "libero_plus-smoke.jsonl": "0269b3f84d1df59b4561a4f72d8c6f6f260bf2dc7dec79bf8e7ff742aaee522c",
+    "libero_plus-smoke-metrics.cases.jsonl": "6f735d6ed5726be9f6ae8d5d4919ba7a6ccc2a545f99a6f3672fc6727dd2e9b4"
+  },
+  "scientific_conditions_unchanged": true,
+  "correction": "Auditor must concatenate only manifest.settings.replan_steps actions per predicted chunk (5, not10). No episode rerun."
+}

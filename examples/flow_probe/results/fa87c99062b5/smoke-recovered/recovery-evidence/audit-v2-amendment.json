@@ -1,0 +1,11 @@
+{
+  "original_path": "examples/flow_probe/independent_audit.py",
+  "original_sha256": "58cf6b0adfca59b32bb864f68414f17c147d910ea01b4d5b4ed58ee49b2ef4a0",
+  "recovery_path": "examples/flow_probe/recovery/audit_v2.py",
+  "recovery_sha256": "88a732fc151347d74c243653cfb07a7817a55f623352d6e0b8c5a7dc514e1666",
+  "only_replacement": {
+    "before": "np.concatenate([ch[\"actions\"] for ch in chunks])[:r[\"policy_steps\"]]",
+    "after": "np.concatenate([ch[\"actions\"][:m[\"settings\"][\"replan_steps\"]] for ch in chunks])[:r[\"policy_steps\"]]"
+  },
+  "reason": "Recorded policy emits 10 forecast actions but simulator executes only manifest replan_steps=5 before replanning. Audit must concatenate the actually executed prefix of each chunk. No changes to observations, rollouts, probe score, labels, or metrics."
+}

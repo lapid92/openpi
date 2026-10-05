@@ -1,0 +1,8 @@
+test_all_44_preserved_smoke_traces (examples.flow_probe.recovery.test_audit_v2.AuditRecoveryTests.test_all_44_preserved_smoke_traces) ... ok
+test_only_declared_audit_replacement (examples.flow_probe.recovery.test_audit_v2.AuditRecoveryTests.test_only_declared_audit_replacement) ... ok
+test_trailing_unexecuted_forecasts_excluded (examples.flow_probe.recovery.test_audit_v2.AuditRecoveryTests.test_trailing_unexecuted_forecasts_excluded) ... ok
+
+----------------------------------------------------------------------
+Ran 3 tests in 0.615s
+
+OK

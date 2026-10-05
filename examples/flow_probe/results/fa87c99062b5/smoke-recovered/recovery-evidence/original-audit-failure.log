@@ -1,0 +1,25 @@
+Traceback (most recent call last):
+  File "/volt/code/frozen-flow-study/examples/flow_probe/independent_audit.py", line 216, in <module>
+    if __name__=="__main__":main()
+                            ^^^^^^
+  File "/volt/code/frozen-flow-study/examples/flow_probe/independent_audit.py", line 165, in main
+    np.testing.assert_array_equal(tr["actions"],np.concatenate([ch["actions"] for ch in chunks])[:r["policy_steps"]])
+  File "/volt/code/frozen-flow-study/.venv/lib/python3.11/site-packages/numpy/testing/_private/utils.py", line 920, in assert_array_equal
+    assert_array_compare(operator.__eq__, x, y, err_msg=err_msg,
+  File "/usr/lib/python3.11/contextlib.py", line 81, in inner
+    return func(*args, **kwds)
+           ^^^^^^^^^^^^^^^^^^^
+  File "/volt/code/frozen-flow-study/.venv/lib/python3.11/site-packages/numpy/testing/_private/utils.py", line 797, in assert_array_compare
+    raise AssertionError(msg)
+AssertionError: 
+Arrays are not equal
+
+Mismatched elements: 511 / 546 (93.6%)
+Max absolute difference: 2.03489648
+Max relative difference: 230.99805499
+ x: array([[ 2.533941e-01,  1.752319e-01,  2.133080e-01, -6.986394e-03,
+         5.958433e-02, -1.546070e-03, -9.989396e-01],
+       [ 4.458054e-01,  2.845863e-01,  2.707697e-01, -1.243299e-02,...
+ y: array([[ 2.533941e-01,  1.752319e-01,  2.133080e-01, -6.986394e-03,
+         5.958433e-02, -1.546070e-03, -9.989396e-01],
+       [ 4.458054e-01,  2.845863e-01,  2.707697e-01, -1.243299e-02,...

@@ -1,0 +1,582 @@
+{
+  "phase": "smoke",
+  "status": "failed",
+  "started_at": "2026-10-05T14:12:29.884541+00:00",
+  "git_commit": "cf3f6bb96fed3c4cd0f9de9bf22b1f75a1bc3fa7",
+  "manifest_sha256": "fa87c99062b537cac51004f251394a11c7517e17f119acd827c4ee05359240db",
+  "wandb_url": "https://wandb.ai/arm-aair-idit/pi05-two-evaluation-ranking/runs/o5n6vjot",
+  "commands": [
+    {
+      "label": "server-0",
+      "argv": [
+        "/volt/code/frozen-flow-study/.venv/bin/python",
+        "/volt/code/frozen-flow-study/examples/flow_probe/policy_server.py",
+        "--manifest",
+        "/volt/code/frozen-flow-study/examples/flow_probe/protocol.json",
+        "--gpu-uuid",
+        "GPU-56335fdf-6dc8-1d64-ce39-364d4a532435",
+        "--port",
+        "8940"
+      ],
+      "pid": 2440279,
+      "environment_overrides": {
+        "WANDB_MODE": "online",
+        "UV_CACHE_DIR": "/volt/cache/uv",
+        "HF_HOME": "/volt/cache/huggingface",
+        "OPENBLAS_NUM_THREADS": "1",
+        "OPENPI_DATA_HOME": "/volt/checkpoints",
+        "OMP_NUM_THREADS": "1",
+        "XDG_CACHE_HOME": "/volt/cache"
+      }
+    },
+    {
+      "label": "server-1",
+      "argv": [
+        "/volt/code/frozen-flow-study/.venv/bin/python",
+        "/volt/code/frozen-flow-study/examples/flow_probe/policy_server.py",
+        "--manifest",
+        "/volt/code/frozen-flow-study/examples/flow_probe/protocol.json",
+        "--gpu-uuid",
+        "GPU-b786fcd4-f878-69e6-3017-a2ae408151fd",
+        "--port",
+        "8941"
+      ],
+      "pid": 2440280,
+      "environment_overrides": {
+        "WANDB_MODE": "online",
+        "UV_CACHE_DIR": "/volt/cache/uv",
+        "HF_HOME": "/volt/cache/huggingface",
+        "OPENBLAS_NUM_THREADS": "1",
+        "OPENPI_DATA_HOME": "/volt/checkpoints",
+        "OMP_NUM_THREADS": "1",
+        "XDG_CACHE_HOME": "/volt/cache"
+      }
+    },
+    {
+      "label": "server-2",
+      "argv": [
+        "/volt/code/frozen-flow-study/.venv/bin/python",
+        "/volt/code/frozen-flow-study/examples/flow_probe/policy_server.py",
+        "--manifest",
+        "/volt/code/frozen-flow-study/examples/flow_probe/protocol.json",
+        "--gpu-uuid",
+        "GPU-967ff6df-a7e2-b65a-d051-87819b7725fc",
+        "--port",
+        "8942"
+      ],
+      "pid": 2440281,
+      "environment_overrides": {
+        "WANDB_MODE": "online",
+        "UV_CACHE_DIR": "/volt/cache/uv",
+        "HF_HOME": "/volt/cache/huggingface",
+        "OPENBLAS_NUM_THREADS": "1",
+        "OPENPI_DATA_HOME": "/volt/checkpoints",
+        "OMP_NUM_THREADS": "1",
+        "XDG_CACHE_HOME": "/volt/cache"
+      }
+    },
+    {
+      "label": "server-3",
+      "argv": [
+        "/volt/code/frozen-flow-study/.venv/bin/python",
+        "/volt/code/frozen-flow-study/examples/flow_probe/policy_server.py",
+        "--manifest",
+        "/volt/code/frozen-flow-study/examples/flow_probe/protocol.json",
+        "--gpu-uuid",
+        "GPU-0cb759da-a716-038e-f0a9-208ec138ccc7",
+        "--port",
+        "8943"
+      ],
+      "pid": 2440282,
+      "environment_overrides": {
+        "WANDB_MODE": "online",
+        "UV_CACHE_DIR": "/volt/cache/uv",
+        "HF_HOME": "/volt/cache/huggingface",
+        "OPENBLAS_NUM_THREADS": "1",
+        "OPENPI_DATA_HOME": "/volt/checkpoints",
+        "OMP_NUM_THREADS": "1",
+        "XDG_CACHE_HOME": "/volt/cache"
+      }
+    },
+    {
+      "label": "libero-prepare-0",
+      "argv": [
+        "/volt/envs/libero/bin/python",
+        "/volt/code/frozen-flow-study/examples/flow_probe/client.py",
+        "--manifest",
+        "/volt/code/frozen-flow-study/examples/flow_probe/protocol.json",
+        "--benchmark",
+        "libero",
+        "--server",
+        "http://127.0.0.1:8940",
+        "--output",
+        "/volt/artifacts/flow-probe/runs/libero-smoke-prepare-worker-0.jsonl",
+        "--prepare-only",
+        "--worker-index",
+        "0",
+        "--workers",
+        "4"
+      ],
+      "pid": 2442925,
+      "environment_overrides": {
+        "WANDB_MODE": "online",
+        "UV_CACHE_DIR": "/volt/cache/uv",
+        "MUJOCO_GL": "osmesa",
+        "HF_HOME": "/volt/cache/huggingface",
+        "OPENBLAS_NUM_THREADS": "1",
+        "OPENPI_DATA_HOME": "/volt/checkpoints",
+        "OMP_NUM_THREADS": "1",
+        "XDG_CACHE_HOME": "/volt/cache",
+        "CUDA_VISIBLE_DEVICES": "",
+        "PYOPENGL_PLATFORM": "osmesa"
+      }
+    },
+    {
+      "label": "libero-prepare-1",
+      "argv": [
+        "/volt/envs/libero/bin/python",
+        "/volt/code/frozen-flow-study/examples/flow_probe/client.py",
+        "--manifest",
+        "/volt/code/frozen-flow-study/examples/flow_probe/protocol.json",
+        "--benchmark",
+        "libero",
+        "--server",
+        "http://127.0.0.1:8941",
+        "--output",
+        "/volt/artifacts/flow-probe/runs/libero-smoke-prepare-worker-1.jsonl",
+        "--prepare-only",
+        "--worker-index",
+        "1",
+        "--workers",
+        "4"
+      ],
+      "pid": 2442926,
+      "environment_overrides": {
+        "WANDB_MODE": "online",
+        "UV_CACHE_DIR": "/volt/cache/uv",
+        "MUJOCO_GL": "osmesa",
+        "HF_HOME": "/volt/cache/huggingface",
+        "OPENBLAS_NUM_THREADS": "1",
+        "OPENPI_DATA_HOME": "/volt/checkpoints",
+        "OMP_NUM_THREADS": "1",
+        "XDG_CACHE_HOME": "/volt/cache",
+        "CUDA_VISIBLE_DEVICES": "",
+        "PYOPENGL_PLATFORM": "osmesa"
+      }
+    },
+    {
+      "label": "libero-prepare-2",
+      "argv": [
+        "/volt/envs/libero/bin/python",
+        "/volt/code/frozen-flow-study/examples/flow_probe/client.py",
+        "--manifest",
+        "/volt/code/frozen-flow-study/examples/flow_probe/protocol.json",
+        "--benchmark",
+        "libero",
+        "--server",
+        "http://127.0.0.1:8942",
+        "--output",
+        "/volt/artifacts/flow-probe/runs/libero-smoke-prepare-worker-2.jsonl",
+        "--prepare-only",
+        "--worker-index",
+        "2",
+        "--workers",
+        "4"
+      ],
+      "pid": 2442927,
+      "environment_overrides": {
+        "WANDB_MODE": "online",
+        "UV_CACHE_DIR": "/volt/cache/uv",
+        "MUJOCO_GL": "osmesa",
+        "HF_HOME": "/volt/cache/huggingface",
+        "OPENBLAS_NUM_THREADS": "1",
+        "OPENPI_DATA_HOME": "/volt/checkpoints",
+        "OMP_NUM_THREADS": "1",
+        "XDG_CACHE_HOME": "/volt/cache",
+        "CUDA_VISIBLE_DEVICES": "",
+        "PYOPENGL_PLATFORM": "osmesa"
+      }
+    },
+    {
+      "label": "libero-prepare-3",
+      "argv": [
+        "/volt/envs/libero/bin/python",
+        "/volt/code/frozen-flow-study/examples/flow_probe/client.py",
+        "--manifest",
+        "/volt/code/frozen-flow-study/examples/flow_probe/protocol.json",
+        "--benchmark",
+        "libero",
+        "--server",
+        "http://127.0.0.1:8943",
+        "--output",
+        "/volt/artifacts/flow-probe/runs/libero-smoke-prepare-worker-3.jsonl",
+        "--prepare-only",
+        "--worker-index",
+        "3",
+        "--workers",
+        "4"
+      ],
+      "pid": 2442928,
+      "environment_overrides": {
+        "WANDB_MODE": "online",
+        "UV_CACHE_DIR": "/volt/cache/uv",
+        "MUJOCO_GL": "osmesa",
+        "HF_HOME": "/volt/cache/huggingface",
+        "OPENBLAS_NUM_THREADS": "1",
+        "OPENPI_DATA_HOME": "/volt/checkpoints",
+        "OMP_NUM_THREADS": "1",
+        "XDG_CACHE_HOME": "/volt/cache",
+        "CUDA_VISIBLE_DEVICES": "",
+        "PYOPENGL_PLATFORM": "osmesa"
+      }
+    },
+    {
+      "label": "libero-smoke-0",
+      "argv": [
+        "/volt/envs/libero/bin/python",
+        "/volt/code/frozen-flow-study/examples/flow_probe/client.py",
+        "--manifest",
+        "/volt/code/frozen-flow-study/examples/flow_probe/protocol.json",
+        "--benchmark",
+        "libero",
+        "--server",
+        "http://127.0.0.1:8940",
+        "--output",
+        "/volt/artifacts/flow-probe/runs/libero-smoke.jsonl",
+        "--smoke"
+      ],
+      "pid": 2447403,
+      "environment_overrides": {
+        "WANDB_MODE": "online",
+        "UV_CACHE_DIR": "/volt/cache/uv",
+        "MUJOCO_GL": "osmesa",
+        "HF_HOME": "/volt/cache/huggingface",
+        "OPENBLAS_NUM_THREADS": "1",
+        "OPENPI_DATA_HOME": "/volt/checkpoints",
+        "OMP_NUM_THREADS": "1",
+        "XDG_CACHE_HOME": "/volt/cache",
+        "CUDA_VISIBLE_DEVICES": "",
+        "PYOPENGL_PLATFORM": "osmesa"
+      }
+    },
+    {
+      "label": "libero-metrics",
+      "argv": [
+        "/volt/code/frozen-flow-study/.venv/bin/python",
+        "/volt/code/frozen-flow-study/examples/flow_probe/analysis.py",
+        "--manifest",
+        "/volt/code/frozen-flow-study/examples/flow_probe/protocol.json",
+        "--benchmark",
+        "libero",
+        "--records",
+        "/volt/artifacts/flow-probe/runs/libero-smoke.jsonl",
+        "--output",
+        "/volt/artifacts/flow-probe/runs/libero-smoke-metrics.json",
+        "--smoke"
+      ],
+      "pid": 2450885,
+      "environment_overrides": {
+        "WANDB_MODE": "online",
+        "UV_CACHE_DIR": "/volt/cache/uv",
+        "HF_HOME": "/volt/cache/huggingface",
+        "OPENBLAS_NUM_THREADS": "1",
+        "OPENPI_DATA_HOME": "/volt/checkpoints",
+        "OMP_NUM_THREADS": "1",
+        "XDG_CACHE_HOME": "/volt/cache"
+      }
+    },
+    {
+      "label": "libero-recording-audit",
+      "argv": [
+        "/volt/envs/libero/bin/python",
+        "/volt/code/frozen-flow-study/examples/rescue_characterization/recording_audit.py",
+        "--manifest",
+        "/volt/code/frozen-flow-study/examples/flow_probe/protocol.json",
+        "--records",
+        "/volt/artifacts/flow-probe/runs/libero-smoke.jsonl",
+        "--output",
+        "/volt/artifacts/flow-probe/runs/libero-smoke-recording-audit.json"
+      ],
+      "pid": 2450886,
+      "environment_overrides": {
+        "WANDB_MODE": "online",
+        "UV_CACHE_DIR": "/volt/cache/uv",
+        "HF_HOME": "/volt/cache/huggingface",
+        "OPENBLAS_NUM_THREADS": "1",
+        "OPENPI_DATA_HOME": "/volt/checkpoints",
+        "OMP_NUM_THREADS": "1",
+        "XDG_CACHE_HOME": "/volt/cache"
+      }
+    },
+    {
+      "label": "libero_plus-prepare-0",
+      "argv": [
+        "/volt/envs/libero/bin/python",
+        "/volt/code/frozen-flow-study/examples/flow_probe/client.py",
+        "--manifest",
+        "/volt/code/frozen-flow-study/examples/flow_probe/protocol.json",
+        "--benchmark",
+        "libero_plus",
+        "--server",
+        "http://127.0.0.1:8940",
+        "--output",
+        "/volt/artifacts/flow-probe/runs/libero_plus-smoke-prepare-worker-0.jsonl",
+        "--prepare-only",
+        "--worker-index",
+        "0",
+        "--workers",
+        "4"
+      ],
+      "pid": 2450904,
+      "environment_overrides": {
+        "WANDB_MODE": "online",
+        "UV_CACHE_DIR": "/volt/cache/uv",
+        "MUJOCO_GL": "osmesa",
+        "HF_HOME": "/volt/cache/huggingface",
+        "OPENBLAS_NUM_THREADS": "1",
+        "OPENPI_DATA_HOME": "/volt/checkpoints",
+        "OMP_NUM_THREADS": "1",
+        "XDG_CACHE_HOME": "/volt/cache",
+        "CUDA_VISIBLE_DEVICES": "",
+        "PYOPENGL_PLATFORM": "osmesa"
+      }
+    },
+    {
+      "label": "libero_plus-prepare-1",
+      "argv": [
+        "/volt/envs/libero/bin/python",
+        "/volt/code/frozen-flow-study/examples/flow_probe/client.py",
+        "--manifest",
+        "/volt/code/frozen-flow-study/examples/flow_probe/protocol.json",
+        "--benchmark",
+        "libero_plus",
+        "--server",
+        "http://127.0.0.1:8941",
+        "--output",
+        "/volt/artifacts/flow-probe/runs/libero_plus-smoke-prepare-worker-1.jsonl",
+        "--prepare-only",
+        "--worker-index",
+        "1",
+        "--workers",
+        "4"
+      ],
+      "pid": 2450905,
+      "environment_overrides": {
+        "WANDB_MODE": "online",
+        "UV_CACHE_DIR": "/volt/cache/uv",
+        "MUJOCO_GL": "osmesa",
+        "HF_HOME": "/volt/cache/huggingface",
+        "OPENBLAS_NUM_THREADS": "1",
+        "OPENPI_DATA_HOME": "/volt/checkpoints",
+        "OMP_NUM_THREADS": "1",
+        "XDG_CACHE_HOME": "/volt/cache",
+        "CUDA_VISIBLE_DEVICES": "",
+        "PYOPENGL_PLATFORM": "osmesa"
+      }
+    },
+    {
+      "label": "libero_plus-prepare-2",
+      "argv": [
+        "/volt/envs/libero/bin/python",
+        "/volt/code/frozen-flow-study/examples/flow_probe/client.py",
+        "--manifest",
+        "/volt/code/frozen-flow-study/examples/flow_probe/protocol.json",
+        "--benchmark",
+        "libero_plus",
+        "--server",
+        "http://127.0.0.1:8942",
+        "--output",
+        "/volt/artifacts/flow-probe/runs/libero_plus-smoke-prepare-worker-2.jsonl",
+        "--prepare-only",
+        "--worker-index",
+        "2",
+        "--workers",
+        "4"
+      ],
+      "pid": 2450906,
+      "environment_overrides": {
+        "WANDB_MODE": "online",
+        "UV_CACHE_DIR": "/volt/cache/uv",
+        "MUJOCO_GL": "osmesa",
+        "HF_HOME": "/volt/cache/huggingface",
+        "OPENBLAS_NUM_THREADS": "1",
+        "OPENPI_DATA_HOME": "/volt/checkpoints",
+        "OMP_NUM_THREADS": "1",
+        "XDG_CACHE_HOME": "/volt/cache",
+        "CUDA_VISIBLE_DEVICES": "",
+        "PYOPENGL_PLATFORM": "osmesa"
+      }
+    },
+    {
+      "label": "libero_plus-prepare-3",
+      "argv": [
+        "/volt/envs/libero/bin/python",
+        "/volt/code/frozen-flow-study/examples/flow_probe/client.py",
+        "--manifest",
+        "/volt/code/frozen-flow-study/examples/flow_probe/protocol.json",
+        "--benchmark",
+        "libero_plus",
+        "--server",
+        "http://127.0.0.1:8943",
+        "--output",
+        "/volt/artifacts/flow-probe/runs/libero_plus-smoke-prepare-worker-3.jsonl",
+        "--prepare-only",
+        "--worker-index",
+        "3",
+        "--workers",
+        "4"
+      ],
+      "pid": 2450907,
+      "environment_overrides": {
+        "WANDB_MODE": "online",
+        "UV_CACHE_DIR": "/volt/cache/uv",
+        "MUJOCO_GL": "osmesa",
+        "HF_HOME": "/volt/cache/huggingface",
+        "OPENBLAS_NUM_THREADS": "1",
+        "OPENPI_DATA_HOME": "/volt/checkpoints",
+        "OMP_NUM_THREADS": "1",
+        "XDG_CACHE_HOME": "/volt/cache",
+        "CUDA_VISIBLE_DEVICES": "",
+        "PYOPENGL_PLATFORM": "osmesa"
+      }
+    },
+    {
+      "label": "libero_plus-smoke-0",
+      "argv": [
+        "/volt/envs/libero/bin/python",
+        "/volt/code/frozen-flow-study/examples/flow_probe/client.py",
+        "--manifest",
+        "/volt/code/frozen-flow-study/examples/flow_probe/protocol.json",
+        "--benchmark",
+        "libero_plus",
+        "--server",
+        "http://127.0.0.1:8940",
+        "--output",
+        "/volt/artifacts/flow-probe/runs/libero_plus-smoke.jsonl",
+        "--smoke"
+      ],
+      "pid": 2451668,
+      "environment_overrides": {
+        "WANDB_MODE": "online",
+        "UV_CACHE_DIR": "/volt/cache/uv",
+        "MUJOCO_GL": "osmesa",
+        "HF_HOME": "/volt/cache/huggingface",
+        "OPENBLAS_NUM_THREADS": "1",
+        "OPENPI_DATA_HOME": "/volt/checkpoints",
+        "OMP_NUM_THREADS": "1",
+        "XDG_CACHE_HOME": "/volt/cache",
+        "CUDA_VISIBLE_DEVICES": "",
+        "PYOPENGL_PLATFORM": "osmesa"
+      }
+    },
+    {
+      "label": "libero_plus-metrics",
+      "argv": [
+        "/volt/code/frozen-flow-study/.venv/bin/python",
+        "/volt/code/frozen-flow-study/examples/flow_probe/analysis.py",
+        "--manifest",
+        "/volt/code/frozen-flow-study/examples/flow_probe/protocol.json",
+        "--benchmark",
+        "libero_plus",
+        "--records",
+        "/volt/artifacts/flow-probe/runs/libero_plus-smoke.jsonl",
+        "--output",
+        "/volt/artifacts/flow-probe/runs/libero_plus-smoke-metrics.json",
+        "--smoke"
+      ],
+      "pid": 2457517,
+      "environment_overrides": {
+        "WANDB_MODE": "online",
+        "UV_CACHE_DIR": "/volt/cache/uv",
+        "HF_HOME": "/volt/cache/huggingface",
+        "OPENBLAS_NUM_THREADS": "1",
+        "OPENPI_DATA_HOME": "/volt/checkpoints",
+        "OMP_NUM_THREADS": "1",
+        "XDG_CACHE_HOME": "/volt/cache"
+      }
+    },
+    {
+      "label": "libero_plus-recording-audit",
+      "argv": [
+        "/volt/envs/libero/bin/python",
+        "/volt/code/frozen-flow-study/examples/rescue_characterization/recording_audit.py",
+        "--manifest",
+        "/volt/code/frozen-flow-study/examples/flow_probe/protocol.json",
+        "--records",
+        "/volt/artifacts/flow-probe/runs/libero_plus-smoke.jsonl",
+        "--output",
+        "/volt/artifacts/flow-probe/runs/libero_plus-smoke-recording-audit.json"
+      ],
+      "pid": 2457518,
+      "environment_overrides": {
+        "WANDB_MODE": "online",
+        "UV_CACHE_DIR": "/volt/cache/uv",
+        "HF_HOME": "/volt/cache/huggingface",
+        "OPENBLAS_NUM_THREADS": "1",
+        "OPENPI_DATA_HOME": "/volt/checkpoints",
+        "OMP_NUM_THREADS": "1",
+        "XDG_CACHE_HOME": "/volt/cache"
+      }
+    },
+    {
+      "label": "independent-audit",
+      "argv": [
+        "/volt/code/frozen-flow-study/.venv/bin/python",
+        "/volt/code/frozen-flow-study/examples/flow_probe/independent_audit.py",
+        "--manifest",
+        "/volt/code/frozen-flow-study/examples/flow_probe/protocol.json",
+        "--phase",
+        "smoke",
+        "--run-dir",
+        "/volt/artifacts/flow-probe/runs",
+        "--output",
+        "/volt/artifacts/flow-probe/runs/smoke-independent-audit.json"
+      ],
+      "pid": 2457548,
+      "environment_overrides": {
+        "WANDB_MODE": "online",
+        "UV_CACHE_DIR": "/volt/cache/uv",
+        "HF_HOME": "/volt/cache/huggingface",
+        "OPENBLAS_NUM_THREADS": "1",
+        "OPENPI_DATA_HOME": "/volt/checkpoints",
+        "OMP_NUM_THREADS": "1",
+        "XDG_CACHE_HOME": "/volt/cache"
+      }
+    }
+  ],
+  "simulator_diagnostic_before": {
+    "exists": true,
+    "bytes": 476,
+    "sha256": "6ddeece80623b186958a0a379dc53990a6afd61074cee96a877da3b689c6ae44",
+    "inode": 76777458254,
+    "preserved_path": "/volt/artifacts/flow-probe/runs/smoke-MUJOCO-preexisting.txt",
+    "preserved_sha256": "6ddeece80623b186958a0a379dc53990a6afd61074cee96a877da3b689c6ae44"
+  },
+  "updated_at": "2026-10-05T14:52:24.217824+00:00",
+  "record_counts": {
+    "libero-smoke": 16,
+    "libero_plus-smoke": 28
+  },
+  "error": "RuntimeError('Worker failed; see exact command logs')",
+  "simulator_diagnostics": {
+    "path": "/volt/code/frozen-flow-study/MUJOCO_LOG.TXT",
+    "before": {
+      "exists": true,
+      "bytes": 476,
+      "sha256": "6ddeece80623b186958a0a379dc53990a6afd61074cee96a877da3b689c6ae44",
+      "inode": 76777458254,
+      "preserved_path": "/volt/artifacts/flow-probe/runs/smoke-MUJOCO-preexisting.txt",
+      "preserved_sha256": "6ddeece80623b186958a0a379dc53990a6afd61074cee96a877da3b689c6ae44"
+    },
+    "exists_after": true,
+    "identity_changed": false,
+    "new_warning_count": 0,
+    "capture_at": "2026-10-05T14:52:24.217559+00:00",
+    "bytes_after": 476,
+    "sha256_after": "6ddeece80623b186958a0a379dc53990a6afd61074cee96a877da3b689c6ae44",
+    "inode_after": 76777458254,
+    "new_bytes": 0,
+    "suffix_path": "/volt/artifacts/flow-probe/runs/smoke-MUJOCO-new.txt",
+    "suffix_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+  }
+}

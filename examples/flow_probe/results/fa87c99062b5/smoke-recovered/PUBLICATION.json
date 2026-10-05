@@ -1,0 +1,9 @@
+{
+  "manifest_sha256": "fa87c99062b537cac51004f251394a11c7517e17f119acd827c4ee05359240db",
+  "evaluations_launched": 0,
+  "original_failed_run": "o5n6vjot",
+  "wandb_url": "https://wandb.ai/arm-aair-idit/pi05-two-evaluation-ranking/runs/8bzf0ba8",
+  "probe_artifact": "arm-aair-idit/pi05-two-evaluation-ranking/initial-flow-probes-smoke-fa87c99062b5:v0",
+  "evidence_artifact": "arm-aair-idit/pi05-two-evaluation-ranking/supervisor-smoke-recovered-fa87c99062b5:v0",
+  "status": "published_to_wandb"
+}

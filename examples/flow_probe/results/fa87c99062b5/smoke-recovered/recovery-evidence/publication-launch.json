@@ -1,0 +1,10 @@
+{
+  "argv": [
+    "/volt/code/frozen-flow-study/.venv/bin/python",
+    "-u",
+    "examples/flow_probe/recovery/publish_smoke.py"
+  ],
+  "pid": 2458365,
+  "time": "2026-10-05T15:25:07.749117+00:00",
+  "evaluations_launched": 0
+}

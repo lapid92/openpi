@@ -1,0 +1,30 @@
+wandb: Currently logged in as: ariel-lapid (arm-aair-idit) to https://api.wandb.ai. Use `wandb login --relogin` to force relogin
+wandb: Tracking run with wandb version 0.19.11
+wandb: Run data is saved locally in /volt/artifacts/wandb/wandb/run-20261005_141229-o5n6vjot
+wandb: Run `wandb offline` to turn off syncing.
+wandb: Syncing run smoke-fa87c99062b5
+wandb: ⭐️ View project at https://wandb.ai/arm-aair-idit/pi05-two-evaluation-ranking
+wandb: 🚀 View run at https://wandb.ai/arm-aair-idit/pi05-two-evaluation-ranking/runs/o5n6vjot
+wandb: uploading summary
+wandb:                                                                                
+wandb: 
+wandb: Run history:
+wandb: completed_or_error_records ▁▁▁▁▁▂▂▃▃▃▃▃▃▃▃▄▄▄▄▄▅▅▅▅▅▆▆▆▆▇▇▇▇▇▇█████
+wandb:            elapsed_seconds ▁▁▁▁▂▂▂▂▂▂▂▂▃▃▃▃▄▄▄▄▅▅▅▅▅▆▆▆▆▆▆▇▇▇▇▇████
+wandb: 
+wandb: Run summary:
+wandb: completed_or_error_records 44
+wandb:            elapsed_seconds 2370.36148
+wandb: 
+wandb: 🚀 View run smoke-fa87c99062b5 at: https://wandb.ai/arm-aair-idit/pi05-two-evaluation-ranking/runs/o5n6vjot
+wandb: ⭐️ View project at: https://wandb.ai/arm-aair-idit/pi05-two-evaluation-ranking
+wandb: Synced 5 W&B file(s), 0 media file(s), 0 artifact file(s) and 0 other file(s)
+wandb: Find logs at: /volt/artifacts/wandb/wandb/run-20261005_141229-o5n6vjot/logs
+Traceback (most recent call last):
+  File "/volt/code/frozen-flow-study/examples/flow_probe/supervise.py", line 605, in <module>
+    main()
+  File "/volt/code/frozen-flow-study/examples/flow_probe/supervise.py", line 430, in main
+    check_processes([launch(audit_command, "independent-audit")])
+  File "/volt/code/frozen-flow-study/examples/flow_probe/supervise.py", line 304, in check_processes
+    raise RuntimeError("Worker failed; see exact command logs")
+RuntimeError: Worker failed; see exact command logs

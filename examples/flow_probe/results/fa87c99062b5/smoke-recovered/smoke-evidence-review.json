@@ -1,0 +1,24 @@
+{
+  "status": "approved_for_smoke_publication",
+  "reviewed_at_utc": "2026-10-05T15:23:18.044900+00:00",
+  "manifest_sha256": "fa87c99062b537cac51004f251394a11c7517e17f119acd827c4ee05359240db",
+  "reviewed_files": {
+    "/volt/code/frozen-flow-study/examples/flow_probe/recovery/publish_smoke.py": "7a6cc3650f93c09d866108f7cae2624317f1f9a488d7475c467ea8aa6377ac72",
+    "/volt/code/frozen-flow-study/examples/flow_probe/recovery/supervise_v2.py": "e837f239e73c4572626a7fd68e1cef6b47e962d4f273c2bbdab9a6cdaa31b545",
+    "/volt/code/frozen-flow-study/examples/flow_probe/recovery/audit_v2.py": "88a732fc151347d74c243653cfb07a7817a55f623352d6e0b8c5a7dc514e1666",
+    "/volt/code/frozen-flow-study/examples/flow_probe/recovery/AMENDMENT.md": "a96810dc93f4f18048caec27adcb7213dcb81d7e621cfcf0c380c76b797c7c45",
+    "/volt/artifacts/flow-probe/recovery/smoke-independent-audit-v2.json": "279ea0664c5f7f42d86b728934253079f782d6f26df04a81f6204b0c6421f5e3",
+    "/volt/artifacts/flow-probe/recovery/original-smoke-status.json": "a18a474b5daecfaf05d0555a9eed4926445213b630f63d11ccac762248d945de",
+    "/volt/artifacts/flow-probe/reviewer/smoke-review.json": "bce9f1a4e8c46d8b2c2b9250023b0e088165f73d4ed657c360ad24487bab1970"
+  },
+  "approval_scope": "One CPU-only publication of existing44smokeepisodes andrawprobetensors; no evaluation/repeat. Full launch not approved until publishedreceiptreview.",
+  "checks": [
+    "Original failedsmokestatus exactlyequals preservedrecovery/original-smoke-status.json; traceback/detachedlogs preserved.",
+    "Publisher validates pinned originalsources, raw/prep/metrics hashes, checkpoint/head, reviewerstatus,exclusive supervisorlock, idleGPUs andno previousfull/publicationstate.",
+    "Publisher onlycopies/shards/checksums/uploads/commits/pushes existingevidence. No subprocess command invokespolicy/simulator/inference.",
+    "Original failedrun kept distinct; recoveredpublishedstatus pointsoriginalsnapshot. Existingcanonicalauditor not overwritten; newcorrectedaudit receipt copied onlyifabsent.",
+    "Hash-bound full-only wrapper inspected;15recoverytests passed independently.",
+    "All44actiontraces independently matchfive-actionexecutionprefix;32paritypass;bothmediaauditsdecodeall44;0newwarnings; allpinnedsources unchanged."
+  ],
+  "remaining_full_launch_gate": "Require publication-receipt statuspublished and verify exactartifact/Git/evidence hashes; issue separate smoke-review-v2.json approved_for_full thenfreeze recoverymanifest."
+}
