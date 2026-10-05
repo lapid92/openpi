@@ -1,0 +1,24 @@
+{
+  "schema_version": 1,
+  "files": {
+    "/volt/code/frozen-flow-study/examples/flow_probe/supervise.py": "94f0938249c3e8550b390138be229ae0b8b74eca8cf8070331ea590afda19083",
+    "/volt/code/frozen-flow-study/examples/flow_probe/recovery/audit_v2.py": "88a732fc151347d74c243653cfb07a7817a55f623352d6e0b8c5a7dc514e1666",
+    "/volt/code/frozen-flow-study/examples/flow_probe/recovery/publish_smoke.py": "7a6cc3650f93c09d866108f7cae2624317f1f9a488d7475c467ea8aa6377ac72",
+    "/volt/code/frozen-flow-study/examples/flow_probe/recovery/supervise_v2.py": "e837f239e73c4572626a7fd68e1cef6b47e962d4f273c2bbdab9a6cdaa31b545",
+    "/volt/code/frozen-flow-study/examples/flow_probe/recovery/test_audit_v2.py": "28db342ed17a8e8e987dbc750cfa8dce0b04038d6650923fa83fa4ab2b174b96",
+    "/volt/code/frozen-flow-study/examples/flow_probe/recovery/test_supervise_v2.py": "f4880326c5013096f9abf63edc04d3cbffabb6be9bbb69b53236c062ba750216",
+    "/volt/code/frozen-flow-study/examples/flow_probe/recovery/AMENDMENT.md": "a96810dc93f4f18048caec27adcb7213dcb81d7e621cfcf0c380c76b797c7c45"
+  },
+  "original_manifest": {
+    "path": "/volt/code/frozen-flow-study/examples/flow_probe/protocol.json",
+    "sha256": "fa87c99062b537cac51004f251394a11c7517e17f119acd827c4ee05359240db"
+  },
+  "approved_smoke": {
+    "path": "/volt/artifacts/flow-probe/reviewer/smoke-review-v2.json",
+    "sha256": "96b074ae712b3ec33d779f10618e39a325257f9c5f6eaacce4671512c6b074b9"
+  },
+  "smoke_audit": {
+    "path": "/volt/artifacts/flow-probe/runs/smoke-independent-audit.json",
+    "sha256": "279ea0664c5f7f42d86b728934253079f782d6f26df04a81f6204b0c6421f5e3"
+  }
+}

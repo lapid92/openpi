@@ -1,0 +1,60 @@
+{
+  "status": "approved_for_full",
+  "reviewed_at_utc": "2026-10-05T15:27:33.081872+00:00",
+  "manifest_sha256": "fa87c99062b537cac51004f251394a11c7517e17f119acd827c4ee05359240db",
+  "published_smoke_commit": "c869d26712a4e0b25bc167cb9308df3f95d95fe0",
+  "reviewed_files": {
+    "/volt/artifacts/flow-probe/recovery/publication-receipt.json": "b2168ddec6e43b62786337eda85f2b80ce6a9789e3fc809ff416581218f4b70d",
+    "/volt/artifacts/flow-probe/runs/smoke-status.json": "1e30d846b26eeebab441cdcda6712a2369fd4a7592ad1d2756d915271b8f60c2",
+    "/volt/artifacts/flow-probe/runs/smoke-independent-audit.json": "279ea0664c5f7f42d86b728934253079f782d6f26df04a81f6204b0c6421f5e3",
+    "/volt/artifacts/flow-probe/recovery/smoke-independent-audit-v2.json": "279ea0664c5f7f42d86b728934253079f782d6f26df04a81f6204b0c6421f5e3",
+    "/volt/artifacts/flow-probe/recovery/original-smoke-status.json": "a18a474b5daecfaf05d0555a9eed4926445213b630f63d11ccac762248d945de",
+    "/volt/artifacts/flow-probe/reviewer/smoke-evidence-review.json": "a96e9437c3fa5546d5d79a56c009f11b467874f8b2824d2e5b85665be6b68a28",
+    "/volt/code/frozen-flow-study/examples/flow_probe/recovery/audit_v2.py": "88a732fc151347d74c243653cfb07a7817a55f623352d6e0b8c5a7dc514e1666",
+    "/volt/code/frozen-flow-study/examples/flow_probe/recovery/supervise_v2.py": "e837f239e73c4572626a7fd68e1cef6b47e962d4f273c2bbdab9a6cdaa31b545",
+    "/volt/code/frozen-flow-study/examples/flow_probe/recovery/AMENDMENT.md": "a96810dc93f4f18048caec27adcb7213dcb81d7e621cfcf0c380c76b797c7c45",
+    "/volt/code/frozen-flow-study/examples/flow_probe/recovery/publish_smoke.py": "7a6cc3650f93c09d866108f7cae2624317f1f9a488d7475c467ea8aa6377ac72"
+  },
+  "actual_artifact_checks": {
+    "github_remote_branch_head_matches_publication": true,
+    "published_git_shards_reconstruct_original_bytes": true,
+    "raw_shard_index_files": 12,
+    "all_sharded_jsonl_lines": 63,
+    "physical_smoke_episodes": 44,
+    "preparation_records": 8,
+    "derived_case_rows": 11,
+    "probe_index_rows": 44,
+    "deduplicated_probe_artifact_entries": 11,
+    "probe_artifact": "arm-aair-idit/pi05-two-evaluation-ranking/initial-flow-probes-smoke-fa87c99062b5:v0",
+    "probe_artifact_state": "COMMITTED",
+    "probe_artifact_digest": "eb7adb90e1d0267d0aeb111d0fd93052",
+    "evidence_artifact": "arm-aair-idit/pi05-two-evaluation-ranking/supervisor-smoke-recovered-fa87c99062b5:v0",
+    "evidence_artifact_state": "COMMITTED",
+    "evidence_artifact_digest": "a7c7650a3d9cc4ac1c4b0f658b5287ea"
+  },
+  "smoke_validation": {
+    "all44_rows_ok": true,
+    "32_exact_output_rng_probe_parity_checks_pass": true,
+    "all44_five_action_execution_traces_exact": true,
+    "all44_media_decode_audits_pass": true,
+    "all_point_metrics_and_primary_smoke_intervals_reproduced": true,
+    "scored_nfe": 4536,
+    "preparation_nfe": 1072,
+    "new_simulator_warnings": 0,
+    "smoke_excluded_from_decisive_results": true
+  },
+  "recovery_review": "Originalfailure/traceback/source retained. Newauditv2 exactlyone actionprefix correction; explicit pre-full five-replan documentationamendment published. Fixed10x7score, allcases, budgetcode usingfive beforevalidation, labels and thresholds unchanged. Full-only wrapper verifies independentapprovedsmoke/audit andexactrecoveryhashes, then substitutesonlyauditorpath. No smoke/probe reruns.",
+  "prelaunch_snapshot": {
+    "full_status_absent": true,
+    "gpu_compute_processes": "",
+    "supervisor_lock_acquired": true,
+    "all_original_manifest_pinned_sources_unchanged": true
+  },
+  "authorization_scope": "Exactlyonefull9760episode fixed1/2/4/10 run under original scientificmanifest and separatelysealed recoverymanifest. Thisapproval doesnotclaim ranking success. Anyfailure requires preserveattempt andinspectactualstate beforeexplicitrecovery; neverautomaticrelaunch.",
+  "remaining_completion_gates": [
+    "Completeallnewcases andpairednoise/state/score/output/media audits",
+    "Independentfullprimary10kbootstrapanddecisionreproduction",
+    "Revieweractualfullartifact/diff/warnings review",
+    "Publishallresultsandlimitations; noadaptivecontroller; onlybothprespecifiedgates canjustify proposingseparateclosedlooptest"
+  ]
+}
