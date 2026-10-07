@@ -1,0 +1,299 @@
+{
+  "status": "passed",
+  "phase": "main",
+  "primary_intervals_reproduced": true,
+  "decision_gate_reproduced": true,
+  "manifest_sha256": "fa87c99062b537cac51004f251394a11c7517e17f119acd827c4ee05359240db",
+  "benchmarks": {
+    "libero": {
+      "cases": 760,
+      "episodes": 3040,
+      "patterns": {
+        "SSSS": 682,
+        "SSFS": 12,
+        "SFFF": 2,
+        "SSSF": 11,
+        "FSSS": 14,
+        "SFFS": 1,
+        "FFFS": 1,
+        "FFSS": 5,
+        "FSSF": 1,
+        "SFSS": 17,
+        "FFFF": 6,
+        "FSFS": 2,
+        "SSFF": 1,
+        "SFSF": 4,
+        "FSFF": 1
+      },
+      "point_metrics_reproduced": true,
+      "independent_primary_intervals": {
+        "4/ap": {
+          "low": 0.014851257206266663,
+          "high": 0.05337072676165487,
+          "undefined": 0,
+          "replicates": 10000
+        },
+        "4/ap_lift": {
+          "low": -0.004560930572077079,
+          "high": 0.021424519847815765,
+          "undefined": 0,
+          "replicates": 10000
+        },
+        "4/auroc": {
+          "low": 0.3587146763200858,
+          "high": 0.6110571246091805,
+          "undefined": 0,
+          "replicates": 10000
+        },
+        "4/rescue_regression_auroc": {
+          "low": 0.4323514093137255,
+          "high": 0.8161802220888354,
+          "undefined": 0,
+          "replicates": 10000
+        },
+        "4/prevalence": {
+          "low": 0.014473684210526316,
+          "high": 0.04078947368421053,
+          "undefined": 0,
+          "replicates": 10000
+        },
+        "4/0.75/precision": {
+          "low": 0.004694287218638937,
+          "high": 0.04255571241302809,
+          "undefined": 0,
+          "replicates": 10000
+        },
+        "4/0.75/recall": {
+          "low": 0.05,
+          "high": 0.35714285714285715,
+          "undefined": 0,
+          "replicates": 10000
+        },
+        "4/0.75/precision_lift": {
+          "low": -0.019792341321243526,
+          "high": 0.009161678587096683,
+          "undefined": 0,
+          "replicates": 10000
+        },
+        "4/0.75/net": {
+          "low": -0.002631578947368421,
+          "high": 0.007894736842105263,
+          "undefined": 0,
+          "replicates": 10000
+        },
+        "4/0.75/selected": {
+          "low": 179.0,
+          "high": 218.0,
+          "undefined": 0,
+          "replicates": 10000
+        },
+        "4/0.75/rescue": {
+          "low": 1.0,
+          "high": 8.0,
+          "undefined": 0,
+          "replicates": 10000
+        },
+        "4/0.75/regression": {
+          "low": 0.0,
+          "high": 6.0,
+          "undefined": 0,
+          "replicates": 10000
+        },
+        "4/0.75/actual_ratio": {
+          "low": 1.7400880000418053,
+          "high": 1.8316246702150345,
+          "undefined": 0,
+          "replicates": 10000
+        }
+      },
+      "interval_scope": "Flow score: all k4 ranking metrics and B0.75 budget metrics; Plus condition sensitivity also reproduced. Other intervals structurally checked only."
+    },
+    "libero_plus": {
+      "cases": 1680,
+      "episodes": 6720,
+      "patterns": {
+        "SSSS": 1400,
+        "SSFS": 22,
+        "SFSF": 7,
+        "SFSS": 23,
+        "SSSF": 36,
+        "FSFF": 4,
+        "FSSS": 33,
+        "FSFS": 5,
+        "FFFF": 75,
+        "FFFS": 15,
+        "SSFF": 11,
+        "SFFS": 10,
+        "FSSF": 4,
+        "FFSS": 14,
+        "FFSF": 10,
+        "SFFF": 11
+      },
+      "point_metrics_reproduced": true,
+      "independent_primary_intervals": {
+        "4/ap": {
+          "low": 0.028374847497671503,
+          "high": 0.06841448662343878,
+          "undefined": 0,
+          "replicates": 10000
+        },
+        "4/ap_lift": {
+          "low": 0.00010320842986109621,
+          "high": 0.027541347640941946,
+          "undefined": 0,
+          "replicates": 10000
+        },
+        "4/auroc": {
+          "low": 0.48193710659238137,
+          "high": 0.6217007239923148,
+          "undefined": 0,
+          "replicates": 10000
+        },
+        "4/rescue_regression_auroc": {
+          "low": 0.400468040124151,
+          "high": 0.664069599650995,
+          "undefined": 0,
+          "replicates": 10000
+        },
+        "4/prevalence": {
+          "low": 0.023951452922376108,
+          "high": 0.049091181273815995,
+          "undefined": 0,
+          "replicates": 10000
+        },
+        "4/0.75/precision": {
+          "low": 0.02399912854030501,
+          "high": 0.07268184227087542,
+          "undefined": 0,
+          "replicates": 10000
+        },
+        "4/0.75/recall": {
+          "low": 0.22218137254901962,
+          "high": 0.4461538461538462,
+          "undefined": 0,
+          "replicates": 10000
+        },
+        "4/0.75/precision_lift": {
+          "low": -0.003562637330528281,
+          "high": 0.02934428295422597,
+          "undefined": 0,
+          "replicates": 10000
+        },
+        "4/0.75/net": {
+          "low": -0.00404040404040404,
+          "high": 0.009467455621301775,
+          "undefined": 0,
+          "replicates": 10000
+        },
+        "4/0.75/selected": {
+          "low": 322.0,
+          "high": 532.0,
+          "undefined": 0,
+          "replicates": 10000
+        },
+        "4/0.75/rescue": {
+          "low": 10.0,
+          "high": 32.0,
+          "undefined": 0,
+          "replicates": 10000
+        },
+        "4/0.75/regression": {
+          "low": 8.0,
+          "high": 24.0,
+          "undefined": 0,
+          "replicates": 10000
+        },
+        "4/0.75/actual_ratio": {
+          "low": 1.7352290899168163,
+          "high": 1.8159176488791344,
+          "undefined": 0,
+          "replicates": 10000
+        }
+      },
+      "interval_scope": "Flow score: all k4 ranking metrics and B0.75 budget metrics; Plus condition sensitivity also reproduced. Other intervals structurally checked only."
+    }
+  },
+  "scored_velocity_evaluations": 1471094,
+  "preparation_velocity_evaluations": 1072,
+  "max_independent_head_log_sigma_difference": 5.4836273193359375e-06,
+  "intervals_independently_reproduced": "Flow primary gate metrics and Plus condition sensitivity; other intervals metadata only",
+  "limitation": "No independent reproduction of secondary arm/budget/comparator intervals.",
+  "record_files": [
+    {
+      "path": "/volt/artifacts/flow-probe/runs/libero-main-worker-0.jsonl",
+      "sha256": "f79ebe8d1ccde04077d64075bea7fa6ca9304bf178226dbb18dbdf126f9fc22e"
+    },
+    {
+      "path": "/volt/artifacts/flow-probe/runs/libero-main-worker-1.jsonl",
+      "sha256": "28677927b03f1d54b6e0986b1d7ba6be9cf2da6b9b824284ae1215f4e730de7b"
+    },
+    {
+      "path": "/volt/artifacts/flow-probe/runs/libero-main-worker-2.jsonl",
+      "sha256": "63cfd16d7927a7934d79b8fa1ca5f78309779ee92a2c6f5cdf93337a24621088"
+    },
+    {
+      "path": "/volt/artifacts/flow-probe/runs/libero-main-worker-3.jsonl",
+      "sha256": "b12cf61ededa853b96a4db544e688c94fa6e74d6230ab1f95214e496984cce26"
+    },
+    {
+      "path": "/volt/artifacts/flow-probe/runs/libero_plus-main-worker-0.jsonl",
+      "sha256": "82f7ab61d35a23c3bf6c70cd2573ce42a0018b8bd93279953b13ca02b9b1bf0e"
+    },
+    {
+      "path": "/volt/artifacts/flow-probe/runs/libero_plus-main-worker-1.jsonl",
+      "sha256": "ca7ac60b73a1bfb2a833664b594439d4cb16433f0fea1cd689d0a9657d80000e"
+    },
+    {
+      "path": "/volt/artifacts/flow-probe/runs/libero_plus-main-worker-2.jsonl",
+      "sha256": "6bf0fcce1a9ff39623e78c623a3490245a76405f095f1236e4e5894ee96c6665"
+    },
+    {
+      "path": "/volt/artifacts/flow-probe/runs/libero_plus-main-worker-3.jsonl",
+      "sha256": "f51c647692aaefc29b1731edf2768dcc205102252e1b762e71889003932ed72e"
+    }
+  ],
+  "preparation_files": [
+    {
+      "path": "/volt/artifacts/flow-probe/runs/libero-full-prepare-worker-0.jsonl",
+      "sha256": "b25e72c6b1da4d4d0cf95892d5d96fe60ac0f76e79b5860c1e39666e74d998ee"
+    },
+    {
+      "path": "/volt/artifacts/flow-probe/runs/libero-full-prepare-worker-1.jsonl",
+      "sha256": "161cae3d8b67562efb1c9ef7e8b624c1b8bc3668ce1acdc1a54b6973843d165a"
+    },
+    {
+      "path": "/volt/artifacts/flow-probe/runs/libero-full-prepare-worker-2.jsonl",
+      "sha256": "e8ad542d30ef273d01b297483b86ddbbfe6611b92e5b034bedd40a2949edb700"
+    },
+    {
+      "path": "/volt/artifacts/flow-probe/runs/libero-full-prepare-worker-3.jsonl",
+      "sha256": "8f46414982c5b1ebcfc971dc382c7c15f94bdeb4e8512fd6e0e5a54d8a883320"
+    },
+    {
+      "path": "/volt/artifacts/flow-probe/runs/libero_plus-full-prepare-worker-0.jsonl",
+      "sha256": "2f885902f13342c626b06056693914f69893fdd0d59880ee5249b356d02fd9c0"
+    },
+    {
+      "path": "/volt/artifacts/flow-probe/runs/libero_plus-full-prepare-worker-1.jsonl",
+      "sha256": "5f9fa226cece0a9cf6db8b5c21c53225351f25b0150f105ae8fe013dc58701fc"
+    },
+    {
+      "path": "/volt/artifacts/flow-probe/runs/libero_plus-full-prepare-worker-2.jsonl",
+      "sha256": "42608b6761fda8498456129e1653ece4cc4e13102b05f03affb15f0e0b385556"
+    },
+    {
+      "path": "/volt/artifacts/flow-probe/runs/libero_plus-full-prepare-worker-3.jsonl",
+      "sha256": "6f871120078baab0b4a24dd0654b6c49f8b2049d6739a2a22dce322b0b6de8b1"
+    }
+  ],
+  "metrics_files": [
+    {
+      "path": "/volt/artifacts/flow-probe/runs/libero-metrics.json",
+      "sha256": "03e01c57d3b23162500b562724ea7c3afe34950b4eacb25d1a1a6a676e0273b8"
+    },
+    {
+      "path": "/volt/artifacts/flow-probe/runs/libero_plus-metrics.json",
+      "sha256": "9d52380ee81f61630b6adcefccb5f2c2ca281959dcb06614efe668e6fd6fb237"
+    }
+  ]
+}

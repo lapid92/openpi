@@ -1,0 +1,17 @@
+{
+  "status": "passed",
+  "records": 16,
+  "matched_cases": 4,
+  "action_digest_dtypes": [
+    "float64"
+  ],
+  "video_decoding_checked": true,
+  "allow_partial": false,
+  "manifest_sha256": "fa87c99062b537cac51004f251394a11c7517e17f119acd827c4ee05359240db",
+  "record_files": [
+    {
+      "path": "/volt/artifacts/flow-probe/runs/libero-smoke.jsonl",
+      "sha256": "3a6eaa5c59fd84defd8b6e0ff2b957cebf9fd7e8809836fde803d83f98ba8105"
+    }
+  ]
+}

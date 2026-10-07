@@ -1,0 +1,6320 @@
+{
+  "status": "complete",
+  "phase": "smoke",
+  "manifest_sha256": "fa87c99062b537cac51004f251394a11c7517e17f119acd827c4ee05359240db",
+  "benchmark": "libero_plus",
+  "cases": 7,
+  "episodes": 28,
+  "records": [
+    {
+      "path": "/volt/artifacts/flow-probe/runs/libero_plus-smoke.jsonl",
+      "sha256": "0269b3f84d1df59b4561a4f72d8c6f6f260bf2dc7dec79bf8e7ff742aaee522c"
+    }
+  ],
+  "actual_scored_velocity_evaluations": 2316,
+  "patterns": {
+    "SSSS": 7
+  },
+  "comparators": {
+    "score": {
+      "point": {
+        "2": {
+          "ap": null,
+          "auroc": null,
+          "rescue_regression_auroc": null,
+          "prevalence": 0.0,
+          "ap_lift": null,
+          "pr": [
+            {
+              "threshold": 0.06057027727365494,
+              "precision": 0.0,
+              "recall": null,
+              "selected": 1
+            },
+            {
+              "threshold": 0.03805236145853996,
+              "precision": 0.0,
+              "recall": null,
+              "selected": 2
+            },
+            {
+              "threshold": 0.026759032160043716,
+              "precision": 0.0,
+              "recall": null,
+              "selected": 3
+            },
+            {
+              "threshold": 0.026751317083835602,
+              "precision": 0.0,
+              "recall": null,
+              "selected": 4
+            },
+            {
+              "threshold": 0.02226102352142334,
+              "precision": 0.0,
+              "recall": null,
+              "selected": 5
+            },
+            {
+              "threshold": 0.02026607282459736,
+              "precision": 0.0,
+              "recall": null,
+              "selected": 6
+            },
+            {
+              "threshold": 0.01246653962880373,
+              "precision": 0.0,
+              "recall": null,
+              "selected": 7
+            }
+          ],
+          "labels": {
+            "rescue": 0,
+            "regression": 0,
+            "unchanged_success": 7,
+            "unchanged_failure": 0
+          },
+          "budgets": {
+            "0.25": {
+              "selected": 1,
+              "selected_fraction": 0.14285714285714285,
+              "rescue": 0,
+              "regression": 0,
+              "unchanged_success": 1,
+              "unchanged_failure": 0,
+              "precision": 0.0,
+              "recall": null,
+              "precision_lift": 0.0,
+              "net": 0.0,
+              "selected_rescue_clusters": 0,
+              "planned_extra_evaluations": 58,
+              "baseline_cap": 308,
+              "extra_budget": 77.0,
+              "overhead_feasible": true,
+              "actual_counterfactual_evaluations": 157,
+              "actual_baseline_evaluations": 128,
+              "actual_ratio": 1.2265625
+            },
+            "0.5": {
+              "selected": 3,
+              "selected_fraction": 0.42857142857142855,
+              "rescue": 0,
+              "regression": 0,
+              "unchanged_success": 3,
+              "unchanged_failure": 0,
+              "precision": 0.0,
+              "recall": null,
+              "precision_lift": 0.0,
+              "net": 0.0,
+              "selected_rescue_clusters": 0,
+              "planned_extra_evaluations": 146,
+              "baseline_cap": 308,
+              "extra_budget": 154.0,
+              "overhead_feasible": true,
+              "actual_counterfactual_evaluations": 192,
+              "actual_baseline_evaluations": 128,
+              "actual_ratio": 1.5
+            },
+            "0.75": {
+              "selected": 4,
+              "selected_fraction": 0.5714285714285714,
+              "rescue": 0,
+              "regression": 0,
+              "unchanged_success": 4,
+              "unchanged_failure": 0,
+              "precision": 0.0,
+              "recall": null,
+              "precision_lift": 0.0,
+              "net": 0.0,
+              "selected_rescue_clusters": 0,
+              "planned_extra_evaluations": 190,
+              "baseline_cap": 308,
+              "extra_budget": 231.0,
+              "overhead_feasible": true,
+              "actual_counterfactual_evaluations": 208,
+              "actual_baseline_evaluations": 128,
+              "actual_ratio": 1.625
+            },
+            "1.0": {
+              "selected": 6,
+              "selected_fraction": 0.8571428571428571,
+              "rescue": 0,
+              "regression": 0,
+              "unchanged_success": 6,
+              "unchanged_failure": 0,
+              "precision": 0.0,
+              "recall": null,
+              "precision_lift": 0.0,
+              "net": 0.0,
+              "selected_rescue_clusters": 0,
+              "planned_extra_evaluations": 278,
+              "baseline_cap": 308,
+              "extra_budget": 308.0,
+              "overhead_feasible": true,
+              "actual_counterfactual_evaluations": 247,
+              "actual_baseline_evaluations": 128,
+              "actual_ratio": 1.9296875
+            }
+          }
+        },
+        "4": {
+          "ap": null,
+          "auroc": null,
+          "rescue_regression_auroc": null,
+          "prevalence": 0.0,
+          "ap_lift": null,
+          "pr": [
+            {
+              "threshold": 0.06057027727365494,
+              "precision": 0.0,
+              "recall": null,
+              "selected": 1
+            },
+            {
+              "threshold": 0.03805236145853996,
+              "precision": 0.0,
+              "recall": null,
+              "selected": 2
+            },
+            {
+              "threshold": 0.026759032160043716,
+              "precision": 0.0,
+              "recall": null,
+              "selected": 3
+            },
+            {
+              "threshold": 0.026751317083835602,
+              "precision": 0.0,
+              "recall": null,
+              "selected": 4
+            },
+            {
+              "threshold": 0.02226102352142334,
+              "precision": 0.0,
+              "recall": null,
+              "selected": 5
+            },
+            {
+              "threshold": 0.02026607282459736,
+              "precision": 0.0,
+              "recall": null,
+              "selected": 6
+            },
+            {
+              "threshold": 0.01246653962880373,
+              "precision": 0.0,
+              "recall": null,
+              "selected": 7
+            }
+          ],
+          "labels": {
+            "rescue": 0,
+            "regression": 0,
+            "unchanged_success": 7,
+            "unchanged_failure": 0
+          },
+          "budgets": {
+            "0.25": {
+              "selected": 0,
+              "selected_fraction": 0.0,
+              "rescue": 0,
+              "regression": 0,
+              "unchanged_success": 0,
+              "unchanged_failure": 0,
+              "precision": null,
+              "recall": null,
+              "precision_lift": null,
+              "net": 0.0,
+              "selected_rescue_clusters": 0,
+              "planned_extra_evaluations": 14,
+              "baseline_cap": 308,
+              "extra_budget": 77.0,
+              "overhead_feasible": true,
+              "actual_counterfactual_evaluations": 142,
+              "actual_baseline_evaluations": 128,
+              "actual_ratio": 1.109375
+            },
+            "0.5": {
+              "selected": 1,
+              "selected_fraction": 0.14285714285714285,
+              "rescue": 0,
+              "regression": 0,
+              "unchanged_success": 1,
+              "unchanged_failure": 0,
+              "precision": 0.0,
+              "recall": null,
+              "precision_lift": 0.0,
+              "net": 0.0,
+              "selected_rescue_clusters": 0,
+              "planned_extra_evaluations": 146,
+              "baseline_cap": 308,
+              "extra_budget": 154.0,
+              "overhead_feasible": true,
+              "actual_counterfactual_evaluations": 187,
+              "actual_baseline_evaluations": 128,
+              "actual_ratio": 1.4609375
+            },
+            "0.75": {
+              "selected": 1,
+              "selected_fraction": 0.14285714285714285,
+              "rescue": 0,
+              "regression": 0,
+              "unchanged_success": 1,
+              "unchanged_failure": 0,
+              "precision": 0.0,
+              "recall": null,
+              "precision_lift": 0.0,
+              "net": 0.0,
+              "selected_rescue_clusters": 0,
+              "planned_extra_evaluations": 146,
+              "baseline_cap": 308,
+              "extra_budget": 231.0,
+              "overhead_feasible": true,
+              "actual_counterfactual_evaluations": 187,
+              "actual_baseline_evaluations": 128,
+              "actual_ratio": 1.4609375
+            },
+            "1.0": {
+              "selected": 2,
+              "selected_fraction": 0.2857142857142857,
+              "rescue": 0,
+              "regression": 0,
+              "unchanged_success": 2,
+              "unchanged_failure": 0,
+              "precision": 0.0,
+              "recall": null,
+              "precision_lift": 0.0,
+              "net": 0.0,
+              "selected_rescue_clusters": 0,
+              "planned_extra_evaluations": 278,
+              "baseline_cap": 308,
+              "extra_budget": 308.0,
+              "overhead_feasible": true,
+              "actual_counterfactual_evaluations": 296,
+              "actual_baseline_evaluations": 128,
+              "actual_ratio": 2.3125
+            }
+          }
+        },
+        "10": {
+          "ap": null,
+          "auroc": null,
+          "rescue_regression_auroc": null,
+          "prevalence": 0.0,
+          "ap_lift": null,
+          "pr": [
+            {
+              "threshold": 0.06057027727365494,
+              "precision": 0.0,
+              "recall": null,
+              "selected": 1
+            },
+            {
+              "threshold": 0.03805236145853996,
+              "precision": 0.0,
+              "recall": null,
+              "selected": 2
+            },
+            {
+              "threshold": 0.026759032160043716,
+              "precision": 0.0,
+              "recall": null,
+              "selected": 3
+            },
+            {
+              "threshold": 0.026751317083835602,
+              "precision": 0.0,
+              "recall": null,
+              "selected": 4
+            },
+            {
+              "threshold": 0.02226102352142334,
+              "precision": 0.0,
+              "recall": null,
+              "selected": 5
+            },
+            {
+              "threshold": 0.02026607282459736,
+              "precision": 0.0,
+              "recall": null,
+              "selected": 6
+            },
+            {
+              "threshold": 0.01246653962880373,
+              "precision": 0.0,
+              "recall": null,
+              "selected": 7
+            }
+          ],
+          "labels": {
+            "rescue": 0,
+            "regression": 0,
+            "unchanged_success": 7,
+            "unchanged_failure": 0
+          },
+          "budgets": {
+            "0.25": {
+              "selected": 0,
+              "selected_fraction": 0.0,
+              "rescue": 0,
+              "regression": 0,
+              "unchanged_success": 0,
+              "unchanged_failure": 0,
+              "precision": null,
+              "recall": null,
+              "precision_lift": null,
+              "net": 0.0,
+              "selected_rescue_clusters": 0,
+              "planned_extra_evaluations": 14,
+              "baseline_cap": 308,
+              "extra_budget": 77.0,
+              "overhead_feasible": true,
+              "actual_counterfactual_evaluations": 142,
+              "actual_baseline_evaluations": 128,
+              "actual_ratio": 1.109375
+            },
+            "0.5": {
+              "selected": 0,
+              "selected_fraction": 0.0,
+              "rescue": 0,
+              "regression": 0,
+              "unchanged_success": 0,
+              "unchanged_failure": 0,
+              "precision": null,
+              "recall": null,
+              "precision_lift": null,
+              "net": 0.0,
+              "selected_rescue_clusters": 0,
+              "planned_extra_evaluations": 14,
+              "baseline_cap": 308,
+              "extra_budget": 154.0,
+              "overhead_feasible": true,
+              "actual_counterfactual_evaluations": 142,
+              "actual_baseline_evaluations": 128,
+              "actual_ratio": 1.109375
+            },
+            "0.75": {
+              "selected": 0,
+              "selected_fraction": 0.0,
+              "rescue": 0,
+              "regression": 0,
+              "unchanged_success": 0,
+              "unchanged_failure": 0,
+              "precision": null,
+              "recall": null,
+              "precision_lift": null,
+              "net": 0.0,
+              "selected_rescue_clusters": 0,
+              "planned_extra_evaluations": 14,
+              "baseline_cap": 308,
+              "extra_budget": 231.0,
+              "overhead_feasible": true,
+              "actual_counterfactual_evaluations": 142,
+              "actual_baseline_evaluations": 128,
+              "actual_ratio": 1.109375
+            },
+            "1.0": {
+              "selected": 0,
+              "selected_fraction": 0.0,
+              "rescue": 0,
+              "regression": 0,
+              "unchanged_success": 0,
+              "unchanged_failure": 0,
+              "precision": null,
+              "recall": null,
+              "precision_lift": null,
+              "net": 0.0,
+              "selected_rescue_clusters": 0,
+              "planned_extra_evaluations": 14,
+              "baseline_cap": 308,
+              "extra_budget": 308.0,
+              "overhead_feasible": true,
+              "actual_counterfactual_evaluations": 142,
+              "actual_baseline_evaluations": 128,
+              "actual_ratio": 1.109375
+            }
+          }
+        }
+      },
+      "primary_cluster": "suite/family",
+      "intervals": {
+        "2/ap": {
+          "low": null,
+          "high": null,
+          "undefined": 200,
+          "replicates": 200
+        },
+        "2/ap_lift": {
+          "low": null,
+          "high": null,
+          "undefined": 200,
+          "replicates": 200
+        },
+        "2/auroc": {
+          "low": null,
+          "high": null,
+          "undefined": 200,
+          "replicates": 200
+        },
+        "2/rescue_regression_auroc": {
+          "low": null,
+          "high": null,
+          "undefined": 200,
+          "replicates": 200
+        },
+        "2/prevalence": {
+          "low": 0.0,
+          "high": 0.0,
+          "undefined": 0,
+          "replicates": 200
+        },
+        "2/0.25/precision": {
+          "low": 0.0,
+          "high": 0.0,
+          "undefined": 54,
+          "replicates": 200
+        },
+        "2/0.25/recall": {
+          "low": null,
+          "high": null,
+          "undefined": 200,
+          "replicates": 200
+        },
+        "2/0.25/precision_lift": {
+          "low": 0.0,
+          "high": 0.0,
+          "undefined": 54,
+          "replicates": 200
+        },
+        "2/0.25/net": {
+          "low": 0.0,
+          "high": 0.0,
+          "undefined": 0,
+          "replicates": 200
+        },
+        "2/0.25/selected": {
+          "low": 0.0,
+          "high": 2.0,
+          "undefined": 0,
+          "replicates": 200
+        },
+        "2/0.25/rescue": {
+          "low": 0.0,
+          "high": 0.0,
+          "undefined": 0,
+          "replicates": 200
+        },
+        "2/0.25/regression": {
+          "low": 0.0,
+          "high": 0.0,
+          "undefined": 0,
+          "replicates": 200
+        },
+        "2/0.25/actual_ratio": {
+          "low": 1.0869565217391304,
+          "high": 1.2571428571428571,
+          "undefined": 0,
+          "replicates": 200
+        },
+        "2/0.5/precision": {
+          "low": 0.0,
+          "high": 0.0,
+          "undefined": 54,
+          "replicates": 200
+        },
+        "2/0.5/recall": {
+          "low": null,
+          "high": null,
+          "undefined": 200,
+          "replicates": 200
+        },
+        "2/0.5/precision_lift": {
+          "low": 0.0,
+          "high": 0.0,
+          "undefined": 54,
+          "replicates": 200
+        },
+        "2/0.5/net": {
+          "low": 0.0,
+          "high": 0.0,
+          "undefined": 0,
+          "replicates": 200
+        },
+        "2/0.5/selected": {
+          "low": 0.0,
+          "high": 5.0,
+          "undefined": 0,
+          "replicates": 200
+        },
+        "2/0.5/rescue": {
+          "low": 0.0,
+          "high": 0.0,
+          "undefined": 0,
+          "replicates": 200
+        },
+        "2/0.5/regression": {
+          "low": 0.0,
+          "high": 0.0,
+          "undefined": 0,
+          "replicates": 200
+        },
+        "2/0.5/actual_ratio": {
+          "low": 1.0869565217391304,
+          "high": 1.5238095238095237,
+          "undefined": 0,
+          "replicates": 200
+        },
+        "2/0.75/precision": {
+          "low": 0.0,
+          "high": 0.0,
+          "undefined": 0,
+          "replicates": 200
+        },
+        "2/0.75/recall": {
+          "low": null,
+          "high": null,
+          "undefined": 200,
+          "replicates": 200
+        },
+        "2/0.75/precision_lift": {
+          "low": 0.0,
+          "high": 0.0,
+          "undefined": 0,
+          "replicates": 200
+        },
+        "2/0.75/net": {
+          "low": 0.0,
+          "high": 0.0,
+          "undefined": 0,
+          "replicates": 200
+        },
+        "2/0.75/selected": {
+          "low": 1.0,
+          "high": 8.0,
+          "undefined": 0,
+          "replicates": 200
+        },
+        "2/0.75/rescue": {
+          "low": 0.0,
+          "high": 0.0,
+          "undefined": 0,
+          "replicates": 200
+        },
+        "2/0.75/regression": {
+          "low": 0.0,
+          "high": 0.0,
+          "undefined": 0,
+          "replicates": 200
+        },
+        "2/0.75/actual_ratio": {
+          "low": 1.5869565217391304,
+          "high": 1.7428571428571429,
+          "undefined": 0,
+          "replicates": 200
+        },
+        "2/1.0/precision": {
+          "low": 0.0,
+          "high": 0.0,
+          "undefined": 0,
+          "replicates": 200
+        },
+        "2/1.0/recall": {
+          "low": null,
+          "high": null,
+          "undefined": 200,
+          "replicates": 200
+        },
+        "2/1.0/precision_lift": {
+          "low": 0.0,
+          "high": 0.0,
+          "undefined": 0,
+          "replicates": 200
+        },
+        "2/1.0/net": {
+          "low": 0.0,
+          "high": 0.0,
+          "undefined": 0,
+          "replicates": 200
+        },
+        "2/1.0/selected": {
+          "low": 1.0,
+          "high": 11.0,
+          "undefined": 0,
+          "replicates": 200
+        },
+        "2/1.0/rescue": {
+          "low": 0.0,
+          "high": 0.0,
+          "undefined": 0,
+          "replicates": 200
+        },
+        "2/1.0/regression": {
+          "low": 0.0,
+          "high": 0.0,
+          "undefined": 0,
+          "replicates": 200
+        },
+        "2/1.0/actual_ratio": {
+          "low": 1.5869565217391304,
+          "high": 2.0428571428571427,
+          "undefined": 0,
+          "replicates": 200
+        },
+        "4/ap": {
+          "low": null,
+          "high": null,
+          "undefined": 200,
+          "replicates": 200
+        },
+        "4/ap_lift": {
+          "low": null,
+          "high": null,
+          "undefined": 200,
+          "replicates": 200
+        },
+        "4/auroc": {
+          "low": null,
+          "high": null,
+          "undefined": 200,
+          "replicates": 200
+        },
+        "4/rescue_regression_auroc": {
+          "low": null,
+          "high": null,
+          "undefined": 200,
+          "replicates": 200
+        },
+        "4/prevalence": {
+          "low": 0.0,
+          "high": 0.0,
+          "undefined": 0,
+          "replicates": 200
+        },
+        "4/0.25/precision": {
+          "low": null,
+          "high": null,
+          "undefined": 200,
+          "replicates": 200
+        },
+        "4/0.25/recall": {
+          "low": null,
+          "high": null,
+          "undefined": 200,
+          "replicates": 200
+        },
+        "4/0.25/precision_lift": {
+          "low": null,
+          "high": null,
+          "undefined": 200,
+          "replicates": 200
+        },
+        "4/0.25/net": {
+          "low": 0.0,
+          "high": 0.0,
+          "undefined": 0,
+          "replicates": 200
+        },
+        "4/0.25/selected": {
+          "low": 0.0,
+          "high": 0.0,
+          "undefined": 0,
+          "replicates": 200
+        },
+        "4/0.25/rescue": {
+          "low": 0.0,
+          "high": 0.0,
+          "undefined": 0,
+          "replicates": 200
+        },
+        "4/0.25/regression": {
+          "low": 0.0,
+          "high": 0.0,
+          "undefined": 0,
+          "replicates": 200
+        },
+        "4/0.25/actual_ratio": {
+          "low": 1.0869565217391304,
+          "high": 1.1142857142857143,
+          "undefined": 0,
+          "replicates": 200
+        },
+        "4/0.5/precision": {
+          "low": 0.0,
+          "high": 0.0,
+          "undefined": 54,
+          "replicates": 200
+        },
+        "4/0.5/recall": {
+          "low": null,
+          "high": null,
+          "undefined": 200,
+          "replicates": 200
+        },
+        "4/0.5/precision_lift": {
+          "low": 0.0,
+          "high": 0.0,
+          "undefined": 54,
+          "replicates": 200
+        },
+        "4/0.5/net": {
+          "low": 0.0,
+          "high": 0.0,
+          "undefined": 0,
+          "replicates": 200
+        },
+        "4/0.5/selected": {
+          "low": 0.0,
+          "high": 1.0,
+          "undefined": 0,
+          "replicates": 200
+        },
+        "4/0.5/rescue": {
+          "low": 0.0,
+          "high": 0.0,
+          "undefined": 0,
+          "replicates": 200
+        },
+        "4/0.5/regression": {
+          "low": 0.0,
+          "high": 0.0,
+          "undefined": 0,
+          "replicates": 200
+        },
+        "4/0.5/actual_ratio": {
+          "low": 1.0869565217391304,
+          "high": 1.4609375,
+          "undefined": 0,
+          "replicates": 200
+        },
+        "4/0.75/precision": {
+          "low": 0.0,
+          "high": 0.0,
+          "undefined": 54,
+          "replicates": 200
+        },
+        "4/0.75/recall": {
+          "low": null,
+          "high": null,
+          "undefined": 200,
+          "replicates": 200
+        },
+        "4/0.75/precision_lift": {
+          "low": 0.0,
+          "high": 0.0,
+          "undefined": 54,
+          "replicates": 200
+        },
+        "4/0.75/net": {
+          "low": 0.0,
+          "high": 0.0,
+          "undefined": 0,
+          "replicates": 200
+        },
+        "4/0.75/selected": {
+          "low": 0.0,
+          "high": 2.0,
+          "undefined": 0,
+          "replicates": 200
+        },
+        "4/0.75/rescue": {
+          "low": 0.0,
+          "high": 0.0,
+          "undefined": 0,
+          "replicates": 200
+        },
+        "4/0.75/regression": {
+          "low": 0.0,
+          "high": 0.0,
+          "undefined": 0,
+          "replicates": 200
+        },
+        "4/0.75/actual_ratio": {
+          "low": 1.0869565217391304,
+          "high": 1.542857142857143,
+          "undefined": 0,
+          "replicates": 200
+        },
+        "4/1.0/precision": {
+          "low": 0.0,
+          "high": 0.0,
+          "undefined": 54,
+          "replicates": 200
+        },
+        "4/1.0/recall": {
+          "low": null,
+          "high": null,
+          "undefined": 200,
+          "replicates": 200
+        },
+        "4/1.0/precision_lift": {
+          "low": 0.0,
+          "high": 0.0,
+          "undefined": 54,
+          "replicates": 200
+        },
+        "4/1.0/net": {
+          "low": 0.0,
+          "high": 0.0,
+          "undefined": 0,
+          "replicates": 200
+        },
+        "4/1.0/selected": {
+          "low": 0.0,
+          "high": 3.0,
+          "undefined": 0,
+          "replicates": 200
+        },
+        "4/1.0/rescue": {
+          "low": 0.0,
+          "high": 0.0,
+          "undefined": 0,
+          "replicates": 200
+        },
+        "4/1.0/regression": {
+          "low": 0.0,
+          "high": 0.0,
+          "undefined": 0,
+          "replicates": 200
+        },
+        "4/1.0/actual_ratio": {
+          "low": 1.0869565217391304,
+          "high": 2.3125,
+          "undefined": 0,
+          "replicates": 200
+        },
+        "10/ap": {
+          "low": null,
+          "high": null,
+          "undefined": 200,
+          "replicates": 200
+        },
+        "10/ap_lift": {
+          "low": null,
+          "high": null,
+          "undefined": 200,
+          "replicates": 200
+        },
+        "10/auroc": {
+          "low": null,
+          "high": null,
+          "undefined": 200,
+          "replicates": 200
+        },
+        "10/rescue_regression_auroc": {
+          "low": null,
+          "high": null,
+          "undefined": 200,
+          "replicates": 200
+        },
+        "10/prevalence": {
+          "low": 0.0,
+          "high": 0.0,
+          "undefined": 0,
+          "replicates": 200
+        },
+        "10/0.25/precision": {
+          "low": null,
+          "high": null,
+          "undefined": 200,
+          "replicates": 200
+        },
+        "10/0.25/recall": {
+          "low": null,
+          "high": null,
+          "undefined": 200,
+          "replicates": 200
+        },
+        "10/0.25/precision_lift": {
+          "low": null,
+          "high": null,
+          "undefined": 200,
+          "replicates": 200
+        },
+        "10/0.25/net": {
+          "low": 0.0,
+          "high": 0.0,
+          "undefined": 0,
+          "replicates": 200
+        },
+        "10/0.25/selected": {
+          "low": 0.0,
+          "high": 0.0,
+          "undefined": 0,
+          "replicates": 200
+        },
+        "10/0.25/rescue": {
+          "low": 0.0,
+          "high": 0.0,
+          "undefined": 0,
+          "replicates": 200
+        },
+        "10/0.25/regression": {
+          "low": 0.0,
+          "high": 0.0,
+          "undefined": 0,
+          "replicates": 200
+        },
+        "10/0.25/actual_ratio": {
+          "low": 1.0869565217391304,
+          "high": 1.1142857142857143,
+          "undefined": 0,
+          "replicates": 200
+        },
+        "10/0.5/precision": {
+          "low": null,
+          "high": null,
+          "undefined": 200,
+          "replicates": 200
+        },
+        "10/0.5/recall": {
+          "low": null,
+          "high": null,
+          "undefined": 200,
+          "replicates": 200
+        },
+        "10/0.5/precision_lift": {
+          "low": null,
+          "high": null,
+          "undefined": 200,
+          "replicates": 200
+        },
+        "10/0.5/net": {
+          "low": 0.0,
+          "high": 0.0,
+          "undefined": 0,
+          "replicates": 200
+        },
+        "10/0.5/selected": {
+          "low": 0.0,
+          "high": 0.0,
+          "undefined": 0,
+          "replicates": 200
+        },
+        "10/0.5/rescue": {
+          "low": 0.0,
+          "high": 0.0,
+          "undefined": 0,
+          "replicates": 200
+        },
+        "10/0.5/regression": {
+          "low": 0.0,
+          "high": 0.0,
+          "undefined": 0,
+          "replicates": 200
+        },
+        "10/0.5/actual_ratio": {
+          "low": 1.0869565217391304,
+          "high": 1.1142857142857143,
+          "undefined": 0,
+          "replicates": 200
+        },
+        "10/0.75/precision": {
+          "low": null,
+          "high": null,
+          "undefined": 200,
+          "replicates": 200
+        },
+        "10/0.75/recall": {
+          "low": null,
+          "high": null,
+          "undefined": 200,
+          "replicates": 200
+        },
+        "10/0.75/precision_lift": {
+          "low": null,
+          "high": null,
+          "undefined": 200,
+          "replicates": 200
+        },
+        "10/0.75/net": {
+          "low": 0.0,
+          "high": 0.0,
+          "undefined": 0,
+          "replicates": 200
+        },
+        "10/0.75/selected": {
+          "low": 0.0,
+          "high": 0.0,
+          "undefined": 0,
+          "replicates": 200
+        },
+        "10/0.75/rescue": {
+          "low": 0.0,
+          "high": 0.0,
+          "undefined": 0,
+          "replicates": 200
+        },
+        "10/0.75/regression": {
+          "low": 0.0,
+          "high": 0.0,
+          "undefined": 0,
+          "replicates": 200
+        },
+        "10/0.75/actual_ratio": {
+          "low": 1.0869565217391304,
+          "high": 1.1142857142857143,
+          "undefined": 0,
+          "replicates": 200
+        },
+        "10/1.0/precision": {
+          "low": 0.0,
+          "high": 0.0,
+          "undefined": 141,
+          "replicates": 200
+        },
+        "10/1.0/recall": {
+          "low": null,
+          "high": null,
+          "undefined": 200,
+          "replicates": 200
+        },
+        "10/1.0/precision_lift": {
+          "low": 0.0,
+          "high": 0.0,
+          "undefined": 141,
+          "replicates": 200
+        },
+        "10/1.0/net": {
+          "low": 0.0,
+          "high": 0.0,
+          "undefined": 0,
+          "replicates": 200
+        },
+        "10/1.0/selected": {
+          "low": 0.0,
+          "high": 1.0,
+          "undefined": 0,
+          "replicates": 200
+        },
+        "10/1.0/rescue": {
+          "low": 0.0,
+          "high": 0.0,
+          "undefined": 0,
+          "replicates": 200
+        },
+        "10/1.0/regression": {
+          "low": 0.0,
+          "high": 0.0,
+          "undefined": 0,
+          "replicates": 200
+        },
+        "10/1.0/actual_ratio": {
+          "low": 1.0869565217391304,
+          "high": 1.7571428571428571,
+          "undefined": 0,
+          "replicates": 200
+        }
+      },
+      "condition_sensitivity": {
+        "2/ap": {
+          "low": null,
+          "high": null,
+          "undefined": 200,
+          "replicates": 200
+        },
+        "2/ap_lift": {
+          "low": null,
+          "high": null,
+          "undefined": 200,
+          "replicates": 200
+        },
+        "2/auroc": {
+          "low": null,
+          "high": null,
+          "undefined": 200,
+          "replicates": 200
+        },
+        "2/rescue_regression_auroc": {
+          "low": null,
+          "high": null,
+          "undefined": 200,
+          "replicates": 200
+        },
+        "2/prevalence": {
+          "low": 0.0,
+          "high": 0.0,
+          "undefined": 0,
+          "replicates": 200
+        },
+        "2/0.25/precision": {
+          "low": 0.0,
+          "high": 0.0,
+          "undefined": 0,
+          "replicates": 200
+        },
+        "2/0.25/recall": {
+          "low": null,
+          "high": null,
+          "undefined": 200,
+          "replicates": 200
+        },
+        "2/0.25/precision_lift": {
+          "low": 0.0,
+          "high": 0.0,
+          "undefined": 0,
+          "replicates": 200
+        },
+        "2/0.25/net": {
+          "low": 0.0,
+          "high": 0.0,
+          "undefined": 0,
+          "replicates": 200
+        },
+        "2/0.25/selected": {
+          "low": 1.0,
+          "high": 1.0,
+          "undefined": 0,
+          "replicates": 200
+        },
+        "2/0.25/rescue": {
+          "low": 0.0,
+          "high": 0.0,
+          "undefined": 0,
+          "replicates": 200
+        },
+        "2/0.25/regression": {
+          "low": 0.0,
+          "high": 0.0,
+          "undefined": 0,
+          "replicates": 200
+        },
+        "2/0.25/actual_ratio": {
+          "low": 1.2041896483797891,
+          "high": 1.2778333333333332,
+          "undefined": 0,
+          "replicates": 200
+        },
+        "2/0.5/precision": {
+          "low": 0.0,
+          "high": 0.0,
+          "undefined": 0,
+          "replicates": 200
+        },
+        "2/0.5/recall": {
+          "low": null,
+          "high": null,
+          "undefined": 200,
+          "replicates": 200
+        },
+        "2/0.5/precision_lift": {
+          "low": 0.0,
+          "high": 0.0,
+          "undefined": 0,
+          "replicates": 200
+        },
+        "2/0.5/net": {
+          "low": 0.0,
+          "high": 0.0,
+          "undefined": 0,
+          "replicates": 200
+        },
+        "2/0.5/selected": {
+          "low": 3.0,
+          "high": 3.0,
+          "undefined": 0,
+          "replicates": 200
+        },
+        "2/0.5/rescue": {
+          "low": 0.0,
+          "high": 0.0,
+          "undefined": 0,
+          "replicates": 200
+        },
+        "2/0.5/regression": {
+          "low": 0.0,
+          "high": 0.0,
+          "undefined": 0,
+          "replicates": 200
+        },
+        "2/0.5/actual_ratio": {
+          "low": 1.4495720930232556,
+          "high": 1.596638655462185,
+          "undefined": 0,
+          "replicates": 200
+        },
+        "2/0.75/precision": {
+          "low": 0.0,
+          "high": 0.0,
+          "undefined": 0,
+          "replicates": 200
+        },
+        "2/0.75/recall": {
+          "low": null,
+          "high": null,
+          "undefined": 200,
+          "replicates": 200
+        },
+        "2/0.75/precision_lift": {
+          "low": 0.0,
+          "high": 0.0,
+          "undefined": 0,
+          "replicates": 200
+        },
+        "2/0.75/net": {
+          "low": 0.0,
+          "high": 0.0,
+          "undefined": 0,
+          "replicates": 200
+        },
+        "2/0.75/selected": {
+          "low": 4.0,
+          "high": 4.0,
+          "undefined": 0,
+          "replicates": 200
+        },
+        "2/0.75/rescue": {
+          "low": 0.0,
+          "high": 0.0,
+          "undefined": 0,
+          "replicates": 200
+        },
+        "2/0.75/regression": {
+          "low": 0.0,
+          "high": 0.0,
+          "undefined": 0,
+          "replicates": 200
+        },
+        "2/0.75/actual_ratio": {
+          "low": 1.5789268092105264,
+          "high": 1.7395351890756303,
+          "undefined": 0,
+          "replicates": 200
+        },
+        "2/1.0/precision": {
+          "low": 0.0,
+          "high": 0.0,
+          "undefined": 0,
+          "replicates": 200
+        },
+        "2/1.0/recall": {
+          "low": null,
+          "high": null,
+          "undefined": 200,
+          "replicates": 200
+        },
+        "2/1.0/precision_lift": {
+          "low": 0.0,
+          "high": 0.0,
+          "undefined": 0,
+          "replicates": 200
+        },
+        "2/1.0/net": {
+          "low": 0.0,
+          "high": 0.0,
+          "undefined": 0,
+          "replicates": 200
+        },
+        "2/1.0/selected": {
+          "low": 6.0,
+          "high": 6.0,
+          "undefined": 0,
+          "replicates": 200
+        },
+        "2/1.0/rescue": {
+          "low": 0.0,
+          "high": 0.0,
+          "undefined": 0,
+          "replicates": 200
+        },
+        "2/1.0/regression": {
+          "low": 0.0,
+          "high": 0.0,
+          "undefined": 0,
+          "replicates": 200
+        },
+        "2/1.0/actual_ratio": {
+          "low": 1.8992248062015504,
+          "high": 2.0252100840336134,
+          "undefined": 0,
+          "replicates": 200
+        },
+        "4/ap": {
+          "low": null,
+          "high": null,
+          "undefined": 200,
+          "replicates": 200
+        },
+        "4/ap_lift": {
+          "low": null,
+          "high": null,
+          "undefined": 200,
+          "replicates": 200
+        },
+        "4/auroc": {
+          "low": null,
+          "high": null,
+          "undefined": 200,
+          "replicates": 200
+        },
+        "4/rescue_regression_auroc": {
+          "low": null,
+          "high": null,
+          "undefined": 200,
+          "replicates": 200
+        },
+        "4/prevalence": {
+          "low": 0.0,
+          "high": 0.0,
+          "undefined": 0,
+          "replicates": 200
+        },
+        "4/0.25/precision": {
+          "low": null,
+          "high": null,
+          "undefined": 200,
+          "replicates": 200
+        },
+        "4/0.25/recall": {
+          "low": null,
+          "high": null,
+          "undefined": 200,
+          "replicates": 200
+        },
+        "4/0.25/precision_lift": {
+          "low": null,
+          "high": null,
+          "undefined": 200,
+          "replicates": 200
+        },
+        "4/0.25/net": {
+          "low": 0.0,
+          "high": 0.0,
+          "undefined": 0,
+          "replicates": 200
+        },
+        "4/0.25/selected": {
+          "low": 0.0,
+          "high": 0.0,
+          "undefined": 0,
+          "replicates": 200
+        },
+        "4/0.25/rescue": {
+          "low": 0.0,
+          "high": 0.0,
+          "undefined": 0,
+          "replicates": 200
+        },
+        "4/0.25/regression": {
+          "low": 0.0,
+          "high": 0.0,
+          "undefined": 0,
+          "replicates": 200
+        },
+        "4/0.25/actual_ratio": {
+          "low": 1.0933333333333333,
+          "high": 1.1273019182652209,
+          "undefined": 0,
+          "replicates": 200
+        },
+        "4/0.5/precision": {
+          "low": 0.0,
+          "high": 0.0,
+          "undefined": 0,
+          "replicates": 200
+        },
+        "4/0.5/recall": {
+          "low": null,
+          "high": null,
+          "undefined": 200,
+          "replicates": 200
+        },
+        "4/0.5/precision_lift": {
+          "low": 0.0,
+          "high": 0.0,
+          "undefined": 0,
+          "replicates": 200
+        },
+        "4/0.5/net": {
+          "low": 0.0,
+          "high": 0.0,
+          "undefined": 0,
+          "replicates": 200
+        },
+        "4/0.5/selected": {
+          "low": 1.0,
+          "high": 1.0,
+          "undefined": 0,
+          "replicates": 200
+        },
+        "4/0.5/rescue": {
+          "low": 0.0,
+          "high": 0.0,
+          "undefined": 0,
+          "replicates": 200
+        },
+        "4/0.5/regression": {
+          "low": 0.0,
+          "high": 0.0,
+          "undefined": 0,
+          "replicates": 200
+        },
+        "4/0.5/actual_ratio": {
+          "low": 1.415420319117502,
+          "high": 1.9763857142857144,
+          "undefined": 0,
+          "replicates": 200
+        },
+        "4/0.75/precision": {
+          "low": 0.0,
+          "high": 0.0,
+          "undefined": 0,
+          "replicates": 200
+        },
+        "4/0.75/recall": {
+          "low": null,
+          "high": null,
+          "undefined": 200,
+          "replicates": 200
+        },
+        "4/0.75/precision_lift": {
+          "low": 0.0,
+          "high": 0.0,
+          "undefined": 0,
+          "replicates": 200
+        },
+        "4/0.75/net": {
+          "low": 0.0,
+          "high": 0.0,
+          "undefined": 0,
+          "replicates": 200
+        },
+        "4/0.75/selected": {
+          "low": 1.0,
+          "high": 1.0,
+          "undefined": 0,
+          "replicates": 200
+        },
+        "4/0.75/rescue": {
+          "low": 0.0,
+          "high": 0.0,
+          "undefined": 0,
+          "replicates": 200
+        },
+        "4/0.75/regression": {
+          "low": 0.0,
+          "high": 0.0,
+          "undefined": 0,
+          "replicates": 200
+        },
+        "4/0.75/actual_ratio": {
+          "low": 1.415420319117502,
+          "high": 1.9763857142857144,
+          "undefined": 0,
+          "replicates": 200
+        },
+        "4/1.0/precision": {
+          "low": 0.0,
+          "high": 0.0,
+          "undefined": 0,
+          "replicates": 200
+        },
+        "4/1.0/recall": {
+          "low": null,
+          "high": null,
+          "undefined": 200,
+          "replicates": 200
+        },
+        "4/1.0/precision_lift": {
+          "low": 0.0,
+          "high": 0.0,
+          "undefined": 0,
+          "replicates": 200
+        },
+        "4/1.0/net": {
+          "low": 0.0,
+          "high": 0.0,
+          "undefined": 0,
+          "replicates": 200
+        },
+        "4/1.0/selected": {
+          "low": 2.0,
+          "high": 2.0,
+          "undefined": 0,
+          "replicates": 200
+        },
+        "4/1.0/rescue": {
+          "low": 0.0,
+          "high": 0.0,
+          "undefined": 0,
+          "replicates": 200
+        },
+        "4/1.0/regression": {
+          "low": 0.0,
+          "high": 0.0,
+          "undefined": 0,
+          "replicates": 200
+        },
+        "4/1.0/actual_ratio": {
+          "low": 1.7647058823529411,
+          "high": 2.744691273638642,
+          "undefined": 0,
+          "replicates": 200
+        },
+        "10/ap": {
+          "low": null,
+          "high": null,
+          "undefined": 200,
+          "replicates": 200
+        },
+        "10/ap_lift": {
+          "low": null,
+          "high": null,
+          "undefined": 200,
+          "replicates": 200
+        },
+        "10/auroc": {
+          "low": null,
+          "high": null,
+          "undefined": 200,
+          "replicates": 200
+        },
+        "10/rescue_regression_auroc": {
+          "low": null,
+          "high": null,
+          "undefined": 200,
+          "replicates": 200
+        },
+        "10/prevalence": {
+          "low": 0.0,
+          "high": 0.0,
+          "undefined": 0,
+          "replicates": 200
+        },
+        "10/0.25/precision": {
+          "low": null,
+          "high": null,
+          "undefined": 200,
+          "replicates": 200
+        },
+        "10/0.25/recall": {
+          "low": null,
+          "high": null,
+          "undefined": 200,
+          "replicates": 200
+        },
+        "10/0.25/precision_lift": {
+          "low": null,
+          "high": null,
+          "undefined": 200,
+          "replicates": 200
+        },
+        "10/0.25/net": {
+          "low": 0.0,
+          "high": 0.0,
+          "undefined": 0,
+          "replicates": 200
+        },
+        "10/0.25/selected": {
+          "low": 0.0,
+          "high": 0.0,
+          "undefined": 0,
+          "replicates": 200
+        },
+        "10/0.25/rescue": {
+          "low": 0.0,
+          "high": 0.0,
+          "undefined": 0,
+          "replicates": 200
+        },
+        "10/0.25/regression": {
+          "low": 0.0,
+          "high": 0.0,
+          "undefined": 0,
+          "replicates": 200
+        },
+        "10/0.25/actual_ratio": {
+          "low": 1.0933333333333333,
+          "high": 1.1273019182652209,
+          "undefined": 0,
+          "replicates": 200
+        },
+        "10/0.5/precision": {
+          "low": null,
+          "high": null,
+          "undefined": 200,
+          "replicates": 200
+        },
+        "10/0.5/recall": {
+          "low": null,
+          "high": null,
+          "undefined": 200,
+          "replicates": 200
+        },
+        "10/0.5/precision_lift": {
+          "low": null,
+          "high": null,
+          "undefined": 200,
+          "replicates": 200
+        },
+        "10/0.5/net": {
+          "low": 0.0,
+          "high": 0.0,
+          "undefined": 0,
+          "replicates": 200
+        },
+        "10/0.5/selected": {
+          "low": 0.0,
+          "high": 0.0,
+          "undefined": 0,
+          "replicates": 200
+        },
+        "10/0.5/rescue": {
+          "low": 0.0,
+          "high": 0.0,
+          "undefined": 0,
+          "replicates": 200
+        },
+        "10/0.5/regression": {
+          "low": 0.0,
+          "high": 0.0,
+          "undefined": 0,
+          "replicates": 200
+        },
+        "10/0.5/actual_ratio": {
+          "low": 1.0933333333333333,
+          "high": 1.1273019182652209,
+          "undefined": 0,
+          "replicates": 200
+        },
+        "10/0.75/precision": {
+          "low": null,
+          "high": null,
+          "undefined": 200,
+          "replicates": 200
+        },
+        "10/0.75/recall": {
+          "low": null,
+          "high": null,
+          "undefined": 200,
+          "replicates": 200
+        },
+        "10/0.75/precision_lift": {
+          "low": null,
+          "high": null,
+          "undefined": 200,
+          "replicates": 200
+        },
+        "10/0.75/net": {
+          "low": 0.0,
+          "high": 0.0,
+          "undefined": 0,
+          "replicates": 200
+        },
+        "10/0.75/selected": {
+          "low": 0.0,
+          "high": 0.0,
+          "undefined": 0,
+          "replicates": 200
+        },
+        "10/0.75/rescue": {
+          "low": 0.0,
+          "high": 0.0,
+          "undefined": 0,
+          "replicates": 200
+        },
+        "10/0.75/regression": {
+          "low": 0.0,
+          "high": 0.0,
+          "undefined": 0,
+          "replicates": 200
+        },
+        "10/0.75/actual_ratio": {
+          "low": 1.0933333333333333,
+          "high": 1.1273019182652209,
+          "undefined": 0,
+          "replicates": 200
+        },
+        "10/1.0/precision": {
+          "low": null,
+          "high": null,
+          "undefined": 200,
+          "replicates": 200
+        },
+        "10/1.0/recall": {
+          "low": null,
+          "high": null,
+          "undefined": 200,
+          "replicates": 200
+        },
+        "10/1.0/precision_lift": {
+          "low": null,
+          "high": null,
+          "undefined": 200,
+          "replicates": 200
+        },
+        "10/1.0/net": {
+          "low": 0.0,
+          "high": 0.0,
+          "undefined": 0,
+          "replicates": 200
+        },
+        "10/1.0/selected": {
+          "low": 0.0,
+          "high": 0.0,
+          "undefined": 0,
+          "replicates": 200
+        },
+        "10/1.0/rescue": {
+          "low": 0.0,
+          "high": 0.0,
+          "undefined": 0,
+          "replicates": 200
+        },
+        "10/1.0/regression": {
+          "low": 0.0,
+          "high": 0.0,
+          "undefined": 0,
+          "replicates": 200
+        },
+        "10/1.0/actual_ratio": {
+          "low": 1.0933333333333333,
+          "high": 1.1273019182652209,
+          "undefined": 0,
+          "replicates": 200
+        }
+      }
+    },
+    "sigma": {
+      "point": {
+        "2": {
+          "ap": null,
+          "auroc": null,
+          "rescue_regression_auroc": null,
+          "prevalence": 0.0,
+          "ap_lift": null,
+          "pr": [
+            {
+              "threshold": 0.043871961534023285,
+              "precision": 0.0,
+              "recall": null,
+              "selected": 1
+            },
+            {
+              "threshold": 0.04223179072141647,
+              "precision": 0.0,
+              "recall": null,
+              "selected": 2
+            },
+            {
+              "threshold": 0.03510024771094322,
+              "precision": 0.0,
+              "recall": null,
+              "selected": 3
+            },
+            {
+              "threshold": 0.033361293375492096,
+              "precision": 0.0,
+              "recall": null,
+              "selected": 4
+            },
+            {
+              "threshold": 0.03334435448050499,
+              "precision": 0.0,
+              "recall": null,
+              "selected": 5
+            },
+            {
+              "threshold": 0.032475098967552185,
+              "precision": 0.0,
+              "recall": null,
+              "selected": 6
+            },
+            {
+              "threshold": 0.030936673283576965,
+              "precision": 0.0,
+              "recall": null,
+              "selected": 7
+            }
+          ],
+          "labels": {
+            "rescue": 0,
+            "regression": 0,
+            "unchanged_success": 7,
+            "unchanged_failure": 0
+          },
+          "budgets": {
+            "0.25": {
+              "selected": 1,
+              "selected_fraction": 0.14285714285714285,
+              "rescue": 0,
+              "regression": 0,
+              "unchanged_success": 1,
+              "unchanged_failure": 0,
+              "precision": 0.0,
+              "recall": null,
+              "precision_lift": 0.0,
+              "net": 0.0,
+              "selected_rescue_clusters": 0,
+              "planned_extra_evaluations": 51,
+              "baseline_cap": 308,
+              "extra_budget": 77.0,
+              "overhead_feasible": true,
+              "actual_counterfactual_evaluations": 149,
+              "actual_baseline_evaluations": 128,
+              "actual_ratio": 1.1640625
+            },
+            "0.5": {
+              "selected": 3,
+              "selected_fraction": 0.42857142857142855,
+              "rescue": 0,
+              "regression": 0,
+              "unchanged_success": 3,
+              "unchanged_failure": 0,
+              "precision": 0.0,
+              "recall": null,
+              "precision_lift": 0.0,
+              "net": 0.0,
+              "selected_rescue_clusters": 0,
+              "planned_extra_evaluations": 139,
+              "baseline_cap": 308,
+              "extra_budget": 154.0,
+              "overhead_feasible": true,
+              "actual_counterfactual_evaluations": 189,
+              "actual_baseline_evaluations": 128,
+              "actual_ratio": 1.4765625
+            },
+            "0.75": {
+              "selected": 5,
+              "selected_fraction": 0.7142857142857143,
+              "rescue": 0,
+              "regression": 0,
+              "unchanged_success": 5,
+              "unchanged_failure": 0,
+              "precision": 0.0,
+              "recall": null,
+              "precision_lift": 0.0,
+              "net": 0.0,
+              "selected_rescue_clusters": 0,
+              "planned_extra_evaluations": 227,
+              "baseline_cap": 308,
+              "extra_budget": 231.0,
+              "overhead_feasible": true,
+              "actual_counterfactual_evaluations": 233,
+              "actual_baseline_evaluations": 128,
+              "actual_ratio": 1.8203125
+            },
+            "1.0": {
+              "selected": 6,
+              "selected_fraction": 0.8571428571428571,
+              "rescue": 0,
+              "regression": 0,
+              "unchanged_success": 6,
+              "unchanged_failure": 0,
+              "precision": 0.0,
+              "recall": null,
+              "precision_lift": 0.0,
+              "net": 0.0,
+              "selected_rescue_clusters": 0,
+              "planned_extra_evaluations": 271,
+              "baseline_cap": 308,
+              "extra_budget": 308.0,
+              "overhead_feasible": true,
+              "actual_counterfactual_evaluations": 248,
+              "actual_baseline_evaluations": 128,
+              "actual_ratio": 1.9375
+            }
+          }
+        },
+        "4": {
+          "ap": null,
+          "auroc": null,
+          "rescue_regression_auroc": null,
+          "prevalence": 0.0,
+          "ap_lift": null,
+          "pr": [
+            {
+              "threshold": 0.043871961534023285,
+              "precision": 0.0,
+              "recall": null,
+              "selected": 1
+            },
+            {
+              "threshold": 0.04223179072141647,
+              "precision": 0.0,
+              "recall": null,
+              "selected": 2
+            },
+            {
+              "threshold": 0.03510024771094322,
+              "precision": 0.0,
+              "recall": null,
+              "selected": 3
+            },
+            {
+              "threshold": 0.033361293375492096,
+              "precision": 0.0,
+              "recall": null,
+              "selected": 4
+            },
+            {
+              "threshold": 0.03334435448050499,
+              "precision": 0.0,
+              "recall": null,
+              "selected": 5
+            },
+            {
+              "threshold": 0.032475098967552185,
+              "precision": 0.0,
+              "recall": null,
+              "selected": 6
+            },
+            {
+              "threshold": 0.030936673283576965,
+              "precision": 0.0,
+              "recall": null,
+              "selected": 7
+            }
+          ],
+          "labels": {
+            "rescue": 0,
+            "regression": 0,
+            "unchanged_success": 7,
+            "unchanged_failure": 0
+          },
+          "budgets": {
+            "0.25": {
+              "selected": 0,
+              "selected_fraction": 0.0,
+              "rescue": 0,
+              "regression": 0,
+              "unchanged_success": 0,
+              "unchanged_failure": 0,
+              "precision": null,
+              "recall": null,
+              "precision_lift": null,
+              "net": 0.0,
+              "selected_rescue_clusters": 0,
+              "planned_extra_evaluations": 7,
+              "baseline_cap": 308,
+              "extra_budget": 77.0,
+              "overhead_feasible": true,
+              "actual_counterfactual_evaluations": 135,
+              "actual_baseline_evaluations": 128,
+              "actual_ratio": 1.0546875
+            },
+            "0.5": {
+              "selected": 1,
+              "selected_fraction": 0.14285714285714285,
+              "rescue": 0,
+              "regression": 0,
+              "unchanged_success": 1,
+              "unchanged_failure": 0,
+              "precision": 0.0,
+              "recall": null,
+              "precision_lift": 0.0,
+              "net": 0.0,
+              "selected_rescue_clusters": 0,
+              "planned_extra_evaluations": 139,
+              "baseline_cap": 308,
+              "extra_budget": 154.0,
+              "overhead_feasible": true,
+              "actual_counterfactual_evaluations": 177,
+              "actual_baseline_evaluations": 128,
+              "actual_ratio": 1.3828125
+            },
+            "0.75": {
+              "selected": 1,
+              "selected_fraction": 0.14285714285714285,
+              "rescue": 0,
+              "regression": 0,
+              "unchanged_success": 1,
+              "unchanged_failure": 0,
+              "precision": 0.0,
+              "recall": null,
+              "precision_lift": 0.0,
+              "net": 0.0,
+              "selected_rescue_clusters": 0,
+              "planned_extra_evaluations": 139,
+              "baseline_cap": 308,
+              "extra_budget": 231.0,
+              "overhead_feasible": true,
+              "actual_counterfactual_evaluations": 177,
+              "actual_baseline_evaluations": 128,
+              "actual_ratio": 1.3828125
+            },
+            "1.0": {
+              "selected": 2,
+              "selected_fraction": 0.2857142857142857,
+              "rescue": 0,
+              "regression": 0,
+              "unchanged_success": 2,
+              "unchanged_failure": 0,
+              "precision": 0.0,
+              "recall": null,
+              "precision_lift": 0.0,
+              "net": 0.0,
+              "selected_rescue_clusters": 0,
+              "planned_extra_evaluations": 271,
+              "baseline_cap": 308,
+              "extra_budget": 308.0,
+              "overhead_feasible": true,
+              "actual_counterfactual_evaluations": 225,
+              "actual_baseline_evaluations": 128,
+              "actual_ratio": 1.7578125
+            }
+          }
+        },
+        "10": {
+          "ap": null,
+          "auroc": null,
+          "rescue_regression_auroc": null,
+          "prevalence": 0.0,
+          "ap_lift": null,
+          "pr": [
+            {
+              "threshold": 0.043871961534023285,
+              "precision": 0.0,
+              "recall": null,
+              "selected": 1
+            },
+            {
+              "threshold": 0.04223179072141647,
+              "precision": 0.0,
+              "recall": null,
+              "selected": 2
+            },
+            {
+              "threshold": 0.03510024771094322,
+              "precision": 0.0,
+              "recall": null,
+              "selected": 3
+            },
+            {
+              "threshold": 0.033361293375492096,
+              "precision": 0.0,
+              "recall": null,
+              "selected": 4
+            },
+            {
+              "threshold": 0.03334435448050499,
+              "precision": 0.0,
+              "recall": null,
+              "selected": 5
+            },
+            {
+              "threshold": 0.032475098967552185,
+              "precision": 0.0,
+              "recall": null,
+              "selected": 6
+            },
+            {
+              "threshold": 0.030936673283576965,
+              "precision": 0.0,
+              "recall": null,
+              "selected": 7
+            }
+          ],
+          "labels": {
+            "rescue": 0,
+            "regression": 0,
+            "unchanged_success": 7,
+            "unchanged_failure": 0
+          },
+          "budgets": {
+            "0.25": {
+              "selected": 0,
+              "selected_fraction": 0.0,
+              "rescue": 0,
+              "regression": 0,
+              "unchanged_success": 0,
+              "unchanged_failure": 0,
+              "precision": null,
+              "recall": null,
+              "precision_lift": null,
+              "net": 0.0,
+              "selected_rescue_clusters": 0,
+              "planned_extra_evaluations": 7,
+              "baseline_cap": 308,
+              "extra_budget": 77.0,
+              "overhead_feasible": true,
+              "actual_counterfactual_evaluations": 135,
+              "actual_baseline_evaluations": 128,
+              "actual_ratio": 1.0546875
+            },
+            "0.5": {
+              "selected": 0,
+              "selected_fraction": 0.0,
+              "rescue": 0,
+              "regression": 0,
+              "unchanged_success": 0,
+              "unchanged_failure": 0,
+              "precision": null,
+              "recall": null,
+              "precision_lift": null,
+              "net": 0.0,
+              "selected_rescue_clusters": 0,
+              "planned_extra_evaluations": 7,
+              "baseline_cap": 308,
+              "extra_budget": 154.0,
+              "overhead_feasible": true,
+              "actual_counterfactual_evaluations": 135,
+              "actual_baseline_evaluations": 128,
+              "actual_ratio": 1.0546875
+            },
+            "0.75": {
+              "selected": 0,
+              "selected_fraction": 0.0,
+              "rescue": 0,
+              "regression": 0,
+              "unchanged_success": 0,
+              "unchanged_failure": 0,
+              "precision": null,
+              "recall": null,
+              "precision_lift": null,
+              "net": 0.0,
+              "selected_rescue_clusters": 0,
+              "planned_extra_evaluations": 7,
+              "baseline_cap": 308,
+              "extra_budget": 231.0,
+              "overhead_feasible": true,
+              "actual_counterfactual_evaluations": 135,
+              "actual_baseline_evaluations": 128,
+              "actual_ratio": 1.0546875
+            },
+            "1.0": {
+              "selected": 0,
+              "selected_fraction": 0.0,
+              "rescue": 0,
+              "regression": 0,
+              "unchanged_success": 0,
+              "unchanged_failure": 0,
+              "precision": null,
+              "recall": null,
+              "precision_lift": null,
+              "net": 0.0,
+              "selected_rescue_clusters": 0,
+              "planned_extra_evaluations": 7,
+              "baseline_cap": 308,
+              "extra_budget": 308.0,
+              "overhead_feasible": true,
+              "actual_counterfactual_evaluations": 135,
+              "actual_baseline_evaluations": 128,
+              "actual_ratio": 1.0546875
+            }
+          }
+        }
+      },
+      "primary_cluster": "suite/family",
+      "intervals": {
+        "2/ap": {
+          "low": null,
+          "high": null,
+          "undefined": 200,
+          "replicates": 200
+        },
+        "2/ap_lift": {
+          "low": null,
+          "high": null,
+          "undefined": 200,
+          "replicates": 200
+        },
+        "2/auroc": {
+          "low": null,
+          "high": null,
+          "undefined": 200,
+          "replicates": 200
+        },
+        "2/rescue_regression_auroc": {
+          "low": null,
+          "high": null,
+          "undefined": 200,
+          "replicates": 200
+        },
+        "2/prevalence": {
+          "low": 0.0,
+          "high": 0.0,
+          "undefined": 0,
+          "replicates": 200
+        },
+        "2/0.25/precision": {
+          "low": 0.0,
+          "high": 0.0,
+          "undefined": 54,
+          "replicates": 200
+        },
+        "2/0.25/recall": {
+          "low": null,
+          "high": null,
+          "undefined": 200,
+          "replicates": 200
+        },
+        "2/0.25/precision_lift": {
+          "low": 0.0,
+          "high": 0.0,
+          "undefined": 54,
+          "replicates": 200
+        },
+        "2/0.25/net": {
+          "low": 0.0,
+          "high": 0.0,
+          "undefined": 0,
+          "replicates": 200
+        },
+        "2/0.25/selected": {
+          "low": 0.0,
+          "high": 2.0,
+          "undefined": 0,
+          "replicates": 200
+        },
+        "2/0.25/rescue": {
+          "low": 0.0,
+          "high": 0.0,
+          "undefined": 0,
+          "replicates": 200
+        },
+        "2/0.25/regression": {
+          "low": 0.0,
+          "high": 0.0,
+          "undefined": 0,
+          "replicates": 200
+        },
+        "2/0.25/actual_ratio": {
+          "low": 1.0434782608695652,
+          "high": 1.1904761904761905,
+          "undefined": 0,
+          "replicates": 200
+        },
+        "2/0.5/precision": {
+          "low": 0.0,
+          "high": 0.0,
+          "undefined": 54,
+          "replicates": 200
+        },
+        "2/0.5/recall": {
+          "low": null,
+          "high": null,
+          "undefined": 200,
+          "replicates": 200
+        },
+        "2/0.5/precision_lift": {
+          "low": 0.0,
+          "high": 0.0,
+          "undefined": 54,
+          "replicates": 200
+        },
+        "2/0.5/net": {
+          "low": 0.0,
+          "high": 0.0,
+          "undefined": 0,
+          "replicates": 200
+        },
+        "2/0.5/selected": {
+          "low": 0.0,
+          "high": 5.0,
+          "undefined": 0,
+          "replicates": 200
+        },
+        "2/0.5/rescue": {
+          "low": 0.0,
+          "high": 0.0,
+          "undefined": 0,
+          "replicates": 200
+        },
+        "2/0.5/regression": {
+          "low": 0.0,
+          "high": 0.0,
+          "undefined": 0,
+          "replicates": 200
+        },
+        "2/0.5/actual_ratio": {
+          "low": 1.0434782608695652,
+          "high": 1.4765625,
+          "undefined": 0,
+          "replicates": 200
+        },
+        "2/0.75/precision": {
+          "low": 0.0,
+          "high": 0.0,
+          "undefined": 0,
+          "replicates": 200
+        },
+        "2/0.75/recall": {
+          "low": null,
+          "high": null,
+          "undefined": 200,
+          "replicates": 200
+        },
+        "2/0.75/precision_lift": {
+          "low": 0.0,
+          "high": 0.0,
+          "undefined": 0,
+          "replicates": 200
+        },
+        "2/0.75/net": {
+          "low": 0.0,
+          "high": 0.0,
+          "undefined": 0,
+          "replicates": 200
+        },
+        "2/0.75/selected": {
+          "low": 1.0,
+          "high": 8.0,
+          "undefined": 0,
+          "replicates": 200
+        },
+        "2/0.75/rescue": {
+          "low": 0.0,
+          "high": 0.0,
+          "undefined": 0,
+          "replicates": 200
+        },
+        "2/0.75/regression": {
+          "low": 0.0,
+          "high": 0.0,
+          "undefined": 0,
+          "replicates": 200
+        },
+        "2/0.75/actual_ratio": {
+          "low": 1.5434782608695652,
+          "high": 1.8203125,
+          "undefined": 0,
+          "replicates": 200
+        },
+        "2/1.0/precision": {
+          "low": 0.0,
+          "high": 0.0,
+          "undefined": 0,
+          "replicates": 200
+        },
+        "2/1.0/recall": {
+          "low": null,
+          "high": null,
+          "undefined": 200,
+          "replicates": 200
+        },
+        "2/1.0/precision_lift": {
+          "low": 0.0,
+          "high": 0.0,
+          "undefined": 0,
+          "replicates": 200
+        },
+        "2/1.0/net": {
+          "low": 0.0,
+          "high": 0.0,
+          "undefined": 0,
+          "replicates": 200
+        },
+        "2/1.0/selected": {
+          "low": 1.0,
+          "high": 11.0,
+          "undefined": 0,
+          "replicates": 200
+        },
+        "2/1.0/rescue": {
+          "low": 0.0,
+          "high": 0.0,
+          "undefined": 0,
+          "replicates": 200
+        },
+        "2/1.0/regression": {
+          "low": 0.0,
+          "high": 0.0,
+          "undefined": 0,
+          "replicates": 200
+        },
+        "2/1.0/actual_ratio": {
+          "low": 1.5434782608695652,
+          "high": 1.9857142857142858,
+          "undefined": 0,
+          "replicates": 200
+        },
+        "4/ap": {
+          "low": null,
+          "high": null,
+          "undefined": 200,
+          "replicates": 200
+        },
+        "4/ap_lift": {
+          "low": null,
+          "high": null,
+          "undefined": 200,
+          "replicates": 200
+        },
+        "4/auroc": {
+          "low": null,
+          "high": null,
+          "undefined": 200,
+          "replicates": 200
+        },
+        "4/rescue_regression_auroc": {
+          "low": null,
+          "high": null,
+          "undefined": 200,
+          "replicates": 200
+        },
+        "4/prevalence": {
+          "low": 0.0,
+          "high": 0.0,
+          "undefined": 0,
+          "replicates": 200
+        },
+        "4/0.25/precision": {
+          "low": null,
+          "high": null,
+          "undefined": 200,
+          "replicates": 200
+        },
+        "4/0.25/recall": {
+          "low": null,
+          "high": null,
+          "undefined": 200,
+          "replicates": 200
+        },
+        "4/0.25/precision_lift": {
+          "low": null,
+          "high": null,
+          "undefined": 200,
+          "replicates": 200
+        },
+        "4/0.25/net": {
+          "low": 0.0,
+          "high": 0.0,
+          "undefined": 0,
+          "replicates": 200
+        },
+        "4/0.25/selected": {
+          "low": 0.0,
+          "high": 0.0,
+          "undefined": 0,
+          "replicates": 200
+        },
+        "4/0.25/rescue": {
+          "low": 0.0,
+          "high": 0.0,
+          "undefined": 0,
+          "replicates": 200
+        },
+        "4/0.25/regression": {
+          "low": 0.0,
+          "high": 0.0,
+          "undefined": 0,
+          "replicates": 200
+        },
+        "4/0.25/actual_ratio": {
+          "low": 1.0434782608695652,
+          "high": 1.0571428571428572,
+          "undefined": 0,
+          "replicates": 200
+        },
+        "4/0.5/precision": {
+          "low": 0.0,
+          "high": 0.0,
+          "undefined": 54,
+          "replicates": 200
+        },
+        "4/0.5/recall": {
+          "low": null,
+          "high": null,
+          "undefined": 200,
+          "replicates": 200
+        },
+        "4/0.5/precision_lift": {
+          "low": 0.0,
+          "high": 0.0,
+          "undefined": 54,
+          "replicates": 200
+        },
+        "4/0.5/net": {
+          "low": 0.0,
+          "high": 0.0,
+          "undefined": 0,
+          "replicates": 200
+        },
+        "4/0.5/selected": {
+          "low": 0.0,
+          "high": 1.0,
+          "undefined": 0,
+          "replicates": 200
+        },
+        "4/0.5/rescue": {
+          "low": 0.0,
+          "high": 0.0,
+          "undefined": 0,
+          "replicates": 200
+        },
+        "4/0.5/regression": {
+          "low": 0.0,
+          "high": 0.0,
+          "undefined": 0,
+          "replicates": 200
+        },
+        "4/0.5/actual_ratio": {
+          "low": 1.0434782608695652,
+          "high": 1.3828125,
+          "undefined": 0,
+          "replicates": 200
+        },
+        "4/0.75/precision": {
+          "low": 0.0,
+          "high": 0.0,
+          "undefined": 54,
+          "replicates": 200
+        },
+        "4/0.75/recall": {
+          "low": null,
+          "high": null,
+          "undefined": 200,
+          "replicates": 200
+        },
+        "4/0.75/precision_lift": {
+          "low": 0.0,
+          "high": 0.0,
+          "undefined": 54,
+          "replicates": 200
+        },
+        "4/0.75/net": {
+          "low": 0.0,
+          "high": 0.0,
+          "undefined": 0,
+          "replicates": 200
+        },
+        "4/0.75/selected": {
+          "low": 0.0,
+          "high": 2.0,
+          "undefined": 0,
+          "replicates": 200
+        },
+        "4/0.75/rescue": {
+          "low": 0.0,
+          "high": 0.0,
+          "undefined": 0,
+          "replicates": 200
+        },
+        "4/0.75/regression": {
+          "low": 0.0,
+          "high": 0.0,
+          "undefined": 0,
+          "replicates": 200
+        },
+        "4/0.75/actual_ratio": {
+          "low": 1.0434782608695652,
+          "high": 1.457142857142857,
+          "undefined": 0,
+          "replicates": 200
+        },
+        "4/1.0/precision": {
+          "low": 0.0,
+          "high": 0.0,
+          "undefined": 54,
+          "replicates": 200
+        },
+        "4/1.0/recall": {
+          "low": null,
+          "high": null,
+          "undefined": 200,
+          "replicates": 200
+        },
+        "4/1.0/precision_lift": {
+          "low": 0.0,
+          "high": 0.0,
+          "undefined": 54,
+          "replicates": 200
+        },
+        "4/1.0/net": {
+          "low": 0.0,
+          "high": 0.0,
+          "undefined": 0,
+          "replicates": 200
+        },
+        "4/1.0/selected": {
+          "low": 0.0,
+          "high": 3.0,
+          "undefined": 0,
+          "replicates": 200
+        },
+        "4/1.0/rescue": {
+          "low": 0.0,
+          "high": 0.0,
+          "undefined": 0,
+          "replicates": 200
+        },
+        "4/1.0/regression": {
+          "low": 0.0,
+          "high": 0.0,
+          "undefined": 0,
+          "replicates": 200
+        },
+        "4/1.0/actual_ratio": {
+          "low": 1.0434782608695652,
+          "high": 1.7578125,
+          "undefined": 0,
+          "replicates": 200
+        },
+        "10/ap": {
+          "low": null,
+          "high": null,
+          "undefined": 200,
+          "replicates": 200
+        },
+        "10/ap_lift": {
+          "low": null,
+          "high": null,
+          "undefined": 200,
+          "replicates": 200
+        },
+        "10/auroc": {
+          "low": null,
+          "high": null,
+          "undefined": 200,
+          "replicates": 200
+        },
+        "10/rescue_regression_auroc": {
+          "low": null,
+          "high": null,
+          "undefined": 200,
+          "replicates": 200
+        },
+        "10/prevalence": {
+          "low": 0.0,
+          "high": 0.0,
+          "undefined": 0,
+          "replicates": 200
+        },
+        "10/0.25/precision": {
+          "low": null,
+          "high": null,
+          "undefined": 200,
+          "replicates": 200
+        },
+        "10/0.25/recall": {
+          "low": null,
+          "high": null,
+          "undefined": 200,
+          "replicates": 200
+        },
+        "10/0.25/precision_lift": {
+          "low": null,
+          "high": null,
+          "undefined": 200,
+          "replicates": 200
+        },
+        "10/0.25/net": {
+          "low": 0.0,
+          "high": 0.0,
+          "undefined": 0,
+          "replicates": 200
+        },
+        "10/0.25/selected": {
+          "low": 0.0,
+          "high": 0.0,
+          "undefined": 0,
+          "replicates": 200
+        },
+        "10/0.25/rescue": {
+          "low": 0.0,
+          "high": 0.0,
+          "undefined": 0,
+          "replicates": 200
+        },
+        "10/0.25/regression": {
+          "low": 0.0,
+          "high": 0.0,
+          "undefined": 0,
+          "replicates": 200
+        },
+        "10/0.25/actual_ratio": {
+          "low": 1.0434782608695652,
+          "high": 1.0571428571428572,
+          "undefined": 0,
+          "replicates": 200
+        },
+        "10/0.5/precision": {
+          "low": null,
+          "high": null,
+          "undefined": 200,
+          "replicates": 200
+        },
+        "10/0.5/recall": {
+          "low": null,
+          "high": null,
+          "undefined": 200,
+          "replicates": 200
+        },
+        "10/0.5/precision_lift": {
+          "low": null,
+          "high": null,
+          "undefined": 200,
+          "replicates": 200
+        },
+        "10/0.5/net": {
+          "low": 0.0,
+          "high": 0.0,
+          "undefined": 0,
+          "replicates": 200
+        },
+        "10/0.5/selected": {
+          "low": 0.0,
+          "high": 0.0,
+          "undefined": 0,
+          "replicates": 200
+        },
+        "10/0.5/rescue": {
+          "low": 0.0,
+          "high": 0.0,
+          "undefined": 0,
+          "replicates": 200
+        },
+        "10/0.5/regression": {
+          "low": 0.0,
+          "high": 0.0,
+          "undefined": 0,
+          "replicates": 200
+        },
+        "10/0.5/actual_ratio": {
+          "low": 1.0434782608695652,
+          "high": 1.0571428571428572,
+          "undefined": 0,
+          "replicates": 200
+        },
+        "10/0.75/precision": {
+          "low": null,
+          "high": null,
+          "undefined": 200,
+          "replicates": 200
+        },
+        "10/0.75/recall": {
+          "low": null,
+          "high": null,
+          "undefined": 200,
+          "replicates": 200
+        },
+        "10/0.75/precision_lift": {
+          "low": null,
+          "high": null,
+          "undefined": 200,
+          "replicates": 200
+        },
+        "10/0.75/net": {
+          "low": 0.0,
+          "high": 0.0,
+          "undefined": 0,
+          "replicates": 200
+        },
+        "10/0.75/selected": {
+          "low": 0.0,
+          "high": 0.0,
+          "undefined": 0,
+          "replicates": 200
+        },
+        "10/0.75/rescue": {
+          "low": 0.0,
+          "high": 0.0,
+          "undefined": 0,
+          "replicates": 200
+        },
+        "10/0.75/regression": {
+          "low": 0.0,
+          "high": 0.0,
+          "undefined": 0,
+          "replicates": 200
+        },
+        "10/0.75/actual_ratio": {
+          "low": 1.0434782608695652,
+          "high": 1.0571428571428572,
+          "undefined": 0,
+          "replicates": 200
+        },
+        "10/1.0/precision": {
+          "low": 0.0,
+          "high": 0.0,
+          "undefined": 141,
+          "replicates": 200
+        },
+        "10/1.0/recall": {
+          "low": null,
+          "high": null,
+          "undefined": 200,
+          "replicates": 200
+        },
+        "10/1.0/precision_lift": {
+          "low": 0.0,
+          "high": 0.0,
+          "undefined": 141,
+          "replicates": 200
+        },
+        "10/1.0/net": {
+          "low": 0.0,
+          "high": 0.0,
+          "undefined": 0,
+          "replicates": 200
+        },
+        "10/1.0/selected": {
+          "low": 0.0,
+          "high": 1.0,
+          "undefined": 0,
+          "replicates": 200
+        },
+        "10/1.0/rescue": {
+          "low": 0.0,
+          "high": 0.0,
+          "undefined": 0,
+          "replicates": 200
+        },
+        "10/1.0/regression": {
+          "low": 0.0,
+          "high": 0.0,
+          "undefined": 0,
+          "replicates": 200
+        },
+        "10/1.0/actual_ratio": {
+          "low": 1.0434782608695652,
+          "high": 1.6571428571428573,
+          "undefined": 0,
+          "replicates": 200
+        }
+      },
+      "condition_sensitivity": {
+        "2/ap": {
+          "low": null,
+          "high": null,
+          "undefined": 200,
+          "replicates": 200
+        },
+        "2/ap_lift": {
+          "low": null,
+          "high": null,
+          "undefined": 200,
+          "replicates": 200
+        },
+        "2/auroc": {
+          "low": null,
+          "high": null,
+          "undefined": 200,
+          "replicates": 200
+        },
+        "2/rescue_regression_auroc": {
+          "low": null,
+          "high": null,
+          "undefined": 200,
+          "replicates": 200
+        },
+        "2/prevalence": {
+          "low": 0.0,
+          "high": 0.0,
+          "undefined": 0,
+          "replicates": 200
+        },
+        "2/0.25/precision": {
+          "low": 0.0,
+          "high": 0.0,
+          "undefined": 0,
+          "replicates": 200
+        },
+        "2/0.25/recall": {
+          "low": null,
+          "high": null,
+          "undefined": 200,
+          "replicates": 200
+        },
+        "2/0.25/precision_lift": {
+          "low": 0.0,
+          "high": 0.0,
+          "undefined": 0,
+          "replicates": 200
+        },
+        "2/0.25/net": {
+          "low": 0.0,
+          "high": 0.0,
+          "undefined": 0,
+          "replicates": 200
+        },
+        "2/0.25/selected": {
+          "low": 1.0,
+          "high": 1.0,
+          "undefined": 0,
+          "replicates": 200
+        },
+        "2/0.25/rescue": {
+          "low": 0.0,
+          "high": 0.0,
+          "undefined": 0,
+          "replicates": 200
+        },
+        "2/0.25/regression": {
+          "low": 0.0,
+          "high": 0.0,
+          "undefined": 0,
+          "replicates": 200
+        },
+        "2/0.25/actual_ratio": {
+          "low": 1.1468531468531469,
+          "high": 1.2296296296296296,
+          "undefined": 0,
+          "replicates": 200
+        },
+        "2/0.5/precision": {
+          "low": 0.0,
+          "high": 0.0,
+          "undefined": 0,
+          "replicates": 200
+        },
+        "2/0.5/recall": {
+          "low": null,
+          "high": null,
+          "undefined": 200,
+          "replicates": 200
+        },
+        "2/0.5/precision_lift": {
+          "low": 0.0,
+          "high": 0.0,
+          "undefined": 0,
+          "replicates": 200
+        },
+        "2/0.5/net": {
+          "low": 0.0,
+          "high": 0.0,
+          "undefined": 0,
+          "replicates": 200
+        },
+        "2/0.5/selected": {
+          "low": 3.0,
+          "high": 3.0,
+          "undefined": 0,
+          "replicates": 200
+        },
+        "2/0.5/rescue": {
+          "low": 0.0,
+          "high": 0.0,
+          "undefined": 0,
+          "replicates": 200
+        },
+        "2/0.5/regression": {
+          "low": 0.0,
+          "high": 0.0,
+          "undefined": 0,
+          "replicates": 200
+        },
+        "2/0.5/actual_ratio": {
+          "low": 1.3868613138686132,
+          "high": 1.5631746031746032,
+          "undefined": 0,
+          "replicates": 200
+        },
+        "2/0.75/precision": {
+          "low": 0.0,
+          "high": 0.0,
+          "undefined": 0,
+          "replicates": 200
+        },
+        "2/0.75/recall": {
+          "low": null,
+          "high": null,
+          "undefined": 200,
+          "replicates": 200
+        },
+        "2/0.75/precision_lift": {
+          "low": 0.0,
+          "high": 0.0,
+          "undefined": 0,
+          "replicates": 200
+        },
+        "2/0.75/net": {
+          "low": 0.0,
+          "high": 0.0,
+          "undefined": 0,
+          "replicates": 200
+        },
+        "2/0.75/selected": {
+          "low": 5.0,
+          "high": 5.0,
+          "undefined": 0,
+          "replicates": 200
+        },
+        "2/0.75/rescue": {
+          "low": 0.0,
+          "high": 0.0,
+          "undefined": 0,
+          "replicates": 200
+        },
+        "2/0.75/regression": {
+          "low": 0.0,
+          "high": 0.0,
+          "undefined": 0,
+          "replicates": 200
+        },
+        "2/0.75/actual_ratio": {
+          "low": 1.711111111111111,
+          "high": 1.8731578220011056,
+          "undefined": 0,
+          "replicates": 200
+        },
+        "2/1.0/precision": {
+          "low": 0.0,
+          "high": 0.0,
+          "undefined": 0,
+          "replicates": 200
+        },
+        "2/1.0/recall": {
+          "low": null,
+          "high": null,
+          "undefined": 200,
+          "replicates": 200
+        },
+        "2/1.0/precision_lift": {
+          "low": 0.0,
+          "high": 0.0,
+          "undefined": 0,
+          "replicates": 200
+        },
+        "2/1.0/net": {
+          "low": 0.0,
+          "high": 0.0,
+          "undefined": 0,
+          "replicates": 200
+        },
+        "2/1.0/selected": {
+          "low": 6.0,
+          "high": 6.0,
+          "undefined": 0,
+          "replicates": 200
+        },
+        "2/1.0/rescue": {
+          "low": 0.0,
+          "high": 0.0,
+          "undefined": 0,
+          "replicates": 200
+        },
+        "2/1.0/regression": {
+          "low": 0.0,
+          "high": 0.0,
+          "undefined": 0,
+          "replicates": 200
+        },
+        "2/1.0/actual_ratio": {
+          "low": 1.8685865519408325,
+          "high": 1.9857168186423506,
+          "undefined": 0,
+          "replicates": 200
+        },
+        "4/ap": {
+          "low": null,
+          "high": null,
+          "undefined": 200,
+          "replicates": 200
+        },
+        "4/ap_lift": {
+          "low": null,
+          "high": null,
+          "undefined": 200,
+          "replicates": 200
+        },
+        "4/auroc": {
+          "low": null,
+          "high": null,
+          "undefined": 200,
+          "replicates": 200
+        },
+        "4/rescue_regression_auroc": {
+          "low": null,
+          "high": null,
+          "undefined": 200,
+          "replicates": 200
+        },
+        "4/prevalence": {
+          "low": 0.0,
+          "high": 0.0,
+          "undefined": 0,
+          "replicates": 200
+        },
+        "4/0.25/precision": {
+          "low": null,
+          "high": null,
+          "undefined": 200,
+          "replicates": 200
+        },
+        "4/0.25/recall": {
+          "low": null,
+          "high": null,
+          "undefined": 200,
+          "replicates": 200
+        },
+        "4/0.25/precision_lift": {
+          "low": null,
+          "high": null,
+          "undefined": 200,
+          "replicates": 200
+        },
+        "4/0.25/net": {
+          "low": 0.0,
+          "high": 0.0,
+          "undefined": 0,
+          "replicates": 200
+        },
+        "4/0.25/selected": {
+          "low": 0.0,
+          "high": 0.0,
+          "undefined": 0,
+          "replicates": 200
+        },
+        "4/0.25/rescue": {
+          "low": 0.0,
+          "high": 0.0,
+          "undefined": 0,
+          "replicates": 200
+        },
+        "4/0.25/regression": {
+          "low": 0.0,
+          "high": 0.0,
+          "undefined": 0,
+          "replicates": 200
+        },
+        "4/0.25/actual_ratio": {
+          "low": 1.0466666666666666,
+          "high": 1.0636509591326107,
+          "undefined": 0,
+          "replicates": 200
+        },
+        "4/0.5/precision": {
+          "low": 0.0,
+          "high": 0.0,
+          "undefined": 0,
+          "replicates": 200
+        },
+        "4/0.5/recall": {
+          "low": null,
+          "high": null,
+          "undefined": 200,
+          "replicates": 200
+        },
+        "4/0.5/precision_lift": {
+          "low": 0.0,
+          "high": 0.0,
+          "undefined": 0,
+          "replicates": 200
+        },
+        "4/0.5/net": {
+          "low": 0.0,
+          "high": 0.0,
+          "undefined": 0,
+          "replicates": 200
+        },
+        "4/0.5/selected": {
+          "low": 1.0,
+          "high": 1.0,
+          "undefined": 0,
+          "replicates": 200
+        },
+        "4/0.5/rescue": {
+          "low": 0.0,
+          "high": 0.0,
+          "undefined": 0,
+          "replicates": 200
+        },
+        "4/0.5/regression": {
+          "low": 0.0,
+          "high": 0.0,
+          "undefined": 0,
+          "replicates": 200
+        },
+        "4/0.5/actual_ratio": {
+          "low": 1.3426573426573427,
+          "high": 1.5746268656716418,
+          "undefined": 0,
+          "replicates": 200
+        },
+        "4/0.75/precision": {
+          "low": 0.0,
+          "high": 0.0,
+          "undefined": 0,
+          "replicates": 200
+        },
+        "4/0.75/recall": {
+          "low": null,
+          "high": null,
+          "undefined": 200,
+          "replicates": 200
+        },
+        "4/0.75/precision_lift": {
+          "low": 0.0,
+          "high": 0.0,
+          "undefined": 0,
+          "replicates": 200
+        },
+        "4/0.75/net": {
+          "low": 0.0,
+          "high": 0.0,
+          "undefined": 0,
+          "replicates": 200
+        },
+        "4/0.75/selected": {
+          "low": 1.0,
+          "high": 1.0,
+          "undefined": 0,
+          "replicates": 200
+        },
+        "4/0.75/rescue": {
+          "low": 0.0,
+          "high": 0.0,
+          "undefined": 0,
+          "replicates": 200
+        },
+        "4/0.75/regression": {
+          "low": 0.0,
+          "high": 0.0,
+          "undefined": 0,
+          "replicates": 200
+        },
+        "4/0.75/actual_ratio": {
+          "low": 1.3426573426573427,
+          "high": 1.5746268656716418,
+          "undefined": 0,
+          "replicates": 200
+        },
+        "4/1.0/precision": {
+          "low": 0.0,
+          "high": 0.0,
+          "undefined": 0,
+          "replicates": 200
+        },
+        "4/1.0/recall": {
+          "low": null,
+          "high": null,
+          "undefined": 200,
+          "replicates": 200
+        },
+        "4/1.0/precision_lift": {
+          "low": 0.0,
+          "high": 0.0,
+          "undefined": 0,
+          "replicates": 200
+        },
+        "4/1.0/net": {
+          "low": 0.0,
+          "high": 0.0,
+          "undefined": 0,
+          "replicates": 200
+        },
+        "4/1.0/selected": {
+          "low": 2.0,
+          "high": 2.0,
+          "undefined": 0,
+          "replicates": 200
+        },
+        "4/1.0/rescue": {
+          "low": 0.0,
+          "high": 0.0,
+          "undefined": 0,
+          "replicates": 200
+        },
+        "4/1.0/regression": {
+          "low": 0.0,
+          "high": 0.0,
+          "undefined": 0,
+          "replicates": 200
+        },
+        "4/1.0/actual_ratio": {
+          "low": 1.6791044776119404,
+          "high": 2.3676470588235294,
+          "undefined": 0,
+          "replicates": 200
+        },
+        "10/ap": {
+          "low": null,
+          "high": null,
+          "undefined": 200,
+          "replicates": 200
+        },
+        "10/ap_lift": {
+          "low": null,
+          "high": null,
+          "undefined": 200,
+          "replicates": 200
+        },
+        "10/auroc": {
+          "low": null,
+          "high": null,
+          "undefined": 200,
+          "replicates": 200
+        },
+        "10/rescue_regression_auroc": {
+          "low": null,
+          "high": null,
+          "undefined": 200,
+          "replicates": 200
+        },
+        "10/prevalence": {
+          "low": 0.0,
+          "high": 0.0,
+          "undefined": 0,
+          "replicates": 200
+        },
+        "10/0.25/precision": {
+          "low": null,
+          "high": null,
+          "undefined": 200,
+          "replicates": 200
+        },
+        "10/0.25/recall": {
+          "low": null,
+          "high": null,
+          "undefined": 200,
+          "replicates": 200
+        },
+        "10/0.25/precision_lift": {
+          "low": null,
+          "high": null,
+          "undefined": 200,
+          "replicates": 200
+        },
+        "10/0.25/net": {
+          "low": 0.0,
+          "high": 0.0,
+          "undefined": 0,
+          "replicates": 200
+        },
+        "10/0.25/selected": {
+          "low": 0.0,
+          "high": 0.0,
+          "undefined": 0,
+          "replicates": 200
+        },
+        "10/0.25/rescue": {
+          "low": 0.0,
+          "high": 0.0,
+          "undefined": 0,
+          "replicates": 200
+        },
+        "10/0.25/regression": {
+          "low": 0.0,
+          "high": 0.0,
+          "undefined": 0,
+          "replicates": 200
+        },
+        "10/0.25/actual_ratio": {
+          "low": 1.0466666666666666,
+          "high": 1.0636509591326107,
+          "undefined": 0,
+          "replicates": 200
+        },
+        "10/0.5/precision": {
+          "low": null,
+          "high": null,
+          "undefined": 200,
+          "replicates": 200
+        },
+        "10/0.5/recall": {
+          "low": null,
+          "high": null,
+          "undefined": 200,
+          "replicates": 200
+        },
+        "10/0.5/precision_lift": {
+          "low": null,
+          "high": null,
+          "undefined": 200,
+          "replicates": 200
+        },
+        "10/0.5/net": {
+          "low": 0.0,
+          "high": 0.0,
+          "undefined": 0,
+          "replicates": 200
+        },
+        "10/0.5/selected": {
+          "low": 0.0,
+          "high": 0.0,
+          "undefined": 0,
+          "replicates": 200
+        },
+        "10/0.5/rescue": {
+          "low": 0.0,
+          "high": 0.0,
+          "undefined": 0,
+          "replicates": 200
+        },
+        "10/0.5/regression": {
+          "low": 0.0,
+          "high": 0.0,
+          "undefined": 0,
+          "replicates": 200
+        },
+        "10/0.5/actual_ratio": {
+          "low": 1.0466666666666666,
+          "high": 1.0636509591326107,
+          "undefined": 0,
+          "replicates": 200
+        },
+        "10/0.75/precision": {
+          "low": null,
+          "high": null,
+          "undefined": 200,
+          "replicates": 200
+        },
+        "10/0.75/recall": {
+          "low": null,
+          "high": null,
+          "undefined": 200,
+          "replicates": 200
+        },
+        "10/0.75/precision_lift": {
+          "low": null,
+          "high": null,
+          "undefined": 200,
+          "replicates": 200
+        },
+        "10/0.75/net": {
+          "low": 0.0,
+          "high": 0.0,
+          "undefined": 0,
+          "replicates": 200
+        },
+        "10/0.75/selected": {
+          "low": 0.0,
+          "high": 0.0,
+          "undefined": 0,
+          "replicates": 200
+        },
+        "10/0.75/rescue": {
+          "low": 0.0,
+          "high": 0.0,
+          "undefined": 0,
+          "replicates": 200
+        },
+        "10/0.75/regression": {
+          "low": 0.0,
+          "high": 0.0,
+          "undefined": 0,
+          "replicates": 200
+        },
+        "10/0.75/actual_ratio": {
+          "low": 1.0466666666666666,
+          "high": 1.0636509591326107,
+          "undefined": 0,
+          "replicates": 200
+        },
+        "10/1.0/precision": {
+          "low": null,
+          "high": null,
+          "undefined": 200,
+          "replicates": 200
+        },
+        "10/1.0/recall": {
+          "low": null,
+          "high": null,
+          "undefined": 200,
+          "replicates": 200
+        },
+        "10/1.0/precision_lift": {
+          "low": null,
+          "high": null,
+          "undefined": 200,
+          "replicates": 200
+        },
+        "10/1.0/net": {
+          "low": 0.0,
+          "high": 0.0,
+          "undefined": 0,
+          "replicates": 200
+        },
+        "10/1.0/selected": {
+          "low": 0.0,
+          "high": 0.0,
+          "undefined": 0,
+          "replicates": 200
+        },
+        "10/1.0/rescue": {
+          "low": 0.0,
+          "high": 0.0,
+          "undefined": 0,
+          "replicates": 200
+        },
+        "10/1.0/regression": {
+          "low": 0.0,
+          "high": 0.0,
+          "undefined": 0,
+          "replicates": 200
+        },
+        "10/1.0/actual_ratio": {
+          "low": 1.0466666666666666,
+          "high": 1.0636509591326107,
+          "undefined": 0,
+          "replicates": 200
+        }
+      },
+      "equal_probe_overhead_sensitivity": {
+        "2": {
+          "ap": null,
+          "auroc": null,
+          "rescue_regression_auroc": null,
+          "prevalence": 0.0,
+          "ap_lift": null,
+          "pr": [
+            {
+              "threshold": 0.043871961534023285,
+              "precision": 0.0,
+              "recall": null,
+              "selected": 1
+            },
+            {
+              "threshold": 0.04223179072141647,
+              "precision": 0.0,
+              "recall": null,
+              "selected": 2
+            },
+            {
+              "threshold": 0.03510024771094322,
+              "precision": 0.0,
+              "recall": null,
+              "selected": 3
+            },
+            {
+              "threshold": 0.033361293375492096,
+              "precision": 0.0,
+              "recall": null,
+              "selected": 4
+            },
+            {
+              "threshold": 0.03334435448050499,
+              "precision": 0.0,
+              "recall": null,
+              "selected": 5
+            },
+            {
+              "threshold": 0.032475098967552185,
+              "precision": 0.0,
+              "recall": null,
+              "selected": 6
+            },
+            {
+              "threshold": 0.030936673283576965,
+              "precision": 0.0,
+              "recall": null,
+              "selected": 7
+            }
+          ],
+          "labels": {
+            "rescue": 0,
+            "regression": 0,
+            "unchanged_success": 7,
+            "unchanged_failure": 0
+          },
+          "budgets": {
+            "0.25": {
+              "selected": 1,
+              "selected_fraction": 0.14285714285714285,
+              "rescue": 0,
+              "regression": 0,
+              "unchanged_success": 1,
+              "unchanged_failure": 0,
+              "precision": 0.0,
+              "recall": null,
+              "precision_lift": 0.0,
+              "net": 0.0,
+              "selected_rescue_clusters": 0,
+              "planned_extra_evaluations": 58,
+              "baseline_cap": 308,
+              "extra_budget": 77.0,
+              "overhead_feasible": true,
+              "actual_counterfactual_evaluations": 156,
+              "actual_baseline_evaluations": 128,
+              "actual_ratio": 1.21875
+            },
+            "0.5": {
+              "selected": 3,
+              "selected_fraction": 0.42857142857142855,
+              "rescue": 0,
+              "regression": 0,
+              "unchanged_success": 3,
+              "unchanged_failure": 0,
+              "precision": 0.0,
+              "recall": null,
+              "precision_lift": 0.0,
+              "net": 0.0,
+              "selected_rescue_clusters": 0,
+              "planned_extra_evaluations": 146,
+              "baseline_cap": 308,
+              "extra_budget": 154.0,
+              "overhead_feasible": true,
+              "actual_counterfactual_evaluations": 196,
+              "actual_baseline_evaluations": 128,
+              "actual_ratio": 1.53125
+            },
+            "0.75": {
+              "selected": 4,
+              "selected_fraction": 0.5714285714285714,
+              "rescue": 0,
+              "regression": 0,
+              "unchanged_success": 4,
+              "unchanged_failure": 0,
+              "precision": 0.0,
+              "recall": null,
+              "precision_lift": 0.0,
+              "net": 0.0,
+              "selected_rescue_clusters": 0,
+              "planned_extra_evaluations": 190,
+              "baseline_cap": 308,
+              "extra_budget": 231.0,
+              "overhead_feasible": true,
+              "actual_counterfactual_evaluations": 217,
+              "actual_baseline_evaluations": 128,
+              "actual_ratio": 1.6953125
+            },
+            "1.0": {
+              "selected": 6,
+              "selected_fraction": 0.8571428571428571,
+              "rescue": 0,
+              "regression": 0,
+              "unchanged_success": 6,
+              "unchanged_failure": 0,
+              "precision": 0.0,
+              "recall": null,
+              "precision_lift": 0.0,
+              "net": 0.0,
+              "selected_rescue_clusters": 0,
+              "planned_extra_evaluations": 278,
+              "baseline_cap": 308,
+              "extra_budget": 308.0,
+              "overhead_feasible": true,
+              "actual_counterfactual_evaluations": 255,
+              "actual_baseline_evaluations": 128,
+              "actual_ratio": 1.9921875
+            }
+          }
+        },
+        "4": {
+          "ap": null,
+          "auroc": null,
+          "rescue_regression_auroc": null,
+          "prevalence": 0.0,
+          "ap_lift": null,
+          "pr": [
+            {
+              "threshold": 0.043871961534023285,
+              "precision": 0.0,
+              "recall": null,
+              "selected": 1
+            },
+            {
+              "threshold": 0.04223179072141647,
+              "precision": 0.0,
+              "recall": null,
+              "selected": 2
+            },
+            {
+              "threshold": 0.03510024771094322,
+              "precision": 0.0,
+              "recall": null,
+              "selected": 3
+            },
+            {
+              "threshold": 0.033361293375492096,
+              "precision": 0.0,
+              "recall": null,
+              "selected": 4
+            },
+            {
+              "threshold": 0.03334435448050499,
+              "precision": 0.0,
+              "recall": null,
+              "selected": 5
+            },
+            {
+              "threshold": 0.032475098967552185,
+              "precision": 0.0,
+              "recall": null,
+              "selected": 6
+            },
+            {
+              "threshold": 0.030936673283576965,
+              "precision": 0.0,
+              "recall": null,
+              "selected": 7
+            }
+          ],
+          "labels": {
+            "rescue": 0,
+            "regression": 0,
+            "unchanged_success": 7,
+            "unchanged_failure": 0
+          },
+          "budgets": {
+            "0.25": {
+              "selected": 0,
+              "selected_fraction": 0.0,
+              "rescue": 0,
+              "regression": 0,
+              "unchanged_success": 0,
+              "unchanged_failure": 0,
+              "precision": null,
+              "recall": null,
+              "precision_lift": null,
+              "net": 0.0,
+              "selected_rescue_clusters": 0,
+              "planned_extra_evaluations": 14,
+              "baseline_cap": 308,
+              "extra_budget": 77.0,
+              "overhead_feasible": true,
+              "actual_counterfactual_evaluations": 142,
+              "actual_baseline_evaluations": 128,
+              "actual_ratio": 1.109375
+            },
+            "0.5": {
+              "selected": 1,
+              "selected_fraction": 0.14285714285714285,
+              "rescue": 0,
+              "regression": 0,
+              "unchanged_success": 1,
+              "unchanged_failure": 0,
+              "precision": 0.0,
+              "recall": null,
+              "precision_lift": 0.0,
+              "net": 0.0,
+              "selected_rescue_clusters": 0,
+              "planned_extra_evaluations": 146,
+              "baseline_cap": 308,
+              "extra_budget": 154.0,
+              "overhead_feasible": true,
+              "actual_counterfactual_evaluations": 184,
+              "actual_baseline_evaluations": 128,
+              "actual_ratio": 1.4375
+            },
+            "0.75": {
+              "selected": 1,
+              "selected_fraction": 0.14285714285714285,
+              "rescue": 0,
+              "regression": 0,
+              "unchanged_success": 1,
+              "unchanged_failure": 0,
+              "precision": 0.0,
+              "recall": null,
+              "precision_lift": 0.0,
+              "net": 0.0,
+              "selected_rescue_clusters": 0,
+              "planned_extra_evaluations": 146,
+              "baseline_cap": 308,
+              "extra_budget": 231.0,
+              "overhead_feasible": true,
+              "actual_counterfactual_evaluations": 184,
+              "actual_baseline_evaluations": 128,
+              "actual_ratio": 1.4375
+            },
+            "1.0": {
+              "selected": 2,
+              "selected_fraction": 0.2857142857142857,
+              "rescue": 0,
+              "regression": 0,
+              "unchanged_success": 2,
+              "unchanged_failure": 0,
+              "precision": 0.0,
+              "recall": null,
+              "precision_lift": 0.0,
+              "net": 0.0,
+              "selected_rescue_clusters": 0,
+              "planned_extra_evaluations": 278,
+              "baseline_cap": 308,
+              "extra_budget": 308.0,
+              "overhead_feasible": true,
+              "actual_counterfactual_evaluations": 232,
+              "actual_baseline_evaluations": 128,
+              "actual_ratio": 1.8125
+            }
+          }
+        },
+        "10": {
+          "ap": null,
+          "auroc": null,
+          "rescue_regression_auroc": null,
+          "prevalence": 0.0,
+          "ap_lift": null,
+          "pr": [
+            {
+              "threshold": 0.043871961534023285,
+              "precision": 0.0,
+              "recall": null,
+              "selected": 1
+            },
+            {
+              "threshold": 0.04223179072141647,
+              "precision": 0.0,
+              "recall": null,
+              "selected": 2
+            },
+            {
+              "threshold": 0.03510024771094322,
+              "precision": 0.0,
+              "recall": null,
+              "selected": 3
+            },
+            {
+              "threshold": 0.033361293375492096,
+              "precision": 0.0,
+              "recall": null,
+              "selected": 4
+            },
+            {
+              "threshold": 0.03334435448050499,
+              "precision": 0.0,
+              "recall": null,
+              "selected": 5
+            },
+            {
+              "threshold": 0.032475098967552185,
+              "precision": 0.0,
+              "recall": null,
+              "selected": 6
+            },
+            {
+              "threshold": 0.030936673283576965,
+              "precision": 0.0,
+              "recall": null,
+              "selected": 7
+            }
+          ],
+          "labels": {
+            "rescue": 0,
+            "regression": 0,
+            "unchanged_success": 7,
+            "unchanged_failure": 0
+          },
+          "budgets": {
+            "0.25": {
+              "selected": 0,
+              "selected_fraction": 0.0,
+              "rescue": 0,
+              "regression": 0,
+              "unchanged_success": 0,
+              "unchanged_failure": 0,
+              "precision": null,
+              "recall": null,
+              "precision_lift": null,
+              "net": 0.0,
+              "selected_rescue_clusters": 0,
+              "planned_extra_evaluations": 14,
+              "baseline_cap": 308,
+              "extra_budget": 77.0,
+              "overhead_feasible": true,
+              "actual_counterfactual_evaluations": 142,
+              "actual_baseline_evaluations": 128,
+              "actual_ratio": 1.109375
+            },
+            "0.5": {
+              "selected": 0,
+              "selected_fraction": 0.0,
+              "rescue": 0,
+              "regression": 0,
+              "unchanged_success": 0,
+              "unchanged_failure": 0,
+              "precision": null,
+              "recall": null,
+              "precision_lift": null,
+              "net": 0.0,
+              "selected_rescue_clusters": 0,
+              "planned_extra_evaluations": 14,
+              "baseline_cap": 308,
+              "extra_budget": 154.0,
+              "overhead_feasible": true,
+              "actual_counterfactual_evaluations": 142,
+              "actual_baseline_evaluations": 128,
+              "actual_ratio": 1.109375
+            },
+            "0.75": {
+              "selected": 0,
+              "selected_fraction": 0.0,
+              "rescue": 0,
+              "regression": 0,
+              "unchanged_success": 0,
+              "unchanged_failure": 0,
+              "precision": null,
+              "recall": null,
+              "precision_lift": null,
+              "net": 0.0,
+              "selected_rescue_clusters": 0,
+              "planned_extra_evaluations": 14,
+              "baseline_cap": 308,
+              "extra_budget": 231.0,
+              "overhead_feasible": true,
+              "actual_counterfactual_evaluations": 142,
+              "actual_baseline_evaluations": 128,
+              "actual_ratio": 1.109375
+            },
+            "1.0": {
+              "selected": 0,
+              "selected_fraction": 0.0,
+              "rescue": 0,
+              "regression": 0,
+              "unchanged_success": 0,
+              "unchanged_failure": 0,
+              "precision": null,
+              "recall": null,
+              "precision_lift": null,
+              "net": 0.0,
+              "selected_rescue_clusters": 0,
+              "planned_extra_evaluations": 14,
+              "baseline_cap": 308,
+              "extra_budget": 308.0,
+              "overhead_feasible": true,
+              "actual_counterfactual_evaluations": 142,
+              "actual_baseline_evaluations": 128,
+              "actual_ratio": 1.109375
+            }
+          }
+        }
+      }
+    },
+    "severity": {
+      "point": {
+        "2": {
+          "ap": null,
+          "auroc": null,
+          "rescue_regression_auroc": null,
+          "prevalence": 0.0,
+          "ap_lift": null,
+          "pr": [
+            {
+              "threshold": 3.0,
+              "precision": 0.0,
+              "recall": null,
+              "selected": 7
+            }
+          ],
+          "labels": {
+            "rescue": 0,
+            "regression": 0,
+            "unchanged_success": 7,
+            "unchanged_failure": 0
+          },
+          "budgets": {
+            "0.25": {
+              "selected": 1,
+              "selected_fraction": 0.14285714285714285,
+              "rescue": 0,
+              "regression": 0,
+              "unchanged_success": 1,
+              "unchanged_failure": 0,
+              "precision": 0.0,
+              "recall": null,
+              "precision_lift": 0.0,
+              "net": 0.0,
+              "selected_rescue_clusters": 0,
+              "planned_extra_evaluations": 44,
+              "baseline_cap": 308,
+              "extra_budget": 77.0,
+              "overhead_feasible": true,
+              "actual_counterfactual_evaluations": 152,
+              "actual_baseline_evaluations": 128,
+              "actual_ratio": 1.1875
+            },
+            "0.5": {
+              "selected": 3,
+              "selected_fraction": 0.42857142857142855,
+              "rescue": 0,
+              "regression": 0,
+              "unchanged_success": 3,
+              "unchanged_failure": 0,
+              "precision": 0.0,
+              "recall": null,
+              "precision_lift": 0.0,
+              "net": 0.0,
+              "selected_rescue_clusters": 0,
+              "planned_extra_evaluations": 132,
+              "baseline_cap": 308,
+              "extra_budget": 154.0,
+              "overhead_feasible": true,
+              "actual_counterfactual_evaluations": 188,
+              "actual_baseline_evaluations": 128,
+              "actual_ratio": 1.46875
+            },
+            "0.75": {
+              "selected": 5,
+              "selected_fraction": 0.7142857142857143,
+              "rescue": 0,
+              "regression": 0,
+              "unchanged_success": 5,
+              "unchanged_failure": 0,
+              "precision": 0.0,
+              "recall": null,
+              "precision_lift": 0.0,
+              "net": 0.0,
+              "selected_rescue_clusters": 0,
+              "planned_extra_evaluations": 220,
+              "baseline_cap": 308,
+              "extra_budget": 231.0,
+              "overhead_feasible": true,
+              "actual_counterfactual_evaluations": 219,
+              "actual_baseline_evaluations": 128,
+              "actual_ratio": 1.7109375
+            },
+            "1.0": {
+              "selected": 7,
+              "selected_fraction": 1.0,
+              "rescue": 0,
+              "regression": 0,
+              "unchanged_success": 7,
+              "unchanged_failure": 0,
+              "precision": 0.0,
+              "recall": null,
+              "precision_lift": 0.0,
+              "net": 0.0,
+              "selected_rescue_clusters": 0,
+              "planned_extra_evaluations": 308,
+              "baseline_cap": 308,
+              "extra_budget": 308.0,
+              "overhead_feasible": true,
+              "actual_counterfactual_evaluations": 256,
+              "actual_baseline_evaluations": 128,
+              "actual_ratio": 2.0
+            }
+          }
+        },
+        "4": {
+          "ap": null,
+          "auroc": null,
+          "rescue_regression_auroc": null,
+          "prevalence": 0.0,
+          "ap_lift": null,
+          "pr": [
+            {
+              "threshold": 3.0,
+              "precision": 0.0,
+              "recall": null,
+              "selected": 7
+            }
+          ],
+          "labels": {
+            "rescue": 0,
+            "regression": 0,
+            "unchanged_success": 7,
+            "unchanged_failure": 0
+          },
+          "budgets": {
+            "0.25": {
+              "selected": 0,
+              "selected_fraction": 0.0,
+              "rescue": 0,
+              "regression": 0,
+              "unchanged_success": 0,
+              "unchanged_failure": 0,
+              "precision": null,
+              "recall": null,
+              "precision_lift": null,
+              "net": 0.0,
+              "selected_rescue_clusters": 0,
+              "planned_extra_evaluations": 0,
+              "baseline_cap": 308,
+              "extra_budget": 77.0,
+              "overhead_feasible": true,
+              "actual_counterfactual_evaluations": 128,
+              "actual_baseline_evaluations": 128,
+              "actual_ratio": 1.0
+            },
+            "0.5": {
+              "selected": 1,
+              "selected_fraction": 0.14285714285714285,
+              "rescue": 0,
+              "regression": 0,
+              "unchanged_success": 1,
+              "unchanged_failure": 0,
+              "precision": 0.0,
+              "recall": null,
+              "precision_lift": 0.0,
+              "net": 0.0,
+              "selected_rescue_clusters": 0,
+              "planned_extra_evaluations": 132,
+              "baseline_cap": 308,
+              "extra_budget": 154.0,
+              "overhead_feasible": true,
+              "actual_counterfactual_evaluations": 198,
+              "actual_baseline_evaluations": 128,
+              "actual_ratio": 1.546875
+            },
+            "0.75": {
+              "selected": 1,
+              "selected_fraction": 0.14285714285714285,
+              "rescue": 0,
+              "regression": 0,
+              "unchanged_success": 1,
+              "unchanged_failure": 0,
+              "precision": 0.0,
+              "recall": null,
+              "precision_lift": 0.0,
+              "net": 0.0,
+              "selected_rescue_clusters": 0,
+              "planned_extra_evaluations": 132,
+              "baseline_cap": 308,
+              "extra_budget": 231.0,
+              "overhead_feasible": true,
+              "actual_counterfactual_evaluations": 198,
+              "actual_baseline_evaluations": 128,
+              "actual_ratio": 1.546875
+            },
+            "1.0": {
+              "selected": 2,
+              "selected_fraction": 0.2857142857142857,
+              "rescue": 0,
+              "regression": 0,
+              "unchanged_success": 2,
+              "unchanged_failure": 0,
+              "precision": 0.0,
+              "recall": null,
+              "precision_lift": 0.0,
+              "net": 0.0,
+              "selected_rescue_clusters": 0,
+              "planned_extra_evaluations": 264,
+              "baseline_cap": 308,
+              "extra_budget": 308.0,
+              "overhead_feasible": true,
+              "actual_counterfactual_evaluations": 243,
+              "actual_baseline_evaluations": 128,
+              "actual_ratio": 1.8984375
+            }
+          }
+        },
+        "10": {
+          "ap": null,
+          "auroc": null,
+          "rescue_regression_auroc": null,
+          "prevalence": 0.0,
+          "ap_lift": null,
+          "pr": [
+            {
+              "threshold": 3.0,
+              "precision": 0.0,
+              "recall": null,
+              "selected": 7
+            }
+          ],
+          "labels": {
+            "rescue": 0,
+            "regression": 0,
+            "unchanged_success": 7,
+            "unchanged_failure": 0
+          },
+          "budgets": {
+            "0.25": {
+              "selected": 0,
+              "selected_fraction": 0.0,
+              "rescue": 0,
+              "regression": 0,
+              "unchanged_success": 0,
+              "unchanged_failure": 0,
+              "precision": null,
+              "recall": null,
+              "precision_lift": null,
+              "net": 0.0,
+              "selected_rescue_clusters": 0,
+              "planned_extra_evaluations": 0,
+              "baseline_cap": 308,
+              "extra_budget": 77.0,
+              "overhead_feasible": true,
+              "actual_counterfactual_evaluations": 128,
+              "actual_baseline_evaluations": 128,
+              "actual_ratio": 1.0
+            },
+            "0.5": {
+              "selected": 0,
+              "selected_fraction": 0.0,
+              "rescue": 0,
+              "regression": 0,
+              "unchanged_success": 0,
+              "unchanged_failure": 0,
+              "precision": null,
+              "recall": null,
+              "precision_lift": null,
+              "net": 0.0,
+              "selected_rescue_clusters": 0,
+              "planned_extra_evaluations": 0,
+              "baseline_cap": 308,
+              "extra_budget": 154.0,
+              "overhead_feasible": true,
+              "actual_counterfactual_evaluations": 128,
+              "actual_baseline_evaluations": 128,
+              "actual_ratio": 1.0
+            },
+            "0.75": {
+              "selected": 0,
+              "selected_fraction": 0.0,
+              "rescue": 0,
+              "regression": 0,
+              "unchanged_success": 0,
+              "unchanged_failure": 0,
+              "precision": null,
+              "recall": null,
+              "precision_lift": null,
+              "net": 0.0,
+              "selected_rescue_clusters": 0,
+              "planned_extra_evaluations": 0,
+              "baseline_cap": 308,
+              "extra_budget": 231.0,
+              "overhead_feasible": true,
+              "actual_counterfactual_evaluations": 128,
+              "actual_baseline_evaluations": 128,
+              "actual_ratio": 1.0
+            },
+            "1.0": {
+              "selected": 0,
+              "selected_fraction": 0.0,
+              "rescue": 0,
+              "regression": 0,
+              "unchanged_success": 0,
+              "unchanged_failure": 0,
+              "precision": null,
+              "recall": null,
+              "precision_lift": null,
+              "net": 0.0,
+              "selected_rescue_clusters": 0,
+              "planned_extra_evaluations": 0,
+              "baseline_cap": 308,
+              "extra_budget": 308.0,
+              "overhead_feasible": true,
+              "actual_counterfactual_evaluations": 128,
+              "actual_baseline_evaluations": 128,
+              "actual_ratio": 1.0
+            }
+          }
+        }
+      },
+      "primary_cluster": "suite/family",
+      "intervals": {
+        "2/ap": {
+          "low": null,
+          "high": null,
+          "undefined": 200,
+          "replicates": 200
+        },
+        "2/ap_lift": {
+          "low": null,
+          "high": null,
+          "undefined": 200,
+          "replicates": 200
+        },
+        "2/auroc": {
+          "low": null,
+          "high": null,
+          "undefined": 200,
+          "replicates": 200
+        },
+        "2/rescue_regression_auroc": {
+          "low": null,
+          "high": null,
+          "undefined": 200,
+          "replicates": 200
+        },
+        "2/prevalence": {
+          "low": 0.0,
+          "high": 0.0,
+          "undefined": 0,
+          "replicates": 200
+        },
+        "2/0.25/precision": {
+          "low": 0.0,
+          "high": 0.0,
+          "undefined": 54,
+          "replicates": 200
+        },
+        "2/0.25/recall": {
+          "low": null,
+          "high": null,
+          "undefined": 200,
+          "replicates": 200
+        },
+        "2/0.25/precision_lift": {
+          "low": 0.0,
+          "high": 0.0,
+          "undefined": 54,
+          "replicates": 200
+        },
+        "2/0.25/net": {
+          "low": 0.0,
+          "high": 0.0,
+          "undefined": 0,
+          "replicates": 200
+        },
+        "2/0.25/selected": {
+          "low": 0.0,
+          "high": 3.0,
+          "undefined": 0,
+          "replicates": 200
+        },
+        "2/0.25/rescue": {
+          "low": 0.0,
+          "high": 0.0,
+          "undefined": 0,
+          "replicates": 200
+        },
+        "2/0.25/regression": {
+          "low": 0.0,
+          "high": 0.0,
+          "undefined": 0,
+          "replicates": 200
+        },
+        "2/0.25/actual_ratio": {
+          "low": 1.0,
+          "high": 1.3,
+          "undefined": 0,
+          "replicates": 200
+        },
+        "2/0.5/precision": {
+          "low": 0.0,
+          "high": 0.0,
+          "undefined": 0,
+          "replicates": 200
+        },
+        "2/0.5/recall": {
+          "low": null,
+          "high": null,
+          "undefined": 200,
+          "replicates": 200
+        },
+        "2/0.5/precision_lift": {
+          "low": 0.0,
+          "high": 0.0,
+          "undefined": 0,
+          "replicates": 200
+        },
+        "2/0.5/net": {
+          "low": 0.0,
+          "high": 0.0,
+          "undefined": 0,
+          "replicates": 200
+        },
+        "2/0.5/selected": {
+          "low": 1.0,
+          "high": 6.0,
+          "undefined": 0,
+          "replicates": 200
+        },
+        "2/0.5/rescue": {
+          "low": 0.0,
+          "high": 0.0,
+          "undefined": 0,
+          "replicates": 200
+        },
+        "2/0.5/regression": {
+          "low": 0.0,
+          "high": 0.0,
+          "undefined": 0,
+          "replicates": 200
+        },
+        "2/0.5/actual_ratio": {
+          "low": 1.46875,
+          "high": 1.5714285714285714,
+          "undefined": 0,
+          "replicates": 200
+        },
+        "2/0.75/precision": {
+          "low": 0.0,
+          "high": 0.0,
+          "undefined": 0,
+          "replicates": 200
+        },
+        "2/0.75/recall": {
+          "low": null,
+          "high": null,
+          "undefined": 200,
+          "replicates": 200
+        },
+        "2/0.75/precision_lift": {
+          "low": 0.0,
+          "high": 0.0,
+          "undefined": 0,
+          "replicates": 200
+        },
+        "2/0.75/net": {
+          "low": 0.0,
+          "high": 0.0,
+          "undefined": 0,
+          "replicates": 200
+        },
+        "2/0.75/selected": {
+          "low": 1.0,
+          "high": 9.0,
+          "undefined": 0,
+          "replicates": 200
+        },
+        "2/0.75/rescue": {
+          "low": 0.0,
+          "high": 0.0,
+          "undefined": 0,
+          "replicates": 200
+        },
+        "2/0.75/regression": {
+          "low": 0.0,
+          "high": 0.0,
+          "undefined": 0,
+          "replicates": 200
+        },
+        "2/0.75/actual_ratio": {
+          "low": 1.5,
+          "high": 1.7904761904761906,
+          "undefined": 0,
+          "replicates": 200
+        },
+        "2/1.0/precision": {
+          "low": 0.0,
+          "high": 0.0,
+          "undefined": 0,
+          "replicates": 200
+        },
+        "2/1.0/recall": {
+          "low": null,
+          "high": null,
+          "undefined": 200,
+          "replicates": 200
+        },
+        "2/1.0/precision_lift": {
+          "low": 0.0,
+          "high": 0.0,
+          "undefined": 0,
+          "replicates": 200
+        },
+        "2/1.0/net": {
+          "low": 0.0,
+          "high": 0.0,
+          "undefined": 0,
+          "replicates": 200
+        },
+        "2/1.0/selected": {
+          "low": 2.0,
+          "high": 12.0,
+          "undefined": 0,
+          "replicates": 200
+        },
+        "2/1.0/rescue": {
+          "low": 0.0,
+          "high": 0.0,
+          "undefined": 0,
+          "replicates": 200
+        },
+        "2/1.0/regression": {
+          "low": 0.0,
+          "high": 0.0,
+          "undefined": 0,
+          "replicates": 200
+        },
+        "2/1.0/actual_ratio": {
+          "low": 2.0,
+          "high": 2.0,
+          "undefined": 0,
+          "replicates": 200
+        },
+        "4/ap": {
+          "low": null,
+          "high": null,
+          "undefined": 200,
+          "replicates": 200
+        },
+        "4/ap_lift": {
+          "low": null,
+          "high": null,
+          "undefined": 200,
+          "replicates": 200
+        },
+        "4/auroc": {
+          "low": null,
+          "high": null,
+          "undefined": 200,
+          "replicates": 200
+        },
+        "4/rescue_regression_auroc": {
+          "low": null,
+          "high": null,
+          "undefined": 200,
+          "replicates": 200
+        },
+        "4/prevalence": {
+          "low": 0.0,
+          "high": 0.0,
+          "undefined": 0,
+          "replicates": 200
+        },
+        "4/0.25/precision": {
+          "low": 0.0,
+          "high": 0.0,
+          "undefined": 141,
+          "replicates": 200
+        },
+        "4/0.25/recall": {
+          "low": null,
+          "high": null,
+          "undefined": 200,
+          "replicates": 200
+        },
+        "4/0.25/precision_lift": {
+          "low": 0.0,
+          "high": 0.0,
+          "undefined": 141,
+          "replicates": 200
+        },
+        "4/0.25/net": {
+          "low": 0.0,
+          "high": 0.0,
+          "undefined": 0,
+          "replicates": 200
+        },
+        "4/0.25/selected": {
+          "low": 0.0,
+          "high": 1.0,
+          "undefined": 0,
+          "replicates": 200
+        },
+        "4/0.25/rescue": {
+          "low": 0.0,
+          "high": 0.0,
+          "undefined": 0,
+          "replicates": 200
+        },
+        "4/0.25/regression": {
+          "low": 0.0,
+          "high": 0.0,
+          "undefined": 0,
+          "replicates": 200
+        },
+        "4/0.25/actual_ratio": {
+          "low": 1.0,
+          "high": 1.3333333333333333,
+          "undefined": 0,
+          "replicates": 200
+        },
+        "4/0.5/precision": {
+          "low": 0.0,
+          "high": 0.0,
+          "undefined": 54,
+          "replicates": 200
+        },
+        "4/0.5/recall": {
+          "low": null,
+          "high": null,
+          "undefined": 200,
+          "replicates": 200
+        },
+        "4/0.5/precision_lift": {
+          "low": 0.0,
+          "high": 0.0,
+          "undefined": 54,
+          "replicates": 200
+        },
+        "4/0.5/net": {
+          "low": 0.0,
+          "high": 0.0,
+          "undefined": 0,
+          "replicates": 200
+        },
+        "4/0.5/selected": {
+          "low": 0.0,
+          "high": 2.0,
+          "undefined": 0,
+          "replicates": 200
+        },
+        "4/0.5/rescue": {
+          "low": 0.0,
+          "high": 0.0,
+          "undefined": 0,
+          "replicates": 200
+        },
+        "4/0.5/regression": {
+          "low": 0.0,
+          "high": 0.0,
+          "undefined": 0,
+          "replicates": 200
+        },
+        "4/0.5/actual_ratio": {
+          "low": 1.0,
+          "high": 1.6666666666666667,
+          "undefined": 0,
+          "replicates": 200
+        },
+        "4/0.75/precision": {
+          "low": 0.0,
+          "high": 0.0,
+          "undefined": 54,
+          "replicates": 200
+        },
+        "4/0.75/recall": {
+          "low": null,
+          "high": null,
+          "undefined": 200,
+          "replicates": 200
+        },
+        "4/0.75/precision_lift": {
+          "low": 0.0,
+          "high": 0.0,
+          "undefined": 54,
+          "replicates": 200
+        },
+        "4/0.75/net": {
+          "low": 0.0,
+          "high": 0.0,
+          "undefined": 0,
+          "replicates": 200
+        },
+        "4/0.75/selected": {
+          "low": 0.0,
+          "high": 3.0,
+          "undefined": 0,
+          "replicates": 200
+        },
+        "4/0.75/rescue": {
+          "low": 0.0,
+          "high": 0.0,
+          "undefined": 0,
+          "replicates": 200
+        },
+        "4/0.75/regression": {
+          "low": 0.0,
+          "high": 0.0,
+          "undefined": 0,
+          "replicates": 200
+        },
+        "4/0.75/actual_ratio": {
+          "low": 1.0,
+          "high": 1.880952380952381,
+          "undefined": 0,
+          "replicates": 200
+        },
+        "4/1.0/precision": {
+          "low": 0.0,
+          "high": 0.0,
+          "undefined": 54,
+          "replicates": 200
+        },
+        "4/1.0/recall": {
+          "low": null,
+          "high": null,
+          "undefined": 200,
+          "replicates": 200
+        },
+        "4/1.0/precision_lift": {
+          "low": 0.0,
+          "high": 0.0,
+          "undefined": 54,
+          "replicates": 200
+        },
+        "4/1.0/net": {
+          "low": 0.0,
+          "high": 0.0,
+          "undefined": 0,
+          "replicates": 200
+        },
+        "4/1.0/selected": {
+          "low": 0.0,
+          "high": 4.0,
+          "undefined": 0,
+          "replicates": 200
+        },
+        "4/1.0/rescue": {
+          "low": 0.0,
+          "high": 0.0,
+          "undefined": 0,
+          "replicates": 200
+        },
+        "4/1.0/regression": {
+          "low": 0.0,
+          "high": 0.0,
+          "undefined": 0,
+          "replicates": 200
+        },
+        "4/1.0/actual_ratio": {
+          "low": 1.0,
+          "high": 2.0952380952380953,
+          "undefined": 0,
+          "replicates": 200
+        },
+        "10/ap": {
+          "low": null,
+          "high": null,
+          "undefined": 200,
+          "replicates": 200
+        },
+        "10/ap_lift": {
+          "low": null,
+          "high": null,
+          "undefined": 200,
+          "replicates": 200
+        },
+        "10/auroc": {
+          "low": null,
+          "high": null,
+          "undefined": 200,
+          "replicates": 200
+        },
+        "10/rescue_regression_auroc": {
+          "low": null,
+          "high": null,
+          "undefined": 200,
+          "replicates": 200
+        },
+        "10/prevalence": {
+          "low": 0.0,
+          "high": 0.0,
+          "undefined": 0,
+          "replicates": 200
+        },
+        "10/0.25/precision": {
+          "low": null,
+          "high": null,
+          "undefined": 200,
+          "replicates": 200
+        },
+        "10/0.25/recall": {
+          "low": null,
+          "high": null,
+          "undefined": 200,
+          "replicates": 200
+        },
+        "10/0.25/precision_lift": {
+          "low": null,
+          "high": null,
+          "undefined": 200,
+          "replicates": 200
+        },
+        "10/0.25/net": {
+          "low": 0.0,
+          "high": 0.0,
+          "undefined": 0,
+          "replicates": 200
+        },
+        "10/0.25/selected": {
+          "low": 0.0,
+          "high": 0.0,
+          "undefined": 0,
+          "replicates": 200
+        },
+        "10/0.25/rescue": {
+          "low": 0.0,
+          "high": 0.0,
+          "undefined": 0,
+          "replicates": 200
+        },
+        "10/0.25/regression": {
+          "low": 0.0,
+          "high": 0.0,
+          "undefined": 0,
+          "replicates": 200
+        },
+        "10/0.25/actual_ratio": {
+          "low": 1.0,
+          "high": 1.0,
+          "undefined": 0,
+          "replicates": 200
+        },
+        "10/0.5/precision": {
+          "low": null,
+          "high": null,
+          "undefined": 200,
+          "replicates": 200
+        },
+        "10/0.5/recall": {
+          "low": null,
+          "high": null,
+          "undefined": 200,
+          "replicates": 200
+        },
+        "10/0.5/precision_lift": {
+          "low": null,
+          "high": null,
+          "undefined": 200,
+          "replicates": 200
+        },
+        "10/0.5/net": {
+          "low": 0.0,
+          "high": 0.0,
+          "undefined": 0,
+          "replicates": 200
+        },
+        "10/0.5/selected": {
+          "low": 0.0,
+          "high": 0.0,
+          "undefined": 0,
+          "replicates": 200
+        },
+        "10/0.5/rescue": {
+          "low": 0.0,
+          "high": 0.0,
+          "undefined": 0,
+          "replicates": 200
+        },
+        "10/0.5/regression": {
+          "low": 0.0,
+          "high": 0.0,
+          "undefined": 0,
+          "replicates": 200
+        },
+        "10/0.5/actual_ratio": {
+          "low": 1.0,
+          "high": 1.0,
+          "undefined": 0,
+          "replicates": 200
+        },
+        "10/0.75/precision": {
+          "low": 0.0,
+          "high": 0.0,
+          "undefined": 141,
+          "replicates": 200
+        },
+        "10/0.75/recall": {
+          "low": null,
+          "high": null,
+          "undefined": 200,
+          "replicates": 200
+        },
+        "10/0.75/precision_lift": {
+          "low": 0.0,
+          "high": 0.0,
+          "undefined": 141,
+          "replicates": 200
+        },
+        "10/0.75/net": {
+          "low": 0.0,
+          "high": 0.0,
+          "undefined": 0,
+          "replicates": 200
+        },
+        "10/0.75/selected": {
+          "low": 0.0,
+          "high": 1.0,
+          "undefined": 0,
+          "replicates": 200
+        },
+        "10/0.75/rescue": {
+          "low": 0.0,
+          "high": 0.0,
+          "undefined": 0,
+          "replicates": 200
+        },
+        "10/0.75/regression": {
+          "low": 0.0,
+          "high": 0.0,
+          "undefined": 0,
+          "replicates": 200
+        },
+        "10/0.75/actual_ratio": {
+          "low": 1.0,
+          "high": 1.9904761904761905,
+          "undefined": 0,
+          "replicates": 200
+        },
+        "10/1.0/precision": {
+          "low": 0.0,
+          "high": 0.0,
+          "undefined": 141,
+          "replicates": 200
+        },
+        "10/1.0/recall": {
+          "low": null,
+          "high": null,
+          "undefined": 200,
+          "replicates": 200
+        },
+        "10/1.0/precision_lift": {
+          "low": 0.0,
+          "high": 0.0,
+          "undefined": 141,
+          "replicates": 200
+        },
+        "10/1.0/net": {
+          "low": 0.0,
+          "high": 0.0,
+          "undefined": 0,
+          "replicates": 200
+        },
+        "10/1.0/selected": {
+          "low": 0.0,
+          "high": 1.0,
+          "undefined": 0,
+          "replicates": 200
+        },
+        "10/1.0/rescue": {
+          "low": 0.0,
+          "high": 0.0,
+          "undefined": 0,
+          "replicates": 200
+        },
+        "10/1.0/regression": {
+          "low": 0.0,
+          "high": 0.0,
+          "undefined": 0,
+          "replicates": 200
+        },
+        "10/1.0/actual_ratio": {
+          "low": 1.0,
+          "high": 1.9904761904761905,
+          "undefined": 0,
+          "replicates": 200
+        }
+      },
+      "condition_sensitivity": {
+        "2/ap": {
+          "low": null,
+          "high": null,
+          "undefined": 200,
+          "replicates": 200
+        },
+        "2/ap_lift": {
+          "low": null,
+          "high": null,
+          "undefined": 200,
+          "replicates": 200
+        },
+        "2/auroc": {
+          "low": null,
+          "high": null,
+          "undefined": 200,
+          "replicates": 200
+        },
+        "2/rescue_regression_auroc": {
+          "low": null,
+          "high": null,
+          "undefined": 200,
+          "replicates": 200
+        },
+        "2/prevalence": {
+          "low": 0.0,
+          "high": 0.0,
+          "undefined": 0,
+          "replicates": 200
+        },
+        "2/0.25/precision": {
+          "low": 0.0,
+          "high": 0.0,
+          "undefined": 0,
+          "replicates": 200
+        },
+        "2/0.25/recall": {
+          "low": null,
+          "high": null,
+          "undefined": 200,
+          "replicates": 200
+        },
+        "2/0.25/precision_lift": {
+          "low": 0.0,
+          "high": 0.0,
+          "undefined": 0,
+          "replicates": 200
+        },
+        "2/0.25/net": {
+          "low": 0.0,
+          "high": 0.0,
+          "undefined": 0,
+          "replicates": 200
+        },
+        "2/0.25/selected": {
+          "low": 1.0,
+          "high": 1.0,
+          "undefined": 0,
+          "replicates": 200
+        },
+        "2/0.25/rescue": {
+          "low": 0.0,
+          "high": 0.0,
+          "undefined": 0,
+          "replicates": 200
+        },
+        "2/0.25/regression": {
+          "low": 0.0,
+          "high": 0.0,
+          "undefined": 0,
+          "replicates": 200
+        },
+        "2/0.25/actual_ratio": {
+          "low": 1.1153846153846154,
+          "high": 1.2105728924080112,
+          "undefined": 0,
+          "replicates": 200
+        },
+        "2/0.5/precision": {
+          "low": 0.0,
+          "high": 0.0,
+          "undefined": 0,
+          "replicates": 200
+        },
+        "2/0.5/recall": {
+          "low": null,
+          "high": null,
+          "undefined": 200,
+          "replicates": 200
+        },
+        "2/0.5/precision_lift": {
+          "low": 0.0,
+          "high": 0.0,
+          "undefined": 0,
+          "replicates": 200
+        },
+        "2/0.5/net": {
+          "low": 0.0,
+          "high": 0.0,
+          "undefined": 0,
+          "replicates": 200
+        },
+        "2/0.5/selected": {
+          "low": 3.0,
+          "high": 3.0,
+          "undefined": 0,
+          "replicates": 200
+        },
+        "2/0.5/rescue": {
+          "low": 0.0,
+          "high": 0.0,
+          "undefined": 0,
+          "replicates": 200
+        },
+        "2/0.5/regression": {
+          "low": 0.0,
+          "high": 0.0,
+          "undefined": 0,
+          "replicates": 200
+        },
+        "2/0.5/actual_ratio": {
+          "low": 1.3658452481076535,
+          "high": 1.5433607730851824,
+          "undefined": 0,
+          "replicates": 200
+        },
+        "2/0.75/precision": {
+          "low": 0.0,
+          "high": 0.0,
+          "undefined": 0,
+          "replicates": 200
+        },
+        "2/0.75/recall": {
+          "low": null,
+          "high": null,
+          "undefined": 200,
+          "replicates": 200
+        },
+        "2/0.75/precision_lift": {
+          "low": 0.0,
+          "high": 0.0,
+          "undefined": 0,
+          "replicates": 200
+        },
+        "2/0.75/net": {
+          "low": 0.0,
+          "high": 0.0,
+          "undefined": 0,
+          "replicates": 200
+        },
+        "2/0.75/selected": {
+          "low": 5.0,
+          "high": 5.0,
+          "undefined": 0,
+          "replicates": 200
+        },
+        "2/0.75/rescue": {
+          "low": 0.0,
+          "high": 0.0,
+          "undefined": 0,
+          "replicates": 200
+        },
+        "2/0.75/regression": {
+          "low": 0.0,
+          "high": 0.0,
+          "undefined": 0,
+          "replicates": 200
+        },
+        "2/0.75/actual_ratio": {
+          "low": 1.625,
+          "high": 1.7986376258243666,
+          "undefined": 0,
+          "replicates": 200
+        },
+        "2/1.0/precision": {
+          "low": 0.0,
+          "high": 0.0,
+          "undefined": 0,
+          "replicates": 200
+        },
+        "2/1.0/recall": {
+          "low": null,
+          "high": null,
+          "undefined": 200,
+          "replicates": 200
+        },
+        "2/1.0/precision_lift": {
+          "low": 0.0,
+          "high": 0.0,
+          "undefined": 0,
+          "replicates": 200
+        },
+        "2/1.0/net": {
+          "low": 0.0,
+          "high": 0.0,
+          "undefined": 0,
+          "replicates": 200
+        },
+        "2/1.0/selected": {
+          "low": 7.0,
+          "high": 7.0,
+          "undefined": 0,
+          "replicates": 200
+        },
+        "2/1.0/rescue": {
+          "low": 0.0,
+          "high": 0.0,
+          "undefined": 0,
+          "replicates": 200
+        },
+        "2/1.0/regression": {
+          "low": 0.0,
+          "high": 0.0,
+          "undefined": 0,
+          "replicates": 200
+        },
+        "2/1.0/actual_ratio": {
+          "low": 1.966147754065655,
+          "high": 2.0451213260423784,
+          "undefined": 0,
+          "replicates": 200
+        },
+        "4/ap": {
+          "low": null,
+          "high": null,
+          "undefined": 200,
+          "replicates": 200
+        },
+        "4/ap_lift": {
+          "low": null,
+          "high": null,
+          "undefined": 200,
+          "replicates": 200
+        },
+        "4/auroc": {
+          "low": null,
+          "high": null,
+          "undefined": 200,
+          "replicates": 200
+        },
+        "4/rescue_regression_auroc": {
+          "low": null,
+          "high": null,
+          "undefined": 200,
+          "replicates": 200
+        },
+        "4/prevalence": {
+          "low": 0.0,
+          "high": 0.0,
+          "undefined": 0,
+          "replicates": 200
+        },
+        "4/0.25/precision": {
+          "low": null,
+          "high": null,
+          "undefined": 200,
+          "replicates": 200
+        },
+        "4/0.25/recall": {
+          "low": null,
+          "high": null,
+          "undefined": 200,
+          "replicates": 200
+        },
+        "4/0.25/precision_lift": {
+          "low": null,
+          "high": null,
+          "undefined": 200,
+          "replicates": 200
+        },
+        "4/0.25/net": {
+          "low": 0.0,
+          "high": 0.0,
+          "undefined": 0,
+          "replicates": 200
+        },
+        "4/0.25/selected": {
+          "low": 0.0,
+          "high": 0.0,
+          "undefined": 0,
+          "replicates": 200
+        },
+        "4/0.25/rescue": {
+          "low": 0.0,
+          "high": 0.0,
+          "undefined": 0,
+          "replicates": 200
+        },
+        "4/0.25/regression": {
+          "low": 0.0,
+          "high": 0.0,
+          "undefined": 0,
+          "replicates": 200
+        },
+        "4/0.25/actual_ratio": {
+          "low": 1.0,
+          "high": 1.0,
+          "undefined": 0,
+          "replicates": 200
+        },
+        "4/0.5/precision": {
+          "low": 0.0,
+          "high": 0.0,
+          "undefined": 0,
+          "replicates": 200
+        },
+        "4/0.5/recall": {
+          "low": null,
+          "high": null,
+          "undefined": 200,
+          "replicates": 200
+        },
+        "4/0.5/precision_lift": {
+          "low": 0.0,
+          "high": 0.0,
+          "undefined": 0,
+          "replicates": 200
+        },
+        "4/0.5/net": {
+          "low": 0.0,
+          "high": 0.0,
+          "undefined": 0,
+          "replicates": 200
+        },
+        "4/0.5/selected": {
+          "low": 1.0,
+          "high": 1.0,
+          "undefined": 0,
+          "replicates": 200
+        },
+        "4/0.5/rescue": {
+          "low": 0.0,
+          "high": 0.0,
+          "undefined": 0,
+          "replicates": 200
+        },
+        "4/0.5/regression": {
+          "low": 0.0,
+          "high": 0.0,
+          "undefined": 0,
+          "replicates": 200
+        },
+        "4/0.5/actual_ratio": {
+          "low": 1.3461538461538463,
+          "high": 1.8515625,
+          "undefined": 0,
+          "replicates": 200
+        },
+        "4/0.75/precision": {
+          "low": 0.0,
+          "high": 0.0,
+          "undefined": 0,
+          "replicates": 200
+        },
+        "4/0.75/recall": {
+          "low": null,
+          "high": null,
+          "undefined": 200,
+          "replicates": 200
+        },
+        "4/0.75/precision_lift": {
+          "low": 0.0,
+          "high": 0.0,
+          "undefined": 0,
+          "replicates": 200
+        },
+        "4/0.75/net": {
+          "low": 0.0,
+          "high": 0.0,
+          "undefined": 0,
+          "replicates": 200
+        },
+        "4/0.75/selected": {
+          "low": 1.0,
+          "high": 1.0,
+          "undefined": 0,
+          "replicates": 200
+        },
+        "4/0.75/rescue": {
+          "low": 0.0,
+          "high": 0.0,
+          "undefined": 0,
+          "replicates": 200
+        },
+        "4/0.75/regression": {
+          "low": 0.0,
+          "high": 0.0,
+          "undefined": 0,
+          "replicates": 200
+        },
+        "4/0.75/actual_ratio": {
+          "low": 1.3461538461538463,
+          "high": 1.8515625,
+          "undefined": 0,
+          "replicates": 200
+        },
+        "4/1.0/precision": {
+          "low": 0.0,
+          "high": 0.0,
+          "undefined": 0,
+          "replicates": 200
+        },
+        "4/1.0/recall": {
+          "low": null,
+          "high": null,
+          "undefined": 200,
+          "replicates": 200
+        },
+        "4/1.0/precision_lift": {
+          "low": 0.0,
+          "high": 0.0,
+          "undefined": 0,
+          "replicates": 200
+        },
+        "4/1.0/net": {
+          "low": 0.0,
+          "high": 0.0,
+          "undefined": 0,
+          "replicates": 200
+        },
+        "4/1.0/selected": {
+          "low": 2.0,
+          "high": 2.0,
+          "undefined": 0,
+          "replicates": 200
+        },
+        "4/1.0/rescue": {
+          "low": 0.0,
+          "high": 0.0,
+          "undefined": 0,
+          "replicates": 200
+        },
+        "4/1.0/regression": {
+          "low": 0.0,
+          "high": 0.0,
+          "undefined": 0,
+          "replicates": 200
+        },
+        "4/1.0/actual_ratio": {
+          "low": 1.697674418604651,
+          "high": 2.557995307612096,
+          "undefined": 0,
+          "replicates": 200
+        },
+        "10/ap": {
+          "low": null,
+          "high": null,
+          "undefined": 200,
+          "replicates": 200
+        },
+        "10/ap_lift": {
+          "low": null,
+          "high": null,
+          "undefined": 200,
+          "replicates": 200
+        },
+        "10/auroc": {
+          "low": null,
+          "high": null,
+          "undefined": 200,
+          "replicates": 200
+        },
+        "10/rescue_regression_auroc": {
+          "low": null,
+          "high": null,
+          "undefined": 200,
+          "replicates": 200
+        },
+        "10/prevalence": {
+          "low": 0.0,
+          "high": 0.0,
+          "undefined": 0,
+          "replicates": 200
+        },
+        "10/0.25/precision": {
+          "low": null,
+          "high": null,
+          "undefined": 200,
+          "replicates": 200
+        },
+        "10/0.25/recall": {
+          "low": null,
+          "high": null,
+          "undefined": 200,
+          "replicates": 200
+        },
+        "10/0.25/precision_lift": {
+          "low": null,
+          "high": null,
+          "undefined": 200,
+          "replicates": 200
+        },
+        "10/0.25/net": {
+          "low": 0.0,
+          "high": 0.0,
+          "undefined": 0,
+          "replicates": 200
+        },
+        "10/0.25/selected": {
+          "low": 0.0,
+          "high": 0.0,
+          "undefined": 0,
+          "replicates": 200
+        },
+        "10/0.25/rescue": {
+          "low": 0.0,
+          "high": 0.0,
+          "undefined": 0,
+          "replicates": 200
+        },
+        "10/0.25/regression": {
+          "low": 0.0,
+          "high": 0.0,
+          "undefined": 0,
+          "replicates": 200
+        },
+        "10/0.25/actual_ratio": {
+          "low": 1.0,
+          "high": 1.0,
+          "undefined": 0,
+          "replicates": 200
+        },
+        "10/0.5/precision": {
+          "low": null,
+          "high": null,
+          "undefined": 200,
+          "replicates": 200
+        },
+        "10/0.5/recall": {
+          "low": null,
+          "high": null,
+          "undefined": 200,
+          "replicates": 200
+        },
+        "10/0.5/precision_lift": {
+          "low": null,
+          "high": null,
+          "undefined": 200,
+          "replicates": 200
+        },
+        "10/0.5/net": {
+          "low": 0.0,
+          "high": 0.0,
+          "undefined": 0,
+          "replicates": 200
+        },
+        "10/0.5/selected": {
+          "low": 0.0,
+          "high": 0.0,
+          "undefined": 0,
+          "replicates": 200
+        },
+        "10/0.5/rescue": {
+          "low": 0.0,
+          "high": 0.0,
+          "undefined": 0,
+          "replicates": 200
+        },
+        "10/0.5/regression": {
+          "low": 0.0,
+          "high": 0.0,
+          "undefined": 0,
+          "replicates": 200
+        },
+        "10/0.5/actual_ratio": {
+          "low": 1.0,
+          "high": 1.0,
+          "undefined": 0,
+          "replicates": 200
+        },
+        "10/0.75/precision": {
+          "low": null,
+          "high": null,
+          "undefined": 200,
+          "replicates": 200
+        },
+        "10/0.75/recall": {
+          "low": null,
+          "high": null,
+          "undefined": 200,
+          "replicates": 200
+        },
+        "10/0.75/precision_lift": {
+          "low": null,
+          "high": null,
+          "undefined": 200,
+          "replicates": 200
+        },
+        "10/0.75/net": {
+          "low": 0.0,
+          "high": 0.0,
+          "undefined": 0,
+          "replicates": 200
+        },
+        "10/0.75/selected": {
+          "low": 0.0,
+          "high": 0.0,
+          "undefined": 0,
+          "replicates": 200
+        },
+        "10/0.75/rescue": {
+          "low": 0.0,
+          "high": 0.0,
+          "undefined": 0,
+          "replicates": 200
+        },
+        "10/0.75/regression": {
+          "low": 0.0,
+          "high": 0.0,
+          "undefined": 0,
+          "replicates": 200
+        },
+        "10/0.75/actual_ratio": {
+          "low": 1.0,
+          "high": 1.0,
+          "undefined": 0,
+          "replicates": 200
+        },
+        "10/1.0/precision": {
+          "low": null,
+          "high": null,
+          "undefined": 200,
+          "replicates": 200
+        },
+        "10/1.0/recall": {
+          "low": null,
+          "high": null,
+          "undefined": 200,
+          "replicates": 200
+        },
+        "10/1.0/precision_lift": {
+          "low": null,
+          "high": null,
+          "undefined": 200,
+          "replicates": 200
+        },
+        "10/1.0/net": {
+          "low": 0.0,
+          "high": 0.0,
+          "undefined": 0,
+          "replicates": 200
+        },
+        "10/1.0/selected": {
+          "low": 0.0,
+          "high": 0.0,
+          "undefined": 0,
+          "replicates": 200
+        },
+        "10/1.0/rescue": {
+          "low": 0.0,
+          "high": 0.0,
+          "undefined": 0,
+          "replicates": 200
+        },
+        "10/1.0/regression": {
+          "low": 0.0,
+          "high": 0.0,
+          "undefined": 0,
+          "replicates": 200
+        },
+        "10/1.0/actual_ratio": {
+          "low": 1.0,
+          "high": 1.0,
+          "undefined": 0,
+          "replicates": 200
+        }
+      },
+      "equal_probe_overhead_sensitivity": {
+        "2": {
+          "ap": null,
+          "auroc": null,
+          "rescue_regression_auroc": null,
+          "prevalence": 0.0,
+          "ap_lift": null,
+          "pr": [
+            {
+              "threshold": 3.0,
+              "precision": 0.0,
+              "recall": null,
+              "selected": 7
+            }
+          ],
+          "labels": {
+            "rescue": 0,
+            "regression": 0,
+            "unchanged_success": 7,
+            "unchanged_failure": 0
+          },
+          "budgets": {
+            "0.25": {
+              "selected": 1,
+              "selected_fraction": 0.14285714285714285,
+              "rescue": 0,
+              "regression": 0,
+              "unchanged_success": 1,
+              "unchanged_failure": 0,
+              "precision": 0.0,
+              "recall": null,
+              "precision_lift": 0.0,
+              "net": 0.0,
+              "selected_rescue_clusters": 0,
+              "planned_extra_evaluations": 58,
+              "baseline_cap": 308,
+              "extra_budget": 77.0,
+              "overhead_feasible": true,
+              "actual_counterfactual_evaluations": 166,
+              "actual_baseline_evaluations": 128,
+              "actual_ratio": 1.296875
+            },
+            "0.5": {
+              "selected": 3,
+              "selected_fraction": 0.42857142857142855,
+              "rescue": 0,
+              "regression": 0,
+              "unchanged_success": 3,
+              "unchanged_failure": 0,
+              "precision": 0.0,
+              "recall": null,
+              "precision_lift": 0.0,
+              "net": 0.0,
+              "selected_rescue_clusters": 0,
+              "planned_extra_evaluations": 146,
+              "baseline_cap": 308,
+              "extra_budget": 154.0,
+              "overhead_feasible": true,
+              "actual_counterfactual_evaluations": 202,
+              "actual_baseline_evaluations": 128,
+              "actual_ratio": 1.578125
+            },
+            "0.75": {
+              "selected": 4,
+              "selected_fraction": 0.5714285714285714,
+              "rescue": 0,
+              "regression": 0,
+              "unchanged_success": 4,
+              "unchanged_failure": 0,
+              "precision": 0.0,
+              "recall": null,
+              "precision_lift": 0.0,
+              "net": 0.0,
+              "selected_rescue_clusters": 0,
+              "planned_extra_evaluations": 190,
+              "baseline_cap": 308,
+              "extra_budget": 231.0,
+              "overhead_feasible": true,
+              "actual_counterfactual_evaluations": 217,
+              "actual_baseline_evaluations": 128,
+              "actual_ratio": 1.6953125
+            },
+            "1.0": {
+              "selected": 6,
+              "selected_fraction": 0.8571428571428571,
+              "rescue": 0,
+              "regression": 0,
+              "unchanged_success": 6,
+              "unchanged_failure": 0,
+              "precision": 0.0,
+              "recall": null,
+              "precision_lift": 0.0,
+              "net": 0.0,
+              "selected_rescue_clusters": 0,
+              "planned_extra_evaluations": 278,
+              "baseline_cap": 308,
+              "extra_budget": 308.0,
+              "overhead_feasible": true,
+              "actual_counterfactual_evaluations": 247,
+              "actual_baseline_evaluations": 128,
+              "actual_ratio": 1.9296875
+            }
+          }
+        },
+        "4": {
+          "ap": null,
+          "auroc": null,
+          "rescue_regression_auroc": null,
+          "prevalence": 0.0,
+          "ap_lift": null,
+          "pr": [
+            {
+              "threshold": 3.0,
+              "precision": 0.0,
+              "recall": null,
+              "selected": 7
+            }
+          ],
+          "labels": {
+            "rescue": 0,
+            "regression": 0,
+            "unchanged_success": 7,
+            "unchanged_failure": 0
+          },
+          "budgets": {
+            "0.25": {
+              "selected": 0,
+              "selected_fraction": 0.0,
+              "rescue": 0,
+              "regression": 0,
+              "unchanged_success": 0,
+              "unchanged_failure": 0,
+              "precision": null,
+              "recall": null,
+              "precision_lift": null,
+              "net": 0.0,
+              "selected_rescue_clusters": 0,
+              "planned_extra_evaluations": 14,
+              "baseline_cap": 308,
+              "extra_budget": 77.0,
+              "overhead_feasible": true,
+              "actual_counterfactual_evaluations": 142,
+              "actual_baseline_evaluations": 128,
+              "actual_ratio": 1.109375
+            },
+            "0.5": {
+              "selected": 1,
+              "selected_fraction": 0.14285714285714285,
+              "rescue": 0,
+              "regression": 0,
+              "unchanged_success": 1,
+              "unchanged_failure": 0,
+              "precision": 0.0,
+              "recall": null,
+              "precision_lift": 0.0,
+              "net": 0.0,
+              "selected_rescue_clusters": 0,
+              "planned_extra_evaluations": 146,
+              "baseline_cap": 308,
+              "extra_budget": 154.0,
+              "overhead_feasible": true,
+              "actual_counterfactual_evaluations": 212,
+              "actual_baseline_evaluations": 128,
+              "actual_ratio": 1.65625
+            },
+            "0.75": {
+              "selected": 1,
+              "selected_fraction": 0.14285714285714285,
+              "rescue": 0,
+              "regression": 0,
+              "unchanged_success": 1,
+              "unchanged_failure": 0,
+              "precision": 0.0,
+              "recall": null,
+              "precision_lift": 0.0,
+              "net": 0.0,
+              "selected_rescue_clusters": 0,
+              "planned_extra_evaluations": 146,
+              "baseline_cap": 308,
+              "extra_budget": 231.0,
+              "overhead_feasible": true,
+              "actual_counterfactual_evaluations": 212,
+              "actual_baseline_evaluations": 128,
+              "actual_ratio": 1.65625
+            },
+            "1.0": {
+              "selected": 2,
+              "selected_fraction": 0.2857142857142857,
+              "rescue": 0,
+              "regression": 0,
+              "unchanged_success": 2,
+              "unchanged_failure": 0,
+              "precision": 0.0,
+              "recall": null,
+              "precision_lift": 0.0,
+              "net": 0.0,
+              "selected_rescue_clusters": 0,
+              "planned_extra_evaluations": 278,
+              "baseline_cap": 308,
+              "extra_budget": 308.0,
+              "overhead_feasible": true,
+              "actual_counterfactual_evaluations": 257,
+              "actual_baseline_evaluations": 128,
+              "actual_ratio": 2.0078125
+            }
+          }
+        },
+        "10": {
+          "ap": null,
+          "auroc": null,
+          "rescue_regression_auroc": null,
+          "prevalence": 0.0,
+          "ap_lift": null,
+          "pr": [
+            {
+              "threshold": 3.0,
+              "precision": 0.0,
+              "recall": null,
+              "selected": 7
+            }
+          ],
+          "labels": {
+            "rescue": 0,
+            "regression": 0,
+            "unchanged_success": 7,
+            "unchanged_failure": 0
+          },
+          "budgets": {
+            "0.25": {
+              "selected": 0,
+              "selected_fraction": 0.0,
+              "rescue": 0,
+              "regression": 0,
+              "unchanged_success": 0,
+              "unchanged_failure": 0,
+              "precision": null,
+              "recall": null,
+              "precision_lift": null,
+              "net": 0.0,
+              "selected_rescue_clusters": 0,
+              "planned_extra_evaluations": 14,
+              "baseline_cap": 308,
+              "extra_budget": 77.0,
+              "overhead_feasible": true,
+              "actual_counterfactual_evaluations": 142,
+              "actual_baseline_evaluations": 128,
+              "actual_ratio": 1.109375
+            },
+            "0.5": {
+              "selected": 0,
+              "selected_fraction": 0.0,
+              "rescue": 0,
+              "regression": 0,
+              "unchanged_success": 0,
+              "unchanged_failure": 0,
+              "precision": null,
+              "recall": null,
+              "precision_lift": null,
+              "net": 0.0,
+              "selected_rescue_clusters": 0,
+              "planned_extra_evaluations": 14,
+              "baseline_cap": 308,
+              "extra_budget": 154.0,
+              "overhead_feasible": true,
+              "actual_counterfactual_evaluations": 142,
+              "actual_baseline_evaluations": 128,
+              "actual_ratio": 1.109375
+            },
+            "0.75": {
+              "selected": 0,
+              "selected_fraction": 0.0,
+              "rescue": 0,
+              "regression": 0,
+              "unchanged_success": 0,
+              "unchanged_failure": 0,
+              "precision": null,
+              "recall": null,
+              "precision_lift": null,
+              "net": 0.0,
+              "selected_rescue_clusters": 0,
+              "planned_extra_evaluations": 14,
+              "baseline_cap": 308,
+              "extra_budget": 231.0,
+              "overhead_feasible": true,
+              "actual_counterfactual_evaluations": 142,
+              "actual_baseline_evaluations": 128,
+              "actual_ratio": 1.109375
+            },
+            "1.0": {
+              "selected": 0,
+              "selected_fraction": 0.0,
+              "rescue": 0,
+              "regression": 0,
+              "unchanged_success": 0,
+              "unchanged_failure": 0,
+              "precision": null,
+              "recall": null,
+              "precision_lift": null,
+              "net": 0.0,
+              "selected_rescue_clusters": 0,
+              "planned_extra_evaluations": 14,
+              "baseline_cap": 308,
+              "extra_budget": 308.0,
+              "overhead_feasible": true,
+              "actual_counterfactual_evaluations": 142,
+              "actual_baseline_evaluations": 128,
+              "actual_ratio": 1.109375
+            }
+          }
+        }
+      }
+    }
+  },
+  "descriptive_strata": {
+    "cluster": {
+      "libero_spatial/pick_up_the_black_bowl_between_the_plate_and_the_ramekin_and_place_it_on_the_plate": {
+        "cases": 6,
+        "comparisons": {
+          "2": {
+            "rescue": 0,
+            "regression": 0,
+            "unchanged_success": 6,
+            "unchanged_failure": 0
+          },
+          "4": {
+            "rescue": 0,
+            "regression": 0,
+            "unchanged_success": 6,
+            "unchanged_failure": 0
+          },
+          "10": {
+            "rescue": 0,
+            "regression": 0,
+            "unchanged_success": 6,
+            "unchanged_failure": 0
+          }
+        }
+      },
+      "libero_spatial/pick_up_the_black_bowl_next_to_the_ramekin_and_place_it_on_the_plate": {
+        "cases": 1,
+        "comparisons": {
+          "2": {
+            "rescue": 0,
+            "regression": 0,
+            "unchanged_success": 1,
+            "unchanged_failure": 0
+          },
+          "4": {
+            "rescue": 0,
+            "regression": 0,
+            "unchanged_success": 1,
+            "unchanged_failure": 0
+          },
+          "10": {
+            "rescue": 0,
+            "regression": 0,
+            "unchanged_success": 1,
+            "unchanged_failure": 0
+          }
+        }
+      }
+    },
+    "condition_id": {
+      "libero_plus:libero_spatial:1381": {
+        "cases": 1,
+        "comparisons": {
+          "2": {
+            "rescue": 0,
+            "regression": 0,
+            "unchanged_success": 1,
+            "unchanged_failure": 0
+          },
+          "4": {
+            "rescue": 0,
+            "regression": 0,
+            "unchanged_success": 1,
+            "unchanged_failure": 0
+          },
+          "10": {
+            "rescue": 0,
+            "regression": 0,
+            "unchanged_success": 1,
+            "unchanged_failure": 0
+          }
+        }
+      },
+      "libero_plus:libero_spatial:1750": {
+        "cases": 1,
+        "comparisons": {
+          "2": {
+            "rescue": 0,
+            "regression": 0,
+            "unchanged_success": 1,
+            "unchanged_failure": 0
+          },
+          "4": {
+            "rescue": 0,
+            "regression": 0,
+            "unchanged_success": 1,
+            "unchanged_failure": 0
+          },
+          "10": {
+            "rescue": 0,
+            "regression": 0,
+            "unchanged_success": 1,
+            "unchanged_failure": 0
+          }
+        }
+      },
+      "libero_plus:libero_spatial:2114": {
+        "cases": 1,
+        "comparisons": {
+          "2": {
+            "rescue": 0,
+            "regression": 0,
+            "unchanged_success": 1,
+            "unchanged_failure": 0
+          },
+          "4": {
+            "rescue": 0,
+            "regression": 0,
+            "unchanged_success": 1,
+            "unchanged_failure": 0
+          },
+          "10": {
+            "rescue": 0,
+            "regression": 0,
+            "unchanged_success": 1,
+            "unchanged_failure": 0
+          }
+        }
+      },
+      "libero_plus:libero_spatial:284": {
+        "cases": 1,
+        "comparisons": {
+          "2": {
+            "rescue": 0,
+            "regression": 0,
+            "unchanged_success": 1,
+            "unchanged_failure": 0
+          },
+          "4": {
+            "rescue": 0,
+            "regression": 0,
+            "unchanged_success": 1,
+            "unchanged_failure": 0
+          },
+          "10": {
+            "rescue": 0,
+            "regression": 0,
+            "unchanged_success": 1,
+            "unchanged_failure": 0
+          }
+        }
+      },
+      "libero_plus:libero_spatial:621": {
+        "cases": 1,
+        "comparisons": {
+          "2": {
+            "rescue": 0,
+            "regression": 0,
+            "unchanged_success": 1,
+            "unchanged_failure": 0
+          },
+          "4": {
+            "rescue": 0,
+            "regression": 0,
+            "unchanged_success": 1,
+            "unchanged_failure": 0
+          },
+          "10": {
+            "rescue": 0,
+            "regression": 0,
+            "unchanged_success": 1,
+            "unchanged_failure": 0
+          }
+        }
+      },
+      "libero_plus:libero_spatial:8": {
+        "cases": 1,
+        "comparisons": {
+          "2": {
+            "rescue": 0,
+            "regression": 0,
+            "unchanged_success": 1,
+            "unchanged_failure": 0
+          },
+          "4": {
+            "rescue": 0,
+            "regression": 0,
+            "unchanged_success": 1,
+            "unchanged_failure": 0
+          },
+          "10": {
+            "rescue": 0,
+            "regression": 0,
+            "unchanged_success": 1,
+            "unchanged_failure": 0
+          }
+        }
+      },
+      "libero_plus:libero_spatial:992": {
+        "cases": 1,
+        "comparisons": {
+          "2": {
+            "rescue": 0,
+            "regression": 0,
+            "unchanged_success": 1,
+            "unchanged_failure": 0
+          },
+          "4": {
+            "rescue": 0,
+            "regression": 0,
+            "unchanged_success": 1,
+            "unchanged_failure": 0
+          },
+          "10": {
+            "rescue": 0,
+            "regression": 0,
+            "unchanged_success": 1,
+            "unchanged_failure": 0
+          }
+        }
+      }
+    },
+    "category": {
+      "Sensor Noise": {
+        "cases": 1,
+        "comparisons": {
+          "2": {
+            "rescue": 0,
+            "regression": 0,
+            "unchanged_success": 1,
+            "unchanged_failure": 0
+          },
+          "4": {
+            "rescue": 0,
+            "regression": 0,
+            "unchanged_success": 1,
+            "unchanged_failure": 0
+          },
+          "10": {
+            "rescue": 0,
+            "regression": 0,
+            "unchanged_success": 1,
+            "unchanged_failure": 0
+          }
+        }
+      },
+      "Objects Layout": {
+        "cases": 1,
+        "comparisons": {
+          "2": {
+            "rescue": 0,
+            "regression": 0,
+            "unchanged_success": 1,
+            "unchanged_failure": 0
+          },
+          "4": {
+            "rescue": 0,
+            "regression": 0,
+            "unchanged_success": 1,
+            "unchanged_failure": 0
+          },
+          "10": {
+            "rescue": 0,
+            "regression": 0,
+            "unchanged_success": 1,
+            "unchanged_failure": 0
+          }
+        }
+      },
+      "Light Conditions": {
+        "cases": 1,
+        "comparisons": {
+          "2": {
+            "rescue": 0,
+            "regression": 0,
+            "unchanged_success": 1,
+            "unchanged_failure": 0
+          },
+          "4": {
+            "rescue": 0,
+            "regression": 0,
+            "unchanged_success": 1,
+            "unchanged_failure": 0
+          },
+          "10": {
+            "rescue": 0,
+            "regression": 0,
+            "unchanged_success": 1,
+            "unchanged_failure": 0
+          }
+        }
+      },
+      "Robot Initial States": {
+        "cases": 1,
+        "comparisons": {
+          "2": {
+            "rescue": 0,
+            "regression": 0,
+            "unchanged_success": 1,
+            "unchanged_failure": 0
+          },
+          "4": {
+            "rescue": 0,
+            "regression": 0,
+            "unchanged_success": 1,
+            "unchanged_failure": 0
+          },
+          "10": {
+            "rescue": 0,
+            "regression": 0,
+            "unchanged_success": 1,
+            "unchanged_failure": 0
+          }
+        }
+      },
+      "Camera Viewpoints": {
+        "cases": 1,
+        "comparisons": {
+          "2": {
+            "rescue": 0,
+            "regression": 0,
+            "unchanged_success": 1,
+            "unchanged_failure": 0
+          },
+          "4": {
+            "rescue": 0,
+            "regression": 0,
+            "unchanged_success": 1,
+            "unchanged_failure": 0
+          },
+          "10": {
+            "rescue": 0,
+            "regression": 0,
+            "unchanged_success": 1,
+            "unchanged_failure": 0
+          }
+        }
+      },
+      "Background Textures": {
+        "cases": 1,
+        "comparisons": {
+          "2": {
+            "rescue": 0,
+            "regression": 0,
+            "unchanged_success": 1,
+            "unchanged_failure": 0
+          },
+          "4": {
+            "rescue": 0,
+            "regression": 0,
+            "unchanged_success": 1,
+            "unchanged_failure": 0
+          },
+          "10": {
+            "rescue": 0,
+            "regression": 0,
+            "unchanged_success": 1,
+            "unchanged_failure": 0
+          }
+        }
+      },
+      "Language Instructions": {
+        "cases": 1,
+        "comparisons": {
+          "2": {
+            "rescue": 0,
+            "regression": 0,
+            "unchanged_success": 1,
+            "unchanged_failure": 0
+          },
+          "4": {
+            "rescue": 0,
+            "regression": 0,
+            "unchanged_success": 1,
+            "unchanged_failure": 0
+          },
+          "10": {
+            "rescue": 0,
+            "regression": 0,
+            "unchanged_success": 1,
+            "unchanged_failure": 0
+          }
+        }
+      }
+    },
+    "severity": {
+      "3": {
+        "cases": 7,
+        "comparisons": {
+          "2": {
+            "rescue": 0,
+            "regression": 0,
+            "unchanged_success": 7,
+            "unchanged_failure": 0
+          },
+          "4": {
+            "rescue": 0,
+            "regression": 0,
+            "unchanged_success": 7,
+            "unchanged_failure": 0
+          },
+          "10": {
+            "rescue": 0,
+            "regression": 0,
+            "unchanged_success": 7,
+            "unchanged_failure": 0
+          }
+        }
+      }
+    }
+  },
+  "decision_gate": {
+    "status": "excluded_smoke"
+  }
+}
