@@ -1,0 +1,190 @@
+{
+  "timestamp_utc": "2026-10-07T11:14:53.129378+00:00",
+  "status": "interim_passed_automatic_audits_pending",
+  "manifest_sha256": "fa87c99062b537cac51004f251394a11c7517e17f119acd827c4ee05359240db",
+  "recovery_manifest_sha256": "1e1d0e9c8e4f3645793bdb5c982bc56d8c5dacb2542a7bd74b93060eeb21f2c8",
+  "review_scope": "Independent streaming raw count/label/pair/cost verification; no reruns, no automatic-audit duplication. Full tensor/media and confidence audits remain owned by running supervisor.",
+  "benchmarks": {
+    "libero": {
+      "cases": 760,
+      "episodes": 3040,
+      "patterns": {
+        "SSSS": 682,
+        "SSSF": 11,
+        "FFFF": 6,
+        "SFSS": 17,
+        "FFSS": 5,
+        "FSSS": 14,
+        "SSFS": 12,
+        "SFFS": 1,
+        "FFFS": 1,
+        "FSFS": 2,
+        "SFSF": 4,
+        "SFFF": 2,
+        "FSSF": 1,
+        "SSFF": 1,
+        "FSFF": 1
+      },
+      "labels": {
+        "2": {
+          "unchanged_success": 706,
+          "unchanged_failure": 12,
+          "regression": 24,
+          "rescue": 18
+        },
+        "4": {
+          "unchanged_success": 714,
+          "unchanged_failure": 10,
+          "rescue": 20,
+          "regression": 16
+        },
+        "10": {
+          "unchanged_success": 712,
+          "regression": 18,
+          "unchanged_failure": 8,
+          "rescue": 22
+        }
+      },
+      "actual_scored_velocity_evaluations": 427865,
+      "production_chunks": 99095,
+      "probe_evaluations": 6080,
+      "raw_pairing_identity_and_probe_hash_reproducibility": true,
+      "metrics_counts_match": true,
+      "preliminary_decision": {
+        "pass_": false,
+        "checks": {
+          "adequate_rescues": true,
+          "adequate_regressions": true,
+          "selected_rescues": false,
+          "selected_clusters": false,
+          "precision": false,
+          "recall": true,
+          "4/0.75/precision_lift": false,
+          "4/0.75/net": false,
+          "4/rescue_regression_auroc": false
+        },
+        "decision": "STOP_no_controller"
+      },
+      "metric_sha256": "03e01c57d3b23162500b562724ea7c3afe34950b4eacb25d1a1a6a676e0273b8"
+    },
+    "libero_plus": {
+      "cases": 1680,
+      "episodes": 6720,
+      "patterns": {
+        "SSSS": 1400,
+        "FFSF": 10,
+        "FFFF": 75,
+        "FSFF": 4,
+        "FSSS": 33,
+        "SSFS": 22,
+        "SFSS": 23,
+        "SFFF": 11,
+        "SSSF": 36,
+        "FSFS": 5,
+        "SFSF": 7,
+        "FSSF": 4,
+        "FFSS": 14,
+        "SFFS": 10,
+        "SSFF": 11,
+        "FFFS": 15
+      },
+      "labels": {
+        "2": {
+          "unchanged_success": 1469,
+          "unchanged_failure": 114,
+          "rescue": 46,
+          "regression": 51
+        },
+        "4": {
+          "unchanged_success": 1466,
+          "rescue": 61,
+          "unchanged_failure": 99,
+          "regression": 54
+        },
+        "10": {
+          "unchanged_success": 1455,
+          "unchanged_failure": 93,
+          "rescue": 67,
+          "regression": 65
+        }
+      },
+      "actual_scored_velocity_evaluations": 1043229,
+      "production_chunks": 242064,
+      "probe_evaluations": 13440,
+      "raw_pairing_identity_and_probe_hash_reproducibility": true,
+      "metrics_counts_match": true,
+      "preliminary_decision": {
+        "pass_": false,
+        "checks": {
+          "adequate_rescues": true,
+          "adequate_regressions": true,
+          "selected_rescues": true,
+          "selected_clusters": true,
+          "precision": false,
+          "recall": true,
+          "4/0.75/precision_lift": false,
+          "4/0.75/net": false,
+          "4/rescue_regression_auroc": false
+        },
+        "decision": "STOP_no_controller"
+      },
+      "metric_sha256": "9d52380ee81f61630b6adcefccb5f2c2ca281959dcb06614efe668e6fd6fb237"
+    }
+  },
+  "source_files": [
+    {
+      "path": "/volt/artifacts/flow-probe/runs/libero-main-worker-0.jsonl",
+      "sha256": "f79ebe8d1ccde04077d64075bea7fa6ca9304bf178226dbb18dbdf126f9fc22e",
+      "rows": 760
+    },
+    {
+      "path": "/volt/artifacts/flow-probe/runs/libero-main-worker-1.jsonl",
+      "sha256": "28677927b03f1d54b6e0986b1d7ba6be9cf2da6b9b824284ae1215f4e730de7b",
+      "rows": 760
+    },
+    {
+      "path": "/volt/artifacts/flow-probe/runs/libero-main-worker-2.jsonl",
+      "sha256": "63cfd16d7927a7934d79b8fa1ca5f78309779ee92a2c6f5cdf93337a24621088",
+      "rows": 760
+    },
+    {
+      "path": "/volt/artifacts/flow-probe/runs/libero-main-worker-3.jsonl",
+      "sha256": "b12cf61ededa853b96a4db544e688c94fa6e74d6230ab1f95214e496984cce26",
+      "rows": 760
+    },
+    {
+      "path": "/volt/artifacts/flow-probe/runs/libero_plus-main-worker-0.jsonl",
+      "sha256": "82f7ab61d35a23c3bf6c70cd2573ce42a0018b8bd93279953b13ca02b9b1bf0e",
+      "rows": 1680
+    },
+    {
+      "path": "/volt/artifacts/flow-probe/runs/libero_plus-main-worker-1.jsonl",
+      "sha256": "ca7ac60b73a1bfb2a833664b594439d4cb16433f0fea1cd689d0a9657d80000e",
+      "rows": 1680
+    },
+    {
+      "path": "/volt/artifacts/flow-probe/runs/libero_plus-main-worker-2.jsonl",
+      "sha256": "6bf0fcce1a9ff39623e78c623a3490245a76405f095f1236e4e5894ee96c6665",
+      "rows": 1680
+    },
+    {
+      "path": "/volt/artifacts/flow-probe/runs/libero_plus-main-worker-3.jsonl",
+      "sha256": "f51c647692aaefc29b1731edf2768dcc205102252e1b762e71889003932ed72e",
+      "rows": 1680
+    }
+  ],
+  "full-independent-audit.json": {
+    "present": false
+  },
+  "libero-recording-audit.json": {
+    "sha256": "2f393fe8531b9e6a08d2f3e0f436e0bdedfbae6867d3e1eb862e574d55771fe7",
+    "status": "passed"
+  },
+  "libero_plus-recording-audit.json": {
+    "present": false
+  },
+  "full-status.json": {
+    "sha256": "9cce181f7fd495e3e2fcfc1062220ba86c89229802a0e47a689a792eea952e28",
+    "status": "running"
+  }
+}

@@ -1,0 +1,166 @@
+{
+  "status": "approved",
+  "timestamp_utc": "2026-10-07T13:18:00.724410+00:00",
+  "role": "Independent Test Writer",
+  "scope": "Final actual-artifact review of published numerical pipeline; prior independent raw and point reviews preserved. No duplicate evaluations, probes or automatic audits.",
+  "manifest_sha256": "fa87c99062b537cac51004f251394a11c7517e17f119acd827c4ee05359240db",
+  "recovery_manifest_sha256": "1e1d0e9c8e4f3645793bdb5c982bc56d8c5dacb2542a7bd74b93060eeb21f2c8",
+  "published_commit": "614c3d8209c5a2848511fa7d4158d1da8fab8ce2",
+  "current_git_head": "614c3d8209c5a2848511fa7d4158d1da8fab8ce2",
+  "original_source_files_verified": 319,
+  "recovery_files_verified": 7,
+  "preparation_parity_checks": 32,
+  "scored_nfe": 1471094,
+  "preparation_nfe": 1072,
+  "scored_plus_preparation_nfe": 1472166,
+  "probe_nfe": 19520,
+  "max_independent_head_log_sigma_difference": 5.4836273193359375e-06,
+  "max_primary_ci_endpoint_difference": 1.3877787807814457e-17,
+  "ci_comparison_tolerance": {
+    "rtol": 1e-10,
+    "atol": 1e-12
+  },
+  "full_tensor_score_sigma_noise_action_media_gate": "Passed hash-linked full independent and recording audits; all paired raw records separately checked in prior Test Writer review.",
+  "interval_scope": "Primary flow four-step ranking and75%-extra-cap budget intervals independently reproduced; Plus condition sensitivity independently reproduced by full auditor. Secondary arm/budget/comparator intervals only structurally checked, not independently reproduced.",
+  "new_simulator_warnings": 0,
+  "benchmarks": {
+    "libero": {
+      "cases": 760,
+      "episodes": 3040,
+      "media_decoded_and_audited": true,
+      "all_point_metrics_reproduced": true,
+      "primary_intervals_reproduced": true,
+      "decision_gate": {
+        "pass_": false,
+        "checks": {
+          "adequate_rescues": true,
+          "adequate_regressions": true,
+          "selected_rescues": false,
+          "selected_clusters": false,
+          "precision": false,
+          "recall": true,
+          "4/0.75/precision_lift": false,
+          "4/0.75/net": false,
+          "4/rescue_regression_auroc": false
+        },
+        "decision": "STOP_no_controller"
+      },
+      "primary_budget": {
+        "selected": 202,
+        "selected_fraction": 0.2657894736842105,
+        "rescue": 4,
+        "regression": 2,
+        "unchanged_success": 194,
+        "unchanged_failure": 2,
+        "precision": 0.019801980198019802,
+        "recall": 0.2,
+        "precision_lift": -0.006513809275664407,
+        "net": 0.002631578947368421,
+        "selected_rescue_clusters": 4,
+        "planned_extra_evaluations": 37544,
+        "baseline_cap": 50160,
+        "extra_budget": 37620.0,
+        "overhead_feasible": true,
+        "actual_counterfactual_evaluations": 44202,
+        "actual_baseline_evaluations": 24757,
+        "actual_ratio": 1.785434422587551
+      }
+    },
+    "libero_plus": {
+      "cases": 1680,
+      "episodes": 6720,
+      "media_decoded_and_audited": true,
+      "all_point_metrics_reproduced": true,
+      "primary_intervals_reproduced": true,
+      "decision_gate": {
+        "pass_": false,
+        "checks": {
+          "adequate_rescues": true,
+          "adequate_regressions": true,
+          "selected_rescues": true,
+          "selected_clusters": true,
+          "precision": false,
+          "recall": true,
+          "4/0.75/precision_lift": false,
+          "4/0.75/net": false,
+          "4/rescue_regression_auroc": false
+        },
+        "decision": "STOP_no_controller"
+      },
+      "primary_budget": {
+        "selected": 426,
+        "selected_fraction": 0.25357142857142856,
+        "rescue": 21,
+        "regression": 16,
+        "unchanged_success": 357,
+        "unchanged_failure": 32,
+        "precision": 0.04929577464788732,
+        "recall": 0.3442622950819672,
+        "precision_lift": 0.012986250838363508,
+        "net": 0.002976190476190476,
+        "selected_rescue_clusters": 10,
+        "planned_extra_evaluations": 83040,
+        "baseline_cap": 110880,
+        "extra_budget": 83160.0,
+        "overhead_feasible": true,
+        "actual_counterfactual_evaluations": 107224,
+        "actual_baseline_evaluations": 60543,
+        "actual_ratio": 1.7710387658358522
+      }
+    }
+  },
+  "blockers": [],
+  "decision": "Both benchmarks fail prespecified useful-ranking gate. Stop; no adaptive controller or offline-speedup claim.",
+  "remaining_scope": "Approval covers numerical pipeline evidence, not unseen final report/package.",
+  "review_note": "Initial final-receipt assembly used overly strict JSON equality for CI endpoints and stopped before writing; inspection found only floating differences <=1.4e-17. This receipt uses established auditor tolerance; no source/data/metrics changed.",
+  "evidence": [
+    {
+      "path": "examples/flow_probe/protocol.json",
+      "sha256": "fa87c99062b537cac51004f251394a11c7517e17f119acd827c4ee05359240db"
+    },
+    {
+      "path": "examples/flow_probe/recovery/recovery-manifest.json",
+      "sha256": "1e1d0e9c8e4f3645793bdb5c982bc56d8c5dacb2542a7bd74b93060eeb21f2c8"
+    },
+    {
+      "path": "/volt/artifacts/flow-probe/runs/full-status.json",
+      "sha256": "03a9df55ac43e7617402a99363a0db4f97993adde81ad788bf6670068ad4cdf6"
+    },
+    {
+      "path": "/volt/artifacts/flow-probe/runs/full-independent-audit.json",
+      "sha256": "c63a5b738b2cc25ac2a975c0df1f5184109bff3dec6eb4f920351a6af94fbab5"
+    },
+    {
+      "path": "/volt/artifacts/flow-probe/runs/libero-recording-audit.json",
+      "sha256": "2f393fe8531b9e6a08d2f3e0f436e0bdedfbae6867d3e1eb862e574d55771fe7"
+    },
+    {
+      "path": "/volt/artifacts/flow-probe/runs/libero_plus-recording-audit.json",
+      "sha256": "d2646f7f43f70d9fc54b762e636a19db1c0c4f799bae973dac65bbf35ced1cbe"
+    },
+    {
+      "path": "/volt/artifacts/flow-probe/test-writer/final-raw-count-review-20261007.json",
+      "sha256": "c47e66eab47cbb0f420ffaa322651cb85485258751a1fbc5c48b8896f4a7196a"
+    },
+    {
+      "path": "/volt/artifacts/flow-probe/test-writer/final-point-review-20261007.json",
+      "sha256": "ff7e71472aa456b6de8a70af39aa25c16c411d8a9d51aa613f482e714218d925"
+    }
+  ],
+  "final_cpu_tests": {
+    "passed": 53,
+    "unittest": 41,
+    "pytest_recovery_guards": 12,
+    "no_rollouts_or_models_executed": true,
+    "logs": [
+      {
+        "path": "/volt/artifacts/flow-probe/test-writer/final-cpu-tests-20261007.log",
+        "sha256": "538fed1d9f0b2cb6c87c410f1d362a9be499c356d7e23feed5d06d2e93c7a7ec"
+      },
+      {
+        "path": "/volt/artifacts/flow-probe/test-writer/final-recovery-tests-20261007.log",
+        "sha256": "c90552887b15f0dd338283c6b09a470ebacdbd4677c68174867fe21155a8b633"
+      }
+    ]
+  }
+}

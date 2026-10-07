@@ -1,0 +1,26 @@
+{
+  "status": "passed",
+  "reviewed_at": "2026-10-07T13:17:56.694206+00:00",
+  "commit": "614c3d8209c5a2848511fa7d4158d1da8fab8ce2",
+  "source_hashes": 319,
+  "recovery_hashes": 7,
+  "git_shards": 32,
+  "source_indexes": 16,
+  "source_lines": 9768,
+  "probe_rows": 9760,
+  "artifacts": [
+    {
+      "name": "arm-aair-idit/pi05-two-evaluation-ranking/initial-flow-probes-full-fa87c99062b5:v0",
+      "state": "COMMITTED",
+      "entries": 2440,
+      "digest": "b7a2dee9dea181eb9f1b8bfaa03a2136"
+    },
+    {
+      "name": "arm-aair-idit/pi05-two-evaluation-ranking/supervisor-full-fa87c99062b5:v0",
+      "state": "COMMITTED",
+      "entries": 51,
+      "digest": "c3ce75a30603a72353437d00ea180995"
+    }
+  ],
+  "remote": "614c3d8209c5a2848511fa7d4158d1da8fab8ce2\trefs/heads/codex/pi05-two-evaluation-ranking"
+}

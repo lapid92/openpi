@@ -1,0 +1,31 @@
+{
+  "status": "approved_for_final_publication",
+  "reviewed_at_utc": "2026-10-07T13:22:12.474336+00:00",
+  "manifest_sha256": "fa87c99062b537cac51004f251394a11c7517e17f119acd827c4ee05359240db",
+  "published_numerical_commit": "614c3d8209c5a2848511fa7d4158d1da8fab8ce2",
+  "supplement_path": "/volt/code/frozen-flow-study/examples/flow_probe/results/fa87c99062b5/final-review/FINAL_REVIEW_SUPPLEMENT.md",
+  "supplement_sha256": "fcb59571bda47c7a5b46957363b8c508c63cedf662cfdf2c145f236a8389ce80",
+  "published_byte_audit_path": "/volt/artifacts/flow-probe/reviewer/published-byte-audit.json",
+  "published_byte_audit_sha256": "43333c8081d7ec572817c4640d04946f5969382316fcf93ea217209426dbf9d2",
+  "blockers": [],
+  "approval_scope": "Scientific report, interpretation, final supplement and already-published numerical evidence approved for final package publication. Final package upload/commit/push and remote identity verification remain Leader responsibility.",
+  "verified": [
+    "319 original source hashes and7recovery hashes unchanged; bothimmutableW&Bv0 artifactsCOMMITTED.",
+    "32Gitshards exactlyreconstruct16originalrawsources and9768lines(9760physicalepisodes+8preparations);9760probeindexrows andrawhashes verified,2440deduplicatedprobeartifacts.",
+    "Actualfullindependent auditpassed allpointmetrics andprimaryflow4step75percent clusteredintervals/decision; fullvideosdecoded;0newMuJoCowarnings.",
+    "Bothprespecifieddecisiongatesfail. ModestPlusall-caseAPenrichment doesnotmeetusefulprecision orrobustrescue/regressionseparation; STOP/noadaptivecontroller conclusionjustified.",
+    "Supplementaccuratelydisclosesfiveexecutedactions versustenforecastscorepositions, pre-fullauditor/prose correction, unchangedscience andpreservedfailure.",
+    "Supplementcorrectlylimitsindependentsecondaryintervalverification, distinguishepisode-rankingfromclosedloop, chargesbothprobeevaluations andreportsactualofflinecost withoutspeedupclaim.",
+    "FinalPlusoutcometableheaderfixed; immutableartifactURLscorrectforAPI-verifiedartifacts; addedconditionclusterprecision/net/AUROC intervals matchactualmetrics."
+  ],
+  "limitations": [
+    "Secondaryarm/budget/comparatorintervals structurallychecked, notindependentlyreproduced.",
+    "Standardtaskidentities reused; newstate/noisecases. Plusconditionsnew butfamilies/statescorrelated.",
+    "Offlineinitialobservationranking doesnot establishper-chunkcontroller orcausalmechanism."
+  ],
+  "remaining_actions": [
+    "Publishapprovedsupplement+review/TestWriterreceipts andcurrentpublicationstatus asfinalsmallartifactpackage.",
+    "VerifyfinalW&BartifactcommittedandGitremoteHEAD afterpush.",
+    "Report STOP decision withfinalcommitandlinks; noadaptivecontroller ornewrollouts."
+  ]
+}

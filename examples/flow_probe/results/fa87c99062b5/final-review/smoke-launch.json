@@ -1,0 +1,16 @@
+{
+  "pid": 2440057,
+  "argv": [
+    "/volt/code/frozen-flow-study/.venv/bin/python",
+    "-u",
+    "/volt/code/frozen-flow-study/examples/flow_probe/supervise.py",
+    "--manifest",
+    "/volt/code/frozen-flow-study/examples/flow_probe/protocol.json",
+    "--output",
+    "/volt/artifacts/flow-probe/runs",
+    "--phase",
+    "smoke"
+  ],
+  "launched_at_utc": "2026-10-05T14:11:54.704994+00:00",
+  "commit": "cf3f6bb96fed3c4cd0f9de9bf22b1f75a1bc3fa7"
+}

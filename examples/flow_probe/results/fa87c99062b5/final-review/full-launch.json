@@ -1,0 +1,21 @@
+{
+  "pid": 2458884,
+  "argv": [
+    "/volt/code/frozen-flow-study/.venv/bin/python",
+    "-u",
+    "examples/flow_probe/recovery/supervise_v2.py",
+    "--recovery-manifest",
+    "examples/flow_probe/recovery/recovery-manifest.json",
+    "--recovery-manifest-sha256",
+    "1e1d0e9c8e4f3645793bdb5c982bc56d8c5dacb2542a7bd74b93060eeb21f2c8",
+    "--",
+    "--manifest",
+    "examples/flow_probe/protocol.json",
+    "--output",
+    "/volt/artifacts/flow-probe/runs",
+    "--phase",
+    "full"
+  ],
+  "launched_at": "2026-10-05T15:28:51.729774+00:00",
+  "commit": "4b81be495eacb16892525b8aa40846ff56f1b0b6"
+}

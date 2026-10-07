@@ -1,0 +1,49 @@
+{
+  "status": "pending_automated_final_audit_and_publication",
+  "time_utc": "2026-10-07T11:15:36.057568+00:00",
+  "manifest_sha256": "fa87c99062b537cac51004f251394a11c7517e17f119acd827c4ee05359240db",
+  "recovery_manifest_sha256": "1e1d0e9c8e4f3645793bdb5c982bc56d8c5dacb2542a7bd74b93060eeb21f2c8",
+  "recovery_files_verified": 7,
+  "all_original_pinned_source_hashes_verified": true,
+  "available_evidence": {
+    "libero-metrics.json": {
+      "exists": true,
+      "sha256": "03e01c57d3b23162500b562724ea7c3afe34950b4eacb25d1a1a6a676e0273b8"
+    },
+    "libero_plus-metrics.json": {
+      "exists": true,
+      "sha256": "9d52380ee81f61630b6adcefccb5f2c2ca281959dcb06614efe668e6fd6fb237"
+    },
+    "full-independent-audit.json": {
+      "exists": false,
+      "sha256": null
+    },
+    "full-REPORT.md": {
+      "exists": false,
+      "sha256": null
+    },
+    "libero-recording-audit.json": {
+      "exists": true,
+      "sha256": "2f393fe8531b9e6a08d2f3e0f436e0bdedfbae6867d3e1eb862e574d55771fe7"
+    },
+    "libero_plus-recording-audit.json": {
+      "exists": false,
+      "sha256": null
+    }
+  },
+  "preliminary_interpretation": "BothprimarygatesSTOP. ModestPlusall-caseAPenrichmentdoesnotestablishrescue/regressiondiscriminationorusefulprecision; noadaptivecontroller.",
+  "final_supplement_required": [
+    "Explicitfiveexecutedactionsperchunk vs10forecastscorepositions andlinktoAMENDMENT.md; originaldocumentationerror/auditorfailurepreserved.",
+    "Independentuncertaintyreproductionscope: allpointmetrics plusprimaryflow4step/B75CIs(andPlusconditionsensitivity); otherarm/budget/comparatorintervals onlystructurallychecked.",
+    "Human-readableprimaryAP/prevalence, rescuesvsregressions AUROC+CI, budgetprecision/recall/net+CI, actualofflineratiooverhead; noonlineperformanceclaim.",
+    "FinalMuJoCologwarningboundaryandcounts withsimulationerrorskeptseparatefrompolicyfailures.",
+    "ActualimmutableW&Bartifactlinks, finalGitcommit, exactcommandprovenance andremaininglimitations."
+  ],
+  "not_yet_approved": [
+    "Finalautomaticauditreceipt",
+    "Plusfullvideodecodeaudit",
+    "Generatedreportactualcontent",
+    "Git/W&Bfinalpublicationbytes",
+    "Finalsupplement"
+  ]
+}
