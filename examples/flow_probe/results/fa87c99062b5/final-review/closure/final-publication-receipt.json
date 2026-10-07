@@ -1,0 +1,11 @@
+{
+  "status": "published_verified",
+  "artifact": "arm-aair-idit/pi05-two-evaluation-ranking/final-independent-review-fa87c99062b5:v0",
+  "artifact_digest": "15b62ea007bde2fdd1e23af7dc48d4d8",
+  "wandb_url": "https://wandb.ai/arm-aair-idit/pi05-two-evaluation-ranking/runs/um8hfwok",
+  "decision": "STOP_no_controller",
+  "evaluations_launched": 0,
+  "base_results_commit": "614c3d8209c5a2848511fa7d4158d1da8fab8ce2",
+  "commit": "124cc06ea6f9f0475098082a7e5b1d790214bb3c",
+  "artifact_state": "COMMITTED"
+}
