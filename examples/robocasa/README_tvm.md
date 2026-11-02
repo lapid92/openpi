@@ -17,6 +17,17 @@ Download the official **pretrain human** RoboCasa datasets on the training pod u
 
 If the datasets are already mounted outside RoboCasa's default `datasets` directory, pass `--dataset-root /path/to/robocasa-datasets`, where that root contains `v1.0/pretrain`.
 
+To stage the complete public Human300 release on a training pod from the matching task archives, run:
+
+```bash
+python -m scripts.stage_robocasa_human300_public \
+  /durable/robocasa-datasets \
+  /durable/human300-source-archives \
+  --workers 8
+```
+
+The staging command checks that all 300 registry paths exist at a pinned source revision, verifies each archive's LFS SHA-256 and size, extracts it into `v1.0/pretrain`, and writes `human300_stage_manifest.json`. It is resumable and does not upload to S3.
+
 Stage the public base checkpoint on the pod with `python scripts/stage_pi05_base_gcs.py /path/to/pi05_base/params`. For the released source, obtain `robocasa/robocasa365_checkpoints` at revision `c484448aba1a9b60a04c9b0ca117241518ea69f3`, subdirectory `pi05_pretrain_human300/multitask_learning/75000`. Pass its `params` and `assets` directories separately. Keep dataset and checkpoint transfers on the training pod.
 
 ## Launch
@@ -54,5 +65,7 @@ python3 scripts/mirror_robocasa_tvm_s3.py \
 Use a Python environment with `boto3` and pod S3 credentials for the mirror; it need not be the training environment. Use the corresponding base run directory and `--until-step 100000` for the base recipe. The mirror uploads only finalized Orbax step directories and writes an S3 completion manifest after verifying each uploaded file's size. Re-running it skips steps with a completion manifest.
 
 For a bounded two-update smoke with active TVM, add `--smoke-task AdjustToasterOvenTemperature` and use a unique experiment name. This uses eight examples per update, one real Human300 task, and sets TVM warmup and ramp to zero. For a longer loss-trend check, also pass `--smoke-steps 32`. The longer smoke uses the recipe's peak learning rate immediately so that 32 updates are informative; it saves checkpoints after the first and final updates. Compare averages over early and late updates because stochastic per-step losses need not decrease monotonically. Smoke results do not represent the 300-task production distribution.
+
+After staging all 300 tasks, use `--smoke-all` instead of `--smoke-task` to run the same bounded checks on the full Human300 mixture. Pass the staging directory as `--dataset-root`.
 
 For TVM inference, `scripts/serve_policy.py` defaults to `jump` with these two configs: each Euler step queries `F(x; t, s)` at the next time `s`. Explicit `--sampler fm_only` queries the diagonal `F(x; t, t)` for comparison. The sampler is an inference choice; `fm_only` does **not** mean the model was trained without TVM. Other configs retain their existing sampler default.
