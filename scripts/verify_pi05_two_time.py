@@ -6,6 +6,7 @@ import json
 import flax.nnx as nnx
 import jax
 import jax.numpy as jnp
+import numpy as np
 
 from openpi.models import model as model_lib
 from openpi.models.pi0 import make_attn_mask
@@ -64,7 +65,21 @@ def main() -> None:
         if not jnp.all(jnp.isfinite(actual)) or max_error > 1e-5:
             raise AssertionError(f"Output parity failed at ({source}, {target}): {max_error}")
         results.append({"source_time": source, "target_time": target, "max_abs_error": max_error})
-    print(json.dumps({"source_params": args.params, "one_time_output_parity": results}, indent=2))
+    noise = jax.random.normal(jax.random.key(23), (1, config.action_horizon, config.action_dim))
+    sampled = {
+        sampler: np.asarray(model.sample_actions(jax.random.key(42), observation, num_steps=2, noise=noise, sampler=sampler))
+        for sampler in ("fm_only", "current_time", "jump", "target_time")
+    }
+    np.testing.assert_array_equal(sampled["fm_only"], sampled["current_time"])
+    np.testing.assert_array_equal(sampled["jump"], sampled["target_time"])
+    if any(not np.isfinite(value).all() for value in sampled.values()):
+        raise AssertionError("Nonfinite sampler output")
+    print(json.dumps({
+        "source_params": args.params,
+        "one_time_output_parity": results,
+        "sampler_aliases_exact": True,
+        "jump_vs_fm_only_max_abs_diff": float(np.max(np.abs(sampled["jump"] - sampled["fm_only"]))),
+    }, indent=2))
 
 
 if __name__ == "__main__":
