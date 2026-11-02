@@ -9,6 +9,10 @@ from pathlib import Path
 import subprocess
 import sys
 
+# Data-loader workers import RoboCasa even though training does not render.
+# Select GLFW before importing OpenPI or RoboCasa to avoid headless EGL imports.
+os.environ.setdefault("MUJOCO_GL", "glfw")
+
 from openpi.training import config as training_config
 from openpi.training import weight_loaders
 
@@ -123,9 +127,6 @@ def main() -> None:
         manifest_path.write_text(json.dumps(provenance, indent=2) + "\n")
     os.environ["OPENPI_GIT_SHA"] = git_sha
     os.environ.setdefault("XLA_PYTHON_CLIENT_MEM_FRACTION", "0.9")
-    # Data-loader workers import RoboCasa even though training does not render.
-    # GLFW avoids a headless PyOpenGL EGL import failure in those workers.
-    os.environ.setdefault("MUJOCO_GL", "glfw")
 
     import jax
 
