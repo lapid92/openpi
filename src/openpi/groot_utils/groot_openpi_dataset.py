@@ -1,26 +1,14 @@
 """Groot-LeRobot dataset implementation for openpi training."""
 
-import glob
 import json
-import os
-from collections.abc import Iterator, Sequence
-from typing import Protocol, SupportsIndex, TypeVar
+from typing import SupportsIndex
 
-import jax
-import jax.numpy as jnp
 import numpy as np
-import pandas as pd
-import cv2  # Add OpenCV for video frame extraction
 
-import openpi.models.model as _model
-import openpi.training.config as _config
 import openpi.transforms as _transforms
 import openpi.shared.normalize as _normalize
 
 import pathlib
-from pathlib import Path
-
-T_co = TypeVar("T_co", covariant=True)
 
 from robocasa.utils.groot_utils.groot_dataset import LeRobotSingleDataset, LeRobotMixtureDataset, LE_ROBOT_MODALITY_FILENAME, ModalityConfig, LE_ROBOT_EPISODE_FILENAME
 from robocasa.utils.groot_utils.embodiment_tags import EmbodimentTag
@@ -50,7 +38,7 @@ class GrootOpenpiSingleDataset(LeRobotSingleDataset):
         self,
         dataset_meta: dict,
         action_horizon: int,
-    ):        
+    ):
         # this part copied from Abhi's DP codebasee
         dataset_path = dataset_meta["path"]
         dataset_path = pathlib.Path(dataset_path)
@@ -81,7 +69,7 @@ class GrootOpenpiSingleDataset(LeRobotSingleDataset):
                 modality_keys=language_modality_keys,
             ),
         }
-        
+
         super().__init__(
             dataset_path=dataset_path,
             modality_configs=modality_configs,
@@ -115,8 +103,7 @@ class GrootOpenpiSingleDataset(LeRobotSingleDataset):
             "observation/wrist_image": item["video.robot0_eye_in_hand"][0],
             "observation/state": state[0],
             "actions": actions,
-            "prompt": item["annotation.human.task_description"][0], # TODO: Soroush change this later to task_description
-            # "prompt": item["annotation.human.coarse_action"][0], # TODO: Soroush change this later to task_description
+            "prompt": item["annotation.human.task_description"][0],
         }
         # Add right camera if available
         if "video.robot0_agentview_right" in item:
@@ -131,9 +118,7 @@ class GrootOpenpiMultiDataset(LeRobotMixtureDataset):
             action_horizon: int,
             dataset_weights=None,
             dataset_weights_alpha=0.4,
-            metadata_config: dict = { # probably doesn't play a role here? TOOD double check
-                "percentile_mixing_method": "weighted_average",
-            },
+            metadata_config: dict | None = None,
         ):
         datasets = []
         for ds_meta in dataset_meta_list:
@@ -185,10 +170,10 @@ class GrootOpenpiMultiDataset(LeRobotMixtureDataset):
         # set balance_dataset_weights to False, since we are calculating weights ourselves
         super().__init__(
             data_mixture=dataset_mixture,
-            mode="train", 
+            mode="train",
             balance_dataset_weights=False,
             balance_trajectory_weights=False,
-            metadata_config=metadata_config,
+            metadata_config=metadata_config or {"percentile_mixing_method": "weighted_average"},
         )
 
     def sample_step(self, index: int) -> tuple[LeRobotSingleDataset, int, int]:
@@ -217,7 +202,7 @@ class GrootOpenpiMultiDataset(LeRobotMixtureDataset):
         # Sample step
         base_index = np.random.choice(dataset.trajectory_lengths[trajectory_index])
         return dataset, trajectory_id, base_index
-    
+
     def __getitem__(self, index: SupportsIndex) -> dict:
         item = super().__getitem__(index)
 
@@ -241,8 +226,7 @@ class GrootOpenpiMultiDataset(LeRobotMixtureDataset):
             "observation/wrist_image": item["video.robot0_eye_in_hand"][0],
             "observation/state": state[0],
             "actions": actions,
-            "prompt": item["annotation.human.task_description"][0], # TODO: Soroush change this later to task_description
-            # "prompt": item["annotation.human.coarse_action"][0], # TODO: Soroush change this later to task_description
+            "prompt": item["annotation.human.task_description"][0],
         }
         # Add right camera if available
         if "video.robot0_agentview_right" in item:
@@ -253,10 +237,10 @@ class GrootOpenpiMultiDataset(LeRobotMixtureDataset):
 def _load_norm_stats_from_groot_dataset(ds_meta: dict) -> dict[str, _transforms.NormStats] | None:
     def pad_zeros(input, targ_len):
         return np.concatenate([input, np.zeros(targ_len - len(input))])
-    
+
     def pad_ones(input, targ_len):
         return np.concatenate([input, np.ones(targ_len - len(input))])
-    
+
     dataset_path = ds_meta["path"]
     dataset_path = pathlib.Path(dataset_path)
     path = dataset_path / "meta" / "stats.json"
@@ -309,7 +293,7 @@ def _load_norm_stats_from_groot_dataset(ds_meta: dict) -> dict[str, _transforms.
     raw_actions_stats = data["action"]
     raw_actions_mean = np.array(raw_actions_stats["mean"])
     raw_actions_std = np.array(raw_actions_stats["std"])
-    
+
     # HACK: choose appropriate action indices
     actions_indices = [5, 6, 7, 8, 9, 10, 11, 0, 1, 2, 3, 4]
     actions_mean = raw_actions_mean[actions_indices]
@@ -378,7 +362,7 @@ def compute_overall_statistics(
             # Update weighted sums for mean and variance
             weighted_means += w_i * means
             weighted_squares += w_i * (stds**2 + means**2)
-        
+
         # Compute overall mean
         overall_mean = weighted_means.tolist()
 
@@ -400,7 +384,7 @@ def _load_norm_stats_from_groot_mixture_dataset(dataset_meta_list) -> dict[str, 
     per_dataset_norm_stats = []
     for ds_meta in dataset_meta_list:
         per_dataset_norm_stats.append(_load_norm_stats_from_groot_dataset(ds_meta))
-    
+
     return compute_overall_statistics(
         per_dataset_norm_stats,
         dataset_sampling_weights=np.ones(len(dataset_meta_list)),

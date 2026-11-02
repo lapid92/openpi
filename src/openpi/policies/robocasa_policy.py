@@ -65,7 +65,7 @@ class RobocasaInputs(transforms.DataTransformFn):
         # right wrist image below.
         base_image = _parse_image(data["observation/image"])
         wrist_image = _parse_image(data["observation/wrist_image"])
-        
+
         # For pi05, use all 3 cameras. Right camera must be available.
         # For pi0, right camera is padded with zeros and masked out.
         if self.model_type == _model.ModelType.PI05:

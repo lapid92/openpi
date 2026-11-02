@@ -81,6 +81,8 @@ def main() -> None:
         "config": cfg.name,
         "git_sha": git_sha,
         "initialization": args.init,
+        "source_repo": "robocasa/robocasa365_checkpoints" if args.init == "released" else "gs://openpi-assets/checkpoints/pi05_base",
+        "source_revision": "c484448aba1a9b60a04c9b0ca117241518ea69f3" if args.init == "released" else "public pi05_base",
         "source_params": str(args.params.resolve()),
         "released_assets": str(args.released_assets.resolve()) if args.released_assets else None,
         "human300_tasks": [args.smoke_task] if args.smoke_task else "all 300",
@@ -98,6 +100,11 @@ def main() -> None:
         manifest_path.write_text(json.dumps(provenance, indent=2) + "\n")
     os.environ["OPENPI_GIT_SHA"] = git_sha
     os.environ.setdefault("XLA_PYTHON_CLIENT_MEM_FRACTION", "0.9")
+
+    import jax
+
+    if jax.device_count() != 8 or any(device.platform != "gpu" for device in jax.devices()):
+        raise RuntimeError("Human300 TVM recipes require exactly eight visible GPUs")
 
     # Import after selecting the run directory so the manifest exists even when startup fails.
     from scripts.train import main as train_main
