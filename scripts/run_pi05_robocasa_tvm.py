@@ -84,7 +84,7 @@ def main() -> None:
             checkpoint_completed_steps=(1, args.smoke_steps),
             num_workers=1,
             log_interval=1,
-            save_interval=1,
+            save_interval=args.smoke_steps,
             tvm=dataclasses.replace(cfg.tvm, warmup_steps=0, ramp_steps=0),
             # A longer smoke must reach the recipe's peak LR within its short run.
             lr_schedule=smoke_lr_schedule,
