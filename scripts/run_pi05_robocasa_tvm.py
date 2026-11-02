@@ -28,6 +28,7 @@ def main() -> None:
     parser.add_argument("--init", choices=CONFIGS, required=True)
     parser.add_argument("--params", type=Path, required=True, help="Source checkpoint params directory")
     parser.add_argument("--released-assets", type=Path, help="Released checkpoint assets directory; required for --init released")
+    parser.add_argument("--dataset-root", type=Path, help="Root containing v1.0/pretrain Human300 tasks")
     parser.add_argument("--exp-name", required=True)
     parser.add_argument("--checkpoint-base-dir", type=Path, required=True)
     parser.add_argument("--assets-base-dir", type=Path, required=True)
@@ -48,6 +49,7 @@ def main() -> None:
     data = dataclasses.replace(
         cfg.data,
         norm_stats_path=str(args.released_assets) if args.init == "released" else None,
+        dataset_root=str(args.dataset_root) if args.dataset_root else None,
         task_names=(args.smoke_task,) if args.smoke_task else (),
     )
     cfg = dataclasses.replace(
@@ -94,6 +96,7 @@ def main() -> None:
         "source_params": str(args.params.resolve()),
         "source_metadata_sha256": sha256(args.params / "_METADATA"),
         "released_assets": str(args.released_assets.resolve()) if args.released_assets else None,
+        "dataset_root": str(args.dataset_root.resolve()) if args.dataset_root else None,
         "released_norm_stats_sha256": sha256(args.released_assets / "norm_stats.json") if args.released_assets else None,
         "human300_tasks": [args.smoke_task] if args.smoke_task else "all 300",
         "smoke": bool(args.smoke_task),

@@ -367,6 +367,7 @@ class RobocasaHuman300DataConfig(DataConfigFactory):
     repo_id: str = "robocasa/human300"
     task_names: tuple[str, ...] = ()  # Empty means all 300 tasks.
     norm_stats_path: str | None = None
+    dataset_root: str | None = None  # Optional root containing v1.0/pretrain.
 
     @override
     def create(self, assets_dirs: pathlib.Path, model_config: _model.BaseModelConfig) -> DataConfig:
@@ -377,6 +378,14 @@ class RobocasaHuman300DataConfig(DataConfigFactory):
         tasks = [task for task in all_tasks if not self.task_names or task["task"] in self.task_names]
         if len(tasks) != (len(self.task_names) if self.task_names else 300):
             raise ValueError("Human300 task selection must contain distinct registered task names")
+        if self.dataset_root:
+            root = pathlib.Path(self.dataset_root)
+            relocated = []
+            for task in tasks:
+                parts = pathlib.Path(task["path"]).parts
+                relative = pathlib.Path(*parts[parts.index("v1.0"):])
+                relocated.append({**task, "path": str(root / relative)})
+            tasks = relocated
         if self.norm_stats_path:
             norm_stats = _normalize.load(epath.Path(self.norm_stats_path))
         elif len(tasks) == 1:

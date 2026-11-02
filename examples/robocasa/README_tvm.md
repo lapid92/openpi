@@ -15,6 +15,8 @@ Use a Python 3.11 environment with this repository's `uv.lock` and RoboCasa v1.0
 
 Download the official **pretrain human** RoboCasa datasets on the training pod using `python -m robocasa.scripts.download_datasets --split pretrain --source human`. The dataset host may require Hugging Face access. The Human300 registry must resolve all 300 task directories. The owner loader uses the left agent camera, right agent camera, and eye-in-hand camera; its state ordering is relative end-effector position and rotation, base position and rotation, then gripper position. Its action ordering is end-effector position and rotation, gripper close, base motion, then control mode (12 values). The prompt is `annotation.human.task_description`. State and actions are padded to 32. The released recipe uses the released checkpoint's `assets/norm_stats.json`; the base recipe derives owner-format mean/std stats from the 300 task metadata files. Neither recipe applies quantile normalization or an additional delta action transform.
 
+If the datasets are already mounted outside RoboCasa's default `datasets` directory, pass `--dataset-root /path/to/robocasa-datasets`, where that root contains `v1.0/pretrain`.
+
 Stage the public base checkpoint on the pod with `python scripts/stage_pi05_base_gcs.py /path/to/pi05_base/params`. For the released source, obtain `robocasa/robocasa365_checkpoints` at revision `c484448aba1a9b60a04c9b0ca117241518ea69f3`, subdirectory `pi05_pretrain_human300/multitask_learning/75000`. Pass its `params` and `assets` directories separately. Keep dataset and checkpoint transfers on the training pod.
 
 ## Launch
