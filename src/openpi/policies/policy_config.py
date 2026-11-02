@@ -69,11 +69,13 @@ def create_trained_policy(
         data_factory = dataclasses.replace(data_factory, norm_stats_path=str(stats_dir))
     data_config = data_factory.create(train_config.assets_dirs, train_config.model)
     if norm_stats is None:
-        # We are loading the norm stats from the checkpoint instead of the config assets dir to make sure
-        # that the policy is using the same normalization stats as the original training process.
-        if data_config.asset_id is None:
-            raise ValueError("Asset id is required to load norm stats.")
-        norm_stats = _checkpoints.load_norm_stats(checkpoint_dir / "assets", data_config.asset_id)
+        if isinstance(data_factory, _config.RobocasaHuman300DataConfig):
+            norm_stats = data_config.norm_stats
+        else:
+            # Keep the existing checkpoint asset lookup for other datasets.
+            if data_config.asset_id is None:
+                raise ValueError("Asset id is required to load norm stats.")
+            norm_stats = _checkpoints.load_norm_stats(checkpoint_dir / "assets", data_config.asset_id)
 
     # Determine the device to use for PyTorch models
     if is_pytorch and pytorch_device is None:
