@@ -50,6 +50,10 @@ class Args:
     port: int = 8000
     # Record the policy's behavior for debugging.
     record: bool = False
+    # Number of flow-integration steps per policy inference. Uses the model default when unset.
+    num_steps: int | None = None
+    # fm_only/current_time query the current time; jump/target_time query the next time.
+    sampler: str | None = None
 
     # Specifies how to load the policy. If not provided, the default policy for the environment will be used.
     policy: Checkpoint | Default = dataclasses.field(default_factory=Default)
@@ -76,24 +80,41 @@ DEFAULT_CHECKPOINT: dict[EnvMode, Checkpoint] = {
 }
 
 
-def create_default_policy(env: EnvMode, *, default_prompt: str | None = None) -> _policy.Policy:
+def create_default_policy(
+    env: EnvMode, *, default_prompt: str | None = None, sample_kwargs: dict[str, int | str] | None = None
+) -> _policy.Policy:
     """Create a default policy for the given environment."""
     if checkpoint := DEFAULT_CHECKPOINT.get(env):
         return _policy_config.create_trained_policy(
-            _config.get_config(checkpoint.config), checkpoint.dir, default_prompt=default_prompt
+            _config.get_config(checkpoint.config),
+            checkpoint.dir,
+            default_prompt=default_prompt,
+            sample_kwargs=sample_kwargs,
         )
     raise ValueError(f"Unsupported environment mode: {env}")
 
 
 def create_policy(args: Args) -> _policy.Policy:
     """Create a policy from the given arguments."""
+    if args.num_steps is not None and args.num_steps < 1:
+        raise ValueError("num_steps must be positive")
+    if args.sampler not in (None, "current_time", "target_time", "fm_only", "jump"):
+        raise ValueError("sampler must be current_time, target_time, fm_only, or jump")
+    config_name = args.policy.config if isinstance(args.policy, Checkpoint) else DEFAULT_CHECKPOINT[args.env].config
+    sampler = args.sampler or ("jump" if config_name.startswith("pi05_robocasa_human300_tvm_") else None)
+    sample_kwargs = {"sampler": sampler} if sampler is not None else {}
+    if args.num_steps is not None:
+        sample_kwargs["num_steps"] = args.num_steps
     match args.policy:
         case Checkpoint():
             return _policy_config.create_trained_policy(
-                _config.get_config(args.policy.config), args.policy.dir, default_prompt=args.default_prompt
+                _config.get_config(args.policy.config),
+                args.policy.dir,
+                default_prompt=args.default_prompt,
+                sample_kwargs=sample_kwargs,
             )
         case Default():
-            return create_default_policy(args.env, default_prompt=args.default_prompt)
+            return create_default_policy(args.env, default_prompt=args.default_prompt, sample_kwargs=sample_kwargs)
 
 
 def main(args: Args) -> None:

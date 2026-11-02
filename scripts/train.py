@@ -1,7 +1,10 @@
 import dataclasses
 import functools
 import logging
+import os
 import platform
+import subprocess
+import time
 from typing import Any
 
 import etils.epath as epath
@@ -24,6 +27,7 @@ import openpi.training.config as _config
 import openpi.training.data_loader as _data_loader
 import openpi.training.optimizer as _optimizer
 import openpi.training.sharding as sharding
+import openpi.training.tvm as _tvm
 import openpi.training.utils as training_utils
 import openpi.training.weight_loaders as _weight_loaders
 
@@ -68,6 +72,39 @@ def init_wandb(config: _config.TrainConfig, *, resuming: bool, log_code: bool = 
 
     if log_code:
         wandb.run.log_code(epath.Path(__file__).parent.parent)
+    if wandb.run is not None:
+        source_checkpoint = config.resume_checkpoint_dir or getattr(config.weight_loader, "params_path", "")
+        wandb.config.update(
+            {"git_sha": os.environ.get("OPENPI_GIT_SHA", ""), "source_checkpoint": source_checkpoint},
+            allow_val_change=True,
+        )
+        logging.info("W&B run: %s", wandb.run.url)
+
+
+def _gpu_memory_mib() -> int | None:
+    try:
+        result = subprocess.run(
+            ["nvidia-smi", "--query-gpu=memory.used", "--format=csv,noheader,nounits"],
+            check=True,
+            capture_output=True,
+            text=True,
+            timeout=10,
+        )
+        return max(int(value.strip()) for value in result.stdout.splitlines())
+    except (FileNotFoundError, subprocess.SubprocessError, ValueError):
+        return None
+
+
+def _gpu_peak_memory_mib() -> dict[str, float]:
+    """Return JAX allocator peak bytes for each local GPU, when supported."""
+    peaks = {}
+    for index, device in enumerate(jax.local_devices()):
+        if device.platform != "gpu":
+            continue
+        stats = device.memory_stats()
+        if stats is not None and (peak := stats.get("peak_bytes_in_use")) is not None:
+            peaks[f"gpu_{index}_peak_memory_mib"] = peak / (1024 * 1024)
+    return peaks
 
 
 def _load_weights_and_validate(loader: _weight_loaders.WeightLoader, params_shape: at.Params) -> at.Params:
@@ -79,6 +116,10 @@ def _load_weights_and_validate(loader: _weight_loaders.WeightLoader, params_shap
     return traverse_util.unflatten_dict(
         {k: v for k, v in traverse_util.flatten_dict(loaded_params).items() if not isinstance(v, jax.ShapeDtypeStruct)}
     )
+
+
+def _stack_microbatches(microbatches):
+    return jax.tree.map(lambda *values: jnp.stack(values), *microbatches)
 
 
 @at.typecheck
@@ -143,19 +184,90 @@ def train_step(
     model = nnx.merge(state.model_def, state.params)
     model.train()
 
+    teacher_model = None
+    alpha, fm_loss_weight = _tvm.loss_weights(config.tvm, state.step)
+    if config.tvm.enabled:
+        assert state.ema_params is not None
+        teacher_model = nnx.merge(state.model_def, state.ema_params)
+        teacher_model.eval()
+
     @at.typecheck
     def loss_fn(
-        model: _model.BaseModel, rng: at.KeyArrayLike, observation: _model.Observation, actions: _model.Actions
+        model: _model.BaseModel,
+        teacher: _model.BaseModel | None,
+        rng: at.KeyArrayLike,
+        observation: _model.Observation,
+        actions: _model.Actions,
     ):
+        if config.tvm.enabled:
+            assert teacher is not None
+            loss_components = model.compute_tvm_loss(
+                rng,
+                observation,
+                actions,
+                teacher=teacher,
+                alpha=alpha,
+                fm_loss_weight=fm_loss_weight,
+                train=True,
+            )
+            mean_components = jax.tree.map(jnp.mean, loss_components)
+            return mean_components["loss"], mean_components
         chunked_loss = model.compute_loss(rng, observation, actions, train=True)
-        return jnp.mean(chunked_loss)
+        loss = jnp.mean(chunked_loss)
+        return loss, {"loss": loss}
 
     train_rng = jax.random.fold_in(rng, state.step)
-    observation, actions = batch
+    observations, actions = batch
+    accumulation_steps = config.gradient_accumulation_steps
 
-    # Filter out frozen params.
+    def accumulated_loss(
+        model: _model.BaseModel,
+        teacher: _model.BaseModel | None,
+        rng: at.KeyArrayLike,
+        stacked_observations: _model.Observation,
+        stacked_actions: _model.Actions,
+    ):
+        zero = jnp.zeros((), dtype=jnp.float32)
+        initial_components = {
+            "loss": zero,
+            "fm_loss": zero,
+            "tvm_loss": zero,
+        }
+
+        def accumulate_components(component_sum, xs):
+            microbatch_index, observation, microbatch_actions = xs
+            # Preserve the legacy random stream when accumulation is disabled.
+            microbatch_rng = rng if accumulation_steps == 1 else jax.random.fold_in(rng, microbatch_index)
+            microbatch_loss, microbatch_components = loss_fn(
+                model, teacher, microbatch_rng, observation, microbatch_actions
+            )
+            components = {
+                "loss": microbatch_loss,
+                "fm_loss": microbatch_components.get("fm_loss", microbatch_loss),
+                "tvm_loss": microbatch_components.get("tvm_loss", jnp.zeros_like(microbatch_loss)),
+            }
+            component_sum = jax.tree.map(
+                lambda total, value: total + value / accumulation_steps,
+                component_sum,
+                components,
+            )
+            return component_sum, None
+
+        # Rematerializing the scan body keeps peak memory close to a single microbatch while reverse-mode
+        # accumulates one parameter cotangent across all microbatches.
+        accumulate_components = jax.checkpoint(accumulate_components, prevent_cse=False)
+        mean_components, _ = jax.lax.scan(
+            accumulate_components,
+            initial_components,
+            (jnp.arange(accumulation_steps), stacked_observations, stacked_actions),
+        )
+        return mean_components["loss"], mean_components
+
+    # Differentiate once through the rematerialized scan so clipping and the optimizer see the effective-batch mean.
     diff_state = nnx.DiffState(0, config.trainable_filter)
-    loss, grads = nnx.value_and_grad(loss_fn, argnums=diff_state)(model, train_rng, observation, actions)
+    (loss, loss_components), grads = nnx.value_and_grad(accumulated_loss, argnums=diff_state, has_aux=True)(
+        model, teacher_model, train_rng, observations, actions
+    )
 
     params = state.params.filter(config.trainable_filter)
     updates, new_opt_state = state.tx.update(grads, state.opt_state, params)
@@ -185,9 +297,19 @@ def train_step(
     )
     info = {
         "loss": loss,
+        "total_loss": loss,
+        "fm_loss": loss_components.get("fm_loss", loss_components["loss"]),
+        "tvm_loss": loss_components.get("tvm_loss", jnp.zeros_like(loss_components["loss"])),
+        "raw_tvm_loss": loss_components.get("tvm_loss", jnp.zeros_like(loss_components["loss"])),
+        "weighted_tvm_loss": alpha * loss_components.get("tvm_loss", jnp.zeros_like(loss_components["loss"])),
+        "tvm_alpha": alpha,
+        "alpha": alpha,
+        "fm_loss_factor": fm_loss_weight,
         "grad_norm": optax.global_norm(grads),
         "param_norm": optax.global_norm(kernel_params),
     }
+    if config.tvm.enabled and config.model.pi05:
+        info["source_time_grad_norm"] = optax.global_norm(grads["source_time_proj"])
     return new_state, info
 
 
@@ -195,9 +317,9 @@ def main(config: _config.TrainConfig):
     init_logging()
     logging.info(f"Running on: {platform.node()}")
 
-    if config.batch_size % jax.device_count() != 0:
+    if config.microbatch_size % jax.device_count() != 0:
         raise ValueError(
-            f"Batch size {config.batch_size} must be divisible by the number of devices {jax.device_count()}."
+            f"Microbatch size {config.microbatch_size} must be divisible by the number of devices {jax.device_count()}."
         )
 
     jax.config.update("jax_compilation_cache_dir", str(epath.Path("~/.cache/jax").expanduser()))
@@ -207,6 +329,7 @@ def main(config: _config.TrainConfig):
 
     mesh = sharding.make_mesh(config.fsdp_devices)
     data_sharding = jax.sharding.NamedSharding(mesh, jax.sharding.PartitionSpec(sharding.DATA_AXIS))
+    stacked_data_sharding = jax.sharding.NamedSharding(mesh, jax.sharding.PartitionSpec(None, sharding.DATA_AXIS))
     replicated_sharding = jax.sharding.NamedSharding(mesh, jax.sharding.PartitionSpec())
 
     checkpoint_manager, resuming = _checkpoints.initialize_checkpoint_dir(
@@ -223,28 +346,41 @@ def main(config: _config.TrainConfig):
         shuffle=True,
     )
     data_iter = iter(data_loader)
-    batch = next(data_iter)
-    logging.info(f"Initialized data loader:\n{training_utils.array_tree_to_info(batch)}")
+    first_batch = next(data_iter)
+    logging.info(f"Initialized data loader:\n{training_utils.array_tree_to_info(first_batch)}")
 
     # Log images from first batch to sanity check.
     images_to_log = [
-        wandb.Image(np.concatenate([np.array(img[i]) for img in batch[0].images.values()], axis=1))
-        for i in range(min(5, len(next(iter(batch[0].images.values())))))
+        wandb.Image(np.concatenate([np.array(img[i]) for img in first_batch[0].images.values()], axis=1))
+        for i in range(min(5, len(next(iter(first_batch[0].images.values())))))
     ]
     wandb.log({"camera_views": images_to_log}, step=0)
 
-    train_state, train_state_sharding = init_train_state(config, init_rng, mesh, resume=resuming)
+    train_state, train_state_sharding = init_train_state(
+        config, init_rng, mesh, resume=resuming or bool(config.resume_checkpoint_dir)
+    )
     jax.block_until_ready(train_state)
     logging.info(f"Initialized train state:\n{training_utils.array_tree_to_info(train_state.params)}")
 
-    if resuming:
+    if config.resume_checkpoint_dir:
+        source_manager, source_resuming = _checkpoints.initialize_checkpoint_dir(
+            config.resume_checkpoint_dir, keep_period=None, overwrite=False, resume=True
+        )
+        if not source_resuming:
+            raise ValueError(f"No completed source checkpoint at {config.resume_checkpoint_dir}")
+        train_state = _checkpoints.restore_state(source_manager, train_state, data_loader)
+        source_manager.close()
+        logging.info(
+            "Restored full training state from %s at completed step %s", config.resume_checkpoint_dir, train_state.step
+        )
+    elif resuming:
         train_state = _checkpoints.restore_state(checkpoint_manager, train_state, data_loader)
 
     ptrain_step = jax.jit(
         functools.partial(train_step, config),
-        in_shardings=(replicated_sharding, train_state_sharding, data_sharding),
+        in_shardings=(replicated_sharding, train_state_sharding, stacked_data_sharding),
         out_shardings=(train_state_sharding, replicated_sharding),
-        donate_argnums=(1,),
+        donate_argnums=(1, 2),
     )
 
     start_step = int(train_state.step)
@@ -256,21 +392,54 @@ def main(config: _config.TrainConfig):
     )
 
     infos = []
+    lr_fn = config.lr_schedule.create()
+    log_start = time.monotonic()
+    pending_batch = first_batch
     for step in pbar:
+        microbatches = [pending_batch]
+        pending_batch = None
+        microbatches.extend(next(data_iter) for _ in range(config.gradient_accumulation_steps - 1))
+        batch = _stack_microbatches(microbatches)
+        jax.block_until_ready(batch)
+        del microbatches
+        for leaf in jax.tree.leaves(batch):
+            if not leaf.sharding.is_equivalent_to(stacked_data_sharding, leaf.ndim):
+                raise ValueError(
+                    f"Stacked microbatch has unexpected sharding {leaf.sharding}; expected {stacked_data_sharding}"
+                )
         with sharding.set_mesh(mesh):
             train_state, info = ptrain_step(train_rng, train_state, batch)
         infos.append(info)
         if step % config.log_interval == 0:
             stacked_infos = common_utils.stack_forest(infos)
             reduced_info = jax.device_get(jax.tree.map(jnp.mean, stacked_infos))
+            if not all(np.isfinite(value).all() for value in reduced_info.values()):
+                raise FloatingPointError(f"Nonfinite training metric at completed step {step + 1}: {reduced_info}")
+            elapsed = max(time.monotonic() - log_start, 1e-6)
+            reduced_info["global_step"] = step + 1
+            reduced_info["learning_rate"] = float(lr_fn(step))
+            reduced_info["samples_per_second"] = len(infos) * config.batch_size / elapsed
+            reduced_info["throughput_samples_per_second"] = reduced_info["samples_per_second"]
+            reduced_info["update_seconds"] = elapsed / len(infos)
+            reduced_info.update(_gpu_peak_memory_mib())
+            gpu_memory = _gpu_memory_mib()
+            if gpu_memory is not None:
+                reduced_info["gpu_memory_used_max_mib"] = gpu_memory
             info_str = ", ".join(f"{k}={v:.4f}" for k, v in reduced_info.items())
             pbar.write(f"Step {step}: {info_str}")
-            wandb.log(reduced_info, step=step)
+            wandb.log(reduced_info, step=step + 1)
             infos = []
-        batch = next(data_iter)
+            log_start = time.monotonic()
+        if step + 1 < config.num_train_steps:
+            pending_batch = next(data_iter)
 
-        if (step % config.save_interval == 0 and step > start_step) or step == config.num_train_steps - 1:
-            _checkpoints.save_state(checkpoint_manager, train_state, data_loader, step)
+        if (
+            (step % config.save_interval == 0 and step > start_step)
+            or (step + 1 in config.checkpoint_completed_steps)
+            or step == config.num_train_steps - 1
+        ):
+            checkpoint_step = step + 1 if config.checkpoint_completed_steps else step
+            _checkpoints.save_state(checkpoint_manager, train_state, data_loader, checkpoint_step)
 
     logging.info("Waiting for checkpoint manager to finish")
     checkpoint_manager.wait_until_finished()

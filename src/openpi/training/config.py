@@ -20,12 +20,14 @@ import openpi.models.tokenizer as _tokenizer
 import openpi.policies.aloha_policy as aloha_policy
 import openpi.policies.droid_policy as droid_policy
 import openpi.policies.libero_policy as libero_policy
+import openpi.policies.robocasa_policy as robocasa_policy
 import openpi.shared.download as _download
 import openpi.shared.normalize as _normalize
 import openpi.training.droid_rlds_dataset as droid_rlds_dataset
 import openpi.training.misc.polaris_config as polaris_config
 import openpi.training.misc.roboarena_config as roboarena_config
 import openpi.training.optimizer as _optimizer
+import openpi.training.tvm as _tvm
 import openpi.training.weight_loaders as weight_loaders
 import openpi.transforms as _transforms
 
@@ -96,6 +98,9 @@ class DataConfig:
     action_space: droid_rlds_dataset.DroidActionSpace | None = None
     # List of datasets to sample from: name, version, weight, and optionally filter_dict_path
     datasets: Sequence[droid_rlds_dataset.RLDSDataset] = ()
+    # RoboCasa Groot-LeRobot task metadata, resolved when the config is created.
+    data_dirs: Sequence[dict] = ()
+    dataset_weights: Sequence[float] | None = None
 
 
 class GroupFactory(Protocol):
@@ -356,6 +361,45 @@ class LeRobotLiberoDataConfig(DataConfigFactory):
 
 
 @dataclasses.dataclass(frozen=True)
+class RobocasaHuman300DataConfig(DataConfigFactory):
+    """The owner checkpoint's Human300 data, transforms, and normalization."""
+
+    repo_id: str = "robocasa/human300"
+    task_names: tuple[str, ...] = ()  # Empty means all 300 tasks.
+    norm_stats_path: str | None = None
+
+    @override
+    def create(self, assets_dirs: pathlib.Path, model_config: _model.BaseModelConfig) -> DataConfig:
+        from robocasa.utils.dataset_registry import DATASET_SOUP_REGISTRY
+        from openpi.groot_utils import groot_openpi_dataset
+
+        all_tasks = DATASET_SOUP_REGISTRY["pretrain_human300"]
+        tasks = [task for task in all_tasks if not self.task_names or task["task"] in self.task_names]
+        if len(tasks) != (len(self.task_names) if self.task_names else 300):
+            raise ValueError("Human300 task selection must contain distinct registered task names")
+        if self.norm_stats_path:
+            norm_stats = _normalize.load(epath.Path(self.norm_stats_path))
+        elif len(tasks) == 1:
+            norm_stats = groot_openpi_dataset._load_norm_stats_from_groot_dataset(tasks[0])
+        else:
+            norm_stats = groot_openpi_dataset._load_norm_stats_from_groot_mixture_dataset(tasks)
+        if norm_stats is None:
+            raise FileNotFoundError("RoboCasa normalization stats are required")
+        return DataConfig(
+            repo_id=self.repo_id,
+            asset_id="robocasa/human300",
+            norm_stats=norm_stats,
+            data_dirs=tasks,
+            data_transforms=_transforms.Group(
+                inputs=[robocasa_policy.RobocasaInputs(action_dim=model_config.action_dim, model_type=model_config.model_type)],
+                outputs=[robocasa_policy.RobocasaOutputs()],
+            ),
+            model_transforms=ModelTransformFactory()(model_config),
+            use_quantile_norm=False,
+        )
+
+
+@dataclasses.dataclass(frozen=True)
 class RLDSDroidDataConfig(DataConfigFactory):
     """
     Config for training on DROID, using RLDS data format (for efficient training on larger datasets).
@@ -489,6 +533,9 @@ class TrainConfig:
     optimizer: _optimizer.OptimizerConfig = dataclasses.field(default_factory=_optimizer.AdamW)
     ema_decay: float | None = 0.99
 
+    # Optional Time-Conditioned Velocity Matching objective used during fine-tuning.
+    tvm: _tvm.TVMTrainingConfig = dataclasses.field(default_factory=_tvm.TVMTrainingConfig)
+
     # Specifies which weights should be frozen.
     freeze_filter: tyro.conf.Suppress[Filter] = dataclasses.field(default_factory=nnx.Nothing)
 
@@ -502,8 +549,10 @@ class TrainConfig:
 
     # Random seed that will be used by random generators during training.
     seed: int = 42
-    # Global batch size.
+    # Effective global batch size per optimizer update.
     batch_size: int = 32
+    # Number of equal-sized microbatches to process before each optimizer update.
+    gradient_accumulation_steps: int = 1
     # Number of workers to use for the data loader. Increasing this number will speed up data loading but
     # will increase memory and CPU usage.
     num_workers: int = 2
@@ -521,6 +570,10 @@ class TrainConfig:
     overwrite: bool = False
     # If true, will resume training from the last checkpoint.
     resume: bool = False
+    # Restore a full training state from another experiment while writing new checkpoints here.
+    resume_checkpoint_dir: str | None = None
+    # Completed optimizer update counts at which to retain evaluation checkpoints.
+    checkpoint_completed_steps: tuple[int, ...] = ()
 
     # If true, will enable wandb logging.
     wandb_enabled: bool = True
@@ -547,6 +600,11 @@ class TrainConfig:
         return (pathlib.Path(self.checkpoint_base_dir) / self.name / self.exp_name).resolve()
 
     @property
+    def microbatch_size(self) -> int:
+        """Global batch size processed by each accumulated forward/backward pass."""
+        return self.batch_size // self.gradient_accumulation_steps
+
+    @property
     def trainable_filter(self) -> nnx.filterlib.Filter:
         """Get the filter for the trainable parameters."""
         return nnx.All(nnx.Param, nnx.Not(self.freeze_filter))
@@ -554,6 +612,17 @@ class TrainConfig:
     def __post_init__(self) -> None:
         if self.resume and self.overwrite:
             raise ValueError("Cannot resume and overwrite at the same time.")
+        if self.resume and self.resume_checkpoint_dir:
+            raise ValueError("Cannot combine resume and resume_checkpoint_dir")
+        if type(self.gradient_accumulation_steps) is not int or self.gradient_accumulation_steps < 1:
+            raise ValueError("gradient_accumulation_steps must be a positive integer")
+        if self.batch_size % self.gradient_accumulation_steps != 0:
+            raise ValueError("batch_size must be divisible by gradient_accumulation_steps")
+        if self.tvm.enabled:
+            if not isinstance(self.model, pi0_config.Pi0Config) or not self.model.pi05:
+                raise ValueError("TVM training currently requires a pi0.5 model")
+            if self.ema_decay is None:
+                raise ValueError("TVM training requires EMA parameters for the teacher model")
 
 
 # Use `get_config` if you need to get a config by name in your code.
@@ -760,6 +829,80 @@ _CONFIGS = [
         weight_loader=weight_loaders.CheckpointWeightLoader("gs://openpi-assets/checkpoints/pi05_base/params"),
         pytorch_weight_path="/path/to/your/pytorch_weight_path",
         num_train_steps=30_000,
+    ),
+    TrainConfig(
+        name="pi05_libero_tvm",
+        model=pi0_config.Pi0Config(pi05=True, action_horizon=10, discrete_state_input=False),
+        data=LeRobotLiberoDataConfig(
+            repo_id="physical-intelligence/libero",
+            assets=AssetsConfig(
+                assets_dir="gs://openpi-assets/checkpoints/pi05_libero/assets",
+                asset_id="physical-intelligence/libero",
+            ),
+            base_config=DataConfig(prompt_from_task=True),
+            extra_delta_transform=False,
+        ),
+        # Batch 32 is the validated active-TVM ceiling on 8x A100-80GB. Accumulate eight such
+        # microbatches to match the standard LIBERO effective batch of 256.
+        batch_size=256,
+        gradient_accumulation_steps=8,
+        fsdp_devices=8,
+        lr_schedule=_optimizer.CosineDecaySchedule(
+            warmup_steps=10_000,
+            peak_lr=5e-5,
+            decay_steps=1_000_000,
+            decay_lr=5e-5,
+        ),
+        optimizer=_optimizer.AdamW(clip_gradient_norm=1.0),
+        ema_decay=0.999,
+        tvm=_tvm.TVMTrainingConfig(
+            enabled=True,
+            warmup_steps=10_000,
+            ramp_steps=10_000,
+            alpha_final=0.25,
+            fm_loss_weight=1.0,
+        ),
+        weight_loader=weight_loaders.CheckpointWeightLoader("gs://openpi-assets/checkpoints/pi05_base/params"),
+        pytorch_weight_path="/path/to/your/pytorch_weight_path",
+        num_train_steps=30_000,
+    ),
+    TrainConfig(
+        name="pi05_robocasa_human300_tvm_released",
+        model=pi0_config.Pi0Config(pi05=True, max_token_len=200),
+        data=RobocasaHuman300DataConfig(norm_stats_path="/path/to/released/assets"),
+        batch_size=64,
+        gradient_accumulation_steps=8,
+        fsdp_devices=8,
+        num_workers=4,
+        lr_schedule=_optimizer.CosineDecaySchedule(
+            warmup_steps=1_000, peak_lr=1e-5, decay_steps=20_000, decay_lr=1e-6
+        ),
+        optimizer=_optimizer.AdamW(clip_gradient_norm=1.0),
+        ema_decay=0.999,
+        tvm=_tvm.TVMTrainingConfig(enabled=True, warmup_steps=1_000, ramp_steps=1_000, alpha_final=0.25),
+        weight_loader=weight_loaders.CheckpointWeightLoader("/path/to/released/params"),
+        num_train_steps=20_000,
+        save_interval=1_000,
+        keep_period=5_000,
+    ),
+    TrainConfig(
+        name="pi05_robocasa_human300_tvm_base",
+        model=pi0_config.Pi0Config(pi05=True, max_token_len=200),
+        data=RobocasaHuman300DataConfig(),
+        batch_size=64,
+        gradient_accumulation_steps=8,
+        fsdp_devices=8,
+        num_workers=4,
+        lr_schedule=_optimizer.CosineDecaySchedule(
+            warmup_steps=1_000, peak_lr=2.5e-5, decay_steps=100_000, decay_lr=2.5e-6
+        ),
+        optimizer=_optimizer.AdamW(clip_gradient_norm=1.0),
+        ema_decay=0.999,
+        tvm=_tvm.TVMTrainingConfig(enabled=True, warmup_steps=1_000, ramp_steps=1_000, alpha_final=0.25),
+        weight_loader=weight_loaders.CheckpointWeightLoader("gs://openpi-assets/checkpoints/pi05_base/params"),
+        num_train_steps=100_000,
+        save_interval=5_000,
+        keep_period=10_000,
     ),
     #
     # Fine-tuning Aloha configs.
