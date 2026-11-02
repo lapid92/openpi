@@ -10,8 +10,8 @@ import subprocess
 import sys
 
 # Data-loader workers import RoboCasa even though training does not render.
-# Select GLFW before importing OpenPI or RoboCasa to avoid headless EGL imports.
-os.environ.setdefault("MUJOCO_GL", "glfw")
+# Robosuite preserves GLX here; its GPU-rendering macro overrides GLFW to EGL.
+os.environ.setdefault("MUJOCO_GL", "glx")
 
 from openpi.training import config as training_config
 from openpi.training import weight_loaders
