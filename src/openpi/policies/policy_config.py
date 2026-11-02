@@ -44,6 +44,9 @@ def create_trained_policy(
         presence of "model.safensors" in the checkpoint directory.
     """
     repack_transforms = repack_transforms or transforms.Group()
+    sample_kwargs = dict(sample_kwargs or {})
+    if train_config.name.startswith("pi05_robocasa_human300_tvm_"):
+        sample_kwargs.setdefault("sampler", "jump")
     checkpoint_dir = download.maybe_download(str(checkpoint_dir))
 
     # Check if this is a PyTorch model by looking for model.safetensors
