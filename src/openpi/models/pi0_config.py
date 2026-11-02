@@ -61,6 +61,16 @@ class Pi0Config(_model.BaseModelConfig):
         return Pi0(self, rngs=nnx.Rngs(rng))
 
     @override
+    def load(self, params: at.Params, *, remove_extra_params: bool = True) -> "Pi0":
+        # Released one-time pi0.5 checkpoints predate the source-time projection.
+        # Only this named parameter may be absent; BaseModelConfig.load still checks every other shape.
+        if self.pi05 and "source_time_proj" not in params:
+            template = nnx.eval_shape(self.create, jax.random.key(0))
+            kernel = nnx.state(template)["source_time_proj"]["kernel"].value
+            params = {**params, "source_time_proj": {"kernel": jnp.zeros(kernel.shape, dtype=kernel.dtype)}}
+        return super().load(params, remove_extra_params=remove_extra_params)
+
+    @override
     def inputs_spec(self, *, batch_size: int = 1) -> tuple[_model.Observation, _model.Actions]:
         image_spec = jax.ShapeDtypeStruct([batch_size, *_model.IMAGE_RESOLUTION, 3], jnp.float32)
         image_mask_spec = jax.ShapeDtypeStruct([batch_size], jnp.bool_)
