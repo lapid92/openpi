@@ -58,3 +58,37 @@ def test_owner_normalization_order(tmp_path):
     np.testing.assert_array_equal(stats["state"].mean[:16], [7, 8, 9, 10, 11, 12, 13, 0, 1, 2, 3, 4, 5, 6, 14, 15])
     np.testing.assert_array_equal(stats["actions"].mean[:12], [5, 6, 7, 8, 9, 10, 11, 0, 1, 2, 3, 4])
     assert len(stats["state"].mean) == len(stats["actions"].mean) == 32
+
+
+def test_owner_dataset_item_order(monkeypatch):
+    from openpi.groot_utils.groot_openpi_dataset import GrootOpenpiSingleDataset, LeRobotSingleDataset
+
+    def owner_item(_self, _index):
+        def values(start, count, horizon=1):
+            return np.tile(np.arange(start, start + count, dtype=np.float32), (horizon, 1))
+
+        return {
+            "state.end_effector_position_relative": values(7, 3),
+            "state.end_effector_rotation_relative": values(10, 4),
+            "state.base_position": values(0, 3),
+            "state.base_rotation": values(3, 4),
+            "state.gripper_qpos": values(14, 2),
+            "action.end_effector_position": values(5, 3, 50),
+            "action.end_effector_rotation": values(8, 3, 50),
+            "action.gripper_close": values(11, 1, 50),
+            "action.base_motion": values(0, 4, 50),
+            "action.control_mode": values(4, 1, 50),
+            "video.robot0_agentview_left": [np.zeros((224, 224, 3), dtype=np.uint8)],
+            "video.robot0_agentview_right": [np.ones((224, 224, 3), dtype=np.uint8)],
+            "video.robot0_eye_in_hand": [np.full((224, 224, 3), 2, dtype=np.uint8)],
+            "annotation.human.task_description": ["adjust the toaster oven temperature"],
+        }
+
+    monkeypatch.setattr(LeRobotSingleDataset, "__getitem__", owner_item)
+    dataset = object.__new__(GrootOpenpiSingleDataset)
+    item = dataset[0]
+    np.testing.assert_array_equal(item["observation/state"], [7, 8, 9, 10, 11, 12, 13, 0, 1, 2, 3, 4, 5, 6, 14, 15])
+    np.testing.assert_array_equal(item["actions"][0], [5, 6, 7, 8, 9, 10, 11, 0, 1, 2, 3, 4])
+    assert item["actions"].shape == (50, 12)
+    assert item["prompt"] == "adjust the toaster oven temperature"
+    assert item["observation/right_image"].mean() == 1

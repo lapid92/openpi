@@ -884,6 +884,7 @@ _CONFIGS = [
         num_train_steps=20_000,
         save_interval=1_000,
         keep_period=5_000,
+        checkpoint_completed_steps=(20_000,),
     ),
     TrainConfig(
         name="pi05_robocasa_human300_tvm_base",
@@ -903,6 +904,7 @@ _CONFIGS = [
         num_train_steps=100_000,
         save_interval=5_000,
         keep_period=10_000,
+        checkpoint_completed_steps=(100_000,),
     ),
     #
     # Fine-tuning Aloha configs.

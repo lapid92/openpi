@@ -63,6 +63,7 @@ def main() -> None:
             batch_size=8,
             gradient_accumulation_steps=1,
             num_train_steps=2,
+            checkpoint_completed_steps=(1, 2),
             num_workers=1,
             log_interval=1,
             save_interval=1,
@@ -70,6 +71,8 @@ def main() -> None:
         )
 
     run_dir = cfg.checkpoint_dir
+    if args.resume and not run_dir.exists():
+        parser.error(f"Cannot resume; experiment does not exist: {run_dir}")
     if run_dir.exists() and not args.resume:
         parser.error(f"Experiment already exists: {run_dir}; choose a new name or pass --resume")
     run_dir.mkdir(parents=True, exist_ok=True)
