@@ -35,7 +35,9 @@ def main() -> None:
     parser.add_argument("--exp-name", required=True)
     parser.add_argument("--checkpoint-base-dir", type=Path, required=True)
     parser.add_argument("--assets-base-dir", type=Path, required=True)
-    parser.add_argument("--smoke-task", help="Run active-TVM updates using one Human300 task")
+    smoke_group = parser.add_mutually_exclusive_group()
+    smoke_group.add_argument("--smoke-task", help="Run active-TVM updates using one Human300 task")
+    smoke_group.add_argument("--smoke-all", action="store_true", help="Run bounded active-TVM updates on all 300 tasks")
     parser.add_argument("--smoke-steps", type=int, default=2, help="Number of real-data smoke updates (default: 2)")
     parser.add_argument("--resume", action="store_true", help="Resume optimizer and EMA from this experiment's checkpoint")
     args = parser.parse_args()
@@ -46,12 +48,13 @@ def main() -> None:
         parser.error("--init released requires --released-assets containing norm_stats.json")
     if args.init == "base" and args.released_assets is not None:
         parser.error("--released-assets applies only to --init released")
-    if args.smoke_task and args.resume:
+    smoke = bool(args.smoke_task or args.smoke_all)
+    if smoke and args.resume:
         parser.error("Smoke runs start from source weights; use the training config to test resume separately")
     if args.smoke_steps < 2:
         parser.error("--smoke-steps must be at least 2")
-    if not args.smoke_task and args.smoke_steps != 2:
-        parser.error("--smoke-steps requires --smoke-task")
+    if not smoke and args.smoke_steps != 2:
+        parser.error("--smoke-steps requires --smoke-task or --smoke-all")
 
     cfg = training_config.get_config(CONFIGS[args.init])
     data = dataclasses.replace(
@@ -70,9 +73,9 @@ def main() -> None:
         # The provenance file makes the directory exist before Orbax initializes.
         # Orbax treats an empty directory as a fresh run and a saved step as a resume.
         resume=True,
-        wandb_enabled=not bool(args.smoke_task),
+        wandb_enabled=not smoke,
     )
-    if args.smoke_task:
+    if smoke:
         smoke_lr_schedule = (
             dataclasses.replace(cfg.lr_schedule, warmup_steps=0) if args.smoke_steps > 2 else cfg.lr_schedule
         )
@@ -112,8 +115,8 @@ def main() -> None:
         "dataset_root": str(args.dataset_root.resolve()) if args.dataset_root else None,
         "released_norm_stats_sha256": sha256(args.released_assets / "norm_stats.json") if args.released_assets else None,
         "human300_tasks": [args.smoke_task] if args.smoke_task else "all 300",
-        "smoke": bool(args.smoke_task),
-        "smoke_steps": args.smoke_steps if args.smoke_task else None,
+        "smoke": smoke,
+        "smoke_steps": args.smoke_steps if smoke else None,
         "effective_batch_size": cfg.batch_size,
         "microbatch_size": cfg.microbatch_size,
         "gradient_accumulation_steps": cfg.gradient_accumulation_steps,
