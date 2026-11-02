@@ -40,6 +40,17 @@ python -m scripts.run_pi05_robocasa_tvm \
 
 Each run writes a `provenance.json` beside its Orbax checkpoints. Logs report FM loss, raw TVM loss, TVM weight, gradient norm, source-time gradient norm, throughput, and GPU memory. Give every new run a unique experiment name. Pass `--resume` with the same name to restore its full training state. Checkpoint assets contain the normalization statistics used by that run.
 
+Use a persistent checkpoint volume. To keep an independent S3 copy during a long run, start the mirror **on the training pod** in a second terminal. For the released recipe, the completed run directory is `/durable/checkpoints/pi05_robocasa_human300_tvm_released/human300_released_tvm_v1`:
+
+```bash
+python scripts/mirror_robocasa_tvm_s3.py \
+  /durable/checkpoints/pi05_robocasa_human300_tvm_released/human300_released_tvm_v1 \
+  s3://YOUR-BUCKET/robocasa-tvm/human300_released_tvm_v1 \
+  --watch --until-step 20000
+```
+
+Use the corresponding base run directory and `--until-step 100000` for the base recipe. The mirror uploads only finalized Orbax step directories and writes an S3 completion manifest after verifying each uploaded file's size. Re-running it skips steps with a completion manifest.
+
 For a bounded two-update smoke with active TVM, add `--smoke-task AdjustToasterOvenTemperature` and use a unique experiment name. This uses eight examples per update, one real Human300 task, and sets TVM warmup and ramp to zero. It verifies the training path but does not represent the 300-task production distribution.
 
 For TVM inference, `scripts/serve_policy.py` defaults to `jump` with these two configs: each Euler step queries `F(x; t, s)` at the next time `s`. Explicit `--sampler fm_only` queries the diagonal `F(x; t, t)` for comparison. The sampler is an inference choice; `fm_only` does **not** mean the model was trained without TVM. Other configs retain their existing sampler default.

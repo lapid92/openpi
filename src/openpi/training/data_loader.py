@@ -134,7 +134,11 @@ def create_torch_dataset(
     if data_config.data_dirs:
         from openpi.groot_utils import groot_openpi_dataset
 
-        missing = [str(task["path"]) for task in data_config.data_dirs if not (os.path.isdir(task["path"]))]
+        missing = [
+            str(task["path"])
+            for task in data_config.data_dirs
+            if not os.path.isfile(os.path.join(task["path"], "meta", "info.json"))
+        ]
         if missing:
             raise FileNotFoundError(f"Missing {len(missing)} RoboCasa task directories; first: {missing[0]}")
 
