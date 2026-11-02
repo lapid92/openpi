@@ -38,7 +38,7 @@ python -m scripts.run_pi05_robocasa_tvm \
   --assets-base-dir /durable/assets
 ```
 
-Each run writes a `provenance.json` beside its Orbax checkpoints. Logs report FM loss, raw TVM loss, TVM weight, gradient norm, source-time gradient norm, throughput, and GPU memory. Give every new run a unique experiment name. Pass `--resume` with the same name to restore its full training state. Checkpoint assets contain the normalization statistics used by that run.
+Each run writes a `provenance.json` beside its Orbax checkpoints, including source metadata and normalization file hashes. Logs report FM loss, raw TVM loss, TVM weight, gradient norm, source-time gradient norm, throughput, and GPU memory. Give every new run a unique experiment name. Pass `--resume` with the same name to restore its full training state. Checkpoint assets contain the normalization statistics used by that run.
 
 Use a persistent checkpoint volume. To keep an independent S3 copy during a long run, start the mirror **on the training pod** in a second terminal. For the released recipe, the completed run directory is `/durable/checkpoints/pi05_robocasa_human300_tvm_released/human300_released_tvm_v1`:
 

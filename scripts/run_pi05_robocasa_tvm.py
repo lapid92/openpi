@@ -2,6 +2,7 @@
 
 import argparse
 import dataclasses
+import hashlib
 import json
 import os
 from pathlib import Path
@@ -16,6 +17,10 @@ CONFIGS = {
     "released": "pi05_robocasa_human300_tvm_released",
     "base": "pi05_robocasa_human300_tvm_base",
 }
+
+
+def sha256(path: Path) -> str:
+    return hashlib.sha256(path.read_bytes()).hexdigest()
 
 
 def main() -> None:
@@ -87,7 +92,9 @@ def main() -> None:
         "source_repo": "robocasa/robocasa365_checkpoints" if args.init == "released" else "gs://openpi-assets/checkpoints/pi05_base",
         "source_revision": "c484448aba1a9b60a04c9b0ca117241518ea69f3" if args.init == "released" else "public pi05_base",
         "source_params": str(args.params.resolve()),
+        "source_metadata_sha256": sha256(args.params / "_METADATA"),
         "released_assets": str(args.released_assets.resolve()) if args.released_assets else None,
+        "released_norm_stats_sha256": sha256(args.released_assets / "norm_stats.json") if args.released_assets else None,
         "human300_tasks": [args.smoke_task] if args.smoke_task else "all 300",
         "smoke": bool(args.smoke_task),
         "effective_batch_size": cfg.batch_size,
