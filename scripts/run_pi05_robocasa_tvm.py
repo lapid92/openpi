@@ -12,7 +12,6 @@ import sys
 from openpi.training import config as training_config
 from openpi.training import weight_loaders
 
-
 CONFIGS = {
     "released": "pi05_robocasa_human300_tvm_released",
     "base": "pi05_robocasa_human300_tvm_base",
@@ -32,7 +31,8 @@ def main() -> None:
     parser.add_argument("--exp-name", required=True)
     parser.add_argument("--checkpoint-base-dir", type=Path, required=True)
     parser.add_argument("--assets-base-dir", type=Path, required=True)
-    parser.add_argument("--smoke-task", help="Run two active-TVM updates using one Human300 task")
+    parser.add_argument("--smoke-task", help="Run active-TVM updates using one Human300 task")
+    parser.add_argument("--smoke-steps", type=int, default=2, help="Number of real-data smoke updates (default: 2)")
     parser.add_argument("--resume", action="store_true", help="Resume optimizer and EMA from this experiment's checkpoint")
     args = parser.parse_args()
 
@@ -44,6 +44,10 @@ def main() -> None:
         parser.error("--released-assets applies only to --init released")
     if args.smoke_task and args.resume:
         parser.error("Smoke runs start from source weights; use the training config to test resume separately")
+    if args.smoke_steps < 2:
+        parser.error("--smoke-steps must be at least 2")
+    if not args.smoke_task and args.smoke_steps != 2:
+        parser.error("--smoke-steps requires --smoke-task")
 
     cfg = training_config.get_config(CONFIGS[args.init])
     data = dataclasses.replace(
@@ -65,16 +69,21 @@ def main() -> None:
         wandb_enabled=not bool(args.smoke_task),
     )
     if args.smoke_task:
+        smoke_lr_schedule = (
+            dataclasses.replace(cfg.lr_schedule, warmup_steps=0) if args.smoke_steps > 2 else cfg.lr_schedule
+        )
         cfg = dataclasses.replace(
             cfg,
             batch_size=8,
             gradient_accumulation_steps=1,
-            num_train_steps=2,
-            checkpoint_completed_steps=(1, 2),
+            num_train_steps=args.smoke_steps,
+            checkpoint_completed_steps=(1, args.smoke_steps),
             num_workers=1,
             log_interval=1,
             save_interval=1,
             tvm=dataclasses.replace(cfg.tvm, warmup_steps=0, ramp_steps=0),
+            # A longer smoke must reach the recipe's peak LR within its short run.
+            lr_schedule=smoke_lr_schedule,
         )
 
     run_dir = cfg.checkpoint_dir
@@ -100,6 +109,7 @@ def main() -> None:
         "released_norm_stats_sha256": sha256(args.released_assets / "norm_stats.json") if args.released_assets else None,
         "human300_tasks": [args.smoke_task] if args.smoke_task else "all 300",
         "smoke": bool(args.smoke_task),
+        "smoke_steps": args.smoke_steps if args.smoke_task else None,
         "effective_batch_size": cfg.batch_size,
         "microbatch_size": cfg.microbatch_size,
         "gradient_accumulation_steps": cfg.gradient_accumulation_steps,
