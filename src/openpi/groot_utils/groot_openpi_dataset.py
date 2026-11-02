@@ -1,16 +1,24 @@
-"""Groot-LeRobot dataset implementation for openpi training."""
+"""RoboCasa Human300 Groot-LeRobot adapter.
+
+Keeps the released owner's item ordering and mixture behavior from
+robocasa-benchmark/openpi@ca4c6d710db75e276bc7c866a57bd7e4aee5b6e8.
+"""
 
 import json
+import pathlib
 from typing import SupportsIndex
 
 import numpy as np
 
-import openpi.transforms as _transforms
 import openpi.shared.normalize as _normalize
+import openpi.transforms as _transforms
 
-import pathlib
-
-from robocasa.utils.groot_utils.groot_dataset import LeRobotSingleDataset, LeRobotMixtureDataset, LE_ROBOT_MODALITY_FILENAME, ModalityConfig, LE_ROBOT_EPISODE_FILENAME
+from robocasa.utils.groot_utils.groot_dataset import (
+    LE_ROBOT_MODALITY_FILENAME,
+    LeRobotMixtureDataset,
+    LeRobotSingleDataset,
+    ModalityConfig,
+)
 from robocasa.utils.groot_utils.embodiment_tags import EmbodimentTag
 
 
@@ -39,7 +47,6 @@ class GrootOpenpiSingleDataset(LeRobotSingleDataset):
         dataset_meta: dict,
         action_horizon: int,
     ):
-        # this part copied from Abhi's DP codebasee
         dataset_path = dataset_meta["path"]
         dataset_path = pathlib.Path(dataset_path)
         filter_key = dataset_meta["filter_key"]
@@ -162,10 +169,14 @@ class GrootOpenpiMultiDataset(LeRobotMixtureDataset):
             )
             datasets.append(this_dataset)
 
-        if not dataset_weights:
-            ds_weights = np.array([np.power(len(dataset), dataset_weights_alpha) for dataset in datasets])
-            # the groot dataloader requires that at least one dataset has weight 1.0
-            ds_weights = ds_weights / ds_weights[0]
+        if dataset_weights is None:
+            ds_weights = np.array([len(dataset) ** dataset_weights_alpha for dataset in datasets], dtype=float)
+        else:
+            ds_weights = np.asarray(dataset_weights, dtype=float)
+            if ds_weights.shape != (len(datasets),) or np.any(ds_weights <= 0):
+                raise ValueError("dataset_weights must contain one positive weight per Human300 task")
+        # The owner mixture expects the first dataset to have weight 1.
+        ds_weights = ds_weights / ds_weights[0]
         dataset_mixture = list(zip(datasets, ds_weights))
         # set balance_dataset_weights to False, since we are calculating weights ourselves
         super().__init__(
@@ -177,17 +188,8 @@ class GrootOpenpiMultiDataset(LeRobotMixtureDataset):
         )
 
     def sample_step(self, index: int) -> tuple[LeRobotSingleDataset, int, int]:
-        """
-        this code effectively ignores the index and samples randomly.
-        we had to override this...
-        """
-
-        """Sample a single step from the dataset."""
-        # return self.sampled_steps[index]
-
-        # Set seed
-        # seed = index if self.mode != "train" else safe_hash((self.epoch, index, self.seed))
-        # rng = np.random.default_rng(None)
+        """Sample a task, trajectory, and step randomly, as in the owner trainer."""
+        del index
 
         # Sample dataset
         dataset_index = np.random.choice(len(self.datasets), p=self.dataset_sampling_weights)
@@ -265,7 +267,7 @@ def _load_norm_stats_from_groot_dataset(ds_meta: dict) -> dict[str, _transforms.
     raw_states_mean = np.array(raw_states_stats["mean"])
     raw_states_std = np.array(raw_states_stats["std"])
 
-    # HACK: choose appropriate state indices
+    # Reorder statistics to match the owner's model state vector.
     states_indices = [7, 8, 9, 10, 11, 12, 13, 0, 1, 2, 3, 4, 5, 6, 14, 15]
     states_mean = raw_states_mean[states_indices]
     states_std = raw_states_std[states_indices]
@@ -294,7 +296,7 @@ def _load_norm_stats_from_groot_dataset(ds_meta: dict) -> dict[str, _transforms.
     raw_actions_mean = np.array(raw_actions_stats["mean"])
     raw_actions_std = np.array(raw_actions_stats["std"])
 
-    # HACK: choose appropriate action indices
+    # Reorder statistics to match the owner's model action vector.
     actions_indices = [5, 6, 7, 8, 9, 10, 11, 0, 1, 2, 3, 4]
     actions_mean = raw_actions_mean[actions_indices]
     actions_std = raw_actions_std[actions_indices]

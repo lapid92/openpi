@@ -1,4 +1,4 @@
-"""Check released-weight parity of the two-time Pi0.5 output."""
+"""Check Pi0.5 checkpoint initialization parity and real-model two-time samplers."""
 
 import argparse
 import json
@@ -39,6 +39,7 @@ def _legacy_velocity(model, actions, target_time, prefix):
 def main() -> None:
     parser = argparse.ArgumentParser(description=__doc__)
     parser.add_argument("--params", required=True)
+    parser.add_argument("--trained", action="store_true", help="Check a TVM-trained checkpoint instead of initialization parity")
     args = parser.parse_args()
 
     config = training_config.get_config("pi05_robocasa_human300_tvm_released").model
@@ -47,14 +48,17 @@ def main() -> None:
     loaded = weight_loaders.CheckpointWeightLoader(args.params).load(state.to_pure_dict())
     state.replace_by_pure_dict(loaded)
     model = nnx.merge(graphdef, state)
-    if not jnp.all(model.source_time_proj.kernel.value == 0):
+    projection_norm = float(jnp.linalg.norm(model.source_time_proj.kernel.value))
+    if args.trained and projection_norm <= 0:
+        raise AssertionError("TVM-trained source-time projection did not update")
+    if not args.trained and projection_norm != 0:
         raise AssertionError("New source-time projection must initialize to zero")
 
     observation = model_lib.preprocess_observation(jax.random.key(1), config.fake_obs(1), train=False)
     actions = config.fake_act(1)
     prefix = model.embed_prefix(observation)
     results = []
-    for source, target in ((0.9, 0.8), (0.7, 0.3), (0.2, 0.1), (0.4, 0.4)):
+    for source, target in (() if args.trained else ((0.9, 0.8), (0.7, 0.3), (0.2, 0.1), (0.4, 0.4))):
         source_time = jnp.array([source], dtype=jnp.float32)
         target_time = jnp.array([target], dtype=jnp.float32)
         reference = _legacy_velocity(model, actions, target_time, prefix)
@@ -76,6 +80,7 @@ def main() -> None:
         raise AssertionError("Nonfinite sampler output")
     print(json.dumps({
         "source_params": args.params,
+        "source_time_projection_norm": projection_norm,
         "one_time_output_parity": results,
         "sampler_aliases_exact": True,
         "jump_vs_fm_only_max_abs_diff": float(np.max(np.abs(sampled["jump"] - sampled["fm_only"]))),
