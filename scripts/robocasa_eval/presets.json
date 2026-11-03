@@ -1,0 +1,268 @@
+{
+  "tasks": [
+    {
+      "group": "atomic_seen",
+      "task": "CloseBlenderLid"
+    },
+    {
+      "group": "atomic_seen",
+      "task": "CloseFridge"
+    },
+    {
+      "group": "atomic_seen",
+      "task": "CloseToasterOvenDoor"
+    },
+    {
+      "group": "atomic_seen",
+      "task": "CoffeeSetupMug"
+    },
+    {
+      "group": "atomic_seen",
+      "task": "NavigateKitchen"
+    },
+    {
+      "group": "atomic_seen",
+      "task": "OpenCabinet"
+    },
+    {
+      "group": "atomic_seen",
+      "task": "OpenDrawer"
+    },
+    {
+      "group": "atomic_seen",
+      "task": "OpenStandMixerHead"
+    },
+    {
+      "group": "atomic_seen",
+      "task": "PickPlaceCounterToCabinet"
+    },
+    {
+      "group": "atomic_seen",
+      "task": "PickPlaceCounterToStove"
+    },
+    {
+      "group": "atomic_seen",
+      "task": "PickPlaceDrawerToCounter"
+    },
+    {
+      "group": "atomic_seen",
+      "task": "PickPlaceSinkToCounter"
+    },
+    {
+      "group": "atomic_seen",
+      "task": "PickPlaceToasterToCounter"
+    },
+    {
+      "group": "atomic_seen",
+      "task": "SlideDishwasherRack"
+    },
+    {
+      "group": "atomic_seen",
+      "task": "TurnOffStove"
+    },
+    {
+      "group": "atomic_seen",
+      "task": "TurnOnElectricKettle"
+    },
+    {
+      "group": "atomic_seen",
+      "task": "TurnOnMicrowave"
+    },
+    {
+      "group": "atomic_seen",
+      "task": "TurnOnSinkFaucet"
+    },
+    {
+      "group": "composite_seen",
+      "task": "DeliverStraw"
+    },
+    {
+      "group": "composite_seen",
+      "task": "GetToastedBread"
+    },
+    {
+      "group": "composite_seen",
+      "task": "KettleBoiling"
+    },
+    {
+      "group": "composite_seen",
+      "task": "LoadDishwasher"
+    },
+    {
+      "group": "composite_seen",
+      "task": "PackIdenticalLunches"
+    },
+    {
+      "group": "composite_seen",
+      "task": "PreSoakPan"
+    },
+    {
+      "group": "composite_seen",
+      "task": "PrepareCoffee"
+    },
+    {
+      "group": "composite_seen",
+      "task": "RinseSinkBasin"
+    },
+    {
+      "group": "composite_seen",
+      "task": "ScrubCuttingBoard"
+    },
+    {
+      "group": "composite_seen",
+      "task": "SearingMeat"
+    },
+    {
+      "group": "composite_seen",
+      "task": "SetUpCuttingStation"
+    },
+    {
+      "group": "composite_seen",
+      "task": "StackBowlsCabinet"
+    },
+    {
+      "group": "composite_seen",
+      "task": "SteamInMicrowave"
+    },
+    {
+      "group": "composite_seen",
+      "task": "StirVegetables"
+    },
+    {
+      "group": "composite_seen",
+      "task": "StoreLeftoversInBowl"
+    },
+    {
+      "group": "composite_seen",
+      "task": "WashLettuce"
+    },
+    {
+      "group": "composite_unseen",
+      "task": "ArrangeBreadBasket"
+    },
+    {
+      "group": "composite_unseen",
+      "task": "ArrangeTea"
+    },
+    {
+      "group": "composite_unseen",
+      "task": "BreadSelection"
+    },
+    {
+      "group": "composite_unseen",
+      "task": "CategorizeCondiments"
+    },
+    {
+      "group": "composite_unseen",
+      "task": "CuttingToolSelection"
+    },
+    {
+      "group": "composite_unseen",
+      "task": "GarnishPancake"
+    },
+    {
+      "group": "composite_unseen",
+      "task": "GatherTableware"
+    },
+    {
+      "group": "composite_unseen",
+      "task": "HeatKebabSandwich"
+    },
+    {
+      "group": "composite_unseen",
+      "task": "MakeIceLemonade"
+    },
+    {
+      "group": "composite_unseen",
+      "task": "PanTransfer"
+    },
+    {
+      "group": "composite_unseen",
+      "task": "PortionHotDogs"
+    },
+    {
+      "group": "composite_unseen",
+      "task": "RecycleBottlesByType"
+    },
+    {
+      "group": "composite_unseen",
+      "task": "SeparateFreezerRack"
+    },
+    {
+      "group": "composite_unseen",
+      "task": "WaffleReheat"
+    },
+    {
+      "group": "composite_unseen",
+      "task": "WashFruitColander"
+    },
+    {
+      "group": "composite_unseen",
+      "task": "WeighIngredients"
+    }
+  ],
+  "models": {
+    "pi05": {
+      "protocol_id": "released_client_settings_sequential_seed7_policy_noise0_v1",
+      "model": "pi05",
+      "benchmark": "robocasa",
+      "shards": 8,
+      "episodes_per_task": 50,
+      "policy_seed": 0,
+      "split": "pretrain",
+      "replan_steps": 5,
+      "horizon_multiplier": 1.5,
+      "checkpoint_revision": "c484448aba1a9b60a04c9b0ca117241518ea69f3",
+      "checkpoint_repo": "robocasa/robocasa365_checkpoints",
+      "checkpoint_subpath": "pi05_pretrain_human300/multitask_learning/75000",
+      "code_revisions": {
+        "openpi": "ca4c6d710db75e276bc7c866a57bd7e4aee5b6e8",
+        "robocasa": "8f3c96ec8d1bfcd8126cad2bca887da98d30e997",
+        "robosuite": "5ce6643f3092639d08f7b0f90ed1c6a84f50552c"
+      },
+      "task_timeout_seconds": 21600,
+      "reference": {
+        "group_rates_pct": {
+          "atomic_seen": 39.6,
+          "composite_seen": 7.1,
+          "composite_unseen": 1.2
+        },
+        "overall_rate_pct": 16.9,
+        "leaderboard_url": "https://robocasa.ai/leaderboard",
+        "submission_url": "https://github.com/robocasa-benchmark/leaderboard/blob/main/submissions_md/pi05_2026-04-02.md",
+        "released_client_url": "https://github.com/robocasa-benchmark/openpi/blob/ca4c6d710db75e276bc7c866a57bd7e4aee5b6e8/examples/robocasa/main.py",
+        "original_inference_steps": "not_recorded_in_submission",
+        "robocasa_version": "1.0.0"
+      }
+    },
+    "smolvla": {
+      "protocol_id": "smolvla_target_bare_task_h50_sequential_reset_policy0_interfaces_v2",
+      "model": "smolvla",
+      "benchmark": "robocasa",
+      "shards": 8,
+      "episodes_per_task": 50,
+      "policy_seed": 0,
+      "split": "target",
+      "replan_steps": 50,
+      "horizon_multiplier": 1.5,
+      "checkpoint_revision": "f7af588d11e30b0069f200792fb285904b74c80b",
+      "checkpoint_repo": "lerobot/smolvla_robocasa",
+      "checkpoint_subpath": "",
+      "code_revisions": {
+        "openpi": "ca4c6d710db75e276bc7c866a57bd7e4aee5b6e8",
+        "robocasa": "8f3c96ec8d1bfcd8126cad2bca887da98d30e997",
+        "robosuite": "5ce6643f3092639d08f7b0f90ed1c6a84f50552c",
+        "lerobot": "dd5313e305ff7aaa5b6c7b4769d1b26650ce250b"
+      },
+      "task_timeout_seconds": 43200,
+      "reference": {
+        "group_rates_pct": {
+          "atomic_seen": null,
+          "composite_seen": null,
+          "composite_unseen": null
+        },
+        "overall_rate_pct": null
+      }
+    }
+  }
+}
